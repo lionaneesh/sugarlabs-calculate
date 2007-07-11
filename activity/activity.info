@@ -1,0 +1,7 @@
+[Activity]
+name = Calc2
+service_name = org.laptop.Calc2
+class = CalcActivity.CalcActivity
+icon = activity-calc
+activity_version = 1
+show_launcher = yes
