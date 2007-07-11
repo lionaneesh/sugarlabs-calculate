@@ -5,6 +5,9 @@ import gtk
 from sugar.graphics.toolbutton import ToolButton
 from sugar.graphics.toggletoolbutton import ToggleToolButton
 
+import logging
+_logger = logging.getLogger('calc-activity')
+
 class TextToolButton(gtk.ToolButton):
     def __init__(self, text, cb):
         gtk.ToolButton.__init__(self)
@@ -20,6 +23,7 @@ class TextToggleToolButton(gtk.ToggleToolButton):
     def __init__(self, text, cb):
         gtk.ToggleToolButton.__init__(self)
         self.set_label(text)
+        self.selected = False
         self.connect('clicked', cb)
 
 class IconToggleToolButton(ToggleToolButton):
@@ -117,7 +121,14 @@ class ConstantsToolbar(gtk.Toolbar):
 class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
-
         self.insert(TextToggleToolButton('rad/deg',
-            lambda x: True), -1)
-
+           lambda b: FormatToolbar.toggle_button(b)), -1)
+    
+    @staticmethod
+    def toggle_button(button):
+        _logger.debug("Toggle button with button:%s",button)
+        button.selected = not button.selected
+        if button.selected:
+            button.set_label('rad/DEG')
+        else:
+            button.set_label('RAD/deg')
