@@ -1,4 +1,21 @@
-#eqnparser.py
+# eqnparser.py, generic equation parser by Reinier Heeres <reinier@heeres.eu>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+#
+# Change log:
+#    2007-07-03: rwh, first version
 
 import logging
 _logger = logging.getLogger('EqnParser')
@@ -117,6 +134,10 @@ class EqnParser:
         self.register_function('acosh', 1, lambda x: self.ml.acosh(x[0]))
         self.register_function('atanh', 1, lambda x: self.ml.atanh(x[0]))
 
+        self.register_function('round', 1, lambda x: self.ml.round(x[0]))
+        self.register_function('floor', 1, lambda x: self.ml.floor(x[0]))
+        self.register_function('ceil', 1, lambda x: self.ml.ceil(x[0]))
+
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
         self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
         self.register_operator('-', self.OP_DIADIC, 0, lambda x: self.ml.sub(x[0], x[1]))
@@ -150,7 +171,14 @@ class EqnParser:
         for c in op:
             if c not in self.OP_CHARS:
                 self.OP_CHARS += c
-        
+
+    def get_diadic_operators(self):
+        res = []
+        for (op, type, presedence, f) in self.operators:
+            if type == self.OP_DIADIC:
+                res.append(op)
+        return res
+
     def reset_variable_level(self, level):
         return
 #        for i in self.variables.keys():
@@ -174,7 +202,11 @@ class EqnParser:
             _logger.debug('variable %s not defined', name)
             ps.set_type(self.TYPE_SYMBOLIC)
             return None
- 
+    def get_vars(self):
+        list = []
+        for name in self.variables:
+            list.append((name, self.variables[name]))
+        return list
     def eval_func(self, func, args, level):
         if func not in self.functions:
             _logger.error('Function \'%s\' not defined', func)
@@ -387,7 +419,11 @@ class EqnParser:
             else:
                 left_val = self.parse_var_func(ps)
 
-        if op is None and left_val is not None:
+        if not ps.more() and ps.level > 0:
+            _logger.debug('Parse error: \')\' expected')
+            ps.set_error_code(ParserState.PARSE_ERROR)
+            return None
+        elif op is None and left_val is not None:
             _logger.debug('returning %s', self.ml.format_number(left_val))
             return left_val
         else:

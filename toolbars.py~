@@ -1,14 +1,9 @@
-# toolbars.py, see CalcActivity.py for info
-
 import pygtk
 pygtk.require('2.0')
 import gtk
-from mathlib import MathLib
+
 from sugar.graphics.toolbutton import ToolButton
 from sugar.graphics.toggletoolbutton import ToggleToolButton
-
-import logging
-_logger = logging.getLogger('calc-activity')
 
 class TextToolButton(gtk.ToolButton):
     def __init__(self, text, cb):
@@ -22,18 +17,10 @@ class IconToolButton(ToolButton):
         self.connect('clicked', cb)
 
 class TextToggleToolButton(gtk.ToggleToolButton):
-    def __init__(self, items, cb):
+    def __init__(self, text, cb):
         gtk.ToggleToolButton.__init__(self)
-        self.items = items
-        self.set_label(items[0])
-        self.selected = 0
+        self.set_label(text)
         self.connect('clicked', cb)
-
-    @staticmethod
-    def toggle_button(button):
-        _logger.debug("Toggle button with button:%s", button)
-        button.selected = (button.selected + 1) % len(button.items)
-        button.set_label(button.items[button.selected])
 
 class IconToggleToolButton(ToggleToolButton):
     def __init__(self, text, cb):
@@ -62,7 +49,7 @@ class AlgebraToolbar(gtk.Toolbar):
         self.insert(LineSeparator(), -1)
 
         self.insert(TextToolButton('exp',
-            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'exp')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, 'exp')), -1)
 
         self.insert(TextToolButton('ln',
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'ln')), -1)
@@ -130,15 +117,7 @@ class ConstantsToolbar(gtk.Toolbar):
 class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
-        el = ['deg', 'rad']
-        self.insert(TextToggleToolButton(el, lambda b: FormatToolbar.update_angle_type(b,calc)),
-           -1)
-    
-    @staticmethod
-    def update_angle_type(b, calc):
-        TextToggleToolButton.toggle_button(b)
-        if b.items[b.selected] == 'deg':
-            calc.ml.set_angle_type(MathLib.ANGLE_DEG)
-        elif b.items[b.selected] == 'rad':
-            calc.ml.set_angle_type(MathLib.ANGLE_RAD)
-        _logger.debug('Angle type: %s', calc.ml.angle_scaling)
+
+        self.insert(TextToggleToolButton('rad/deg',
+            lambda x: True), -1)
+

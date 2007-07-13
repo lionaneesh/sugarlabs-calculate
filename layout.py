@@ -3,8 +3,8 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 import pango
-
 from sugar.activity import activity
+from sugar.graphics import font
 
 from toolbars import *
 
@@ -20,32 +20,32 @@ class CalcLayout:
     def create_button_data(self):
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
-            [1, 1, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
-            [2, 1, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
-            [3, 1, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
+            [0, 0, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
+            [1, 0, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
+            [2, 0, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
       
-            [1, 2, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
-            [2, 2, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
-            [3, 2, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
+            [0, 1, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
+            [1, 1, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
+            [2, 1, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
       
-            [1, 3, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
-            [2, 3, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
-            [3, 3, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
+            [0, 2, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
+            [1, 2, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
+            [2, 2, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
       
-            [1, 4, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
-            [2, 4, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
-            [3, 4, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
+            [0, 3, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
+            [1, 3, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+            [2, 3, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
      
-            [4, 1, 3, 'clear', self.col_gray1, lambda w: self._parent.clear()],
+            [3, 0, 3, 'clear', self.col_gray1, lambda w: self._parent.clear()],
  
-            [4, 2, 1, '+', self.col_gray3, lambda w: self._parent.add_character('+')],
-            [5, 2, 1, '-', self.col_gray3, lambda w: self._parent.add_character('-')],
-            [6, 2, 1, '(', self.col_gray3, lambda w: self._parent.add_character('(')],
-            [4, 3, 1, 'x', self.col_gray3, lambda w: self._parent.add_character('*')],
-            [5, 3, 1, '/', self.col_gray3, lambda w: self._parent.add_character('/')],
-            [6, 3, 1, ')', self.col_gray3, lambda w: self._parent.add_character(')')],
+            [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
+            [4, 1, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
+            [5, 1, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
+            [3, 2, 1, 'x', self.col_gray3, lambda w: self._parent.add_text('*')],
+            [4, 2, 1, '/', self.col_gray3, lambda w: self._parent.add_text('/')],
+            [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [4, 4, 3, 'enter', self.col_gray1, lambda w: self._parent.process()],
+            [3, 3, 3, 'enter', self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
@@ -67,61 +67,83 @@ class CalcLayout:
         self.col_gray2 = self.create_color(0.51, 0.51, 0.53)
         self.col_gray3 = self.create_color(0.30, 0.30, 0.31)
         self.col_black = self.create_color(0.00, 0.00, 0.00)
+        self.col_red = self.create_color(1.00, 0.00, 0.00)
 
-# Container
-        hc1 = gtk.HBox(False, 10)
-        hc1.set_border_width(10)
+# Big - Table
+        self.grid = gtk.Table(16, 10, True)
+        self.grid.set_row_spacings(6)
+        self.grid.set_col_spacings(6)
         if issubclass(type(self._parent), gtk.Bin) and self._parent.get_child() is not None:
-            self._parent.get_child().add(hc1)
+            self._parent.get_child().add(self.grid)
         else:
-            self._parent.add(hc1)
+            self._parent.add(self.grid)
 
 # Left part: container and input
-        vc1 = gtk.VBox(False, 10)
-        hc1.add(vc1)
-        hc2 = gtk.HBox(False, 10)
-        vc1.add(hc2)
+        hc1 = gtk.HBox(False, 10)
         label1 = gtk.Label(_('Label:'))
-        hc2.add(label1)
+        hc1.add(label1)
         self.label_entry = gtk.Entry()
-        hc2.add(self.label_entry)
+        hc1.add(self.label_entry)
+        self.grid.attach(hc1, 0, 6, 0, 1)
+        
         self.text_entry = gtk.Entry()
-        vc1.add(self.text_entry)
         self.text_entry.set_size_request(400, 100)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.font)
+        self.grid.attach(self.text_entry, 0, 6, 1, 5)
 
 # Left part: buttons
         self.pad = gtk.Table(4, 6, True)
-        vc1.add(self.pad)
         self.pad.set_row_spacings(6)
         self.pad.set_col_spacings(6)
 
         self.create_button_data()
         self.buttons = []
-        for i in range(len(self.button_data)):
-            x, y, w, cap, bgcol, cb = self.button_data[i]
+        for x, y, w, cap, bgcol, cb in self.button_data:
             button = self.create_button(_(cap), cb, self.col_white, bgcol, w)
             self.buttons.append(button)
             self.pad.attach(button, x, x+w, y, y+1)
+        
+        self.grid.attach(self.pad, 0, 6, 5, 16)
 
 # Right part: container and equation button
-        vc2 = gtk.VBox(10)
-        hc1.add(vc2)
-        eqbut = gtk.Button('All equations')
-        vc2.add(eqbut)
-
+        hc2 = gtk.HBox()
+        self.minebut = TextToggleToolButton(['All users', 'Only mine'], 
+        lambda b: TextToggleToolButton.toggle_button(b))
+        self.varbut = TextToggleToolButton(['Show history  ', 'Show variables'],
+        lambda b: TextToggleToolButton.toggle_button(b))
+        hc2.add(self.minebut)
+        hc2.add(self.varbut)
+        self.grid.attach(hc2, 6, 10, 0, 1)
+        
 # Right part: last equation
+        self.last_eq= gtk.TextView()
+        self.last_eq.set_editable(False)
+        self.last_eq.set_wrap_mode(gtk.WRAP_CHAR)
+        self.grid.attach(self.last_eq, 6, 10, 1, 5)
 
 # Right part: history
-        self.history = gtk.TextView()
-        vc2.add(self.history)
-        self.history.set_size_request(300, 400)
-        self.history.set_editable(False)
-        self.history.set_cursor_visible(False)
-
+        
+##        self.history = gtk.TextView()
+##        self.history.set_size_request(300, 400)
+##        self.history.set_editable(False)
+##        self.history.set_cursor_visible(False)
+        scrolled_window = gtk.ScrolledWindow()
+        scrolled_window.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
+        self.history = gtk.VBox()
+        self.history.set_homogeneous(False)
+        scrolled_window.add_with_viewport(self.history)
+        self.grid.attach(scrolled_window, 6, 10, 5, 16)
         self._parent.show_all()
 
+    def show_history(self, window_list):
+        if self.history is None:
+            return
+        for el in self.history.get_children():
+            self.history.remove(el)
+        for w in window_list:
+            self.history.pack_start(w,expand=False,fill=False,padding=1)
+        self._parent.show_all()
     def create_button(self, cap, cb, fgcol, bgcol, width):
         button = gtk.Button(cap)
         self.modify_button_appearance(button, fgcol, bgcol, width)

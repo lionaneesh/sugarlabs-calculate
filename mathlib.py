@@ -1,12 +1,38 @@
-#MathLib.py
+# MathLib.py, generic math library wrapper by Reinier Heeres <reinier@heeres.eu>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+#
+# Change log:
+#    2007-07-03: rwh, first version
 
 import types
 import math
 from decimal import Decimal
 
+import logging
+_logger = logging.getLogger('calc-activity')
+
+
 class MathLib:
+    ANGLE_DEG = math.pi/180
+    ANGLE_RAD = 1
+    ANGLE_GRAD = 1
+
     def __init__(self):
         self.constants = {}
+        self.set_angle_type(self.ANGLE_DEG)
         self.set_constant('true', True)
         self.set_constant('false', False)
         self.set_constant('pi', self.parse_number('3.14'))
@@ -21,6 +47,10 @@ class MathLib:
         self.set_constant('c_n', self.parse_number('0'))        #neutron properties
         self.set_constant('m_n', self.parse_number('0'))
 
+    def set_angle_type(self, type):
+        self.angle_scaling = self.d(type)
+        _logger.debug('Angle type set to:%s',self.angle_scaling)
+
     def set_constant(self, name, val):
         self.constants[name] = val
 
@@ -31,8 +61,9 @@ class MathLib:
             return None
 
     def d(self, val):
-        s = '%e' % val
-        return Decimal(s)
+        s = '%.10e' % val
+        d = Decimal(s)
+        return d.normalize()
 
     def parse_number(self, s):
         return Decimal(s)
@@ -43,16 +74,31 @@ class MathLib:
                 return 'True'
             else:
                 return 'False'
-
+        elif type(n) is types.NoneType:
+            return 'Error'
+        elif not isinstance(n, Decimal):
+            return 'Error (no Decimal object)'
         (sign, digits, exp) = n.as_tuple()
-        if sign == '-':
+        if len(digits) > 9:
+            exp += len(digits) - 9
+            digits = digits[:9]
+        
+        if sign:
             res = "-"
         else:
             res = ""
         int_len = len(digits) + exp
-        disp_exp = math.floor(int_len / 3) * 3
-        if disp_exp == 3:
+        
+        if int_len == 0:
+            if exp < -5:
+                disp_exp = exp +len(digits) 
+            else:
+                disp_exp = 0
+        elif 0 < int_len < 6:
             disp_exp = 0
+        else:
+            disp_exp = int_len - 1
+        
         dot_pos = int_len - disp_exp
         for i in xrange(len(digits)):
             if i == dot_pos:
@@ -61,9 +107,15 @@ class MathLib:
                 else:
                     res += '.'
             res += str(digits[i])
+
+        if len(digits) < dot_pos:
+            for i in xrange(len(digits), dot_pos):
+                res += '0'
+
         if disp_exp != 0:
             res = res + 'e%d' % disp_exp
 
+        print 'fn: %r into %r' % (n, res)
         return res
 
     def is_int(self, n):
@@ -98,7 +150,10 @@ class MathLib:
         return x * y
 
     def div(self, x, y):
-        return x / y
+        if y == 0:
+            return None
+        else:
+            return x / y
 
     def pow(self, x, y):
         if self.is_int(y):
@@ -141,22 +196,23 @@ class MathLib:
         return res
 
     def sin(self, x):
-        return self.d(math.sin(x))
+        return self.d(math.sin(x * self.angle_scaling))
 
     def cos(self, x):
-        return self.d(math.cos(x))
+        _logger.debug('cos: x=%s, angle_scaling=%s', x, self.angle_scaling)
+        return self.d(math.cos(x * self.angle_scaling))
 
     def tan(self, x):
-        return self.d(math.tan(x))
+        return self.d(math.tan(x * self.angle_scaling))
 
     def asin(self, x):
-        return self.d(math.asin(x))
+        return self.d(math.asin(x)) / self.angle_scaling
 
     def acos(self, x):
-        return self.d(math.acos(x))
+        return self.d(math.acos(x)) / self.angle_scaling
 
     def atan(self, x):
-        return self.d(math.atan(x))
+        return self.d(math.atan(x)) / self.angle_scaling
 
     def sinh(self, x):
         return self.d(math.sinh(x))
@@ -175,3 +231,13 @@ class MathLib:
 
     def atanh(self, x):
         return self.d(math.atanh(x))
+
+    def round(self, x):
+        return self.d(round(x))
+
+    def floor(self, x):
+        return self.d(math.floor(x))
+
+    def ceil(self, x):
+        return self.d(math.ceil(x))
+
