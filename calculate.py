@@ -44,7 +44,7 @@ from layout import CalcLayout
 from mathlib import MathLib
 from eqnparser import EqnParser
 
-class CalcActivity(activity.Activity):
+class Calculate(activity.Activity):
 
     TYPE_FUNCTION = 1
     TYPE_OP_PRE = 2
@@ -316,7 +316,7 @@ class CalcActivity(activity.Activity):
                 self.text_entry.set_position(pos + len(str))
 
         else:
-            _logger.error('CalcActivity.button_pressed(): invalid type')
+            _logger.error('Calculate.button_pressed(): invalid type')
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)
