@@ -202,11 +202,13 @@ class EqnParser:
             _logger.debug('variable %s not defined', name)
             ps.set_type(self.TYPE_SYMBOLIC)
             return None
+
     def get_vars(self):
         list = []
         for name in self.variables:
             list.append((name, self.variables[name]))
         return list
+
     def eval_func(self, func, args, level):
         if func not in self.functions:
             _logger.error('Function \'%s\' not defined', func)

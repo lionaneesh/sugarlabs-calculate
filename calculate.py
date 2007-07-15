@@ -44,6 +44,13 @@ from layout import CalcLayout
 from mathlib import MathLib
 from eqnparser import EqnParser
 
+class Equation:
+    def __init__(self, label, eqn, res, col):
+        self.label = label
+        self.equation = eqn
+        self.result = res
+        self.color = col
+
 class Calculate(activity.Activity):
 
     TYPE_FUNCTION = 1
@@ -51,7 +58,7 @@ class Calculate(activity.Activity):
     TYPE_OP_POST = 3
     TYPE_TEXT = 4
     
-    FONT_SMALL="sans bold 14"
+    FONT_SMALL = "sans bold 14"
     FONT_BIG = "sans bold 20"
     FONT_BIG_NARROW = "sans italic 20"
     FONT_BIGGER = "sans bold 24"
@@ -72,7 +79,7 @@ class Calculate(activity.Activity):
         self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
         
-        self.old_eqs = []
+        self.old_eqs = []       # List of Equation objects
         self.old_changed = False
         self.show_vars = False
         self.reset()
@@ -85,53 +92,74 @@ class Calculate(activity.Activity):
 
     def cleanup_cb(self, arg):
         _logger.debug('Cleaning up...')
-        
-    def process(self):
-        s = self.text_entry.get_text()
-        label = self.label_entry.get_text()
-        _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
-        self.refresh_bar()
-        res = self.parser.parse(s)
-        text = ""
-        if len(label) > 0:
-            text += label + ': ' + s
-            offset = len(label) + 2
+
+    def equation_pressed_cb(self, n):
+        if len(self.old_eqs) <= n:
+            return True
+        if len(self.old_eqs[n].label) > 0:
+            text = self.old_eqs[n].label
         else:
-            text += s
+            text = self.old_eqs[n].equation
+        self.button_pressed(self.TYPE_TEXT, text)
+        return True
+
+    def format_last_eq_buf(self, buf, res):
+        eq_start = buf.get_start_iter()
+        eq_middle = buf.get_iter_at_line(1)
+        eq_end = buf.get_end_iter()
+        buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW),
+            eq_start, eq_middle)
+        buf.apply_tag(buf.create_tag(font=self.FONT_BIGGER,
+            justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
+
+        if res is None:
+            eq_start.forward_chars(offset)
+            end = self.last_eq.get_start_iter()
+            end.forward_chars(offset+1)
+            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
+                eq_start, end)
+            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
+                eq_middle, eq_end)
+
+    def set_last_equation(self, eqn):
+        text = ""
+        if len(eqn.label) > 0:
+            text += eqn.label + ': ' + eqn.equation
+            offset = len(eqn.label) + 2
+        else:
+            text += eqn.equation
             offset = 0
 
-        if res is not None:
-            text += '\n= ' + self.ml.format_number(res)
+        if eqn.result is not None:
+            text += '\n= ' + self.ml.format_number(eqn.result)
             self.text_entry.set_text('')
-            self.parser.set_var('Ans', self.ml.format_number(res))
-            if len(label) > 0:
+            self.parser.set_var('Ans', self.ml.format_number(eqn.result))
+            if len(eqn.label) > 0:
                 self.label_entry.set_text('')
-                self.parser.set_var(label, s)
+                self.parser.set_var(eqn.label, eqn.equation)
         else:
             pos = self.parser.get_error_offset()
             if pos == len(text) - 1:
                 text += '_'
             offset += pos
             text += '\nError at %d' % pos
+
         self.last_eq.set_text(text)
-        eq_start = self.last_eq.get_start_iter()
-        eq_middle = self.last_eq.get_iter_at_line(1)
-        eq_end = self.last_eq.get_end_iter()
-        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIG_NARROW),
-            eq_start, eq_middle)
-        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIGGER,
-            justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
-        if res is None:
-            eq_start.forward_chars(offset)
-            end2 = self.last_eq.get_start_iter()
-            end2.forward_chars(offset+1)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
-            eq_start, end2)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
-            eq_middle, eq_end)
-        else:
-            self.old_eqs.insert(0, (label, s, res, self.color)) #TODO: add author, maybe colors
+        self.format_last_eq_buf(self.last_eq, eqn.result)
+
+    def process(self):
+        s = self.text_entry.get_text()
+        label = self.label_entry.get_text()
+        _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
+        self.refresh_bar()
+        res = self.parser.parse(s)
+        eqn = Equation(label, s, res, self.color)
+        self.set_last_equation(eqn)
+
+        if res is not None:
+            self.old_eqs.insert(0, eqn)
             self.old_changed = True
+
         return res is not None
 
     def refresh_bar(self):
@@ -142,40 +170,43 @@ class Calculate(activity.Activity):
     
     def refresh_vars(self):
         list = []
-        for name,value in self.parser.get_vars():
+        for name, value in self.parser.get_vars():
             w = gtk.TextView()
             b = w.get_buffer()
             b.set_text(name + ":\t" + value)
             list.append(w)
         self.layout.show_history(list)
+
+    def format_history_buf(self, buf):
+        iter_start = buf.get_start_iter()
+        iter_end = buf.get_end_iter()
+        iter_middle = buf.get_iter_at_line(1)
+        buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
+            iter_start, iter_middle)
+        buf.apply_tag(buf.create_tag(font=self.FONT_BIG,
+            justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
+        buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
+            iter_start, iter_end)
     
     def refresh_history(self):
         if not self.old_changed:
             return
         list = []
+# This logic should be fixed; it's a little strange that we setup everything before updating self.old_eqs
         i = 0
-        for (label, eq, res, color) in self.old_eqs:
+        for e in self.old_eqs:
             text = ""
-            if len(label) > 0:
-                text += str(label)+": "
-            r = self.ml.format_number(res)
-            text += str(eq)+"\n="+str(r)
+            if len(e.label) > 0:
+                text += str(e.label) + ": "
+            r = self.ml.format_number(e.result)
+            text += str(e.equation) + "\n=" + r
             w = gtk.TextView()
-            w.connect('button-press-event', lambda  w,e,j: self.text_entry.set_text(self.old_eqs[j][1]), i+1)
+            w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i+1)
             b = w.get_buffer()
 ##            b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
 ##            gtk.gdk.color_parse(self.color.get_fill_color()))
             b.set_text(text)
-            iter_start = b.get_start_iter()
-            iter_end = b.get_end_iter()
-            iter_middle = b.get_iter_at_line(1)
-            b.apply_tag(b.create_tag(font=self.FONT_SMALL),
-            iter_start, iter_middle)
-            b.apply_tag(b.create_tag(font=self.FONT_BIG,
-                justification=gtk.JUSTIFY_RIGHT), 
-            iter_middle, iter_end)
-            b.apply_tag(b.create_tag(foreground=self.color.get_fill_color()), 
-            iter_start, iter_end)
+            self.format_history_buf(b)
             list.append(w)
             i += 1
         self.layout.show_history(list)
@@ -198,7 +229,7 @@ class Calculate(activity.Activity):
     def add_text(self, c):
         pos = self.text_entry.get_position()
         if pos == 0 and c in self.parser.get_diadic_operators():
-            c = 'Ans'+c
+            c = 'Ans' + c
         self.text_entry.insert_text(c, pos)
         self.text_entry.grab_focus()
         self.text_entry.set_position(pos + len(c))

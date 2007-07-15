@@ -115,7 +115,6 @@ class MathLib:
         if disp_exp != 0:
             res = res + 'e%d' % disp_exp
 
-        print 'fn: %r into %r' % (n, res)
         return res
 
     def is_int(self, n):

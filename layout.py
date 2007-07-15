@@ -1,3 +1,5 @@
+# layout.py, see calculate.py for info
+
 from gettext import gettext as _
 import pygtk
 pygtk.require('2.0')
@@ -71,6 +73,7 @@ class CalcLayout:
 
 # Big - Table
         self.grid = gtk.Table(16, 10, True)
+        self.grid.set_border_width(6)
         self.grid.set_row_spacings(6)
         self.grid.set_col_spacings(6)
         if issubclass(type(self._parent), gtk.Bin) and self._parent.get_child() is not None:
@@ -108,18 +111,19 @@ class CalcLayout:
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton(['All users', 'Only mine'], 
-        lambda b: TextToggleToolButton.toggle_button(b))
+        self.minebut = TextToggleToolButton(['All equations', 'My equations'], 
+            lambda b: TextToggleToolButton.toggle_button(b))
         self.varbut = TextToggleToolButton(['Show history  ', 'Show variables'],
-        lambda b: TextToggleToolButton.toggle_button(b))
+            lambda b: TextToggleToolButton.toggle_button(b))
         hc2.add(self.minebut)
         hc2.add(self.varbut)
         self.grid.attach(hc2, 6, 10, 0, 1)
         
 # Right part: last equation
-        self.last_eq= gtk.TextView()
+        self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_CHAR)
+        self.last_eq.connect('button-press-event', lambda a1, a2: self._parent.equation_pressed_cb(0))
         self.grid.attach(self.last_eq, 6, 10, 1, 5)
 
 # Right part: history
@@ -142,8 +146,9 @@ class CalcLayout:
         for el in self.history.get_children():
             self.history.remove(el)
         for w in window_list:
-            self.history.pack_start(w,expand=False,fill=False,padding=1)
+            self.history.pack_start(w, expand=False, fill=False, padding=1)
         self._parent.show_all()
+
     def create_button(self, cap, cb, fgcol, bgcol, width):
         button = gtk.Button(cap)
         self.modify_button_appearance(button, fgcol, bgcol, width)
