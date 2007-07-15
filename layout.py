@@ -136,6 +136,7 @@ class CalcLayout:
         scrolled_window.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
         self.history = gtk.VBox()
         self.history.set_homogeneous(False)
+        self.history.set_border_width(6)
         scrolled_window.add_with_viewport(self.history)
         self.grid.attach(scrolled_window, 6, 10, 5, 16)
         self._parent.show_all()
