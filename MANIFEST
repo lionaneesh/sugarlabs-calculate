@@ -1,5 +1,5 @@
 calculate.py
 layout.py
 toolbars.py
-eqnparse.py
+eqnparser.py
 mathlib.py
