@@ -1,4 +1,4 @@
-# CalcActivity.py, sugar calculator, by:
+# calculate.py, sugar calculator, by:
 #   Reinier Heeres <reinier@heeres.eu>
 #   Miguel Alvarez <miguel@laptop.org>
 #
@@ -64,8 +64,8 @@ class CalcActivity(activity.Activity):
         self.connect("destroy", self.cleanup_cb)
         self.color = sugar.profile.get_color()
 ##        self.icon = CanvasIcon(
-##            icon_name='theme:stock-buddy', 
-##            xo_color=XoColor(self.color))     
+##            icon_name = 'theme:stock-buddy',
+##            xo_color = XoColor(self.color))     
         self.layout = CalcLayout(self)
         self.label_entry = self.layout.label_entry
         self.text_entry = self.layout.text_entry
@@ -94,8 +94,8 @@ class CalcActivity(activity.Activity):
         res = self.parser.parse(s)
         text = ""
         if len(label) > 0:
-            text += label + ': ' + s 
-            offset = len(label)+2
+            text += label + ': ' + s
+            offset = len(label) + 2
         else:
             text += s
             offset = 0
@@ -117,17 +117,17 @@ class CalcActivity(activity.Activity):
         eq_start = self.last_eq.get_start_iter()
         eq_middle = self.last_eq.get_iter_at_line(1)
         eq_end = self.last_eq.get_end_iter()
-        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIG_NARROW), 
-        eq_start, eq_middle)
-        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIGGER, 
-        justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
-        if res is None: 
+        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIG_NARROW),
+            eq_start, eq_middle)
+        self.last_eq.apply_tag(self.last_eq.create_tag(font=self.FONT_BIGGER,
+            justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
+        if res is None:
             eq_start.forward_chars(offset)
             end2 = self.last_eq.get_start_iter()
             end2.forward_chars(offset+1)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'), 
+            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
             eq_start, end2)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground = '#FF0000'),
+            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
             eq_middle, eq_end)
         else:
             self.old_eqs.insert(0, (label, s, res, self.color)) #TODO: add author, maybe colors
@@ -171,8 +171,8 @@ class CalcActivity(activity.Activity):
             iter_middle = b.get_iter_at_line(1)
             b.apply_tag(b.create_tag(font=self.FONT_SMALL),
             iter_start, iter_middle)
-            b.apply_tag(b.create_tag(font=self.FONT_BIG, 
-            justification=gtk.JUSTIFY_RIGHT), 
+            b.apply_tag(b.create_tag(font=self.FONT_BIG,
+                justification=gtk.JUSTIFY_RIGHT), 
             iter_middle, iter_end)
             b.apply_tag(b.create_tag(foreground=self.color.get_fill_color()), 
             iter_start, iter_end)
@@ -242,26 +242,26 @@ class CalcActivity(activity.Activity):
             self.add_text(key)
 
         keymap = {
-            'Return': lambda: self.process(), 
-            'period': '.', 
-            'equal': '=', 
-            'plus': '+', 
-            'minus': '-', 
-            'asterisk': '*', 
-            'slash': '/', 
-            'BackSpace': lambda: self.remove_character(-1), 
-            'Delete': lambda: self.remove_character(1), 
-            'parenleft': '(', 
-            'parenright': ')', 
-            'exclam': '!', 
-            'ampersand': '&', 
-            'bar': '|', 
-            'asciicircum': '^', 
-            'less': '<', 
-            'greater': '>', 
-            'Left': lambda: self.move_left(), 
-            'Right': lambda: self.move_right(), 
-            'colon': lambda: self.label_entered(), 
+            'Return': lambda: self.process(),
+            'period': '.',
+            'equal': '=',
+            'plus': '+',
+            'minus': '-',
+            'asterisk': '*',
+            'slash': '/',
+            'BackSpace': lambda: self.remove_character(-1),
+            'Delete': lambda: self.remove_character(1),
+            'parenleft': '(',
+            'parenright': ')',
+            'exclam': '!',
+            'ampersand': '&',
+            'bar': '|',
+            'asciicircum': '^',
+            'less': '<',
+            'greater': '>',
+            'Left': lambda: self.move_left(),
+            'Right': lambda: self.move_right(),
+            'colon': lambda: self.label_entered(),
             'Home': lambda: self.text_entry.set_position(0),
             'End': lambda: self.text_entry.set_position(len(self.text_entry.get_text()))
         }
@@ -291,7 +291,7 @@ class CalcActivity(activity.Activity):
                 self.text_entry.set_position(pos + len(str) + 1)
             else:
                 self.text_entry.set_text(text[:start] + str + '(' + text[start:end] + ')' + text[end:])
-                self.text_entry.set_position(pos + len(str) + 2)
+                self.text_entry.set_position(end + len(str) + 2)
 
         elif type == self.TYPE_OP_PRE:
             if len(sel) is 2:

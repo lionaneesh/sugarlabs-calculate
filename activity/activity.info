@@ -1,7 +1,7 @@
 [Activity]
-name = Calc2
-service_name = org.laptop.Calc2
-class = CalcActivity.CalcActivity
-icon = activity-calc
+name = Calculate
+service_name = org.laptop.Calculate
+class = calculate.Calculate
+icon = calculate
 activity_version = 1
 show_launcher = yes
