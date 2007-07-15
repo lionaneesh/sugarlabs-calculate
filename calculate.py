@@ -226,14 +226,6 @@ class Calculate(activity.Activity):
 # User interaction functions
 ##########################################
 
-    def add_text(self, c):
-        pos = self.text_entry.get_position()
-        if pos == 0 and c in self.parser.get_diadic_operators():
-            c = 'Ans' + c
-        self.text_entry.insert_text(c, pos)
-        self.text_entry.grab_focus()
-        self.text_entry.set_position(pos + len(c))
-
     def remove_character(self, dir):
         pos = self.text_entry.get_position()
         print 'Position: %d, dir: %d, len: %d' % (pos, dir, len(self.text_entry.get_text()))
@@ -305,6 +297,16 @@ class Calculate(activity.Activity):
 
         return True
 
+    def add_text(self, c):
+        pos = self.text_entry.get_position()
+        tlen = len(self.text_entry.get_text())
+        if tlen == 0 and c in self.parser.get_diadic_operators():
+            c = 'Ans' + c
+        self.text_entry.insert_text(c, pos)
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos + len(c))
+
+# This function should be split up properly
     def button_pressed(self, type, str):
         sel = self.text_entry.get_selection_bounds()
         pos = self.text_entry.get_position()
@@ -328,7 +330,7 @@ class Calculate(activity.Activity):
             if len(sel) is 2:
                 pos = start
             elif pos == 0:
-                str = 'Ans'+str
+                str = 'Ans' + str
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
