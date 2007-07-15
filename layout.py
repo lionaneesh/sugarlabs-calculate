@@ -111,10 +111,10 @@ class CalcLayout:
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton(['All equations', 'My equations'], 
-            lambda b: TextToggleToolButton.toggle_button(b))
+        self.minebut = TextToggleToolButton(['All equations', 'My equations'],
+            lambda x: self._parent.refresh_bar())
         self.varbut = TextToggleToolButton(['Show history  ', 'Show variables'],
-            lambda b: TextToggleToolButton.toggle_button(b))
+            lambda x: self._parent.refresh_bar())
         hc2.add(self.minebut)
         hc2.add(self.varbut)
         self.grid.attach(hc2, 6, 10, 0, 1)

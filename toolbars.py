@@ -27,17 +27,23 @@ class TextToggleToolButton(gtk.ToggleToolButton):
         self.items = items
         self.set_label(items[0])
         self.selected = 0
-        self.connect('clicked', cb)
+        self.connect('clicked', self.toggle_button)
+        self.callback = cb
 
-    @staticmethod
-    def toggle_button(button):
-        button.selected = (button.selected + 1) % len(button.items)
-        button.set_label(button.items[button.selected])
+    def toggle_button(self, w):
+        self.selected = (self.selected + 1) % len(self.items)
+        self.set_label(self.items[self.selected])
+        if self.callback is not None:
+            self.callback(self.items[self.selected])
 
 class IconToggleToolButton(ToggleToolButton):
     def __init__(self, text, cb):
         ToggleToolButton.__init__(self, text)
-        self.connect('clicked', cb)
+        self.connect('clicked', self.toggle_button)
+
+    def toggle_button(self, w):
+        if self.callback is not None:
+            self.callback(self.items[self.selected])
 
 class LineSeparator(gtk.SeparatorToolItem):
     def __init__(self):
@@ -141,14 +147,11 @@ class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
         el = ['deg', 'rad']
-        self.insert(TextToggleToolButton(el, lambda b: FormatToolbar.update_angle_type(b, calc)),
-           -1)
+        self.insert(TextToggleToolButton(el, self.update_angle_type), -1)
     
-    @staticmethod
-    def update_angle_type(b, calc):
-        TextToggleToolButton.toggle_button(b)
-        if b.items[b.selected] == 'deg':
+    def update_angle_type(self, text):
+        if text == 'deg':
             calc.ml.set_angle_type(MathLib.ANGLE_DEG)
-        elif b.items[b.selected] == 'rad':
+        elif text == 'rad':
             calc.ml.set_angle_type(MathLib.ANGLE_RAD)
         _logger.debug('Angle type: %s', calc.ml.angle_scaling)

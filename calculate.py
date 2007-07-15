@@ -79,8 +79,8 @@ class Calculate(activity.Activity):
         self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
         
-        self.old_eqs = []       # List of Equation objects
-        self.old_changed = False
+        self.old_eqs = []           # List of Equation objects
+        self.old_changed = False    # This variable should be thrown out somehow
         self.show_vars = False
         self.reset()
 
@@ -94,6 +94,7 @@ class Calculate(activity.Activity):
         _logger.debug('Cleaning up...')
 
     def equation_pressed_cb(self, n):
+        """Callback for when an equation box is clicked"""
         if len(self.old_eqs) <= n:
             return True
         if len(self.old_eqs[n].label) > 0:
@@ -151,7 +152,6 @@ class Calculate(activity.Activity):
         s = self.text_entry.get_text()
         label = self.label_entry.get_text()
         _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
-        self.refresh_bar()
         res = self.parser.parse(s)
         eqn = Equation(label, s, res, self.color)
         self.set_last_equation(eqn)
@@ -159,23 +159,37 @@ class Calculate(activity.Activity):
         if res is not None:
             self.old_eqs.insert(0, eqn)
             self.old_changed = True
+            self.refresh_bar()
 
         return res is not None
 
     def refresh_bar(self):
-        if not self.layout.varbut.selected:
+        _logger.debug('Refreshing right bar...')
+        if self.layout.varbut.selected == 0:
             self.refresh_history()
         else:
             self.refresh_vars()
     
+    def format_var_buf(self, buf):
+        iter_start = buf.get_start_iter()
+        iter_end = buf.get_end_iter()
+        buf.apply_tag(buf.create_tag(font=self.FONT_BIG),
+            iter_start, iter_end)
+        buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
+            iter_start, iter_end)
+
     def refresh_vars(self):
         list = []
         for name, value in self.parser.get_vars():
+            if name == "Ans":
+                continue
             w = gtk.TextView()
             b = w.get_buffer()
             b.set_text(name + ":\t" + value)
+            self.format_var_buf(b)
             list.append(w)
         self.layout.show_history(list)
+        self.old_changed = True
 
     def format_history_buf(self, buf):
         iter_start = buf.get_start_iter()
@@ -192,34 +206,37 @@ class Calculate(activity.Activity):
         if not self.old_changed:
             return
         list = []
-# This logic should be fixed; it's a little strange that we setup everything before updating self.old_eqs
-        i = 0
-        for e in self.old_eqs:
-            text = ""
-            if len(e.label) > 0:
-                text += str(e.label) + ": "
-            r = self.ml.format_number(e.result)
-            text += str(e.equation) + "\n=" + r
-            w = gtk.TextView()
-            w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i+1)
-            b = w.get_buffer()
-##            b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
-##            gtk.gdk.color_parse(self.color.get_fill_color()))
-            b.set_text(text)
-            self.format_history_buf(b)
-            list.append(w)
-            i += 1
+
+        if len(self.old_eqs) > 1:
+            i = 1
+            for e in self.old_eqs[1:]:
+                text = ""
+                if len(e.label) > 0:
+                    text += str(e.label) + ": "
+                r = self.ml.format_number(e.result)
+                text += str(e.equation) + "\n=" + r
+                w = gtk.TextView()
+                w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
+                b = w.get_buffer()
+##                  b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
+##                  gtk.gdk.color_parse(self.color.get_fill_color()))
+                b.set_text(text)
+                self.format_history_buf(b)
+                list.append(w)
+                i += 1
+
         self.layout.show_history(list)
         self.old_changed = False
 
     def clear(self):
         _logger.debug('Clearing...')
         self.text_entry.set_text('')
+        self.text_entry.grab_focus()
         return True
 
     def reset(self):
         _logger.debug('Resetting...')
-        self.text_entry.grab_focus()
+        self.clear()
         return True
 
 ##########################################
