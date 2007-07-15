@@ -102,8 +102,11 @@ class EqnParser:
     TYPE_BOOL = 4
     TYPE_SYMBOLIC = 5
 
-    def __init__(self):
-        self.ml = MathLib()
+    def __init__(self, ml=None):
+        if ml is None:
+            self.ml = MathLib()
+        else:
+            self.ml = ml
 
         self.error_offset = 0
 

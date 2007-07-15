@@ -33,19 +33,21 @@ class MathLib:
     def __init__(self):
         self.constants = {}
         self.set_angle_type(self.ANGLE_DEG)
+
+#Constants should maybe become variables in eqnparser.py
         self.set_constant('true', True)
         self.set_constant('false', False)
-        self.set_constant('pi', self.parse_number('3.14'))
-        self.set_constant('kb', self.parse_number('0'))
+        self.set_constant('pi', self.parse_number('3.1415926535'))
+        self.set_constant('kb', self.parse_number('1.380650524e-23'))
         self.set_constant('Na', self.parse_number('6.02214e23'))
         self.set_constant('e', self.exp(1))
-        self.set_constant('c', self.parse_number('3e8'))
-        self.set_constant('c_e', self.parse_number('0'))        #electron properties
-        self.set_constant('m_e', self.parse_number('0'))
-        self.set_constant('c_p', self.parse_number('0'))        #proton properties
-        self.set_constant('m_p', self.parse_number('0'))
-        self.set_constant('c_n', self.parse_number('0'))        #neutron properties
-        self.set_constant('m_n', self.parse_number('0'))
+        self.set_constant('c', self.parse_number('2.99792458e8'))
+        self.set_constant('c_e', self.parse_number('-1.60217648740e-19'))       #electron properties
+        self.set_constant('m_e', self.parse_number('9.109382616e-31'))
+        self.set_constant('c_p', self.parse_number('1.6021765314e-19'))         #proton properties
+        self.set_constant('m_p', self.parse_number('1.6726217129e-27'))
+        self.set_constant('c_n', self.parse_number('0'))                        #neutron properties
+        self.set_constant('m_n', self.parse_number('1.6749272928e-27'))
 
     def set_angle_type(self, type):
         self.angle_scaling = self.d(type)
@@ -198,7 +200,6 @@ class MathLib:
         return self.d(math.sin(x * self.angle_scaling))
 
     def cos(self, x):
-        _logger.debug('cos: x=%s, angle_scaling=%s', x, self.angle_scaling)
         return self.d(math.cos(x * self.angle_scaling))
 
     def tan(self, x):

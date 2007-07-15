@@ -84,8 +84,8 @@ class Calculate(activity.Activity):
         self.show_vars = False
         self.reset()
 
-        self.parser = EqnParser()
         self.ml = MathLib()
+        self.parser = EqnParser(self.ml)
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -103,7 +103,7 @@ class Calculate(activity.Activity):
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
-    def format_last_eq_buf(self, buf, res):
+    def format_last_eq_buf(self, buf, res, offset):
         eq_start = buf.get_start_iter()
         eq_middle = buf.get_iter_at_line(1)
         eq_end = buf.get_end_iter()
@@ -145,7 +145,7 @@ class Calculate(activity.Activity):
             text += '\nError at %d' % pos
 
         self.last_eq.set_text(text)
-        self.format_last_eq_buf(self.last_eq, eqn.result)
+        self.format_last_eq_buf(self.last_eq, eqn.result, offset)
 
     def process(self):
         s = self.text_entry.get_text()

@@ -31,7 +31,6 @@ class TextToggleToolButton(gtk.ToggleToolButton):
 
     @staticmethod
     def toggle_button(button):
-        _logger.debug("Toggle button with button:%s", button)
         button.selected = (button.selected + 1) % len(button.items)
         button.set_label(button.items[button.selected])
 
@@ -87,6 +86,17 @@ class TrigonometryToolbar(gtk.Toolbar):
 
         self.insert(LineSeparator(), -1)
 
+        self.insert(TextToolButton('asin',
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'asin')), -1)
+
+        self.insert(TextToolButton('acos',
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'acos')), -1)
+
+        self.insert(TextToolButton('atan',
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'atan')), -1)
+
+        self.insert(LineSeparator(), -1)
+
         self.insert(TextToolButton('sinh',
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sinh')), -1)
 
@@ -131,7 +141,7 @@ class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
         el = ['deg', 'rad']
-        self.insert(TextToggleToolButton(el, lambda b: FormatToolbar.update_angle_type(b,calc)),
+        self.insert(TextToggleToolButton(el, lambda b: FormatToolbar.update_angle_type(b, calc)),
            -1)
     
     @staticmethod
