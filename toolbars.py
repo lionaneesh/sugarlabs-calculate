@@ -147,11 +147,12 @@ class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
         el = ['deg', 'rad']
-        self.insert(TextToggleToolButton(el, self.update_angle_type), -1)
+        self.insert(TextToggleToolButton(el, 
+                    lambda x: self.update_angle_type(x, calc)), -1)
     
-    def update_angle_type(self, text):
+    def update_angle_type(self, text, calc):
         if text == 'deg':
             calc.ml.set_angle_type(MathLib.ANGLE_DEG)
         elif text == 'rad':
             calc.ml.set_angle_type(MathLib.ANGLE_RAD)
-        _logger.debug('Angle type: %s', calc.ml.angle_scaling)
+        _logger.debug('Angle type: %s', self.calc.ml.angle_scaling)

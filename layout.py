@@ -6,8 +6,11 @@ pygtk.require('2.0')
 import gtk
 import pango
 from sugar.activity import activity
-from sugar.graphics import font
-
+try:
+    from sugar.graphics import font
+except:
+    #Not important, don't do anythig
+    pass
 from toolbars import *
 
 class CalcLayout:
@@ -99,7 +102,7 @@ class CalcLayout:
         self.pad = gtk.Table(4, 6, True)
         self.pad.set_row_spacings(6)
         self.pad.set_col_spacings(6)
-
+        #self.pad.
         self.create_button_data()
         self.buttons = []
         for x, y, w, cap, bgcol, cb in self.button_data:

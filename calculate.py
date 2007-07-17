@@ -38,8 +38,11 @@ import sugar.profile
 from sugar.graphics.canvasicon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
 from sugar.graphics import color
-from sugar.graphics import font
-
+try:
+    from sugar.graphics import font
+except:
+    #Nothing
+    pass
 from layout import CalcLayout
 from mathlib import MathLib
 from eqnparser import EqnParser
@@ -58,11 +61,12 @@ class Calculate(activity.Activity):
     TYPE_OP_POST = 3
     TYPE_TEXT = 4
     
-    FONT_SMALL = "sans bold 14"
-    FONT_BIG = "sans bold 20"
-    FONT_BIG_NARROW = "sans italic 20"
-    FONT_BIGGER = "sans bold 24"
-    
+    FONT_SMALL = "sans 10"
+    FONT_SMALL_NARROW = "sans italic 10"
+    FONT_BIG = "sans bold 16"
+    FONT_BIG_NARROW = "sans italic 16"
+    FONT_BIGGER = "sans bold 22"
+   
     def __init__(self, handle):
         activity.Activity.__init__(self, handle)
 
@@ -173,7 +177,7 @@ class Calculate(activity.Activity):
     def format_var_buf(self, buf):
         iter_start = buf.get_start_iter()
         iter_end = buf.get_end_iter()
-        buf.apply_tag(buf.create_tag(font=self.FONT_BIG),
+        buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
             iter_start, iter_end)
         buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
             iter_start, iter_end)
@@ -193,10 +197,22 @@ class Calculate(activity.Activity):
 
     def format_history_buf(self, buf):
         iter_start = buf.get_start_iter()
+        iter_colon = buf.get_start_iter()
         iter_end = buf.get_end_iter()
         iter_middle = buf.get_iter_at_line(1)
-        buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
-            iter_start, iter_middle)
+        try:
+            pos = buf.get_text(iter_start, iter_end).index(':')
+            iter_colon.forward_chars(pos)
+        except:
+            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
+                          iter_start, iter_middle)
+        else:
+
+            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
+                          iter_start, iter_colon)
+            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
+                          iter_colon, iter_middle)
+            
         buf.apply_tag(buf.create_tag(font=self.FONT_BIG,
             justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
         buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
