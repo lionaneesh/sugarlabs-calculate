@@ -23,7 +23,6 @@ import types
 import os
 from gettext import gettext as _
 import string
-
 import logging
 _logger = logging.getLogger('calc-activity')
 
@@ -43,6 +42,9 @@ try:
 except:
     #Nothing
     pass
+
+from sharedstate.sharedstate import SharingHelper
+
 from layout import CalcLayout
 from mathlib import MathLib
 from eqnparser import EqnParser
@@ -83,13 +85,32 @@ class Calculate(activity.Activity):
         self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
         
-        self.old_eqs = []           # List of Equation objects
-        self.old_changed = False    # This variable should be thrown out somehow
-        self.show_vars = False
-        self.reset()
-
+        
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
+        _logger.debug("Parser: %s",self.parser)
+
+        self.buffer = ""
+        self.showing_version = 0
+        
+        self.old_changed = False    # This variable should be thrown out somehow
+        self.show_vars = False
+        self.helper = SharingHelper(self)
+        self.helper.create_shared_object('old_eqs',
+                                         {'changed':lambda x: self.refresh_bar(),
+                                          'type': 'python'},
+                                         iv = [])
+        self.helper.create_shared_object('vars',
+                                         {'changed': lambda x: self.refresh_bar(),
+                                          'type': 'python'},
+                                         iv = [])
+        
+#        self.old_eqs = []           # List of Equation objects
+        
+       
+        self.reset()
+
+       
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -99,12 +120,12 @@ class Calculate(activity.Activity):
 
     def equation_pressed_cb(self, n):
         """Callback for when an equation box is clicked"""
-        if len(self.old_eqs) <= n:
+        if len(self.helper['old_eqs']) <= n:
             return True
-        if len(self.old_eqs[n].label) > 0:
-            text = self.old_eqs[n].label
+        if len(self.helper['old_eqs'][n].label) > 0:
+            text = self.helper['old_eqs'][n].label
         else:
-            text = self.old_eqs[n].equation
+            text = self.helper['old_eqs'][n].equation
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
@@ -161,7 +182,10 @@ class Calculate(activity.Activity):
         self.set_last_equation(eqn)
 
         if res is not None:
-            self.old_eqs.insert(0, eqn)
+            #self.helper['old_eqs'].insert(0, eqn)
+            tmp = self.helper['old_eqs'][:]
+            tmp.insert(0,eqn)
+            self.helper['old_eqs'] = tmp
             self.old_changed = True
             self.refresh_bar()
 
@@ -223,9 +247,9 @@ class Calculate(activity.Activity):
             return
         list = []
 
-        if len(self.old_eqs) > 1:
+        if len(self.helper['old_eqs']) > 1:
             i = 1
-            for e in self.old_eqs[1:]:
+            for e in self.helper['old_eqs'][1:]:
                 text = ""
                 if len(e.label) > 0:
                     text += str(e.label) + ": "
@@ -317,6 +341,8 @@ class Calculate(activity.Activity):
             'greater': '>',
             'Left': lambda: self.move_left(),
             'Right': lambda: self.move_right(),
+            'Up': lambda: self.get_older(),
+            'Down':lambda: self.get_newer(),
             'colon': lambda: self.label_entered(),
             'Home': lambda: self.text_entry.set_position(0),
             'End': lambda: self.text_entry.set_position(len(self.text_entry.get_text()))
@@ -329,6 +355,19 @@ class Calculate(activity.Activity):
                 return f()
 
         return True
+    def get_older(self):
+        self.showing_version = min (len(sel.helper['old_eqs']),self.showing_version + 1)
+        if self.showing_version == 1:
+            self.buffer = self.text_entry.get_text()
+        self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
+        
+        
+    def get_newer(self):
+        self.showing_version = max(0, self.showing_version - 1)
+        if self.showing_version == 0:
+            self.text_entry.set_text(self.buffer)
+            return
+        self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
 
     def add_text(self, c):
         pos = self.text_entry.get_position()
