@@ -24,7 +24,7 @@ import os
 from gettext import gettext as _
 import string
 import logging
-_logger = logging.getLogger('calc-activity')
+_logger = logging.getLogger('Calculate')
 
 import gobject
 import pygtk
@@ -72,7 +72,7 @@ class Calculate(activity.Activity):
     def __init__(self, handle):
         activity.Activity.__init__(self, handle)
 
-        self.set_title("Calc2")
+        self.set_title("Calculate")
         self.connect("key_press_event", self.keypress_cb)
         self.connect("destroy", self.cleanup_cb)
         self.color = sugar.profile.get_color()
@@ -85,7 +85,6 @@ class Calculate(activity.Activity):
         self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
         
-        
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
         _logger.debug("Parser: %s",self.parser)
@@ -97,7 +96,7 @@ class Calculate(activity.Activity):
         self.show_vars = False
         self.helper = SharingHelper(self)
         self.helper.create_shared_object('old_eqs',
-                                         {'changed':lambda x: self.refresh_bar(),
+                                         {'changed': lambda x: self.refresh_bar(),
                                           'type': 'python'},
                                          iv = [])
         self.helper.create_shared_object('vars',
@@ -106,11 +105,7 @@ class Calculate(activity.Activity):
                                          iv = [])
         
 #        self.old_eqs = []           # List of Equation objects
-        
-       
         self.reset()
-
-       
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -355,12 +350,12 @@ class Calculate(activity.Activity):
                 return f()
 
         return True
+	
     def get_older(self):
-        self.showing_version = min (len(sel.helper['old_eqs']),self.showing_version + 1)
+        self.showing_version = min(len(sel.helper['old_eqs']), self.showiing_version + 1)
         if self.showing_version == 1:
             self.buffer = self.text_entry.get_text()
         self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
-        
         
     def get_newer(self):
         self.showing_version = max(0, self.showing_version - 1)
