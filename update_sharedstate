@@ -1,0 +1,11 @@
+#!/bin/sh
+SSDIR=sharedstate.git
+SSGIT=git://dev.laptop.org/projects/sharedstate
+if [ -e ${SSDIR} ]; then
+	cd ${SSDIR}
+	git-pull ${SSGIT}
+	cd ..
+else
+	git-clone ${SSGIT} ${SSDIR}
+	ln -s ${SSDIR}/sharedstate sharedstate
+fi
