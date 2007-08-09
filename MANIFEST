@@ -3,3 +3,11 @@ layout.py
 toolbars.py
 eqnparser.py
 mathlib.py
+sharedstate/__init__.py
+sharedstate/shareddict.py
+sharedstate/sharedobject.py
+sharedstate/sharedobjects.py
+sharedstate/sharedpython.py
+sharedstate/sharedstate.py
+sharedstate/sharedtext.py
+sharedstate/tubeconn.py
