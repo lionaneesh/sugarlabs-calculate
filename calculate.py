@@ -36,7 +36,6 @@ from sugar.activity import activity
 import sugar.profile
 from sugar.graphics.canvasicon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
-from sugar.graphics import color
 try:
     from sugar.graphics import font
 except:
