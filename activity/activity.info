@@ -3,5 +3,5 @@ name = Calculate
 service_name = org.laptop.Calculate
 class = calculate.Calculate
 icon = calculate
-activity_version = 1
+activity_version = 2
 show_launcher = yes
