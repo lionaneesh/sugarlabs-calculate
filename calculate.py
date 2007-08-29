@@ -34,7 +34,7 @@ import pango
 
 from sugar.activity import activity
 import sugar.profile
-from sugar.graphics.canvasicon import CanvasIcon
+from sugar.graphics.icon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
 try:
     from sugar.graphics import font
