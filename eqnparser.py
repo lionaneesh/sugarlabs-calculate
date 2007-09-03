@@ -116,6 +116,7 @@ class EqnParser:
 
         self.register_function('exp', 1, lambda x: self.ml.exp(x[0]))
         self.register_function('ln', 1, lambda x: self.ml.ln(x[0]))
+        self.register_function('log', 1, lambda x: self.ml.log10(x[0]))
         self.register_function('log10', 1, lambda x: self.ml.log10(x[0]))
         self.register_function('pow', 2, lambda x: self.ml.pow(x[0], x[1]))
 
@@ -141,6 +142,10 @@ class EqnParser:
         self.register_function('floor', 1, lambda x: self.ml.floor(x[0]))
         self.register_function('ceil', 1, lambda x: self.ml.ceil(x[0]))
 
+        self.register_function('mod', 2, lambda x: self.ml.mod(x[0], x[1]))
+
+        self.register_function('factorize', 1, lambda x: self.ml.factorize(x[0]))
+
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
         self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
         self.register_operator('-', self.OP_DIADIC, 0, lambda x: self.ml.sub(x[0], x[1]))
@@ -162,6 +167,8 @@ class EqnParser:
 
         self.register_operator('<<', self.OP_DIADIC, 0, lambda x: self.ml.shift_left(x[0], x[1]))
         self.register_operator('>>', self.OP_DIADIC, 0, lambda x: self.ml.shift_right(x[0], x[1]))
+
+        self.register_operator('%', self.OP_DIADIC, 0, lambda x: self.ml.mod(x[0], x[1]))
 
     def register_function(self, name, nargs, f):
         self.functions[name] = (nargs, f)
@@ -211,6 +218,24 @@ class EqnParser:
         for name in self.variables:
             list.append((name, self.variables[name]))
         return list
+
+    def get_var_names(self, start=None):
+        names = self.variables.keys()
+        names.sort()
+
+        if start is None:
+            return names
+
+        retnames = []
+        for name in names:
+            if name[:len(start)] == start:
+                retnames.append(name)
+        return retnames
+
+    def get_function_names(self):
+        names = self.functions.keys()
+        names.sort()
+        return names
 
     def eval_func(self, func, args, level):
         if func not in self.functions:

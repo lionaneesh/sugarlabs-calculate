@@ -79,10 +79,8 @@ class CalcLayout:
         self.grid.set_border_width(6)
         self.grid.set_row_spacings(6)
         self.grid.set_col_spacings(6)
-        if issubclass(type(self._parent), gtk.Bin) and self._parent.get_child() is not None:
-            self._parent.get_child().add(self.grid)
-        else:
-            self._parent.add(self.grid)
+
+        self._parent.set_canvas(self.grid)
 
 # Left part: container and input
         hc1 = gtk.HBox(False, 10)
@@ -104,10 +102,10 @@ class CalcLayout:
         self.pad.set_col_spacings(6)
         #self.pad.
         self.create_button_data()
-        self.buttons = []
+        self.buttons = {}
         for x, y, w, cap, bgcol, cb in self.button_data:
             button = self.create_button(_(cap), cb, self.col_white, bgcol, w)
-            self.buttons.append(button)
+            self.buttons[cap] = button
             self.pad.attach(button, x, x+w, y, y+1)
         
         self.grid.attach(self.pad, 0, 6, 5, 16)

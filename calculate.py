@@ -33,14 +33,10 @@ import gtk
 import pango
 
 from sugar.activity import activity
+from sugar.presence import presenceservice
 import sugar.profile
 from sugar.graphics.icon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
-try:
-    from sugar.graphics import font
-except:
-    #Nothing
-    pass
 
 from sharedstate.sharedstate import SharingHelper
 
@@ -49,11 +45,12 @@ from mathlib import MathLib
 from eqnparser import EqnParser
 
 class Equation:
-    def __init__(self, label, eqn, res, col):
+    def __init__(self, label, eqn, res, col, owner):
         self.label = label
         self.equation = eqn
         self.result = res
         self.color = col
+        self.owner = owner
 
 class Calculate(activity.Activity):
 
@@ -67,9 +64,61 @@ class Calculate(activity.Activity):
     FONT_BIG = "sans bold 16"
     FONT_BIG_NARROW = "sans italic 16"
     FONT_BIGGER = "sans bold 22"
-   
+
+    SELECT_NONE = 0
+    SELECT_SELECT = 1
+    SELECT_TAB = 2
+
+    KEYMAP = {
+        'Return': lambda o: o.process(),
+        'period': '.',
+        'equal': '=',
+        'plus': '+',
+        'minus': '-',
+        'asterisk': '*',
+        'slash': '/',
+        'BackSpace': lambda o: o.remove_character(-1),
+        'Delete': lambda o: o.remove_character(1),
+        'parenleft': '(',
+        'parenright': ')',
+        'exclam': '!',
+        'ampersand': '&',
+        'bar': '|',
+        'asciicircum': '^',
+        'less': '<',
+        'greater': '>',
+        'percent': '%',
+        'comma': ',',
+        'Left': lambda o: o.move_left(),
+        'Right': lambda o: o.move_right(),
+        'Up': lambda o: o.get_older(),
+        'Down': lambda o: o.get_newer(),
+        'colon': lambda o: o.label_entered(),
+        'Home': lambda o: o.text_entry.set_position(0),
+        'End': lambda o: o.text_entry.set_position(len(o.text_entry.get_text())),
+        'Tab': lambda o: o.tab_complete(),
+    }
+
+    CTRL_KEYMAP = {
+        'c': lambda o: o.text_copy(),
+        'v': lambda o: o.text_paste(),
+        'x': lambda o: o.text_cut(),
+    }
+
+    SHIFT_KEYMAP = {
+        'Left': lambda o: o.expand_selection(-1),
+        'Right': lambda o: o.expand_selection(1),
+        'Home': lambda o: o.expand_selection(-1000),
+        'End': lambda o: o.expand_selection(1000),
+    }
+
+    IDENTIFIER_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
+
     def __init__(self, handle):
-        activity.Activity.__init__(self, handle)
+        try:
+            activity.Activity.__init__(self, handle)
+        except Exception, inst:
+            _logger.error('Exception: %s', inst)
 
         self.set_title("Calculate")
         self.connect("key_press_event", self.keypress_cb)
@@ -86,25 +135,35 @@ class Calculate(activity.Activity):
         
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
-        _logger.debug("Parser: %s",self.parser)
 
+        self.clipboard = ""
+        self.select_reason = self.SELECT_SELECT
         self.buffer = ""
         self.showing_version = 0
-        
-        self.old_changed = False    # This variable should be thrown out somehow
+        self.showing_error = False
         self.show_vars = False
+
+        self.presence = presenceservice.get_instance()
+        self.owner = self.presence.get_owner()
+        self.owner_id = str(self.owner._properties["nick"])
+        _logger.debug('Owner_id: %s', self.owner_id)
+
         self.helper = SharingHelper(self)
         self.helper.create_shared_object('old_eqs',
-                                         {'changed': lambda x: self.refresh_bar(),
+                                         {'changed': lambda x: self.buddy_old_eqs_cb(),
                                           'type': 'python'},
                                          iv = [])
         self.helper.create_shared_object('vars',
-                                         {'changed': lambda x: self.refresh_bar(),
+                                         {'changed': lambda x: self.buddy_vars_cb(),
                                           'type': 'python'},
                                          iv = [])
-        
-#        self.old_eqs = []           # List of Equation objects
+            
+        _logger.info('Available functions:')
+        for f in self.parser.get_function_names():
+            _logger.info('\t%s', f)
+
         self.reset()
+        self.load_journal_entry()
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -167,21 +226,30 @@ class Calculate(activity.Activity):
         self.last_eq.set_text(text)
         self.format_last_eq_buf(self.last_eq, eqn.result, offset)
 
+    def set_error_equation(self, eqn):
+        self.set_last_equation(eqn)
+
     def process(self):
         s = self.text_entry.get_text()
         label = self.label_entry.get_text()
         _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
         res = self.parser.parse(s)
-        eqn = Equation(label, s, res, self.color)
-        self.set_last_equation(eqn)
+        eqn = Equation(label, s, res, self.color, self.owner_id)
 
+# Result ok
         if res is not None:
-            #self.helper['old_eqs'].insert(0, eqn)
-            tmp = self.helper['old_eqs'][:]
-            tmp.insert(0,eqn)
+            tmp = self.helper['old_eqs']
+            tmp.insert(0, eqn)
             self.helper['old_eqs'] = tmp
-            self.old_changed = True
-            self.refresh_bar()
+            self.showing_error = False
+            ans_but = self.layout.buttons["Ans"]    # To change label
+
+# Show error
+        else:
+            self.set_error_equation(eqn)
+            self.showing_error = True
+
+        self.refresh_bar()
 
         return res is not None
 
@@ -191,6 +259,9 @@ class Calculate(activity.Activity):
             self.refresh_history()
         else:
             self.refresh_vars()
+
+    def buddy_old_eqs_cb(self):
+        self.refresh_bar()
     
     def format_var_buf(self, buf):
         iter_start = buf.get_start_iter()
@@ -199,6 +270,9 @@ class Calculate(activity.Activity):
             iter_start, iter_end)
         buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
             iter_start, iter_end)
+
+    def buddy_vars_cb(self):
+        self.refresh_bar()
 
     def refresh_vars(self):
         list = []
@@ -211,7 +285,6 @@ class Calculate(activity.Activity):
             self.format_var_buf(b)
             list.append(w)
         self.layout.show_history(list)
-        self.old_changed = True
 
     def format_history_buf(self, buf):
         iter_start = buf.get_start_iter()
@@ -237,41 +310,123 @@ class Calculate(activity.Activity):
             iter_start, iter_end)
     
     def refresh_history(self):
-        if not self.old_changed:
-            return
         list = []
 
-        if len(self.helper['old_eqs']) > 1:
-            i = 1
-            for e in self.helper['old_eqs'][1:]:
-                text = ""
-                if len(e.label) > 0:
-                    text += str(e.label) + ": "
-                r = self.ml.format_number(e.result)
-                text += str(e.equation) + "\n=" + r
-                w = gtk.TextView()
-                w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
-                b = w.get_buffer()
-##                  b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
-##                  gtk.gdk.color_parse(self.color.get_fill_color()))
-                b.set_text(text)
-                self.format_history_buf(b)
-                list.append(w)
-                i += 1
+        i = 1
+        if self.showing_error:
+            last_eq_drawn = True
+        else:
+            last_eq_drawn = False
+        for e in self.helper['old_eqs']:
+
+            if not last_eq_drawn and e.owner == self.owner_id:
+                self.set_last_equation(e)
+                last_eq_drawn = True
+                continue
+
+            text = ""
+            if len(e.label) > 0:
+                text += str(e.label) + ": "
+            r = self.ml.format_number(e.result)
+            text += str(e.equation) + "\n=" + r
+            w = gtk.TextView()
+            w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
+            b = w.get_buffer()
+##            b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
+##            gtk.gdk.color_parse(e.color.get_fill_color())
+            b.set_text(text)
+            self.format_history_buf(b)
+            list.append(w)
+            i += 1
 
         self.layout.show_history(list)
-        self.old_changed = False
 
     def clear(self):
-        _logger.debug('Clearing...')
         self.text_entry.set_text('')
         self.text_entry.grab_focus()
         return True
 
     def reset(self):
-        _logger.debug('Resetting...')
         self.clear()
         return True
+
+##########################################
+# Journal functions
+##########################################
+
+    def write_file(self, file_path):
+        """Write journal entries, Calculate Journal Version (cjv) 1.0"""
+
+        _logger.info('Writing to journal (%s)', file_path)
+
+        f = open(file_path, 'w')
+        f.write("cjv 1.0\n")
+
+        sel = self.text_entry.get_selection_bounds()
+        pos = self.text_entry.get_position()
+        if len(sel) == 0:
+            sel = (pos, pos)
+            f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
+
+        for eq in self.helper['old_eqs']:
+            f.write("%s;%s;%s;%s;%s\n" % (eq.label, eq.equation, eq.result, eq.color.to_string(), eq.owner))
+
+        f.close()
+
+# We're not using the set_canvas function, which currently takes care of
+# (setting up) loading journal entries!
+    def load_journal_entry(self):
+        if self._jobject and self._jobject.file_path:
+            ret = self.read_file(self._jobject.file_path)
+            if ret:
+                _logger.info('Loading from journal succesful')
+#                self.refresh_bar()     # Done by SharingHelper
+            else:
+                _logger.info('Loading from journal failed')
+        else:
+            return False
+
+    def read_file(self, file_path):
+        """Read journal entries, version 1.0"""
+
+        _logger.info('Reading from journal (%s)', file_path)
+
+        f = open(file_path, 'r')
+        str = f.readline().rstrip("\r\n")   # chomp
+        l = str.split()
+        if len(l) != 2:
+            _logger.error('Unable to determine version')
+            return False
+
+        version = l[1]
+        if len(version) > 1 and version[0:2] == "1.":
+            _logger.info('Reading journal entry (version %s)', version)
+
+            str = f.readline().rstrip("\r\n")
+            l = str.split(';')
+            if len(l) != 4:
+                _logger.error('State line invalid (%s)', str)
+                return False
+
+            self.text_entry.set_text(l[0])
+            self.text_entry.set_position(int(l[1]))
+            if l[2] != l[3]:
+                self.text_entry.select_region(int(l[2]), int(l[3]))
+
+            eqs = []
+            for str in f:
+                str = str.rstrip("\r\n")
+                l = str.split(';')
+                if len(l) != 5:
+                    _logger.error('Equation line invalid (%s)', str)
+                    return False
+                eqs.append(Equation(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4]))
+            self.helper['old_eqs'] = eqs
+
+            return True
+        else:
+            _logger.error('Unable to read journal entry, unknown version (%s)', version)
+            return False
 
 ##########################################
 # User interaction functions
@@ -279,12 +434,16 @@ class Calculate(activity.Activity):
 
     def remove_character(self, dir):
         pos = self.text_entry.get_position()
-        print 'Position: %d, dir: %d, len: %d' % (pos, dir, len(self.text_entry.get_text()))
-        if pos + dir <= len(self.text_entry.get_text()) and pos + dir >= 0:
-            if dir < 0:
-                self.text_entry.delete_text(pos+dir, pos)
-            else:
-                self.text_entry.delete_text(pos, pos+dir)
+        str = self.text_entry.get_text()
+        sel = self.text_entry.get_selection_bounds()
+        if len(sel) == 0:
+            if pos + dir <= len(self.text_entry.get_text()) and pos + dir >= 0:
+                if dir < 0:
+                    self.text_entry.delete_text(pos+dir, pos)
+                else:
+                    self.text_entry.delete_text(pos, pos+dir)
+        else:
+            self.text_entry.delete_text(sel[0], sel[1])
 
     def move_left(self):
         pos = self.text_entry.get_position()
@@ -304,6 +463,81 @@ class Calculate(activity.Activity):
         self.label_entry.set_text(str[:pos])
         self.text_entry.set_text(str[pos:])
 
+    def tab_complete(self):
+
+# Get start of variable name
+        str = self.text_entry.get_text()
+        sel = self.text_entry.get_selection_bounds()
+        if len(sel) == 0:
+            end_ofs = self.text_entry.get_position()
+        else:
+            end_ofs = sel[0]
+        start_ofs = end_ofs - 1
+        while start_ofs > 0 and str[start_ofs - 1] in self.IDENTIFIER_CHARS:
+            start_ofs -= 1
+        if end_ofs - start_ofs <= 0:
+            return False
+        partial_name = str[start_ofs:end_ofs]
+        _logger.debug('tab-completing %s...', partial_name)
+
+# Lookup matching variables
+        vars = self.parser.get_var_names(start=partial_name)
+        if len(vars) == 0:
+            return False
+
+# Nothing selected, select first match
+        if len(sel) == 0:
+            name = vars[0]
+            self.text_entry.set_text(str[:start_ofs] + name + str[end_ofs:])
+
+# Select next matching variable
+        else:
+            full_name = str[start_ofs:sel[1]]
+            if full_name not in vars:
+                name = vars[0]
+            else:
+                name = vars[(vars.index(full_name) + 1) % len(vars)]
+            self.text_entry.set_text(str[:start_ofs] + name + str[sel[1]:])
+
+        self.text_entry.set_position(start_ofs + len(name))
+        self.text_entry.select_region(end_ofs, start_ofs + len(name))
+        self.select_reason = self.SELECT_TAB
+        return True
+
+# Selection related functions
+
+    def expand_selection(self, dir):
+#        _logger.info('Expanding selection in dir %d', dir)
+        sel = self.text_entry.get_selection_bounds()
+        slen = len(self.text_entry.get_text())
+        pos = self.text_entry.get_position()
+        if len(sel) == 0:
+            sel = (pos, pos)
+        if dir < 0:
+            newpos = max(0, sel[0] + dir)
+            self.text_entry.set_position(newpos)   # apparently no such thing as a cursor position during select
+            self.text_entry.select_region(newpos, sel[1])
+        elif dir > 0:
+            newpos = min(sel[1] + dir, slen)
+            self.text_entry.set_position(newpos)
+            self.text_entry.select_region(sel[0], newpos)
+        self.select_reason = self.SELECT_SELECT
+
+    def text_copy(self):
+        str = self.text_entry.get_text()
+        sel = self.text_entry.get_selection_bounds()
+ #       _logger.info('text_copy, sel: %r, str: %s', sel, str)
+        if len(sel) == 2:
+            (start, end) = sel
+            self.clipboard = str[start:end]
+
+    def text_paste(self):
+        self.button_pressed(self.TYPE_TEXT, self.clipboard)
+
+    def text_cut(self):
+        self.text_copy()
+        self.remove_character(1)
+
     def keypress_cb(self, widget, event):
         if self.label_entry.is_focus():
             return
@@ -311,47 +545,25 @@ class Calculate(activity.Activity):
         key = gtk.gdk.keyval_name(event.keyval)
         _logger.debug('Key: %s (%r)', key, event.keyval)
 
-        allowed_chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-        if key in allowed_chars:
-            self.add_text(key)
-
-        keymap = {
-            'Return': lambda: self.process(),
-            'period': '.',
-            'equal': '=',
-            'plus': '+',
-            'minus': '-',
-            'asterisk': '*',
-            'slash': '/',
-            'BackSpace': lambda: self.remove_character(-1),
-            'Delete': lambda: self.remove_character(1),
-            'parenleft': '(',
-            'parenright': ')',
-            'exclam': '!',
-            'ampersand': '&',
-            'bar': '|',
-            'asciicircum': '^',
-            'less': '<',
-            'greater': '>',
-            'Left': lambda: self.move_left(),
-            'Right': lambda: self.move_right(),
-            'Up': lambda: self.get_older(),
-            'Down':lambda: self.get_newer(),
-            'colon': lambda: self.label_entered(),
-            'Home': lambda: self.text_entry.set_position(0),
-            'End': lambda: self.text_entry.set_position(len(self.text_entry.get_text()))
-        }
-        if keymap.has_key(key):
-            f = keymap[key]
+        if (event.state & gtk.gdk.CONTROL_MASK) and self.CTRL_KEYMAP.has_key(key):
+            f = self.CTRL_KEYMAP[key]
+            return f(self)
+        elif (event.state & gtk.gdk.SHIFT_MASK) and self.SHIFT_KEYMAP.has_key(key):
+            f = self.SHIFT_KEYMAP[key]
+            return f(self)
+        elif key in self.IDENTIFIER_CHARS:
+            self.button_pressed(self.TYPE_TEXT, key)
+        elif self.KEYMAP.has_key(key):
+            f = self.KEYMAP[key]
             if type(f) is types.StringType:
-                self.add_text(f)
+                self.button_pressed(self.TYPE_TEXT, f)
             else:
-                return f()
+                return f(self)
 
         return True
 	
     def get_older(self):
-        self.showing_version = min(len(sel.helper['old_eqs']), self.showiing_version + 1)
+        self.showing_version = min(len(self.helper['old_eqs']), self.showing_version + 1)
         if self.showing_version == 1:
             self.buffer = self.text_entry.get_text()
         self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
@@ -363,19 +575,19 @@ class Calculate(activity.Activity):
             return
         self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
 
-    def add_text(self, c):
-        pos = self.text_entry.get_position()
-        tlen = len(self.text_entry.get_text())
-        if tlen == 0 and c in self.parser.get_diadic_operators():
-            c = 'Ans' + c
-        self.text_entry.insert_text(c, pos)
-        self.text_entry.grab_focus()
-        self.text_entry.set_position(pos + len(c))
+    def add_text(self, str):
+        self.button_pressed(self.TYPE_TEXT, str)
 
 # This function should be split up properly
     def button_pressed(self, type, str):
         sel = self.text_entry.get_selection_bounds()
         pos = self.text_entry.get_position()
+
+# If selection by tab completion just manipulate end
+        if len(sel) == 2 and self.select_reason != self.SELECT_SELECT:
+            pos = sel[1]
+            sel = ()
+
         self.text_entry.grab_focus()
         if len(sel) == 2:
             (start, end) = sel
@@ -385,7 +597,7 @@ class Calculate(activity.Activity):
             return False
 
         if type == self.TYPE_FUNCTION:
-            if sel is ():
+            if len(sel) == 0:
                 self.text_entry.insert_text(str + '()', pos)
                 self.text_entry.set_position(pos + len(str) + 1)
             else:
@@ -407,7 +619,14 @@ class Calculate(activity.Activity):
             self.text_entry.set_position(pos + len(str))
 
         elif type == self.TYPE_TEXT:
-            if len(sel) is 2:
+            tlen = len(self.text_entry.get_text())
+            if len(sel) == 2:
+                tlen -= (end - start)
+
+            if tlen == 0 and str in self.parser.get_diadic_operators():
+                self.text_entry.set_text('Ans' + str)
+                self.text_entry.set_position(3 + len(str))
+            elif len(sel) is 2:
                 self.text_entry.set_text(text[:start] + str + text[end:])
                 self.text_entry.set_position(pos + start - end + len(str))
             else:
@@ -419,7 +638,7 @@ class Calculate(activity.Activity):
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)
-    t = Calc(win)
+    t = Calculate(win)
     gtk.main()
     return 0
 

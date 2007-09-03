@@ -54,6 +54,15 @@ class EditToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
+        self.insert(TextToolButton('Copy',
+            lambda x: calc.text_copy()), -1)
+
+        self.insert(TextToolButton('Paste',
+            lambda x: calc.text_paste()), -1)
+
+        self.insert(TextToolButton('Cut',
+            lambda x: calc.text_cut()), -1)
+
 class AlgebraToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)

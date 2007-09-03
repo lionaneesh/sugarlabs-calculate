@@ -1,3 +1,11 @@
+6
+
+* Journal read/write support
+* Selecting and copy/paste functioning
+* Added tab completion of variable names
+* SharedState: Adjusted to new tubes API
+* Added factorize() function
+
 5
 
 * Adapt import from canvasicon -> icon module

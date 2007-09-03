@@ -76,15 +76,21 @@ class MathLib:
                 return 'True'
             else:
                 return 'False'
+        elif type(n) is types.StringType:
+            return n
         elif type(n) is types.NoneType:
             return 'Error'
+        elif type(n) is types.IntType:
+            n = self.d(n)
+        elif type(n) is types.FloatType:
+            n = self.d(n)
         elif not isinstance(n, Decimal):
-            return 'Error (no Decimal object)'
+            return 'Error: unsupported type'
         (sign, digits, exp) = n.as_tuple()
         if len(digits) > 9:
             exp += len(digits) - 9
             digits = digits[:9]
-        
+
         if sign:
             res = "-"
         else:
@@ -93,7 +99,7 @@ class MathLib:
         
         if int_len == 0:
             if exp < -5:
-                disp_exp = exp +len(digits) 
+                disp_exp = exp + len(digits) 
             else:
                 disp_exp = 0
         elif 0 < int_len < 6:
@@ -118,6 +124,12 @@ class MathLib:
             res = res + 'e%d' % disp_exp
 
         return res
+
+    def short_format(self, n):
+        ret = self.format_number(n)
+        if len(ret) > 7:
+            ret = "%1.1e" % n
+        return ret
 
     def is_int(self, n):
         (sign, d, e) = n.normalize().as_tuple()
@@ -241,3 +253,28 @@ class MathLib:
     def ceil(self, x):
         return self.d(math.ceil(x))
 
+    def factorize(self, x):
+        if not self.is_int(x):
+            return 0
+
+        factors = []
+        num = x
+        i = 2
+        while i <= math.sqrt(num):
+            if num % i == 0:
+                factors.append(i)
+                num /= i
+                i = 2
+            elif i == 2:
+                i += 1
+            else:
+                i += 2
+        factors.append(num)
+
+        if len(factors) == 1:
+            return "1 * %d" % x
+        else:
+            str = "%d" % factors[0]
+            for fac in factors[1:]:
+                str += " * %d" % fac
+            return str
