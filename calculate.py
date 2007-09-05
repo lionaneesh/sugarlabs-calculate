@@ -45,12 +45,30 @@ from mathlib import MathLib
 from eqnparser import EqnParser
 
 class Equation:
-    def __init__(self, label, eqn, res, col, owner):
+    def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, str=None):
+        if str is not None:
+            self.parse(str)
+        elif eqn is not None:
+            self.set(label, eqn, res, col, owner)
+
+    def set(self, label, eqn, res, col, owner):
         self.label = label
         self.equation = eqn
         self.result = res
         self.color = col
         self.owner = owner
+
+    def __str__(self):
+        return "%s;%s;%s;%s;%s\n" % \
+            (self.label, self.equation, self.result, self.color.to_string(), self.owner)
+
+    def parse(self, str):
+        str = str.rstrip("\r\n")
+        l = str.split(';')
+        if len(l) != 5:
+            _logger.error('Equation.parse() string invalid (%s)', str)
+            return False
+        self.set(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4])
 
 class Calculate(activity.Activity):
 
@@ -148,7 +166,13 @@ class Calculate(activity.Activity):
         self.owner_id = str(self.owner._properties["nick"])
         _logger.debug('Owner_id: %s', self.owner_id)
 
-        self.helper = SharingHelper(self)
+        self.helper_old_eqs = []
+
+        options = {
+            'receive_message': self.receive_message,
+            'on_connect': lambda: self.helper.send_message("req_sync", "")
+        }
+        self.helper = SharingHelper(self, opt=options)
         self.helper.create_shared_object('old_eqs',
                                          {'changed': lambda x: self.buddy_old_eqs_cb(),
                                           'type': 'python'},
@@ -157,7 +181,7 @@ class Calculate(activity.Activity):
                                          {'changed': lambda x: self.buddy_vars_cb(),
                                           'type': 'python'},
                                          iv = [])
-            
+
         _logger.info('Available functions:')
         for f in self.parser.get_function_names():
             _logger.info('\t%s', f)
@@ -173,12 +197,12 @@ class Calculate(activity.Activity):
 
     def equation_pressed_cb(self, n):
         """Callback for when an equation box is clicked"""
-        if len(self.helper['old_eqs']) <= n:
+        if len(self.helper_old_eqs) <= n:
             return True
-        if len(self.helper['old_eqs'][n].label) > 0:
-            text = self.helper['old_eqs'][n].label
+        if len(self.helper_old_eqs[n].label) > 0:
+            text = self.helper_old_eqs[n].label
         else:
-            text = self.helper['old_eqs'][n].equation
+            text = self.helper_old_eqs[n].equation
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
@@ -229,6 +253,11 @@ class Calculate(activity.Activity):
     def set_error_equation(self, eqn):
         self.set_last_equation(eqn)
 
+    def insert_equation(self, eq):
+        tmp = self.helper_old_eqs
+        tmp.insert(0, eq)
+        self.helper_old_eqs = tmp
+
     def process(self):
         s = self.text_entry.get_text()
         label = self.label_entry.get_text()
@@ -238,9 +267,8 @@ class Calculate(activity.Activity):
 
 # Result ok
         if res is not None:
-            tmp = self.helper['old_eqs']
-            tmp.insert(0, eqn)
-            self.helper['old_eqs'] = tmp
+            self.insert_equation(eqn)
+            self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
             ans_but = self.layout.buttons["Ans"]    # To change label
 
@@ -268,8 +296,8 @@ class Calculate(activity.Activity):
         iter_end = buf.get_end_iter()
         buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
             iter_start, iter_end)
-        buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
-            iter_start, iter_end)
+        col = self.color.get_fill_color()
+        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
 
     def buddy_vars_cb(self):
         self.refresh_bar()
@@ -286,7 +314,7 @@ class Calculate(activity.Activity):
             list.append(w)
         self.layout.show_history(list)
 
-    def format_history_buf(self, buf):
+    def format_history_buf(self, buf, eq):
         iter_start = buf.get_start_iter()
         iter_colon = buf.get_start_iter()
         iter_end = buf.get_end_iter()
@@ -306,8 +334,8 @@ class Calculate(activity.Activity):
             
         buf.apply_tag(buf.create_tag(font=self.FONT_BIG,
             justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
-        buf.apply_tag(buf.create_tag(foreground=self.color.get_fill_color()), 
-            iter_start, iter_end)
+        col = eq.color.get_fill_color()
+        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
     
     def refresh_history(self):
         list = []
@@ -317,7 +345,7 @@ class Calculate(activity.Activity):
             last_eq_drawn = True
         else:
             last_eq_drawn = False
-        for e in self.helper['old_eqs']:
+        for e in self.helper_old_eqs:
 
             if not last_eq_drawn and e.owner == self.owner_id:
                 self.set_last_equation(e)
@@ -335,7 +363,7 @@ class Calculate(activity.Activity):
 ##            b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
 ##            gtk.gdk.color_parse(e.color.get_fill_color())
             b.set_text(text)
-            self.format_history_buf(b)
+            self.format_history_buf(b, e)
             list.append(w)
             i += 1
 
@@ -368,8 +396,8 @@ class Calculate(activity.Activity):
             sel = (pos, pos)
             f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
 
-        for eq in self.helper['old_eqs']:
-            f.write("%s;%s;%s;%s;%s\n" % (eq.label, eq.equation, eq.result, eq.color.to_string(), eq.owner))
+        for eq in self.helper_old_eqs:
+            f.write(str(eq))
 
         f.close()
 
@@ -415,13 +443,10 @@ class Calculate(activity.Activity):
 
             eqs = []
             for str in f:
-                str = str.rstrip("\r\n")
-                l = str.split(';')
-                if len(l) != 5:
-                    _logger.error('Equation line invalid (%s)', str)
-                    return False
-                eqs.append(Equation(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4]))
-            self.helper['old_eqs'] = eqs
+                eq = Equation(str=str)
+                if eq.equation is not None:
+                    eqs.append(Equation(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4]))
+            self.helper_old_eqs = eqs
 
             return True
         else:
@@ -563,17 +588,17 @@ class Calculate(activity.Activity):
         return True
 	
     def get_older(self):
-        self.showing_version = min(len(self.helper['old_eqs']), self.showing_version + 1)
+        self.showing_version = min(len(self.helper_old_eqs), self.showing_version + 1)
         if self.showing_version == 1:
             self.buffer = self.text_entry.get_text()
-        self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
+        self.text_entry.set_text(self.helper_old_eqs[self.showing_version - 1].equation)
         
     def get_newer(self):
         self.showing_version = max(0, self.showing_version - 1)
         if self.showing_version == 0:
             self.text_entry.set_text(self.buffer)
             return
-        self.text_entry.set_text(self.helper['old_eqs'][self.showing_version - 1].equation)
+        self.text_entry.set_text(self.helper_old_eqs[self.showing_version - 1].equation)
 
     def add_text(self, str):
         self.button_pressed(self.TYPE_TEXT, str)
@@ -635,6 +660,24 @@ class Calculate(activity.Activity):
 
         else:
             _logger.error('Calculate.button_pressed(): invalid type')
+
+    def receive_message(self, msg, val):
+        if msg == "add_eq":
+            eq = Equation(str=str(val))
+            self.insert_equation(eq)
+            self.refresh_bar()
+        elif msg == "req_sync":
+            data = []
+            for eq in self.helper_old_eqs:
+                data.append(str(eq))
+            self.helper.send_message("sync", data)
+        elif msg == "sync":
+            tmp = []
+            for eq_str in val:
+                _logger.info('receive_message: %s', str(eq_str))
+                tmp.append(Equation(str=str(eq_str)))
+            self.helper_old_eqs = tmp
+            self.refresh_bar()
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)

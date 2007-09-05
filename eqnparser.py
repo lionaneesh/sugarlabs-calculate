@@ -20,6 +20,7 @@
 import logging
 _logger = logging.getLogger('EqnParser')
 
+import types
 from mathlib import MathLib
 
 class Equation:
