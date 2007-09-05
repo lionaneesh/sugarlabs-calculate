@@ -146,6 +146,8 @@ class EqnParser:
 
         self.register_function('factorize', 1, lambda x: self.ml.factorize(x[0]))
 
+        self.register_function('plot', 2, lambda x: self.pl.plot(x[0], x[1]))
+
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
         self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
         self.register_operator('-', self.OP_DIADIC, 0, lambda x: self.ml.sub(x[0], x[1]))
@@ -197,6 +199,12 @@ class EqnParser:
     def set_var(self, name, val):
         self.variables[name] = val
 
+    def get_var(self, name, val):
+        if name in self.variables:
+            return self.variables[name]
+        else:
+            return None
+
     def lookup_var(self, name, ps):
         c = self.ml.get_constant(name)
         if c is not None:
@@ -207,7 +215,10 @@ class EqnParser:
 #                _logger.error('EqnParser.lookup_var(): recursion detected')
 #                return None
 #            self.variables[name].highest_level = level
-            return self.parse(self.variables[name])
+            if type(self.variables[name]) is types.StringType:
+                return self.parse(self.variables[name])
+            else:
+                return self.variables[name]
         else:
             _logger.debug('variable %s not defined', name)
             ps.set_type(self.TYPE_SYMBOLIC)
@@ -444,6 +455,8 @@ class EqnParser:
 
                 elif otype == self.OP_INVALID:
                     _logger.debug('Invalid operator')
+                    ps.set_error_code(ParserState.PARSE_ERROR)
+                    return None
 
 # Parse variable or function
             else:
