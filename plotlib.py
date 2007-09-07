@@ -1,0 +1,138 @@
+# plotlib.py, svg plot generator by Reinier Heeres <reinier@heeres.eu>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+#
+# Change log:
+#    2007-09-04: rwh, first version
+
+import logging
+_logger = logging.getLogger('PlotLib')
+
+class PlotLib:
+    """Class to generate an svg plot for a function.
+    Evaluation of values is done using the EqnParser class."""
+
+    def __init__(self, parser):
+        self.parser = parser
+
+        self.svg_data = ""
+        self.set_size(0, 0)
+
+    def set_size(self, width, height):
+        self.width = width
+        self.height = height
+
+    def get_svg(self):
+        return self.svg_data
+
+    def parse_range(self, range):
+        p1 = range.split('=')
+        if len(p1) != 2:
+            return None
+        p2 = p1[1].split('..')
+        if len(p2) != 2:
+            return None
+        return (p1[0], (float(p2[0]), float(p2[1])))
+
+    def evaluate(self, eqn, var, range, n=100):
+        x_old = self.parser.get_var(var)
+
+        res = []
+        d = float((range[1] - range[0])) / (n - 1)
+        x = range[0]
+        while n > 0:
+            self.parser.set_var(var, x)
+            v = float(self.parser.parse(eqn))
+            res.append((x, v))
+            x += d
+            n -= 1
+
+        self.parser.set_var(var, x_old)
+        return res
+
+    def create_image(self):
+        self.svg_data = '<?xml version="1.0" standalone="no"?>\n'
+        self.svg_data += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'
+        self.svg_data += '<svg width="%d" height="%d" version="1.1" xmlns="http://www.w3.org/2000/svg">\n' % (self.width, self.height)
+
+    def finish_image(self):
+        self.svg_data += '</svg>'
+
+    def plot_line(self, c0, c1, col):
+        c0 = self.rcoords_to_coords(c0)
+        c1 = self.rcoords_to_coords(c1)
+        self.svg_data += '<line style="stroke:%s;stroke-width:1" x1="%f" y1="%f" x2="%f" y2="%f" />\n' % (col, c0[0], c0[1], c1[0], c1[1])
+
+    def plot_polyline(self, coords, col):
+        self.svg_data += '<polyline style="fill:none;stroke:%s;stroke-width:1" points="' % (col)
+        for c in coords:
+            c = self.rcoords_to_coords(c)
+            self.svg_data += '%f,%f ' % (c[0], c[1])
+        self.svg_data += '" />\n'
+
+    def determine_bounds(self, vals):
+        self.minx = self.miny = 1e99
+        self.maxx = self.maxy = -1e99
+        for (x, y) in vals:
+            self.minx = min(float(x), self.minx)
+            self.miny = min(float(y), self.miny)
+            self.maxx = max(float(x), self.maxx)
+            self.maxy = max(float(y), self.maxy)
+
+    def rcoords_to_coords(self, pair):
+        return (pair[0] * self.width, pair[1] * self.height)
+
+    def vals_to_rcoords(self, pair):
+        ret = (0.1 + (pair[0] - self.minx) / (self.maxx - self.minx) * 0.8, \
+               0.9 - (pair[1] - self.miny) / (self.maxy - self.miny) * 0.8)
+        return ret
+
+    def add_curve(self, vals):
+        self.determine_bounds(vals)
+
+        self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
+        self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
+
+        c = []
+        for v in vals:
+            c.append(self.vals_to_rcoords(v))
+#        print 'coords: %r' % c
+
+        self.plot_polyline(c, "blue")
+
+    def export_plot(self, fn):
+        f = open(fn, "w")
+        f.write(self.svg_data)
+        f.close()
+
+    def plot(self, eqn, range_spec):
+        (var, range) = self.parse_range(range_spec)
+        if range is None:
+            _logger.error('Unable to parse range')
+            return False
+        _logger.info('Plot range for var %s: %r', var, range)
+
+        self.set_size(200, 200)
+        self.create_image()
+
+        vals = self.evaluate(eqn, var, range)
+#        print 'vals: %r' % vals
+        self.add_curve(vals)
+
+        self.finish_image()
+
+        self.export_plot("/tmp/calculate_graph.svg")
+
+        return self.get_svg()

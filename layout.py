@@ -39,7 +39,9 @@ class CalcLayout:
       
             [0, 3, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
             [1, 3, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
-            [2, 3, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
+
+# Deprecated -- functionality available through interface and labels
+#            [2, 3, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
      
             [3, 0, 3, 'clear', self.col_gray1, lambda w: self._parent.clear()],
  
@@ -79,8 +81,6 @@ class CalcLayout:
         self.grid.set_border_width(6)
         self.grid.set_row_spacings(6)
         self.grid.set_col_spacings(6)
-
-        self._parent.set_canvas(self.grid)
 
 # Left part: container and input
         hc1 = gtk.HBox(False, 10)
@@ -140,6 +140,9 @@ class CalcLayout:
         self.history.set_border_width(6)
         scrolled_window.add_with_viewport(self.history)
         self.grid.attach(scrolled_window, 6, 10, 5, 16)
+
+    def show_it(self):
+        self._parent.set_canvas(self.grid)
         self._parent.show_all()
 
     def show_history(self, window_list):

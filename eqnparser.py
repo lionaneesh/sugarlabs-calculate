@@ -22,6 +22,7 @@ _logger = logging.getLogger('EqnParser')
 
 import types
 from mathlib import MathLib
+from plotlib import PlotLib
 
 class Equation:
     def __init__(self, eqn):
@@ -109,45 +110,50 @@ class EqnParser:
         else:
             self.ml = ml
 
+        self.pl = PlotLib(self)
+
         self.error_offset = 0
 
         self.variables = {}
         self.functions = {}
         self.operators = []
 
-        self.register_function('exp', 1, lambda x: self.ml.exp(x[0]))
-        self.register_function('ln', 1, lambda x: self.ml.ln(x[0]))
-        self.register_function('log', 1, lambda x: self.ml.log10(x[0]))
-        self.register_function('log10', 1, lambda x: self.ml.log10(x[0]))
-        self.register_function('pow', 2, lambda x: self.ml.pow(x[0], x[1]))
+        self.cached_diadic_ops = None
+        self.cached_post_ops = None
 
-        self.register_function('sqrt', 1, lambda x: self.ml.sqrt(x[0]))
+        self.register_function('exp', lambda x: self.ml.exp(x[0]), {"nargs": 1})
+        self.register_function('ln', lambda x: self.ml.ln(x[0]), {"nargs": 1})
+        self.register_function('log', lambda x: self.ml.log10(x[0]), {"nargs": 1})
+        self.register_function('log10', lambda x: self.ml.log10(x[0]), {"nargs": 1})
+        self.register_function('pow', lambda x: self.ml.pow(x[0], x[1]), {"nargs": 2})
 
-        self.register_function('sin', 1, lambda x: self.ml.sin(x[0]))
-        self.register_function('cos', 1, lambda x: self.ml.cos(x[0]))
-        self.register_function('tan', 1, lambda x: self.ml.tan(x[0]))
+        self.register_function('sqrt', lambda x: self.ml.sqrt(x[0]), {"nargs": 1})
 
-        self.register_function('asin', 1, lambda x: self.ml.asin(x[0]))
-        self.register_function('acos', 1, lambda x: self.ml.acos(x[0]))
-        self.register_function('atan', 1, lambda x: self.ml.atan(x[0]))
+        self.register_function('sin', lambda x: self.ml.sin(x[0]), {"nargs": 1})
+        self.register_function('cos', lambda x: self.ml.cos(x[0]), {"nargs": 1})
+        self.register_function('tan', lambda x: self.ml.tan(x[0]), {"nargs": 1})
 
-        self.register_function('sinh', 1, lambda x: self.ml.sinh(x[0]))
-        self.register_function('cosh', 1, lambda x: self.ml.cosh(x[0]))
-        self.register_function('tanh', 1, lambda x: self.ml.tanh(x[0]))
+        self.register_function('asin', lambda x: self.ml.asin(x[0]), {"nargs": 1})
+        self.register_function('acos', lambda x: self.ml.acos(x[0]), {"nargs": 1})
+        self.register_function('atan', lambda x: self.ml.atan(x[0]), {"nargs": 1})
 
-        self.register_function('asinh', 1, lambda x: self.ml.asinh(x[0]))
-        self.register_function('acosh', 1, lambda x: self.ml.acosh(x[0]))
-        self.register_function('atanh', 1, lambda x: self.ml.atanh(x[0]))
+        self.register_function('sinh', lambda x: self.ml.sinh(x[0]), {"nargs": 1})
+        self.register_function('cosh', lambda x: self.ml.cosh(x[0]), {"nargs": 1})
+        self.register_function('tanh', lambda x: self.ml.tanh(x[0]), {"nargs": 1})
 
-        self.register_function('round', 1, lambda x: self.ml.round(x[0]))
-        self.register_function('floor', 1, lambda x: self.ml.floor(x[0]))
-        self.register_function('ceil', 1, lambda x: self.ml.ceil(x[0]))
+        self.register_function('asinh', lambda x: self.ml.asinh(x[0]), {"nargs": 1})
+        self.register_function('acosh', lambda x: self.ml.acosh(x[0]), {"nargs": 1})
+        self.register_function('atanh', lambda x: self.ml.atanh(x[0]), {"nargs": 1})
 
-        self.register_function('mod', 2, lambda x: self.ml.mod(x[0], x[1]))
+        self.register_function('round', lambda x: self.ml.round(x[0]), {"nargs": 1})
+        self.register_function('floor', lambda x: self.ml.floor(x[0]), {"nargs": 1})
+        self.register_function('ceil', lambda x: self.ml.ceil(x[0]), {"nargs": 1})
 
-        self.register_function('factorize', 1, lambda x: self.ml.factorize(x[0]))
+        self.register_function('mod', lambda x: self.ml.mod(x[0], x[1]), {"nargs": 2})
 
-        self.register_function('plot', 2, lambda x: self.pl.plot(x[0], x[1]))
+        self.register_function('factorize', lambda x: self.ml.factorize(x[0]), {"nargs": 1})
+
+        self.register_function('plot', lambda x: self.pl.plot(x[0], x[1]), {"nargs": 2, 'parse_options': False})
 
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
         self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
@@ -173,8 +179,8 @@ class EqnParser:
 
         self.register_operator('%', self.OP_DIADIC, 0, lambda x: self.ml.mod(x[0], x[1]))
 
-    def register_function(self, name, nargs, f):
-        self.functions[name] = (nargs, f)
+    def register_function(self, name, f, opts):
+        self.functions[name] = (f, opts)
 
     def register_operator(self, op, type, presedence, f):
         self.operators.append((op, type, presedence, f))
@@ -186,11 +192,20 @@ class EqnParser:
                 self.OP_CHARS += c
 
     def get_diadic_operators(self):
-        res = []
-        for (op, type, presedence, f) in self.operators:
-            if type == self.OP_DIADIC:
-                res.append(op)
-        return res
+        if self.cached_diadic_ops == None:
+            self.cached_diadic_ops = []
+            for (op, type, presedence, f) in self.operators:
+                if type == self.OP_DIADIC:
+                    self.cached_diadic_ops.append(op)
+        return self.cached_diadic_ops
+
+    def get_post_operators(self):
+        if self.cached_post_ops == None:
+            self.cached_post_ops = []
+            for (op, type, presedence, f) in self.operators:
+                if type == self.OP_POST:
+                    self.cached_post_ops.append(op)
+        return self.cached_post_ops
 
     def reset_variable_level(self, level):
         return
@@ -198,9 +213,12 @@ class EqnParser:
 #            self.variables[i].highest_level = level
 
     def set_var(self, name, val):
-        self.variables[name] = val
+        if type(val) is types.FloatType:
+            self.variables[name] = self.ml.d(val)
+        else:
+            self.variables[name] = val
 
-    def get_var(self, name, val):
+    def get_var(self, name):
         if name in self.variables:
             return self.variables[name]
         else:
@@ -254,17 +272,20 @@ class EqnParser:
             _logger.error('Function \'%s\' not defined', func)
             return None
 
-        (nargs, f) = self.functions[func]
-        if len(args) != nargs:
-            _logger.error('Invalid number of arguments (%d instead of %d)', len(args), nargs)
+        (f, opts) = self.functions[func]
+        if len(args) != opts['nargs']:
+            _logger.error('Invalid number of arguments (%d instead of %d)', len(args), opts['nargs'])
             return None
 
-        pargs = []
-        for i in range(len(args)):
-            pargs.append(self.parse(args[i]))
-            if pargs[i] is None:
-                _logger.error('Unable to parse argument %d: \'%s\'', i, args[i])
-                return None
+        if 'parse_options' in opts and opts['parse_options'] == False:
+            pargs = args
+        else:
+            pargs = []
+            for i in range(len(args)):
+                pargs.append(self.parse(args[i]))
+                if pargs[i] is None:
+                    _logger.error('Unable to parse argument %d: \'%s\'', i, args[i])
+                    return None
 
         res = f(pargs)
         _logger.debug('Function \'%s\' returned %s', func, self.ml.format_number(res))

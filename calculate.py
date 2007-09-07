@@ -31,6 +31,7 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 import pango
+import base64
 
 from sugar.activity import activity
 from sugar.presence import presenceservice
@@ -43,6 +44,7 @@ from sharedstate.sharedstate import SharingHelper
 from layout import CalcLayout
 from mathlib import MathLib
 from eqnparser import EqnParser
+from svgimage import SVGImage
 
 class Equation:
     def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, str=None):
@@ -59,8 +61,13 @@ class Equation:
         self.owner = owner
 
     def __str__(self):
-        return "%s;%s;%s;%s;%s\n" % \
-            (self.label, self.equation, self.result, self.color.to_string(), self.owner)
+        if isinstance(self.result, SVGImage):
+            svg_data = "<svg>" + base64.b64encode(self.result.get_svg_data())
+            return "%s;%s;%s;%s;%s\n" % \
+                (self.label, self.equation, svg_data, self.color.to_string(), self.owner)
+        else:
+            return "%s;%s;%s;%s;%s\n" % \
+                (self.label, self.equation, self.result, self.color.to_string(), self.owner)
 
     def parse(self, str):
         str = str.rstrip("\r\n")
@@ -68,6 +75,10 @@ class Equation:
         if len(l) != 5:
             _logger.error('Equation.parse() string invalid (%s)', str)
             return False
+
+        if l[2].startswith("<svg>"):
+            l[2] = SVGImage(data=base64.b64decode(l[2][5:]))
+
         self.set(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4])
 
 class Calculate(activity.Activity):
@@ -133,23 +144,9 @@ class Calculate(activity.Activity):
     IDENTIFIER_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
 
     def __init__(self, handle):
-        try:
-            activity.Activity.__init__(self, handle)
-        except Exception, inst:
-            _logger.error('Exception: %s', inst)
+        activity.Activity.__init__(self, handle)
 
-        self.set_title("Calculate")
-        self.connect("key_press_event", self.keypress_cb)
-        self.connect("destroy", self.cleanup_cb)
-        self.color = sugar.profile.get_color()
-##        self.icon = CanvasIcon(
-##            icon_name = 'theme:stock-buddy',
-##            xo_color = XoColor(self.color))     
-        self.layout = CalcLayout(self)
-        self.label_entry = self.layout.label_entry
-        self.text_entry = self.layout.text_entry
-        self.history = self.layout.history
-        self.last_eq = self.layout.last_eq.get_buffer()
+        self.helper_old_eqs = []
         
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
@@ -161,12 +158,24 @@ class Calculate(activity.Activity):
         self.showing_error = False
         self.show_vars = False
 
+        self.set_title("Calculate")
+        self.connect("key_press_event", self.keypress_cb)
+        self.connect("destroy", self.cleanup_cb)
+        self.color = sugar.profile.get_color()
+##        self.icon = CanvasIcon(
+##            icon_name = 'theme:stock-buddy',
+##            xo_color = XoColor(self.color))     
+
+        self.layout = CalcLayout(self)
+        self.label_entry = self.layout.label_entry
+        self.text_entry = self.layout.text_entry
+        self.history = self.layout.history
+        self.last_eq = self.layout.last_eq.get_buffer()
+
         self.presence = presenceservice.get_instance()
         self.owner = self.presence.get_owner()
         self.owner_id = str(self.owner._properties["nick"])
         _logger.debug('Owner_id: %s', self.owner_id)
-
-        self.helper_old_eqs = []
 
         options = {
             'receive_message': self.receive_message,
@@ -187,7 +196,7 @@ class Calculate(activity.Activity):
             _logger.info('\t%s', f)
 
         self.reset()
-        self.load_journal_entry()
+        self.layout.show_it()
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -234,12 +243,15 @@ class Calculate(activity.Activity):
             offset = 0
 
         if eqn.result is not None:
-            text += '\n= ' + self.ml.format_number(eqn.result)
+            if isinstance(eqn.result, SVGImage):
+                pass
+            else:
+                text += '\n= ' + self.ml.format_number(eqn.result)
+                self.parser.set_var('Ans', self.ml.format_number(eqn.result))
+                if len(eqn.label) > 0:
+                    self.parser.set_var(eqn.label, eqn.equation)
             self.text_entry.set_text('')
-            self.parser.set_var('Ans', self.ml.format_number(eqn.result))
-            if len(eqn.label) > 0:
-                self.label_entry.set_text('')
-                self.parser.set_var(eqn.label, eqn.equation)
+            self.label_entry.set_text('')
         else:
             pos = self.parser.get_error_offset()
             if pos == len(text) - 1:
@@ -263,6 +275,8 @@ class Calculate(activity.Activity):
         label = self.label_entry.get_text()
         _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
         res = self.parser.parse(s)
+        if type(res) == types.StringType and res.find('</svg>') > -1:
+            res = SVGImage(data=res)
         eqn = Equation(label, s, res, self.color, self.owner_id)
 
 # Result ok
@@ -270,7 +284,6 @@ class Calculate(activity.Activity):
             self.insert_equation(eqn)
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
-            ans_but = self.layout.buttons["Ans"]    # To change label
 
 # Show error
         else:
@@ -309,7 +322,7 @@ class Calculate(activity.Activity):
                 continue
             w = gtk.TextView()
             b = w.get_buffer()
-            b.set_text(name + ":\t" + value)
+            b.set_text(name + ":\t" + str(value))
             self.format_var_buf(b)
             list.append(w)
         self.layout.show_history(list)
@@ -350,20 +363,30 @@ class Calculate(activity.Activity):
             if not last_eq_drawn and e.owner == self.owner_id:
                 self.set_last_equation(e)
                 last_eq_drawn = True
+                if not isinstance(e.result, SVGImage):
+                    continue
+
+# Skip if only drawing own equations
+            if self.layout.minebut.selected == 1 and e.owner != self.ownder_id:
                 continue
 
-            text = ""
-            if len(e.label) > 0:
-                text += str(e.label) + ": "
-            r = self.ml.format_number(e.result)
-            text += str(e.equation) + "\n=" + r
-            w = gtk.TextView()
-            w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
-            b = w.get_buffer()
-##            b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
-##            gtk.gdk.color_parse(e.color.get_fill_color())
-            b.set_text(text)
-            self.format_history_buf(b, e)
+            if isinstance(e.result, SVGImage):
+                w = e.result.get_image()
+
+            else:
+                text = ""
+                if len(e.label) > 0:
+                    text += str(e.label) + ": "
+                r = self.ml.format_number(e.result)
+                text += str(e.equation) + "\n=" + r
+                w = gtk.TextView()
+                w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
+                b = w.get_buffer()
+##                b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
+##                gtk.gdk.color_parse(e.color.get_fill_color())
+                b.set_text(text)
+                self.format_history_buf(b, e)
+
             list.append(w)
             i += 1
 
@@ -401,19 +424,6 @@ class Calculate(activity.Activity):
 
         f.close()
 
-# We're not using the set_canvas function, which currently takes care of
-# (setting up) loading journal entries!
-    def load_journal_entry(self):
-        if self._jobject and self._jobject.file_path:
-            ret = self.read_file(self._jobject.file_path)
-            if ret:
-                _logger.info('Loading from journal succesful')
-#                self.refresh_bar()     # Done by SharingHelper
-            else:
-                _logger.info('Loading from journal failed')
-        else:
-            return False
-
     def read_file(self, file_path):
         """Read journal entries, version 1.0"""
 
@@ -444,9 +454,13 @@ class Calculate(activity.Activity):
             eqs = []
             for str in f:
                 eq = Equation(str=str)
-                if eq.equation is not None:
-                    eqs.append(Equation(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4]))
+                if eq.equation is not None and len(eq.equation) > 0:
+                    eqs.append(eq)
+                    if eq.label is not None and len(eq.label) > 0:
+                        self.parser.set_var(eq.label, eq.result)
             self.helper_old_eqs = eqs
+
+            self.refresh_bar()
 
             return True
         else:
@@ -632,14 +646,15 @@ class Calculate(activity.Activity):
         elif type == self.TYPE_OP_PRE:
             if len(sel) is 2:
                 pos = start
-            elif pos == 0:
-                str = 'Ans' + str
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
         elif type == self.TYPE_OP_POST:
             if len(sel) is 2:
                 pos = end
+            elif pos == 0:
+                ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
+                str = ans + str
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
@@ -648,8 +663,10 @@ class Calculate(activity.Activity):
             if len(sel) == 2:
                 tlen -= (end - start)
 
-            if tlen == 0 and str in self.parser.get_diadic_operators():
-                self.text_entry.set_text('Ans' + str)
+            if tlen == 0 and (str in self.parser.get_diadic_operators() \
+                    or str in self.parser.get_post_operators()):
+                ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
+                self.text_entry.set_text(ans + str)
                 self.text_entry.set_position(3 + len(str))
             elif len(sel) is 2:
                 self.text_entry.set_text(text[:start] + str + text[end:])

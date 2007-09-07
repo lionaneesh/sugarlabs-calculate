@@ -22,8 +22,7 @@ import math
 from decimal import Decimal
 
 import logging
-_logger = logging.getLogger('calc-activity')
-
+_logger = logging.getLogger('MathLib')
 
 class MathLib:
     ANGLE_DEG = math.pi/180
@@ -170,7 +169,7 @@ class MathLib:
 
     def pow(self, x, y):
         if self.is_int(y):
-            return x ** y
+            return x ** int(y)
         else:
             return self.d(math.pow(x, y))
 
