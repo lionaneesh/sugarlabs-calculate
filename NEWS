@@ -1,3 +1,5 @@
+8
+
 * Plot support, plot(x^3,x=-2..2)
 * Fixed toolbar focus bug
 * Improved operator parsing ('*' vs '**' and '<' vs '<<')
