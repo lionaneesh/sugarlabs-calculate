@@ -82,6 +82,13 @@ class PlotLib:
             self.svg_data += '%f,%f ' % (c[0], c[1])
         self.svg_data += '" />\n'
 
+    def add_text(self, c, text, rotate=0):
+        c = self.rcoords_to_coords(c)
+        self.svg_data += '<text x="%f" y="%f"' % (c[0], c[1])
+        if rotate != 0:
+            self.svg_data += ' transform="rotate(%d)"' % (rotate)
+        self.svg_data += '>%s</text>\n' % (text)
+
     def determine_bounds(self, vals):
         self.minx = self.miny = 1e99
         self.maxx = self.maxy = -1e99
@@ -102,15 +109,19 @@ class PlotLib:
     def add_curve(self, vals):
         self.determine_bounds(vals)
 
-        self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
-        self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
-
         c = []
         for v in vals:
             c.append(self.vals_to_rcoords(v))
 #        print 'coords: %r' % c
 
         self.plot_polyline(c, "blue")
+
+    def draw_axes(self, labelx, labely):
+        self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
+        self.add_text((0.50, 0.98), labelx)
+
+        self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
+        self.add_text((-0.50, 0.065), labely, rotate=-90)
 
     def export_plot(self, fn):
         f = open(fn, "w")
@@ -127,12 +138,13 @@ class PlotLib:
         self.set_size(200, 200)
         self.create_image()
 
+        self.draw_axes(var, eqn)
+
         vals = self.evaluate(eqn, var, range)
 #        print 'vals: %r' % vals
         self.add_curve(vals)
 
         self.finish_image()
 
-        self.export_plot("/tmp/calculate_graph.svg")
-
+#        self.export_plot("/tmp/calculate_graph.svg")
         return self.get_svg()

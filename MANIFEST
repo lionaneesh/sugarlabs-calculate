@@ -1,8 +1,10 @@
 calculate.py
-layout.py
-toolbars.py
 eqnparser.py
+layout.py
 mathlib.py
+plotlib.py
+svgimage.py
+toolbars.py
 sharedstate/__init__.py
 sharedstate/shareddict.py
 sharedstate/sharedobject.py

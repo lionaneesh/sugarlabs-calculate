@@ -252,6 +252,18 @@ class MathLib:
     def ceil(self, x):
         return self.d(math.ceil(x))
 
+    def shift_left(self, x, y):
+        if self.is_int(x) and self.is_int(y):
+            return self.d(int(x) << int(y))
+        else:
+            return 0
+
+    def shift_right(self, x, y):
+        if self.is_int(x) and self.is_int(y):
+            return self.d(int(x) >> int(y))
+        else:
+            return 0
+
     def factorize(self, x):
         if not self.is_int(x):
             return 0

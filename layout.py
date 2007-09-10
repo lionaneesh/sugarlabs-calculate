@@ -144,6 +144,7 @@ class CalcLayout:
     def show_it(self):
         self._parent.set_canvas(self.grid)
         self._parent.show_all()
+        self.text_entry.grab_focus()
 
     def show_history(self, window_list):
         if self.history is None:

@@ -578,7 +578,8 @@ class Calculate(activity.Activity):
         self.remove_character(1)
 
     def keypress_cb(self, widget, event):
-        if self.label_entry.is_focus():
+        if self.label_entry.is_focus() or \
+            self.toolbox.get_activity_toolbar().title.is_focus():
             return
 
         key = gtk.gdk.keyval_name(event.keyval)
@@ -676,7 +677,7 @@ class Calculate(activity.Activity):
                 self.text_entry.set_position(pos + len(str))
 
         else:
-            _logger.error('Calculate.button_pressed(): invalid type')
+            _logger.error('button_pressed(): invalid type')
 
     def receive_message(self, msg, val):
         if msg == "add_eq":

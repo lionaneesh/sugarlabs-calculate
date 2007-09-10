@@ -58,6 +58,14 @@ class ParserState:
             self.char = None
         return self.char
 
+    def prev(self):
+        self.ofs -= 1
+        if self.ofs < self.strlen and self.ofs >= 0:
+            self.char = self.str[self.ofs]
+        else:
+            self.char = None
+        return self.char
+
     def set_ofs(self, o):
         self.ofs = o
         self.char = self.str[o]
@@ -163,6 +171,7 @@ class EqnParser:
         self.register_operator('/', self.OP_DIADIC, 1, lambda x: self.ml.div(x[0], x[1]))
 
         self.register_operator('^', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
+        self.register_operator('**', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
 
         self.register_operator('!', self.OP_POST, 0, lambda x: self.ml.factorial(x[0]))
 
@@ -330,21 +339,28 @@ class EqnParser:
 
     def parse_operator(self, ps, left_val):
         startofs = ps.ofs
+        op = None
         while ps.more() and ps.char in self.OP_CHARS:
             ps.next()
-            op = self.valid_operator(ps.str[startofs:ps.ofs], left_val)
-            if op is not None:
-                _logger.debug('parse_operator(): %d - %d: %s', startofs, ps.ofs, ps.str[startofs:ps.ofs])
-                return op
+            op2 = self.valid_operator(ps.str[startofs:ps.ofs], left_val)
+            if op2 is not None:
+                op = op2
+            elif op2 is None and op is not None:
+                ps.prev()
+                break
 
-        return self.INVALID_OP
+        if op is not None:
+            _logger.debug('parse_operator(): %d - %d: %s', startofs, ps.ofs, ps.str[startofs:ps.ofs])
+            return op
+        else:
+            return self.INVALID_OP
 
     def parse_func_args(self, ps):
         startofs = ps.ofs
         args = []
         pcount = 1
         while ps.more() and pcount > 0:
-            if ps.char == ',':
+            if ps.char == ',' and pcount == 1:
                 args.append(ps.str[startofs:ps.ofs])
                 startofs = ps.ofs + 1
             elif ps.char == '(':

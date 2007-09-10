@@ -164,4 +164,4 @@ class FormatToolbar(gtk.Toolbar):
             calc.ml.set_angle_type(MathLib.ANGLE_DEG)
         elif text == 'rad':
             calc.ml.set_angle_type(MathLib.ANGLE_RAD)
-        _logger.debug('Angle type: %s', self.calc.ml.angle_scaling)
+        _logger.debug('Angle type: %s', self.ml.angle_scaling)
