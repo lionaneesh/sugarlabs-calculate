@@ -90,9 +90,9 @@ class Calculate(activity.Activity):
     
     FONT_SMALL = "sans 10"
     FONT_SMALL_NARROW = "sans italic 10"
-    FONT_BIG = "sans bold 16"
-    FONT_BIG_NARROW = "sans italic 16"
-    FONT_BIGGER = "sans bold 22"
+    FONT_BIG = "sans bold 14"
+    FONT_BIG_NARROW = "sans italic 14"
+    FONT_BIGGER = "sans bold 18"
 
     SELECT_NONE = 0
     SELECT_SELECT = 1

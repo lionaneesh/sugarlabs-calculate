@@ -68,7 +68,8 @@ class CalcLayout:
         toolbox.show_all()
 
 # Some layout constants
-        self.font = pango.FontDescription(str='sans bold 15')
+        self.input_font = pango.FontDescription(str='sans bold 12')
+        self.button_font = pango.FontDescription(str='sans bold 16')
         self.col_white = self.create_color(1.00, 1.00, 1.00)
         self.col_gray1 = self.create_color(0.69, 0.71, 0.72)
         self.col_gray2 = self.create_color(0.51, 0.51, 0.53)
@@ -76,8 +77,8 @@ class CalcLayout:
         self.col_black = self.create_color(0.00, 0.00, 0.00)
         self.col_red = self.create_color(1.00, 0.00, 0.00)
 
-# Big - Table
-        self.grid = gtk.Table(16, 10, True)
+# Big - Table, 16 rows, 10 columns, homogeneously divided
+        self.grid = gtk.Table(16, 11, True)
         self.grid.set_border_width(6)
         self.grid.set_row_spacings(6)
         self.grid.set_col_spacings(6)
@@ -93,14 +94,13 @@ class CalcLayout:
         self.text_entry = gtk.Entry()
         self.text_entry.set_size_request(400, 100)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
-        self.text_entry.modify_font(self.font)
+        self.text_entry.modify_font(self.input_font)
         self.grid.attach(self.text_entry, 0, 6, 1, 5)
 
 # Left part: buttons
         self.pad = gtk.Table(4, 6, True)
         self.pad.set_row_spacings(6)
         self.pad.set_col_spacings(6)
-        #self.pad.
         self.create_button_data()
         self.buttons = {}
         for x, y, w, cap, bgcol, cb in self.button_data:
@@ -118,14 +118,14 @@ class CalcLayout:
             lambda x: self._parent.refresh_bar())
         hc2.add(self.minebut)
         hc2.add(self.varbut)
-        self.grid.attach(hc2, 6, 10, 0, 1)
+        self.grid.attach(hc2, 6, 11, 0, 1)
         
 # Right part: last equation
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_CHAR)
         self.last_eq.connect('button-press-event', lambda a1, a2: self._parent.equation_pressed_cb(0))
-        self.grid.attach(self.last_eq, 6, 10, 1, 5)
+        self.grid.attach(self.last_eq, 6, 11, 1, 5)
 
 # Right part: history
         
@@ -139,7 +139,7 @@ class CalcLayout:
         self.history.set_homogeneous(False)
         self.history.set_border_width(6)
         scrolled_window.add_with_viewport(self.history)
-        self.grid.attach(scrolled_window, 6, 10, 5, 16)
+        self.grid.attach(scrolled_window, 6, 11, 5, 16)
 
     def show_it(self):
         self._parent.set_canvas(self.grid)
@@ -165,6 +165,6 @@ class CalcLayout:
     def modify_button_appearance(self, button, fgcol, bgcol, width):
         width = 50 * width
         button.get_child().set_size_request(width, 50)
-        button.get_child().modify_font(self.font)
+        button.get_child().modify_font(self.button_font)
         button.get_child().modify_fg(gtk.STATE_NORMAL, fgcol)
         button.modify_bg(gtk.STATE_NORMAL, bgcol)
