@@ -46,6 +46,8 @@ from mathlib import MathLib
 from eqnparser import EqnParser
 from svgimage import SVGImage
 
+from decimal import Decimal
+
 class Equation:
     def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, str=None):
         if str is not None:
@@ -78,6 +80,13 @@ class Equation:
 
         if l[2].startswith("<svg>"):
             l[2] = SVGImage(data=base64.b64decode(l[2][5:]))
+
+# Should figure out how to use MathLib directly in a non-hacky way
+        else:
+            try:
+                l[2] = Decimal(l[2])
+            except Exception, inst:
+                pass
 
         self.set(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4])
 
@@ -216,7 +225,7 @@ class Calculate(activity.Activity):
         if len(eqn.label) > 0:
             text = eqn.label
         else:
-            text = str(eqn.result)
+            text = self.parser.ml.format_number(eqn.result)
 
         self.button_pressed(self.TYPE_TEXT, text)
         return True
@@ -281,14 +290,15 @@ class Calculate(activity.Activity):
             range = (range[0] + offset, range[1] + offset)
             text += "\n" + self.parser.ps.format_error()
 
-            self.lat_eq_sig = self.layout.last_eq.connect('button-press-event', \
-                lambda a1, a2: True)
-
         self.last_eq.set_text(text)
         self.format_last_eq_buf(self.last_eq, eqn.result, range)
 
     def set_error_equation(self, eqn):
         self.set_last_equation(eqn)
+
+    def clear_equations(self):
+        self.helper_old_eqs = []
+        self.showing_version = 0
 
     def add_equation(self, eq, prepend=False):
         """Insert equation in the history list and set variable if assignment"""
@@ -302,6 +312,8 @@ class Calculate(activity.Activity):
             else:
                 self.helper_old_eqs.append(eq)
             self.set_variables(eq)
+
+            self.showing_version = len(self.helper_old_eqs)
 
     def process(self):
         """Parse the equation entered and show the result"""
@@ -511,7 +523,7 @@ class Calculate(activity.Activity):
             if l[2] != l[3]:
                 self.text_entry.select_region(int(l[2]), int(l[3]))
 
-            self.helper_old_eqs = []
+            self.clear_equations()
             for str in f:
                 eq = Equation(str=str)
                 self.add_equation(eq)
@@ -664,19 +676,20 @@ class Calculate(activity.Activity):
                 return f(self)
 
         return True
-	
-    def get_older(self):
-        self.showing_version = min(len(self.helper_old_eqs), self.showing_version + 1)
-        if self.showing_version == 1:
-            self.buffer = self.text_entry.get_text()
-        self.text_entry.set_text(self.helper_old_eqs[self.showing_version - 1].equation)
         
-    def get_newer(self):
+    def get_older(self):
         self.showing_version = max(0, self.showing_version - 1)
-        if self.showing_version == 0:
+        if self.showing_version == len(self.helper_old_eqs) - 1:
+            self.buffer = self.text_entry.get_text()
+        if len(self.helper_old_eqs) > 0:
+            self.text_entry.set_text(self.helper_old_eqs[self.showing_version].equation)
+	
+    def get_newer(self):
+        self.showing_version = min(len(self.helper_old_eqs), self.showing_version + 1)
+        if self.showing_version == len(self.helper_old_eqs):
             self.text_entry.set_text(self.buffer)
-            return
-        self.text_entry.set_text(self.helper_old_eqs[self.showing_version - 1].equation)
+        else:
+            self.text_entry.set_text(self.helper_old_eqs[self.showing_version].equation)
 
     def add_text(self, str):
         self.button_pressed(self.TYPE_TEXT, str)
@@ -732,7 +745,7 @@ class Calculate(activity.Activity):
 # logic better?     (str not in self.parser.get_pre_operators() or str == '+'):
                 ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
                 self.text_entry.set_text(ans + str)
-                self.text_entry.set_position(3 + len(str))
+                self.text_entry.set_position(len(ans) + len(str))
             elif len(sel) is 2:
                 self.text_entry.set_text(text[:start] + str + text[end:])
                 self.text_entry.set_position(pos + start - end + len(str))
@@ -755,7 +768,7 @@ class Calculate(activity.Activity):
             self.helper.send_message("sync", data)
         elif msg == "sync":
             tmp = []
-            self.helper_old_eqs = []
+            self.clear_equations()
             for eq_str in val:
                 _logger.info('receive_message: %s', str(eq_str))
                 self.add_equation(Equation(str=str(eq_str)))

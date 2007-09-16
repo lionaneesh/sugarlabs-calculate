@@ -347,7 +347,14 @@ class EqnParser:
                     self.ps.set_error(ParserState.PARSE_ERROR, msg='Unable to parse argument %d: \'%s\'' % (i, args[i]))
                     return None
 
-        res = f(pargs)
+        try:
+            res = f(pargs)
+
+# Maybe we should map exceptions to more obvious error messages
+        except Exception, inst:
+            res = None
+            self.ps.set_error(ParserState.PARSE_ERROR, msg="Function error: %s" % (str(inst)))
+
         _logger.debug('Function \'%s\' returned %s', func, self.ml.format_number(res))
         return res
 

@@ -68,7 +68,11 @@ class MathLib:
         return d.normalize()
 
     def parse_number(self, s):
-        return Decimal(s)
+        try:
+            d = Decimal(s)
+            return Decimal(s)
+        except Exception, inst:
+            return None
 
     def format_number(self, n):
         if type(n) is types.BooleanType:
