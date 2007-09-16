@@ -129,7 +129,6 @@ class CalcLayout:
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
-        self.last_eq.connect('button-press-event', lambda a1, a2: self._parent.equation_pressed_cb(0))
         self.grid.attach(self.last_eq, 6, 11, 1, 5)
 
 # Right part: history

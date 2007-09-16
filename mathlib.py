@@ -51,7 +51,7 @@ class MathLib:
 
     def set_angle_type(self, type):
         self.angle_scaling = self.d(type)
-        _logger.debug('Angle type set to:%s',self.angle_scaling)
+        _logger.debug('Angle type set to:%s', self.angle_scaling)
 
     def set_constant(self, name, val):
         self.constants[name] = val

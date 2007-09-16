@@ -171,6 +171,7 @@ class Calculate(activity.Activity):
         self.text_entry = self.layout.text_entry
         self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
+        self.last_eq_sig = None
 
         self.presence = presenceservice.get_instance()
         self.owner = self.presence.get_owner()
@@ -204,18 +205,18 @@ class Calculate(activity.Activity):
     def cleanup_cb(self, arg):
         _logger.debug('Cleaning up...')
 
-    def equation_pressed_cb(self, n):
+    def equation_pressed_cb(self, eqn):
         """Callback for when an equation box is clicked"""
 
-        if len(self.helper_old_eqs) <= n:
-            return True
-        elif isinstance(self.helper_old_eqs[n].result, SVGImage):
+#        if len(self.helper_old_eqs) <= n:
+#            return True
+        if isinstance(eqn.result, SVGImage):
             return True
 
-        if len(self.helper_old_eqs[n].label) > 0:
-            text = self.helper_old_eqs[n].label
+        if len(eqn.label) > 0:
+            text = eqn.label
         else:
-            text = str(self.helper_old_eqs[n].result)
+            text = str(eqn.result)
 
         self.button_pressed(self.TYPE_TEXT, text)
         return True
@@ -230,7 +231,7 @@ class Calculate(activity.Activity):
             eq_start, eq_middle)
 
 # String results should be a little smaller
-        if type(res) == types.StringType:
+        if type(res) == types.StringType or res is None:
             buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW,
                 justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
         else:
@@ -261,16 +262,27 @@ class Calculate(activity.Activity):
             text = eqn.equation
             offset = 0
 
+        if self.last_eq_sig is not None:
+            self.layout.last_eq.disconnect(self.last_eq_sig)
+            self.last_eq_sig = None
+
         range = None
         if eqn.result is not None:
             if isinstance(eqn.result, SVGImage):
                 pass
             else:
                 text += '\n= ' + self.ml.format_number(eqn.result)
+
+            self.last_eq_sig = self.layout.last_eq.connect('button-press-event', \
+                lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
+
         else:
             range = self.parser.get_error_range()
             range = (range[0] + offset, range[1] + offset)
             text += "\n" + self.parser.ps.format_error()
+
+            self.lat_eq_sig = self.layout.last_eq.connect('button-press-event', \
+                lambda a1, a2: True)
 
         self.last_eq.set_text(text)
         self.format_last_eq_buf(self.last_eq, eqn.result, range)
@@ -278,7 +290,7 @@ class Calculate(activity.Activity):
     def set_error_equation(self, eqn):
         self.set_last_equation(eqn)
 
-    def insert_equation(self, eq, prepend=True):
+    def add_equation(self, eq, prepend=False):
         """Insert equation in the history list and set variable if assignment"""
 
 #        tmp = self.helper_old_eqs
@@ -304,7 +316,7 @@ class Calculate(activity.Activity):
 
 # Result ok
         if res is not None:
-            self.insert_equation(eqn)
+            self.add_equation(eqn)
             self.parser.set_var('Ans', self.ml.format_number(eqn.result))
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
@@ -347,7 +359,10 @@ class Calculate(activity.Activity):
     def refresh_last_eq(self):
         """Refresh last equation TextView"""
 
-        for e in self.helper_old_eqs:
+        if self.showing_error:
+            return
+
+        for e in reversed(self.helper_old_eqs):
             if e.owner == self.owner_id:
                 self.set_last_equation(e)
                 return
@@ -400,9 +415,9 @@ class Calculate(activity.Activity):
         else:
             last_eq_drawn = False
 
-        i = -1
-        for e in self.helper_old_eqs:
-            i += 1
+        i = len(self.helper_old_eqs)
+        for e in reversed(self.helper_old_eqs):
+            i -= 1
 
 # Actually set by refresh_last_eq(), but needed for the drawing logic
             if not last_eq_drawn and e.owner == self.owner_id:
@@ -425,7 +440,7 @@ class Calculate(activity.Activity):
                 text += str(e.equation) + "\n=" + r
                 w = gtk.TextView()
                 w.set_wrap_mode(gtk.WRAP_WORD)
-                w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
+                w.connect('button-press-event', lambda w, e, eqn: self.equation_pressed_cb(eqn), e)
                 b = w.get_buffer()
 ##                b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
 ##                gtk.gdk.color_parse(e.color.get_fill_color())
@@ -464,7 +479,7 @@ class Calculate(activity.Activity):
             f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
 
 # In reverse order
-        for eq in reversed(self.helper_old_eqs):
+        for eq in self.helper_old_eqs:
             f.write(str(eq))
 
         f.close()
@@ -499,7 +514,7 @@ class Calculate(activity.Activity):
             self.helper_old_eqs = []
             for str in f:
                 eq = Equation(str=str)
-                self.insert_equation(eq)
+                self.add_equation(eq)
 
             self.refresh_bar()
 
@@ -731,12 +746,11 @@ class Calculate(activity.Activity):
     def receive_message(self, msg, val):
         if msg == "add_eq":
             eq = Equation(str=str(val))
-            self.insert_equation(eq)
+            self.add_equation(eq)
             self.refresh_bar()
         elif msg == "req_sync":
             data = []
-# In reverse order to get variables right
-            for eq in reversed(self.helper_old_eqs):
+            for eq in self.helper_old_eqs:
                 data.append(str(eq))
             self.helper.send_message("sync", data)
         elif msg == "sync":
@@ -744,7 +758,7 @@ class Calculate(activity.Activity):
             self.helper_old_eqs = []
             for eq_str in val:
                 _logger.info('receive_message: %s', str(eq_str))
-                self.insert_equation(Equation(str=str(eq_str)))
+                self.add_equation(Equation(str=str(eq_str)))
             self.refresh_bar()
 
 def main():

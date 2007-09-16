@@ -109,6 +109,12 @@ class ParserState:
             msg += ": %s" % (self.error_msg)
         return msg
 
+    def copy_error(self, ps):
+        """Copy error state from recursively created ParserState object"""
+        self.error_code = ps.error_code
+        self.error_msg = ps.error_msg
+        self.error_range = (ps.error_range[0] + ps.ofs, ps.error_range[1] + ps.ofs)
+
 class EqnParser:
     OP_INVALID = -1
     OP_PRE = 1
@@ -219,7 +225,7 @@ class EqnParser:
 
         self.register_operator('%', self.OP_DIADIC, 0, lambda x: self.ml.mod(x[0], x[1]))
 
-        self.set_var('help', 'Use help(test) to get help about \'test\'', parse=False)
+        self.set_var('help', 'Use help(test) to get help about \'test\', help(index) for available topics', parse=False)
 
     def register_function(self, name, f, opts):
         self.functions[name] = (f, opts)
@@ -286,7 +292,7 @@ class EqnParser:
 #                return None
 #            self.variables[name].highest_level = level
             if type(self.variables[name]) is types.StringType and self.parse_var[name]:
-                return self.parse(self.variables[name])
+                return self.parse(self.variables[name], reset=False)
             else:
                 return self.variables[name]
         else:
@@ -335,7 +341,7 @@ class EqnParser:
         else:
             pargs = []
             for i in range(len(args)):
-                pargs.append(self.parse(args[i]))
+                pargs.append(self.parse(args[i], reset=False))
                 if pargs[i] is None:
                     _logger.error('Unable to parse argument %d: \'%s\'', i, args[i])
                     self.ps.set_error(ParserState.PARSE_ERROR, msg='Unable to parse argument %d: \'%s\'' % (i, args[i]))
@@ -567,12 +573,22 @@ class EqnParser:
     def get_error_range(self):
         return self.ps.error_range
 
-    def parse(self, eqn):
+    def parse(self, eqn, reset=True):
         """Construct ParserState object and call _parse"""
         _logger.debug('parse(): %s', eqn)
         self.reset_variable_level(0)
+
+        if reset:
+            self.ps = None
+
+        oldps = self.ps
         self.ps = ParserState(eqn)
-        return self._parse(self.ps)
+        ret = self._parse(self.ps)
+        if oldps is not None:
+            oldps.copy_error(self.ps)
+            self.ps = oldps
+
+        return ret
 
     def functions_string(self):
         ret = ""
