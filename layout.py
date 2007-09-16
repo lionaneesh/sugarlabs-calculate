@@ -107,7 +107,12 @@ class CalcLayout:
             button = self.create_button(_(cap), cb, self.col_white, bgcol, w)
             self.buttons[cap] = button
             self.pad.attach(button, x, x+w, y, y+1)
-        
+
+# Not for now...
+#        self.pad_ebox = gtk.EventBox()
+#        self.pad_ebox.add(self.pad)
+#        self.pad_ebox.modify_bg(gtk.STATE_NORMAL, self.col_black)
+
         self.grid.attach(self.pad, 0, 6, 5, 16)
 
 # Right part: container and equation button
@@ -123,16 +128,11 @@ class CalcLayout:
 # Right part: last equation
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
-        self.last_eq.set_wrap_mode(gtk.WRAP_CHAR)
+        self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
         self.last_eq.connect('button-press-event', lambda a1, a2: self._parent.equation_pressed_cb(0))
         self.grid.attach(self.last_eq, 6, 11, 1, 5)
 
 # Right part: history
-        
-##        self.history = gtk.TextView()
-##        self.history.set_size_request(300, 400)
-##        self.history.set_editable(False)
-##        self.history.set_cursor_visible(False)
         scrolled_window = gtk.ScrolledWindow()
         scrolled_window.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
         self.history = gtk.VBox()

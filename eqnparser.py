@@ -23,6 +23,7 @@ _logger = logging.getLogger('EqnParser')
 import types
 from mathlib import MathLib
 from plotlib import PlotLib
+from eqnparserhelp import EqnParserHelp
 
 class Equation:
     def __init__(self, eqn):
@@ -43,6 +44,8 @@ class ParserState:
         self.level = -1
         self.result_type = EqnParser.TYPE_UNKNOWN
         self.error_code = self.OK
+        self.error_msg = ""
+        self.error_range = (0, 0)
 
     def state_string(self):
         return 'level: %d, ofs %d' % (self.level, self.ofs)
@@ -86,8 +89,25 @@ class ParserState:
         else:
             return True
 
-    def set_error_code(self, c):
+    def set_error(self, c, msg=None, range=None):
         self.error_code = c
+        if msg is not None:
+            self.error_msg = msg
+        if range is not None:
+            _logger.debug('Setting range: %r', range)
+            self.error_range = range
+        else:
+            _logger.debug('Setting offset: %d', self.ofs)
+            self.error_range = (self.ofs, self.ofs + 1)
+
+    def set_error_range(self, r):
+        self.error_range = r
+
+    def format_error(self):
+        msg = "Error at %d" % (self.error_range[0])
+        if self.error_msg is not None and len(self.error_msg) > 0:
+            msg += ": %s" % (self.error_msg)
+        return msg
 
 class EqnParser:
     OP_INVALID = -1
@@ -118,15 +138,17 @@ class EqnParser:
         else:
             self.ml = ml
 
+        self.ps = None
+
         self.pl = PlotLib(self)
 
-        self.error_offset = 0
-
         self.variables = {}
+        self.parse_var = {}     # Whether or not to parse this variable recursively
         self.functions = {}
         self.operators = []
 
         self.cached_diadic_ops = None
+        self.cached_pre_ops = None
         self.cached_post_ops = None
 
         self.register_function('exp', lambda x: self.ml.exp(x[0]), {"nargs": 1})
@@ -157,11 +179,20 @@ class EqnParser:
         self.register_function('floor', lambda x: self.ml.floor(x[0]), {"nargs": 1})
         self.register_function('ceil', lambda x: self.ml.ceil(x[0]), {"nargs": 1})
 
+        self.register_function('rand', lambda x: self.ml.rand_float(), {"nargs": 0})
+        self.register_function('randint', lambda x: self.ml.rand_int(), {"nargs": 0})
+
         self.register_function('mod', lambda x: self.ml.mod(x[0], x[1]), {"nargs": 2})
 
         self.register_function('factorize', lambda x: self.ml.factorize(x[0]), {"nargs": 1})
 
         self.register_function('plot', lambda x: self.pl.plot(x[0], x[1]), {"nargs": 2, 'parse_options': False})
+
+        self.register_function('help', lambda x: EqnParserHelp.help(x[0]), {"nargs": 1, 'parse_options': False})
+
+        self.register_function('functions', lambda x: self.functions_string(), {"nargs": 0})
+        self.register_function('variables', lambda x: self.variables_string(), {"nargs": 0})
+        self.register_function('operators', lambda x: self.operators_string(), {"nargs": 0})
 
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
         self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
@@ -188,6 +219,8 @@ class EqnParser:
 
         self.register_operator('%', self.OP_DIADIC, 0, lambda x: self.ml.mod(x[0], x[1]))
 
+        self.set_var('help', 'Use help(test) to get help about \'test\'', parse=False)
+
     def register_function(self, name, f, opts):
         self.functions[name] = (f, opts)
 
@@ -208,6 +241,14 @@ class EqnParser:
                     self.cached_diadic_ops.append(op)
         return self.cached_diadic_ops
 
+    def get_pre_operators(self):
+        if self.cached_pre_ops == None:
+            self.cached_pre_ops = []
+            for (op, type, presedence, f) in self.operators:
+                if type == self.OP_PRE:
+                    self.cached_pre_ops.append(op)
+        return self.cached_pre_ops
+
     def get_post_operators(self):
         if self.cached_post_ops == None:
             self.cached_post_ops = []
@@ -221,11 +262,12 @@ class EqnParser:
 #        for i in self.variables.keys():
 #            self.variables[i].highest_level = level
 
-    def set_var(self, name, val):
+    def set_var(self, name, val, parse=True):
         if type(val) is types.FloatType:
             self.variables[name] = self.ml.d(val)
         else:
             self.variables[name] = val
+            self.parse_var[name] = parse
 
     def get_var(self, name):
         if name in self.variables:
@@ -243,7 +285,7 @@ class EqnParser:
 #                _logger.error('EqnParser.lookup_var(): recursion detected')
 #                return None
 #            self.variables[name].highest_level = level
-            if type(self.variables[name]) is types.StringType:
+            if type(self.variables[name]) is types.StringType and self.parse_var[name]:
                 return self.parse(self.variables[name])
             else:
                 return self.variables[name]
@@ -279,11 +321,13 @@ class EqnParser:
     def eval_func(self, func, args, level):
         if func not in self.functions:
             _logger.error('Function \'%s\' not defined', func)
+            self.ps.set_error(ParserState.PARSE_ERROR, msg='Function \'%s\' not defined' % (func))
             return None
 
         (f, opts) = self.functions[func]
         if len(args) != opts['nargs']:
             _logger.error('Invalid number of arguments (%d instead of %d)', len(args), opts['nargs'])
+            self.ps.set_error(ParserState.PARSE_ERROR, msg='function takes %d args' % (opts['nargs']))
             return None
 
         if 'parse_options' in opts and opts['parse_options'] == False:
@@ -294,6 +338,7 @@ class EqnParser:
                 pargs.append(self.parse(args[i]))
                 if pargs[i] is None:
                     _logger.error('Unable to parse argument %d: \'%s\'', i, args[i])
+                    self.ps.set_error(ParserState.PARSE_ERROR, msg='Unable to parse argument %d: \'%s\'' % (i, args[i]))
                     return None
 
         res = f(pargs)
@@ -367,7 +412,7 @@ class EqnParser:
                 pcount += 1
             elif ps.char == ')':
                 pcount -= 1
-                if pcount == 0:
+                if pcount == 0 and (ps.ofs - startofs) > 0:
                     args.append(ps.str[startofs:ps.ofs])
             ps.next()
         _logger.debug('parse_func_args(): %d - %d: %r', startofs, ps.ofs, args)
@@ -386,15 +431,17 @@ class EqnParser:
             ps.next()
             _logger.debug('parse_var_func(): function %d - %d: %s', startofs, ps.ofs, name)
             args = self.parse_func_args(ps)
-            return self.eval_func(name, args, ps.level)
+            ret = self.eval_func(name, args, ps.level)
+            if ret is None:
+                ps.set_error_range((startofs, ps.ofs))
+            return ret
 
 # handle var
         else:
             _logger.debug('parse_var_func(): variable %d - %d: %s', startofs, ps.ofs, name)
             res = self.lookup_var(name, ps)
             if res is None:
-                ps.set_ofs(startofs)
-                ps.set_error_code(ParserState.PARSE_ERROR)
+                ps.set_error(ParserState.PARSE_ERROR, msg="Variable '%s' undefined" % (name), range=(startofs, ps.ofs))
             return res
 
     def _parse(self, ps, presedence=None):
@@ -402,9 +449,10 @@ class EqnParser:
             ps.inc_level()
         _logger.debug('_parse(): %s, presedence: %r', ps.state_string(), presedence)
 
+        op = None
         left_val = None
         right_val = None
-        op = None
+
         while ps.more():
 #            _logger.debug('Looking at \'%c\', ofs %d in \'%s\'', ps.char, ps.ofs, ps.str)
 
@@ -424,7 +472,7 @@ class EqnParser:
                 if presedence is not None:
                     if left_val is None:
                         _logger.error('Parse error (right parenthesis)')
-                        ps.set_error_code(ParserState.PARSE_ERROR)
+                        ps.set_error(ParserState.PARSE_ERROR, msg="Right parenthesis unexpected")
                         return None
                     else:
                         _logger.debug('returning %s', self.ml.format_number(left_val))
@@ -435,21 +483,21 @@ class EqnParser:
                     ps.dec_level()
                     if left_val is None:
                         _logger.error('Parse error (right parenthesis, no left_val)')
-                        ps.set_error_code(ParserState.PARSE_ERROR)
+                        ps.set_error(ParserState.PARSE_ERROR, msg="Right parenthesis unexpected")
                         return None
                     else:
                         _logger.debug('returning %s', self.ml.format_number(left_val))
                         return left_val
                 else:
                     _logger.error('Parse error (right parenthesis, no level to close)')
-                    ps.set_error_code(ParserState.PARSE_ERROR)
+                    ps.set_error(ParserState.PARSE_ERROR, msg="Right parenthesis unexpected")
                     return None
 
 # Parse number
             elif ps.char in '0123456789.':
                 if right_val is not None or left_val is not None:
                     _logger.error('Number not expected!')
-                    ps.set_error_code(ParserState.PARSE_ERROR)
+                    ps.set_error(ParserState.PARSE_ERROR, msg="Number not expected")
                     return None
 
                 if op is not None and otype == self.OP_PRE:
@@ -493,7 +541,7 @@ class EqnParser:
 
                 elif otype == self.OP_INVALID:
                     _logger.debug('Invalid operator')
-                    ps.set_error_code(ParserState.PARSE_ERROR)
+                    ps.set_error(ParserState.PARSE_ERROR, msg="Invalid operator", range=(startofs, ps.ofs))
                     return None
 
 # Parse variable or function
@@ -502,29 +550,45 @@ class EqnParser:
 
         if not ps.more() and ps.level > 0:
             _logger.debug('Parse error: \')\' expected')
-            ps.set_error_code(ParserState.PARSE_ERROR)
+            ps.set_error(ParserState.PARSE_ERROR, msg="Right parenthesis unexpected")
             return None
         elif op is None and left_val is not None:
             _logger.debug('returning %s', self.ml.format_number(left_val))
             return left_val
         else:
             _logger.error('_parse(): returning None')
-            ps.set_error_code(ParserState.PARSE_ERROR)
+# Should be set somewhere already
+#            ps.set_error(ParserState.PARSE_ERROR)
             return None
 
-    def set_error_offset(self, o):
-        self.error_offset = o
-
     def get_error_offset(self):
-        return self.error_offset
+        return self.ps.error_range[0]
+
+    def get_error_range(self):
+        return self.ps.error_range
 
     def parse(self, eqn):
         """Construct ParserState object and call _parse"""
         _logger.debug('parse(): %s', eqn)
         self.reset_variable_level(0)
-        ps = ParserState(eqn)
-        res = self._parse(ps)
-        if res is None:
-            self.set_error_offset(ps.ofs)
-        return res
+        self.ps = ParserState(eqn)
+        return self._parse(self.ps)
+
+    def functions_string(self):
+        ret = ""
+        for key in self.functions.keys():
+            ret += key + " "
+        return ret
+
+    def variables_string(self):
+        ret = ""
+        for key in self.variables.keys():
+            ret += key + " "
+        return ret
+
+    def operators_string(self):
+        ret = ""
+        for (op, type, p, f) in self.operators:
+            ret += op + " "
+        return ret
 

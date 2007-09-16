@@ -1,3 +1,10 @@
+* Improved error reporting
+* Simple help system ('help(index)')
+* Using gtk.Clipboard in stead of custom solution
+* functions(), variables(), operators(), rand() and randint() added
+* Clicking on equation box now adds answer or label, because of presedence issues
+* Fixed syncing of variables upon share
+
 9
 
 8

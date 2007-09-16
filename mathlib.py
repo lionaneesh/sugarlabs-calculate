@@ -20,6 +20,7 @@
 import types
 import math
 from decimal import Decimal
+import random
 
 import logging
 _logger = logging.getLogger('MathLib')
@@ -251,6 +252,12 @@ class MathLib:
 
     def ceil(self, x):
         return self.d(math.ceil(x))
+
+    def rand_float(self):
+        return self.d(random.random())
+
+    def rand_int(self):
+        return self.d(random.randint(0, 65535))
 
     def shift_left(self, x, y):
         if self.is_int(x) and self.is_int(y):

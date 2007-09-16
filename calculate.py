@@ -151,7 +151,7 @@ class Calculate(activity.Activity):
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
 
-        self.clipboard = ""
+        self.clipboard = gtk.Clipboard()
         self.select_reason = self.SELECT_SELECT
         self.buffer = ""
         self.showing_version = 0
@@ -206,71 +206,94 @@ class Calculate(activity.Activity):
 
     def equation_pressed_cb(self, n):
         """Callback for when an equation box is clicked"""
+
         if len(self.helper_old_eqs) <= n:
             return True
+        elif isinstance(self.helper_old_eqs[n].result, SVGImage):
+            return True
+
         if len(self.helper_old_eqs[n].label) > 0:
             text = self.helper_old_eqs[n].label
         else:
-            text = self.helper_old_eqs[n].equation
+            text = str(self.helper_old_eqs[n].result)
+
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
-    def format_last_eq_buf(self, buf, res, offset):
+    def format_last_eq_buf(self, buf, res, range):
+        """Format the 'last equation' gtk.TextBuffer properly"""
+
         eq_start = buf.get_start_iter()
         eq_middle = buf.get_iter_at_line(1)
         eq_end = buf.get_end_iter()
         buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW),
             eq_start, eq_middle)
-        buf.apply_tag(buf.create_tag(font=self.FONT_BIGGER,
-            justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
 
+# String results should be a little smaller
+        if type(res) == types.StringType:
+            buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW,
+                justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
+        else:
+            buf.apply_tag(buf.create_tag(font=self.FONT_BIGGER,
+                justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
+
+# Format error
         if res is None:
-            eq_start.forward_chars(offset)
+            eq_start.forward_chars(range[0])
             end = self.last_eq.get_start_iter()
-            end.forward_chars(offset+1)
+            end.forward_chars(range[1])
             self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
                 eq_start, end)
             self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
                 eq_middle, eq_end)
 
-    def set_last_equation(self, eqn):
-        text = ""
+    def set_variables(self, eqn):
         if len(eqn.label) > 0:
-            text += eqn.label + ': ' + eqn.equation
+            self.parser.set_var(eqn.label, eqn.equation)
+
+    def set_last_equation(self, eqn):
+        """Fill the 'last equation' TextView"""
+
+        if len(eqn.label) > 0:
+            text = eqn.label + ': ' + eqn.equation
             offset = len(eqn.label) + 2
         else:
-            text += eqn.equation
+            text = eqn.equation
             offset = 0
 
+        range = None
         if eqn.result is not None:
             if isinstance(eqn.result, SVGImage):
                 pass
             else:
                 text += '\n= ' + self.ml.format_number(eqn.result)
-                self.parser.set_var('Ans', self.ml.format_number(eqn.result))
-                if len(eqn.label) > 0:
-                    self.parser.set_var(eqn.label, eqn.equation)
-            self.text_entry.set_text('')
-            self.label_entry.set_text('')
         else:
-            pos = self.parser.get_error_offset()
-            if pos == len(text) - 1:
-                text += '_'
-            offset += pos
-            text += '\nError at %d' % pos
+            range = self.parser.get_error_range()
+            range = (range[0] + offset, range[1] + offset)
+            text += "\n" + self.parser.ps.format_error()
 
         self.last_eq.set_text(text)
-        self.format_last_eq_buf(self.last_eq, eqn.result, offset)
+        self.format_last_eq_buf(self.last_eq, eqn.result, range)
 
     def set_error_equation(self, eqn):
         self.set_last_equation(eqn)
 
-    def insert_equation(self, eq):
-        tmp = self.helper_old_eqs
-        tmp.insert(0, eq)
-        self.helper_old_eqs = tmp
+    def insert_equation(self, eq, prepend=True):
+        """Insert equation in the history list and set variable if assignment"""
+
+#        tmp = self.helper_old_eqs
+#        tmp.insert(0, eq)
+#        self.helper_old_eqs = tmp
+        if eq.equation is not None and len(eq.equation) > 0:
+            if prepend:
+                self.helper_old_eqs.insert(0, eq)
+            else:
+                self.helper_old_eqs.append(eq)
+            self.set_variables(eq)
 
     def process(self):
+        """Parse the equation entered and show the result"""
+
         s = self.text_entry.get_text()
         label = self.label_entry.get_text()
         _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
@@ -282,8 +305,11 @@ class Calculate(activity.Activity):
 # Result ok
         if res is not None:
             self.insert_equation(eqn)
+            self.parser.set_var('Ans', self.ml.format_number(eqn.result))
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
+            self.text_entry.set_text('')
+            self.label_entry.set_text('')
 
 # Show error
         else:
@@ -296,6 +322,7 @@ class Calculate(activity.Activity):
 
     def refresh_bar(self):
         _logger.debug('Refreshing right bar...')
+        self.refresh_last_eq()
         if self.layout.varbut.selected == 0:
             self.refresh_history()
         else:
@@ -305,6 +332,8 @@ class Calculate(activity.Activity):
         self.refresh_bar()
     
     def format_var_buf(self, buf):
+        """Apply formatting to a gtk.TextBuffer to show a variable"""
+
         iter_start = buf.get_start_iter()
         iter_end = buf.get_end_iter()
         buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
@@ -315,10 +344,20 @@ class Calculate(activity.Activity):
     def buddy_vars_cb(self):
         self.refresh_bar()
 
+    def refresh_last_eq(self):
+        """Refresh last equation TextView"""
+
+        for e in self.helper_old_eqs:
+            if e.owner == self.owner_id:
+                self.set_last_equation(e)
+                return
+
     def refresh_vars(self):
+        """Create list of TextViews with variables and display"""
+
         list = []
         for name, value in self.parser.get_vars():
-            if name == "Ans":
+            if name == "Ans" or name == "help":
                 continue
             w = gtk.TextView()
             b = w.get_buffer()
@@ -328,6 +367,8 @@ class Calculate(activity.Activity):
         self.layout.show_history(list)
 
     def format_history_buf(self, buf, eq):
+        """Apply proper formatting to a gtk.TextBuffer for the history"""
+
         iter_start = buf.get_start_iter()
         iter_colon = buf.get_start_iter()
         iter_end = buf.get_end_iter()
@@ -339,7 +380,6 @@ class Calculate(activity.Activity):
             buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
                           iter_start, iter_middle)
         else:
-
             buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
                           iter_start, iter_colon)
             buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
@@ -351,23 +391,27 @@ class Calculate(activity.Activity):
         buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
     
     def refresh_history(self):
+        """Create list of textview items and graphs and display in history"""
+
         list = []
 
-        i = 1
         if self.showing_error:
             last_eq_drawn = True
         else:
             last_eq_drawn = False
-        for e in self.helper_old_eqs:
 
+        i = -1
+        for e in self.helper_old_eqs:
+            i += 1
+
+# Actually set by refresh_last_eq(), but needed for the drawing logic
             if not last_eq_drawn and e.owner == self.owner_id:
-                self.set_last_equation(e)
                 last_eq_drawn = True
                 if not isinstance(e.result, SVGImage):
                     continue
 
 # Skip if only drawing own equations
-            if self.layout.minebut.selected == 1 and e.owner != self.ownder_id:
+            if self.layout.minebut.selected == 1 and e.owner != self.owner_id:
                 continue
 
             if isinstance(e.result, SVGImage):
@@ -380,6 +424,7 @@ class Calculate(activity.Activity):
                 r = self.ml.format_number(e.result)
                 text += str(e.equation) + "\n=" + r
                 w = gtk.TextView()
+                w.set_wrap_mode(gtk.WRAP_WORD)
                 w.connect('button-press-event', lambda w, e, j: self.equation_pressed_cb(j), i)
                 b = w.get_buffer()
 ##                b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
@@ -388,7 +433,6 @@ class Calculate(activity.Activity):
                 self.format_history_buf(b, e)
 
             list.append(w)
-            i += 1
 
         self.layout.show_history(list)
 
@@ -419,7 +463,8 @@ class Calculate(activity.Activity):
             sel = (pos, pos)
             f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
 
-        for eq in self.helper_old_eqs:
+# In reverse order
+        for eq in reversed(self.helper_old_eqs):
             f.write(str(eq))
 
         f.close()
@@ -451,14 +496,10 @@ class Calculate(activity.Activity):
             if l[2] != l[3]:
                 self.text_entry.select_region(int(l[2]), int(l[3]))
 
-            eqs = []
+            self.helper_old_eqs = []
             for str in f:
                 eq = Equation(str=str)
-                if eq.equation is not None and len(eq.equation) > 0:
-                    eqs.append(eq)
-                    if eq.label is not None and len(eq.label) > 0:
-                        self.parser.set_var(eq.label, eq.result)
-            self.helper_old_eqs = eqs
+                self.insert_equation(eq)
 
             self.refresh_bar()
 
@@ -568,10 +609,17 @@ class Calculate(activity.Activity):
  #       _logger.info('text_copy, sel: %r, str: %s', sel, str)
         if len(sel) == 2:
             (start, end) = sel
-            self.clipboard = str[start:end]
+            self.clipboard.set_text(str[start:end])
+
+    def get_clipboard_text(self):
+        text = self.clipboard.wait_for_text()
+        if text is None:
+            return ""
+        else:
+            return text
 
     def text_paste(self):
-        self.button_pressed(self.TYPE_TEXT, self.clipboard)
+        self.button_pressed(self.TYPE_TEXT, self.get_clipboard_text())
 
     def text_cut(self):
         self.text_copy()
@@ -665,7 +713,8 @@ class Calculate(activity.Activity):
                 tlen -= (end - start)
 
             if tlen == 0 and (str in self.parser.get_diadic_operators() \
-                    or str in self.parser.get_post_operators()):
+                    or str in self.parser.get_post_operators()): # and \
+# logic better?     (str not in self.parser.get_pre_operators() or str == '+'):
                 ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
                 self.text_entry.set_text(ans + str)
                 self.text_entry.set_position(3 + len(str))
@@ -686,15 +735,16 @@ class Calculate(activity.Activity):
             self.refresh_bar()
         elif msg == "req_sync":
             data = []
-            for eq in self.helper_old_eqs:
+# In reverse order to get variables right
+            for eq in reversed(self.helper_old_eqs):
                 data.append(str(eq))
             self.helper.send_message("sync", data)
         elif msg == "sync":
             tmp = []
+            self.helper_old_eqs = []
             for eq_str in val:
                 _logger.info('receive_message: %s', str(eq_str))
-                tmp.append(Equation(str=str(eq_str)))
-            self.helper_old_eqs = tmp
+                self.insert_equation(Equation(str=str(eq_str)))
             self.refresh_bar()
 
 def main():
