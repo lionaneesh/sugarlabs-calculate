@@ -1,3 +1,5 @@
+10
+
 * Improved error reporting (catching function exceptions, could still be extended)
 * Simple help system ('help(index)')
 * Using gtk.Clipboard in stead of custom solution
