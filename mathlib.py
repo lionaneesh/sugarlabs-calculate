@@ -137,7 +137,7 @@ class MathLib:
 
     def is_int(self, n):
         (sign, d, e) = n.normalize().as_tuple()
-        return e == 0
+        return e >= 0
 
     def is_float(self, n):
         if isinstance(n, Decimal):
@@ -205,6 +205,9 @@ class MathLib:
     def factorial(self, n):
         if not self.is_int(n):
             return self.d(0)
+
+        if n == 0:
+            return 1
 
         res = n
         while n > 2:
