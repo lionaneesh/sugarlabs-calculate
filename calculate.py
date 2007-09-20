@@ -749,7 +749,8 @@ class Calculate(activity.Activity):
                 tlen -= (end - start)
 
             if tlen == 0 and (str in self.parser.get_diadic_operators() \
-                    or str in self.parser.get_post_operators()): # and \
+                    or str in self.parser.get_post_operators()) and \
+                    self.parser.get_var('Ans') is not None: # and \
 # logic better?     (str not in self.parser.get_pre_operators() or str == '+'):
                 ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
                 self.text_entry.set_text(ans + str)
