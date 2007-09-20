@@ -658,6 +658,14 @@ class Calculate(activity.Activity):
             return
 
         key = gtk.gdk.keyval_name(event.keyval)
+        if key is None:
+            if event.hardware_keycode == 219:
+                if (event.state & gtk.gdk.SHIFT_MASK):
+                    key = 'slash'
+                else:
+                    key = 'asterisk'
+            else:
+                key = 'None'
         _logger.debug('Key: %s (%r)', key, event.keyval)
 
         if (event.state & gtk.gdk.CONTROL_MASK) and self.CTRL_KEYMAP.has_key(key):
