@@ -75,7 +75,7 @@ class Equation:
         str = str.rstrip("\r\n")
         l = str.split(';')
         if len(l) != 5:
-            _logger.error('Equation.parse() string invalid (%s)', str)
+            _logger.error(_('Equation.parse() string invalid (%s)'), str)
             return False
 
         if l[2].startswith("<svg>"):
@@ -167,7 +167,7 @@ class Calculate(activity.Activity):
         self.showing_error = False
         self.show_vars = False
 
-        self.set_title("Calculate")
+        self.set_title(_("Calculate"))
         self.connect("key_press_event", self.keypress_cb)
         self.connect("destroy", self.cleanup_cb)
         self.color = sugar.profile.get_color()
@@ -185,7 +185,7 @@ class Calculate(activity.Activity):
         self.presence = presenceservice.get_instance()
         self.owner = self.presence.get_owner()
         self.owner_id = str(self.owner._properties["nick"])
-        _logger.debug('Owner_id: %s', self.owner_id)
+        _logger.debug(_('Owner_id: %s'), self.owner_id)
 
         options = {
             'receive_message': self.receive_message,
@@ -201,7 +201,7 @@ class Calculate(activity.Activity):
                                           'type': 'python'},
                                          iv = [])
 
-        _logger.info('Available functions:')
+        _logger.info(_('Available functions:'))
         for f in self.parser.get_function_names():
             _logger.info('\t%s', f)
 
@@ -212,7 +212,7 @@ class Calculate(activity.Activity):
         return True
 
     def cleanup_cb(self, arg):
-        _logger.debug('Cleaning up...')
+        _logger.debug(_('Cleaning up...'))
 
     def equation_pressed_cb(self, eqn):
         """Callback for when an equation box is clicked"""
@@ -320,7 +320,7 @@ class Calculate(activity.Activity):
 
         s = self.text_entry.get_text()
         label = self.label_entry.get_text()
-        _logger.debug('process(): parsing \'%s\', label: \'%s\'', s, label)
+        _logger.debug(_('process(): parsing \'%s\', label: \'%s\''), s, label)
         res = self.parser.parse(s)
         if type(res) == types.StringType and res.find('</svg>') > -1:
             res = SVGImage(data=res)
@@ -345,7 +345,7 @@ class Calculate(activity.Activity):
         return res is not None
 
     def refresh_bar(self):
-        _logger.debug('Refreshing right bar...')
+        _logger.debug(_('Refreshing right bar...'))
         self.refresh_last_eq()
         if self.layout.varbut.selected == 0:
             self.refresh_history()
@@ -479,7 +479,7 @@ class Calculate(activity.Activity):
     def write_file(self, file_path):
         """Write journal entries, Calculate Journal Version (cjv) 1.0"""
 
-        _logger.info('Writing to journal (%s)', file_path)
+        _logger.info(_('Writing to journal (%s)'), file_path)
 
         f = open(file_path, 'w')
         f.write("cjv 1.0\n")
@@ -499,23 +499,23 @@ class Calculate(activity.Activity):
     def read_file(self, file_path):
         """Read journal entries, version 1.0"""
 
-        _logger.info('Reading from journal (%s)', file_path)
+        _logger.info(_('Reading from journal (%s)'), file_path)
 
         f = open(file_path, 'r')
         str = f.readline().rstrip("\r\n")   # chomp
         l = str.split()
         if len(l) != 2:
-            _logger.error('Unable to determine version')
+            _logger.error(_('Unable to determine version'))
             return False
 
         version = l[1]
         if len(version) > 1 and version[0:2] == "1.":
-            _logger.info('Reading journal entry (version %s)', version)
+            _logger.info(_('Reading journal entry (version %s)'), version)
 
             str = f.readline().rstrip("\r\n")
             l = str.split(';')
             if len(l) != 4:
-                _logger.error('State line invalid (%s)', str)
+                _logger.error(_('State line invalid (%s)'), str)
                 return False
 
             self.text_entry.set_text(l[0])
@@ -532,7 +532,7 @@ class Calculate(activity.Activity):
 
             return True
         else:
-            _logger.error('Unable to read journal entry, unknown version (%s)', version)
+            _logger.error(_('Unable to read journal entry, unknown version (%s)'), version)
             return False
 
 ##########################################
@@ -585,7 +585,7 @@ class Calculate(activity.Activity):
         if end_ofs - start_ofs <= 0:
             return False
         partial_name = str[start_ofs:end_ofs]
-        _logger.debug('tab-completing %s...', partial_name)
+        _logger.debug(_('tab-completing %s...'), partial_name)
 
 # Lookup matching variables
         vars = self.parser.get_var_names(start=partial_name)
@@ -666,7 +666,7 @@ class Calculate(activity.Activity):
                     key = 'asterisk'
             else:
                 key = 'None'
-        _logger.debug('Key: %s (%r)', key, event.keyval)
+        _logger.debug(_('Key: %s (%r, %r)'), key, event.keyval, event.hardware_keycode)
 
         if (event.state & gtk.gdk.CONTROL_MASK) and self.CTRL_KEYMAP.has_key(key):
             f = self.CTRL_KEYMAP[key]
@@ -717,7 +717,7 @@ class Calculate(activity.Activity):
             (start, end) = sel
             text = self.text_entry.get_text()
         elif len(sel) != 0:
-            _logger.error('button_pressed(): len(sel) != 0 or 2')
+            _logger.error(_('button_pressed(): len(sel) != 0 or 2'))
             return False
 
         if type == self.TYPE_FUNCTION:
@@ -763,7 +763,7 @@ class Calculate(activity.Activity):
                 self.text_entry.set_position(pos + len(str))
 
         else:
-            _logger.error('button_pressed(): invalid type')
+            _logger.error(_('button_pressed(): invalid type'))
 
     def receive_message(self, msg, val):
         if msg == "add_eq":
@@ -779,7 +779,7 @@ class Calculate(activity.Activity):
             tmp = []
             self.clear_equations()
             for eq_str in val:
-                _logger.info('receive_message: %s', str(eq_str))
+                _logger.info(_('receive_message: %s'), str(eq_str))
                 self.add_equation(Equation(str=str(eq_str)))
             self.refresh_bar()
 

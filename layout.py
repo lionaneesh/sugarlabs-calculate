@@ -6,11 +6,6 @@ pygtk.require('2.0')
 import gtk
 import pango
 from sugar.activity import activity
-try:
-    from sugar.graphics import font
-except:
-    #Not important, don't do anythig
-    pass
 from toolbars import *
 
 class CalcLayout:
@@ -117,9 +112,9 @@ class CalcLayout:
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton(['All equations', 'My equations'],
+        self.minebut = TextToggleToolButton([_('All equations'), _('My equations')],
             lambda x: self._parent.refresh_bar())
-        self.varbut = TextToggleToolButton(['Show history  ', 'Show variables'],
+        self.varbut = TextToggleToolButton([_('Show history'), _('Show variables')],
             lambda x: self._parent.refresh_bar())
         hc2.add(self.minebut)
         hc2.add(self.varbut)
@@ -155,7 +150,7 @@ class CalcLayout:
         self._parent.show_all()
 
     def create_button(self, cap, cb, fgcol, bgcol, width):
-        button = gtk.Button(cap)
+        button = gtk.Button(_(cap))
         self.modify_button_appearance(button, fgcol, bgcol, width)
         button.connect("clicked", cb)
         button.connect("key_press_event", self._parent.ignore_key_cb)

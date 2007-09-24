@@ -1,0 +1,251 @@
+# POT file for the Calculate activity
+# Copyright (C) 2007
+# This file is distributed under the same license as the Calculate package.
+# Reinier Heeres <reinier@heeres.eu>, 2007
+# Translations by Rafael Enrique Ortiz Guerrero
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-22 18:20+0200\n"
+"PO-Revision-Date: 2007-09-23 18:10-0300\n"
+"Last-Translator: Xavier Alvarez <xavi.alvarez@gmail.com>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculate.py:27 calculate.py:170 setup.py:3
+msgid "Calculate"
+msgstr "Calculadora"
+
+#: calculate.py:204
+msgid "Available functions:"
+msgstr "Funciones disponibles:"
+
+# Need a bit more 'context' on the workings of the help system...
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#, fuzzy
+#: eqnparserhelp.py:33
+msgid "help_acos"
+msgstr "Ayuda_acos"
+
+#, fuzzy
+#: eqnparserhelp.py:34
+msgid "help_asin"
+msgstr "Ayuda_asin"
+
+#, fuzzy
+#: eqnparserhelp.py:35
+msgid "help_exp"
+msgstr "Ayuda_exp"
+
+#, fuzzy
+#: eqnparserhelp.py:36
+msgid "help_functions"
+msgstr "Ayuda_funciones"
+
+#, fuzzy
+#: eqnparserhelp.py:37
+msgid "help_operators"
+msgstr "Ayuda_operadores"
+
+#, fuzzy
+#: eqnparserhelp.py:38
+msgid "help_plot"
+msgstr "Ayuda_plot"
+
+#, fuzzy
+#: eqnparserhelp.py:39
+msgid "help_sqrt"
+msgstr "Ayuda_sqrt"
+
+#, fuzzy
+#: eqnparserhelp.py:40
+msgid "help_test"
+msgstr "Ayuda_test"
+
+#, fuzzy
+#: eqnparserhelp.py:41
+msgid "help_variables"
+msgstr "Ayuda_variables"
+
+#, fuzzy
+#: eqnparserhelp.py:49
+msgid "help_usage"
+msgstr "Ayuda_uso"
+
+#, fuzzy
+# Text assigned to the 'help' variable
+msgid "help_var"
+msgstr "Ayuda_var"
+
+# -----------------------------------------
+# End of help topics
+# -----------------------------------------
+#: eqnparserhelp.py:52
+msgid "Topics"
+msgstr "Temas"
+
+# should the command 'help(index)' be translated?
+#: eqnparserhelp.py:63
+#, python-format
+#, fuzzy
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "No hay ayuda disponible sobre '%s', use ayuda(indice) para el índice"
+
+#: eqnparser.py:87
+msgid "Type error"
+msgstr "Error de tipo"
+
+#: eqnparser.py:107
+#, python-format
+msgid "Error at %d"
+msgstr "Error en %d"
+
+#: eqnparser.py:299
+#, python-format
+msgid "variable '%s' not defined"
+msgstr "la variable '%s' no definida"
+
+#: eqnparser.py:329 eqnparser.py:330
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "La función '%s' no definida"
+
+#: eqnparser.py:335
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Cantidad de argumentos incorrecta (%d en vez de %d)"
+
+#: eqnparser.py:336
+#, python-format
+msgid "function takes %d args"
+msgstr "la función usa %d argumentos"
+
+#: eqnparser.py:346 eqnparser.py:347
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Imposible de procesar el argumento %d: '%s'"
+
+#: eqnparser.py:356
+#, python-format
+msgid "Function error: %s"
+msgstr "Error de función: %s"
+
+#: eqnparser.py:358
+#, python-format
+msgid "Function '%s' returned %s"
+msgstr "La función '%s' retornó %s"
+
+#: eqnparser.py:487
+msgid "Parse error (right parenthesis)"
+msgstr "Error de procesamiento (paréntesis derecho)"
+
+#: eqnparser.py:488 eqnparser.py:499 eqnparser.py:506 eqnparser.py:566
+msgid "Right parenthesis unexpected"
+msgstr "No se esperaba un paréntesis derecho"
+
+# Should 'left_val' be considered translateable?
+#, fuzzy
+#: eqnparser.py:498
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Error de procesamiento (paréntesis derecho, sin valor_izquierdo)"
+
+#: eqnparser.py:505
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Error de procesamiento (paréntesis derecho, ningún nivel para cerrar)"
+
+#: eqnparser.py:513
+msgid "Number not expected"
+msgstr "Número no esperado"
+
+#: eqnparser.py:556 eqnparser.py:557
+msgid "Invalid operator"
+msgstr "Operador no válido"
+
+#: eqnparser.py:565
+msgid "Parse error: ')' expected"
+msgstr "Error de procesamiento: ')' esperado"
+
+#: layout.py:46
+msgid "clear"
+msgstr "borrar"
+
+#, fuzzy
+#: layout.py:55
+msgid "enter"
+msgstr "enter"
+
+#: layout.py:62
+msgid "Edit"
+msgstr "Editar"
+
+#: layout.py:63
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:64
+msgid "Trigonometry"
+msgstr "Trigonometría"
+
+#, fuzzy
+#: layout.py:65
+msgid "Boolean"
+msgstr "Lógico"
+
+#: layout.py:66
+msgid "Constants"
+msgstr "Constantes"
+
+#: layout.py:67
+msgid "Format"
+msgstr "Formato"
+
+#: layout.py:88
+msgid "Label:"
+msgstr "Etiqueta:"
+
+#: layout.py:120
+msgid "All equations"
+msgstr "Todas las ecuaciones"
+
+#: layout.py:120
+msgid "My equations"
+msgstr "Mis ecuaciones"
+
+#: layout.py:122
+msgid "Show history"
+msgstr "Mostrar historia"
+
+#: layout.py:122
+msgid "Show variables"
+msgstr "Mostrar variables"
+
+#: mathlib.py:86
+msgid "Error"
+msgstr "Error"
+
+#: mathlib.py:92
+msgid "Error: unsupported type"
+msgstr "Error: tipo no soportado"
+
+#: plotlib.py:134
+msgid "Unable to parse range"
+msgstr "Incapaz de procesar rango"
+
+#: toolbars.py:57
+msgid "Copy"
+msgstr "Copiar"
+
+#: toolbars.py:60
+msgid "Paste"
+msgstr "Pegar"
+
+#: toolbars.py:63
+msgid "Cut"
+msgstr "Cortar"

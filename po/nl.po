@@ -1,0 +1,238 @@
+# POT file for the Calculate activity
+# Copyright (C) 2007
+# This file is distributed under the same license as the Calculate package.
+# Reinier Heeres <reinier@heeres.eu>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-22 18:20+0200\n"
+"PO-Revision-Date: 2007-09-23 12:16+0200\n"
+"Last-Translator: Reinier Heeres <reinier@heeres.eu>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculate.py:27 calculate.py:170 setup.py:3
+msgid "Calculate"
+msgstr "Rekenmachine"
+
+#: calculate.py:204
+msgid "Available functions:"
+msgstr "Beschikbare functies:"
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#: eqnparserhelp.py:33
+msgid "help_acos"
+msgstr "acos(x), bepaal de hoek waarvan de cosinus x is. Geldig voor -1 <= x < 1"
+
+#: eqnparserhelp.py:34
+msgid "help_asin"
+msgstr "asin(x), bepaal de hoek waarvan de sinus x is. Geldig voor -1 <= x < 1"
+
+#: eqnparserhelp.py:35
+msgid "help_exp"
+msgstr "exp(x), geef e tot de macht x terug"
+
+#: eqnparserhelp.py:36
+msgid "help_functions"
+msgstr "Toon beschikbare functies"
+
+#: eqnparserhelp.py:37
+msgid "help_operators"
+msgstr "Toon beschikbare operators"
+
+#: eqnparserhelp.py:38
+msgid "help_plot"
+msgstr "plot(f,domein), plot functie f over het gegeven domein. Voorbeeld: plot(x^3,x=-2..2)"
+
+#: eqnparserhelp.py:39
+msgid "help_sqrt"
+msgstr "sqrt(x), geef de wortel van x terug"
+
+#: eqnparserhelp.py:40
+msgid "help_test"
+msgstr "test is een voorbeeld help onderwerp, gebruik help(index) voor de index"
+
+#: eqnparserhelp.py:41
+msgid "help_variables"
+msgstr "Toon beschikbare variables"
+
+#: eqnparserhelp.py:49
+msgid "help_usage"
+msgstr "help(test) voor help over test, help(index) voor de index"
+
+# Text assigned to the 'help' variable
+msgid "help_var"
+msgstr "help(test) voor help over test, help(index) voor de index"
+
+# -----------------------------------------
+# End of help topics
+# -----------------------------------------
+#: eqnparserhelp.py:52
+msgid "Topics"
+msgstr "Onderwerpen"
+
+#: eqnparserhelp.py:63
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Geen help over '%s' beschikbaar, gebruik help(index) voor de index"
+
+#: eqnparser.py:87
+msgid "Type error"
+msgstr "Type fout"
+
+#: eqnparser.py:107
+#, python-format
+msgid "Error at %d"
+msgstr "Fout op %d"
+
+#: eqnparser.py:299
+#, python-format
+msgid "variable %s not defined"
+msgstr "variabele %s niet gedefinieerd"
+
+#: eqnparser.py:329 eqnparser.py:330
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Functie '%s' niet gedefinieerd"
+
+#: eqnparser.py:335
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Onjuist aantal argumenten (%d in plaats van %d)"
+
+#: eqnparser.py:336
+#, python-format
+msgid "function takes %d args"
+msgstr "Functie verwacht %d argumenten"
+
+#: eqnparser.py:346 eqnparser.py:347
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Kan argument %d niet verwerken: '%s'"
+
+#: eqnparser.py:356
+#, python-format
+msgid "Function error: %s"
+msgstr "Functie fout: %s"
+
+#: eqnparser.py:358
+#, python-format
+msgid "Function '%s' returned %s"
+msgstr "Functie '%s' returned %s"
+
+#: eqnparser.py:457
+#, python-format
+msgid "Variable '%s' undefined"
+msgstr "Variabele '%s' niet gedefinieerd"
+
+#: eqnparser.py:487
+msgid "Parse error (right parenthesis)"
+msgstr "Verwerkingsfout (rechter haakje)"
+
+#: eqnparser.py:488 eqnparser.py:499 eqnparser.py:506 eqnparser.py:566
+msgid "Right parenthesis unexpected"
+msgstr "Rechter haakje onverwacht"
+
+#: eqnparser.py:498
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Verwerkingsfout (rechter haakje, geen left_val)"
+
+#: eqnparser.py:505
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Verwerkingsfout (rechter haakje, geen level af te sluiten)"
+
+#: eqnparser.py:513
+msgid "Number not expected"
+msgstr "Getal niet verwacht"
+
+#: eqnparser.py:556 eqnparser.py:557
+msgid "Invalid operator"
+msgstr "Ongeldige operator"
+
+#: eqnparser.py:565
+msgid "Parse error: ')' expected"
+msgstr "Verwerkingsfout: ')' verwacht"
+
+#: layout.py:46
+msgid "clear"
+msgstr "leeg"
+
+#: layout.py:55
+msgid "enter"
+msgstr "verwerk"
+
+#: layout.py:62
+msgid "Edit"
+msgstr "Bewerk"
+
+#: layout.py:63
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:64
+msgid "Trigonometry"
+msgstr "Trigonometrie"
+
+#: layout.py:65
+msgid "Boolean"
+msgstr "Boolean"
+
+#: layout.py:66
+msgid "Constants"
+msgstr "Constanten"
+
+#: layout.py:67
+msgid "Format"
+msgstr "Opmaak"
+
+#: layout.py:88
+msgid "Label:"
+msgstr "Naam:"
+
+#: layout.py:120
+msgid "All equations"
+msgstr "Alle vergelijkingen"
+
+#: layout.py:120
+msgid "My equations"
+msgstr "Mijn vergelijkingen"
+
+#: layout.py:122
+msgid "Show history"
+msgstr "Toon geschiedenis"
+
+#: layout.py:122
+msgid "Show variables"
+msgstr "Toon variabelen"
+
+#: mathlib.py:86
+msgid "Error"
+msgstr "Fout"
+
+#: mathlib.py:92
+msgid "Error: unsupported type"
+msgstr "Fout: type niet ondersteund"
+
+#: plotlib.py:134
+msgid "Unable to parse range"
+msgstr "Kan domein niet verwerken"
+
+#: toolbars.py:57
+msgid "Copy"
+msgstr "Kopieer"
+
+#: toolbars.py:60
+msgid "Paste"
+msgstr "Plak"
+
+#: toolbars.py:63
+msgid "Cut"
+msgstr "Knip"
+

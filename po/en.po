@@ -1,0 +1,239 @@
+# POT file for the Calculate activity
+# Copyright (C) 2007
+# This file is distributed under the same license as the Calculate package.
+# Reinier Heeres <reinier@heeres.eu>, 2007
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-09-22 18:20+0200\n"
+"PO-Revision-Date: 2007-09-23 11:46+0200\n"
+"Last-Translator: Reinier Heeres <reinier@heeres.eu>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculate.py:27 calculate.py:170 setup.py:3
+msgid "Calculate"
+msgstr "Calculate"
+
+#: calculate.py:204
+msgid "Available functions:"
+msgstr "Available functions:"
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#: eqnparserhelp.py:33
+msgid "help_acos"
+msgstr "acos(x), return arc cosine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:34
+msgid "help_asin"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:35
+msgid "help_exp"
+msgstr "exp(x), return e^x, example: exp(1)"
+
+#: eqnparserhelp.py:36
+msgid "help_functions"
+msgstr "show available functions"
+
+#: eqnparserhelp.py:37
+msgid "help_operators"
+msgstr "show available operators"
+
+#: eqnparserhelp.py:38
+msgid "help_plot"
+msgstr "plot(expression,range), plot a function. Example: plot(x^3,x=-2..2)"
+
+#: eqnparserhelp.py:39
+msgid "help_sqrt"
+msgstr "sqrt(x), return square root of x. Defined for x >= 0"
+
+#: eqnparserhelp.py:40
+msgid "help_test"
+msgstr "test is just an example help topic! See help(index)"
+
+#: eqnparserhelp.py:41
+msgid "help_variables"
+msgstr "show available variables"
+
+#: eqnparserhelp.py:49
+msgid "help_usage"
+msgstr "Use help(test) for help about 'test', or help(index) for the index"
+
+# Text assigned to the 'help' variable
+msgid "help_var"
+msgstr "Use help(test) for help about 'test', or help(index) for the index"
+
+# -----------------------------------------
+# End of help topics
+# -----------------------------------------
+
+#: eqnparserhelp.py:52
+msgid "Topics"
+msgstr "Topics"
+
+#: eqnparserhelp.py:63
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "No help about '%s' available, use help(index) for the index"
+
+#: eqnparser.py:87
+msgid "Type error"
+msgstr "Type error"
+
+#: eqnparser.py:107
+#, python-format
+msgid "Error at %d"
+msgstr "Error at %d"
+
+#: eqnparser.py:299
+#, python-format
+msgid "variable %s not defined"
+msgstr "variable %s not defined"
+
+#: eqnparser.py:329 eqnparser.py:330
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Function '%s' not defined"
+
+#: eqnparser.py:335
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Invalid number of arguments (%d instead of %d)"
+
+#: eqnparser.py:336
+#, python-format
+msgid "function takes %d args"
+msgstr "function takes %d args"
+
+#: eqnparser.py:346 eqnparser.py:347
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Unable to parse argument %d: '%s'"
+
+#: eqnparser.py:356
+#, python-format
+msgid "Function error: %s"
+msgstr "Function error: %s"
+
+#: eqnparser.py:358
+#, python-format
+msgid "Function '%s' returned %s"
+msgstr "Function '%s' returned %s"
+
+#: eqnparser.py:457
+#, python-format
+msgid "Variable '%s' undefined"
+msgstr "Variable '%s' undefined"
+
+#: eqnparser.py:487
+msgid "Parse error (right parenthesis)"
+msgstr "Parse error (right parenthesis)"
+
+#: eqnparser.py:488 eqnparser.py:499 eqnparser.py:506 eqnparser.py:566
+msgid "Right parenthesis unexpected"
+msgstr "Right parenthesis unexpected"
+
+#: eqnparser.py:498
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Parse error (right parenthesis, no left_val)"
+
+#: eqnparser.py:505
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Parse error (right parenthesis, no level to close)"
+
+#: eqnparser.py:513
+msgid "Number not expected"
+msgstr "Number not expected"
+
+#: eqnparser.py:556 eqnparser.py:557
+msgid "Invalid operator"
+msgstr "Invalid operator"
+
+#: eqnparser.py:565
+msgid "Parse error: ')' expected"
+msgstr "Parse error: ')' expected"
+
+#: layout.py:46
+msgid "clear"
+msgstr "clear"
+
+#: layout.py:55
+msgid "enter"
+msgstr "enter"
+
+#: layout.py:62
+msgid "Edit"
+msgstr "Edit"
+
+#: layout.py:63
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:64
+msgid "Trigonometry"
+msgstr "Trigonometry"
+
+#: layout.py:65
+msgid "Boolean"
+msgstr "Boolean"
+
+#: layout.py:66
+msgid "Constants"
+msgstr "Constants"
+
+#: layout.py:67
+msgid "Format"
+msgstr "Format"
+
+#: layout.py:88
+msgid "Label:"
+msgstr "Label:"
+
+#: layout.py:120
+msgid "All equations"
+msgstr "All equations"
+
+#: layout.py:120
+msgid "My equations"
+msgstr "My equations"
+
+#: layout.py:122
+msgid "Show history"
+msgstr "Show history"
+
+#: layout.py:122
+msgid "Show variables"
+msgstr "Show variables"
+
+#: mathlib.py:86
+msgid "Error"
+msgstr "Error"
+
+#: mathlib.py:92
+msgid "Error: unsupported type"
+msgstr "Error: unsupported type"
+
+#: plotlib.py:134
+msgid "Unable to parse range"
+msgstr "Unable to parse range"
+
+#: toolbars.py:57
+msgid "Copy"
+msgstr "Copy"
+
+#: toolbars.py:60
+msgid "Paste"
+msgstr "Paste"
+
+#: toolbars.py:63
+msgid "Cut"
+msgstr "Cut"
+

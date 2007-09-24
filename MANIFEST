@@ -6,6 +6,10 @@ mathlib.py
 plotlib.py
 svgimage.py
 toolbars.py
+po/calculate.pot
+po/en.po
+po/es.po
+po/nl.po
 sharedstate/__init__.py
 sharedstate/shareddict.py
 sharedstate/sharedobject.py
