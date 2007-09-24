@@ -130,8 +130,8 @@ msgstr "Function '%s' returned %s"
 
 #: eqnparser.py:457
 #, python-format
-msgid "Variable '%s' undefined"
-msgstr "Variable '%s' undefined"
+msgid "Variable '%s' not defined"
+msgstr "Variable '%s' not defined"
 
 #: eqnparser.py:487
 msgid "Parse error (right parenthesis)"

@@ -25,64 +25,51 @@ msgstr "Calculadora"
 msgid "Available functions:"
 msgstr "Funciones disponibles:"
 
-# Need a bit more 'context' on the workings of the help system...
 # -----------------------------------------
 # The help system uses topic msgid's that should be translated here.
 # -----------------------------------------
-#, fuzzy
-#: eqnparserhelp.py:33
 msgid "help_acos"
-msgstr "Ayuda_acos"
+msgstr "acos(x), devuelve arc cosino de x. Definido para -1 <= x <= 1"
 
-#, fuzzy
 #: eqnparserhelp.py:34
 msgid "help_asin"
-msgstr "Ayuda_asin"
+msgstr "asin(x), devuelve arc seno de x. Definido para -1 <= x <= 1"
 
-#, fuzzy
 #: eqnparserhelp.py:35
 msgid "help_exp"
-msgstr "Ayuda_exp"
+msgstr "exp(x), devuelve e^x, ejemplo: exp(1)"
 
-#, fuzzy
 #: eqnparserhelp.py:36
 msgid "help_functions"
-msgstr "Ayuda_funciones"
+msgstr "Muestra las funciones disponibles"
 
-#, fuzzy
 #: eqnparserhelp.py:37
 msgid "help_operators"
-msgstr "Ayuda_operadores"
+msgstr "Muestra los operadores disponibles"
 
-#, fuzzy
 #: eqnparserhelp.py:38
 msgid "help_plot"
-msgstr "Ayuda_plot"
+msgstr "plot(expresión,rango), gráfica una función. Ejemplo: plot(x^3,x=-2..2)"
 
-#, fuzzy
 #: eqnparserhelp.py:39
 msgid "help_sqrt"
-msgstr "Ayuda_sqrt"
+msgstr "sqrt(x), devuelve la raiz cuadrada de  x. Definido para x >= 0"
 
-#, fuzzy
 #: eqnparserhelp.py:40
 msgid "help_test"
-msgstr "Ayuda_test"
+msgstr "test  es solo un  ejemplo  de la ayuda vea help(index)"
 
-#, fuzzy
 #: eqnparserhelp.py:41
 msgid "help_variables"
-msgstr "Ayuda_variables"
+msgstr "muestra variables disponibles"
 
-#, fuzzy
 #: eqnparserhelp.py:49
 msgid "help_usage"
-msgstr "Ayuda_uso"
+msgstr "Use help(test) para ayuda acerca de 'test', o help(index) para el indice"
 
-#, fuzzy
 # Text assigned to the 'help' variable
 msgid "help_var"
-msgstr "Ayuda_var"
+msgstr "Use help(test) para ayuda acerca de 'test', o help(index) para el indice"
 
 # -----------------------------------------
 # End of help topics
@@ -93,10 +80,8 @@ msgstr "Temas"
 
 # should the command 'help(index)' be translated?
 #: eqnparserhelp.py:63
-#, python-format
-#, fuzzy
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "No hay ayuda disponible sobre '%s', use ayuda(indice) para el índice"
+msgstr "No hay ayuda disponible sobre '%s', use help(index) para el índice"
 
 #: eqnparser.py:87
 msgid "Type error"
@@ -109,7 +94,7 @@ msgstr "Error en %d"
 
 #: eqnparser.py:299
 #, python-format
-msgid "variable '%s' not defined"
+msgid "Variable '%s' not defined"
 msgstr "la variable '%s' no definida"
 
 #: eqnparser.py:329 eqnparser.py:330

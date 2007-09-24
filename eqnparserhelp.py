@@ -60,7 +60,7 @@ class EqnParserHelp():
                 ret += _(val)
 
         if ret == "":
-            ret += _("No help about '%s' available, use help(index) for the index") % (about)
+           ret += _("No help about '%s' available, use help(index) for the index") % (about)
 
         return ret
 

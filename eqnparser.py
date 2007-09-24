@@ -329,8 +329,8 @@ class EqnParser:
 
     def eval_func(self, func, args, level):
         if func not in self.functions:
-            _logger.error(_('Function \'%s\' not defined'), func)
-            self.ps.set_error(ParserState.PARSE_ERROR, msg=_('Function \'%s\' not defined') % (func))
+            _logger.error(_("Function '%s' not defined"), func)
+            self.ps.set_error(ParserState.PARSE_ERROR, msg=_("Function '%s' not defined") % (func))
             return None
 
         (f, opts) = self.functions[func]
@@ -457,7 +457,7 @@ class EqnParser:
             _logger.debug(_('parse_var_func(): variable %d - %d: %s'), startofs, ps.ofs, name)
             res = self.lookup_var(name, ps)
             if res is None:
-                ps.set_error(ParserState.PARSE_ERROR, msg=_("Variable '%s' undefined") % (name), range=(startofs, ps.ofs))
+                ps.set_error(ParserState.PARSE_ERROR, msg=_("Variable '%s' not defined") % (name), range=(startofs, ps.ofs))
             return res
 
     def _parse(self, ps, presedence=None):

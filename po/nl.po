@@ -129,7 +129,7 @@ msgstr "Functie '%s' returned %s"
 
 #: eqnparser.py:457
 #, python-format
-msgid "Variable '%s' undefined"
+msgid "Variable '%s' not defined"
 msgstr "Variabele '%s' niet gedefinieerd"
 
 #: eqnparser.py:487
