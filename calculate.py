@@ -167,7 +167,6 @@ class Calculate(activity.Activity):
         self.showing_error = False
         self.show_vars = False
 
-        self.set_title(_("Calculate"))
         self.connect("key_press_event", self.keypress_cb)
         self.connect("destroy", self.cleanup_cb)
         self.color = sugar.profile.get_color()
