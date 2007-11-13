@@ -2,5 +2,8 @@ encoding: UTF-8
 calculate.py
 eqnparser.py
 eqnparserhelp.py
+layout.py
 mathlib.py
 plotlib.py
+svgimage.py
+toolbars.py
