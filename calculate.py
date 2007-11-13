@@ -479,8 +479,6 @@ class Calculate(activity.Activity):
 ##########################################
 
     def write_file(self, file_path):
-        raise ValueError
-
         """Write journal entries, Calculate Journal Version (cjv) 1.0"""
 
         _logger.info(_('Writing to journal (%s)'), file_path)
