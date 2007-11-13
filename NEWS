@@ -1,3 +1,8 @@
+* Parser converted to unicode
+* Updates to improve translation #4527
+* Mul/Div symbol i18n #4573
+* Mul/Div button fixed #3526
+
 12
 
 11

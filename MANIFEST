@@ -6,7 +6,7 @@ mathlib.py
 plotlib.py
 svgimage.py
 toolbars.py
-po/calculate.pot
+po/Calculate.pot
 po/en.po
 po/es.po
 po/nl.po

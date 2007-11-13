@@ -18,6 +18,9 @@ class CalcLayout:
         return gtk.gdk.Color(int(rf*0xFFFF), int(gf*0xFFFF), int(bf*0xFFFF))
 
     def create_button_data(self):
+        mul_sym = self._parent.ml.mul_sym
+        div_sym = self._parent.ml.div_sym
+
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
             [0, 0, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
@@ -43,8 +46,8 @@ class CalcLayout:
             [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
             [4, 1, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
             [5, 1, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
-            [3, 2, 1, 'x', self.col_gray3, lambda w: self._parent.add_text('*')],
-            [4, 2, 1, '/', self.col_gray3, lambda w: self._parent.add_text('/')],
+            [3, 2, 1, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
+            [4, 2, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
             [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
             [3, 3, 3, 'enter', self.col_gray1, lambda w: self._parent.process()],

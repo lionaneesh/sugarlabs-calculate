@@ -19,33 +19,42 @@
 #    2007-09-16: rwh, first version
 
 import types
-
 from gettext import gettext as _
+
+import logging
+_logger = logging.getLogger('EqnParser')
 
 class Callable:
     def __init__(self, f):
         self.__call__ = f
 
-# Just an example implementation; should be fixed for internationalization
 class EqnParserHelp():
 
+    # Unfortunately gettext is not yet initialized at the time _() is called here.
+    # Still do it like this to make sure these strings show up in the POT-file
     DICT = {
-    "acos": "help_acos",
-    "asin": "help_asin",
-    "exp": "help_exp",
-    "functions": "help_functions",
-    "operators": "help_operators",
-    "plot": "help_plot",
-    "sqrt": "help_sqrt",
-    "test": "help_test",
-    "variables": "help_variables",
+        # These are the help topics and should explain how things work
+        "acos": _("help_acos"),
+        "asin": _("help_asin"),
+        "cos": _("help_cos"),
+        "exp": _("help_exp"),
+        "functions": _("help_functions"),
+        "operators": _("help_operators"),
+        "plot": _("help_plot"),
+        "sin": _("help_sin"),
+        "sqrt": _("help_sqrt"),
+        "test": _("help_test"),
+        "variables": _("help_variables"),
     }
 
     def __init__(self):
-        return
+        pass
 
     def help(about):
-        if type(about) != types.StringType or len(about) == 0:
+        _logger.debug('help about %r', about)
+
+        t = type(about)
+        if (t != types.StringType and t != types.UnicodeType) or len(about) == 0:
             return _("help_usage")
 
         if about == "index":
@@ -56,8 +65,8 @@ class EqnParserHelp():
 
         ret = ""
         for (key, val) in EqnParserHelp.DICT.iteritems():
-            if about.find(key) != -1:
-                ret += _(val)
+            if about == key:
+                ret += val
 
         if ret == "":
            ret += _("No help about '%s' available, use help(index) for the index") % (about)

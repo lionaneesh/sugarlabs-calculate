@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # calculate.py, sugar calculator, by:
 #   Reinier Heeres <reinier@heeres.eu>
 #   Miguel Alvarez <miguel@laptop.org>
@@ -114,6 +115,8 @@ class Calculate(activity.Activity):
         'plus': '+',
         'minus': '-',
         'asterisk': '*',
+        'multiply': u'⨯',
+        'divide': u'÷',
         'slash': '/',
         'BackSpace': lambda o: o.remove_character(-1),
         'Delete': lambda o: o.remove_character(1),
@@ -162,7 +165,7 @@ class Calculate(activity.Activity):
 
         self.clipboard = gtk.Clipboard()
         self.select_reason = self.SELECT_SELECT
-        self.buffer = ""
+        self.buffer = u""
         self.showing_version = 0
         self.showing_error = False
         self.show_vars = False
@@ -184,21 +187,21 @@ class Calculate(activity.Activity):
         self.presence = presenceservice.get_instance()
         self.owner = self.presence.get_owner()
         self.owner_id = str(self.owner._properties["nick"])
-        _logger.debug(_('Owner_id: %s'), self.owner_id)
+        _logger.debug('Owner_id: %s', self.owner_id)
 
         options = {
             'receive_message': self.receive_message,
             'on_connect': lambda: self.helper.send_message("req_sync", "")
         }
+#        self.helper.create_shared_object('old_eqs',
+#                                         {'changed': lambda x: self.buddy_old_eqs_cb(),
+#                                          'type': 'python'},
+#                                         iv = [])
+#        self.helper.create_shared_object('vars',
+#                                         {'changed': lambda x: self.buddy_vars_cb(),
+#                                          'type': 'python'},
+#                                         iv = [])
         self.helper = SharingHelper(self, opt=options)
-        self.helper.create_shared_object('old_eqs',
-                                         {'changed': lambda x: self.buddy_old_eqs_cb(),
-                                          'type': 'python'},
-                                         iv = [])
-        self.helper.create_shared_object('vars',
-                                         {'changed': lambda x: self.buddy_vars_cb(),
-                                          'type': 'python'},
-                                         iv = [])
 
         _logger.info(_('Available functions:'))
         for f in self.parser.get_function_names():
@@ -211,7 +214,7 @@ class Calculate(activity.Activity):
         return True
 
     def cleanup_cb(self, arg):
-        _logger.debug(_('Cleaning up...'))
+        _logger.debug('Cleaning up...')
 
     def equation_pressed_cb(self, eqn):
         """Callback for when an equation box is clicked"""
@@ -317,9 +320,9 @@ class Calculate(activity.Activity):
     def process(self):
         """Parse the equation entered and show the result"""
 
-        s = self.text_entry.get_text()
-        label = self.label_entry.get_text()
-        _logger.debug(_('process(): parsing \'%s\', label: \'%s\''), s, label)
+        s = unicode(self.text_entry.get_text())
+        label = unicode(self.label_entry.get_text())
+        _logger.debug('process(): parsing \'%r\', label: \'%r\'', s, label)
         res = self.parser.parse(s)
         if type(res) == types.StringType and res.find('</svg>') > -1:
             res = SVGImage(data=res)
@@ -331,8 +334,8 @@ class Calculate(activity.Activity):
             self.parser.set_var('Ans', self.ml.format_number(eqn.result))
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
-            self.text_entry.set_text('')
-            self.label_entry.set_text('')
+            self.text_entry.set_text(u'')
+            self.label_entry.set_text(u'')
 
 # Show error
         else:
@@ -344,7 +347,7 @@ class Calculate(activity.Activity):
         return res is not None
 
     def refresh_bar(self):
-        _logger.debug(_('Refreshing right bar...'))
+        _logger.debug('Refreshing right bar...')
         self.refresh_last_eq()
         if self.layout.varbut.selected == 0:
             self.refresh_history()
@@ -463,7 +466,7 @@ class Calculate(activity.Activity):
         self.layout.show_history(list)
 
     def clear(self):
-        self.text_entry.set_text('')
+        self.text_entry.set_text(u'')
         self.text_entry.grab_focus()
         return True
 
@@ -476,6 +479,8 @@ class Calculate(activity.Activity):
 ##########################################
 
     def write_file(self, file_path):
+        raise ValueError
+
         """Write journal entries, Calculate Journal Version (cjv) 1.0"""
 
         _logger.info(_('Writing to journal (%s)'), file_path)
@@ -584,7 +589,7 @@ class Calculate(activity.Activity):
         if end_ofs - start_ofs <= 0:
             return False
         partial_name = str[start_ofs:end_ofs]
-        _logger.debug(_('tab-completing %s...'), partial_name)
+        _logger.debug('tab-completing %s...', partial_name)
 
 # Lookup matching variables
         vars = self.parser.get_var_names(start=partial_name)
@@ -657,15 +662,12 @@ class Calculate(activity.Activity):
             return
 
         key = gtk.gdk.keyval_name(event.keyval)
-        if key is None:
-            if event.hardware_keycode == 219:
-                if (event.state & gtk.gdk.SHIFT_MASK):
-                    key = 'slash'
-                else:
-                    key = 'asterisk'
+        if event.hardware_keycode == 219:
+            if (event.state & gtk.gdk.SHIFT_MASK):
+                key = 'divide'
             else:
-                key = 'None'
-        _logger.debug(_('Key: %s (%r, %r)'), key, event.keyval, event.hardware_keycode)
+                key = 'multiply'
+        _logger.debug('Key: %s (%r, %r)', key, event.keyval, event.hardware_keycode)
 
         if (event.state & gtk.gdk.CONTROL_MASK) and self.CTRL_KEYMAP.has_key(key):
             f = self.CTRL_KEYMAP[key]
@@ -716,7 +718,7 @@ class Calculate(activity.Activity):
             (start, end) = sel
             text = self.text_entry.get_text()
         elif len(sel) != 0:
-            _logger.error(_('button_pressed(): len(sel) != 0 or 2'))
+            _logger.error('button_pressed(): len(sel) != 0 or 2')
             return False
 
         if type == self.TYPE_FUNCTION:
@@ -778,7 +780,7 @@ class Calculate(activity.Activity):
             tmp = []
             self.clear_equations()
             for eq_str in val:
-                _logger.info(_('receive_message: %s'), str(eq_str))
+                _logger.debug('receive_message: %s', str(eq_str))
                 self.add_equation(Equation(str=str(eq_str)))
             self.refresh_bar()
 
