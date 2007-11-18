@@ -48,6 +48,7 @@ from eqnparser import EqnParser
 from svgimage import SVGImage
 
 from decimal import Decimal
+from rational import Rational
 
 class Equation:
     def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, str=None):
@@ -328,14 +329,14 @@ class Calculate(activity.Activity):
         _logger.debug('process(): parsing %r, label: %r', s, label)
         res = self.parser.parse(s)
 
-        ansvar = self.parser.get_var('Ans')
 
         if type(res) == types.StringType and res.find('</svg>') > -1:
             res = SVGImage(data=res)
 
 # If parsing went ok, see if we have to replace the previous answer
 # to get a (more) exact result
-        elif res is not None and ansvar is not None and self.ans_inserted:
+        elif self.ans_inserted and res is not None:
+            ansvar = self.format_insert_ans()
             pos = s.find(ansvar)
             if len(ansvar) > 6 and pos != -1:
                 s2 = s.replace(ansvar, 'LastEqn')
@@ -347,8 +348,7 @@ class Calculate(activity.Activity):
 # Result ok
         if res is not None:
             self.add_equation(eqn)
-            self.parser.set_var('Ans', self.ml.format_number(eqn.result))
-            self.parser.set_var('AnsExact', eqn.result)
+            self.parser.set_var('Ans', eqn.result)
             self.parser.set_var('LastEqn', eqn.equation)
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
@@ -403,7 +403,7 @@ class Calculate(activity.Activity):
     def refresh_vars(self):
         """Create list of TextViews with variables and display"""
 
-        reserved = ["Ans", "AnsExact", "LastEqn", "help"]
+        reserved = ["Ans", "LastEqn", "help"]
         list = []
         for name, value in self.parser.get_vars():
             if name in reserved:
@@ -758,7 +758,7 @@ class Calculate(activity.Activity):
             if len(sel) is 2:
                 pos = end
             elif pos == 0:
-                ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
+                ans = self.format_insert_ans()
                 str = ans + str
                 self.ans_inserted = True
             self.text_entry.insert_text(str, pos)
@@ -773,7 +773,7 @@ class Calculate(activity.Activity):
                     or str in self.parser.get_post_operators()) and \
                     self.parser.get_var('Ans') is not None: # and \
 # logic better?     (str not in self.parser.get_pre_operators() or str == '+'):
-                ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
+                ans = self.format_insert_ans()
                 self.text_entry.set_text(ans + str)
                 self.text_entry.set_position(len(ans) + len(str))
                 self.ans_inserted = True
@@ -804,6 +804,14 @@ class Calculate(activity.Activity):
                 _logger.debug('receive_message: %s', str(eq_str))
                 self.add_equation(Equation(str=str(eq_str)))
             self.refresh_bar()
+
+    def format_insert_ans(self):
+        ans = self.parser.get_var('Ans')
+        if isinstance(ans, Rational):
+            ansstr = str(ans)
+        else:
+            ansstr = self.ml.format_number(ans)
+        return ansstr
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)

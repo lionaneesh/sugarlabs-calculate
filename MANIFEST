@@ -4,6 +4,7 @@ eqnparserhelp.py
 layout.py
 mathlib.py
 plotlib.py
+rational.py
 svgimage.py
 toolbars.py
 po/Calculate.pot

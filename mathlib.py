@@ -20,6 +20,7 @@
 import types
 import math
 from decimal import Decimal
+from rational import Rational
 import random
 
 import logging
@@ -103,7 +104,10 @@ class MathLib:
     def parse_number(self, s):
         try:
             d = Decimal(s)
-            return Decimal(s)
+            if self.is_int(d):
+                return int(d)
+            else:
+                return Decimal(s)
         except Exception, inst:
             return None
 
@@ -125,6 +129,8 @@ class MathLib:
             n = self.d(n)
         elif type(n) is types.LongType:
             n = self.d(n)
+        elif isinstance(n, Rational):
+            n = self.d(float(n))
         elif not isinstance(n, Decimal):
             return _('Error: unsupported type')
         (sign, digits, exp) = n.as_tuple()

@@ -26,6 +26,8 @@ from mathlib import MathLib
 from plotlib import PlotLib
 from eqnparserhelp import EqnParserHelp
 
+from rational import Rational
+
 from gettext import gettext as _
 
 class Equation:
@@ -210,8 +212,8 @@ class EqnParser:
         self.register_operator('*', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'⨯', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'×', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
-        self.register_operator('/', self.OP_DIADIC, 1, lambda x: self.ml.div(x[0], x[1]))
-        self.register_operator(u'÷', self.OP_DIADIC, 1, lambda x: self.ml.div(x[0], x[1]))
+        self.register_operator('/', self.OP_DIADIC, 1, lambda x: self.div_operator(x[0], x[1]))
+        self.register_operator(u'÷', self.OP_DIADIC, 1, lambda x: self.div_operator(x[0], x[1]))
 
         self.register_operator('^', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
         self.register_operator('**', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
@@ -639,3 +641,10 @@ class EqnParser:
             ret += op + " "
         return ret
 
+    def div_operator(self, a, b):
+        if isinstance(a, Rational) or isinstance(b, Rational):
+            return a / b
+        elif self.ml.is_int(a) and self.ml.is_int(b):
+            return Rational(a, b)
+        else:
+            return self.ml.div(a, b)
