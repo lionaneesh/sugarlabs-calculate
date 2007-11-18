@@ -327,7 +327,7 @@ msgstr ""
 
 #: mathlib.py:68
 msgid "mul_sym"
-msgstr "×"
+msgstr "*"
 
 #: mathlib.py:73
 msgid "div_sym"
