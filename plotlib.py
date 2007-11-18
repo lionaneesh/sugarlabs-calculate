@@ -17,6 +17,8 @@
 # Change log:
 #    2007-09-04: rwh, first version
 
+import types
+
 import logging
 _logger = logging.getLogger('PlotLib')
 
@@ -83,10 +85,14 @@ class PlotLib:
         self.svg_data += '" />\n'
 
     def add_text(self, c, text, rotate=0):
+        if type(text) is types.UnicodeType:
+            text = text.encode('utf-8')
         c = self.rcoords_to_coords(c)
+
         self.svg_data += '<text x="%f" y="%f"' % (c[0], c[1])
         if rotate != 0:
             self.svg_data += ' transform="rotate(%d)"' % (rotate)
+
         self.svg_data += '>%s</text>\n' % (text)
 
     def determine_bounds(self, vals):
@@ -98,10 +104,20 @@ class PlotLib:
             self.maxx = max(float(x), self.maxx)
             self.maxy = max(float(y), self.maxy)
 
+        x_space = 0.02 * (self.maxx - self.minx)
+        self.minx -= x_space
+        self.maxx += x_space
+
+        y_space = 0.02 * (self.maxy - self.miny)
+        self.miny -= y_space
+        self.maxy += y_space
+
     def rcoords_to_coords(self, pair):
+        """Convert fractional coordinates to image coordinates"""
         return (pair[0] * self.width, pair[1] * self.height)
 
     def vals_to_rcoords(self, pair):
+        """Convert values to fractional coordinates"""
         ret = (0.1 + (pair[0] - self.minx) / (self.maxx - self.minx) * 0.8, \
                0.9 - (pair[1] - self.miny) / (self.maxy - self.miny) * 0.8)
         return ret
@@ -116,6 +132,12 @@ class PlotLib:
 
         self.plot_polyline(c, "blue")
 
+    def get_label_vals(self, startx, endx, n, opts=()):
+        """Return label values"""
+        range = endx - startx
+        logrange = log(range)
+        haszero = (startx < 0 & endx < 0)
+
     def draw_axes(self, labelx, labely):
         self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
         self.add_text((0.50, 0.98), labelx)
@@ -129,13 +151,15 @@ class PlotLib:
         f.close()
 
     def plot(self, eqn, range_spec):
+        _logger.debug('plot(): %r, %r', eqn, range_spec)
+
         (var, range) = self.parse_range(range_spec)
         if range is None:
             _logger.error('Unable to parse range')
             return False
         _logger.info('Plot range for var %s: %r', var, range)
 
-        self.set_size(200, 200)
+        self.set_size(250, 250)
         self.create_image()
 
         self.draw_axes(var, eqn)
@@ -147,4 +171,8 @@ class PlotLib:
         self.finish_image()
 
 #        self.export_plot("/tmp/calculate_graph.svg")
-        return self.get_svg()
+        svg = self.get_svg()
+        if type(svg) is types.UnicodeType:
+            return svg.encode('utf-8')
+        else:
+            return svg

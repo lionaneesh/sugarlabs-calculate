@@ -115,8 +115,8 @@ class Calculate(activity.Activity):
         'plus': '+',
         'minus': '-',
         'asterisk': '*',
-        'multiply': u'⨯',
-        'divide': u'÷',
+        'multiply': '',
+        'divide': '',
         'slash': '/',
         'BackSpace': lambda o: o.remove_character(-1),
         'Delete': lambda o: o.remove_character(1),
@@ -153,7 +153,7 @@ class Calculate(activity.Activity):
         'End': lambda o: o.expand_selection(1000),
     }
 
-    IDENTIFIER_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
+    IDENTIFIER_CHARS = u"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
 
     def __init__(self, handle):
         activity.Activity.__init__(self, handle)
@@ -162,12 +162,15 @@ class Calculate(activity.Activity):
         
         self.ml = MathLib()
         self.parser = EqnParser(self.ml)
+        self.KEYMAP['multiply'] = self.ml.mul_sym
+        self.KEYMAP['divide'] = self.ml.div_sym
 
         self.clipboard = gtk.Clipboard()
         self.select_reason = self.SELECT_SELECT
         self.buffer = u""
         self.showing_version = 0
         self.showing_error = False
+        self.ans_inserted = False
         self.show_vars = False
 
         self.connect("key_press_event", self.keypress_cb)
@@ -322,18 +325,34 @@ class Calculate(activity.Activity):
 
         s = unicode(self.text_entry.get_text())
         label = unicode(self.label_entry.get_text())
-        _logger.debug('process(): parsing \'%r\', label: \'%r\'', s, label)
+        _logger.debug('process(): parsing %r, label: %r', s, label)
         res = self.parser.parse(s)
+
+        ansvar = self.parser.get_var('Ans')
+
         if type(res) == types.StringType and res.find('</svg>') > -1:
             res = SVGImage(data=res)
+
+# If parsing went ok, see if we have to replace the previous answer
+# to get a (more) exact result
+        elif res is not None and ansvar is not None and self.ans_inserted:
+            pos = s.find(ansvar)
+            if len(ansvar) > 6 and pos != -1:
+                s2 = s.replace(ansvar, 'LastEqn')
+                _logger.debug('process(): replacing previous answer %r: %r', ansvar, s2)
+                res = self.parser.parse(s2)
+
         eqn = Equation(label, s, res, self.color, self.owner_id)
 
 # Result ok
         if res is not None:
             self.add_equation(eqn)
             self.parser.set_var('Ans', self.ml.format_number(eqn.result))
+            self.parser.set_var('AnsExact', eqn.result)
+            self.parser.set_var('LastEqn', eqn.equation)
             self.helper.send_message("add_eq", str(eqn))
             self.showing_error = False
+            self.ans_inserted = False
             self.text_entry.set_text(u'')
             self.label_entry.set_text(u'')
 
@@ -384,9 +403,10 @@ class Calculate(activity.Activity):
     def refresh_vars(self):
         """Create list of TextViews with variables and display"""
 
+        reserved = ["Ans", "AnsExact", "LastEqn", "help"]
         list = []
         for name, value in self.parser.get_vars():
-            if name == "Ans" or name == "help":
+            if name in reserved:
                 continue
             w = gtk.TextView()
             b = w.get_buffer()
@@ -673,11 +693,12 @@ class Calculate(activity.Activity):
         elif (event.state & gtk.gdk.SHIFT_MASK) and self.SHIFT_KEYMAP.has_key(key):
             f = self.SHIFT_KEYMAP[key]
             return f(self)
-        elif key in self.IDENTIFIER_CHARS:
+        elif unicode(key) in self.IDENTIFIER_CHARS:
             self.button_pressed(self.TYPE_TEXT, key)
         elif self.KEYMAP.has_key(key):
             f = self.KEYMAP[key]
-            if type(f) is types.StringType:
+            if type(f) is types.StringType or \
+                type(f) is types.UnicodeType:
                 self.button_pressed(self.TYPE_TEXT, f)
             else:
                 return f(self)
@@ -739,6 +760,7 @@ class Calculate(activity.Activity):
             elif pos == 0:
                 ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
                 str = ans + str
+                self.ans_inserted = True
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
@@ -754,6 +776,7 @@ class Calculate(activity.Activity):
                 ans = self.parser.ml.format_number(self.parser.get_var('Ans'))
                 self.text_entry.set_text(ans + str)
                 self.text_entry.set_position(len(ans) + len(str))
+                self.ans_inserted = True
             elif len(sel) is 2:
                 self.text_entry.set_text(text[:start] + str + text[end:])
                 self.text_entry.set_position(pos + start - end + len(str))

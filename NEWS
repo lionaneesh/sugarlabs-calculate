@@ -2,6 +2,8 @@
 * Updates to improve translation #4527
 * Mul/Div symbol i18n #4573
 * Mul/Div button fixed #3526
+* Addressed #4250
+* Added palettes to buttons in toolbar
 
 12
 

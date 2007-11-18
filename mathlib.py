@@ -107,14 +107,16 @@ class MathLib:
                 return 'False'
         elif type(n) is types.StringType:
             return n
+        elif type(n) is types.UnicodeType:
+            return n
         elif type(n) is types.NoneType:
-            return 'Error'
+            return _('Undefined')
         elif type(n) is types.IntType:
             n = self.d(n)
         elif type(n) is types.FloatType:
             n = self.d(n)
         elif not isinstance(n, Decimal):
-            return 'Error: unsupported type'
+            return _('Error: unsupported type')
         (sign, digits, exp) = n.as_tuple()
         if len(digits) > 9:
             exp += len(digits) - 9
@@ -131,12 +133,20 @@ class MathLib:
                 disp_exp = exp + len(digits) 
             else:
                 disp_exp = 0
-        elif 0 < int_len < 6:
+        elif -5 < int_len < 9:
             disp_exp = 0
         else:
             disp_exp = int_len - 1
-        
+
         dot_pos = int_len - disp_exp
+
+#        _logger.debug('len(digits) %d, exp: %d, int_len: %d, disp_exp: %d, dot_pos: %d', len(digits), exp, int_len, disp_exp, dot_pos)
+
+        if dot_pos < 0:
+            res = '0' + self.fraction_sep
+            for i in xrange(dot_pos, 0):
+                res += '0'
+
         for i in xrange(len(digits)):
             if i == dot_pos:
                 if i == 0:
@@ -145,7 +155,7 @@ class MathLib:
                     res += self.fraction_sep
             res += str(digits[i])
 
-        if len(digits) < dot_pos:
+        if int_len > 0 and len(digits) < dot_pos:
             for i in xrange(len(digits), dot_pos):
                 res += '0'
 
@@ -199,12 +209,12 @@ class MathLib:
 
     def pow(self, x, y):
         if self.is_int(y):
-            return x ** int(y)
+            return float(x) ** int(y)
         else:
-            return self.d(math.pow(x, y))
+            return self.d(math.pow(float(x), float(y)))
 
     def sqrt(self, x):
-        return self.d(math.sqrt(x))
+        return self.d(math.sqrt(float(x)))
 
     def mod(self, x, y):
         if self.is_int(y):
@@ -213,17 +223,17 @@ class MathLib:
             return self.d(0)
 
     def exp(self, x):
-        return self.d(math.exp(x))
+        return self.d(math.exp(float(x)))
 
     def ln(self, x):
         if x > 0:
-            return self.d(math.log(x))
+            return self.d(math.log(float(x)))
         else:
             return 0
 
     def log10(self, x):
         if x > 0:
-           return self.d(math.log10(x))
+           return self.d(math.log10(float(x)))
         else:
             return 0
 
@@ -241,49 +251,50 @@ class MathLib:
         return res
 
     def sin(self, x):
-        return self.d(math.sin(x * self.angle_scaling))
+        return self.d(math.sin(float(x * self.angle_scaling)))
 
     def cos(self, x):
-        return self.d(math.cos(x * self.angle_scaling))
+        _logger.debug('cos of %r, (%r)', x, self.angle_scaling)
+        return self.d(math.cos(float(x * self.angle_scaling)))
 
     def tan(self, x):
-        return self.d(math.tan(x * self.angle_scaling))
+        return self.d(math.tan(float(x * self.angle_scaling)))
 
     def asin(self, x):
-        return self.d(math.asin(x)) / self.angle_scaling
+        return self.d(math.asin(float(x))) / self.angle_scaling
 
     def acos(self, x):
-        return self.d(math.acos(x)) / self.angle_scaling
+        return self.d(math.acos(float(x))) / self.angle_scaling
 
     def atan(self, x):
-        return self.d(math.atan(x)) / self.angle_scaling
+        return self.d(math.atan(float(x))) / self.angle_scaling
 
     def sinh(self, x):
-        return self.d(math.sinh(x))
+        return self.d(math.sinh(float(x)))
 
     def cosh(self, x):
-        return self.d(math.cosh(x))
+        return self.d(math.cosh(float(x)))
 
     def tanh(self, x):
-        return self.d(math.tanh(x))
+        return self.d(math.tanh(float(x)))
 
     def asinh(self, x):
-        return self.d(math.asinh(x))
+        return self.d(math.asinh(float(x)))
 
     def acosh(self, x):
-        return self.d(math.acosh(x))
+        return self.d(math.acosh(float(x)))
 
     def atanh(self, x):
-        return self.d(math.atanh(x))
+        return self.d(math.atanh(float(x)))
 
     def round(self, x):
-        return self.d(round(x))
+        return self.d(round(float(x)))
 
     def floor(self, x):
-        return self.d(math.floor(x))
+        return self.d(math.floor(float(x)))
 
     def ceil(self, x):
-        return self.d(math.ceil(x))
+        return self.d(math.ceil(float(x)))
 
     def rand_float(self):
         return self.d(random.random())

@@ -35,16 +35,27 @@ class EqnParserHelp():
     DICT = {
         # These are the help topics and should explain how things work
         "acos": _("help_acos"),
+        "and": _("help_and"),
         "asin": _("help_asin"),
+        "atan": _("help_atan"),
         "cos": _("help_cos"),
+        "cosh": _("help_cosh"),
         "exp": _("help_exp"),
+        "fac": _("help_fac"),
         "functions": _("help_functions"),
+        "ln": _("help_ln"),
         "operators": _("help_operators"),
+        "or": _("help_or"),
         "plot": _("help_plot"),
         "sin": _("help_sin"),
+        "sinh": _("help_sinh"),
         "sqrt": _("help_sqrt"),
+        "square": _("help_square"),
+        "tan": _("help_tan"),
+        "tanh": _("help_tanh"),
         "test": _("help_test"),
         "variables": _("help_variables"),
+        "xor": _("help_xor"),
     }
 
     def __init__(self):
