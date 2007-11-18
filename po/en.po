@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-22 18:20+0200\n"
+"POT-Creation-Date: 2007-11-18 11:06+0100\n"
 "PO-Revision-Date: 2007-09-23 11:46+0200\n"
 "Last-Translator: Reinier Heeres <reinier@heeres.eu>\n"
 "Language-Team: English\n"
@@ -16,224 +16,482 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: calculate.py:27 calculate.py:170 setup.py:3
+#: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calculate"
 
-#: calculate.py:204
+#: calculate.py:79
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr ""
+
+#: calculate.py:208
 msgid "Available functions:"
 msgstr "Available functions:"
+
+#: calculate.py:502
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr ""
+
+#: calculate.py:522
+#, python-format
+msgid "Reading from journal (%s)"
+msgstr ""
+
+#: calculate.py:528
+#, fuzzy
+msgid "Unable to determine version"
+msgstr "Unable to parse range"
+
+#: calculate.py:533
+#, python-format
+msgid "Reading journal entry (version %s)"
+msgstr ""
+
+#: calculate.py:538
+#, python-format
+msgid "State line invalid (%s)"
+msgstr ""
+
+#: calculate.py:555
+#, python-format
+msgid "Unable to read journal entry, unknown version (%s)"
+msgstr ""
+
+#: calculate.py:784
+msgid "button_pressed(): invalid type"
+msgstr ""
+
+#: eqnparser.py:54
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr ""
+
+#: eqnparser.py:110
+#, python-format
+msgid "Error at %d"
+msgstr "Error at %d"
+
+# Text assigned to the 'help' variable
+#: eqnparser.py:235
+msgid "help_var"
+msgstr "Use help(test) for help about 'test', or help(index) for the index"
+
+#: eqnparser.py:337 eqnparser.py:338
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Function '%s' not defined"
+
+#: eqnparser.py:343
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Invalid number of arguments (%d instead of %d)"
+
+#: eqnparser.py:344
+#, python-format
+msgid "function takes %d args"
+msgstr "function takes %d args"
+
+#: eqnparser.py:354 eqnparser.py:355
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Unable to parse argument %d: '%s'"
+
+#: eqnparser.py:364
+#, python-format
+msgid "Function error: %s"
+msgstr "Function error: %s"
+
+#: eqnparser.py:465
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variable '%s' not defined"
+
+#: eqnparser.py:495
+msgid "Parse error (right parenthesis)"
+msgstr "Parse error (right parenthesis)"
+
+#: eqnparser.py:496 eqnparser.py:507 eqnparser.py:514 eqnparser.py:585
+msgid "Right parenthesis unexpected"
+msgstr "Right parenthesis unexpected"
+
+#: eqnparser.py:506
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Parse error (right parenthesis, no left_val)"
+
+#: eqnparser.py:520 eqnparser.py:521
+msgid "Number not expected"
+msgstr "Number not expected"
+
+#: eqnparser.py:529
+#, fuzzy
+msgid "Operator not expected"
+msgstr "Number not expected"
+
+#: eqnparser.py:571
+msgid "Invalid operator"
+msgstr "Invalid operator"
+
+#: eqnparser.py:578
+#, fuzzy
+msgid "Operator expected"
+msgstr "Number not expected"
+
+#: eqnparser.py:591
+msgid "_parse(): returning None"
+msgstr ""
 
 # -----------------------------------------
 # The help system uses topic msgid's that should be translated here.
 # -----------------------------------------
-#: eqnparserhelp.py:33
+#: eqnparserhelp.py:37
 msgid "help_acos"
 msgstr "acos(x), return arc cosine of x. Defined for -1 <= x <= 1"
 
-#: eqnparserhelp.py:34
+#: eqnparserhelp.py:38
+#, fuzzy
+msgid "help_and"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:39
 msgid "help_asin"
 msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
 
-#: eqnparserhelp.py:35
+#: eqnparserhelp.py:40
+#, fuzzy
+msgid "help_atan"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#: eqnparserhelp.py:41
+#, fuzzy
+msgid "help_cos"
+msgstr "acos(x), return arc cosine of x. Defined for -1 <= x <= 1"
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#: eqnparserhelp.py:42
+#, fuzzy
+msgid "help_cosh"
+msgstr "acos(x), return arc cosine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:43
 msgid "help_exp"
 msgstr "exp(x), return e^x, example: exp(1)"
 
-#: eqnparserhelp.py:36
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#: eqnparserhelp.py:44
+#, fuzzy
+msgid "help_fac"
+msgstr "acos(x), return arc cosine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:45
 msgid "help_functions"
 msgstr "show available functions"
 
-#: eqnparserhelp.py:37
+#: eqnparserhelp.py:46
+#, fuzzy
+msgid "help_ln"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:47
 msgid "help_operators"
 msgstr "show available operators"
 
-#: eqnparserhelp.py:38
+# Text assigned to the 'help' variable
+#: eqnparserhelp.py:48
+#, fuzzy
+msgid "help_or"
+msgstr "Use help(test) for help about 'test', or help(index) for the index"
+
+#: eqnparserhelp.py:49
 msgid "help_plot"
 msgstr "plot(expression,range), plot a function. Example: plot(x^3,x=-2..2)"
 
-#: eqnparserhelp.py:39
+#: eqnparserhelp.py:50
+#, fuzzy
+msgid "help_sin"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:51
+#, fuzzy
+msgid "help_sinh"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:52
 msgid "help_sqrt"
 msgstr "sqrt(x), return square root of x. Defined for x >= 0"
 
-#: eqnparserhelp.py:40
+#: eqnparserhelp.py:53
+#, fuzzy
+msgid "help_square"
+msgstr "sqrt(x), return square root of x. Defined for x >= 0"
+
+#: eqnparserhelp.py:54
+#, fuzzy
+msgid "help_tan"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:55
+#, fuzzy
+msgid "help_tanh"
+msgstr "asin(x), return arc sine of x. Defined for -1 <= x <= 1"
+
+#: eqnparserhelp.py:56
 msgid "help_test"
 msgstr "test is just an example help topic! See help(index)"
 
-#: eqnparserhelp.py:41
+#: eqnparserhelp.py:57
 msgid "help_variables"
 msgstr "show available variables"
 
-#: eqnparserhelp.py:49
-msgid "help_usage"
+# Text assigned to the 'help' variable
+#: eqnparserhelp.py:58
+#, fuzzy
+msgid "help_xor"
 msgstr "Use help(test) for help about 'test', or help(index) for the index"
 
-# Text assigned to the 'help' variable
-msgid "help_var"
+#: eqnparserhelp.py:69
+msgid "help_usage"
 msgstr "Use help(test) for help about 'test', or help(index) for the index"
 
 # -----------------------------------------
 # End of help topics
 # -----------------------------------------
-
-#: eqnparserhelp.py:52
+#: eqnparserhelp.py:72
 msgid "Topics"
 msgstr "Topics"
 
-#: eqnparserhelp.py:63
+#: eqnparserhelp.py:83
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "No help about '%s' available, use help(index) for the index"
 
-#: eqnparser.py:87
-msgid "Type error"
-msgstr "Type error"
-
-#: eqnparser.py:107
-#, python-format
-msgid "Error at %d"
-msgstr "Error at %d"
-
-#: eqnparser.py:299
-#, python-format
-msgid "variable %s not defined"
-msgstr "variable %s not defined"
-
-#: eqnparser.py:329 eqnparser.py:330
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Function '%s' not defined"
-
-#: eqnparser.py:335
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Invalid number of arguments (%d instead of %d)"
-
-#: eqnparser.py:336
-#, python-format
-msgid "function takes %d args"
-msgstr "function takes %d args"
-
-#: eqnparser.py:346 eqnparser.py:347
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "Unable to parse argument %d: '%s'"
-
-#: eqnparser.py:356
-#, python-format
-msgid "Function error: %s"
-msgstr "Function error: %s"
-
-#: eqnparser.py:358
-#, python-format
-msgid "Function '%s' returned %s"
-msgstr "Function '%s' returned %s"
-
-#: eqnparser.py:457
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variable '%s' not defined"
-
-#: eqnparser.py:487
-msgid "Parse error (right parenthesis)"
-msgstr "Parse error (right parenthesis)"
-
-#: eqnparser.py:488 eqnparser.py:499 eqnparser.py:506 eqnparser.py:566
-msgid "Right parenthesis unexpected"
-msgstr "Right parenthesis unexpected"
-
-#: eqnparser.py:498
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Parse error (right parenthesis, no left_val)"
-
-#: eqnparser.py:505
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Parse error (right parenthesis, no level to close)"
-
-#: eqnparser.py:513
-msgid "Number not expected"
-msgstr "Number not expected"
-
-#: eqnparser.py:556 eqnparser.py:557
-msgid "Invalid operator"
-msgstr "Invalid operator"
-
-#: eqnparser.py:565
-msgid "Parse error: ')' expected"
-msgstr "Parse error: ')' expected"
-
-#: layout.py:46
-msgid "clear"
-msgstr "clear"
-
-#: layout.py:55
-msgid "enter"
-msgstr "enter"
-
-#: layout.py:62
+#: layout.py:60
 msgid "Edit"
 msgstr "Edit"
 
-#: layout.py:63
+#: layout.py:61
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:64
+#: layout.py:62
 msgid "Trigonometry"
 msgstr "Trigonometry"
 
-#: layout.py:65
+#: layout.py:63
 msgid "Boolean"
 msgstr "Boolean"
 
-#: layout.py:66
+#: layout.py:64
 msgid "Constants"
 msgstr "Constants"
 
-#: layout.py:67
+#: layout.py:65
 msgid "Format"
 msgstr "Format"
 
-#: layout.py:88
+#: layout.py:86
 msgid "Label:"
 msgstr "Label:"
 
-#: layout.py:120
+#: layout.py:118
 msgid "All equations"
 msgstr "All equations"
 
-#: layout.py:120
+#: layout.py:118
 msgid "My equations"
 msgstr "My equations"
 
-#: layout.py:122
+#: layout.py:120
 msgid "Show history"
 msgstr "Show history"
 
-#: layout.py:122
+#: layout.py:120
 msgid "Show variables"
 msgstr "Show variables"
 
-#: mathlib.py:86
-msgid "Error"
-msgstr "Error"
+#: mathlib.py:58
+msgid "thousand_sep"
+msgstr ""
 
-#: mathlib.py:92
+#: mathlib.py:63
+msgid "fraction_sep"
+msgstr ""
+
+#: mathlib.py:68
+msgid "mul_sym"
+msgstr "×"
+
+#: mathlib.py:73
+msgid "div_sym"
+msgstr "÷"
+
+#: mathlib.py:113
+msgid "Undefined"
+msgstr ""
+
+#: mathlib.py:119
 msgid "Error: unsupported type"
 msgstr "Error: unsupported type"
 
-#: plotlib.py:134
-msgid "Unable to parse range"
-msgstr "Unable to parse range"
+#: toolbars.py:31
+msgid "Help"
+msgstr ""
 
-#: toolbars.py:57
+#: toolbars.py:81
 msgid "Copy"
 msgstr "Copy"
 
-#: toolbars.py:60
+#: toolbars.py:84
 msgid "Paste"
 msgstr "Paste"
 
-#: toolbars.py:63
+#: toolbars.py:87
 msgid "Cut"
 msgstr "Cut"
 
+#: toolbars.py:94
+msgid "Square"
+msgstr ""
+
+#: toolbars.py:98
+msgid "Square root"
+msgstr ""
+
+#: toolbars.py:104
+msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:108
+msgid "Natural logarithm"
+msgstr ""
+
+#: toolbars.py:114
+msgid "Factorial"
+msgstr ""
+
+#: toolbars.py:122
+msgid "Sine"
+msgstr ""
+
+#: toolbars.py:126
+msgid "Cosine"
+msgstr ""
+
+#: toolbars.py:130
+msgid "Tangent"
+msgstr ""
+
+#: toolbars.py:136
+msgid "Arc sine"
+msgstr ""
+
+#: toolbars.py:140
+msgid "Arc cosine"
+msgstr ""
+
+#: toolbars.py:144
+msgid "Arc tangent"
+msgstr ""
+
+#: toolbars.py:150
+msgid "Hyperbolic sine"
+msgstr ""
+
+#: toolbars.py:154
+msgid "Hyperbolic cosine"
+msgstr ""
+
+#: toolbars.py:158
+msgid "Hyperbolic tangent"
+msgstr ""
+
+#: toolbars.py:166
+msgid "Logical and"
+msgstr ""
+
+#: toolbars.py:170
+msgid "Logical or"
+msgstr ""
+
+#: toolbars.py:174
+msgid "Logical xor"
+msgstr ""
+
+#: toolbars.py:180
+msgid "Equals"
+msgstr ""
+
+#: toolbars.py:183
+msgid "Not equals"
+msgstr ""
+
+#: toolbars.py:190
+msgid "Pi"
+msgstr ""
+
+#: toolbars.py:193
+msgid "e"
+msgstr ""
+
+#: toolbars.py:200
+msgid "Degrees"
+msgstr ""
+
+#: toolbars.py:201
+msgid "Radians"
+msgstr ""
+
+#~ msgid "Type error"
+#~ msgstr "Type error"
+
+#~ msgid "variable %s not defined"
+#~ msgstr "variable %s not defined"
+
+#~ msgid "Function '%s' returned %s"
+#~ msgstr "Function '%s' returned %s"
+
+#, fuzzy
+#~ msgid "Operator expected: %r"
+#~ msgstr "Number not expected"
+
+#~ msgid "Parse error: ')' expected"
+#~ msgstr "Parse error: ')' expected"
+
+#~ msgid "."
+#~ msgstr "."
+
+# Symbols for multiplication, division, fraction separator and thousand separator
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "⨯"
+#~ msgstr "⨯"
+
+#~ msgid "/"
+#~ msgstr "÷"
+
+#~ msgid "÷"
+#~ msgstr "÷"
+
+#~ msgid ","
+#~ msgstr ","
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "Parse error (right parenthesis, no level to close)"
+
+#~ msgid "clear"
+#~ msgstr "clear"
+
+#~ msgid "enter"
+#~ msgstr "enter"
+
+#~ msgid "Error"
+#~ msgstr "Error"
