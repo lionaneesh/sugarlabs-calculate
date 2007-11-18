@@ -545,7 +545,7 @@ class EqnParser:
                             return None
 
                         res = of([left_val, right_val])
-                        _logger.debug('OP: %s, %s ==> %s', self.ml.format_number(left_val), self.ml.format_number(right_val), self.ml.format_number(res))
+                        _logger.debug('OP: %s (%r), %s (%r) ==> %s (%r)', self.ml.format_number(left_val), left_val, self.ml.format_number(right_val), right_val, self.ml.format_number(res), res)
                         left_val = res
                         right_val = None
                     op = None
