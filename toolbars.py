@@ -35,12 +35,12 @@ class IconToolButton(ToolButton):
 
         self.set_palette(p)
 
-class IconToggleToolButton(ToggleToolButton):
+class IconToggleToolButton(gtk.ToggleToolButton):
     def __init__(self, items, cb):
-        ToggleToolButton.__init__(self)
+        gtk.ToggleToolButton.__init__(self)
         self.items = items
         self.set_label(items[0][0])
-        self.set_tooltip(items[0][1])
+#        self.set_tooltip(items[0][1])
         self.selected = 0
         self.connect('clicked', self.toggle_button)
         self.callback = cb
@@ -49,7 +49,7 @@ class IconToggleToolButton(ToggleToolButton):
         self.selected = (self.selected + 1) % len(self.items)
         but = self.items[self.selected]
         self.set_label(but[0])
-        self.set_tooltip(but[1])
+#        self.set_tooltip(but[1])
         if self.callback is not None:
             self.callback(but[0])
 
