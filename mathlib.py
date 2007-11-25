@@ -187,7 +187,7 @@ class MathLib:
         return ret
 
     def is_int(self, n):
-        if type(n) is types.IntType:
+        if type(n) is types.IntType or type(n) is types.LongType:
             return True
 
         if not isinstance(n, Decimal):
@@ -248,13 +248,13 @@ class MathLib:
         return self.d(math.exp(float(x)))
 
     def ln(self, x):
-        if x > 0:
+        if float(x) > 0:
             return self.d(math.log(float(x)))
         else:
             return 0
 
     def log10(self, x):
-        if x > 0:
+        if float(x) > 0:
            return self.d(math.log10(float(x)))
         else:
             return 0
@@ -278,7 +278,6 @@ class MathLib:
         return self.d(math.sin(float(x * self.angle_scaling)))
 
     def cos(self, x):
-        _logger.debug('cos of %r, (%r)', x, self.angle_scaling)
         return self.d(math.cos(float(x * self.angle_scaling)))
 
     def tan(self, x):
