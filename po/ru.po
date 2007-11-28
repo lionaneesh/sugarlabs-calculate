@@ -2,28 +2,28 @@
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
 # Reinier Heeres <reinier@heeres.eu>, 2007
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2007-11-27 09:13+0000\n"
+"Last-Translator: Andrei Popov <ceesaxp@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Сосчитать"
 
 #: calculate.py:206
 msgid "Available functions:"
-msgstr ""
+msgstr "Доступные функции:"
 
 #-----------------------------------------
 # The help system uses topic msgid's that should be translated here.
@@ -84,65 +84,69 @@ msgstr ""
 
 #: eqnparserhelp.py:72
 #, python-format
+#, fuzzy
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"Не могу найти справочной информации для '%s'. Попробуйте воспользоваться "
+"оглавлением или алфавитным индексом (Помощь/Индекс)"
 
 #: eqnparser.py:87
 msgid "Type error"
-msgstr ""
+msgstr "Ошибка типа"
 
 #: eqnparser.py:110
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Ошибка в %d"
 
 #: eqnparser.py:299
 #, python-format
 msgid "variable %s not defined"
-msgstr ""
+msgstr "переменная %s неопределена"
 
 #: eqnparser.py:335 eqnparser.py:336
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Функция '%s' неопределена"
 
 #: eqnparser.py:341
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Неверное количество аргументов функции (%d вместо %d)"
 
 #: eqnparser.py:342
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "функция требует %d аргументов"
 
 #: eqnparser.py:352 eqnparser.py:353
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Не могу применить аргумент %d: '%s'"
 
 #: eqnparser.py:363
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Ошибка функции: %s"
 
 #: eqnparser.py:358
 #, python-format
 msgid "Function '%s' returned %s"
-msgstr ""
+msgstr "Функция '%s' вернула %s"
 
 #: eqnparser.py:457
 #, python-format
 msgid "Variable '%s' undefined"
-msgstr ""
+msgstr "Переменная '%s' неопределена"
 
 #: eqnparser.py:494
+#, fuzzy
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "Ошибка чтения (нет закрывающей скобки)"
 
 #: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Лишняя закрывающая скобка"
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no left_val)"
@@ -150,99 +154,103 @@ msgstr ""
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "Ошибка чтения (лишняя закрывающая скобка)"
 
 #: eqnparser.py:519 eqnparser.py:520
 msgid "Number not expected"
-msgstr ""
+msgstr "Число не ожидалось"
 
 #: eqnparser.py:571
 msgid "Invalid operator"
-msgstr ""
+msgstr "Неверный оператор"
 
 #: eqnparser.py:565
 msgid "Parse error: ')' expected"
-msgstr ""
+msgstr "Ошибка чтения: ожидалась ')'"
 
 #: eqnparser.py:591
+#, fuzzy
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_parse(): возвращаю None"
 
 #: layout.py:46
 msgid "clear"
-msgstr ""
+msgstr "очистить"
 
 #: layout.py:55
 msgid "enter"
-msgstr ""
+msgstr "ввести"
 
 #: layout.py:57
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: layout.py:58
 msgid "Algebra"
-msgstr ""
+msgstr "Алгебра"
 
 #: layout.py:59
 msgid "Trigonometry"
-msgstr ""
+msgstr "Тригонометрия"
 
 #: layout.py:60
+#, fuzzy
 msgid "Boolean"
-msgstr ""
+msgstr "Логика"
 
 #: layout.py:61
 msgid "Constants"
-msgstr ""
+msgstr "Константы"
 
 #: layout.py:62
 msgid "Format"
-msgstr ""
+msgstr "Формат"
 
 #: layout.py:83
 msgid "Label:"
-msgstr ""
+msgstr "Метка:"
 
 #: layout.py:115
+#, fuzzy
 msgid "All equations"
-msgstr ""
+msgstr "Все уравнения"
 
 #: layout.py:115
+#, fuzzy
 msgid "My equations"
-msgstr ""
+msgstr "Мои уравнения"
 
 #: layout.py:117
 msgid "Show history"
-msgstr ""
+msgstr "История"
 
 #: layout.py:117
 msgid "Show variables"
-msgstr ""
+msgstr "Показать переменные"
 
 #: mathlib.py:86
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: mathlib.py:92
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Ошибка: тип данных не поддерживается"
 
 #: plotlib.py:134
 msgid "Unable to parse range"
-msgstr ""
+msgstr "Не могу определить интервал"
 
 #: toolbars.py:57
 msgid "Copy"
-msgstr ""
+msgstr "Копировать"
 
 #: toolbars.py:60
 msgid "Paste"
-msgstr ""
+msgstr "Вставить"
 
 #: toolbars.py:63
 msgid "Cut"
-msgstr ""
+msgstr "Вырезать"
 
 #: calculate.py:79
 #, python-format
@@ -252,21 +260,21 @@ msgstr ""
 #: calculate.py:486
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Запись в журнал (%s)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr ""
+msgstr "Чтение из журнала (%s)"
 
 #: calculate.py:512
 msgid "Unable to determine version"
-msgstr ""
+msgstr "Не могу определить версию"
 
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr ""
+msgstr "Чтение записи из журнала (версия %s)"
 
 #: calculate.py:522
 #, python-format
@@ -276,7 +284,7 @@ msgstr ""
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
+msgstr "Не могу прочитать запись из журнала, неизвестная версия (%"
 
 #: calculate.py:767
 msgid "button_pressed(): invalid type"
@@ -284,21 +292,22 @@ msgstr ""
 
 #: eqnparser.py:54
 #, python-format
+#, fuzzy
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "уровень: %d, отступ %d"
 
 #: eqnparser.py:464
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "Переменная '%s' не определена"
 
 #: eqnparser.py:528
 msgid "Operator not expected"
-msgstr ""
+msgstr "Неверный оператор"
 
 #: eqnparser.py:578
 msgid "Operator expected"
-msgstr ""
+msgstr "Оператор пропущен"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
@@ -310,24 +319,24 @@ msgstr ""
 
 #: eqnparserhelp.py:61
 msgid "Topics"
-msgstr ""
+msgstr "Разделы"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
 msgid "thousand_sep"
-msgstr ""
+msgstr "."
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
 msgid "fraction_sep"
-msgstr ""
+msgstr ","
 
 #. The multiplication symbol (default: '*')
 #: mathlib.py:68
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. The division symbol (default: '/')
 #: mathlib.py:73
 msgid "div_sym"
-msgstr ""
+msgstr "/"

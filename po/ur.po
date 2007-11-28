@@ -2,77 +2,76 @@
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
 # Reinier Heeres <reinier@heeres.eu>, 2007
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2007-11-27 06:24+0000\n"
+"Last-Translator: salman minhas <sulmanminhas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "شمار کريں"
 
 #: calculate.py:206
 msgid "Available functions:"
-msgstr ""
+msgstr "موجود فنکشن"
 
-#-----------------------------------------
+# ----------------------------------------
 # The help system uses topic msgid's that should be translated here.
-#-----------------------------------------
+# ----------------------------------------
 #. These are the help topics and should explain how things work
 #: eqnparserhelp.py:37
 msgid "help_acos"
-msgstr ""
+msgstr "آ کوس کی مدد کے ليے"
 
 #: eqnparserhelp.py:38
 msgid "help_asin"
-msgstr ""
+msgstr "آ سائن کی مدد کے ليے"
 
 #: eqnparserhelp.py:40
 msgid "help_exp"
-msgstr ""
+msgstr "ای ايکس پی کی مدد کے ليے"
 
 #: eqnparserhelp.py:41
 msgid "help_functions"
-msgstr ""
+msgstr "مدد کے فنکشن"
 
 #: eqnparserhelp.py:42
 msgid "help_operators"
-msgstr ""
+msgstr "مدد والے آپريٹرز"
 
 #: eqnparserhelp.py:43
 msgid "help_plot"
-msgstr ""
+msgstr "پلاٹ کی مدد"
 
 #: eqnparserhelp.py:45
 msgid "help_sqrt"
-msgstr ""
+msgstr "سکوئر کی مدد کے ليے"
 
 #: eqnparserhelp.py:46
 msgid "help_test"
-msgstr ""
+msgstr "ٹيسٹ_ مدد"
 
 #: eqnparserhelp.py:47
 msgid "help_variables"
-msgstr ""
+msgstr "ويری ايبل_مدد"
 
 #: eqnparserhelp.py:58
 msgid "help_usage"
-msgstr ""
+msgstr "استعمال-مدد"
 
 # Text assigned to the 'help' variable
 #: eqnparser.py:234
 msgid "help_var"
-msgstr ""
+msgstr "وار-مدد"
 
 #-----------------------------------------
 # End of help topics
@@ -80,7 +79,7 @@ msgstr ""
 
 #: eqnparserhelp.py:52
 msgid "Topics: "
-msgstr ""
+msgstr "عنوانات"
 
 #: eqnparserhelp.py:72
 #, python-format
@@ -89,245 +88,246 @@ msgstr ""
 
 #: eqnparser.py:87
 msgid "Type error"
-msgstr ""
+msgstr "لکھنے کی غلطی"
 
 #: eqnparser.py:110
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "٪ ڈی پر غلطی"
 
 #: eqnparser.py:299
 #, python-format
 msgid "variable %s not defined"
-msgstr ""
+msgstr "ويری ايبل ٪ لکھيں نہيں ہيں"
 
 #: eqnparser.py:335 eqnparser.py:336
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "فنکشن ٪ لکھيں نہيں ہيں"
 
 #: eqnparser.py:341
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "دلائل غلط ہيں (٪ کی جگہ ٪)"
 
 #: eqnparser.py:342
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "فنکشن  ٪ اے آر جی ايس ليتے ہيں"
 
 #: eqnparser.py:352 eqnparser.py:353
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "آرگيومينٹ کو پارس کرنے سے معزور ٪ڈی \"٪ايس\""
 
 #: eqnparser.py:363
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "فنکشن کی غلطی: ٪ايس"
 
 #: eqnparser.py:358
 #, python-format
 msgid "Function '%s' returned %s"
-msgstr ""
+msgstr "فنکشن \"٪ايس\" واپس آيا ٪ايس"
 
 #: eqnparser.py:457
 #, python-format
 msgid "Variable '%s' undefined"
-msgstr ""
+msgstr "ويری ايبل ٪ايس نہيں لکھا"
 
 #: eqnparser.py:494
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "پارس کی غلطی( دايں بريکٹيں)"
 
 #: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "دايں غير متوقع بريکٹيں"
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "پارس کی غلطی(دايں بريکٹ، نہ باياں-وال)"
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "پارس کی غلطی(دايں بريکٹ، حصہ بند نہ کريں)"
 
 #: eqnparser.py:519 eqnparser.py:520
 msgid "Number not expected"
-msgstr ""
+msgstr "عدد متوقع نہيں"
 
 #: eqnparser.py:571
 msgid "Invalid operator"
-msgstr ""
+msgstr "غلط اوپريٹر"
 
 #: eqnparser.py:565
 msgid "Parse error: ')' expected"
-msgstr ""
+msgstr "پارس غلطی:\"(\" متوقع"
 
 #: eqnparser.py:591
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "-پارس()کچہ واپس نہ آيا"
 
 #: layout.py:46
 msgid "clear"
-msgstr ""
+msgstr "صاف کرنا"
 
 #: layout.py:55
 msgid "enter"
-msgstr ""
+msgstr "ڈالنا"
 
 #: layout.py:57
 msgid "Edit"
-msgstr ""
+msgstr "مرتب کرنا"
 
 #: layout.py:58
 msgid "Algebra"
-msgstr ""
+msgstr "الجبرہ"
 
 #: layout.py:59
 msgid "Trigonometry"
-msgstr ""
+msgstr "علم مثلثات"
 
 #: layout.py:60
 msgid "Boolean"
-msgstr ""
+msgstr "بولئين"
 
 #: layout.py:61
+#, fuzzy
 msgid "Constants"
-msgstr ""
+msgstr "کونسٹينٹس"
 
 #: layout.py:62
 msgid "Format"
-msgstr ""
+msgstr "شکل"
 
 #: layout.py:83
 msgid "Label:"
-msgstr ""
+msgstr "نشان"
 
 #: layout.py:115
 msgid "All equations"
-msgstr ""
+msgstr "تمام عوامل"
 
 #: layout.py:115
 msgid "My equations"
-msgstr ""
+msgstr "ميرے عوامل"
 
 #: layout.py:117
 msgid "Show history"
-msgstr ""
+msgstr "تاريخ دکھائيں"
 
 #: layout.py:117
 msgid "Show variables"
-msgstr ""
+msgstr "ويری ايبل ديکھائيں"
 
 #: mathlib.py:86
 msgid "Error"
-msgstr ""
+msgstr "غلطی"
 
 #: mathlib.py:92
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "غلطی: سپورٹڈ نمونہ ہے"
 
 #: plotlib.py:134
 msgid "Unable to parse range"
-msgstr ""
+msgstr "پارس کی حد ظاہر کرنے سے قاصر"
 
 #: toolbars.py:57
 msgid "Copy"
-msgstr ""
+msgstr "نقل کريں"
 
 #: toolbars.py:60
 msgid "Paste"
-msgstr ""
+msgstr "جوڑيں"
 
 #: toolbars.py:63
 msgid "Cut"
-msgstr ""
+msgstr "کاٹيں"
 
 #: calculate.py:79
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "مساوات جبريہ۔پارس() غلط عبارت"
 
 #: calculate.py:486
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "روذنامچہ ميں لکھنا(٪)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr ""
+msgstr "روذنامچہ سے پڑھنا(٪)"
 
 #: calculate.py:512
 msgid "Unable to determine version"
-msgstr ""
+msgstr "ورژن سمجھنے ميں قاصر"
 
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr ""
+msgstr "روزنامچہ سے پڑھنا(ورژن ٪)"
 
 #: calculate.py:522
 #, python-format
 msgid "State line invalid (%s)"
-msgstr ""
+msgstr "سيدھی لکير غلط ہے(٪)"
 
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
+msgstr "روزنامچہ ميں سے پڑھنے سے قاصر، ورژن معلوم نہيں(٪)"
 
 #: calculate.py:767
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "بٹن_دبايا():غلط قسم"
 
 #: eqnparser.py:54
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "ليول:٪ڈی،او ايف ايس ٪ڈی"
 
 #: eqnparser.py:464
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "ويری ايبل \"٪ايس\" نہيں لکھا"
 
 #: eqnparser.py:528
 msgid "Operator not expected"
-msgstr ""
+msgstr "اوپريٹر متوقع نہيں تھا"
 
 #: eqnparser.py:578
 msgid "Operator expected"
-msgstr ""
+msgstr "متوقع اوپريٹر"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
-msgstr ""
+msgstr "قوس_مدد"
 
 #: eqnparserhelp.py:44
 msgid "help_sin"
-msgstr ""
+msgstr "سائن_مدد"
 
 #: eqnparserhelp.py:61
 msgid "Topics"
-msgstr ""
+msgstr "مضامين"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
 msgid "thousand_sep"
-msgstr ""
+msgstr "ہزاروں_ايس ای پی"
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
 msgid "fraction_sep"
-msgstr ""
+msgstr "فريکشن_ايس ای پی"
 
 #. The multiplication symbol (default: '*')
 #: mathlib.py:68
 msgid "mul_sym"
-msgstr ""
+msgstr "ضرب_ايس وائی ايم"
 
 #. The division symbol (default: '/')
 #: mathlib.py:73
 msgid "div_sym"
-msgstr ""
+msgstr "تقسيم"

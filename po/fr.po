@@ -2,77 +2,76 @@
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
 # Reinier Heeres <reinier@heeres.eu>, 2007
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2007-11-25 19:36+0000\n"
+"Last-Translator: samy boutayeb <s.boutayeb@free.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Calculer"
 
 #: calculate.py:206
 msgid "Available functions:"
-msgstr ""
+msgstr "Fonctions disponibles :"
 
-#-----------------------------------------
+# ----------------------------------------
 # The help system uses topic msgid's that should be translated here.
-#-----------------------------------------
+# ----------------------------------------
 #. These are the help topics and should explain how things work
 #: eqnparserhelp.py:37
 msgid "help_acos"
-msgstr ""
+msgstr "aide_acos"
 
 #: eqnparserhelp.py:38
 msgid "help_asin"
-msgstr ""
+msgstr "aide_asin"
 
 #: eqnparserhelp.py:40
 msgid "help_exp"
-msgstr ""
+msgstr "aide_exp"
 
 #: eqnparserhelp.py:41
 msgid "help_functions"
-msgstr ""
+msgstr "aide_fonctions"
 
 #: eqnparserhelp.py:42
 msgid "help_operators"
-msgstr ""
+msgstr "aide_operateurs"
 
 #: eqnparserhelp.py:43
 msgid "help_plot"
-msgstr ""
+msgstr "aide_graphiques"
 
 #: eqnparserhelp.py:45
 msgid "help_sqrt"
-msgstr ""
+msgstr "aide_racinecarree"
 
 #: eqnparserhelp.py:46
 msgid "help_test"
-msgstr ""
+msgstr "aide_test"
 
 #: eqnparserhelp.py:47
 msgid "help_variables"
-msgstr ""
+msgstr "aide_variables"
 
 #: eqnparserhelp.py:58
 msgid "help_usage"
-msgstr ""
+msgstr "aide_utilisation"
 
 # Text assigned to the 'help' variable
 #: eqnparser.py:234
 msgid "help_var"
-msgstr ""
+msgstr "aide"
 
 #-----------------------------------------
 # End of help topics
@@ -80,69 +79,75 @@ msgstr ""
 
 #: eqnparserhelp.py:52
 msgid "Topics: "
-msgstr ""
+msgstr "Sujets : "
 
+# aide(index) ou help(index) ?
 #: eqnparserhelp.py:72
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"L'aide sur '%s' n'est pas disponible, utilisez aide(index) pour afficher "
+"l'index"
 
 #: eqnparser.py:87
 msgid "Type error"
-msgstr ""
+msgstr "Erreur de frappe"
 
+# ligne %d ? caractère %d ?
 #: eqnparser.py:110
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Erreur à %d"
 
 #: eqnparser.py:299
 #, python-format
 msgid "variable %s not defined"
-msgstr ""
+msgstr "la variable %s n'est pas définie"
 
 #: eqnparser.py:335 eqnparser.py:336
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "la fonction '%s' n'est pas définie"
 
 #: eqnparser.py:341
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Nombre d'argument invalide (%d au lieu de %d)"
 
 #: eqnparser.py:342
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "la fonction a %d arguments"
 
+# pas convaincu par "analyser"
 #: eqnparser.py:352 eqnparser.py:353
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Erreur lors de l'analyse de l'argument %d: '%s'"
 
 #: eqnparser.py:363
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Erreur de la fonction: %s"
 
 #: eqnparser.py:358
 #, python-format
 msgid "Function '%s' returned %s"
-msgstr ""
+msgstr "La fonction '%s' a retourné %s"
 
 #: eqnparser.py:457
 #, python-format
 msgid "Variable '%s' undefined"
-msgstr ""
+msgstr "La variable '%s' n'est pas définie"
 
 #: eqnparser.py:494
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "Erreur de syntaxe (parenthèse droite)"
 
+# inattendue... bof
 #: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Parenthèse droite en trop"
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no left_val)"
@@ -150,99 +155,100 @@ msgstr ""
 
 #: eqnparser.py:505
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "Erreur de syntaxe (parenthèse droite en trop)"
 
+# inattendu...
 #: eqnparser.py:519 eqnparser.py:520
 msgid "Number not expected"
-msgstr ""
+msgstr "Nombre inattendu"
 
 #: eqnparser.py:571
 msgid "Invalid operator"
-msgstr ""
+msgstr "Opérateur invalide"
 
 #: eqnparser.py:565
 msgid "Parse error: ')' expected"
-msgstr ""
+msgstr "Erreur de syntaxe : ')' attendu"
 
 #: eqnparser.py:591
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_syntaxe(): non renvoyée"
 
 #: layout.py:46
 msgid "clear"
-msgstr ""
+msgstr "effacer"
 
 #: layout.py:55
 msgid "enter"
-msgstr ""
+msgstr "entrée"
 
 #: layout.py:57
 msgid "Edit"
-msgstr ""
+msgstr "Édition"
 
 #: layout.py:58
 msgid "Algebra"
-msgstr ""
+msgstr "Algèbre"
 
 #: layout.py:59
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonométrie"
 
 #: layout.py:60
 msgid "Boolean"
-msgstr ""
+msgstr "Opérations booléennes"
 
 #: layout.py:61
 msgid "Constants"
-msgstr ""
+msgstr "Constantes"
 
 #: layout.py:62
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: layout.py:83
 msgid "Label:"
-msgstr ""
+msgstr "Étiquette :"
 
 #: layout.py:115
 msgid "All equations"
-msgstr ""
+msgstr "Toutes les équations"
 
 #: layout.py:115
 msgid "My equations"
-msgstr ""
+msgstr "Mes équations"
 
 #: layout.py:117
 msgid "Show history"
-msgstr ""
+msgstr "Afficher l'historique"
 
 #: layout.py:117
 msgid "Show variables"
-msgstr ""
+msgstr "Afficher les variables"
 
 #: mathlib.py:86
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: mathlib.py:92
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Erreur : type non pris en charge"
 
 #: plotlib.py:134
 msgid "Unable to parse range"
-msgstr ""
+msgstr "Impossible d'analyser le domaine"
 
 #: toolbars.py:57
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 #: toolbars.py:60
 msgid "Paste"
-msgstr ""
+msgstr "Coller"
 
 #: toolbars.py:63
 msgid "Cut"
-msgstr ""
+msgstr "Couper"
 
 #: calculate.py:79
 #, python-format
@@ -252,21 +258,21 @@ msgstr ""
 #: calculate.py:486
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Écriture dans le journal (%s)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr ""
+msgstr "Lecture du journal (%s)"
 
 #: calculate.py:512
 msgid "Unable to determine version"
-msgstr ""
+msgstr "Impossible de déterminer la version"
 
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr ""
+msgstr "Lecture de l'entrée du journal (version %s)"
 
 #: calculate.py:522
 #, python-format
@@ -276,11 +282,11 @@ msgstr ""
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
+msgstr "Impossible de lire l'entrée du journal, version inconnue (%s)"
 
 #: calculate.py:767
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed() : type invalide"
 
 #: eqnparser.py:54
 #, python-format
@@ -290,44 +296,44 @@ msgstr ""
 #: eqnparser.py:464
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "La variable '%s' n'est pas définie"
 
 #: eqnparser.py:528
 msgid "Operator not expected"
-msgstr ""
+msgstr "Opérateur inattendu"
 
 #: eqnparser.py:578
 msgid "Operator expected"
-msgstr ""
+msgstr "Opérateur attendu"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
-msgstr ""
+msgstr "aide_cos"
 
 #: eqnparserhelp.py:44
 msgid "help_sin"
-msgstr ""
+msgstr "aide_sin"
 
 #: eqnparserhelp.py:61
 msgid "Topics"
-msgstr ""
+msgstr "Rubriques"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
 msgid "thousand_sep"
-msgstr ""
+msgstr "."
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
 msgid "fraction_sep"
-msgstr ""
+msgstr ","
 
 #. The multiplication symbol (default: '*')
 #: mathlib.py:68
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. The division symbol (default: '/')
 #: mathlib.py:73
 msgid "div_sym"
-msgstr ""
+msgstr "/"
