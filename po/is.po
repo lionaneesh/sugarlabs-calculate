@@ -1,0 +1,424 @@
+# POT file for the Calculate activity
+# Copyright (C) 2007
+# This file is distributed under the same license as the Calculate package.
+# Reinier Heeres <reinier@heeres.eu>, 2007
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-11-13 10:59+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Translate Toolkit 1.0.1\n"
+
+#: activity/activity.info:2
+msgid "Calculate"
+msgstr "Reikna"
+
+#: calculate.py:79
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr ""
+
+#: calculate.py:206
+msgid "Available functions:"
+msgstr "Föll í boði:"
+
+#: calculate.py:486
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Skrifa í dagbók (%s)"
+
+#: calculate.py:506
+#, python-format
+msgid "Reading from journal (%s)"
+msgstr "Les frá dagbók (%s)"
+
+#: calculate.py:512
+msgid "Unable to determine version"
+msgstr "Gat ekki komist að útgáfu"
+
+#: calculate.py:517
+#, python-format
+msgid "Reading journal entry (version %s)"
+msgstr "Les dagbókar færslu (útgáfu %s)"
+
+#: calculate.py:522
+#, python-format
+msgid "State line invalid (%s)"
+msgstr ""
+
+#: calculate.py:539
+#, python-format
+msgid "Unable to read journal entry, unknown version (%s)"
+msgstr "Gat ekki lesið dagbókar færslu, óþekkt útgáfa (%s)"
+
+#: calculate.py:767
+msgid "button_pressed(): invalid type"
+msgstr ""
+
+#: eqnparser.py:54
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr ""
+
+#: eqnparser.py:110
+#, python-format
+msgid "Error at %d"
+msgstr "Villa við %d"
+
+# Text assigned to the 'help' variable
+#: eqnparser.py:234
+msgid "help_var"
+msgstr ""
+
+#: eqnparser.py:335 eqnparser.py:336
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Fall '%s' er ekki skilgreint"
+
+#: eqnparser.py:341
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Ólöglegur fjöldi "
+
+#: eqnparser.py:342
+#, python-format
+msgid "function takes %d args"
+msgstr "fallið tekur %d "
+
+#: eqnparser.py:352 eqnparser.py:353
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Gat ekki skilið "
+
+#: eqnparser.py:363
+#, python-format
+msgid "Function error: %s"
+msgstr "Fall villa: %s"
+
+#: eqnparser.py:464
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Breyta '%s' er ekki skilgreind"
+
+#: eqnparser.py:494
+msgid "Parse error (right parenthesis)"
+msgstr ""
+
+#: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
+msgid "Right parenthesis unexpected"
+msgstr ""
+
+#: eqnparser.py:505
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr ""
+
+#: eqnparser.py:519 eqnparser.py:520
+msgid "Number not expected"
+msgstr "Bjóst ekki við tölu"
+
+#: eqnparser.py:528
+msgid "Operator not expected"
+msgstr ""
+
+#: eqnparser.py:571
+msgid "Invalid operator"
+msgstr ""
+
+#: eqnparser.py:578
+msgid "Operator expected"
+msgstr ""
+
+#: eqnparser.py:591
+msgid "_parse(): returning None"
+msgstr ""
+
+#-----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+#. These are the help topics and should explain how things work
+#: eqnparserhelp.py:37
+msgid "help_acos"
+msgstr ""
+
+#: eqnparserhelp.py:38
+msgid "help_and"
+msgstr ""
+
+#: eqnparserhelp.py:38
+msgid "help_asin"
+msgstr ""
+
+#: eqnparserhelp.py:40
+msgid "help_atan"
+msgstr ""
+
+#: eqnparserhelp.py:39
+msgid "help_cos"
+msgstr ""
+
+#: eqnparserhelp.py:42
+msgid "help_cosh"
+msgstr ""
+
+#: eqnparserhelp.py:40
+msgid "help_exp"
+msgstr ""
+
+#: eqnparserhelp.py:44
+msgid "help_fac"
+msgstr ""
+
+#: eqnparserhelp.py:41
+msgid "help_functions"
+msgstr ""
+
+#: eqnparserhelp.py:46
+msgid "help_ln"
+msgstr ""
+
+#: eqnparserhelp.py:42
+msgid "help_operators"
+msgstr ""
+
+#: eqnparserhelp.py:48
+msgid "help_or"
+msgstr ""
+
+#: eqnparserhelp.py:43
+msgid "help_plot"
+msgstr ""
+
+#: eqnparserhelp.py:44
+msgid "help_sin"
+msgstr ""
+
+#: eqnparserhelp.py:51
+msgid "help_sinh"
+msgstr ""
+
+#: eqnparserhelp.py:45
+msgid "help_sqrt"
+msgstr ""
+
+#: eqnparserhelp.py:53
+msgid "help_square"
+msgstr ""
+
+#: eqnparserhelp.py:54
+msgid "help_tan"
+msgstr ""
+
+#: eqnparserhelp.py:55
+msgid "help_tanh"
+msgstr ""
+
+#: eqnparserhelp.py:46
+msgid "help_test"
+msgstr ""
+
+#: eqnparserhelp.py:47
+msgid "help_variables"
+msgstr ""
+
+#: eqnparserhelp.py:58
+msgid "help_xor"
+msgstr ""
+
+#: eqnparserhelp.py:58
+msgid "help_usage"
+msgstr ""
+
+#: eqnparserhelp.py:61
+msgid "Topics"
+msgstr "Efni"
+
+#: eqnparserhelp.py:72
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Engin hjálp um '%s' í boði, nota help(index) fyrir efnisyfirlit"
+
+#: layout.py:57
+msgid "Edit"
+msgstr "Breyta"
+
+#: layout.py:58
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:59
+msgid "Trigonometry"
+msgstr "Hornafræði"
+
+#: layout.py:60
+msgid "Boolean"
+msgstr ""
+
+#: layout.py:61
+msgid "Constants"
+msgstr "Fastar"
+
+#: layout.py:62
+msgid "Format"
+msgstr "Format"
+
+#: layout.py:83
+msgid "Label:"
+msgstr "Merking:"
+
+#: layout.py:115
+msgid "All equations"
+msgstr "Allar jöfnur"
+
+#: layout.py:115
+msgid "My equations"
+msgstr "Mínar jöfnur"
+
+#: layout.py:117
+msgid "Show history"
+msgstr "Sýna sögu"
+
+#: layout.py:117
+msgid "Show variables"
+msgstr "Sýna breytur"
+
+#. The separator to mark thousands (default: ',')
+#: mathlib.py:58
+msgid "thousand_sep"
+msgstr "."
+
+#. The separator to mark fractions (default: '.')
+#: mathlib.py:63
+msgid "fraction_sep"
+msgstr ","
+
+#. The multiplication symbol (default: '*')
+#: mathlib.py:68
+msgid "mul_sym"
+msgstr "*"
+
+#. The division symbol (default: '/')
+#: mathlib.py:73
+msgid "div_sym"
+msgstr "/"
+
+#: mathlib.py:113
+msgid "Undefined"
+msgstr ""
+
+#: mathlib.py:92
+msgid "Error: unsupported type"
+msgstr "Villa: óstudd gerð"
+
+#: toolbars.py:31
+msgid "Help"
+msgstr ""
+
+#: toolbars.py:57
+msgid "Copy"
+msgstr "Afrita"
+
+#: toolbars.py:60
+msgid "Paste"
+msgstr "Líma"
+
+#: toolbars.py:63
+msgid "Cut"
+msgstr "Klippa"
+
+#: toolbars.py:94
+msgid "Square"
+msgstr ""
+
+#: toolbars.py:98
+msgid "Square root"
+msgstr ""
+
+#: toolbars.py:104
+msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:108
+msgid "Natural logarithm"
+msgstr ""
+
+#: toolbars.py:114
+msgid "Factorial"
+msgstr ""
+
+#: toolbars.py:122
+msgid "Sine"
+msgstr ""
+
+#: toolbars.py:126
+msgid "Cosine"
+msgstr ""
+
+#: toolbars.py:130
+msgid "Tangent"
+msgstr ""
+
+#: toolbars.py:136
+msgid "Arc sine"
+msgstr ""
+
+#: toolbars.py:140
+msgid "Arc cosine"
+msgstr ""
+
+#: toolbars.py:144
+msgid "Arc tangent"
+msgstr ""
+
+#: toolbars.py:150
+msgid "Hyperbolic sine"
+msgstr ""
+
+#: toolbars.py:154
+msgid "Hyperbolic cosine"
+msgstr ""
+
+#: toolbars.py:158
+msgid "Hyperbolic tangent"
+msgstr ""
+
+#: toolbars.py:166
+msgid "Logical and"
+msgstr ""
+
+#: toolbars.py:170
+msgid "Logical or"
+msgstr ""
+
+#: toolbars.py:174
+msgid "Logical xor"
+msgstr ""
+
+#: toolbars.py:180
+msgid "Equals"
+msgstr ""
+
+#: toolbars.py:183
+msgid "Not equals"
+msgstr ""
+
+#: toolbars.py:190
+msgid "Pi"
+msgstr ""
+
+#: toolbars.py:193
+msgid "e"
+msgstr ""
+
+#: toolbars.py:200
+msgid "Degrees"
+msgstr ""
+
+#: toolbars.py:201
+msgid "Radians"
+msgstr ""
