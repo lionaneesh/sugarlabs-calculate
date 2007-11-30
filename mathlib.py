@@ -27,6 +27,7 @@ import logging
 _logger = logging.getLogger('MathLib')
 
 from gettext import gettext as _
+import locale
 
 class MathLib:
     ANGLE_DEG = math.pi/180
@@ -55,22 +56,20 @@ class MathLib:
         self.setup_i18n()
 
     def setup_i18n(self):
+        loc = locale.localeconv()
+
         # The separator to mark thousands (default: ',')
-        self.thousand_sep = _('thousand_sep')
-        if self.thousand_sep == 'thousand_sep':
-            self.thousand_sep = ','
+        self.thousand_sep = loc['thousands_sep']
 
         # The separator to mark fractions (default: '.')
-        self.fraction_sep = _('fraction_sep')
-        if self.fraction_sep == 'fraction_sep':
-            self.fraction_sep = '.'
+        self.fraction_sep = loc['decimal_point']
 
-        # The multiplication symbol (default: '*')
+        # TRANS: multiplication symbol (default: '*')
         self.mul_sym = _('mul_sym')
         if self.mul_sym == 'mul_sym':
             self.mul_sym = '*'
 
-        # The division symbol (default: '/')
+        # TRANS: division symbol (default: '/')
         self.div_sym = _('div_sym')
         if self.div_sym == 'div_sym':
             self.div_sym = '/'

@@ -33,42 +33,102 @@ class EqnParserHelp():
     # Unfortunately gettext is not yet initialized at the time _() is called here.
     # Still do it like this to make sure these strings show up in the POT-file
     DICT = {
-        # These are the help topics and should explain how things work
-        "acos": _("help_acos"),
-        "and": _("help_and"),
-        "asin": _("help_asin"),
-        "atan": _("help_atan"),
-        "cos": _("help_cos"),
-        "cosh": _("help_cosh"),
-        "exp": _("help_exp"),
-        "fac": _("help_fac"),
-        "functions": _("help_functions"),
-        "ln": _("help_ln"),
-        "operators": _("help_operators"),
-        "or": _("help_or"),
-        "plot": _("help_plot"),
-        "sin": _("help_sin"),
-        "sinh": _("help_sinh"),
-        "sqrt": _("help_sqrt"),
-        "square": _("help_square"),
-        "tan": _("help_tan"),
-        "tanh": _("help_tanh"),
-        "test": _("help_test"),
-        "variables": _("help_variables"),
-        "xor": _("help_xor"),
+        # TRANS: It is possible to translate commands. However, I would highly
+        # recommend NOT doing so for mathematical functions like cos(). help(),
+        # functions() etc should be translated.
+        _("acos"): _(
+"acos(x), return the arc cosine of x. This is the angle for which the cosine \
+is x. Defined for -1 <= x < 1"),
+
+        _("and"): _(
+"and(x, y), logical and. Returns True if x and y are True, else returns False"),
+
+        _("asin"): _(
+"asin(x), return the arc sine of x. This is the angle for which the sine is x. \
+Defined for -1 <= x <= 1"),
+
+        _("atan"): _(
+"atan(x), return the arc tangent of x. This is the angle for which the tangent \
+is x. Defined for all x"),
+
+        _("cos"): _(
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle \
+at the angle x"),
+
+        _("cosh"): _(
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"),
+
+        _("exp"): _(
+"exp(x), return the natural exponent of x. Given by e^x"),
+
+        _("fac"): _(
+"fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."),
+
+        # TRANS: This command is descriptive, so can be translated
+        _("functions"): _(
+"functions(), return a list of all the functions that are defined"),
+
+        _("ln"): _(
+"ln(x), return the natural logarithm of x. This is the value for which the \
+exponent exp() equals x. Defined for x >= 0."),
+
+        # TRANS: This command is descriptive, so can be translated
+        _("operators"): _(
+"operators(), return a list of the operators that are defined"),
+
+        _("or"): _(
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"),
+
+        _("plot"): _(
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
+range from a to b"),
+
+        _("sin"): _(
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at \
+the angle x"),
+
+        _("sinh"): _(
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"),
+
+        _("sqrt"): _(
+"sqrt(x), return the square root of x. This is the value for which the square \
+equals x. Defined for x >= 0."),
+
+        _("square"): _(
+"square(x), return the square of x. Given by x * x"
+        ),
+
+        _("tan"): _(
+"tan(x), return the tangent of x. This is the slope of the line from the origin \
+of the unit circle to the point on the unit circle defined by the angle x. Given \
+by sin(x) / cos(x)"),
+
+        _("tanh"): _(
+"sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"),
+
+        _("test"): _(
+"This is just a test topic, use help(index) for the index"),
+
+        # TRANS: This command is descriptive, so can be translated
+        _("variables"): _(
+"variables(), return a list of the variables that are currently defined"),
+
+        _("xor"): _(
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) \
+or y is True (and x is False), else returns False"),
+
     }
 
     def __init__(self):
         pass
 
     def help(about):
-        _logger.debug('help about %r', about)
-
         t = type(about)
         if (t != types.StringType and t != types.UnicodeType) or len(about) == 0:
-            return _("help_usage")
+            return _("Use help(test) for help about 'test', or help(index) for the index")
 
-        if about == "index":
+        # TRANS: help(index), both 'index' and the translation  will work
+        if about == "index" or about == _("index"):
             ret = _("Topics") + ": "
             for (key, val) in EqnParserHelp.DICT.iteritems():
                 ret += key + " "

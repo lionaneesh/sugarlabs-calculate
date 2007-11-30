@@ -521,23 +521,23 @@ class Calculate(activity.Activity):
     def read_file(self, file_path):
         """Read journal entries, version 1.0"""
 
-        _logger.info(_('Reading from journal (%s)'), file_path)
+        _logger.info('Reading from journal (%s)', file_path)
 
         f = open(file_path, 'r')
         str = f.readline().rstrip("\r\n")   # chomp
         l = str.split()
         if len(l) != 2:
-            _logger.error(_('Unable to determine version'))
+            _logger.error('Unable to determine version')
             return False
 
         version = l[1]
         if len(version) > 1 and version[0:2] == "1.":
-            _logger.info(_('Reading journal entry (version %s)'), version)
+            _logger.info('Reading journal entry (version %s)', version)
 
             str = f.readline().rstrip("\r\n")
             l = str.split(';')
             if len(l) != 4:
-                _logger.error(_('State line invalid (%s)'), str)
+                _logger.error('State line invalid (%s)', str)
                 return False
 
             self.text_entry.set_text(l[0])
@@ -554,7 +554,7 @@ class Calculate(activity.Activity):
 
             return True
         else:
-            _logger.error(_('Unable to read journal entry, unknown version (%s)'), version)
+            _logger.error('Unable to read journal entry, unknown version (%s)', version)
             return False
 
 ##########################################

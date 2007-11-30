@@ -234,10 +234,13 @@ class EqnParser:
 
         self.register_operator('%', self.OP_DIADIC, 2, lambda x: self.ml.mod(x[0], x[1]))
 
-        self.set_var('help', _('help_var'), parse=False)
+        self.set_var('help',
+            _("Use help(test) for help about 'test', or help(index) for the index"),
+            parse=False)
 
     def register_function(self, name, f, opts):
         self.functions[name] = (f, opts)
+        self.functions[_(name)] = (f, opts)
 
     def register_operator(self, op, type, presedence, f):
         self.operators.append((op, type, presedence, f))
