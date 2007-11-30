@@ -60,9 +60,13 @@ class MathLib:
 
         # The separator to mark thousands (default: ',')
         self.thousand_sep = loc['thousands_sep']
+        if self.thousand_sep == "" or self.thousand_sep == None:
+            self.thousand_sep = ","
 
         # The separator to mark fractions (default: '.')
         self.fraction_sep = loc['decimal_point']
+        if self.fraction_sep == "" or self.fraction_sep == None:
+            self.fraction_sep = "."
 
         # TRANS: multiplication symbol (default: '*')
         self.mul_sym = _('mul_sym')
