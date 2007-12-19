@@ -379,7 +379,7 @@ class EqnParser:
             ps.next()
 
 # part after dot
-        if ps.char == '.':
+        if ps.char == '.' or ps.char == self.ml.fraction_sep:
             ps.next()
             while ps.more() and ps.char in self.DIGITS:
                 ps.next()

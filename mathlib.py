@@ -38,6 +38,8 @@ class MathLib:
         self.constants = {}
         self.set_angle_type(self.ANGLE_DEG)
 
+        self.setup_i18n()
+
 #Constants should maybe become variables in eqnparser.py
         self.set_constant('true', True)
         self.set_constant('false', False)
@@ -52,8 +54,6 @@ class MathLib:
         self.set_constant('m_p', self.parse_number('1.6726217129e-27'))
         self.set_constant('c_n', self.parse_number('0'))                        #neutron properties
         self.set_constant('m_n', self.parse_number('1.6749272928e-27'))
-
-        self.setup_i18n()
 
     def setup_i18n(self):
         loc = locale.localeconv()
@@ -105,6 +105,8 @@ class MathLib:
             return None
 
     def parse_number(self, s):
+        s = s.replace(self.fraction_sep, '.')
+
         try:
             d = Decimal(s)
             if self.is_int(d):
