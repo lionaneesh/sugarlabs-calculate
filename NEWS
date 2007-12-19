@@ -1,4 +1,12 @@
+15
+
+* Fixed parsing of fraction separators, #5319
+
 14
+
+* #5023, i18n support of help system improved
+* #5010, degrees/radians button fixed
+* #5003, rational number support
 
 13
 
