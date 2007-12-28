@@ -105,6 +105,9 @@ class ParserState:
             _logger.debug('Setting offset: %d', self.ofs)
             self.error_range = (self.ofs, self.ofs + 1)
 
+    def get_error(self):
+        return self.error_code
+
     def set_error_range(self, r):
         self.error_range = r
 
@@ -488,6 +491,11 @@ class EqnParser:
 
 # Left parenthesis: parse sub-expression
             elif ps.char == '(':
+                if not (left_val is None or left_val is not None and op is not None):
+                    _logger.error('Parse error (left parenthesis)')
+                    ps.set_error(ParserState.PARSE_ERROR, msg=_("Left parenthesis unexpected"))
+                    return None
+
                 ps.next()
                 left_val = self._parse(ps)
 
@@ -515,7 +523,7 @@ class EqnParser:
                         _logger.debug('returning %s', self.ml.format_number(left_val))
                         return left_val
                 else:
-                    _logger.error_(('Parse error (right parenthesis, no level to close)'))
+                    _logger.error(_('Parse error (right parenthesis, no level to close)'))
                     ps.set_error(ParserState.PARSE_ERROR, msg=_("Right parenthesis unexpected"))
                     return None
 
@@ -546,7 +554,11 @@ class EqnParser:
                         return left_val
                     else:
                         right_val = self._parse(ps, presedence=opres)
-                        if right_val == None:
+                        if right_val is None and self.ps.get_error() == ParserState.OK:
+                            _logger.error(_('Parse error: number or variable expected'))
+                            ps.set_error(ParserState.PARSE_ERROR, msg=_("Number or variable expected"))
+                            return None
+                        elif right_val is None:
                             return None
 
                         res = of([left_val, right_val])
