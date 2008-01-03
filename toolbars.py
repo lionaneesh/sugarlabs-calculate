@@ -171,9 +171,9 @@ class BooleanToolbar(gtk.Toolbar):
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '|'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(or)')), -1)
 
-        self.insert(IconToolButton('xor', _('Logical xor'),
-            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(xor)')), -1)
+#        self.insert(IconToolButton('xor', _('Logical xor'),
+#            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^'),
+#            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(xor)')), -1)
 
         self.insert(LineSeparator(), -1)
 

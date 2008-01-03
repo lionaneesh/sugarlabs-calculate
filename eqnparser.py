@@ -30,6 +30,8 @@ from rational import Rational
 
 from gettext import gettext as _
 
+_generic_error = _('Parse error')
+
 class Equation:
     def __init__(self, eqn):
         self.equation = eqn
@@ -209,9 +211,9 @@ class EqnParser:
         self.register_function('operators', lambda x: self.operators_string(), {"nargs": 0})
 
         self.register_operator('+', self.OP_DIADIC, 0, lambda x: self.ml.add(x[0], x[1]))
-        self.register_operator('+', self.OP_PRE, 1, lambda x: x[0])
+        self.register_operator('+', self.OP_PRE, 2, lambda x: x[0])
         self.register_operator('-', self.OP_DIADIC, 0, lambda x: self.ml.sub(x[0], x[1]))
-        self.register_operator('-', self.OP_PRE, 1, lambda x: self.ml.negate(x[0]))
+        self.register_operator('-', self.OP_PRE, 2, lambda x: self.ml.negate(x[0]))
         self.register_operator('*', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'⨯', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'×', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
@@ -224,8 +226,14 @@ class EqnParser:
         self.register_operator('!', self.OP_POST, 0, lambda x: self.ml.factorial(x[0]))
 
         self.register_operator('&', self.OP_DIADIC, 0, lambda x: x[0] and x[1])
+        self.register_function('and', lambda x: x[0] and x[1], {"nargs": 2})
         self.register_operator('|', self.OP_DIADIC, 0, lambda x: x[0] or x[1])
+        self.register_function('or', lambda x: x[0] or x[1], {"nargs": 2})
         self.register_operator('!', self.OP_PRE, 0, lambda x: not x[0])
+        self.register_function('not', lambda x: not x[0], {"nargs": 1})
+
+#        self.register_operator('^', self.OP_PRE, 0, lambda x: not x[0])
+        self.register_function('xor', lambda x: (x[0] and not x[1]) or (x[1] and not x[0]), {"nargs": 2})
 
         self.register_operator('=', self.OP_DIADIC, 0, lambda x: x[0] == x[1])
         self.register_operator('!=', self.OP_DIADIC, 0, lambda x: x[0] != x[1])

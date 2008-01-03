@@ -42,7 +42,9 @@ class MathLib:
 
 #Constants should maybe become variables in eqnparser.py
         self.set_constant('true', True)
+        self.set_constant('True', True)
         self.set_constant('false', False)
+        self.set_constant('False', False)
         self.set_constant('pi', self.parse_number('3.1415926535'))
         self.set_constant('kb', self.parse_number('1.380650524e-23'))
         self.set_constant('Na', self.parse_number('6.02214e23'))
