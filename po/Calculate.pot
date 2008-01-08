@@ -291,7 +291,7 @@ msgid "tanh"
 msgstr ""
 
 #: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 
 #: eqnparserhelp.py:109
