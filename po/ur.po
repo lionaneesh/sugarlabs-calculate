@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: 2007-11-27 06:24+0000\n"
+"PO-Revision-Date: 2007-12-12 18:28+0000\n"
 "Last-Translator: salman minhas <sulmanminhas@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,7 +84,7 @@ msgstr "عنوانات"
 #: eqnparserhelp.py:72
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "کوئی مدد نہيں'٪' موجود، مدد استعمال کريں(فہرست) فہرست کے ليے"
 
 #: eqnparser.py:87
 msgid "Type error"
@@ -194,7 +194,7 @@ msgstr "بولئين"
 #: layout.py:61
 #, fuzzy
 msgid "Constants"
-msgstr "کونسٹينٹس"
+msgstr "مکمل"
 
 #: layout.py:62
 msgid "Format"
