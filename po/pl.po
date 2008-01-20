@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Polish translation of calculate-activity
+# Copyright (C) FSF
+# This file is distributed under the same license as the calculate-activity.
+# Wiktor Idzikowski <wiktor.idzikowski@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -22,7 +22,7 @@ msgstr "Policz"
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() niewłaściwy ciąg znaków (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
