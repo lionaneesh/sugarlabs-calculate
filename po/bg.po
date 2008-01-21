@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-30 12:00+0100\n"
+"POT-Creation-Date: 2008-01-08 18:57+0000\n"
 "PO-Revision-Date: 2008-01-11 14:06+0000\n"
 "Last-Translator: Alexander Todorov <atodorov@redhat.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
@@ -64,12 +64,12 @@ msgstr "Грешка при прочитане елемент от дневни�
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): невалиден тип"
 
-#: eqnparser.py:56
+#: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
 msgstr "ниво: %d от %d"
 
-#: eqnparser.py:112
+#: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
 msgstr "Грешка в %d"
@@ -78,65 +78,65 @@ msgstr "Грешка в %d"
 msgid "help_var"
 msgstr "var(), връща списък с променливите които текущо са дефинирани"
 
-#: eqnparser.py:342 eqnparser.py:343
+#: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
 msgstr "Функцията '%s' не е дефинирана"
 
-#: eqnparser.py:348
+#: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
 msgstr "Невалиден брой параметри (%d вместо %d)"
 
-#: eqnparser.py:349
+#: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
 msgstr "функцията приема %d аргумента"
 
-#: eqnparser.py:359 eqnparser.py:360
+#: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
 msgstr "Аргумент %d ('%s') неможе да бъде обработен"
 
-#: eqnparser.py:369
+#: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
 msgstr "Функционална грешка: %s"
 
-#: eqnparser.py:470
+#: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
 msgstr "Променливата '%s' не е дефинирана"
 
-#: eqnparser.py:500
+#: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "Грешка при обработка на текста (дясна скоба)"
 
-#: eqnparser.py:501 eqnparser.py:512 eqnparser.py:519 eqnparser.py:590
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
 msgstr "Не се очаква дясна скоба"
 
-#: eqnparser.py:511
+#: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Грешка при обработка (дясна скоба без променлива в ляво)"
 
-#: eqnparser.py:525 eqnparser.py:526
+#: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Не се очаква число"
 
-#: eqnparser.py:534
+#: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Оператор не се очаква"
 
-#: eqnparser.py:576
+#: eqnparser.py:596
 msgid "Invalid operator"
 msgstr "Невалиден оператор"
 
-#: eqnparser.py:583
+#: eqnparser.py:603
 msgid "Operator expected"
 msgstr "Очаква се оператор"
 
-#: eqnparser.py:596
+#: eqnparser.py:616
 msgid "_parse(): returning None"
 msgstr "_parse(): връща None"
 
@@ -325,20 +325,20 @@ msgid "fraction_sep"
 msgstr "."
 
 #. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:68
+#: mathlib.py:74
 msgid "mul_sym"
 msgstr "*"
 
 #. TRANS: division symbol (default: '/')
-#: mathlib.py:73
+#: mathlib.py:79
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:124
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Недефиниран"
 
-#: mathlib.py:134
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Грешка: непознат тип"
 
@@ -454,7 +454,7 @@ msgstr "радиани"
 msgid "Parse error"
 msgstr "Грешка при обработка на текста"
 
-#: eqnparser.py:238 eqnparserhelp.py:128
+#: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Използвайте help(test) за помощ относно 'test' илиhelp(index) за 'index'"
