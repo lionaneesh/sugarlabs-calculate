@@ -18,6 +18,7 @@
 #    2007-07-03: rwh, first version
 
 import types
+from decimal import Decimal
 
 import logging
 _logger = logging.getLogger('Rational')
@@ -101,8 +102,10 @@ class Rational:
             ret = Rational(self.n * rval.n, self.d * rval.d)
         elif type(rval) is types.IntType or type(rval) is types.LongType:
             ret = Rational(self.n * rval, self.d)
+        elif isinstance(rval, Decimal):
+            ret = rval * Decimal(str(float(self)))
         else:
-            ret = float(self) * rval
+            ret = rval * float(self)
         return ret
 
     def __rmul__(self, lval):
