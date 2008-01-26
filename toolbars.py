@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # toolbars.py, see CalcActivity.py for info
 
 import pygtk
@@ -19,7 +20,11 @@ class IconToolButton(ToolButton):
     def __init__(self, icon_name, text, cb, help_cb=None):
         ToolButton.__init__(self)
 
-        self.set_label(icon_name)
+        label = gtk.Label()
+        label.set_markup(icon_name)
+        label.show()
+        self.set_label_widget(label)
+
         self.create_palette(text, help_cb)
 
         self.connect('clicked', cb)
@@ -91,19 +96,23 @@ class AlgebraToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('square', _('Square'),
+        self.insert(IconToolButton('x<sup>2</sup>', _('Square'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^2'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(square)')), -1)
 
-        self.insert(IconToolButton('sqrt', _('Square root'),
+        self.insert(IconToolButton('√x', _('Square root'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sqrt'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('exp', _('e to the power x'),
+        self.insert(IconToolButton('e<sup>x</sup>', _('e to the power x'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'exp'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(exp)')), -1)
+
+        self.insert(IconToolButton('x<sup>y</sup>', _('x to the power y'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'pow'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(pow)')), -1)
 
         self.insert(IconToolButton('ln', _('Natural logarithm'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'ln'),
@@ -187,7 +196,7 @@ class ConstantsToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('pi', _('Pi'),
+        self.insert(IconToolButton('π', _('Pi'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'pi')), -1)
 
         self.insert(IconToolButton('e', _('e'),
