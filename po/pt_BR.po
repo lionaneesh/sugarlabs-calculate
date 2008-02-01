@@ -2,260 +2,673 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-01-20 19:59+0000\n"
+"Last-Translator: Juliano Bittencourt <juliano@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Calcular"
 
-#: calculate.py:79
+# Samblagem:"seqüência ordenada de caracteres (símbolos) do alfabeto de uma linguagem formal."
+# http://pt.wiktionary.org/wiki/samblagem
+# se bem que nunca ouvi ou li o termo
+#: calculate.py:80
 #, python-format
+#, fuzzy
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equação.avaliação() samblagem inválida (%)"
 
-#: calculate.py:206
+#: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "Funções disponíveis:"
 
-#: calculate.py:486
+#: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Escrevendo no diário (%s)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr ""
+msgstr "Lendo do diário (%s)"
 
 #: calculate.py:512
 msgid "Unable to determine version"
-msgstr ""
+msgstr "Incapaz de determinar versão"
 
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr ""
+msgstr "Lendo entrada do diário (versão %s)"
 
 #: calculate.py:522
 #, python-format
 msgid "State line invalid (%s)"
-msgstr ""
+msgstr "Linha de estado inválida (%s)"
 
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
+msgstr "Incapaz de ler entrada do diário, versão desconhecida (%s)"
 
-#: calculate.py:767
+#: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "botão_pressionado(): tipo inválido"
 
-#: eqnparser.py:54
+#: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "nível: %d, ofs %d"
 
-#: eqnparser.py:110
+#: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Erro em %d"
 
 #: eqnparser.py:234
 msgid "help_var"
-msgstr ""
+msgstr "var_ajuda"
 
-#: eqnparser.py:335 eqnparser.py:336
+#: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Função '%s' não definida"
 
-#: eqnparser.py:341
+#: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Número inválido de argumentos (%d em vez de %d)"
 
-#: eqnparser.py:342
+#: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "função leva %d args"
 
-#: eqnparser.py:352 eqnparser.py:353
+#: eqnparser.py:370 eqnparser.py:371
 #, python-format
+#, fuzzy
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Incapaz de avaliar argumento %d: '%s'"
 
-#: eqnparser.py:363
+#: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Erro de função: %s"
 
-#: eqnparser.py:464
+#: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "Variável '%s' não definida"
 
-#: eqnparser.py:494
+#: eqnparser.py:516
+#, fuzzy
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "Erro de avaliação (parêntesis direito)"
 
-#: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Parêntesis direito inesperado"
 
-#: eqnparser.py:505
+#: eqnparser.py:527
+#, fuzzy
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "Erro de avaliação (parêntesis direito, nenhum val_esq)"
 
-#: eqnparser.py:519 eqnparser.py:520
+#: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "Número não esperado"
 
-#: eqnparser.py:528
+#: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "Operador não esperado"
 
-#: eqnparser.py:571
+#: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "Operador inválido"
 
-#: eqnparser.py:578
+#: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "Operador esperado"
 
-#: eqnparser.py:591
+#: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_avaliar(): devolvendo Nenhum"
 
 #. These are the help topics and should explain how things work
 #: eqnparserhelp.py:37
 msgid "help_acos"
-msgstr ""
+msgstr "ajuda_acos"
 
 #: eqnparserhelp.py:38
 msgid "help_asin"
-msgstr ""
+msgstr "ajuda_asin"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
-msgstr ""
+msgstr "ajuda_cos"
 
 #: eqnparserhelp.py:40
 msgid "help_exp"
-msgstr ""
+msgstr "ajuda_exp"
 
 #: eqnparserhelp.py:41
 msgid "help_functions"
-msgstr ""
+msgstr "ajuda_funções"
 
 #: eqnparserhelp.py:42
 msgid "help_operators"
-msgstr ""
+msgstr "ajuda_operadores"
 
 #: eqnparserhelp.py:43
 msgid "help_plot"
-msgstr ""
+msgstr "ajuda_plot"
 
 #: eqnparserhelp.py:44
 msgid "help_sin"
-msgstr ""
+msgstr "ajuda_sin"
 
 #: eqnparserhelp.py:45
 msgid "help_sqrt"
-msgstr ""
+msgstr "ajuda_sqrt"
 
 #: eqnparserhelp.py:46
 msgid "help_test"
-msgstr ""
+msgstr "ajuda_teste"
 
 #: eqnparserhelp.py:47
 msgid "help_variables"
-msgstr ""
+msgstr "ajuda_variáveis"
 
 #: eqnparserhelp.py:58
 msgid "help_usage"
-msgstr ""
+msgstr "ajuda_uso"
 
-#: eqnparserhelp.py:61
+#: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "Tópicos"
 
-#: eqnparserhelp.py:72
+#: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-
-#: layout.py:57
-msgid "Edit"
-msgstr ""
-
-#: layout.py:58
-msgid "Algebra"
-msgstr ""
-
-#: layout.py:59
-msgid "Trigonometry"
-msgstr ""
+msgstr "Não existe ajuda sobre '%s', use ajuda(índice) para ver o índice"
 
 #: layout.py:60
-msgid "Boolean"
-msgstr ""
+msgid "Edit"
+msgstr "Editar"
 
 #: layout.py:61
-msgid "Constants"
-msgstr ""
+msgid "Algebra"
+msgstr "Álgebra"
 
 #: layout.py:62
+msgid "Trigonometry"
+msgstr "Trigonometria"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Booleano"
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Constantes"
+
+#: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Formato"
 
-#: layout.py:83
+#: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Etiqueta:"
 
-#: layout.py:115
+#: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Todas equações"
 
-#: layout.py:115
+#: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "Minhas equações"
 
-#: layout.py:117
+#: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "Mostrar histórico"
 
-#: layout.py:117
+#: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "Mostrar variáveis"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
+#, fuzzy
 msgid "thousand_sep"
-msgstr ""
+msgstr "sep_milhares"
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
+#, fuzzy
 msgid "fraction_sep"
-msgstr ""
+msgstr "sep_frações"
 
 #. The multiplication symbol (default: '*')
-#: mathlib.py:68
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+#, fuzzy
 msgid "mul_sym"
-msgstr ""
+msgstr "sím_mult"
 
 #. The division symbol (default: '/')
-#: mathlib.py:73
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+#, fuzzy
 msgid "div_sym"
+msgstr "sím_div"
+
+#: eqnparser.py:33
+#, fuzzy
+msgid "Parse error"
+msgstr "Erro na avaliação"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Use ajuda(teste) para obter ajuda sobre 'teste', ou ajuda(índice) para o "
+"índice"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Parêntesis esquerdo inesperado"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Erro de avaliação (parêntesis direito, sem nível que feche)"
+
+#: eqnparser.py:566
+#, fuzzy
+msgid "Parse error: number or variable expected"
+msgstr "Erro de avaliação: número ou variável esperados"
+
+#: eqnparser.py:567
+#, fuzzy
+msgid "Number or variable expected"
+msgstr "Número ou variável esperados"
+
+#. TRANS: It is possible to translate commands. However, I would highly
+#. recommend NOT doing so for mathematical functions like cos(). help(),
+#. functions() etc should be translated.
+#: eqnparserhelp.py:39
+msgid "acos"
+msgstr "acos"
+
+# em portugal escreve-se arco co-seno. mas http://pt.wikipedia.org/wiki/Fun%C3%A7%C3%B5es_trigonom%C3%A9tricas_inversas tem deste modo.
+#: eqnparserhelp.py:40
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"acos(x), devolve o arcocosseno de x. Este é o ângulo cujo co-seno é x. "
+"Definido para -1 <= x < 1"
+
+#: eqnparserhelp.py:43
+msgid "and"
+msgstr "and"
+
+# acho que fui esperto em solucionar esta :)
+#: eqnparserhelp.py:44
+#, fuzzy
+msgid ""
+"and(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"and(x,y), Conjunção lógica E (\"and\"). Devolve Verdadeiro (\"True\") se x e y "
+"forem verdadeiros, caso contrário devolve Falso (\"False\")"
+
+#: eqnparserhelp.py:46
+msgid "asin"
+msgstr "asin"
+
+#: eqnparserhelp.py:47
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin(x), devolve o arcosseno de x. Este é o ângulo cujo seno é x. Definido "
+"para -1 <= x <= 1"
+
+#: eqnparserhelp.py:50
+msgid "atan"
+msgstr "atan"
+
+#: eqnparserhelp.py:51
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan(x), devolve o arcotangente de x. Este é o ângulo cuja tangente é x. "
+"Definido para todo x"
+
+#: eqnparserhelp.py:54
+msgid "cos"
+msgstr "cos"
+
+#: eqnparserhelp.py:55
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"cos(x), devolve o co-seno de x. Esta é a coordenada-x no círculo unitário no "
+"ângulo x"
+
+#: eqnparserhelp.py:58
+msgid "cosh"
+msgstr "cosh"
+
+#: eqnparserhelp.py:59
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"cosh(x), devolve o cosseno hiperbólico de x. Obtido por (exp(x) + exp(-x)) / "
+"2"
+
+#: eqnparserhelp.py:61
+msgid "exp"
+msgstr "exp"
+
+#: eqnparserhelp.py:62
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x), devolve o expoente natural de x. Obtido por e^x"
+
+#: eqnparserhelp.py:64
+msgid "fac"
+msgstr "fac"
+
+#: eqnparserhelp.py:65
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr "fac(x), devolve o fatorial de x. Obtido por x * (x - 1) * (x - 2) * ..."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:68
+msgid "functions"
+msgstr "funções"
+
+#: eqnparserhelp.py:69
+msgid "functions(), return a list of all the functions that are defined"
+msgstr "funções(), devolve a lista de todas as funções que estão definidas"
+
+#: eqnparserhelp.py:71
+msgid "ln"
+msgstr "ln"
+
+#: eqnparserhelp.py:72
+#, fuzzy
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"ln(x), devolve o logaritmo natural de x. Este é o valor cujo expoente exp() "
+"é igual a x. Definido para x >= 0."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:76
+msgid "operators"
+msgstr "operadores"
+
+#: eqnparserhelp.py:77
+msgid "operators(), return a list of the operators that are defined"
+msgstr "operadores(), devolve uma lista dos operadores que estão definidos"
+
+#: eqnparserhelp.py:79
+msgid "or"
+msgstr "or"
+
+#: eqnparserhelp.py:80
+msgid ""
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+msgstr ""
+"or(x, y), disjunção lógica OU (\"or\"). Devolve Verdadeiro (\"True\") se x e/ou "
+"y forem verdadeiros, caso contrário devolve Falso (\"False\")"
+
+#: eqnparserhelp.py:82
+msgid "plot"
+msgstr "plot"
+
+#: eqnparserhelp.py:83
+#, fuzzy
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com  variável 'var' no "
+"intervalo entre a e b"
+
+#: eqnparserhelp.py:86
+msgid "sin"
+msgstr "sin"
+
+#: eqnparserhelp.py:87
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+"sin(x), devolve o seno de x. Esta é a coordenada-y no círculo unitário no "
+"ângulo x"
+
+#: eqnparserhelp.py:90
+msgid "sinh"
+msgstr "sinh"
+
+#: eqnparserhelp.py:91
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+"sinh(x), devolve o seno hiperbólico de x. Obtido por (exp(x) - exp(-x)) / 2"
+
+#: eqnparserhelp.py:93
+msgid "sqrt"
+msgstr "sqrt"
+
+#: eqnparserhelp.py:94
+#, fuzzy
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"sqrt(x), devolve a raiz quadrada de x. Este é o valor cujo quadrado (elevado "
+"a 2) é igual a x. Definido para x >= 0."
+
+#: eqnparserhelp.py:97
+msgid "square"
+msgstr "square"
+
+#: eqnparserhelp.py:98
+#, fuzzy
+msgid "square(x), return the square of x. Given by x * x"
+msgstr "square(x), devolve o quadrado (elevado a 2) de x. Obtido por x * x"
+
+#: eqnparserhelp.py:101
+msgid "tan"
+msgstr "tan"
+
+#: eqnparserhelp.py:102
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+"tan(x), devolve a tangente de x. Esta é a inclinação da linha desde a origem "
+"do círculo unitário até ao pelo ponto no círculo unitário definido pelo "
+"ângulo x. Obtido por sin(x) / cos(x)"
+
+#: eqnparserhelp.py:106
+msgid "tanh"
+msgstr "tanh"
+
+# erro no original, sinh(x)->tanh(x)
+#: eqnparserhelp.py:107
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+"tanh(x), devolve a tangente hiperbólica de x. Obtido por sinh(x) / cosh(x)"
+
+#: eqnparserhelp.py:109
+msgid "test"
+msgstr "teste"
+
+#: eqnparserhelp.py:110
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Este é apenas um tópico de teste, utilize ajuda(índice) para obter o índice"
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:113
+msgid "variables"
+msgstr "variáveis"
+
+#: eqnparserhelp.py:114
+msgid "variables(), return a list of the variables that are currently defined"
+msgstr ""
+"variáveis(), devolve uma lista das variáveis que estão de momento definidas"
+
+#: eqnparserhelp.py:116
+msgid "xor"
+msgstr "xor"
+
+#: eqnparserhelp.py:117
+#, fuzzy
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x, y), disjunção exclusiva XOR. Devolve Verdadeiro (\"True\") caso x for "
+"Verdadeiro e y for Falso, ou y for Verdadeiro e x for Falso. Caso contrário "
+"devolve Falso (\"False\")"
+
+#. TRANS: help(index), both 'index' and the translation  will work
+#: eqnparserhelp.py:131
+msgid "index"
+msgstr "índice"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "Indefinido"
+
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr "Erro: tipo não suportado"
+
+#: toolbars.py:36
+msgid "Help"
+msgstr "Ajuda"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Copiar"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Colar"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Cortar"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "Quadrado"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "Raiz Quadrada"
+
+#: toolbars.py:109
+#, fuzzy
+msgid "e to the power x"
+msgstr "e elevado a x"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "Logaritmo natural"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Fatorial"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Seno"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Cosseno"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangente"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arco-seno"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arco-cosseno"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arco-tangente"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Seno hiperbólico"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Cosseno hiperbólico"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Tangente hiperbólica"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "Conjunção lógica E"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "Disjunção lógica OU"
+
+#: toolbars.py:189
+#, fuzzy
+msgid "Equals"
+msgstr "É igual a"
+
+#: toolbars.py:192
+#, fuzzy
+msgid "Not equals"
+msgstr "Não é igual a"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Graus"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radianos"
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""

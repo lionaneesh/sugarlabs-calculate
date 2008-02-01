@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-11-13 10:59+0100\n"
-"PO-Revision-Date: 2007-11-21 22:46+0000\n"
-"Last-Translator: Οικονομάκος Ηλίας <ilias@sch.gr>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-01-09 10:36+0000\n"
+"Last-Translator: Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,243 +20,602 @@ msgstr ""
 msgid "Calculate"
 msgstr "Υπολόγισε"
 
-#: calculate.py:79
+#: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() λάθος συμβολοσειρά (%s)"
 
-#: calculate.py:206
+#: calculate.py:210
 msgid "Available functions:"
 msgstr "Διαθέσιμες συναρτήσεις"
 
-#: calculate.py:486
+#: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Εγγραφή στο ημερολόγιο (%s)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr ""
+msgstr "Ανάγνωση από το ημερολόγιο (%s)"
 
 # Αδυναμία να καθοριστεί έκδοση
 #: calculate.py:512
 msgid "Unable to determine version"
-msgstr "Ανίκανο να καθορίσει την έκδοση"
+msgstr "Αδυναμία καθορισμού της έκδοσης"
 
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr ""
+msgstr "Ανάγνωση καταχώρησης ημερολογίου (έκδοση %s)"
 
 #: calculate.py:522
 #, python-format
 msgid "State line invalid (%s)"
-msgstr ""
+msgstr "Μή αποδεκτή γραμμή οριοθέτησης"
 
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
+msgstr "Αδυναμία ανάγνωσης καταχώρησης ημερολογίου, άγνωστη έκδοση (%s)"
 
-#: calculate.py:767
+#: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed(): μη αποδεκτός τύπος"
 
-#: eqnparser.py:54
+#: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "επίπεδο: %d, μετ. %d"
 
-#: eqnparser.py:110
+#: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
 msgstr "Σφάλμα στο %d"
 
 #: eqnparser.py:234
 msgid "help_var"
-msgstr ""
+msgstr "βοηθ_μεταβλητή"
 
-#: eqnparser.py:335 eqnparser.py:336
+#: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "Η Συνάρτηση '%s' δεν είναι καθορισμένη"
+msgstr "Η συνάρτηση '%s' δεν είναι καθορισμένη"
 
-#: eqnparser.py:341
+#: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Εσφαλμένος αριθμός παραμέτρων (%d αντί %d)"
 
-#: eqnparser.py:342
+#: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "η συνάρτηση δέχεται %d ορίσμα(τα)"
+msgstr "η συνάρτηση δέχεται %d παραμέτρους"
 
-#: eqnparser.py:352 eqnparser.py:353
+#: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Αδυναμία ανάλυσης παραμέτρου %d: '%s'"
 
-#: eqnparser.py:363
+#: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Σφάλμα συνάρτησης: %s"
 
-#: eqnparser.py:464
+#: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
 msgstr "Η μεταβλητή '%s' δεν εχει καθοριστεί"
 
-#: eqnparser.py:494
+#: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση)"
 
-#: eqnparser.py:495 eqnparser.py:506 eqnparser.py:513 eqnparser.py:585
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Μη αναμενόμενη δεξιά παρένθεση"
 
-#: eqnparser.py:505
+#: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει αριστερή_τιμή)"
 
-#: eqnparser.py:519 eqnparser.py:520
+#: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Μη αναμενόμενος αριθμός"
 
-#: eqnparser.py:528
+#: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Μη αναμενόμενος τελεστής"
 
-#: eqnparser.py:571
+#: eqnparser.py:596
 msgid "Invalid operator"
-msgstr "Λανθασμένος τελεστής"
+msgstr "Μη αποδεκτός τελεστής"
 
-#: eqnparser.py:578
+#: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "Αναμενόταν τελεστής"
 
-#: eqnparser.py:591
+#: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_parse(): επιστρέφει Κενό"
 
 #. These are the help topics and should explain how things work
 #: eqnparserhelp.py:37
 msgid "help_acos"
-msgstr ""
+msgstr "βοηθ_τοξσυν"
 
 #: eqnparserhelp.py:38
 msgid "help_asin"
-msgstr ""
+msgstr "βοηθ_τοξημ"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
-msgstr ""
+msgstr "βοηθ_συν"
 
 #: eqnparserhelp.py:40
 msgid "help_exp"
-msgstr ""
+msgstr "βοηθ_εκθ"
 
 #: eqnparserhelp.py:41
 msgid "help_functions"
-msgstr ""
+msgstr "βοηθ_συναρτήσεις"
 
 #: eqnparserhelp.py:42
 msgid "help_operators"
-msgstr ""
+msgstr "βοηθ_τελεστές"
 
 #: eqnparserhelp.py:43
 msgid "help_plot"
-msgstr ""
+msgstr "βοηθ_σχέδιο"
 
 #: eqnparserhelp.py:44
 msgid "help_sin"
-msgstr ""
+msgstr "βοηθ_ημ"
 
 #: eqnparserhelp.py:45
 msgid "help_sqrt"
-msgstr ""
+msgstr "βοηθ_ρίζα"
 
 #: eqnparserhelp.py:46
 msgid "help_test"
-msgstr ""
+msgstr "βοηθ_δοκιμή"
 
 #: eqnparserhelp.py:47
 msgid "help_variables"
-msgstr ""
+msgstr "βοηθ_μεταβλητές"
 
 #: eqnparserhelp.py:58
 msgid "help_usage"
-msgstr ""
+msgstr "βοηθ_χρήση"
 
-#: eqnparserhelp.py:61
+#: eqnparserhelp.py:132
 msgid "Topics"
 msgstr "Θέματα"
 
-#: eqnparserhelp.py:72
+#: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
 
-#: layout.py:57
+#: layout.py:60
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: layout.py:58
+#: layout.py:61
 msgid "Algebra"
 msgstr "Άλγεβρα"
 
-#: layout.py:59
+#: layout.py:62
 msgid "Trigonometry"
 msgstr "Τριγωνομετρία"
 
-#: layout.py:60
+#: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "Δυαδικό"
 
-#: layout.py:61
+#: layout.py:64
 msgid "Constants"
 msgstr "Σταθερές"
 
-#: layout.py:62
+#: layout.py:65
 msgid "Format"
 msgstr "Μορφή"
 
-#: layout.py:83
+#: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Ετικέτα:"
 
-#: layout.py:115
+#: layout.py:118
 msgid "All equations"
 msgstr "Όλες οι εξισώσεις"
 
-#: layout.py:115
+#: layout.py:118
 msgid "My equations"
 msgstr "Οι εξισώσεις μου"
 
-#: layout.py:117
+#: layout.py:120
 msgid "Show history"
 msgstr "Εμφάνιση ιστορικού"
 
-#: layout.py:117
+#: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "Εμφάνιση μεταβλητών"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
 msgid "thousand_sep"
-msgstr ""
+msgstr "διαχ_χιλιάδων"
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
 msgid "fraction_sep"
-msgstr ""
+msgstr "υποδιαστολή"
 
 #. The multiplication symbol (default: '*')
-#: mathlib.py:68
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
 msgid "mul_sym"
+msgstr "συμβ_πολλ/σμού"
+
+# Σύμβολο διαίρεσης (προκαθορισμένο: '/')
+#. The division symbol (default: '/')
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "συμβ_διαίρεσης"
+
+#: eqnparser.py:33
+msgid "Parse error"
 msgstr ""
 
-#. The division symbol (default: '/')
-#: mathlib.py:73
-msgid "div_sym"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+
+#: eqnparser.py:504
+#, fuzzy
+msgid "Left parenthesis unexpected"
+msgstr "Μη αναμενόμενη δεξιά παρένθεση"
+
+#: eqnparser.py:534
+#, fuzzy
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει αριστερή_τιμή)"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr ""
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr ""
+
+#. TRANS: It is possible to translate commands. However, I would highly
+#. recommend NOT doing so for mathematical functions like cos(). help(),
+#. functions() etc should be translated.
+#: eqnparserhelp.py:39
+msgid "acos"
+msgstr ""
+
+#: eqnparserhelp.py:40
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+
+#: eqnparserhelp.py:43
+msgid "and"
+msgstr ""
+
+#: eqnparserhelp.py:44
+msgid ""
+"and(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+
+#: eqnparserhelp.py:46
+msgid "asin"
+msgstr ""
+
+#: eqnparserhelp.py:47
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+
+#: eqnparserhelp.py:50
+msgid "atan"
+msgstr ""
+
+#: eqnparserhelp.py:51
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+
+#: eqnparserhelp.py:54
+msgid "cos"
+msgstr ""
+
+#: eqnparserhelp.py:55
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+
+#: eqnparserhelp.py:58
+msgid "cosh"
+msgstr ""
+
+#: eqnparserhelp.py:59
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+
+#: eqnparserhelp.py:61
+msgid "exp"
+msgstr ""
+
+#: eqnparserhelp.py:62
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr ""
+
+#: eqnparserhelp.py:64
+msgid "fac"
+msgstr ""
+
+#: eqnparserhelp.py:65
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:68
+msgid "functions"
+msgstr ""
+
+#: eqnparserhelp.py:69
+msgid "functions(), return a list of all the functions that are defined"
+msgstr ""
+
+#: eqnparserhelp.py:71
+msgid "ln"
+msgstr ""
+
+#: eqnparserhelp.py:72
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:76
+msgid "operators"
+msgstr ""
+
+#: eqnparserhelp.py:77
+msgid "operators(), return a list of the operators that are defined"
+msgstr ""
+
+#: eqnparserhelp.py:79
+msgid "or"
+msgstr ""
+
+#: eqnparserhelp.py:80
+msgid ""
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+msgstr ""
+
+#: eqnparserhelp.py:82
+msgid "plot"
+msgstr ""
+
+#: eqnparserhelp.py:83
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+
+#: eqnparserhelp.py:86
+msgid "sin"
+msgstr ""
+
+#: eqnparserhelp.py:87
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+
+#: eqnparserhelp.py:90
+msgid "sinh"
+msgstr ""
+
+#: eqnparserhelp.py:91
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+
+#: eqnparserhelp.py:93
+msgid "sqrt"
+msgstr ""
+
+#: eqnparserhelp.py:94
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+
+#: eqnparserhelp.py:97
+msgid "square"
+msgstr ""
+
+#: eqnparserhelp.py:98
+msgid "square(x), return the square of x. Given by x * x"
+msgstr ""
+
+#: eqnparserhelp.py:101
+msgid "tan"
+msgstr ""
+
+#: eqnparserhelp.py:102
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+
+#: eqnparserhelp.py:106
+msgid "tanh"
+msgstr ""
+
+#: eqnparserhelp.py:107
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+
+#: eqnparserhelp.py:109
+msgid "test"
+msgstr ""
+
+#: eqnparserhelp.py:110
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:113
+msgid "variables"
+msgstr "μεταβλητές"
+
+#: eqnparserhelp.py:114
+msgid "variables(), return a list of the variables that are currently defined"
+msgstr "μεταβλητές(), επιστροφή λίστας μεταβλητών που είναι ήδη καθορισμένες"
+
+#: eqnparserhelp.py:116
+msgid "xor"
+msgstr ""
+
+#: eqnparserhelp.py:117
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+
+#. TRANS: help(index), both 'index' and the translation  will work
+#: eqnparserhelp.py:131
+msgid "index"
+msgstr "ευρετήριο"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "Ακαθόριστο"
+
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr "Σφάλμα: μη υποστηριζόμενος τύπος"
+
+#: toolbars.py:36
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Επικόλληση"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Αποκοπή"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr ""
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr ""
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr ""
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr ""
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr ""
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr ""
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr ""
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr ""
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr ""
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr ""
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr ""
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr ""
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr ""
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr ""
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr ""
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr ""
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr ""
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr ""
+
+#: toolbars.py:202
+msgid "e"
+msgstr ""
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr ""
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""

@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "లెక్కపెట్టు"
 
 #: calculate.py:80
 #, python-format
@@ -59,7 +59,7 @@ msgstr ""
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "'%s' ధర్మము నిర్దేశింపబడలేదు"
 
 #: eqnparser.py:359
 #, python-format
@@ -108,11 +108,11 @@ msgstr ""
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "అంకె కై యెదురుచూడడములేదు"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "Operatorయెదురుచూడడములేదు"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
@@ -127,8 +127,9 @@ msgid "Invalid operator"
 msgstr ""
 
 #: eqnparser.py:603
+#, fuzzy
 msgid "Operator expected"
-msgstr ""
+msgstr "Operatorయెదురుచూడడములేదు"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
@@ -149,7 +150,7 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "మరియు"
 
 #: eqnparserhelp.py:44
 msgid ""
@@ -214,7 +215,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "ధర్మములు"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
@@ -241,7 +242,7 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "లేక"
 
 #: eqnparserhelp.py:80
 msgid ""
@@ -288,8 +289,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:97
+#, fuzzy
 msgid "square"
-msgstr ""
+msgstr "నలుచదరము Square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
@@ -316,11 +318,11 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "పరిక్షించు"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "ఇది పరీక్ష విషయము, సహాయము(సూచిక) ను సూచికకై వాడండి"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
@@ -344,20 +346,20 @@ msgstr ""
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "సూచిక"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "విషయాలు"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "'%s' గురించి సహాయము అందుబాటులో లేదు, సహాయము(సూచిక) నువాడండి"
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "కూర్చు"
 
 #: layout.py:61
 msgid "Algebra"
@@ -393,7 +395,7 @@ msgstr ""
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "గతచరిత్ర చూపు"
 
 #: layout.py:120
 msgid "Show variables"
@@ -417,106 +419,110 @@ msgstr ""
 msgid "Error: unsupported type"
 msgstr ""
 
-#: toolbars.py:31
+#: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "సహాయము"
 
-#: toolbars.py:81
+#: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "నకలు"
 
-#: toolbars.py:84
+#: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "అతికించు"
 
-#: toolbars.py:87
+#: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "కత్తిరించు"
 
-#: toolbars.py:94
+#: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "నలుచదరము Square"
 
-#: toolbars.py:98
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
-#: toolbars.py:104
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:108
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr ""
 
-#: toolbars.py:114
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:122
+#: toolbars.py:131
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:126
+#: toolbars.py:135
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:130
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:136
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:140
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:150
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:154
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:158
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:166
+#: toolbars.py:175
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:170
+#: toolbars.py:179
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:180
+#: toolbars.py:189
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:183
+#: toolbars.py:192
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:193
+#: toolbars.py:202
 msgid "e"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:209
 msgid "Degrees"
 msgstr ""
 
-#: toolbars.py:201
+#: toolbars.py:210
 msgid "Radians"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""

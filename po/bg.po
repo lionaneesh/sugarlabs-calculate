@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: 2008-01-11 14:06+0000\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-01-22 09:08+0000\n"
 "Last-Translator: Alexander Todorov <atodorov@redhat.com>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "MIME-Version: 1.0\n"
@@ -268,7 +268,7 @@ msgstr "Теми"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Не е намерена помощ относно '%s', използвайте help(index) за 'index'"
+msgstr "Не е намерена помощ относно '%s', използвайте help(index) за index"
 
 #: layout.py:60
 msgid "Edit"
@@ -342,83 +342,83 @@ msgstr "Недефиниран"
 msgid "Error: unsupported type"
 msgstr "Грешка: непознат тип"
 
-#: toolbars.py:31
+#: toolbars.py:36
 msgid "Help"
 msgstr "Помощ"
 
-#: toolbars.py:81
+#: toolbars.py:86
 msgid "Copy"
 msgstr "Копиране"
 
-#: toolbars.py:84
+#: toolbars.py:89
 msgid "Paste"
 msgstr "Поставяне"
 
-#: toolbars.py:87
+#: toolbars.py:92
 msgid "Cut"
 msgstr "Изрязване"
 
-#: toolbars.py:94
+#: toolbars.py:99
 msgid "Square"
 msgstr "Повдигане на втора степен"
 
-#: toolbars.py:98
+#: toolbars.py:103
 msgid "Square root"
 msgstr "Квадратен корен"
 
-#: toolbars.py:104
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "e на степен X"
 
-#: toolbars.py:108
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "Натурален логаритъм"
 
-#: toolbars.py:114
+#: toolbars.py:123
 msgid "Factorial"
 msgstr "Факториел"
 
-#: toolbars.py:122
+#: toolbars.py:131
 msgid "Sine"
 msgstr "Синус"
 
-#: toolbars.py:126
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "Косинус"
 
-#: toolbars.py:130
+#: toolbars.py:139
 msgid "Tangent"
 msgstr "Тангенс"
 
-#: toolbars.py:136
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr "Аркус синус"
 
-#: toolbars.py:140
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr "Аркус косинус"
 
-#: toolbars.py:144
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr "Аркус тангенс"
 
-#: toolbars.py:150
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr "Хиперболичен синус"
 
-#: toolbars.py:154
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr "Хиперболичен косинус"
 
-#: toolbars.py:158
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr "Хиперболичен тангенс"
 
-#: toolbars.py:166
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "Логическо и"
 
-#: toolbars.py:170
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "Логическо или"
 
@@ -426,27 +426,27 @@ msgstr "Логическо или"
 msgid "Logical xor"
 msgstr "Логическо изкл. или"
 
-#: toolbars.py:180
+#: toolbars.py:189
 msgid "Equals"
 msgstr "равно"
 
-#: toolbars.py:183
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "различно"
 
-#: toolbars.py:190
+#: toolbars.py:199
 msgid "Pi"
 msgstr "пи"
 
-#: toolbars.py:193
+#: toolbars.py:202
 msgid "e"
 msgstr "е"
 
-#: toolbars.py:200
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "градуси"
 
-#: toolbars.py:201
+#: toolbars.py:210
 msgid "Radians"
 msgstr "радиани"
 
@@ -456,8 +456,7 @@ msgstr "Грешка при обработка на текста"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Използвайте help(test) за помощ относно 'test' илиhelp(index) за 'index'"
+msgstr "Използвайте help(test) за помощ относно 'test' илиhelp(index) за index"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
@@ -614,7 +613,7 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(EQN, VAR=-a..b), изчертава графиката на функцията 'EQN'в интервала от a "
+"plot(EQN, VAR=-a..b), изчертава графиката на функцията EQN в интервала от a "
 "до b."
 
 #: eqnparserhelp.py:86
@@ -717,3 +716,8 @@ msgstr ""
 #: eqnparserhelp.py:131
 msgid "index"
 msgstr "index"
+
+#: toolbars.py:113
+#, fuzzy
+msgid "x to the power y"
+msgstr "e на степен X"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -417,106 +417,110 @@ msgstr ""
 msgid "Error: unsupported type"
 msgstr ""
 
-#: toolbars.py:31
+#: toolbars.py:36
 msgid "Help"
 msgstr ""
 
-#: toolbars.py:81
+#: toolbars.py:86
 msgid "Copy"
 msgstr ""
 
-#: toolbars.py:84
+#: toolbars.py:89
 msgid "Paste"
 msgstr ""
 
-#: toolbars.py:87
+#: toolbars.py:92
 msgid "Cut"
 msgstr ""
 
-#: toolbars.py:94
+#: toolbars.py:99
 msgid "Square"
 msgstr ""
 
-#: toolbars.py:98
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
-#: toolbars.py:104
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:108
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr ""
 
-#: toolbars.py:114
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:122
+#: toolbars.py:131
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:126
+#: toolbars.py:135
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:130
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:136
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:140
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:150
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:154
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:158
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:166
+#: toolbars.py:175
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:170
+#: toolbars.py:179
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:180
+#: toolbars.py:189
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:183
+#: toolbars.py:192
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:193
+#: toolbars.py:202
 msgid "e"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:209
 msgid "Degrees"
 msgstr ""
 
-#: toolbars.py:201
+#: toolbars.py:210
 msgid "Radians"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""

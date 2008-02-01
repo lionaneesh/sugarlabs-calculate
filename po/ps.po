@@ -2,133 +2,137 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-08 18:57+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-01-23 06:25-0500\n"
+"Last-Translator: usman mansoor ansari <jalalkut@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.0.2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "شمېرل"
 
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "برابرښت، شننه() ناباوري مزی (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "شته کړنې: "
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr " (%s) ورځپاڼه کې لیکل"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "تڼۍ_ زورشوې(): ناسم ډول"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "د شننې تېروتنل"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "کچه: %d، د %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "تېروتنه په %d کې"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"د مرسته په اړه (ازمویل) لپاره وکاروﺉ مرسته(ازمویل)، یا لړیال لپاره "
+"مرسته(لړیال)"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "کړنې '%s'  ونه پېژندل شوې"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "د ارزښتمنیو ناسمه شمېره (%d د %d پرځای)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "کړنې %d args اخلي"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "د وېش ارزښتوړى ناوړتيا"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "ناسمه کړنې: %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "بدلېدونکې '%s' ونه پېژندل شوې"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "غېرمترقبه کیڼې غبرګلیندۍ "
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "وېشي تېروتنې (ښي غبرګلیندۍ)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+#, fuzzy
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "غېرمترقبه کیڼې غبرګلیندۍ "
 
 #: eqnparser.py:527
+#, fuzzy
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "وېشي تېروتنې (ښي غبرګلیندۍ،  )"
 
 #: eqnparser.py:534
+#, fuzzy
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "وېشي تېروتنې (ښي غبرګلیندۍ، )"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "غېر مترقبه شمېره"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "غېر مترقبه چلوونى"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr ""
+msgstr "وېشي تېروتنې: د شمېرې يا مترقبه بدلېدونى"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "شمېرې يا مترقبه بدلېدونى"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "ناباوري چلوونى"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "مترقبه چلوونى"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
@@ -149,7 +153,7 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "او"
 
 #: eqnparserhelp.py:44
 msgid ""
@@ -241,7 +245,7 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "او"
 
 #: eqnparserhelp.py:80
 msgid ""
@@ -288,8 +292,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:97
+#, fuzzy
 msgid "square"
-msgstr ""
+msgstr "څلور ګوټى"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
@@ -344,11 +349,11 @@ msgstr ""
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "لړيال"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "سرليكونه"
 
 #: eqnparserhelp.py:143
 #, python-format
@@ -357,166 +362,171 @@ msgstr ""
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "اېډېټ"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "الجبر"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "مثلثات"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "بولۍ"
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "ټاکلي"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "بڼه"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "نښکه"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "ټول برابرښتونه"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "زما برابرښتونه"
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "مخینه ښکاره کول"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "بدلېدنې ښکاره کول"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "ضرب_اېس وای اېم"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "وېشل_اېس وای اې"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "ناپېژندلې"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "تېروتنه: ناپېژندلې ډول"
 
-#: toolbars.py:31
+#: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "مرسته"
 
-#: toolbars.py:81
+#: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "لمېسل"
 
-#: toolbars.py:84
+#: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "سرېښل"
 
-#: toolbars.py:87
+#: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "سکڼل"
 
-#: toolbars.py:94
+#: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "څلور ګوټى"
 
-#: toolbars.py:98
+#: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "څلور ګوټه  ریښه"
 
-#: toolbars.py:104
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:108
+#: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "ساده لوګارېتم"
 
-#: toolbars.py:114
+#: toolbars.py:123
+#, fuzzy
 msgid "Factorial"
-msgstr ""
+msgstr "فکټوریل"
 
-#: toolbars.py:122
+#: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "ساین"
 
-#: toolbars.py:126
+#: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "کوساین"
 
-#: toolbars.py:130
+#: toolbars.py:139
 msgid "Tangent"
-msgstr ""
+msgstr "ټانجان"
 
-#: toolbars.py:136
+#: toolbars.py:145
 msgid "Arc sine"
-msgstr ""
+msgstr "اې ار سي ساین"
 
-#: toolbars.py:140
+#: toolbars.py:149
 msgid "Arc cosine"
-msgstr ""
+msgstr "اې ار سي کوساین"
 
-#: toolbars.py:144
+#: toolbars.py:153
 msgid "Arc tangent"
-msgstr ""
+msgstr "اې ار سي ټانجان"
 
-#: toolbars.py:150
+#: toolbars.py:159
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "هایپربولیک ساین"
 
-#: toolbars.py:154
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "هایپربولیک کوساین"
 
-#: toolbars.py:158
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "هایپربولیک ټانجان"
 
-#: toolbars.py:166
+#: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "منطقي او"
 
-#: toolbars.py:170
+#: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "منطقي یا"
 
-#: toolbars.py:180
+#: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "برابر"
 
-#: toolbars.py:183
+#: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "برابر ندي"
 
-#: toolbars.py:190
+#: toolbars.py:199
 msgid "Pi"
-msgstr ""
+msgstr "Pi"
 
-#: toolbars.py:193
+#: toolbars.py:202
 msgid "e"
-msgstr ""
+msgstr "e"
 
-#: toolbars.py:200
+#: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "درجې"
 
-#: toolbars.py:201
+#: toolbars.py:210
 msgid "Radians"
+msgstr "راډیانونه"
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""

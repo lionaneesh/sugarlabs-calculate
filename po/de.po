@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-27 18:15-0500\n"
+"PO-Revision-Date: 2008-01-30 02:42-0500\n"
 "Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,6 @@ msgstr "Lese Journaleintrag (version %s)"
 
 #: calculate.py:522
 #, python-format
-#, fuzzy
 msgid "State line invalid (%s)"
 msgstr "Grenzbereich ungültig (%s)"
 
@@ -65,7 +64,6 @@ msgstr "button_pressed(): ungültiger Typ"
 
 #: eqnparser.py:58
 #, python-format
-#, fuzzy
 msgid "level: %d, ofs %d"
 msgstr "Ebene: %d, von %d"
 
@@ -264,7 +262,6 @@ msgstr ". ist das Trennzeichen für Tausender."
 
 #. The separator to mark fractions (default: '.')
 #: mathlib.py:63
-#, fuzzy
 msgid "fraction_sep"
 msgstr "/ ist das Bruchzeichen."
 
@@ -585,7 +582,6 @@ msgid "Square root"
 msgstr "Quadratwurzel"
 
 #: toolbars.py:109
-#, fuzzy
 msgid "e to the power x"
 msgstr "e hoch x"
 
