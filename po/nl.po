@@ -498,8 +498,6 @@ msgstr "Radialen"
 #~ msgid ","
 #~ msgstr "."
 
-#~ msgid "Parse error (right parenthesis, no level to close)"
-#~ msgstr "Verwerkingsfout (rechter haakje, geen level af te sluiten)"
 
 #~ msgid "clear"
 #~ msgstr "leeg"

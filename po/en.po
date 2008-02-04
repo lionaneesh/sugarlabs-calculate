@@ -486,8 +486,6 @@ msgstr ""
 #~ msgid ","
 #~ msgstr ","
 
-#~ msgid "Parse error (right parenthesis, no level to close)"
-#~ msgstr "Parse error (right parenthesis, no level to close)"
 
 #~ msgid "clear"
 #~ msgstr "clear"

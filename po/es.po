@@ -504,12 +504,6 @@ msgstr "Radianes"
 #~ msgid ","
 #~ msgstr ","
 
-#~ msgid "Parse error (right parenthesis, no level to close)"
-#~ msgstr ""
-#~ "Error de procesamiento (paréntesis derecho, ningún nivel para cerrar)"
-
-#~ msgid "clear"
-#~ msgstr "borrar"
 
 #, fuzzy
 #~ msgid "enter"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-04 01:54-0500\n"
+"PO-Revision-Date: 2008-02-04 08:16-0500\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -263,7 +263,7 @@ msgstr "ఆపెరేటర్లు (), నిర్వచింపబడి�
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr "లేక"
+msgstr "లేదా"
 
 #: eqnparserhelp.py:80
 msgid ""
