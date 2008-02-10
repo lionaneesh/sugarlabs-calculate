@@ -75,7 +75,7 @@ msgstr "کړنې %d args اخلي"
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "د وېش ارزښتوړى ناوړتيا"
+msgstr "'%d' :%s د وېش ارزښتوړى ناوړتيا"
 
 #: eqnparser.py:380
 #, python-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-28 04:45-0500\n"
+"PO-Revision-Date: 2008-02-06 05:49-0500\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr "محاسبه"
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "معادله. تجزيه() رشته نادرست (%)"
+msgstr "معادله. تجزيه() رشته نادرست (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
@@ -31,12 +31,12 @@ msgstr "عملیات در دسترس:"
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "نوشتن به یادداشت (%)"
+msgstr "نوشتن به یادداشت (%s)"
 
 #: calculate.py:522
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr "خواندن از یادداشت (%)"
+msgstr "خواندن از یادداشت (%s)"
 
 #: calculate.py:528
 msgid "Unable to determine version"
@@ -45,17 +45,17 @@ msgstr "در تعین نمودن نگارش ناتوان هست"
 #: calculate.py:533
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr "در حال خواندن ثبت روزنامه (نگارش %)"
+msgstr "در حال خواندن ثبت روزنامه (نگارش %s)"
 
 #: calculate.py:538
 #, python-format
 msgid "State line invalid (%s)"
-msgstr "خط وضعیت نامعتبر (%)"
+msgstr "خط وضعیت نامعتبر (%s)"
 
 #: calculate.py:555
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "در خواندن ثبت روزنامه ناتوان هست، نگارش نامعلوم (%)"
+msgstr "در خواندن ثبت روزنامه ناتوان هست، نگارش نامعلوم (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -64,12 +64,12 @@ msgstr "دکمه_فشارداده شده(): نوعیت نامعتبر"
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "مرحله: % از %"
+msgstr "مرحله: %d از %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr "خطا در %"
+msgstr "خطا در %d"
 
 #: eqnparser.py:235
 msgid "help_var"
@@ -78,32 +78,32 @@ msgstr "کمک_متغیر"
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "عملکرد '%' نامعین"
+msgstr "عملکرد '%s' نامعین"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "شماره نامعتبر استدلال ها (% در عوض %)"
+msgstr "شماره نامعتبر استدلال ها (%d در عوض %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "عملکرد % استدلال میگیرد"
+msgstr "عملکرد %d استدلال میگیرد"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "برای تجزیه استدلال % ناتوان هست: '%'"
+msgstr "برای تجزیه استدلال %d ناتوان هست: '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr "خطای عملکرد: %"
+msgstr "خطای عملکرد: %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "متغیر '%' نامعين"
+msgstr "متغیر '%s' نامعين"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
@@ -139,7 +139,7 @@ msgstr "_تجزئیه(): بازگشت هیچ"
 
 #: eqnparserhelp.py:37
 msgid "help_acos"
-msgstr "کمک_acos"
+msgstr "کمک_کوساین قوسی"
 
 #: eqnparserhelp.py:38
 msgid "help_and"
@@ -147,11 +147,11 @@ msgstr "کمک_و"
 
 #: eqnparserhelp.py:39
 msgid "help_asin"
-msgstr "کمک_asin"
+msgstr "کمک_ساین قوسی"
 
 #: eqnparserhelp.py:40
 msgid "help_atan"
-msgstr "کمک_atan"
+msgstr "کمک_تانجانت قوسی"
 
 #: eqnparserhelp.py:41
 msgid "help_cos"
@@ -159,7 +159,7 @@ msgstr "کمک_کوساین"
 
 #: eqnparserhelp.py:42
 msgid "help_cosh"
-msgstr "کمک_cosh"
+msgstr "کمک_کوساین هایپربولی"
 
 #: eqnparserhelp.py:43
 msgid "help_exp"
@@ -167,7 +167,7 @@ msgstr "کمک_توان"
 
 #: eqnparserhelp.py:44
 msgid "help_fac"
-msgstr "کمک_fac"
+msgstr "کمک_فکتوریل"
 
 #: eqnparserhelp.py:45
 msgid "help_functions"
@@ -195,7 +195,7 @@ msgstr "کمک_ساین"
 
 #: eqnparserhelp.py:51
 msgid "help_sinh"
-msgstr "کمک_sinh"
+msgstr "کمک_ساین هایپربولی"
 
 #: eqnparserhelp.py:52
 msgid "help_sqrt"
@@ -211,7 +211,7 @@ msgstr "کمک_تانجانت"
 
 #: eqnparserhelp.py:55
 msgid "help_tanh"
-msgstr "کمک_tanh"
+msgstr "کمک_تانجانت هایپربولی"
 
 #: eqnparserhelp.py:56
 msgid "help_test"
@@ -237,7 +237,7 @@ msgstr "عناوین"
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
-"در مورد متغیر '%' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
+"در مورد متغیر '%s' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
 "کنید"
 
 #: layout.py:60
@@ -456,8 +456,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x)، کوساین قوسی x را برگردان. این زاویه ایست که کوساین آن x است. تعریف "
-"شده برای x خورد باشد از 1 و بزرگ یا مساوی باشد با 1-"
+"کوساین قوسی (x)، کوساین قوسی x را برگردان. این زاویه ایست که کوساین آن x "
+"است. تعریف شده برای x خورد باشد از -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -478,7 +478,7 @@ msgid ""
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "ساین قوسی(x)، ساین قوسی x را برگردان. این زاویه ایست که ساین برای آن x است. "
-"تعریف شده طوریک-1 <= x <= 1"
+"تعریف شده طوریکه -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"

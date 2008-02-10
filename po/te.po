@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-06 00:03-0500\n"
+"PO-Revision-Date: 2008-02-07 19:25-0500\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -108,10 +108,12 @@ msgid "Right parenthesis unexpected"
 msgstr "అనూహ్య ఆజ్ణలు"
 
 #: eqnparser.py:527
+#, fuzzy
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "విశ్లేషణదోషం"
 
 #: eqnparser.py:534
+#, fuzzy
 msgid "Parse error (right parenthesis, no level to close)"
 msgstr "విశ్లేషణదోషం"
 
@@ -125,16 +127,18 @@ msgid "Operator not expected"
 msgstr "ఆపరేటరుకై యెదురుచూడడములేదు"
 
 #: eqnparser.py:566
+#, fuzzy
 msgid "Parse error: number or variable expected"
 msgstr "విశ్లేషణదోషం"
 
 #: eqnparser.py:567
+#, fuzzy
 msgid "Number or variable expected"
-msgstr "ఊహించిన సంఖ్య లేదా ఆజ్ణ "
+msgstr "ఊహించిన సంఖ్య లేదా ఆజ్ణ"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr "ఆపెరేటర్ సరైనది కాదు "
+msgstr "ఆపెరేటర్ సరైనది కాదు"
 
 #: eqnparser.py:603
 msgid "Operator expected"
@@ -142,21 +146,21 @@ msgstr "ఆపరేటర్ కై యెదురుచూస్తున్�
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr "_గణన (): నిష్ఫలము "
+msgstr "_గణన (): నిష్ఫలము"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr "ఆకోస్ "
+msgstr "ఆకోస్"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"ఆకోస్ (x), x యొక్క ఆర్క్ కొసైన్ ను తెలుపుము.  ఇది x ను కొసైను గా కలిగిఉన్న "
+"ఆకోస్ (x), x యొక్క ఆర్క్ కొసైన్ ను తెలుపుము. ఇది x ను కొసైను గా కలిగిఉన్న "
 "కోణము. నిర్వచనం  -1 <= x < 1"
 
 #: eqnparserhelp.py:43
@@ -167,8 +171,8 @@ msgstr "మరియు"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"మరియు(x, y), లాగికల్ మరియు. x మరియు y లు నిజమైతే నిజమని చూపుతుంది, లేనిచో "
-"తప్పు అని చూపుతుంది "
+"మరియు(x, y), లాజికల్ మరియు. x మరియు y లు నిజమైతే నిజమని చూపుతుంది, లేనిచో "
+"తప్పు అని చూపుతుంది"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -191,12 +195,12 @@ msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"ఆటేన్ (x), x యొక్క ఆర్క్ టాంజెంట్ ను తెలుపును. ఇది x ను టాంజెంట్  గా "
-"కలిగిఉన్న కోణము. నిర్వచనం అన్ని  x లకూ వర్తించును"
+"ఆటేన్ (x), x యొక్క ఆర్క్ టాంజెంట్ ను తెలుపును. ఇది x ను టాంజెంట్ గా "
+"కలిగిఉన్న కోణము.నిర్వచనం అన్ని x లకూ వర్తించును"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr "కాస్"
+msgstr "కోస్"
 
 #: eqnparserhelp.py:55
 msgid ""
@@ -223,7 +227,7 @@ msgstr "ఎక్స్ పొ"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "ఎక్స్ పొ(x), x యొక్క సహజ ఎక్స్ పొనెంట్ ను చూపుము. ఈ విధంగా  e^x"
+msgstr "ఎక్స్ పొ(x), x యొక్క సహజ ఎక్స్ పొనెంట్ ను చూపుము. ఈ విధంగా e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
@@ -232,7 +236,7 @@ msgstr "ఫాక్ట్"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"ఫాక్ట్ (x),  x యొక్క ఫాక్టొరియల్ ను చూపుము. ఈ విధంగా x * (x - 1) * (x - 2) * "
+"ఫాక్ట్ (x), x యొక్క ఫాక్టొరియల్ ను చూపుము. ఈ విధంగా x * (x - 1) * (x - 2) * "
 "..."
 
 #. TRANS: This command is descriptive, so can be translated
@@ -240,7 +244,9 @@ msgstr ""
 msgid "functions"
 msgstr "ధర్మములు"
 
+# why not ధర్మములు
 #: eqnparserhelp.py:69
+#, fuzzy
 msgid "functions(), return a list of all the functions that are defined"
 msgstr "ప్రమేయాలు (), నిర్వచింపబడిన అన్నిప్రమేయాలను చూపుము"
 
@@ -274,7 +280,7 @@ msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
 "లేక (x, y),లాజికల్ లేక. x and/or yనిజమైతే నిజమని తెలుపు లేక పోతే తప్పని "
-"తెలుపు "
+"తెలుపు"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -297,7 +303,7 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"సైన్(x), x యొక్క సైను ను చూపుము. ఇది ప్రమాణ వృత్తముపై,  x కోణము వద్ద y "
+"సైన్(x), x యొక్క సైను ను చూపుము. ఇది ప్రమాణ వృత్తముపై, x కోణము వద్ద y "
 "కోఆర్డినేట్."
 
 #: eqnparserhelp.py:90

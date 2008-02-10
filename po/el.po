@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-09 10:36+0000\n"
-"Last-Translator: Γιάννης Κασκαμανίδης <ttnfy17@yahoo.gr>\n"
+"PO-Revision-Date: 2008-02-09 11:47-0500\n"
+"Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +51,7 @@ msgstr "Ανάγνωση καταχώρησης ημερολογίου (έκδο
 
 #: calculate.py:522
 #, python-format
+#, fuzzy
 msgid "State line invalid (%s)"
 msgstr "Μή αποδεκτή γραμμή οριοθέτησης"
 
@@ -268,134 +269,153 @@ msgstr "συμβ_διαίρεσης"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Λάθος ανάλυσης"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα."
 
 #: eqnparser.py:504
-#, fuzzy
 msgid "Left parenthesis unexpected"
-msgstr "Μη αναμενόμενη δεξιά παρένθεση"
+msgstr "Μη αναμενόμενη αριστερή παρένθεση"
 
 #: eqnparser.py:534
-#, fuzzy
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει αριστερή_τιμή)"
+msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει επίπεδο για να κλείσει)"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr ""
+msgstr "Σφάλμα ανάλυσης: περίμενα αριθμό ή μεταβλητή"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "Περίμενα αριθμό ή μεταβλητή"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "τοξσυν"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"τοξσυν(x), επιστρέφει το τόξο του συνημιτόνου του x. Αυτή είναι η γωνία για "
+"την οποία το συνημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "και"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"και(x, y), λογικό και. Επιστρέφει Αληθής αν x και y είναι Αληθή, διαφορετικά "
+"επιστρέφει Ψευδής"
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "τοξημ"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"τοξημ(x), επιστρέφει το τόξο του ημιτόνου του x. Αυτή είναι η γωνία για την "
+"οποία το ημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "τοξεφ"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"τοξεφ(x), επιστρέφει το τόξο της εφαπτόμενης του x. Αυτή είναι η γωνία για "
+"την οποία η εφαπτόμενη είναι x. Ορίζεται για κάθε x"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "συν"
 
 #: eqnparserhelp.py:55
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"συν(x), επιστρέφει το συνημίτονο του x. Αυτή είναι η οριζόντια συντεταγμένη "
+"του τριγωνομετρικού κύκλου της γωνίας x"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "συνυ"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"συνυ(x), επιστρέφει το υπερβολικό συνημίτονο του x. Δίνεται από τον τύπο "
+"(εκθ(x) + εκθ(-x)) / 2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "εκθ"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr ""
+"εκθ(x), επιστρέφει τη δύναμη x του νεπέριου αριθμού e. Δίνεται από τον τύπο "
+"e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "παρ"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
+"παρ(x), επιστρέφει το παραγοντικού του x. Δίνεται από τον τύπο x * (x - 1)  "
+"* (x - 2) * ... * 1"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "συναρτήσεις"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
 msgstr ""
+"συναρτήσεις(), επιστρέφει τη λίστα όλων των συναρτήσεων που έχουν οριστεί"
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "λογ"
 
 #: eqnparserhelp.py:72
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"λογ(x), επιστρέφει το φυσικό λογάριθμο του x. Αυτή είναι η τιμή όπου η "
+"δύναμη exp() είναι ίση με x. Ορίζεται για x >= 0"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "τελεστές"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "τελεστές(), επιστρέφει μια λίστα από τους τελεστές που έχουν οριστεί"
 
 #: eqnparserhelp.py:79
 msgid "or"

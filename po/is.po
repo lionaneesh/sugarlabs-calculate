@@ -84,6 +84,7 @@ msgstr "Fall '%s' er ekki skilgreint"
 
 #: eqnparser.py:359
 #, python-format
+#, fuzzy
 msgid "Invalid number of arguments (%d instead of %d)"
 msgstr "Ólöglegur fjöldi "
 
@@ -94,6 +95,7 @@ msgstr "fallið tekur %d "
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
+#, fuzzy
 msgid "Unable to parse argument %d: '%s'"
 msgstr "Gat ekki skilið "
 

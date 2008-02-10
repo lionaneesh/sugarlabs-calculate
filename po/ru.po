@@ -284,7 +284,7 @@ msgstr "Неправильная строка состояния (%s)"
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Не могу прочитать запись из журнала, неизвестная версия (%"
+msgstr "Не могу прочитать запись из журнала, неизвестная версия (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"

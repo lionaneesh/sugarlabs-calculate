@@ -87,7 +87,7 @@ msgstr "عنوانات"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "کوئی مدد نہيں'٪' موجود، مدد استعمال کريں(فہرست) فہرست کے ليے"
+msgstr "کوئی مدد نہيں'%s' موجود، مدد استعمال کريں(فہرست) فہرست کے ليے"
 
 #: eqnparser.py:87
 msgid "Type error"
@@ -96,47 +96,47 @@ msgstr "لکھنے کی غلطی"
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr "٪ ڈی پر غلطی"
+msgstr "%d ڈی پر غلطی"
 
 #: eqnparser.py:299
 #, python-format
 msgid "variable %s not defined"
-msgstr "ويری ايبل ٪ لکھيں نہيں ہيں"
+msgstr "ويری ايبل %s لکھيں نہيں ہيں"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "فنکشن ٪ لکھيں نہيں ہيں"
+msgstr "فنکشن '%s' لکھيں نہيں ہيں"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "دلائل غلط ہيں (٪ کی جگہ ٪)"
+msgstr "دلائل غلط ہيں (%d کی جگہ %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "فنکشن  ٪ اے آر جی ايس ليتے ہيں"
+msgstr "فنکشن  %d اے آر جی ايس ليتے ہيں"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "آرگيومينٹ کو پارس کرنے سے معزور ٪ڈی \"٪ايس\""
+msgstr "آرگيومينٹ کو پارس کرنے سے معزور %d \"%s\""
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr "فنکشن کی غلطی: ٪ايس"
+msgstr "فنکشن کی غلطی: %s"
 
 #: eqnparser.py:358
 #, python-format
 msgid "Function '%s' returned %s"
-msgstr "فنکشن \"٪ايس\" واپس آيا ٪ايس"
+msgstr "فنکشن \"%s\" واپس آيا %s"
 
 #: eqnparser.py:457
 #, python-format
 msgid "Variable '%s' undefined"
-msgstr "ويری ايبل ٪ايس نہيں لکھا"
+msgstr "ويری ايبل %s نہيں لکھا"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
@@ -250,17 +250,17 @@ msgstr "کاٹيں"
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "مساوات جبريہ۔پارس() غلط عبارت"
+msgstr "مساوات جبريہ۔پارس() غلط عبارت (%s)"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "روذنامچہ ميں لکھنا(٪)"
+msgstr "روذنامچہ ميں لکھنا(%s)"
 
 #: calculate.py:506
 #, python-format
 msgid "Reading from journal (%s)"
-msgstr "روذنامچہ سے پڑھنا(٪)"
+msgstr "روذنامچہ سے پڑھنا(%s)"
 
 #: calculate.py:512
 msgid "Unable to determine version"
@@ -269,17 +269,17 @@ msgstr "ورژن سمجھنے ميں قاصر"
 #: calculate.py:517
 #, python-format
 msgid "Reading journal entry (version %s)"
-msgstr "روزنامچہ سے پڑھنا(ورژن ٪)"
+msgstr "روزنامچہ سے پڑھنا(ورژن %s)"
 
 #: calculate.py:522
 #, python-format
 msgid "State line invalid (%s)"
-msgstr "سيدھی لکير غلط ہے(٪)"
+msgstr "سيدھی لکير غلط ہے(%s)"
 
 #: calculate.py:539
 #, python-format
 msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "روزنامچہ ميں سے پڑھنے سے قاصر، ورژن معلوم نہيں(٪)"
+msgstr "روزنامچہ ميں سے پڑھنے سے قاصر، ورژن معلوم نہيں(%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -288,12 +288,12 @@ msgstr "بٹن_دبايا():غلط قسم"
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "ليول:٪ڈی،او ايف ايس ٪ڈی"
+msgstr "ليول: %d، او ايف ايس %d"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "ويری ايبل \"٪ايس\" نہيں لکھا"
+msgstr "ويری ايبل \"%s\" نہيں لکھا"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
