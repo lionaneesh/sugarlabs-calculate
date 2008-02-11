@@ -104,6 +104,10 @@ class AlgebraToolbar(gtk.Toolbar):
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sqrt'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
 
+        self.insert(IconToolButton('x<sup>-1</sup>', _('Inverse'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^-1'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
+
         self.insert(LineSeparator(), -1)
 
         self.insert(IconToolButton('e<sup>x</sup>', _('e to the power x'),
