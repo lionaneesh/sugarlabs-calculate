@@ -222,15 +222,27 @@ class MathLib:
         return self.d(math.fabs(x))
 
     def add(self, x, y):
+        if isinstance(x, Decimal) or isinstance(y, Decimal):
+            x = self.d(x)
+            y = self.d(y)
         return x + y
 
     def sub(self, x, y):
+        if isinstance(x, Decimal) or isinstance(y, Decimal):
+            x = self.d(x)
+            y = self.d(y)
         return x - y
 
     def mul(self, x, y):
+        if isinstance(x, Decimal) or isinstance(y, Decimal):
+            x = self.d(x)
+            y = self.d(y)
         return x * y
 
     def div(self, x, y):
+        if isinstance(x, Decimal) or isinstance(y, Decimal):
+            x = self.d(x)
+            y = self.d(y)
         if y == 0:
             return None
         else:
@@ -238,8 +250,14 @@ class MathLib:
 
     def pow(self, x, y):
         if self.is_int(y):
-            return float(x) ** int(y)
+            if self.is_int(x):
+                return long(x) ** int(y)
+            else:
+                return float(x) ** int(y)
         else:
+            if isinstance(x, Decimal) or isinstance(y, Decimal):
+                x = self.d(x)
+                y = self.d(y)
             return self.d(math.pow(float(x), float(y)))
 
     def sqrt(self, x):
