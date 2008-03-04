@@ -16,14 +16,31 @@ _logger = logging.getLogger('calc-activity')
 
 from gettext import gettext as _
 
+def _icon_exists(name):
+    if name == '':
+        return False
+
+    theme = gtk.icon_theme_get_default()
+    info = theme.lookup_icon(name, 0, 0)
+    if info:
+        return True
+
+    return False
+
 class IconToolButton(ToolButton):
-    def __init__(self, icon_name, text, cb, help_cb=None):
+    def __init__(self, icon_name, text, cb, help_cb=None, alt_html=''):
         ToolButton.__init__(self)
 
-        label = gtk.Label()
-        label.set_markup(icon_name)
-        label.show()
-        self.set_label_widget(label)
+        if _icon_exists(icon_name):
+            self.set_icon(icon_name)
+        else:
+            if alt_html == '':
+                alt_html = icon_name
+
+            label = gtk.Label()
+            label.set_markup(alt_html)
+            label.show()
+            self.set_label_widget(label)
 
         self.create_palette(text, help_cb)
 
@@ -40,12 +57,17 @@ class IconToolButton(ToolButton):
 
         self.set_palette(p)
 
-class IconToggleToolButton(gtk.ToggleToolButton):
-    def __init__(self, items, cb):
-        gtk.ToggleToolButton.__init__(self)
+class IconToggleToolButton(ToggleToolButton):
+
+    def __init__(self, items, cb, desc):
+        ToggleToolButton.__init__(self)
         self.items = items
-        self.set_label(items[0][0])
+        if _icon_exists(items[0][0]):
+            self.set_named_icon(items[0][0])
+        else:
+            self.set_label(items[0][0])
 #        self.set_tooltip(items[0][1])
+        self.set_tooltip(desc)
         self.selected = 0
         self.connect('clicked', self.toggle_button)
         self.callback = cb
@@ -53,7 +75,10 @@ class IconToggleToolButton(gtk.ToggleToolButton):
     def toggle_button(self, w):
         self.selected = (self.selected + 1) % len(self.items)
         but = self.items[self.selected]
-        self.set_label(but[0])
+        if _icon_exists(but[0]):
+            self.set_named_icon(but[0])
+        else:
+            self.set_label(but[0])
 #        self.set_tooltip(but[1])
         if self.callback is not None:
             self.callback(but[0])
@@ -83,44 +108,52 @@ class EditToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('copy', _('Copy'),
-            lambda x: calc.text_copy()), -1)
+        self.insert(IconToolButton('edit-copy', _('Copy'),
+            lambda x: calc.text_copy(),
+            alt_html='Copy'), -1)
 
-        self.insert(IconToolButton('paste', _('Paste'),
-            lambda x: calc.text_paste()), -1)
+        self.insert(IconToolButton('edit-paste', _('Paste'),
+            lambda x: calc.text_paste(),
+            alt_html='Paste'), -1)
 
-        self.insert(IconToolButton('cut', _('Cut'),
-            lambda x: calc.text_cut()), -1)
+        self.insert(IconToolButton('edit-cut', _('Cut'),
+            lambda x: calc.text_cut(),
+            alt_html='Cut'), -1)
 
 class AlgebraToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('x<sup>2</sup>', _('Square'),
+        self.insert(IconToolButton('square', _('Square'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^2'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(square)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(square)'),
+            alt_html='x<sup>2</sup>'), -1)
 
-        self.insert(IconToolButton('√x', _('Square root'),
+        self.insert(IconToolButton('sqrt', _('Square root'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sqrt'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)'),
+            alt_html='√x'), -1)
 
-        self.insert(IconToolButton('x<sup>-1</sup>', _('Inverse'),
+        self.insert(IconToolButton('xinv', _('Inverse'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^-1'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(inv)'),
+            alt_html='x<sup>-1</sup>'), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('e<sup>x</sup>', _('e to the power x'),
+        self.insert(IconToolButton('exp', _('e to the power x'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'exp'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(exp)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(exp)'),
+            alt_html='e<sup>x</sup>'), -1)
 
-        self.insert(IconToolButton('x<sup>y</sup>', _('x to the power y'),
+        self.insert(IconToolButton('xpowy', _('x to the power y'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'pow'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(pow)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(pow)'),
+            alt_html='x<sup>y</sup>'), -1)
 
         self.insert(IconToolButton('ln', _('Natural logarithm'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'ln'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(ln)')), -1)
 
         self.insert(LineSeparator(), -1)
 
@@ -200,8 +233,9 @@ class ConstantsToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('π', _('Pi'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'pi')), -1)
+        self.insert(IconToolButton('pi', _('Pi'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'pi'),
+            alt_html='π'), -1)
 
         self.insert(IconToolButton('e', _('e'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
@@ -214,7 +248,8 @@ class FormatToolbar(gtk.Toolbar):
             ['rad', _('Radians')]
         ]
         self.insert(IconToggleToolButton(el, 
-                    lambda x: self.update_angle_type(x, calc)), -1)
+                    lambda x: self.update_angle_type(x, calc),
+                    _('Degrees / radians')), -1)
     
     def update_angle_type(self, text, calc):
         if text == 'deg':
