@@ -96,12 +96,14 @@ class MathLib:
     def d(self, val):
         if isinstance(val, Decimal):
             return val
-        elif type(val) is types.FloatType or type(val) is types.IntType:
-            s = '%.10e' % val
-            d = Decimal(s)
-            return d.normalize()
-        elif type(val) is types.StringType or type(val) is types.LongType:
+        elif type(val) in (types.IntType, types.LongType):
+            return Decimal(val)
+        elif type(val) == types.StringType:
             d = Decimal(val)
+            return d.normalize()
+        elif type(val) is types.FloatType or hasattr(val, '__float__'):
+            s = '%.10e' % float(val)
+            d = Decimal(s)
             return d.normalize()
         else:
             return None
@@ -199,6 +201,8 @@ class MathLib:
 
         if not isinstance(n, Decimal):
             n = self.d(n)
+            if n is None:
+                return False
 
         (sign, d, e) = n.normalize().as_tuple()
         return e >= 0
@@ -252,6 +256,8 @@ class MathLib:
         if self.is_int(y):
             if self.is_int(x):
                 return long(x) ** int(y)
+            elif hasattr(x, '__pow__'):
+                return x ** y
             else:
                 return float(x) ** int(y)
         else:

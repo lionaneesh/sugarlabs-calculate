@@ -130,3 +130,10 @@ class Rational:
         self.n = abs(self.n)
         self.d = abs(self.d)
 
+    def __pow__(self, rval):
+        if type(rval) is types.IntType or type(rval) is types.LongType:
+            ret = Rational(self.n ** rval, self.d ** rval)
+        else:
+            ret = float(self.n) ** rval / float(self.d) ** rval
+
+        return ret
