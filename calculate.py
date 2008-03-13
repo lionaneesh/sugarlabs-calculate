@@ -808,10 +808,11 @@ class Calculate(activity.Activity):
     def format_insert_ans(self):
         ans = self.parser.get_var('Ans')
         if isinstance(ans, Rational):
-            ansstr = str(ans)
+            return str(ans)
+        elif ans is not None:
+            return self.ml.format_number(ans)
         else:
-            ansstr = self.ml.format_number(ans)
-        return ansstr
+            return ''
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)
