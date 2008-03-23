@@ -62,10 +62,10 @@ class IconToggleToolButton(ToggleToolButton):
     def __init__(self, items, cb, desc):
         ToggleToolButton.__init__(self)
         self.items = items
-        if _icon_exists(items[0][0]):
-            self.set_named_icon(items[0][0])
+        if _icon_exists(items[0]['icon']):
+            self.set_named_icon(items[0]['icon'])
         else:
-            self.set_label(items[0][0])
+            self.set_label(items[0]['html'])
 #        self.set_tooltip(items[0][1])
         self.set_tooltip(desc)
         self.selected = 0
@@ -75,13 +75,13 @@ class IconToggleToolButton(ToggleToolButton):
     def toggle_button(self, w):
         self.selected = (self.selected + 1) % len(self.items)
         but = self.items[self.selected]
-        if _icon_exists(but[0]):
-            self.set_named_icon(but[0])
+        if _icon_exists(but['icon']):
+            self.set_named_icon(but['icon'])
         else:
-            self.set_label(but[0])
+            self.set_label(but['html'])
 #        self.set_tooltip(but[1])
         if self.callback is not None:
-            self.callback(but[0])
+            self.callback(but)
 
 class TextToggleToolButton(gtk.ToggleToolButton):
     def __init__(self, items, cb):
@@ -124,40 +124,40 @@ class AlgebraToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('square', _('Square'),
+        self.insert(IconToolButton('algebra-square', _('Square'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^2'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(square)'),
             alt_html='x<sup>2</sup>'), -1)
 
-        self.insert(IconToolButton('sqrt', _('Square root'),
+        self.insert(IconToolButton('algebra-sqrt', _('Square root'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sqrt'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sqrt)'),
             alt_html='√x'), -1)
 
-        self.insert(IconToolButton('xinv', _('Inverse'),
+        self.insert(IconToolButton('algebra-xinv', _('Inverse'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^-1'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(inv)'),
             alt_html='x<sup>-1</sup>'), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('exp', _('e to the power x'),
+        self.insert(IconToolButton('algebra-exp', _('e to the power x'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'exp'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(exp)'),
             alt_html='e<sup>x</sup>'), -1)
 
-        self.insert(IconToolButton('xpowy', _('x to the power y'),
+        self.insert(IconToolButton('algebra-xpowy', _('x to the power y'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'pow'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(pow)'),
             alt_html='x<sup>y</sup>'), -1)
 
-        self.insert(IconToolButton('ln', _('Natural logarithm'),
+        self.insert(IconToolButton('algebra-ln', _('Natural logarithm'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'ln'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(ln)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('fac', _('Factorial'),
+        self.insert(IconToolButton('algebra-fac', _('Factorial'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(fac)')), -1)
 
@@ -165,43 +165,43 @@ class TrigonometryToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('sin', _('Sine'),
+        self.insert(IconToolButton('trigonometry-sin', _('Sine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sin'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sin)')), -1)
 
-        self.insert(IconToolButton('cos', _('Cosine'),
+        self.insert(IconToolButton('trigonometry-cos', _('Cosine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'cos'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cos)')), -1)
 
-        self.insert(IconToolButton('tan', _('Tangent'),
+        self.insert(IconToolButton('trigonometry-tan', _('Tangent'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'tan'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tan)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('asin', _('Arc sine'),
+        self.insert(IconToolButton('trigonometry-asin', _('Arc sine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'asin'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(asin)')), -1)
 
-        self.insert(IconToolButton('acos', _('Arc cosine'),
+        self.insert(IconToolButton('trigonometry-acos', _('Arc cosine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'acos'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(acos)')), -1)
 
-        self.insert(IconToolButton('atan', _('Arc tangent'),
+        self.insert(IconToolButton('trigonometry-atan', _('Arc tangent'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'atan'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(atan)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('sinh', _('Hyperbolic sine'),
+        self.insert(IconToolButton('trigonometry-sinh', _('Hyperbolic sine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sinh'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sinh)')), -1)
 
-        self.insert(IconToolButton('cosh', _('Hyperbolic cosine'),
+        self.insert(IconToolButton('trigonometry-cosh', _('Hyperbolic cosine'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'cosh'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cosh)')), -1)
 
-        self.insert(IconToolButton('tanh', _('Hyperbolic tangent'),
+        self.insert(IconToolButton('trigonometry-tanh', _('Hyperbolic tangent'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'tanh'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tanh)')), -1)
 
@@ -209,43 +209,43 @@ class BooleanToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('and', _('Logical and'),
+        self.insert(IconToolButton('boolean-and', _('Logical and'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '&'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(and))')), -1)
 
-        self.insert(IconToolButton('or', _('Logical or'),
+        self.insert(IconToolButton('boolean-or', _('Logical or'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '|'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(or)')), -1)
 
-#        self.insert(IconToolButton('xor', _('Logical xor'),
+#        self.insert(IconToolButton('boolean-xor', _('Logical xor'),
 #            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^'),
 #            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(xor)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('eq', _('Equals'),
+        self.insert(IconToolButton('boolean-eq', _('Equals'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '=')), -1)
 
-        self.insert(IconToolButton('neq', _('Not equals'),
+        self.insert(IconToolButton('boolean-neq', _('Not equals'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
 
 class ConstantsToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('pi', _('Pi'),
+        self.insert(IconToolButton('constants-pi', _('Pi'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'pi'),
             alt_html='π'), -1)
 
-        self.insert(IconToolButton('e', _('e'),
+        self.insert(IconToolButton('constants-e', _('e'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
 
 class FormatToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
         el = [
-            ['deg', _('Degrees')],
-            ['rad', _('Radians')]
+            {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'Deg'},
+            {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'Rad'},
         ]
         self.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
