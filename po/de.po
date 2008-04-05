@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-30 02:42-0500\n"
+"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"PO-Revision-Date: 2008-03-25 09:57-0400\n"
 "Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -34,33 +34,13 @@ msgstr "Verfügbare Funktionen:"
 msgid "Writing to journal (%s)"
 msgstr "Schreibe ins Journal (%s)"
 
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "Lese vom Journal (%s)"
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr "Version nicht feststellbar"
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "Lese Journaleintrag (version %s)"
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr "Grenzbereich ungültig (%s)"
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Journaleintrag kann nicht gelesen werden, unbekannte Version (%s)"
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): ungültiger Typ"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Verarbeitungsfehler"
 
 #: eqnparser.py:58
 #, python-format
@@ -72,10 +52,10 @@ msgstr "Ebene: %d, von %d"
 msgid "Error at %d"
 msgstr "Fehler bei %d"
 
-#: eqnparser.py:234
-#, fuzzy
-msgid "help_var"
-msgstr "help_var"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Verwende Hilfe(Test) für Hilfe über 'Test' oder Hilfe(Index) für den Index"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -107,6 +87,10 @@ msgstr "Funktionsfehler: %s"
 msgid "Variable '%s' not defined"
 msgstr "Variable '%s' nicht definiert"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Linke Klammer unerwartet"
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "Bestimmungsfehler (Rechte Klammer)"
@@ -119,6 +103,10 @@ msgstr "Rechte Klammer unerwartet"
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Bestimmungsfehler (Rechte Klammer, kein linker Wert)"
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Verarbeitungsfehler (Rechte Klammer, kein Möglichkeit zum schließen)"
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Unerwartete Zahl"
@@ -126,6 +114,14 @@ msgstr "Unerwartete Zahl"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Unerwarteter Operator"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Verarbeitungsfehler: Zahl oder Variable erwartet"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Zahl oder Variable erwartet"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -139,169 +135,9 @@ msgstr "Operator erwartet"
 msgid "_parse(): returning None"
 msgstr "_parse(): kein Rückgabewert"
 
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-#, fuzzy
-msgid "help_acos"
-msgstr "help_acos"
-
-#: eqnparserhelp.py:38
-#, fuzzy
-msgid "help_asin"
-msgstr "help_asin"
-
-#: eqnparserhelp.py:39
-#, fuzzy
-msgid "help_cos"
-msgstr "help_cos"
-
-#: eqnparserhelp.py:40
-#, fuzzy
-msgid "help_exp"
-msgstr "help_exp"
-
-#: eqnparserhelp.py:41
-#, fuzzy
-msgid "help_functions"
-msgstr "help_functions"
-
-#: eqnparserhelp.py:42
-#, fuzzy
-msgid "help_operators"
-msgstr "help_operators"
-
-#: eqnparserhelp.py:43
-#, fuzzy
-msgid "help_plot"
-msgstr "help_plot"
-
-#: eqnparserhelp.py:44
-#, fuzzy
-msgid "help_sin"
-msgstr "help_sin"
-
-#: eqnparserhelp.py:45
-#, fuzzy
-msgid "help_sqrt"
-msgstr "help_sqrt"
-
-#: eqnparserhelp.py:46
-#, fuzzy
-msgid "help_test"
-msgstr "help_test"
-
-#: eqnparserhelp.py:47
-#, fuzzy
-msgid "help_variables"
-msgstr "help_variables"
-
-#: eqnparserhelp.py:58
-#, fuzzy
-msgid "help_usage"
-msgstr "help_usage"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Themen"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Keine Hilfe bezüglich '%s' verfügbar, verwende help(index) um Übersicht "
-"anzuzeigen"
-
-#: layout.py:60
-msgid "Edit"
-msgstr "Bearbeiten"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "Algebra"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "Trigonometrie"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "Boole'sche Algebra"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "Konstanten"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Format"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "Bezeichnung:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "Alle Berechnungen"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "Meine Berechnungen"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "Verlauf anzeigen"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "Variablen anzeigen"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr ". ist das Trennzeichen für Tausender."
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr "/ ist das Bruchzeichen."
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "* ist das Zeichen für multiplizieren."
-
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "/ ist das Zeichen für die Division."
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Verarbeitungsfehler"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Verwende Hilfe(Test) für Hilfe über 'Test' oder Hilfe(Index) für den Index"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Linke Klammer unerwartet"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Verarbeitungsfehler (Rechte Klammer, kein Möglichkeit zum schließen)"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Verarbeitungsfehler: Zahl oder Variable erwartet"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Zahl oder Variable erwartet"
-
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
@@ -549,6 +385,71 @@ msgstr ""
 msgid "index"
 msgstr "Index"
 
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Themen"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Keine Hilfe bezüglich '%s' verfügbar, verwende help(index) um Übersicht "
+"anzuzeigen"
+
+#: layout.py:60
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "Trigonometrie"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Boole'sche Algebra"
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Konstanten"
+
+#: layout.py:65
+msgid "Format"
+msgstr "Format"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "Bezeichnung:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "Alle Berechnungen"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "Meine Berechnungen"
+
+#: layout.py:120
+msgid "Show history"
+msgstr "Verlauf anzeigen"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "Variablen anzeigen"
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "* ist das Zeichen für multiplizieren."
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "/ ist das Zeichen für die Division."
+
 #: mathlib.py:132
 msgid "Undefined"
 msgstr "Nicht definiert"
@@ -557,110 +458,195 @@ msgstr "Nicht definiert"
 msgid "Error: unsupported type"
 msgstr "Fehler: Typ nicht unterstützt"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "Hilfe"
 
-#: toolbars.py:86
+#: toolbars.py:111
 msgid "Copy"
 msgstr "Kopieren"
 
-#: toolbars.py:89
+#: toolbars.py:115
 msgid "Paste"
 msgstr "Einfügen"
 
-#: toolbars.py:92
+#: toolbars.py:119
 msgid "Cut"
 msgstr "Ausschneiden"
 
-#: toolbars.py:99
+#: toolbars.py:127
 msgid "Square"
 msgstr "Quadrieren"
 
-#: toolbars.py:103
+#: toolbars.py:132
 msgid "Square root"
 msgstr "Quadratwurzel"
 
-#: toolbars.py:109
+#: toolbars.py:137
+msgid "Inverse"
+msgstr "Reziprok"
+
+#: toolbars.py:144
 msgid "e to the power x"
 msgstr "e hoch x"
 
-#: toolbars.py:117
+#: toolbars.py:149
+msgid "x to the power y"
+msgstr "x hoch y"
+
+#: toolbars.py:154
 msgid "Natural logarithm"
 msgstr "Natürlicher Logarithmus"
 
-#: toolbars.py:123
+#: toolbars.py:160
 msgid "Factorial"
 msgstr "Fakturiell"
 
-#: toolbars.py:131
+#: toolbars.py:168
 msgid "Sine"
 msgstr "Sinus"
 
-#: toolbars.py:135
+#: toolbars.py:172
 msgid "Cosine"
 msgstr "Cosinus"
 
-#: toolbars.py:139
+#: toolbars.py:176
 msgid "Tangent"
 msgstr "Tangens"
 
-#: toolbars.py:145
+#: toolbars.py:182
 msgid "Arc sine"
 msgstr "Arcussinus"
 
-#: toolbars.py:149
+#: toolbars.py:186
 msgid "Arc cosine"
 msgstr "Arcuscosinus"
 
-#: toolbars.py:153
+#: toolbars.py:190
 msgid "Arc tangent"
 msgstr "Arcustangens"
 
-#: toolbars.py:159
+#: toolbars.py:196
 msgid "Hyperbolic sine"
 msgstr "Sinus hyperbolicus"
 
-#: toolbars.py:163
+#: toolbars.py:200
 msgid "Hyperbolic cosine"
 msgstr "Cosinus hyperbolicus"
 
-#: toolbars.py:167
+#: toolbars.py:204
 msgid "Hyperbolic tangent"
 msgstr "Tangens hyperbolicus"
 
-#: toolbars.py:175
+#: toolbars.py:212
 msgid "Logical and"
 msgstr "Logisches und"
 
-#: toolbars.py:179
+#: toolbars.py:216
 msgid "Logical or"
 msgstr "Logisches oder"
 
-#: toolbars.py:189
+#: toolbars.py:226
 msgid "Equals"
 msgstr "Gleich"
 
-#: toolbars.py:192
+#: toolbars.py:229
 msgid "Not equals"
 msgstr "Ungleich"
 
-#: toolbars.py:199
+#: toolbars.py:236
 msgid "Pi"
 msgstr "Pi"
 
-#: toolbars.py:202
+#: toolbars.py:240
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:209
+#: toolbars.py:247
 msgid "Degrees"
 msgstr "Grad"
 
-#: toolbars.py:210
+#: toolbars.py:248
 msgid "Radians"
 msgstr "Radiant"
 
-#: toolbars.py:113
-msgid "x to the power y"
-msgstr "x hoch y"
+#: toolbars.py:252
+msgid "Degrees / radians"
+msgstr "Grad / Radiant"
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "Lese vom Journal (%s)"
+
+#~ msgid "Unable to determine version"
+#~ msgstr "Version nicht feststellbar"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "Lese Journaleintrag (version %s)"
+
+#, python-format
+#~ msgid "State line invalid (%s)"
+#~ msgstr "Grenzbereich ungültig (%s)"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "Journaleintrag kann nicht gelesen werden, unbekannte Version (%s)"
+
+#, fuzzy
+#~ msgid "help_var"
+#~ msgstr "help_var"
+
+#, fuzzy
+#~ msgid "help_acos"
+#~ msgstr "help_acos"
+
+#, fuzzy
+#~ msgid "help_asin"
+#~ msgstr "help_asin"
+
+#, fuzzy
+#~ msgid "help_cos"
+#~ msgstr "help_cos"
+
+#, fuzzy
+#~ msgid "help_exp"
+#~ msgstr "help_exp"
+
+#, fuzzy
+#~ msgid "help_functions"
+#~ msgstr "help_functions"
+
+#, fuzzy
+#~ msgid "help_operators"
+#~ msgstr "help_operators"
+
+#, fuzzy
+#~ msgid "help_plot"
+#~ msgstr "help_plot"
+
+#, fuzzy
+#~ msgid "help_sin"
+#~ msgstr "help_sin"
+
+#, fuzzy
+#~ msgid "help_sqrt"
+#~ msgstr "help_sqrt"
+
+#, fuzzy
+#~ msgid "help_test"
+#~ msgstr "help_test"
+
+#, fuzzy
+#~ msgid "help_variables"
+#~ msgstr "help_variables"
+
+#, fuzzy
+#~ msgid "help_usage"
+#~ msgstr "help_usage"
+
+#~ msgid "thousand_sep"
+#~ msgstr ". ist das Trennzeichen für Tausender."
+
+#~ msgid "fraction_sep"
+#~ msgstr "/ ist das Bruchzeichen."
