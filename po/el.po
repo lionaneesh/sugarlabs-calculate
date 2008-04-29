@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-09 11:47-0500\n"
+"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"PO-Revision-Date: 2008-03-29 04:17-0400\n"
 "Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -34,35 +34,13 @@ msgstr "Διαθέσιμες συναρτήσεις"
 msgid "Writing to journal (%s)"
 msgstr "Εγγραφή στο ημερολόγιο (%s)"
 
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "Ανάγνωση από το ημερολόγιο (%s)"
-
-# Αδυναμία να καθοριστεί έκδοση
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr "Αδυναμία καθορισμού της έκδοσης"
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "Ανάγνωση καταχώρησης ημερολογίου (έκδοση %s)"
-
-#: calculate.py:522
-#, python-format
-#, fuzzy
-msgid "State line invalid (%s)"
-msgstr "Μή αποδεκτή γραμμή οριοθέτησης"
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Αδυναμία ανάγνωσης καταχώρησης ημερολογίου, άγνωστη έκδοση (%s)"
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): μη αποδεκτός τύπος"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Λάθος ανάλυσης"
 
 #: eqnparser.py:58
 #, python-format
@@ -74,9 +52,11 @@ msgstr "επίπεδο: %d, μετ. %d"
 msgid "Error at %d"
 msgstr "Σφάλμα στο %d"
 
-#: eqnparser.py:234
-msgid "help_var"
-msgstr "βοηθ_μεταβλητή"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα."
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -108,6 +88,10 @@ msgstr "Σφάλμα συνάρτησης: %s"
 msgid "Variable '%s' not defined"
 msgstr "Η μεταβλητή '%s' δεν εχει καθοριστεί"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Μη αναμενόμενη αριστερή παρένθεση"
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση)"
@@ -120,6 +104,10 @@ msgstr "Μη αναμενόμενη δεξιά παρένθεση"
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει αριστερή_τιμή)"
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει επίπεδο για να κλείσει)"
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Μη αναμενόμενος αριθμός"
@@ -127,6 +115,14 @@ msgstr "Μη αναμενόμενος αριθμός"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Μη αναμενόμενος τελεστής"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Σφάλμα ανάλυσης: περίμενα αριθμό ή μεταβλητή"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Περίμενα αριθμό ή μεταβλητή"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -140,159 +136,9 @@ msgstr "Αναμενόταν τελεστής"
 msgid "_parse(): returning None"
 msgstr "_parse(): επιστρέφει Κενό"
 
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr "βοηθ_τοξσυν"
-
-#: eqnparserhelp.py:38
-msgid "help_asin"
-msgstr "βοηθ_τοξημ"
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr "βοηθ_συν"
-
-#: eqnparserhelp.py:40
-msgid "help_exp"
-msgstr "βοηθ_εκθ"
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr "βοηθ_συναρτήσεις"
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr "βοηθ_τελεστές"
-
-#: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr "βοηθ_σχέδιο"
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr "βοηθ_ημ"
-
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr "βοηθ_ρίζα"
-
-#: eqnparserhelp.py:46
-msgid "help_test"
-msgstr "βοηθ_δοκιμή"
-
-#: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr "βοηθ_μεταβλητές"
-
-#: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr "βοηθ_χρήση"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Θέματα"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
-"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
-
-#: layout.py:60
-msgid "Edit"
-msgstr "Επεξεργασία"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "Άλγεβρα"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "Τριγωνομετρία"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "Δυαδικό"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "Σταθερές"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Μορφή"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "Ετικέτα:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "Όλες οι εξισώσεις"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "Οι εξισώσεις μου"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "Εμφάνιση ιστορικού"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "Εμφάνιση μεταβλητών"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr "διαχ_χιλιάδων"
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr "υποδιαστολή"
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "συμβ_πολλ/σμού"
-
-# Σύμβολο διαίρεσης (προκαθορισμένο: '/')
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "συμβ_διαίρεσης"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Λάθος ανάλυσης"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
-"βοήθεια(περιεχόμενα) για τα περιεχόμενα."
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Μη αναμενόμενη αριστερή παρένθεση"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Σφάλμα ανάλυσης (δεξιά παρένθεση, δεν υπάρχει επίπεδο για να κλείσει)"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Σφάλμα ανάλυσης: περίμενα αριθμό ή μεταβλητή"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Περίμενα αριθμό ή μεταβλητή"
-
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
@@ -316,8 +162,8 @@ msgstr "και"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"και(x, y), λογικό και. Επιστρέφει Αληθής αν x και y είναι Αληθή, διαφορετικά "
-"επιστρέφει Ψευδής"
+"και(x, y), λογικό \"και\" (Σύζευξη). Επιστρέφει Αληθής αν x και y είναι Αληθή, "
+"διαφορετικά επιστρέφει Ψευδής"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -419,63 +265,75 @@ msgstr "τελεστές(), επιστρέφει μια λίστα από του
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "ή"
 
+# Πιστεύω ότι από την εμπειρία μου σαν προγραμματιστής για να δόσεις στον άλλο να καταλάβει την έννοια του "και" ή του "ή" είναι να του πεις μόνο 1 περίπτωση για το καθένα. Για το ΚΑΙ είναι το Αληθής και για το Ή είναι το Ψευδής που εμφανίζεται μόνο 1 φορά στον πίνακα αληθείας.
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"ή(x, y), λογικό \"ή\" (Διάζευξη). Επιστρέφει Ψευδής αν x και y είναι Ψευδής, "
+"διαφορετικά επιστρέφει Αληθής"
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "σχεδ"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"σχεδ(συν, μετ=-α..β), σχεδιάζει τη συνάρτηση 'συν' με μεταβλητή 'μετ' στο "
+"διάστημα [α,β]"
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "ημ"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"ημ(x), επιστρέφει το ημίτονο του x. Αυτή είναι η οριζόντια συντεταγμένη του "
+"τριγωνομετρικού κύκλου της γωνίας x"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "ημυ"
 
 #: eqnparserhelp.py:91
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"ημυ(x), επιστρέφει το υπερβολικό ημίτονο του x. Δίνεται από τον τύπο (εκθ(x) "
+"- εκθ(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "τ_ρ"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"τ_ρ(x), επιστρέφει την τετραγωνική ρίζα του x. Αυτή είναι η τιμή της οποίας "
+"το τετράγωνο ισούται με x. Ορίζεται για x >= 0."
 
+# τετρά - γωνο (τ_γ): Πιστεύω ότι στον κώδικα δε θα ήταν λογικό να βάλεις τετράγωνο(x) από το να γράψεις x*x το τ_γ(x) είναι πιο σύντομο.
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "τ_γ"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "τ_γ(x), επιστρέφει το τετράγωνο του x. Δίνεται από τον τύπο x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "εφ"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -483,22 +341,30 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"εφ(x), επιστρέφει την εφαπτόμενη του x. Είναι ένα ευθύγραμμο τμήμα που "
+"ξεκινάει από την τομή του άξονα του κύκλου με την περιφέρεια του κύκλου προς "
+"το σημείο που τέμνεται με την ακτίνα γωνίας x. Δίνεται από τον τύπο ημ(x) / "
+"συν(x)"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "τοξυ"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"τοξυ(x), επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
+"συνυ(x) / ημυ(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "δοκιμή"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
+"Αυτό είναι ένα δοκιμαστικό θέμα, χρησιμοποίησε βοήθεια(περιεχόμενα) για τα "
+"περιεχόμενα"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
@@ -511,18 +377,87 @@ msgstr "μεταβλητές(), επιστροφή λίστας μεταβλητ
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "είτε"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"είτε(x,y) To λογικό είτε: Επιστρέφει Αληθής αν η τιμή του x είναι "
+"διαφορετική από την τιμή του y. Αν η τιμή του x είναι ίση με του y "
+"επιστρέφει Ψευδής."
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
 msgstr "ευρετήριο"
+
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Θέματα"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
+
+#: layout.py:60
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "Άλγεβρα"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "Τριγωνομετρία"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Δυαδικό"
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Σταθερές"
+
+#: layout.py:65
+msgid "Format"
+msgstr "Μορφή"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "Ετικέτα:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "Όλες οι εξισώσεις"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "Οι εξισώσεις μου"
+
+#: layout.py:120
+msgid "Show history"
+msgstr "Εμφάνιση ιστορικού"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "Εμφάνιση μεταβλητών"
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "συμβ_πολλ/σμού"
+
+# Σύμβολο διαίρεσης (προκαθορισμένο: '/')
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "συμβ_διαίρεσης"
 
 #: mathlib.py:132
 msgid "Undefined"
@@ -532,110 +467,184 @@ msgstr "Ακαθόριστο"
 msgid "Error: unsupported type"
 msgstr "Σφάλμα: μη υποστηριζόμενος τύπος"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: toolbars.py:86
+#: toolbars.py:111
 msgid "Copy"
 msgstr "Αντιγραφή"
 
-#: toolbars.py:89
+#: toolbars.py:115
 msgid "Paste"
 msgstr "Επικόλληση"
 
-#: toolbars.py:92
+#: toolbars.py:119
 msgid "Cut"
 msgstr "Αποκοπή"
 
-#: toolbars.py:99
+#: toolbars.py:127
 msgid "Square"
-msgstr ""
+msgstr "Τετράγωνο"
 
-#: toolbars.py:103
+#: toolbars.py:132
 msgid "Square root"
-msgstr ""
+msgstr "Τετραγωνική Ρίζα"
 
-#: toolbars.py:109
+#: toolbars.py:137
+msgid "Inverse"
+msgstr "Αντιστροφή"
+
+#: toolbars.py:144
 msgid "e to the power x"
-msgstr ""
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr ""
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr ""
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr ""
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr ""
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr ""
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
+msgstr "To e υψωμένο στη δύναμη x"
 
 #: toolbars.py:149
-msgid "Arc cosine"
-msgstr ""
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr ""
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr ""
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr ""
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr ""
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr ""
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr ""
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr ""
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr ""
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr ""
-
-#: toolbars.py:202
-msgid "e"
-msgstr ""
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr ""
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr ""
-
-#: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "Το x υψωμένο ση δύναμη x"
+
+#: toolbars.py:154
+msgid "Natural logarithm"
+msgstr "Φυσικός Λογάριθμος"
+
+#: toolbars.py:160
+msgid "Factorial"
+msgstr "Παραγοντικό"
+
+#: toolbars.py:168
+msgid "Sine"
+msgstr "Ημίτονο"
+
+#: toolbars.py:172
+msgid "Cosine"
+msgstr "Συνημίτονο"
+
+#: toolbars.py:176
+msgid "Tangent"
+msgstr "Εφαπτομένη"
+
+#: toolbars.py:182
+msgid "Arc sine"
+msgstr "Τόξο Ημιτόνου"
+
+#: toolbars.py:186
+msgid "Arc cosine"
+msgstr "Τόξο Συνημιτόνου"
+
+#: toolbars.py:190
+msgid "Arc tangent"
+msgstr "Τόξο Εφαπτομένης"
+
+#: toolbars.py:196
+msgid "Hyperbolic sine"
+msgstr "Υπερβολικό ημίτονο"
+
+#: toolbars.py:200
+msgid "Hyperbolic cosine"
+msgstr "Υπερβολικό συνημίτονο"
+
+#: toolbars.py:204
+msgid "Hyperbolic tangent"
+msgstr "Υπερβολική εφαπτομένη"
+
+#: toolbars.py:212
+msgid "Logical and"
+msgstr "Λογικό \"καί\""
+
+#: toolbars.py:216
+msgid "Logical or"
+msgstr "Λογικό \"ή\""
+
+#: toolbars.py:226
+msgid "Equals"
+msgstr "Ισότητα"
+
+#: toolbars.py:229
+msgid "Not equals"
+msgstr "Ανισότητα"
+
+#: toolbars.py:236
+msgid "Pi"
+msgstr "π"
+
+#: toolbars.py:240
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:247
+msgid "Degrees"
+msgstr "Μοίρες"
+
+#: toolbars.py:248
+msgid "Radians"
+msgstr "Ακτίνια"
+
+#: toolbars.py:252
+msgid "Degrees / radians"
+msgstr "Μοίρες / ακτίνια"
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "Ανάγνωση από το ημερολόγιο (%s)"
+
+# Αδυναμία να καθοριστεί έκδοση
+#~ msgid "Unable to determine version"
+#~ msgstr "Αδυναμία καθορισμού της έκδοσης"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "Ανάγνωση καταχώρησης ημερολογίου (έκδοση %s)"
+
+#, python-format
+#, fuzzy
+#~ msgid "State line invalid (%s)"
+#~ msgstr "Μή αποδεκτή γραμμή οριοθέτησης"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "Αδυναμία ανάγνωσης καταχώρησης ημερολογίου, άγνωστη έκδοση (%s)"
+
+#~ msgid "help_var"
+#~ msgstr "βοηθ_μεταβλητή"
+
+#~ msgid "help_acos"
+#~ msgstr "βοηθ_τοξσυν"
+
+#~ msgid "help_asin"
+#~ msgstr "βοηθ_τοξημ"
+
+#~ msgid "help_cos"
+#~ msgstr "βοηθ_συν"
+
+#~ msgid "help_exp"
+#~ msgstr "βοηθ_εκθ"
+
+#~ msgid "help_functions"
+#~ msgstr "βοηθ_συναρτήσεις"
+
+#~ msgid "help_operators"
+#~ msgstr "βοηθ_τελεστές"
+
+#~ msgid "help_plot"
+#~ msgstr "βοηθ_σχέδιο"
+
+#~ msgid "help_sin"
+#~ msgstr "βοηθ_ημ"
+
+#~ msgid "help_sqrt"
+#~ msgstr "βοηθ_ρίζα"
+
+#~ msgid "help_test"
+#~ msgstr "βοηθ_δοκιμή"
+
+#~ msgid "help_variables"
+#~ msgstr "βοηθ_μεταβλητές"
+
+#~ msgid "help_usage"
+#~ msgstr "βοηθ_χρήση"
+
+#~ msgid "thousand_sep"
+#~ msgstr "διαχ_χιλιάδων"
+
+#~ msgid "fraction_sep"
+#~ msgstr "υποδιαστολή"
