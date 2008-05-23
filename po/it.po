@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-03-05 00:30-0500\n"
-"PO-Revision-Date: 2008-03-20 12:59-0400\n"
+"PO-Revision-Date: 2008-05-23 08:19-0400\n"
 "Last-Translator: Carlo Falciola <cfalciola@yahoo.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -318,9 +318,8 @@ msgstr ""
 "quadrato e uguale a x. Definito per x >= 0."
 
 #: eqnparserhelp.py:97
-#, fuzzy
 msgid "square"
-msgstr "Quadrato"
+msgstr "quadrato"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
