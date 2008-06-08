@@ -95,7 +95,7 @@ class Rational:
         return ret
 
     def __rsub__(self, lval):
-        return self.__sub__(lval)
+        return -self.__sub__(lval)
 
     def __mul__(self, rval):
         if isinstance(rval, Rational):
@@ -124,7 +124,7 @@ class Rational:
         return self.__div__(lval)
 
     def __neg__(self):
-        self.n = -self.n
+        return Rational(-self.n, self.d)
 
     def __abs__(self):
         self.n = abs(self.n)
