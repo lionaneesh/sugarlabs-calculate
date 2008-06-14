@@ -2,302 +2,320 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"PO-Revision-Date: 2008-05-10 03:25-0400\n"
+"Last-Translator: Rupali Sarode <rups23in@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "मोजा"
 
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "equation.parse() शब्द मान्य नाही(%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "मिळण्याजोगा साधन"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "नियतकालिक मधे लिहला जात आहे(%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed() : अमान्य प्रकार"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "पार्स चुक"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "स्तर: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "%d मधे चुक"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"'टेस्ट' बाबती मदतीसाठी 'हेल्प(टेस्ट)' वापरा, किंवा 'इंडेक्स' बाबती मदतीसाठी "
+"'हेल्प(इंडेक्स)' वापरा."
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "'%s' स्पष्ट नाही"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "सारांशाची संख्या अमान्य (%d चा जागी %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "फंकषण %d सारांश घेतो"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "%d सारांश पार्स करू शकत नाही: '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "फंकषण चुक: %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "वेरियबल '%s' पारिभाषित नाही"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "डावा कोष्ठक अविचारित आहे"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "पार्स चुक (उजवा कोष्ठक)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "उजवा कोष्ठक अविचारित आहे"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "पार्स चुक (उजवा कोष्ठक, left_val नाही)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "पार्स चुक (उजवा कोष्ठक, बंद करण्यासाठी स्तर नाही)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "संख्या अविचारित आहे"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "सूचक अविचारित आहे"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr ""
+msgstr "पार्स चुक: संख्या किंवा वेरियबल आल पाहिजे "
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "संख्या किंवा वेरियबल आल पाहिजे "
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "सूचक मान्य नाही"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "सूचक आल पाहिजे"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_parse(): रिटर्निंग नन"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"acos(x), x चा आर्क कोसाईंन परत करतो.हेया कोण साठी कोसाइन x आहे. -1 <= x < 1 "
+"साठी पारिभाषित"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr ""
+msgstr "and(x,y),लॉजिकल अँड. x आणि y ट्रू असल्यवर ट्रू नहितर फॉल्स परत करतो."
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"asin(x), x चा आर्क साईंन परत करतो.हेया कोण साठी साइन x आहे. -1 <= x < 1 साठी "
+"पारिभाषित"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"atan(x), जे x चा आर्क टेंजॅट परत करतो.हेया कोण साठी टेंजॅट x आहे. -1 <= जे < "
+"1 साठी पारिभाषित"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
 #: eqnparserhelp.py:55
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"cos(x), जे x चा कोसाईंन परत करतो. हे एकक वर्तुळ चा x कोणावर x अक्षांश चा मान "
+"आहे ."
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "cosh"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cos(x), जे x चा हाईपरबॉळिक कोसाईंन परत करतो. (exp(x) + exp(-x)) / 2 चा कडून"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
+msgstr "exp(x), x चा नॅचुरल एक्सपोणेंट परत करतो. e^x चा कडून"
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
+msgstr "fac(x), x चा फॅक्टोरियल परत करतो. x * (x - 1) * (x - 2) * ... चा कडून"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "फंकशन्स"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
+msgstr "functions(), पारिभाषित फंकशन्सची यादी परत करतो"
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "In"
 
 #: eqnparserhelp.py:72
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"In(x), x चा नॅचुरल लोगोरितं परत करतो. हेया साठी x ची किंमत एक्सपोनेंट चा "
+"बरोबर आहे. x>=0 साठी पारिभाषित"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "सूचक"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "operators(), पारिभाषित सूचकांची यदि परत करतो."
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"or(x, y), लॉजिकाल or. x आणि / किंवा y ट्रू असल्यावर ट्रू अथवा फाल्स परत "
+"करतो."
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "plot"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"plot(eqn, var=-a..b), ईक्वेशन 'eqn' प्लॉट करतो, जिथे वेरियबल 'var' ची किंमत "
+"a ते b चा मधे आहे."
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
-msgstr ""
+msgstr "sin(x), x चा साइन परत करतो.हा एकक वृतळ चा x कोणावर y-अक्षांश आहे."
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "sinh"
 
 #: eqnparserhelp.py:91
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
-msgstr ""
+msgstr "sinh(x),x चा हाइपरबोलिक साइन परत करतो. (exp(x) - exp(-x)) / 2 चा कडून"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x), x चा स्क्वेर रूट परत करतो. हेया किंमती साठी स्क्वेर x चा बरोबर आहे. "
+"x>=0 साठी पारिभाषित"
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "square(x), x चा स्क्वेर परत करतो. x*x चा कडून"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "tan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -305,222 +323,234 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x), x ची टॅनजेनट परत करतो. हे एकक वृतळचा मध्यबींदू पासून एकक वृतळवर x "
+"कोणाकडून पारिभाषित बिंदू चा मधील रेषाच स्लोप आहे. sin(x) / cos(x)चा कडून"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "tanh"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
+msgstr "sinh(x), x ची हाइपरबोलिक टॅनजेंट परत करतो. sinh(x) / cosh(x) चा कडून"
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "हा फक़त टेस्ट विषय आहे, सूची साठी help(index) वापरा."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "वेरियबल्स"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
+msgstr "variables(), सध्या पारिभाषित वेरियबल्स ची यदि परत करतो."
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, Y), लॉजिकाल xor. x ट्रू(आणि y फाल्स असल्यावर) किंवा y ट्रू(आणि x "
+"फाल्स असल्यावर) ट्रू परत करतो.नाहीतर फाल्स परत करतो."
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "सूची"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "सूची"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "'%s' साठी मदताची सोय नाही, सूची साठी help(index) वापरा."
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "सुधारे"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "बीजगणित"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "त्रिकोणमिति"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "बूलीयन"
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "कांस्टान्ट्स"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "पद्धत"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "उपनाम"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "सर्व समीकरण"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "मझ समीकरण"
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "हिस्टरी दाखवा."
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "वेरियबल्स दाखवा."
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "mul_sym"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "div_sym"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "अपरिभाषित"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "चुक: अआधारित प्रकार"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
-msgstr ""
+msgstr "मदत"
 
-#: toolbars.py:86
+#: toolbars.py:111
 msgid "Copy"
-msgstr ""
+msgstr "नक्कल"
 
-#: toolbars.py:89
+#: toolbars.py:115
 msgid "Paste"
-msgstr ""
+msgstr "चिटकवणे"
 
-#: toolbars.py:92
+#: toolbars.py:119
 msgid "Cut"
-msgstr ""
+msgstr "कापा"
 
-#: toolbars.py:99
+#: toolbars.py:127
 msgid "Square"
-msgstr ""
+msgstr "चौकोन"
 
-#: toolbars.py:103
+#: toolbars.py:132
 msgid "Square root"
-msgstr ""
+msgstr "स्क्वेर रूट"
 
-#: toolbars.py:109
+#: toolbars.py:137
+msgid "Inverse"
+msgstr "उलट"
+
+#: toolbars.py:144
 msgid "e to the power x"
-msgstr ""
-
-#: toolbars.py:113
-msgid "x to the power y"
-msgstr ""
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr ""
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr ""
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr ""
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr ""
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr ""
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
+msgstr "e टू द पावर x"
 
 #: toolbars.py:149
+msgid "x to the power y"
+msgstr "x टू द पावर y"
+
+#: toolbars.py:154
+msgid "Natural logarithm"
+msgstr "नॅचुरल लोगोरितं"
+
+#: toolbars.py:160
+msgid "Factorial"
+msgstr "फॅक्टोरियल"
+
+#: toolbars.py:168
+msgid "Sine"
+msgstr "साइन"
+
+#: toolbars.py:172
+msgid "Cosine"
+msgstr "कोसाइन"
+
+#: toolbars.py:176
+msgid "Tangent"
+msgstr "टॅनजेनट"
+
+#: toolbars.py:182
+msgid "Arc sine"
+msgstr "आर्क साइन"
+
+#: toolbars.py:186
 msgid "Arc cosine"
-msgstr ""
+msgstr "आर्क कोसाइन"
 
-#: toolbars.py:153
+#: toolbars.py:190
 msgid "Arc tangent"
-msgstr ""
+msgstr "आर्क टॅनजेनट"
 
-#: toolbars.py:159
+#: toolbars.py:196
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "हाइपरबोलिक साइन"
 
-#: toolbars.py:163
+#: toolbars.py:200
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "हाइपरबोलिक कोसाइन"
 
-#: toolbars.py:167
+#: toolbars.py:204
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "हाइपरबोलिक टॅनजेनट"
 
-#: toolbars.py:175
+#: toolbars.py:212
 msgid "Logical and"
-msgstr ""
+msgstr "लॉजिकाल and"
 
-#: toolbars.py:179
+#: toolbars.py:216
 msgid "Logical or"
-msgstr ""
+msgstr "लॉजिकाल or"
 
-#: toolbars.py:189
+#: toolbars.py:226
 msgid "Equals"
-msgstr ""
+msgstr "बरोबर"
 
-#: toolbars.py:192
+#: toolbars.py:229
 msgid "Not equals"
-msgstr ""
+msgstr "बरोबर नाही"
 
-#: toolbars.py:199
+#: toolbars.py:236
 msgid "Pi"
-msgstr ""
+msgstr "पाई"
 
-#: toolbars.py:202
+#: toolbars.py:240
 msgid "e"
-msgstr ""
+msgstr "e"
 
-#: toolbars.py:209
+#: toolbars.py:247
 msgid "Degrees"
-msgstr ""
+msgstr "अंश"
 
-#: toolbars.py:210
+#: toolbars.py:248
 msgid "Radians"
-msgstr ""
+msgstr "रेडियन"
+
+#: toolbars.py:252
+msgid "Degrees / radians"
+msgstr "अंश / रेडियन"
