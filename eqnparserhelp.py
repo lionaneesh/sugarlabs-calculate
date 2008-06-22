@@ -104,7 +104,7 @@ of the unit circle to the point on the unit circle defined by the angle x. Given
 by sin(x) / cos(x)"),
 
         _("tanh"): _(
-"sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"),
+"tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"),
 
         _("test"): _(
 "This is just a test topic, use help(index) for the index"),
