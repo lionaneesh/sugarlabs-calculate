@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"POT-Creation-Date: 2008-06-23 00:30-0400\n"
 "PO-Revision-Date: 2008-03-25 09:57-0400\n"
 "Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -344,7 +344,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x), gibt den Tangens hyperbolicus von x zurück. Entspricht sinh(x) / "
 "cosh(x)"
@@ -450,11 +451,11 @@ msgstr "* ist das Zeichen für multiplizieren."
 msgid "div_sym"
 msgstr "/ ist das Zeichen für die Division."
 
-#: mathlib.py:132
+#: mathlib.py:134
 msgid "Undefined"
 msgstr "Nicht definiert"
 
-#: mathlib.py:142
+#: mathlib.py:144
 msgid "Error: unsupported type"
 msgstr "Fehler: Typ nicht unterstützt"
 
