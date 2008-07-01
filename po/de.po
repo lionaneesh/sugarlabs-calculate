@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: 2008-03-25 09:57-0400\n"
-"Last-Translator: Gerhard Steiner <gerhard.steiner@duichwir.at>\n"
+"PO-Revision-Date: 2008-07-01 17:35-0400\n"
+"Last-Translator: Markus Schlager <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -344,11 +344,10 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-#, fuzzy
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"tanh(x), gibt den Tangens hyperbolicus von x zurück. Entspricht sinh(x) / "
-"cosh(x)"
+"tanh(x), gibt den Tangens hyperbolicus von x zurück. Defininert als sinh(x) "
+"/ cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
