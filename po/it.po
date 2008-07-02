@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 00:30-0500\n"
-"PO-Revision-Date: 2008-05-23 08:19-0400\n"
+"POT-Creation-Date: 2008-06-23 00:30-0400\n"
+"PO-Revision-Date: 2008-07-02 07:41-0400\n"
 "Last-Translator: Carlo Falciola <cfalciola@yahoo.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,13 +38,11 @@ msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): tipo non valido"
 
 #: eqnparser.py:33
-#, fuzzy
 msgid "Parse error"
 msgstr "Errore di compilazione"
 
 #: eqnparser.py:58
 #, python-format
-#, fuzzy
 msgid "level: %d, ofs %d"
 msgstr "livello: %d, ofs %d"
 
@@ -104,9 +102,10 @@ msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Errore di interpretazione (parentesi chiusa, left_val assente)"
 
 #: eqnparser.py:534
-#, fuzzy
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Errore di interpretazione (parentesi chiusa, left_val assente)"
+msgstr ""
+"Errore di interpretazione (parentesi chiusa, lnon esiste un livello "
+"equivalente da chiudere)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
@@ -133,7 +132,6 @@ msgid "Operator expected"
 msgstr "Atteso operatore"
 
 #: eqnparser.py:616
-#, fuzzy
 msgid "_parse(): returning None"
 msgstr "_parse(): ritorna None"
 
@@ -168,7 +166,6 @@ msgid "asin"
 msgstr "asin"
 
 #: eqnparserhelp.py:47
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
@@ -181,7 +178,6 @@ msgid "atan"
 msgstr "atan"
 
 #: eqnparserhelp.py:51
-#, fuzzy
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
@@ -216,12 +212,10 @@ msgid "exp"
 msgstr "exp"
 
 #: eqnparserhelp.py:62
-#, fuzzy
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr "exp(x), ritorna l'esponente naturale di x. Dato da e^x"
 
 #: eqnparserhelp.py:64
-#, fuzzy
 msgid "fac"
 msgstr "fac"
 
@@ -344,8 +338,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr "sinh(x), ritorna la tangente iperbolica di x. Data da sinh(x) / cosh(x)"
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr "tanh(x), ritorna la tangente iperbolica di x. Data da sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -383,7 +377,6 @@ msgid "index"
 msgstr "indice"
 
 #: eqnparserhelp.py:132
-#, fuzzy
 msgid "Topics"
 msgstr "Argomenti"
 
@@ -450,11 +443,11 @@ msgstr "mul_sym"
 msgid "div_sym"
 msgstr "div_sym"
 
-#: mathlib.py:132
+#: mathlib.py:134
 msgid "Undefined"
 msgstr "Indefinito"
 
-#: mathlib.py:142
+#: mathlib.py:144
 msgid "Error: unsupported type"
 msgstr "Errore: tipo non supportato"
 
@@ -515,14 +508,12 @@ msgid "Tangent"
 msgstr "Tangente"
 
 #: toolbars.py:182
-#, fuzzy
 msgid "Arc sine"
 msgstr "Arcoseno"
 
 #: toolbars.py:186
-#, fuzzy
 msgid "Arc cosine"
-msgstr "Arcoseno"
+msgstr "Arcocoseno"
 
 #: toolbars.py:190
 msgid "Arc tangent"
