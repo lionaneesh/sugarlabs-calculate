@@ -31,6 +31,7 @@ icons/trigonometry-acos.svg
 icons/trigonometry-tanh.svg
 icons/trigonometry-sinh.svg
 icons/trigonometry-cosh.svg
+po/af.po
 po/am.po
 po/ar.po
 po/ay.po
@@ -62,9 +63,12 @@ po/mk.po
 po/ml.po
 po/mn.po
 po/mr.po
+po/mvo.po
 po/ne.po
 po/nl.po
 po/pa.po
+po/pap.po
+po/pis.po
 po/pl.po
 po/POTFILES.in
 po/pseudo.po
@@ -75,9 +79,11 @@ po/qu.po
 po/ro.po
 po/ru.po
 po/rw.po
+po/sd.po
 po/si.po
 po/te.po
 po/th.po
+po/tpi.po
 po/tr.po
 po/ur.po
 po/vi.po
