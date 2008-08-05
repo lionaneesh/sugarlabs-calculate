@@ -6,97 +6,47 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-16 12:44+0000\n"
-"Last-Translator: samy boutayeb <s.boutayeb@free.fr>\n"
+"POT-Creation-Date: 2008-06-23 00:30-0400\n"
+"PO-Revision-Date: 2008-03-26 16:45-0400\n"
+"Last-Translator: Lionel Laské <llaske@c2s.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calculer"
 
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() chaîne invalide (%s)"
+
 #: calculate.py:210
 msgid "Available functions:"
 msgstr "Fonctions disponibles :"
 
-# ----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# ----------------------------------------
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr "aide_acos"
-
-#: eqnparserhelp.py:38
-msgid "help_asin"
-msgstr "aide_asin"
-
-#: eqnparserhelp.py:40
-msgid "help_exp"
-msgstr "aide_exp"
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr "aide_fonctions"
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr "aide_operateurs"
-
-#: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr "aide_graphiques"
-
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr "aide_racinecarree"
-
-#: eqnparserhelp.py:46
-msgid "help_test"
-msgstr "aide_test"
-
-#: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr "aide_variables"
-
-#: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr "aide_utilisation"
-
-# Text assigned to the 'help' variable
-#: eqnparser.py:234
-msgid "help_var"
-msgstr "aide"
-
-#-----------------------------------------
-# End of help topics
-#-----------------------------------------
-# ----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# Text assigned to the 'help' variable
-# this is a programming data type (which is type de données) not a Typing error (Erreur de frappe)
-
-#: eqnparserhelp.py:52
-msgid "Topics: "
-msgstr "Sujets : "
-
-# aide(index) ou help(index) ?
-#: eqnparserhelp.py:143
+#: calculate.py:504
 #, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"L'aide sur '%s' n'est pas disponible, utilisez aide(index) pour afficher "
-"l'index"
+msgid "Writing to journal (%s)"
+msgstr "Écriture dans le journal (%s)"
 
-# this is a programming data type (which is type de données) not a Typing error (Erreur de frappe)
-#: eqnparser.py:87
-msgid "Type error"
-msgstr "Erreur de type"
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed() : type invalide"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Erreur de syntaxe"
+
+# ofs = offset?
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "niveau : %d, ofs %d"
 
 # ligne %d ? caractère %d ?
 #: eqnparser.py:117
@@ -104,10 +54,11 @@ msgstr "Erreur de type"
 msgid "Error at %d"
 msgstr "Erreur à %d"
 
-#: eqnparser.py:299
-#, python-format
-msgid "variable %s not defined"
-msgstr "la variable %s n'est pas définie"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Utiliser help(test) où 'test' est la rubrique recherchée, ou help(index) "
+"pour accéder à l'index des rubriques"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -136,15 +87,15 @@ msgstr "Erreur de syntaxe de l'argument %d: '%s'"
 msgid "Function error: %s"
 msgstr "Erreur de la fonction: %s"
 
-#: eqnparser.py:358
+#: eqnparser.py:481
 #, python-format
-msgid "Function '%s' returned %s"
-msgstr "La fonction '%s' a retourné %s"
-
-#: eqnparser.py:457
-#, python-format
-msgid "Variable '%s' undefined"
+msgid "Variable '%s' not defined"
 msgstr "La variable '%s' n'est pas définie"
+
+# inattendue... bof
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Parenthèse droite en trop"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
@@ -169,26 +120,294 @@ msgstr "Erreur de syntaxe (parenthèse droite en trop)"
 msgid "Number not expected"
 msgstr "Nombre inattendu"
 
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "Opérateur inattendu"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Erreur de syntaxe : nombre ou variable attendu"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Nombre ou variable attendu"
+
 #: eqnparser.py:596
 msgid "Invalid operator"
 msgstr "Opérateur invalide"
 
-#: eqnparser.py:565
-msgid "Parse error: ')' expected"
-msgstr "Erreur de syntaxe : ')' attendu"
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "Opérateur attendu"
 
 # _parse() est une fonction None est un type spécial en Python - returning None veut dire que l'analyse syntaxique retourne None pour représebnter une valeur nulle
 #: eqnparser.py:616
 msgid "_parse(): returning None"
 msgstr "_parse(): None retourné"
 
-#: layout.py:46
-msgid "clear"
-msgstr "effacer"
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#. TRANS: It is possible to translate commands. However, I would highly
+#. recommend NOT doing so for mathematical functions like cos(). help(),
+#. functions() etc should be translated.
+#: eqnparserhelp.py:39
+msgid "acos"
+msgstr "acos"
 
-#: layout.py:55
-msgid "enter"
-msgstr "entrée"
+#: eqnparserhelp.py:40
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"acos (x), renvoie l'arc cosinus de x. C'est l'angle pour lequel le cosinus "
+"est x. La valeur de x doit être comprise entre -1 et +1. "
+
+#: eqnparserhelp.py:43
+msgid "and"
+msgstr "and"
+
+#: eqnparserhelp.py:44
+msgid ""
+"and(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"and(x, y), et logique. Renvoie True si x et y sont égal à Vrai, renvoie "
+"False sinon"
+
+#: eqnparserhelp.py:46
+msgid "asin"
+msgstr "asin"
+
+#: eqnparserhelp.py:47
+#, fuzzy
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin (x), renvoie l'arc sinus de x. C'est l'angle pour lequel le sinus est "
+"x. La valeur de x doit être comprise entre -1 et +1. "
+
+#: eqnparserhelp.py:50
+msgid "atan"
+msgstr "atan"
+
+#: eqnparserhelp.py:51
+#, fuzzy
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan (x), renvoie l'arc tangente de x. C'est l'angle pour lequel la tangente "
+"est x. Défini pour toute valeur de x. "
+
+#: eqnparserhelp.py:54
+msgid "cos"
+msgstr "cos"
+
+#: eqnparserhelp.py:55
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"cos(x), renvoie le cosinus de x. C'est la coordonnée de x pour le cercle "
+"d'angle x"
+
+#: eqnparserhelp.py:58
+msgid "cosh"
+msgstr "cosh"
+
+#: eqnparserhelp.py:59
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"cosh(x), renvoie le cosinus hyperbolique de x. Donné par la formule (exp(x) "
+"+ exp(-x))/2"
+
+#: eqnparserhelp.py:61
+msgid "exp"
+msgstr "exp"
+
+#: eqnparserhelp.py:62
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x), renvoie l'exponentiel naturel de x. Donné par e^x"
+
+#: eqnparserhelp.py:64
+msgid "fac"
+msgstr "fac"
+
+#: eqnparserhelp.py:65
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"fac(x), renvoie le factoriel de x. Donné par la formule x * (x - 1) * (x - "
+"2) * ..."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:68
+msgid "functions"
+msgstr "functions"
+
+#: eqnparserhelp.py:69
+msgid "functions(), return a list of all the functions that are defined"
+msgstr "functions(), retourne une liste de toutes les fonctions définies"
+
+#: eqnparserhelp.py:71
+msgid "ln"
+msgstr "ln"
+
+#: eqnparserhelp.py:72
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"ln(x), renvoie le logarithme naturel de x. C'est la valeur pour laquelle "
+"l'exponentiel exp() égal x. Défini pour x >= 0."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:76
+msgid "operators"
+msgstr "operators"
+
+#: eqnparserhelp.py:77
+msgid "operators(), return a list of the operators that are defined"
+msgstr "operators(), retourne une liste des opérateurs qui sont définis"
+
+#: eqnparserhelp.py:79
+msgid "or"
+msgstr "or"
+
+#: eqnparserhelp.py:80
+msgid ""
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+msgstr ""
+"or(x, y), ou logique. Renvoie True si x et/ou y sont True, renvoie False "
+"sinon "
+
+#: eqnparserhelp.py:82
+msgid "plot"
+msgstr "plot"
+
+#: eqnparserhelp.py:83
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), trace l'équation 'eqn' avec la variable 'var' dans "
+"l'intervalle de a à b"
+
+#: eqnparserhelp.py:86
+msgid "sin"
+msgstr "sin"
+
+#: eqnparserhelp.py:87
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+"sin(x), renvoie le sinus de x. C'est la coordonnée y sur le cercle d'angle "
+"x."
+
+#: eqnparserhelp.py:90
+msgid "sinh"
+msgstr "sinh"
+
+#: eqnparserhelp.py:91
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+"sinh(x), renvoie le sinus hyperbolique de x. Donné par la formule (exp(x) - "
+"exp(-x)) / 2"
+
+#: eqnparserhelp.py:93
+msgid "sqrt"
+msgstr "sqrt"
+
+#: eqnparserhelp.py:94
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"sqrt(x), renvoie la racine carrée de x. C'est la valeur pour laquelle le "
+"carré vaut x. Défini pour x >= 0."
+
+#: eqnparserhelp.py:97
+#, fuzzy
+msgid "square"
+msgstr "Carré"
+
+#: eqnparserhelp.py:98
+msgid "square(x), return the square of x. Given by x * x"
+msgstr "square(x), renvoie la racine carrée de x. Donné par la formule x * x"
+
+#: eqnparserhelp.py:101
+msgid "tan"
+msgstr "tan"
+
+#: eqnparserhelp.py:102
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+"tan(x), renvoie la tangente de x. C'est la pente de la ligne partant de "
+"l'origine du cercle trigonométrique et allant au point du cercle défini par "
+"l'angle x. Donné par la formule sin(x) / cos(x)"
+
+#: eqnparserhelp.py:106
+msgid "tanh"
+msgstr "tanh"
+
+#: eqnparserhelp.py:107
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+"tanh(x), renvoie la tangente hyperbolique de x. Donné par la formule sinh(x) "
+"/ cosh(x)"
+
+#: eqnparserhelp.py:109
+msgid "test"
+msgstr "test"
+
+#: eqnparserhelp.py:110
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Ceci est juste un thème de test. Utiliser help(index) pour l'index"
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:113
+msgid "variables"
+msgstr "variables"
+
+#: eqnparserhelp.py:114
+msgid "variables(), return a list of the variables that are currently defined"
+msgstr "variables(), renvoie une liste de toutes les variables définies"
+
+#: eqnparserhelp.py:116
+msgid "xor"
+msgstr "xor"
+
+#: eqnparserhelp.py:117
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x, y), ou exclusif logique. Renvoie True si soit x égale True (et y "
+"égale False) ou y est Vraie (et x égale False), renvoie False sinon"
+
+#. TRANS: help(index), both 'index' and the translation  will work
+#: eqnparserhelp.py:131
+msgid "index"
+msgstr "index"
+
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Rubriques"
+
+# aide(index) ou help(index) ?
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"L'aide sur '%s' n'est pas disponible, utilisez aide(index) pour afficher "
+"l'index"
 
 #: layout.py:60
 msgid "Edit"
@@ -202,10 +421,10 @@ msgstr "Algèbre"
 msgid "Trigonometry"
 msgstr "Trigonométrie"
 
-# Boolean est renvoie généralement  à un type de donnée (vrai/faux, 1/0, etc)
+# Boolean est renvoie généralement  à un type de donnée (vrai/faux, 1/0, etc) - LLASKE: "Valeur Booléenne" ne tiens par sur l'affichage.
 #: layout.py:63
 msgid "Boolean"
-msgstr "Valeur booléenne"
+msgstr "Booléen"
 
 #: layout.py:64
 msgid "Constants"
@@ -235,461 +454,239 @@ msgstr "Afficher l'historique"
 msgid "Show variables"
 msgstr "Afficher les variables"
 
-#: mathlib.py:86
-msgid "Error"
-msgstr "Erreur"
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr "Erreur : type non pris en charge"
-
-#: plotlib.py:134
-msgid "Unable to parse range"
-msgstr "Impossible d'analyser le domaine"
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr "Copier"
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr "Coller"
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr "Couper"
-
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() chaîne invalide (%s)"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Écriture dans le journal (%s)"
-
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "Lecture du journal (%s)"
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr "Impossible de déterminer la version"
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "Lecture de l'entrée du journal (version %s)"
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr "Ligne d'état invalide (%s)"
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Impossible de lire l'entrée du journal, version inconnue (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed() : type invalide"
-
-# ofs = offset?
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "niveau : %d, ofs %d"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "La variable '%s' n'est pas définie"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Opérateur inattendu"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Opérateur attendu"
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr "aide_cos"
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr "aide_sin"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Rubriques"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr "."
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr ","
-
-#. The multiplication symbol (default: '*')
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
 msgstr "*"
 
-#. The division symbol (default: '/')
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
 msgstr "/"
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Erreur de syntaxe"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-# inattendue... bof
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Parenthèse droite en trop"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Erreur de syntaxe : nombre ou variable attendu"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Nombre ou variable attendu"
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
-msgid "acos"
-msgstr "acos"
-
-#: eqnparserhelp.py:40
-msgid ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
-msgstr ""
-"acos (x), renvoie l'arc cosinus de x. C'est l'angle pour lequel le cosinus "
-"est x. La valeur de x doit être comprise entre -1 et +1. "
-
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "and"
-
-#: eqnparserhelp.py:44
-msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr ""
-
-#: eqnparserhelp.py:47
-#, fuzzy
-msgid ""
-"asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
-msgstr ""
-"acos (x), renvoie l'arc cosinus de x. C'est l'angle pour lequel le cosinus "
-"est x. La valeur de x doit être comprise entre -1 et +1. "
-
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr ""
-
-#: eqnparserhelp.py:51
-#, fuzzy
-msgid ""
-"atan(x), return the arc tangent of x. This is the angle for which the "
-"tangent is x. Defined for all x"
-msgstr ""
-"acos (x), renvoie l'arc cosinus de x. C'est l'angle pour lequel le cosinus "
-"est x. La valeur de x doit être comprise entre -1 et +1. "
-
-#: eqnparserhelp.py:54
-#, fuzzy
-msgid "cos"
-msgstr "acos"
-
-#: eqnparserhelp.py:55
-msgid ""
-"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
-"at the angle x"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr ""
-
-#: eqnparserhelp.py:59
-msgid ""
-"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr ""
-
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr ""
-
-#: eqnparserhelp.py:62
-msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
-
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr ""
-
-#: eqnparserhelp.py:65
-msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr ""
-
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr ""
-
-#: eqnparserhelp.py:72
-msgid ""
-"ln(x), return the natural logarithm of x. This is the value for which the "
-"exponent exp() equals x. Defined for x >= 0."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr ""
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr ""
-
-#: eqnparserhelp.py:80
-msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
-msgstr ""
-
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr ""
-
-#: eqnparserhelp.py:83
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-
-#: eqnparserhelp.py:86
-msgid "sin"
-msgstr ""
-
-#: eqnparserhelp.py:87
-msgid ""
-"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
-"the angle x"
-msgstr ""
-
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr ""
-
-#: eqnparserhelp.py:91
-msgid ""
-"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
-msgstr ""
-
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr ""
-
-#: eqnparserhelp.py:94
-msgid ""
-"sqrt(x), return the square root of x. This is the value for which the square "
-"equals x. Defined for x >= 0."
-msgstr ""
-
-#: eqnparserhelp.py:97
-#, fuzzy
-msgid "square"
-msgstr "Carré"
-
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
-
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr ""
-
-#: eqnparserhelp.py:102
-msgid ""
-"tan(x), return the tangent of x. This is the slope of the line from the "
-"origin of the unit circle to the point on the unit circle defined by the "
-"angle x. Given by sin(x) / cos(x)"
-msgstr ""
-
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr ""
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
-
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr ""
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr ""
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr ""
-
-#: eqnparserhelp.py:117
-msgid ""
-"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
-"y is True (and x is False), else returns False"
-msgstr ""
-
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr ""
-
-#: mathlib.py:132
+#: mathlib.py:134
 msgid "Undefined"
-msgstr ""
+msgstr "Indéfini"
 
-#: toolbars.py:36
+#: mathlib.py:144
+msgid "Error: unsupported type"
+msgstr "Erreur : type non pris en charge"
+
+#: toolbars.py:53
 msgid "Help"
 msgstr "Aide"
 
-#: toolbars.py:99
+#: toolbars.py:111
+msgid "Copy"
+msgstr "Copier"
+
+#: toolbars.py:115
+msgid "Paste"
+msgstr "Coller"
+
+#: toolbars.py:119
+msgid "Cut"
+msgstr "Couper"
+
+#: toolbars.py:127
 msgid "Square"
 msgstr "Carré"
 
-#: toolbars.py:103
+#: toolbars.py:132
 msgid "Square root"
 msgstr "Racine carrée"
 
-#: toolbars.py:109
+#: toolbars.py:137
+msgid "Inverse"
+msgstr "Inverse"
+
+#: toolbars.py:144
 msgid "e to the power x"
 msgstr "e puissance x"
 
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr "Logarithme naturel"
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr "Factoriel"
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr "Sinus"
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr "Cosinus"
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr "Tangente"
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
-
 #: toolbars.py:149
-msgid "Arc cosine"
-msgstr ""
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr ""
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr ""
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr ""
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr ""
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr ""
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr ""
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr ""
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr ""
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr ""
-
-#: toolbars.py:202
-msgid "e"
-msgstr ""
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr ""
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr "Radians"
-
-#: toolbars.py:113
 #, fuzzy
 msgid "x to the power y"
 msgstr "e puissance x"
+
+#: toolbars.py:154
+msgid "Natural logarithm"
+msgstr "Logarithme naturel"
+
+#: toolbars.py:160
+msgid "Factorial"
+msgstr "Factoriel"
+
+#: toolbars.py:168
+msgid "Sine"
+msgstr "Sinus"
+
+#: toolbars.py:172
+msgid "Cosine"
+msgstr "Cosinus"
+
+#: toolbars.py:176
+msgid "Tangent"
+msgstr "Tangente"
+
+#: toolbars.py:182
+msgid "Arc sine"
+msgstr "Arcsinus"
+
+#: toolbars.py:186
+msgid "Arc cosine"
+msgstr "Arcosinus"
+
+#: toolbars.py:190
+msgid "Arc tangent"
+msgstr "Arctangente"
+
+#: toolbars.py:196
+msgid "Hyperbolic sine"
+msgstr "Sinus hyperbolique"
+
+#: toolbars.py:200
+msgid "Hyperbolic cosine"
+msgstr "Cosinus hyperbolique"
+
+#: toolbars.py:204
+msgid "Hyperbolic tangent"
+msgstr "Tangente hyperbolique"
+
+#: toolbars.py:212
+msgid "Logical and"
+msgstr "Et logique"
+
+#: toolbars.py:216
+msgid "Logical or"
+msgstr "Ou logique"
+
+#: toolbars.py:226
+msgid "Equals"
+msgstr "Egal"
+
+#: toolbars.py:229
+msgid "Not equals"
+msgstr "Différent"
+
+#: toolbars.py:236
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:240
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:247
+msgid "Degrees"
+msgstr "Degrés"
+
+#: toolbars.py:248
+msgid "Radians"
+msgstr "Radians"
+
+#: toolbars.py:252
+msgid "Degrees / radians"
+msgstr "Dégrés / radians"
+
+# ----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# ----------------------------------------
+#~ msgid "help_acos"
+#~ msgstr "aide_acos"
+
+#~ msgid "help_asin"
+#~ msgstr "aide_asin"
+
+#~ msgid "help_exp"
+#~ msgstr "aide_exp"
+
+#~ msgid "help_functions"
+#~ msgstr "aide_fonctions"
+
+#~ msgid "help_operators"
+#~ msgstr "aide_operateurs"
+
+#~ msgid "help_plot"
+#~ msgstr "aide_graphiques"
+
+#~ msgid "help_sqrt"
+#~ msgstr "aide_racinecarree"
+
+#~ msgid "help_test"
+#~ msgstr "aide_test"
+
+#~ msgid "help_variables"
+#~ msgstr "aide_variables"
+
+#~ msgid "help_usage"
+#~ msgstr "aide_utilisation"
+
+# Text assigned to the 'help' variable
+#~ msgid "help_var"
+#~ msgstr "aide"
+
+#~ msgid "Topics: "
+#~ msgstr "Sujets : "
+
+# this is a programming data type (which is type de données) not a Typing error (Erreur de frappe)
+#~ msgid "Type error"
+#~ msgstr "Erreur de type"
+
+#, python-format
+#~ msgid "variable %s not defined"
+#~ msgstr "la variable %s n'est pas définie"
+
+#, python-format
+#~ msgid "Function '%s' returned %s"
+#~ msgstr "La fonction '%s' a retourné %s"
+
+#, python-format
+#~ msgid "Variable '%s' undefined"
+#~ msgstr "La variable '%s' n'est pas définie"
+
+#~ msgid "Parse error: ')' expected"
+#~ msgstr "Erreur de syntaxe : ')' attendu"
+
+#~ msgid "clear"
+#~ msgstr "effacer"
+
+#~ msgid "enter"
+#~ msgstr "entrée"
+
+#~ msgid "Error"
+#~ msgstr "Erreur"
+
+#~ msgid "Unable to parse range"
+#~ msgstr "Impossible d'analyser le domaine"
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "Lecture du journal (%s)"
+
+#~ msgid "Unable to determine version"
+#~ msgstr "Impossible de déterminer la version"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "Lecture de l'entrée du journal (version %s)"
+
+#, python-format
+#~ msgid "State line invalid (%s)"
+#~ msgstr "Ligne d'état invalide (%s)"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "Impossible de lire l'entrée du journal, version inconnue (%s)"
+
+#~ msgid "help_cos"
+#~ msgstr "aide_cos"
+
+#~ msgid "help_sin"
+#~ msgstr "aide_sin"
+
+#~ msgid "thousand_sep"
+#~ msgstr "."
+
+#~ msgid "fraction_sep"
+#~ msgstr ","
