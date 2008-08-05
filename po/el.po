@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"POT-Creation-Date: 2008-06-23 00:30-0400\n"
 "PO-Revision-Date: 2008-03-29 04:17-0400\n"
 "Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -351,7 +351,8 @@ msgid "tanh"
 msgstr "τοξυ"
 
 #: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "τοξυ(x), επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
 "συνυ(x) / ημυ(x)"
@@ -459,11 +460,11 @@ msgstr "συμβ_πολλ/σμού"
 msgid "div_sym"
 msgstr "συμβ_διαίρεσης"
 
-#: mathlib.py:132
+#: mathlib.py:134
 msgid "Undefined"
 msgstr "Ακαθόριστο"
 
-#: mathlib.py:142
+#: mathlib.py:144
 msgid "Error: unsupported type"
 msgstr "Σφάλμα: μη υποστηριζόμενος τύπος"
 
