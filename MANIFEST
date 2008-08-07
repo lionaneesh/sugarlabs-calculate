@@ -1,3 +1,5 @@
+activity/activity.info
+activity/calculate.svg
 calculate.py
 eqnparser.py
 eqnparserhelp.py
