@@ -355,6 +355,14 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr ""

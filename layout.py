@@ -41,7 +41,7 @@ class CalcLayout:
 # Deprecated -- functionality available through interface and labels
 #            [2, 3, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
      
-            [3, 0, 3, 'clear', self.col_gray1, lambda w: self._parent.clear()],
+            [3, 0, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
  
             [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
             [4, 1, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
@@ -50,7 +50,7 @@ class CalcLayout:
             [4, 2, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
             [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [3, 3, 3, 'enter', self.col_gray1, lambda w: self._parent.process()],
+            [3, 3, 3, _('Enter'), self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
