@@ -665,6 +665,8 @@ class EqnParser:
         return ret
 
     def div_operator(self, a, b):
+        if b == 0 or b == 0.0:
+            return _('Undefined')
         if isinstance(a, Rational) or isinstance(b, Rational):
             return a / b
         elif self.ml.is_int(a) and float(self.ml.abs(a)) < 1e12 and \
