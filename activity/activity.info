@@ -5,3 +5,4 @@ class = calculate.Calculate
 icon = calculate
 activity_version = 23
 show_launcher = yes
+licence = GPLv2+
