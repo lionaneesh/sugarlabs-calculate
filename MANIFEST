@@ -75,8 +75,6 @@ locale/bg/LC_MESSAGES/org.laptop.Calculate.mo
 locale/bg/activity.linfo
 locale/fr/LC_MESSAGES/org.laptop.Calculate.mo
 locale/fr/activity.linfo
-locale/pseudo/LC_MESSAGES/org.laptop.Calculate.mo
-locale/pseudo/activity.linfo
 locale/el/LC_MESSAGES/org.laptop.Calculate.mo
 locale/el/activity.linfo
 locale/ht/LC_MESSAGES/org.laptop.Calculate.mo
@@ -192,7 +190,6 @@ po/pap.po
 po/pis.po
 po/pl.po
 po/POTFILES.in
-po/pseudo.po
 po/ps.po
 po/pt_BR.po
 po/pt.po
