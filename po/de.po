@@ -541,12 +541,12 @@ msgstr "Grad / Radiant"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "* ist das Zeichen für multiplizieren."
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "/ ist das Zeichen für die Division."
+msgstr "/"
 
 #: mathlib.py:134
 msgid "Undefined"

@@ -452,13 +452,13 @@ msgstr "Εμφάνιση μεταβλητών"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "συμβ_πολλ/σμού"
+msgstr "*"
 
 # Σύμβολο διαίρεσης (προκαθορισμένο: '/')
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "συμβ_διαίρεσης"
+msgstr "/"
 
 #: mathlib.py:134
 msgid "Undefined"

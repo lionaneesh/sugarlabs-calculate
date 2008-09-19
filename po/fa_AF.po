@@ -295,12 +295,12 @@ msgstr "کسر_sep"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "نماد ضرب"
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "نماد تقسیم"
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"

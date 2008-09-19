@@ -439,12 +439,12 @@ msgstr "వేరియబుల్స్ ని చూపుము"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "ముల్_సిమ్"
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "డివ్_సిమ్"
+msgstr "/"
 
 #: mathlib.py:134
 msgid "Undefined"

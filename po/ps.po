@@ -407,12 +407,12 @@ msgstr "بدلېدنې ښکاره کول"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "ضرب_اېس وای اېم"
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "وېشل_اېس وای اې"
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"

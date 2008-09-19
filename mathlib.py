@@ -72,12 +72,12 @@ class MathLib:
 
         # TRANS: multiplication symbol (default: '*')
         self.mul_sym = _('mul_sym')
-        if self.mul_sym == 'mul_sym':
+        if len(self.mul_sym) == 0 or len(self.mul_sym) > 3:
             self.mul_sym = '*'
 
         # TRANS: division symbol (default: '/')
         self.div_sym = _('div_sym')
-        if self.div_sym == 'div_sym':
+        if len(self.div_sym) == 0 or len(self.div_sym) > 3:
             self.div_sym = '/'
 
     def set_angle_type(self, type):

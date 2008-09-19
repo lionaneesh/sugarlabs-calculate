@@ -435,12 +435,12 @@ msgstr "ويری ايبل ديکھائيں"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "ضرب_ايس وائی ايم"
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "تقسيم"
+msgstr "/"
 
 #: mathlib.py:134
 msgid "Undefined"

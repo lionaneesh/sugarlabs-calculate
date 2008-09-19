@@ -261,16 +261,14 @@ msgstr "sep_frações"
 #. The multiplication symbol (default: '*')
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
-#, fuzzy
 msgid "mul_sym"
-msgstr "sím_mult"
+msgstr "*"
 
 #. The division symbol (default: '/')
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
-#, fuzzy
 msgid "div_sym"
-msgstr "sím_div"
+msgstr "/"
 
 #: eqnparser.py:33
 #, fuzzy
