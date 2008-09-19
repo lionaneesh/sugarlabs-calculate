@@ -10,6 +10,7 @@ layout.py
 mathlib.py
 plotlib.py
 rational.py
+setup.py
 svgimage.py
 toolbars.py
 icons/algebra-xpowy.svg
