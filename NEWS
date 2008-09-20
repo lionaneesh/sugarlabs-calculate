@@ -1,3 +1,13 @@
+24
+
+* Division by 0 returns 'Undefined'
+* Make 'clear' and 'enter' translateable
+* Remove pseudo.po
+* Fix ne.po (newlines)
+* Fix translations that had taken mul_sym litterally
+* Add COPYING and AUTHORS
+* Update MANIFEST
+
 23
 
 * Add locale dir contents to MANIFEST
