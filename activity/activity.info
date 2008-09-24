@@ -6,5 +6,5 @@ exec = sugar-activity calculate.Calculate -s
 activity_version = 24
 host_version = 1
 show_launcher = yes
-licence = GPLv2+
+license = GPLv2+
 update_url = http://dev.laptop.org/~rwh/calculate
