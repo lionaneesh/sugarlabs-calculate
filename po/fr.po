@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: 2008-03-26 16:45-0400\n"
-"Last-Translator: Lionel Laské <llaske@c2s.fr>\n"
+"POT-Creation-Date: 2008-08-20 19:45+0530\n"
+"PO-Revision-Date: 2008-10-02 15:50-0400\n"
+"Last-Translator: samy boutayeb <s.boutayeb@free.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,131 +19,6 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calculer"
-
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() chaîne invalide (%s)"
-
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "Fonctions disponibles :"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Écriture dans le journal (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed() : type invalide"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Erreur de syntaxe"
-
-# ofs = offset?
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "niveau : %d, ofs %d"
-
-# ligne %d ? caractère %d ?
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "Erreur à %d"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Utiliser help(test) où 'test' est la rubrique recherchée, ou help(index) "
-"pour accéder à l'index des rubriques"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "la fonction '%s' n'est pas définie"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Nombre d'argument invalide (%d au lieu de %d)"
-
-# Takes would litterally be "prend" in french, but in the context the french for requires (requiert) is appropriate to tell what is needed - the to have verb (avoir) is ambiguous in the context.
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "la fonction requiert %d arguments"
-
-# pas convaincu par "analyser"
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "Erreur de syntaxe de l'argument %d: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "Erreur de la fonction: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "La variable '%s' n'est pas définie"
-
-# inattendue... bof
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Parenthèse droite en trop"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "Erreur de syntaxe (parenthèse droite)"
-
-# inattendue... bof
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "Parenthèse droite en trop"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
-"Erreur de syntaxe (parenthèse droite, valeur gauche à assigner manquante)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Erreur de syntaxe (parenthèse droite en trop)"
-
-# inattendu...
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "Nombre inattendu"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Opérateur inattendu"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Erreur de syntaxe : nombre ou variable attendu"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Nombre ou variable attendu"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "Opérateur invalide"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Opérateur attendu"
-
-# _parse() est une fonction None est un type spécial en Python - returning None veut dire que l'analyse syntaxique retourne None pour représebnter une valeur nulle
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): None retourné"
 
 # TRANS: It is possible to translate commands. However, I would highly
 # recommend NOT doing so for mathematical functions like cos(). help(),
@@ -244,7 +119,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr "functions"
+msgstr "fonctions"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
@@ -392,6 +267,12 @@ msgstr ""
 "xor(x, y), ou exclusif logique. Renvoie True si soit x égale True (et y "
 "égale False) ou y est Vraie (et x égale False), renvoie False sinon"
 
+#: eqnparserhelp.py:128 eqnparser.py:249
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Utiliser help(test) où 'test' est la rubrique recherchée, ou help(index) "
+"pour accéder à l'index des rubriques"
+
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
@@ -408,6 +289,107 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 "L'aide sur '%s' n'est pas disponible, utilisez aide(index) pour afficher "
 "l'index"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Erreur de syntaxe"
+
+# ofs = offset?
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "niveau : %d, ofs %d"
+
+# ligne %d ? caractère %d ?
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "Erreur à %d"
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "la fonction '%s' n'est pas définie"
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Nombre d'argument invalide (%d au lieu de %d)"
+
+# Takes would litterally be "prend" in french, but in the context the french for requires (requiert) is appropriate to tell what is needed - the to have verb (avoir) is ambiguous in the context.
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "la fonction requiert %d arguments"
+
+# pas convaincu par "analyser"
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Erreur de syntaxe de l'argument %d: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "Erreur de la fonction: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "La variable '%s' n'est pas définie"
+
+# inattendue... bof
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Parenthèse droite en trop"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "Erreur de syntaxe (parenthèse droite)"
+
+# inattendue... bof
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "Parenthèse droite en trop"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr ""
+"Erreur de syntaxe (parenthèse droite, valeur gauche à assigner manquante)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Erreur de syntaxe (parenthèse droite en trop)"
+
+# inattendu...
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "Nombre inattendu"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "Opérateur inattendu"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Erreur de syntaxe : nombre ou variable attendu"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Nombre ou variable attendu"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "Opérateur invalide"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "Opérateur attendu"
+
+# _parse() est une fonction None est un type spécial en Python - returning None veut dire que l'analyse syntaxique retourne None pour représebnter une valeur nulle
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): None retourné"
 
 #: layout.py:60
 msgid "Edit"
@@ -453,24 +435,6 @@ msgstr "Afficher l'historique"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Afficher les variables"
-
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "*"
-
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "/"
-
-#: mathlib.py:134
-msgid "Undefined"
-msgstr "Indéfini"
-
-#: mathlib.py:144
-msgid "Error: unsupported type"
-msgstr "Erreur : type non pris en charge"
 
 #: toolbars.py:53
 msgid "Help"
@@ -588,6 +552,42 @@ msgstr "Radians"
 #: toolbars.py:252
 msgid "Degrees / radians"
 msgstr "Dégrés / radians"
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "*"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "/"
+
+#: mathlib.py:134
+msgid "Undefined"
+msgstr "Indéfini"
+
+#: mathlib.py:144
+msgid "Error: unsupported type"
+msgstr "Erreur : type non pris en charge"
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() chaîne invalide (%s)"
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "Fonctions disponibles :"
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Écriture dans le journal (%s)"
+
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed() : type invalide"
 
 # ----------------------------------------
 # The help system uses topic msgid's that should be translated here.
