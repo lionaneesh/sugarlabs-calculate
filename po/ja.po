@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-20 19:45+0530\n"
-"PO-Revision-Date: 2008-08-22 11:43-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-11-14 11:07-0500\n"
 "Last-Translator: korakurider <korakurider@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,120 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calculate"
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() の文字列が無効です(%s)"
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "利用可能な関数："
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "ジャーナルへ保存中(%s)"
+
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): 無効なタイプです"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "文法チェックエラー"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "レベル: %d, ofs %d"
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "%dにエラーがあります"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "'test'についてのヘルプを見るにはhelp(test)と入力してください。索引を見るにはhelp(index)と入力します。"
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "関数'%s'が定義されていません。"
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "引数の数が違います(正しくは%dで、%dは間違いです。）"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "この関数は%d個の引数をとります。"
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "%dに与えられた右の引数に問題があります。: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "関数のエラー: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "変数 '%s' が定義されていません。"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "余計な左カッコがあります。"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "文法チェックエラー（右カッコ）"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "余計な右カッコがあります。"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "文法チェックエラー（右カッコ、左辺値なし）"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "文法チェックエラー（右カッコ、あるいは閉じる対象のレベル無し）"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "数値が現れてはいけません。"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "演算子は指定できません。"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "文法エラー：数値もしくは変数を指定してください。"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "数値もしくは変数を指定してください。"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "無効な演算子です"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "演算子を指定してください。"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): 返す値がありません"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -198,8 +312,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr "関数tanh(x)はハイパーボリックタンジェントを返します。これはsinh(x)/cosh(x)で与えられます。"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr "関数sinh(x)はハイパーボリックタンジェントを返します。これはsinh(x)/cosh(x)で与えられます。"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -230,10 +344,6 @@ msgstr ""
 "関数xor(x,y)は排他的論理和を返します。これはxが真でyが偽、もしくはxが偽でyが真の時のみ真(true)となり、それ以外のときは偽(false)"
 "となるような関数です。"
 
-#: eqnparserhelp.py:128 eqnparser.py:249
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "'test'についてのヘルプを見るにはhelp(test)と入力してください。索引を見るにはhelp(index)と入力します。"
-
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
@@ -248,97 +358,13 @@ msgstr "トピックス"
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "'%s' に関するヘルプ情報はありません。help(index)で索引を確認してください"
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "文法チェックエラー"
+#: layout.py:44
+msgid "Clear"
+msgstr "クリア"
 
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "レベル: %d, ofs %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "%dにエラーがあります"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "関数'%s'が定義されていません。"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "引数の数が違います(正しくは%dで、%dは間違いです。）"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "この関数は%d個の引数をとります。"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "%dに与えられた右の引数に問題があります。: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "関数のエラー: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "変数 '%s' が定義されていません。"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "余計な左カッコがあります。"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "文法チェックエラー（右カッコ）"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "余計な右カッコがあります。"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "文法チェックエラー（右カッコ、左辺値なし）"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "文法チェックエラー（右カッコ、あるいは閉じる対象のレベル無し）"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "数値が現れてはいけません。"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "演算子は指定できません。"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "文法エラー：数値もしくは変数を指定してください。"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "数値もしくは変数を指定してください。"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "無効な演算子です"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "演算子を指定してください。"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): 返す値がありません"
+#: layout.py:53
+msgid "Enter"
+msgstr "入力"
 
 #: layout.py:60
 msgid "Edit"
@@ -384,122 +410,6 @@ msgstr "履歴を表示"
 msgid "Show variables"
 msgstr "変数を表示"
 
-#: toolbars.py:53
-msgid "Help"
-msgstr "ヘルプ"
-
-#: toolbars.py:111
-msgid "Copy"
-msgstr "コピー"
-
-#: toolbars.py:115
-msgid "Paste"
-msgstr "貼り付け"
-
-#: toolbars.py:119
-msgid "Cut"
-msgstr "切り取り"
-
-#: toolbars.py:127
-msgid "Square"
-msgstr "二乗"
-
-#: toolbars.py:132
-msgid "Square root"
-msgstr "平方根"
-
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "入れ替え(逆関数)"
-
-#: toolbars.py:144
-msgid "e to the power x"
-msgstr "eのx乗"
-
-#: toolbars.py:149
-msgid "x to the power y"
-msgstr "xのy乗"
-
-#: toolbars.py:154
-msgid "Natural logarithm"
-msgstr "自然対数"
-
-#: toolbars.py:160
-msgid "Factorial"
-msgstr "階乗"
-
-#: toolbars.py:168
-msgid "Sine"
-msgstr "正弦（sin）"
-
-#: toolbars.py:172
-msgid "Cosine"
-msgstr "余弦（cos）"
-
-#: toolbars.py:176
-msgid "Tangent"
-msgstr "正接（tan）"
-
-#: toolbars.py:182
-msgid "Arc sine"
-msgstr "逆正弦（arcsin）"
-
-#: toolbars.py:186
-msgid "Arc cosine"
-msgstr "逆余弦（arccos）"
-
-#: toolbars.py:190
-msgid "Arc tangent"
-msgstr "逆正接（arctan）"
-
-#: toolbars.py:196
-msgid "Hyperbolic sine"
-msgstr "双曲正弦（sinh）"
-
-#: toolbars.py:200
-msgid "Hyperbolic cosine"
-msgstr "双曲余弦（cosh）"
-
-#: toolbars.py:204
-msgid "Hyperbolic tangent"
-msgstr "双曲正接（tanh）"
-
-#: toolbars.py:212
-msgid "Logical and"
-msgstr "論理積（AND）"
-
-#: toolbars.py:216
-msgid "Logical or"
-msgstr "論理和（OR）"
-
-#: toolbars.py:226
-msgid "Equals"
-msgstr "等号"
-
-#: toolbars.py:229
-msgid "Not equals"
-msgstr "不等号"
-
-#: toolbars.py:236
-msgid "Pi"
-msgstr "π（円周率）"
-
-#: toolbars.py:240
-msgid "e"
-msgstr "e（オイラー数）"
-
-#: toolbars.py:247
-msgid "Degrees"
-msgstr "角度"
-
-#: toolbars.py:248
-msgid "Radians"
-msgstr "ラジアン"
-
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "角度/ラジアン"
-
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
@@ -510,31 +420,127 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "未定義"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "エラー: 取り扱えない型です"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() の文字列が無効です(%s)"
+#: toolbars.py:36
+msgid "Help"
+msgstr "ヘルプ"
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "利用可能な関数："
+#: toolbars.py:86
+msgid "Copy"
+msgstr "コピー"
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "ジャーナルへ保存中(%s)"
+#: toolbars.py:89
+msgid "Paste"
+msgstr "貼り付け"
 
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): 無効なタイプです"
+#: toolbars.py:92
+msgid "Cut"
+msgstr "切り取り"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "二乗"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "平方根"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "eのx乗"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "xのy乗"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "自然対数"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "階乗"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "正弦（sin）"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "余弦（cos）"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "正接（tan）"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "逆正弦（arcsin）"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "逆余弦（arccos）"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "逆正接（arctan）"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "双曲正弦（sinh）"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "双曲余弦（cosh）"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "双曲正接（tanh）"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "論理積（AND）"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "論理和（OR）"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "等号"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "不等号"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "π（円周率）"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e（オイラー数）"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "角度"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "ラジアン"
+
+#~ msgid "Inverse"
+#~ msgstr "入れ替え(逆関数)"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "角度/ラジアン"
 
 #, python-format
 #, fuzzy
