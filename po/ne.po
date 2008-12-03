@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr "उपलब्घ कार्यहरु"
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "खातामा लेखिंदैछ"
+msgstr "खातामा लेखिंदैछ (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -76,7 +76,7 @@ msgstr "कार्यले %d बँदा लिन्छ"
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "%s: %d बुँदा वाक्यमा मिलेन"
+msgstr "%d बुँदा वाक्यमा मिलेन: %s"
 
 #: eqnparser.py:380
 #, python-format
@@ -336,7 +336,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#, fuzzy
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cos(x)"
 
 #: eqnparserhelp.py:109
@@ -383,6 +384,14 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 "'%s' को बारेमा मत्द्धत पाईएन, index को बारेमा मत्द्धत लिन help(index) प्रयोग "
 "गर्नुहोस्"
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
 
 #: layout.py:60
 msgid "Edit"
@@ -438,126 +447,124 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "वाक्या नगरिएको"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "त्रुति: असमर्थ प्रकार"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr "मत्द्धत"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr "प्रतिलिपि"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr "टाँस्नु"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr "काट्नु"
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr "बर्ग"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr "बर्गमुल"
 
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "बिपरित"
-
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "e to the power x "
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr "x to the power y"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "प्राकृतिक लधु गुणक"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr "क्रम गुणित"
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr "Sine"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "Cosine"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr "Tangent"
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr "Arc sine"
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr "Arc cosine"
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr "Arc tangent"
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr "Hyperbolic sine"
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr "Hyperbolic cosine"
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr "Hyperbolic tangent"
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "Logical and"
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "Logical or"
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr "बराबर"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "बराबर नभएको"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr "पाई"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:247
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "डिग्रि"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr "रेडिएन"
 
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "डिग्रि / रेडिएन"
+#~ msgid "Inverse"
+#~ msgstr "बिपरित"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "डिग्रि / रेडिएन"
