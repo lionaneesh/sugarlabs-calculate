@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: 2008-07-11 02:10-0400\n"
 "Last-Translator: Denis Oštir <denis.ostir@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -177,9 +177,13 @@ msgid ""
 "tangent is x. Defined for all x"
 msgstr ""
 
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #: eqnparserhelp.py:54
+#, fuzzy
 msgid "cos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:55
 msgid ""
@@ -187,9 +191,13 @@ msgid ""
 "at the angle x"
 msgstr ""
 
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #: eqnparserhelp.py:58
+#, fuzzy
 msgid "cosh"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:59
 msgid ""
@@ -289,8 +297,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:97
+#, fuzzy
 msgid "square"
-msgstr ""
+msgstr "Kvadrat"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
@@ -312,7 +321,7 @@ msgid "tanh"
 msgstr ""
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 
 #: eqnparserhelp.py:109
@@ -355,6 +364,14 @@ msgstr "Poglavje"
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "Pomoč za '%s' ni na voljo. Izberi index za seznam tem pomoči."
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
 
 #: layout.py:60
 msgid "Edit"
@@ -410,126 +427,118 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Nedefinirano"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Napaka: nepodprt tip"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr "Pomoč"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr "Prilepi"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr "Reži"
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr "Kvadrat"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
-#: toolbars.py:137
-msgid "Inverse"
-msgstr ""
-
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "e na potenco x"
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr "x na potenco y"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "Naravni logaritem"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr "Sinus"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "Kosinus"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "Logično in"
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "Logično ali"
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr "Enako"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "Ni enako"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr "Pi"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:247
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "Stopinje"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
-msgstr ""
-
-#: toolbars.py:252
-msgid "Degrees / radians"
 msgstr ""
