@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: 2008-07-13 03:52-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-12-12 15:48-0500\n"
 "Last-Translator: Myckel Habets <myckel@sdf.lonestar.org>\n"
 "Language-Team: English\n"
 "MIME-Version: 1.0\n"
@@ -335,9 +335,9 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"tanh(x), geeft de tangens hyperbolicus van x. Gedefinieerd door sinh(x) / "
+"sinh(x), geeft de tangens hyperbolicus van x. Gedefinieerd door sinh(x) / "
 "cosh(x)"
 
 #: eqnparserhelp.py:109
@@ -384,6 +384,14 @@ msgstr "Onderwerpen"
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "Geen help over '%s' beschikbaar, gebruik help(index) voor de index"
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Wissen"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "Enter"
 
 #: layout.py:60
 msgid "Edit"
@@ -440,129 +448,127 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Ongedefinieerd"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Fout: type niet ondersteund"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr "Help"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr "Plakken"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr "Knippen"
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr "Kwadraat"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr "Wortel"
 
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "Inverse"
-
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "e tot de macht x"
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr "x tot de macht y"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "Natuurlijke logaritme"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr "Faculteit"
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr "Sinus"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "Cosinus"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr "Tangens"
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr "Arcsinus"
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr "Arccosinus"
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr "Arctangens"
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr "Sinus hyperbolicus"
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr "Cosinus hyperbolicus"
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr "Tangens hyperbolicus"
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "Logische en"
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "Logische of"
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr "Is gelijk aan"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "Is niet gelijk aan"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr "Pi"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:247
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "Graden"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr "Radialen"
 
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "Graden / radialen"
+#~ msgid "Inverse"
+#~ msgstr "Inverse"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "Graden / radialen"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"
@@ -733,12 +739,6 @@ msgstr "Graden / radialen"
 
 #~ msgid ","
 #~ msgstr "."
-
-#~ msgid "clear"
-#~ msgstr "leeg"
-
-#~ msgid "enter"
-#~ msgstr "verwerk"
 
 # This seems a pretty useless message for end users...
 # Text assigned to the 'help' variable
