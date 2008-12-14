@@ -217,8 +217,8 @@ class EqnParser:
         self.register_operator('*', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'⨯', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
         self.register_operator(u'×', self.OP_DIADIC, 1, lambda x: self.ml.mul(x[0], x[1]))
-        self.register_operator('/', self.OP_DIADIC, 1, lambda x: self.div_operator(x[0], x[1]))
-        self.register_operator(u'÷', self.OP_DIADIC, 1, lambda x: self.div_operator(x[0], x[1]))
+        self.register_operator('/', self.OP_DIADIC, 1, lambda x: self.ml.div(x[0], x[1]))
+        self.register_operator(u'÷', self.OP_DIADIC, 1, lambda x: self.ml.div(x[0], x[1]))
 
         self.register_operator('^', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
         self.register_operator('**', self.OP_DIADIC, 2, lambda x: self.ml.pow(x[0], x[1]))
@@ -299,10 +299,7 @@ class EqnParser:
             self.parse_var[name] = parse
 
     def get_var(self, name):
-        if name in self.variables:
-            return self.variables[name]
-        else:
-            return None
+        return self.variables.get(name, None)
 
     def lookup_var(self, name, ps):
         c = self.ml.get_constant(name)
@@ -664,13 +661,3 @@ class EqnParser:
             ret += op + " "
         return ret
 
-    def div_operator(self, a, b):
-        if b == 0 or b == 0.0:
-            return _('Undefined')
-        if isinstance(a, Rational) or isinstance(b, Rational):
-            return a / b
-        elif self.ml.is_int(a) and float(self.ml.abs(a)) < 1e12 and \
-                self.ml.is_int(b) and float(self.ml.abs(b)) < 1e12:
-            return Rational(a, b)
-        else:
-            return self.ml.div(a, b)

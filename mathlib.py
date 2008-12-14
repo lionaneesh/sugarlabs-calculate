@@ -18,6 +18,7 @@
 #    2007-07-03: rwh, first version
 
 import types
+import inspect
 import math
 from decimal import Decimal
 from rational import Rational
@@ -34,11 +35,19 @@ class MathLib:
     ANGLE_RAD = 1
     ANGLE_GRAD = 1
 
+    MATH_FUNCTIONS = (
+        'is_int', 'is_bool', 'compare', 'negate', 'abs', 'add', 'sub',
+        'mul', 'div', 'pow', 'sqrt', 'mod', 'exp', 'ln', 'log10', 'factorial',
+        'sin', 'cos', 'tan', 'asin', 'acos', 'atan', 'sinh', 'cosh', 'tanh',
+        'asinh', 'acosh', 'atanh', 'round', 'floor', 'ceil', 'rand_float',
+        'rand_int', 'shift_left', 'shift_right', 'factorize',
+    )
+
     def __init__(self):
         self.constants = {}
         self.set_angle_type(self.ANGLE_DEG)
 
-        self.setup_i18n()
+        self._setup_i18n()
 
 #Constants should maybe become variables in eqnparser.py
         self.set_constant('true', True)
@@ -57,7 +66,7 @@ class MathLib:
         self.set_constant('c_n', self.parse_number('0'))                        #neutron properties
         self.set_constant('m_n', self.parse_number('1.6749272928e-27'))
 
-    def setup_i18n(self):
+    def _setup_i18n(self):
         loc = locale.localeconv()
 
         # The separator to mark thousands (default: ',')
@@ -92,6 +101,18 @@ class MathLib:
             return self.constants[name]
         else:
             return None
+
+    def get_constants(self):
+        return self.constants
+
+    def get_math_functions(self):
+        ret = {}
+        items = inspect.getmembers(self)
+        for key, val in items:
+            if key in self.MATH_FUNCTIONS:
+                ret[key] = val
+
+        return ret
 
     def d(self, val):
         if isinstance(val, Decimal):
@@ -244,13 +265,18 @@ class MathLib:
         return x * y
 
     def div(self, x, y):
+        if y == 0 or y == 0.0:
+            return _('Undefined')
+
+        if self.is_int(x) and float(self.abs(y)) < 1e12 and \
+                self.is_int(x) and float(self.abs(y)) < 1e12:
+            return Rational(x, y)
+
         if isinstance(x, Decimal) or isinstance(y, Decimal):
             x = self.d(x)
             y = self.d(y)
-        if y == 0:
-            return None
-        else:
-            return x / y
+
+        return x / y
 
     def pow(self, x, y):
         if self.is_int(y):
