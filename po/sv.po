@@ -1,0 +1,588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-10-14 07:34-0400\n"
+"Last-Translator: Mattias Ohlsson <mattias_oh@yahoo.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Pootle 1.1.0rc2\n"
+
+#: activity/activity.info:2
+msgid "Calculate"
+msgstr "Beräkna"
+
+#: calculate.py:80
+#, python-format
+#, fuzzy
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Ekvationen ogiltig: %s"
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "Tillgängliga funktioner:"
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Skriver in i Dagboken (%s)"
+
+#: calculate.py:788
+#, fuzzy
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): invalid type"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Tolkningsfel"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "nivå: %d av %d"
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "Fel vid %d"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Skriv help(test) för att få hjälp om ämnet 'test'm, eller skriv help(index) "
+"för att se vilka ämnen som finns tillgängliga."
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Funktionen '%s' är inte definierad"
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Ogiltigt antal argument (%d istället för %d)"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "funktionen behöver %d argument, indatavärden"
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Kunde inte tolka argument %d: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "Funktionsfel: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variabeln '%s' är inte definierad"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr ""
+"Oväntad vänsterparentes (Kontrollerar antalet höger- och vänsterparenteser)"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr ""
+"Tolkningsfel: Antalet högererparenteser matcher inte antalet "
+"vänsterparenteser. (Kontrollera antalet höger- och vänsterparenteser)"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr ""
+"Oväntad högerparentes (Kontrollerar antalet höger- och vänsterparenteser)"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Tolkningsfel: (en högerparentes men inget värde innan den)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Tolkningsfel: (en högerparentes men ingenting att avsluta)"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "Förväntade inte ett tal"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "Förväntade inte en operator"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Tolkningsfel: Förväntar ett tal eller en variabel."
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Förväntade ett tal eller en variabel."
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "Ogiltig operator"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "En operator förväntas"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): returnerade ingenting"
+
+#. TRANS: It is possible to translate commands. However, I would highly
+#. recommend NOT doing so for mathematical functions like cos(). help(),
+#. functions() etc should be translated.
+#: eqnparserhelp.py:39
+msgid "acos"
+msgstr "acos"
+
+#: eqnparserhelp.py:40
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"acos(x) returnerar arkus consinus av x Alltså den vinkel för vilken "
+"cos(vinkel) = x. X definieras som -1 <= x <= 1."
+
+#: eqnparserhelp.py:43
+msgid "and"
+msgstr "och"
+
+#: eqnparserhelp.py:44
+msgid ""
+"and(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"och(x, y), logiskt och. Returnerar Sant om x och y är båda sanna, annars "
+"returnerar den Falskt."
+
+#: eqnparserhelp.py:46
+msgid "asin"
+msgstr "asin"
+
+#: eqnparserhelp.py:47
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin(x) returnerar arksinus av x. Alltså den vinkel för vilken sin(vinkel) = "
+"x. X devifieras som -1 <= x <= 1."
+
+#: eqnparserhelp.py:50
+msgid "atan"
+msgstr "atan"
+
+#: eqnparserhelp.py:51
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan(x) returnerar arktangens av x. Alltså den vinkel för vilken tan(vinkel) "
+"= x. Alla värden på x är giltiga."
+
+#: eqnparserhelp.py:54
+msgid "cos"
+msgstr "cos"
+
+#: eqnparserhelp.py:55
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"cos(x), returnerar cosinus av x. Alltså x-koordinaten på enhetscirkeln för "
+"vinkeln x."
+
+#: eqnparserhelp.py:58
+msgid "cosh"
+msgstr "cosh"
+
+#: eqnparserhelp.py:59
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"cosh(x), returnerar cosinus hyperbolikus av x. Ges av formeln: (exp(x) + "
+"exp(-x)) / 2"
+
+#: eqnparserhelp.py:61
+msgid "exp"
+msgstr "exp"
+
+#: eqnparserhelp.py:62
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x) returnerar den naturliga exponenten av x. Ges av e^x"
+
+#: eqnparserhelp.py:64
+msgid "fac"
+msgstr "fac"
+
+#: eqnparserhelp.py:65
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"fac(x), returnerar fakulteten av  x. Ges av x! =  x * (x - 1) * (x - 2) * "
+"..."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:68
+msgid "functions"
+msgstr "funktioner"
+
+#: eqnparserhelp.py:69
+msgid "functions(), return a list of all the functions that are defined"
+msgstr "funktioner() returnerar en lista över alla definierade funktioner."
+
+#: eqnparserhelp.py:71
+msgid "ln"
+msgstr "ln"
+
+#: eqnparserhelp.py:72
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"ln(x) returnerar den naturliga logaritmen av x. Det är det värde för vilket "
+"exp(värde) = x. Är endast definierad för positiva x."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:76
+msgid "operators"
+msgstr "operatorer"
+
+#: eqnparserhelp.py:77
+msgid "operators(), return a list of the operators that are defined"
+msgstr "operatorer returnerar en lista med alla operatorer som har definierats."
+
+#: eqnparserhelp.py:79
+msgid "or"
+msgstr "or"
+
+#: eqnparserhelp.py:80
+msgid ""
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+msgstr ""
+"or(x, y), logiskt eller. Returnerar sant om någon av x eller y är sanna. Om "
+"båda är falska returneras falskt"
+
+#: eqnparserhelp.py:82
+msgid "plot"
+msgstr "plot"
+
+#: eqnparserhelp.py:83
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(ekvation, var=-a..b), ritar upp ekvationen 'ekvation' med variablerna "
+"'var' inom området [a, b]"
+
+#: eqnparserhelp.py:86
+msgid "sin"
+msgstr "sin"
+
+#: eqnparserhelp.py:87
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+"sin(x) returnerar sinus av x. Detta är y-koordinaten på enhetscirkeln vid "
+"vinkel x."
+
+#: eqnparserhelp.py:90
+msgid "sinh"
+msgstr "sinh"
+
+#: eqnparserhelp.py:91
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+"sinh(x) returnerar sinus hyperbolikus av x. Ges av formeln (exp(x) - "
+"exp(-x)) / 2"
+
+#: eqnparserhelp.py:93
+msgid "sqrt"
+msgstr "sqrt"
+
+#: eqnparserhelp.py:94
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"sqrt(x) returnerar kvadratorten av x. Detta är värdet för vilken svaret i "
+"kvadrat är likamed x."
+
+#: eqnparserhelp.py:97
+msgid "square"
+msgstr "square"
+
+#: eqnparserhelp.py:98
+msgid "square(x), return the square of x. Given by x * x"
+msgstr "square(x) returnerar kvadraten av x. Ges av x^2=x*x."
+
+#: eqnparserhelp.py:101
+msgid "tan"
+msgstr "tan"
+
+#: eqnparserhelp.py:102
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+"tan(x) returnerar tangens av x. Definierar som lutningen på kurvan som går "
+"från origo på enhetscirkeln och genom den punkt som bestäms av vinkel x. Ges "
+"av sin(x)/cos(x)"
+
+#: eqnparserhelp.py:106
+msgid "tanh"
+msgstr "tanh"
+
+#: eqnparserhelp.py:107
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+"tanh(x) returnerar tangens hyperbolikus av x. Ges av formeln sinh(x) / "
+"cosh(x)"
+
+#: eqnparserhelp.py:109
+msgid "test"
+msgstr "test"
+
+#: eqnparserhelp.py:110
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Detta är bara ett testämne, använd help(index) för att nå indexet."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:113
+msgid "variables"
+msgstr "variabler"
+
+#: eqnparserhelp.py:114
+msgid "variables(), return a list of the variables that are currently defined"
+msgstr "variabler() returnerar en lista över alla definierade variabler."
+
+#: eqnparserhelp.py:116
+msgid "xor"
+msgstr "xor"
+
+#: eqnparserhelp.py:117
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x, y) logiskt exklusivt eller. Fungerar som det vi i vanligt tal "
+"betraktar som eller, dvs returnerar sant om antingen x eller y är sant. "
+"Annars returnerar falskt."
+
+#. TRANS: help(index), both 'index' and the translation  will work
+#: eqnparserhelp.py:131
+msgid "index"
+msgstr "lista"
+
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Ämnen"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Tyvärr finns det ingen hjälp att få om ämnet '%s'. Använd help(index) för "
+"att se vilka ämnen som finns tillgängliga."
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Rensa"
+
+#: layout.py:53
+#, fuzzy
+msgid "Enter"
+msgstr "Gå in i"
+
+#: layout.py:60
+msgid "Edit"
+msgstr "Redigera"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "Algebra"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "Trigonometri"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Boolsk"
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Konstanter"
+
+#: layout.py:65
+msgid "Format"
+msgstr "Format"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "Etikett: "
+
+#: layout.py:118
+msgid "All equations"
+msgstr "Alla ekvationer"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "Mina ekvationer"
+
+#: layout.py:120
+msgid "Show history"
+msgstr "Visa tidigare åtgärder"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "Visa variabler"
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "*"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "/"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "Inte definierad"
+
+#: mathlib.py:142
+#, fuzzy
+msgid "Error: unsupported type"
+msgstr "Fel: Stödjer inte den typen."
+
+#: toolbars.py:36
+msgid "Help"
+msgstr "Hjälp"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Kopiera"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Klistra in"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Klipp ut"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "Kvadrat"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "Kvadratrot"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e upphöjt i x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x upphöjt i y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "Naturliga logaritmen"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Fakultet"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Sinus"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Cosinus"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangens"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "arksinus"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arkus cosinus"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arkus tangens"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Sinus hyperbolikus"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Cosinus hyperbolikus"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Tangens hyperbolikus"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "Logiskt och"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "Logiskt eller"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "Lika med"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "Inte lika med"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Grader"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radianer"
+
+#~ msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#~ msgstr "tanh(x) returnerar tangens hyperbolikus av x. Ges av sinh(x) / cosh(x)"
+
+#~ msgid "Inverse"
+#~ msgstr "Invers"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "Grader / Radianer"
