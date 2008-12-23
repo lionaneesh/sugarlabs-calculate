@@ -39,27 +39,25 @@ class PlotLib:
     def get_svg(self):
         return self.svg_data
 
-    def parse_range(self, range):
-        p1 = range.split('=')
-        if len(p1) != 2:
-            return None
-        p2 = p1[1].split('..')
-        if len(p2) != 2:
-            return None
-        return (p1[0], (float(p2[0]), float(p2[1])))
-
-    def evaluate(self, eqn, var, range, n=100):
+    def evaluate(self, eqn, var, range, points=100):
         x_old = self.parser.get_var(var)
 
+        if type(eqn) in (types.StringType, types.UnicodeType):
+            eqn = self.parser.parse(eqn)
+
         res = []
-        d = float((range[1] - range[0])) / (n - 1)
+        d = float((range[1] - range[0])) / (points - 1)
         x = range[0]
-        while n > 0:
+        while points > 0:
             self.parser.set_var(var, x)
-            v = float(self.parser.parse(eqn))
+            ret = self.parser.evaluate(eqn)
+            if ret is not None:
+                v = float(ret)
+            else:
+                v = 0
             res.append((x, v))
             x += d
-            n -= 1
+            points -= 1
 
         self.parser.set_var(var, x_old)
         return res
@@ -104,11 +102,17 @@ class PlotLib:
             self.maxx = max(float(x), self.maxx)
             self.maxy = max(float(y), self.maxy)
 
-        x_space = 0.02 * (self.maxx - self.minx)
+        if self.minx == self.maxx:
+            xYspace = 0.5
+        else:
+            x_space = 0.02 * (self.maxx - self.minx)
         self.minx -= x_space
         self.maxx += x_space
 
-        y_space = 0.02 * (self.maxy - self.miny)
+        if self.miny == self.maxy:
+            y_space = 0.5
+        else:
+            y_space = 0.02 * (self.maxy - self.miny)
         self.miny -= y_space
         self.maxy += y_space
 
@@ -150,21 +154,39 @@ class PlotLib:
         f.write(self.svg_data)
         f.close()
 
-    def plot(self, eqn, range_spec):
-        _logger.debug('plot(): %r, %r', eqn, range_spec)
+    def plot(self, eqn, **kwargs):
+        '''
+        Plot function <eqn>.
 
-        (var, range) = self.parse_range(range_spec)
-        if range is None:
-            _logger.error('Unable to parse range')
-            return False
+        kwargs can contain: 'points'
+
+        The last item in kwargs is interpreted as the variable that should
+        be varied.
+        '''
+
+        _logger.debug('plot(): %r, %r', eqn, kwargs)
+
+        if 'points' in kwargs:
+            points = kwargs['points']
+            del kwargs['points']
+        else:
+            points = 100
+
+        if len(kwargs) > 1:
+            _logger.error('Too many variables specified')
+            return None
+
+        for var, range in kwargs.iteritems():
+            pass
         _logger.info('Plot range for var %s: %r', var, range)
 
         self.set_size(250, 250)
         self.create_image()
 
-        self.draw_axes(var, eqn)
+        # FIXME: should use equation as label
+        self.draw_axes(var, 'f(x)')
 
-        vals = self.evaluate(eqn, var, range)
+        vals = self.evaluate(eqn, var, range, points=points)
 #        print 'vals: %r' % vals
         self.add_curve(vals)
 
