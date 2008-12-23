@@ -1,6 +1,7 @@
 * Refactored equation drawing code
 * Move to new equation parser based on python ast
 * Refactor sharing
+* Add languages: bi, cs, en_US, fi, he, hu, sk, sv, sw, wa
 
 25
 
