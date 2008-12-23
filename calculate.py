@@ -35,29 +35,33 @@ import pango
 import base64
 
 from sugar.activity import activity
-from sugar.presence import presenceservice
 import sugar.profile
 from sugar.graphics.icon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
 
-from sharedstate.sharedstate import SharingHelper
-
+from shareable_activity import ShareableActivity
 from layout import CalcLayout
 from mathlib import MathLib
-from eqnparser import EqnParser
+from astparser import AstParser, ParseError
 from svgimage import SVGImage
 
 from decimal import Decimal
 from rational import Rational
 
 class Equation:
-    def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, str=None):
-        if str is not None:
-            self.parse(str)
+    def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, \
+            eqnstr=None, ml=None):
+
+        if eqnstr is not None:
+            self.parse(eqnstr)
         elif eqn is not None:
             self.set(label, eqn, res, col, owner)
 
+        self.ml = ml
+
     def set(self, label, eqn, res, col, owner):
+        """Set equation properties."""
+
         self.label = label
         self.equation = eqn
         self.result = res
@@ -74,6 +78,8 @@ class Equation:
                 (self.label, self.equation, self.result, self.color.to_string(), self.owner)
 
     def parse(self, str):
+        """Parse equation object string representation."""
+
         str = str.rstrip("\r\n")
         l = str.split(';')
         if len(l) != 5:
@@ -92,18 +98,57 @@ class Equation:
 
         self.set(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4])
 
-class Calculate(activity.Activity):
+    def format_history_buf(self, buf):
+        """Apply proper formatting to a gtk.TextBuffer for the history"""
+
+        iter_start = buf.get_start_iter()
+        iter_colon = buf.get_start_iter()
+        iter_end = buf.get_end_iter()
+        iter_middle = buf.get_iter_at_line(1)
+        try:
+            pos = buf.get_text(iter_start, iter_end).index(':')
+            iter_colon.forward_chars(pos)
+        except:
+            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL),
+                          iter_start, iter_middle)
+        else:
+            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW),
+                          iter_start, iter_colon)
+            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL),
+                          iter_colon, iter_middle)
+
+        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG,
+            justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
+        col = self.color.get_fill_color()
+        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
+
+    def create_textview(self):
+        """Create a gtk.TextView object for this equation."""
+
+        if isinstance(self.result, SVGImage):
+            w = self.result.get_image()
+
+        else:
+            text = ""
+            if len(self.label) > 0:
+                text += str(self.label) + ": "
+            r = self.ml.format_number(self.result)
+            text += str(self.equation) + "\n=" + r
+            w = gtk.TextView()
+            w.set_wrap_mode(gtk.WRAP_WORD)
+            b = w.get_buffer()
+            b.set_text(text)
+            self.format_history_buf(b)
+
+        return w
+
+class Calculate(ShareableActivity):
 
     TYPE_FUNCTION = 1
     TYPE_OP_PRE = 2
     TYPE_OP_POST = 3
     TYPE_TEXT = 4
     
-    FONT_SMALL = "sans 10"
-    FONT_SMALL_NARROW = "sans italic 10"
-    FONT_BIG = "sans bold 14"
-    FONT_BIG_NARROW = "sans italic 14"
-    FONT_BIGGER = "sans bold 18"
 
     SELECT_NONE = 0
     SELECT_SELECT = 1
@@ -131,6 +176,7 @@ class Calculate(activity.Activity):
         'greater': '>',
         'percent': '%',
         'comma': ',',
+        'underscore': '_',
         'Left': lambda o: o.move_left(),
         'Right': lambda o: o.move_right(),
         'Up': lambda o: o.get_older(),
@@ -157,12 +203,12 @@ class Calculate(activity.Activity):
     IDENTIFIER_CHARS = u"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
 
     def __init__(self, handle):
-        activity.Activity.__init__(self, handle)
+        ShareableActivity.__init__(self, handle)
 
-        self.helper_old_eqs = []
+        self.old_eqs = []
         
         self.ml = MathLib()
-        self.parser = EqnParser(self.ml)
+        self.parser = AstParser(self.ml)
         self.KEYMAP['multiply'] = self.ml.mul_sym
         self.KEYMAP['divide'] = self.ml.div_sym
 
@@ -184,35 +230,16 @@ class Calculate(activity.Activity):
         self.layout = CalcLayout(self)
         self.label_entry = self.layout.label_entry
         self.text_entry = self.layout.text_entry
-        self.history = self.layout.history
         self.last_eq = self.layout.last_eq.get_buffer()
         self.last_eq_sig = None
-
-        self.presence = presenceservice.get_instance()
-        self.owner = self.presence.get_owner()
-        self.owner_id = str(self.owner._properties["nick"])
-        _logger.debug('Owner_id: %s', self.owner_id)
-
-        options = {
-            'receive_message': self.receive_message,
-            'on_connect': lambda: self.helper.send_message("req_sync", "")
-        }
-#        self.helper.create_shared_object('old_eqs',
-#                                         {'changed': lambda x: self.buddy_old_eqs_cb(),
-#                                          'type': 'python'},
-#                                         iv = [])
-#        self.helper.create_shared_object('vars',
-#                                         {'changed': lambda x: self.buddy_vars_cb(),
-#                                          'type': 'python'},
-#                                         iv = [])
-        self.helper = SharingHelper(self, opt=options)
-
-        _logger.info(_('Available functions:'))
-        for f in self.parser.get_function_names():
-            _logger.info('\t%s', f)
+        self.last_eqn_textview = None
 
         self.reset()
         self.layout.show_it()
+
+        self.connect('joined', self._joined_cb)
+
+        self.parser.log_debug_info()
 
     def ignore_key_cb(self, widget, event):
         return True
@@ -223,8 +250,6 @@ class Calculate(activity.Activity):
     def equation_pressed_cb(self, eqn):
         """Callback for when an equation box is clicked"""
 
-#        if len(self.helper_old_eqs) <= n:
-#            return True
         if isinstance(eqn.result, SVGImage):
             return True
 
@@ -236,36 +261,40 @@ class Calculate(activity.Activity):
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
-    def format_last_eq_buf(self, buf, res, range):
-        """Format the 'last equation' gtk.TextBuffer properly"""
+    def format_last_eq_buf(self, buf, res, offset=0):
+        """
+        Format the 'last equation' gtk.TextBuffer properly.
+
+        Input:
+            buf: the gtk.TextBuffer
+            res: the result, ParseError object in case of error
+            offset: offset where the equation starts in the TextBuffer
+        """
 
         eq_start = buf.get_start_iter()
         eq_middle = buf.get_iter_at_line(1)
         eq_end = buf.get_end_iter()
-        buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW),
+        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG_NARROW),
             eq_start, eq_middle)
 
 # String results should be a little smaller
         if type(res) == types.StringType or res is None:
-            buf.apply_tag(buf.create_tag(font=self.FONT_BIG_NARROW,
+            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG_NARROW,
                 justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
         else:
-            buf.apply_tag(buf.create_tag(font=self.FONT_BIGGER,
+            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIGGER,
                 justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
 
 # Format error
-        if res is None:
-            eq_start.forward_chars(range[0])
+        if isinstance(res, ParseError):
+            range = res.get_range()
+            eq_start.forward_chars(range[0] + offset)
             end = self.last_eq.get_start_iter()
-            end.forward_chars(range[1])
+            end.forward_chars(range[1] + offset)
             self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
                 eq_start, end)
             self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
                 eq_middle, eq_end)
-
-    def set_variables(self, eqn):
-        if len(eqn.label) > 0:
-            self.parser.set_var(eqn.label, eqn.equation)
 
     def set_last_equation(self, eqn):
         """Fill the 'last equation' TextView"""
@@ -281,8 +310,9 @@ class Calculate(activity.Activity):
             self.layout.last_eq.disconnect(self.last_eq_sig)
             self.last_eq_sig = None
 
-        range = None
-        if eqn.result is not None:
+        if isinstance(eqn.result, ParseError):
+            text += "\n" + str(eqn.result)
+        else:
             if isinstance(eqn.result, SVGImage):
                 pass
             else:
@@ -291,35 +321,71 @@ class Calculate(activity.Activity):
             self.last_eq_sig = self.layout.last_eq.connect('button-press-event', \
                 lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
 
-        else:
-            range = self.parser.get_error_range()
-            range = (range[0] + offset, range[1] + offset)
-            text += "\n" + self.parser.ps.format_error()
-
         self.last_eq.set_text(text)
-        self.format_last_eq_buf(self.last_eq, eqn.result, range)
+        self.format_last_eq_buf(self.last_eq, eqn.result, offset)
 
     def set_error_equation(self, eqn):
+        """Set equation with error markers. Since set_last_equation implements
+        this we can just forward the call."""
         self.set_last_equation(eqn)
 
     def clear_equations(self):
-        self.helper_old_eqs = []
+        """Clear the list of old equations."""
+        self.old_eqs = []
         self.showing_version = 0
 
-    def add_equation(self, eq, prepend=False):
-        """Insert equation in the history list and set variable if assignment"""
+    def add_equation(self, eq, prepend=False, drawlasteq=False, tree=None):
+        """
+        Insert equation in the history list and set variable if assignment.
+        Input:
+            eq: the equation object
+            prepend: if True, prepend to list, else append
+            drawlasteq: if True, draw in 'last equation' textbox and queue the
+            buffer to be added to the history next time an equation is added.
+            tree: the parsed tree, this will be used to set the label variable
+            so that the equation can be used symbolicaly.
+            """
 
-#        tmp = self.helper_old_eqs
-#        tmp.insert(0, eq)
-#        self.helper_old_eqs = tmp
         if eq.equation is not None and len(eq.equation) > 0:
             if prepend:
-                self.helper_old_eqs.insert(0, eq)
+                self.old_eqs.insert(0, eq)
             else:
-                self.helper_old_eqs.append(eq)
-            self.set_variables(eq)
+                self.old_eqs.append(eq)
 
-            self.showing_version = len(self.helper_old_eqs)
+            self.showing_version = len(self.old_eqs)
+
+        if self.last_eqn_textview is not None and drawlasteq:
+            # Prepending here should be the opposite: prepend -> eqn on top.
+            # We always own this equation
+            self.layout.add_equation(self.last_eqn_textview, True,
+                prepend=not prepend)
+            self.last_eqn_textview = None
+
+        own = (eq.owner == self.get_owner_id())
+        w = eq.create_textview()
+        w.connect('button-press-event', lambda w, e: self.equation_pressed_cb(eq))
+        if drawlasteq:
+            self.set_last_equation(eq)
+
+            # SVG images can't be plotted in last equation window
+            if isinstance(eq.result, SVGImage):
+                self.layout.add_equation(w, own, prepend=not prepend)
+            else:
+                self.last_eqn_textview = w
+        else:
+            self.layout.add_equation(w, own, prepend=not prepend)
+
+        if eq.label is not None and len(eq.label) > 0:
+            w = self.create_var_textview(eq.label, eq.result)
+            if w is not None:
+                self.layout.add_variable(eq.label, w)
+
+            if tree is None:
+                tree = self.parser.parse(eq.equation)
+            self.parser.set_var(eq.label, tree)
+
+    def process_async(self, eqn):
+        """Parse and process an equation asynchronously."""
 
     def process(self):
         """Parse the equation entered and show the result"""
@@ -327,164 +393,73 @@ class Calculate(activity.Activity):
         s = unicode(self.text_entry.get_text())
         label = unicode(self.label_entry.get_text())
         _logger.debug('process(): parsing %r, label: %r', s, label)
-        res = self.parser.parse(s)
-
+        try:
+            tree = self.parser.parse(s)
+            res = self.parser.evaluate(tree)
+        except ParseError, e:
+            res = e
+            self.showing_error = True
 
         if type(res) == types.StringType and res.find('</svg>') > -1:
             res = SVGImage(data=res)
 
+        _logger.debug('Result: %r', res)
+
 # If parsing went ok, see if we have to replace the previous answer
 # to get a (more) exact result
-        elif self.ans_inserted and res is not None:
+        if self.ans_inserted and not isinstance(res, ParseError) and \
+                not isinstance(res, SVGImage):
             ansvar = self.format_insert_ans()
             pos = s.find(ansvar)
             if len(ansvar) > 6 and pos != -1:
                 s2 = s.replace(ansvar, 'LastEqn')
                 _logger.debug('process(): replacing previous answer %r: %r', ansvar, s2)
-                res = self.parser.parse(s2)
+                tree = self.parser.parse(s2)
+                res = self.parser.evaluate(tree)
 
-        eqn = Equation(label, s, res, self.color, self.owner_id)
+        eqn = Equation(label, s, res, self.color, self.get_owner_id(), ml=self.ml)
 
-# Result ok
-        if res is not None:
-            self.add_equation(eqn)
+        if isinstance(res, ParseError):
+            self.set_error_equation(eqn)
+        else:
+            self.add_equation(eqn, drawlasteq=True, tree=tree)
+            self.send_message("add_eq", value=str(eqn))
+
             self.parser.set_var('Ans', eqn.result)
-            self.parser.set_var('LastEqn', eqn.equation)
-            self.helper.send_message("add_eq", str(eqn))
+            self.parser.set_var('LastEqn', tree)
+
             self.showing_error = False
             self.ans_inserted = False
             self.text_entry.set_text(u'')
             self.label_entry.set_text(u'')
 
-# Show error
-        else:
-            self.set_error_equation(eqn)
-            self.showing_error = True
-
-        self.refresh_bar()
-
         return res is not None
 
-    def refresh_bar(self):
-        _logger.debug('Refreshing right bar...')
-        self.refresh_last_eq()
-        if self.layout.varbut.selected == 0:
-            self.refresh_history()
-        else:
-            self.refresh_vars()
-
-    def buddy_old_eqs_cb(self):
-        self.refresh_bar()
-    
     def format_var_buf(self, buf):
         """Apply formatting to a gtk.TextBuffer to show a variable"""
 
         iter_start = buf.get_start_iter()
         iter_end = buf.get_end_iter()
-        buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
+        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW),
             iter_start, iter_end)
         col = self.color.get_fill_color()
         buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
 
-    def buddy_vars_cb(self):
-        self.refresh_bar()
-
-    def refresh_last_eq(self):
-        """Refresh last equation TextView"""
-
-        if self.showing_error:
-            return
-
-        for e in reversed(self.helper_old_eqs):
-            if e.owner == self.owner_id:
-                self.set_last_equation(e)
-                return
-
-    def refresh_vars(self):
-        """Create list of TextViews with variables and display"""
+    def create_var_textview(self, name, value):
+        """Create a gtk.TextView for a variable"""
 
         reserved = ["Ans", "LastEqn", "help"]
-        list = []
-        for name, value in self.parser.get_vars():
-            if name in reserved:
-                continue
-            w = gtk.TextView()
-            b = w.get_buffer()
-            b.set_text(name + ":\t" + str(value))
-            self.format_var_buf(b)
-            list.append(w)
-        self.layout.show_history(list)
+        if name in reserved:
+            return None
+        w = gtk.TextView()
+        w.set_left_margin(5)
+        w.set_right_margin(5)
+        b = w.get_buffer()
+        b.set_text(name + ":\t" + str(value))
+        self.format_var_buf(b)
 
-    def format_history_buf(self, buf, eq):
-        """Apply proper formatting to a gtk.TextBuffer for the history"""
-
-        iter_start = buf.get_start_iter()
-        iter_colon = buf.get_start_iter()
-        iter_end = buf.get_end_iter()
-        iter_middle = buf.get_iter_at_line(1)
-        try:
-            pos = buf.get_text(iter_start, iter_end).index(':')
-            iter_colon.forward_chars(pos)
-        except:
-            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
-                          iter_start, iter_middle)
-        else:
-            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL_NARROW),
-                          iter_start, iter_colon)
-            buf.apply_tag(buf.create_tag(font=self.FONT_SMALL),
-                          iter_colon, iter_middle)
-            
-        buf.apply_tag(buf.create_tag(font=self.FONT_BIG,
-            justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
-        col = eq.color.get_fill_color()
-        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
+        return w
     
-    def refresh_history(self):
-        """Create list of textview items and graphs and display in history"""
-
-        list = []
-
-        if self.showing_error:
-            last_eq_drawn = True
-        else:
-            last_eq_drawn = False
-
-        i = len(self.helper_old_eqs)
-        for e in reversed(self.helper_old_eqs):
-            i -= 1
-
-# Actually set by refresh_last_eq(), but needed for the drawing logic
-            if not last_eq_drawn and e.owner == self.owner_id:
-                last_eq_drawn = True
-                if not isinstance(e.result, SVGImage):
-                    continue
-
-# Skip if only drawing own equations
-            if self.layout.minebut.selected == 1 and e.owner != self.owner_id:
-                continue
-
-            if isinstance(e.result, SVGImage):
-                w = e.result.get_image()
-
-            else:
-                text = ""
-                if len(e.label) > 0:
-                    text += str(e.label) + ": "
-                r = self.ml.format_number(e.result)
-                text += str(e.equation) + "\n=" + r
-                w = gtk.TextView()
-                w.set_wrap_mode(gtk.WRAP_WORD)
-                w.connect('button-press-event', lambda w, e, eqn: self.equation_pressed_cb(eqn), e)
-                b = w.get_buffer()
-##                b.modify_bg(gtk.STATE_ACTIVE | gtk.STATE_NORMAL,
-##                gtk.gdk.color_parse(e.color.get_fill_color())
-                b.set_text(text)
-                self.format_history_buf(b, e)
-
-            list.append(w)
-
-        self.layout.show_history(list)
-
     def clear(self):
         self.text_entry.set_text(u'')
         self.text_entry.grab_focus()
@@ -513,7 +488,7 @@ class Calculate(activity.Activity):
             f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
 
 # In reverse order
-        for eq in self.helper_old_eqs:
+        for eq in self.old_eqs:
             f.write(str(eq))
 
         f.close()
@@ -547,10 +522,8 @@ class Calculate(activity.Activity):
 
             self.clear_equations()
             for str in f:
-                eq = Equation(str=str)
-                self.add_equation(eq)
-
-            self.refresh_bar()
+                eq = Equation(eqnstr=str, ml=self.ml)
+                self.add_equation(eq, prepend=False)
 
             return True
         else:
@@ -596,6 +569,9 @@ class Calculate(activity.Activity):
 
 # Get start of variable name
         str = self.text_entry.get_text()
+        if len(str) == 0:
+            return
+
         sel = self.text_entry.get_selection_bounds()
         if len(sel) == 0:
             end_ofs = self.text_entry.get_position()
@@ -610,7 +586,7 @@ class Calculate(activity.Activity):
         _logger.debug('tab-completing %s...', partial_name)
 
 # Lookup matching variables
-        vars = self.parser.get_var_names(start=partial_name)
+        vars = self.parser.get_names(start=partial_name)
         if len(vars) == 0:
             return False
 
@@ -707,17 +683,17 @@ class Calculate(activity.Activity):
         
     def get_older(self):
         self.showing_version = max(0, self.showing_version - 1)
-        if self.showing_version == len(self.helper_old_eqs) - 1:
+        if self.showing_version == len(self.old_eqs) - 1:
             self.buffer = self.text_entry.get_text()
-        if len(self.helper_old_eqs) > 0:
-            self.text_entry.set_text(self.helper_old_eqs[self.showing_version].equation)
+        if len(self.old_eqs) > 0:
+            self.text_entry.set_text(self.old_eqs[self.showing_version].equation)
 	
     def get_newer(self):
-        self.showing_version = min(len(self.helper_old_eqs), self.showing_version + 1)
-        if self.showing_version == len(self.helper_old_eqs):
+        self.showing_version = min(len(self.old_eqs), self.showing_version + 1)
+        if self.showing_version == len(self.old_eqs):
             self.text_entry.set_text(self.buffer)
         else:
-            self.text_entry.set_text(self.helper_old_eqs[self.showing_version].equation)
+            self.text_entry.set_text(self.old_eqs[self.showing_version].equation)
 
     def add_text(self, str):
         self.button_pressed(self.TYPE_TEXT, str)
@@ -787,23 +763,28 @@ class Calculate(activity.Activity):
         else:
             _logger.error(_('button_pressed(): invalid type'))
 
-    def receive_message(self, msg, val):
+    def message_received(self, msg, **kwargs):
+        _logger.debug('Message received: %s(%r)', msg, kwargs)
+
+        value = kwargs.get('value', None)
         if msg == "add_eq":
-            eq = Equation(str=str(val))
+            eq = Equation(eqnstr=str(value), ml=self.ml)
             self.add_equation(eq)
-            self.refresh_bar()
         elif msg == "req_sync":
             data = []
-            for eq in self.helper_old_eqs:
+            for eq in self.old_eqs:
                 data.append(str(eq))
-            self.helper.send_message("sync", data)
+            self.send_message("sync", value=data)
         elif msg == "sync":
             tmp = []
             self.clear_equations()
-            for eq_str in val:
+            for eq_str in value:
                 _logger.debug('receive_message: %s', str(eq_str))
-                self.add_equation(Equation(str=str(eq_str)))
-            self.refresh_bar()
+                self.add_equation(Equation(eqnstr=str(eq_str)), ml=self.ml)
+
+    def _joined_cb(self, gobj):
+        _logger.debug('Requesting synchronization')
+        self.send_message('req_sync')
 
     def format_insert_ans(self):
         ans = self.parser.get_var('Ans')
