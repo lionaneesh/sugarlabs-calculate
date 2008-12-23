@@ -84,20 +84,24 @@ class IconToggleToolButton(ToggleToolButton):
             self.callback(but)
 
 class TextToggleToolButton(gtk.ToggleToolButton):
-    def __init__(self, items, cb):
+    def __init__(self, items, cb, index=False):
         gtk.ToggleToolButton.__init__(self)
         self.items = items
         self.set_label(items[0])
         self.selected = 0
         self.connect('clicked', self.toggle_button)
         self.callback = cb
+        self.index = index
 
     def toggle_button(self, w):
         self.selected = (self.selected + 1) % len(self.items)
         but = self.items[self.selected]
         self.set_label(but)
         if self.callback is not None:
-            self.callback(but)
+            if self.index:
+                self.callback(self.selected)
+            else:
+                self.callback(but)
 
 class LineSeparator(gtk.SeparatorToolItem):
     def __init__(self):
@@ -229,7 +233,7 @@ class BooleanToolbar(gtk.Toolbar):
         self.insert(IconToolButton('boolean-neq', _('Not equals'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
 
-class ConstantsToolbar(gtk.Toolbar):
+class MiscToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
@@ -240,9 +244,8 @@ class ConstantsToolbar(gtk.Toolbar):
         self.insert(IconToolButton('constants-e', _('e'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
 
-class FormatToolbar(gtk.Toolbar):
-    def __init__(self, calc):
-        gtk.Toolbar.__init__(self)
+        self.insert(LineSeparator(), -1)
+
         el = [
             {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'Deg'},
             {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'Rad'},
@@ -250,10 +253,17 @@ class FormatToolbar(gtk.Toolbar):
         self.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
                     _('Degrees / radians')), -1)
-    
+
+        self.insert(LineSeparator(), -1)
+
+        self.insert(IconToolButton('plot', _('Plot'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
+
     def update_angle_type(self, text, calc):
         if text == 'deg':
             calc.ml.set_angle_type(MathLib.ANGLE_DEG)
         elif text == 'rad':
             calc.ml.set_angle_type(MathLib.ANGLE_RAD)
         _logger.debug('Angle type: %s', self.ml.angle_scaling)
+

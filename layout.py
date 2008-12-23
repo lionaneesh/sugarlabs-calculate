@@ -6,18 +6,35 @@ pygtk.require('2.0')
 import gtk
 import pango
 from sugar.activity import activity
+from sugar.graphics.roundbox import CanvasRoundBox
 from toolbars import *
 
 class CalcLayout:
 
+    FONT_SMALL = "sans 10"
+    FONT_SMALL_NARROW = "sans italic 10"
+    FONT_BIG = "sans bold 14"
+    FONT_BIG_NARROW = "sans italic 14"
+    FONT_BIGGER = "sans bold 18"
+
     def __init__(self, parent):
         self._parent = parent
+
+        self._own_equations = []
+        self._other_equations = []
+        self._showing_history = True
+        self._showing_all_history = True
+        self._var_textviews = {}
+
         self.create_dialog()
 
     def create_color(self, rf, gf, bf):
         return gtk.gdk.Color(int(rf*0xFFFF), int(gf*0xFFFF), int(bf*0xFFFF))
 
     def create_button_data(self):
+        """Create a list with button information. We need to do that here
+        because we want to include the lambda functions."""
+
         mul_sym = self._parent.ml.mul_sym
         div_sym = self._parent.ml.div_sym
 
@@ -38,9 +55,6 @@ class CalcLayout:
             [0, 3, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
             [1, 3, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
 
-# Deprecated -- functionality available through interface and labels
-#            [2, 3, 1, 'Ans', self.col_gray2, lambda w: self._parent.add_text('Ans')],
-     
             [3, 0, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
  
             [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
@@ -54,6 +68,8 @@ class CalcLayout:
         ]
 
     def create_dialog(self):
+        """Setup most of the dialog."""
+
 # Toolbar
         toolbox = activity.ActivityToolbox(self._parent)
         self._parent.set_toolbox(toolbox)
@@ -61,8 +77,7 @@ class CalcLayout:
         toolbox.add_toolbar(_('Algebra'), AlgebraToolbar(self._parent))
         toolbox.add_toolbar(_('Trigonometry'), TrigonometryToolbar(self._parent))
         toolbox.add_toolbar(_('Boolean'), BooleanToolbar(self._parent))
-        toolbox.add_toolbar(_('Constants'), ConstantsToolbar(self._parent))
-        toolbox.add_toolbar(_('Format'), FormatToolbar(self._parent))
+        toolbox.add_toolbar(_('Miscellaneous'), MiscToolbar(self._parent))
         toolbox.show_all()
 
 # Some layout constants
@@ -115,10 +130,12 @@ class CalcLayout:
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton([_('All equations'), _('My equations')],
-            lambda x: self._parent.refresh_bar())
-        self.varbut = TextToggleToolButton([_('Show history'), _('Show variables')],
-            lambda x: self._parent.refresh_bar())
+        self.minebut = TextToggleToolButton(
+            [_('All equations'), _('My equations')],
+            self._all_equations_toggle_cb, index=True)
+        self.varbut = TextToggleToolButton(
+            [_('Show history'), _('Show variables')],
+            self._history_toggle_cb, index=True)
         hc2.add(self.minebut)
         hc2.add(self.varbut)
         self.grid.attach(hc2, 6, 11, 0, 1)
@@ -132,27 +149,96 @@ class CalcLayout:
 # Right part: history
         scrolled_window = gtk.ScrolledWindow()
         scrolled_window.set_policy(gtk.POLICY_NEVER, gtk.POLICY_AUTOMATIC)
-        self.history = gtk.VBox()
-        self.history.set_homogeneous(False)
-        self.history.set_border_width(6)
-        scrolled_window.add_with_viewport(self.history)
+
+        self.history_vbox = gtk.VBox()
+        self.history_vbox.set_homogeneous(False)
+        self.history_vbox.set_border_width(6)
+        self.history_vbox.set_spacing(4)
+
+        self.variable_vbox = gtk.VBox()
+        self.variable_vbox.set_homogeneous(False)
+        self.variable_vbox.set_border_width(6)
+        self.variable_vbox.set_spacing(4)
+
+        vbox = gtk.VBox()
+        vbox.pack_start(self.history_vbox)
+        vbox.pack_start(self.variable_vbox)
+        scrolled_window.add_with_viewport(vbox)
         self.grid.attach(scrolled_window, 6, 11, 5, 16)
 
     def show_it(self):
+        """Show the dialog."""
         self._parent.set_canvas(self.grid)
         self._parent.show_all()
+        self.show_history()
         self.text_entry.grab_focus()
 
-    def show_history(self, window_list):
-        if self.history is None:
-            return
-        for el in self.history.get_children():
-            self.history.remove(el)
-        for w in window_list:
-            self.history.pack_start(w, expand=False, fill=False, padding=1)
-        self._parent.show_all()
+    def showing_history(self):
+        """Return whether we're currently showing the history (or otherwise
+        the list of variables)."""
+        return self._showing_history
+
+    def show_history(self):
+        """Show the history VBox."""
+        self._showing_history = True
+        self.variable_vbox.hide()
+        self.history_vbox.show()
+
+    def add_equation(self, textview, own, prepend=False):
+        """Add a gtk.TextView of an equation to the history_vbox."""
+
+        if prepend:
+            self.history_vbox.pack_start(textview, False, True)
+            self.history_vbox.reorder_child(textview, 0)
+        else:
+            self.history_vbox.pack_end(textview, False, True)
+
+        if own:
+            self._own_equations.append(textview)
+            textview.show()
+        else:
+            self._other_equations.append(textview)
+            if self._showing_all_history:
+                textview.show()
+
+    def show_all_history(self):
+        """Show both owned and other equations."""
+        self._showing_all_history = True
+        for key in self._other_equations:
+            key.show()
+
+    def show_own_history(self):
+        """Show only owned equations."""
+        self._showing_all_history = False
+        for key in self._other_equations:
+            key.hide()
+
+    def add_variable(self, varname, textview):
+        """Add a gtk.TextView of a variable to the variable_vbox."""
+
+        if varname in self._var_textviews:
+            self.variable_vbox.remove(self._var_textviews[varname])
+            del self._var_textviews[varname]
+
+        self._var_textviews[varname] = textview
+        self.variable_vbox.pack_start(textview, False, True)
+
+        # Reorder textviews for a sorted list
+        names = self._var_textviews.keys()
+        names.sort()
+        for i in range(len(names)):
+            self.variable_vbox.reorder_child(self._var_textviews[names[i]], i)
+
+        textview.show()
+
+    def show_variables(self):
+        """Show the variables VBox."""
+        self._showing_history = False
+        self.history_vbox.hide()
+        self.variable_vbox.show()
 
     def create_button(self, cap, cb, fgcol, bgcol, width):
+        """Create a button that is set up properly."""
         button = gtk.Button(_(cap))
         self.modify_button_appearance(button, fgcol, bgcol, width)
         button.connect("clicked", cb)
@@ -160,8 +246,21 @@ class CalcLayout:
         return button
 
     def modify_button_appearance(self, button, fgcol, bgcol, width):
+        """Modify button style."""
         width = 50 * width
         button.get_child().set_size_request(width, 50)
         button.get_child().modify_font(self.button_font)
         button.get_child().modify_fg(gtk.STATE_NORMAL, fgcol)
         button.modify_bg(gtk.STATE_NORMAL, bgcol)
+
+    def _all_equations_toggle_cb(self, index):
+        if index == 0:
+            self.show_all_history()
+        else:
+            self.show_own_history()
+
+    def _history_toggle_cb(self, index):
+        if index == 0:
+            self.show_history()
+        else:
+            self.show_variables()
