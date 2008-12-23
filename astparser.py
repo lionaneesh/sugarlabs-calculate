@@ -18,6 +18,10 @@ except ImportError:
 from mathlib import MathLib
 from plotlib import PlotLib
 
+PLOTHELP = _(
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
+range from a to b")
+
 class ParseError(Exception):
     def __init__(self, msg, start, end=None):
         self._msg = msg
@@ -166,9 +170,6 @@ class AstParser:
         else:
             self.pl = pl
 
-        # Plug-in plot function
-        self.set_var('plot', self.pl.plot)
-
         # Help manager
         self._helper = Helper(self)
         self.set_var('help', self._helper.get_help)
@@ -176,6 +177,10 @@ class AstParser:
             (self._helper.get_help, 0): self._ARG_STRING,
             (self.pl.plot, 0): self._ARG_NODE,
         }
+
+        # Plug-in plot function
+        self.set_var('plot', self.pl.plot)
+        self._helper.add_help('plot', PLOTHELP)
 
         self._load_plugins()
 
