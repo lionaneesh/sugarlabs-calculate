@@ -42,11 +42,34 @@ from sugar.graphics.xocolor import XoColor
 from shareable_activity import ShareableActivity
 from layout import CalcLayout
 from mathlib import MathLib
-from astparser import AstParser, ParseError
+from astparser import AstParser, ParserError, RuntimeError
 from svgimage import SVGImage
 
 from decimal import Decimal
 from rational import Rational
+
+def findchar(text, chars, ofs=0):
+    '''
+    Find a character in set <chars> starting from offset ofs.
+    Everything between brackets '()' is ignored.
+    '''
+
+    level = 0
+    for i in range(ofs, len(text)):
+        if text[i] == '(':
+            level += 1
+        elif text[i] == ')':
+            level -= 1
+        elif text[i] in chars and level == 0:
+            return i
+
+    return -1
+
+def _textview_realize_cb(widget):
+    '''Change textview properties once window is created.'''
+    win = widget.get_window(gtk.TEXT_WINDOW_TEXT)
+    win.set_cursor(gtk.gdk.Cursor(gtk.gdk.HAND1))
+    return False
 
 class Equation:
     def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, \
@@ -98,47 +121,112 @@ class Equation:
 
         self.set(l[0], l[1], l[2], XoColor(color_string=l[3]), l[4])
 
-    def format_history_buf(self, buf):
-        """Apply proper formatting to a gtk.TextBuffer for the history"""
+    def determine_font_size(self, *tags):
+        size = 0
+        for tag in tags:
+            try:
+                size = max(size, tag.get_property('size'))
+            except:
+                pass
+        return size
 
-        iter_start = buf.get_start_iter()
-        iter_colon = buf.get_start_iter()
-        iter_end = buf.get_end_iter()
-        iter_middle = buf.get_iter_at_line(1)
-        try:
-            pos = buf.get_text(iter_start, iter_end).index(':')
-            iter_colon.forward_chars(pos)
-        except:
-            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL),
-                          iter_start, iter_middle)
+    def append_with_superscript_tags(self, buf, text, *tags):
+        '''Add a text to a gtk.TextBuffer with superscript tags.'''
+
+        fontsize = self.determine_font_size(*tags)
+        _logger.debug('font-size: %d', fontsize)
+        tagsuper = buf.create_tag(rise=fontsize/2)
+
+        ofs = 0
+        while ofs <= len(text) and text.find('**', ofs) != -1:
+            nextofs = text.find('**', ofs)
+            buf.insert_with_tags(buf.get_end_iter(), text[ofs:nextofs], *tags)
+            nextofs2 = findchar(text, ['+','-', '*', '/'], nextofs + 2)
+            if nextofs2 == -1:
+                nextofs2 = len(text)
+            buf.insert_with_tags(buf.get_end_iter(), text[nextofs+2:nextofs2],
+                    tagsuper, *tags)
+            ofs = nextofs2
+
+        if ofs < len(text):
+            buf.insert_with_tags(buf.get_end_iter(), text[ofs:], *tags)
+
+    def create_lasteq_textbuf(self):
+        '''
+        Return a gtk.TextBuffer properly formatted for last equation
+        gtk.TextView.
+        '''
+
+        is_error = isinstance(self.result, ParserError)
+        buf = gtk.TextBuffer()
+        tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
+        tagbignarrow = buf.create_tag(font=CalcLayout.FONT_BIG_NARROW)
+        tagbigger = buf.create_tag(font=CalcLayout.FONT_BIGGER)
+        tagjustright = buf.create_tag(justification=gtk.JUSTIFY_RIGHT)
+        tagred = buf.create_tag(foreground='#FF0000')
+
+        # Add label and equation
+        if len(self.label) > 0:
+            labelstr = '%s:' % self.label
+            buf.insert_with_tags(buf.get_end_iter(), labelstr, tagbignarrow)
+        eqnoffset = buf.get_end_iter().get_offset()
+        eqnstr = '%s\n' % str(self.equation)
+        if is_error:
+            buf.insert_with_tags(buf.get_end_iter(), eqnstr, tagbignarrow)
         else:
-            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW),
-                          iter_start, iter_colon)
-            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL),
-                          iter_colon, iter_middle)
+            self.append_with_superscript_tags(buf, eqnstr, tagbignarrow)
 
-        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG,
-            justification=gtk.JUSTIFY_RIGHT), iter_middle, iter_end)
-        col = self.color.get_fill_color()
-        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
+        # Add result
+        if type(self.result) is types.StringType:
+            resstr = str(self.result)
+            buf.insert_with_tags(buf.get_end_iter(), resstr,
+                    tagsmallnarrow, tagjustright)
+        elif is_error:
+            resstr = str(self.result)
+            buf.insert_with_tags(buf.get_end_iter(), resstr, tagbigger)
+            range = self.result.get_range()
+            eqnstart = buf.get_iter_at_offset(eqnoffset + range[0])
+            eqnend = buf.get_iter_at_offset(eqnoffset + range[1])
+            buf.apply_tag(tagred, eqnstart, eqnend)
+        elif not isinstance(self.result, SVGImage):
+            resstr = self.ml.format_number(self.result)
+            self.append_with_superscript_tags(buf, resstr, tagbigger,
+                    tagjustright)
 
-    def create_textview(self):
-        """Create a gtk.TextView object for this equation."""
+        return buf
+
+    def create_history_object(self):
+        """
+        Create a history object for this equation.
+        In case of an SVG result this will be the image, otherwise it will
+        return a properly formatted gtk.TextView.
+        """
 
         if isinstance(self.result, SVGImage):
-            w = self.result.get_image()
+            return self.result.get_image()
 
-        else:
-            text = ""
-            if len(self.label) > 0:
-                text += str(self.label) + ": "
-            r = self.ml.format_number(self.result)
-            text += str(self.equation) + "\n=" + r
-            w = gtk.TextView()
-            w.set_wrap_mode(gtk.WRAP_WORD)
-            b = w.get_buffer()
-            b.set_text(text)
-            self.format_history_buf(b)
+        w = gtk.TextView()
+        w.set_wrap_mode(gtk.WRAP_WORD)
+        w.connect('realize', _textview_realize_cb)
+        buf = w.get_buffer()
+
+        tagsmall = buf.create_tag(font=CalcLayout.FONT_SMALL)
+        tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
+        tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
+            justification=gtk.JUSTIFY_RIGHT)
+        col = self.color.get_fill_color()
+        tagcolor = buf.create_tag(foreground=col)
+
+        # Add label, equation and result
+        if len(self.label) > 0:
+            labelstr = '%s:' % self.label
+            buf.insert_with_tags(buf.get_end_iter(), labelstr, tagsmallnarrow)
+        eqnstr = '%s\n' % str(self.equation)
+        self.append_with_superscript_tags(buf, eqnstr, tagsmall)
+        resstr = self.ml.format_number(self.result)
+        self.append_with_superscript_tags(buf, resstr, tagbig)
+
+        buf.apply_tag(tagcolor, buf.get_start_iter(), buf.get_end_iter())
 
         return w
 
@@ -230,7 +318,6 @@ class Calculate(ShareableActivity):
         self.layout = CalcLayout(self)
         self.label_entry = self.layout.label_entry
         self.text_entry = self.layout.text_entry
-        self.last_eq = self.layout.last_eq.get_buffer()
         self.last_eq_sig = None
         self.last_eqn_textview = None
 
@@ -261,68 +348,19 @@ class Calculate(ShareableActivity):
         self.button_pressed(self.TYPE_TEXT, text)
         return True
 
-    def format_last_eq_buf(self, buf, res, offset=0):
-        """
-        Format the 'last equation' gtk.TextBuffer properly.
-
-        Input:
-            buf: the gtk.TextBuffer
-            res: the result, ParseError object in case of error
-            offset: offset where the equation starts in the TextBuffer
-        """
-
-        eq_start = buf.get_start_iter()
-        eq_middle = buf.get_iter_at_line(1)
-        eq_end = buf.get_end_iter()
-        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG_NARROW),
-            eq_start, eq_middle)
-
-# String results should be a little smaller
-        if type(res) == types.StringType or res is None:
-            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIG_NARROW,
-                justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
-        else:
-            buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_BIGGER,
-                justification=gtk.JUSTIFY_RIGHT), eq_middle, eq_end)
-
-# Format error
-        if isinstance(res, ParseError):
-            range = res.get_range()
-            eq_start.forward_chars(range[0] + offset)
-            end = self.last_eq.get_start_iter()
-            end.forward_chars(range[1] + offset)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
-                eq_start, end)
-            self.last_eq.apply_tag(self.last_eq.create_tag(foreground='#FF0000'),
-                eq_middle, eq_end)
-
     def set_last_equation(self, eqn):
-        """Fill the 'last equation' TextView"""
-
-        if len(eqn.label) > 0:
-            text = eqn.label + ': ' + eqn.equation
-            offset = len(eqn.label) + 2
-        else:
-            text = eqn.equation
-            offset = 0
+        """Set the 'last equation' TextView"""
 
         if self.last_eq_sig is not None:
             self.layout.last_eq.disconnect(self.last_eq_sig)
             self.last_eq_sig = None
 
-        if isinstance(eqn.result, ParseError):
-            text += "\n" + str(eqn.result)
-        else:
-            if isinstance(eqn.result, SVGImage):
-                pass
-            else:
-                text += '\n= ' + self.ml.format_number(eqn.result)
+        if not isinstance(eqn.result, ParserError):
+            self.last_eq_sig = self.layout.last_eq.connect(
+                    'button-press-event',
+                    lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
 
-            self.last_eq_sig = self.layout.last_eq.connect('button-press-event', \
-                lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
-
-        self.last_eq.set_text(text)
-        self.format_last_eq_buf(self.last_eq, eqn.result, offset)
+        self.layout.last_eq.set_buffer(eqn.create_lasteq_textbuf())
 
     def set_error_equation(self, eqn):
         """Set equation with error markers. Since set_last_equation implements
@@ -362,7 +400,7 @@ class Calculate(ShareableActivity):
             self.last_eqn_textview = None
 
         own = (eq.owner == self.get_owner_id())
-        w = eq.create_textview()
+        w = eq.create_history_object()
         w.connect('button-press-event', lambda w, e: self.equation_pressed_cb(eq))
         if drawlasteq:
             self.set_last_equation(eq)
@@ -384,6 +422,7 @@ class Calculate(ShareableActivity):
                 tree = self.parser.parse(eq.equation)
             self.parser.set_var(eq.label, tree)
 
+    # FIXME: to be implemented
     def process_async(self, eqn):
         """Parse and process an equation asynchronously."""
 
@@ -396,7 +435,7 @@ class Calculate(ShareableActivity):
         try:
             tree = self.parser.parse(s)
             res = self.parser.evaluate(tree)
-        except ParseError, e:
+        except ParserError, e:
             res = e
             self.showing_error = True
 
@@ -405,10 +444,17 @@ class Calculate(ShareableActivity):
 
         _logger.debug('Result: %r', res)
 
+        # Check whether assigning this label would cause recursion
+        if not isinstance(res, ParserError) and len(label) > 0:
+            lastpos = self.parser.get_var_used_ofs(label)
+            if lastpos is not None:
+                res = RuntimeError(_('Can not assign label: will cause recursion'),
+                        lastpos)
+
 # If parsing went ok, see if we have to replace the previous answer
 # to get a (more) exact result
-        if self.ans_inserted and not isinstance(res, ParseError) and \
-                not isinstance(res, SVGImage):
+        if self.ans_inserted and not isinstance(res, ParserError) \
+                and not isinstance(res, SVGImage):
             ansvar = self.format_insert_ans()
             pos = s.find(ansvar)
             if len(ansvar) > 6 and pos != -1:
@@ -419,14 +465,17 @@ class Calculate(ShareableActivity):
 
         eqn = Equation(label, s, res, self.color, self.get_owner_id(), ml=self.ml)
 
-        if isinstance(res, ParseError):
+        if isinstance(res, ParserError):
             self.set_error_equation(eqn)
         else:
             self.add_equation(eqn, drawlasteq=True, tree=tree)
             self.send_message("add_eq", value=str(eqn))
 
             self.parser.set_var('Ans', eqn.result)
-            self.parser.set_var('LastEqn', tree)
+
+            # Setting LastEqn to the parse tree would certainly be faster,
+            # however, it introduces recursion problems
+            self.parser.set_var('LastEqn', eqn.result)
 
             self.showing_error = False
             self.ans_inserted = False
@@ -435,16 +484,6 @@ class Calculate(ShareableActivity):
 
         return res is not None
 
-    def format_var_buf(self, buf):
-        """Apply formatting to a gtk.TextBuffer to show a variable"""
-
-        iter_start = buf.get_start_iter()
-        iter_end = buf.get_end_iter()
-        buf.apply_tag(buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW),
-            iter_start, iter_end)
-        col = self.color.get_fill_color()
-        buf.apply_tag(buf.create_tag(foreground=col), iter_start, iter_end)
-
     def create_var_textview(self, name, value):
         """Create a gtk.TextView for a variable"""
 
@@ -452,11 +491,16 @@ class Calculate(ShareableActivity):
         if name in reserved:
             return None
         w = gtk.TextView()
+        w.connect('realize', _textview_realize_cb)
         w.set_left_margin(5)
         w.set_right_margin(5)
-        b = w.get_buffer()
-        b.set_text(name + ":\t" + str(value))
-        self.format_var_buf(b)
+        buf = w.get_buffer()
+
+        col = self.color.get_fill_color()
+        tag = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW,
+                foreground=col)
+        text = '%s:\t%s' % (name,str(value))
+        buf.insert_with_tags(buf.get_end_iter(), text, tag)
 
         return w
     
@@ -663,9 +707,10 @@ class Calculate(ShareableActivity):
                 key = 'multiply'
         _logger.debug('Key: %s (%r, %r)', key, event.keyval, event.hardware_keycode)
 
-        if (event.state & gtk.gdk.CONTROL_MASK) and self.CTRL_KEYMAP.has_key(key):
-            f = self.CTRL_KEYMAP[key]
-            return f(self)
+        if event.state & gtk.gdk.CONTROL_MASK:
+            if self.CTRL_KEYMAP.has_key(key):
+                f = self.CTRL_KEYMAP[key]
+                return f(self)
         elif (event.state & gtk.gdk.SHIFT_MASK) and self.SHIFT_KEYMAP.has_key(key):
             f = self.SHIFT_KEYMAP[key]
             return f(self)

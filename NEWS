@@ -1,3 +1,11 @@
+* Support 'real' scientific notation (#4250)
+* Add switching between exponential/scientific notation
+* Allow changing of number of displayed digits
+* Change cursor on equations to Hand (#6612)
+* Fix fall-through of unhandled CTRL keys (eg CTRL+Q)
+* Add recursion detection
+* Fixed error-handling bug
+
 26
 
 * Refactored equation drawing code

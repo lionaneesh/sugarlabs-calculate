@@ -11,11 +11,14 @@ from toolbars import *
 
 class CalcLayout:
 
-    FONT_SMALL = "sans 10"
-    FONT_SMALL_NARROW = "sans italic 10"
-    FONT_BIG = "sans bold 14"
+    FONT_SMALL_POINTS = 10
+    FONT_SMALL = "sans %d" % FONT_SMALL_POINTS
+    FONT_SMALL_NARROW = "sans italic %d" % FONT_SMALL_POINTS
+    FONT_BIG_POINTS = 14
+    FONT_BIG = "sans bold %d" % FONT_BIG_POINTS
     FONT_BIG_NARROW = "sans italic 14"
-    FONT_BIGGER = "sans bold 18"
+    FONT_BIGGER_POINTS = 18
+    FONT_BIGGER = "sans bold %d" % FONT_BIGGER_POINTS
 
     def __init__(self, parent):
         self._parent = parent
@@ -132,10 +135,14 @@ class CalcLayout:
         hc2 = gtk.HBox()
         self.minebut = TextToggleToolButton(
             [_('All equations'), _('My equations')],
-            self._all_equations_toggle_cb, index=True)
+            self._all_equations_toggle_cb,
+            _('Change view between own and all eqauations'),
+            index=True)
         self.varbut = TextToggleToolButton(
             [_('Show history'), _('Show variables')],
-            self._history_toggle_cb, index=True)
+            self._history_toggle_cb,
+            _('Change view between history and variables'),
+            index=True)
         hc2.add(self.minebut)
         hc2.add(self.varbut)
         self.grid.attach(hc2, 6, 11, 0, 1)
@@ -144,6 +151,7 @@ class CalcLayout:
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
+        self.last_eq.connect('realize', self._textview_realize_cb)
         self.grid.attach(self.last_eq, 6, 11, 1, 5)
 
 # Right part: history
@@ -264,3 +272,10 @@ class CalcLayout:
             self.show_history()
         else:
             self.show_variables()
+
+    def _textview_realize_cb(self, widget):
+        '''Change textview properties once window is created.'''
+        win = widget.get_window(gtk.TEXT_WINDOW_TEXT)
+        win.set_cursor(gtk.gdk.Cursor(gtk.gdk.HAND1))
+        return False
+

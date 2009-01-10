@@ -62,9 +62,9 @@ class IconToggleToolButton(ToggleToolButton):
     def __init__(self, items, cb, desc):
         ToggleToolButton.__init__(self)
         self.items = items
-        if _icon_exists(items[0]['icon']):
+        if 'icon' in items[0] and _icon_exists(items[0]['icon']):
             self.set_named_icon(items[0]['icon'])
-        else:
+        elif 'html' in items[0]:
             self.set_label(items[0]['html'])
 #        self.set_tooltip(items[0][1])
         self.set_tooltip(desc)
@@ -75,16 +75,20 @@ class IconToggleToolButton(ToggleToolButton):
     def toggle_button(self, w):
         self.selected = (self.selected + 1) % len(self.items)
         but = self.items[self.selected]
-        if _icon_exists(but['icon']):
+        if 'icon' in but and _icon_exists(but['icon']):
             self.set_named_icon(but['icon'])
-        else:
+        elif 'html' in but:
+            _logger.info('Setting html: %s', but['html'])
             self.set_label(but['html'])
 #        self.set_tooltip(but[1])
         if self.callback is not None:
-            self.callback(but)
+            if 'html' in but:
+                self.callback(but['html'])
+            else:
+                self.callback(but)
 
 class TextToggleToolButton(gtk.ToggleToolButton):
-    def __init__(self, items, cb, index=False):
+    def __init__(self, items, cb, desc, index=False):
         gtk.ToggleToolButton.__init__(self)
         self.items = items
         self.set_label(items[0])
@@ -92,6 +96,7 @@ class TextToggleToolButton(gtk.ToggleToolButton):
         self.connect('clicked', self.toggle_button)
         self.callback = cb
         self.index = index
+        self.set_tooltip_text(desc)
 
     def toggle_button(self, w):
         self.selected = (self.selected + 1) % len(self.items)
@@ -129,7 +134,7 @@ class AlgebraToolbar(gtk.Toolbar):
         gtk.Toolbar.__init__(self)
 
         self.insert(IconToolButton('algebra-square', _('Square'),
-            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^2'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '**2'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(square)'),
             alt_html='x<sup>2</sup>'), -1)
 
@@ -139,7 +144,7 @@ class AlgebraToolbar(gtk.Toolbar):
             alt_html='√x'), -1)
 
         self.insert(IconToolButton('algebra-xinv', _('Inverse'),
-            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^-1'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '**-1'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(inv)'),
             alt_html='x<sup>-1</sup>'), -1)
 
@@ -246,9 +251,15 @@ class MiscToolbar(gtk.Toolbar):
 
         self.insert(LineSeparator(), -1)
 
+        self.insert(IconToolButton('plot', _('Plot'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
+
+        self.insert(LineSeparator(), -1)
+
         el = [
-            {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'Deg'},
-            {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'Rad'},
+            {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'deg'},
+            {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'rad'},
         ]
         self.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
@@ -256,14 +267,39 @@ class MiscToolbar(gtk.Toolbar):
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('plot', _('Plot'),
-            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
+        el = [
+            {'icon': 'format-sci', 'html': 'sci'},
+            {'icon': 'format-exp', 'html': 'exp'},
+        ]
+        self.insert(IconToggleToolButton(el,
+                    lambda x: self.update_format_type(x, calc),
+                    _('Exponent / Scientific notation')), -1)
+
+        el = [
+            {'icon': 'digits-9', 'html': '9'},
+            {'icon': 'digits-12', 'html': '12'},
+            {'icon': 'digits-15', 'html': '15'},
+            {'icon': 'digits-6', 'html': '6'},
+        ]
+        self.insert(IconToggleToolButton(el,
+                    lambda x: self.update_digits(x, calc),
+                    _('Number of shown digits')), -1)
 
     def update_angle_type(self, text, calc):
         if text == 'deg':
             calc.ml.set_angle_type(MathLib.ANGLE_DEG)
         elif text == 'rad':
             calc.ml.set_angle_type(MathLib.ANGLE_RAD)
-        _logger.debug('Angle type: %s', self.ml.angle_scaling)
+        _logger.debug('Angle type: %s', calc.ml.angle_scaling)
+
+    def update_format_type(self, text, calc):
+        if text == 'exp':
+            calc.ml.set_format_type(MathLib.FORMAT_EXPONENT)
+        elif text == 'sci':
+            calc.ml.set_angle_type(MathLib.FORMAT_SCIENTIFIC)
+        _logger.debug('Format type: %s', calc.ml.format_type)
+
+    def update_digits(self, text, calc):
+        calc.ml.set_digit_limit(int(text))
+        _logger.debug('Digit limit: %s', calc.ml.digit_limit)
 
