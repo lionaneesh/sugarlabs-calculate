@@ -1,4 +1,5 @@
-# MathLib.py, generic math library wrapper by Reinier Heeres <reinier@heeres.eu>
+# -*- coding: UTF-8 -*-
+# mathlib.py, generic math library wrapper by Reinier Heeres <reinier@heeres.eu>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -35,9 +36,13 @@ class MathLib:
     ANGLE_RAD = 1
     ANGLE_GRAD = 1
 
+    FORMAT_EXPONENT = 1
+    FORMAT_SCIENTIFIC = 2
+
     def __init__(self):
-        self.constants = {}
         self.set_angle_type(self.ANGLE_DEG)
+        self.set_format_type(self.FORMAT_SCIENTIFIC)
+        self.set_digit_limit(9)
 
         self._setup_i18n()
 
@@ -66,7 +71,15 @@ class MathLib:
 
     def set_angle_type(self, type):
         self.angle_scaling = self.d(type)
-        _logger.debug('Angle type set to:%s', self.angle_scaling)
+        _logger.debug('Angle type set to %s', self.angle_scaling)
+
+    def set_format_type(self, fmt, digit_limit=9):
+        self.format_type = fmt
+        _logger.debug('Format type set to %s', fmt)
+
+    def set_digit_limit(self, digits):
+        self.digit_limit = digits
+        _logger.debug('Digit limit set to %s', digits)
 
     def d(self, val):
         if isinstance(val, Decimal):
@@ -118,9 +131,9 @@ class MathLib:
         elif not isinstance(n, Decimal):
             return _('Error: unsupported type')
         (sign, digits, exp) = n.as_tuple()
-        if len(digits) > 9:
-            exp += len(digits) - 9
-            digits = digits[:9]
+        if len(digits) > self.digit_limit:
+            exp += len(digits) - self.digit_limit
+            digits = digits[:self.digit_limit]
 
         if sign:
             res = "-"
@@ -129,11 +142,11 @@ class MathLib:
         int_len = len(digits) + exp
         
         if int_len == 0:
-            if exp < -5:
+            if exp < -self.digit_limit:
                 disp_exp = exp + len(digits) 
             else:
                 disp_exp = 0
-        elif -5 < int_len < 9:
+        elif -self.digit_limit < int_len < self.digit_limit:
             disp_exp = 0
         else:
             disp_exp = int_len - 1
@@ -160,7 +173,10 @@ class MathLib:
                 res += '0'
 
         if disp_exp != 0:
-            res = res + 'e%d' % disp_exp
+            if self.format_type == self.FORMAT_EXPONENT:
+                res = res + 'e%d' % disp_exp
+            elif self.format_type == self.FORMAT_SCIENTIFIC:
+                res = res + u'×10**%d' % disp_exp
 
         return res
 
