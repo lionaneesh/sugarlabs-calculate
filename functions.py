@@ -254,11 +254,13 @@ def is_int(n):
     if type(n) in (types.IntType, types.LongType):
         return True
 
+    if isinstance(n, _Rational):
+        return (n.n == 0 or n.d == 1)
+
     if not isinstance(n, _Decimal):
         n = _d(n)
         if n is None:
             return False
-
 
     (sign, d, e) = n.normalize().as_tuple()
     return e >= 0
