@@ -1,10 +1,27 @@
 # -*- coding: UTF-8 -*-
+# astparser.py, equation parser based on python Abstract Syntax Trees (ast)
+# Reinier Heeres <reinier@heeres.eu>
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 import types
 import parser
 import re
 import inspect
 import math
+import copy
 import logging
 
 from gettext import gettext as _
@@ -22,16 +39,44 @@ PLOTHELP = _(
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
 range from a to b")
 
-class ParseError(Exception):
+class ParserError(Exception):
+    """Parent class for exceptions raised by the parser."""
+
     def __init__(self, msg, start, end=None):
         self._msg = msg
+        self.set_range(start, end)
 
+    def get_range(self):
+        return self._range
+
+    def set_range(self, start, end=None):
         if end is None:
             end = start + 1
         self._range = (start, end)
 
-    def get_range(self):
-        return self._range
+    def __str__(self):
+        msg = _("Parse error at %d") % (self._range[0] + 1)
+        if self._msg is not None and len(self._msg) > 0:
+            msg += ": %s" % (self._msg)
+        return msg
+
+class ParseError(ParserError):
+    """Class for error during parsing."""
+
+    def __init__(self, msg, start, end=None):
+        ParserError.__init__(self, msg, start, end)
+
+    def __str__(self):
+        msg = _("Error at %d") % (self._range[0] + 1)
+        if self._msg is not None and len(self._msg) > 0:
+            msg += ": %s" % (self._msg)
+        return msg
+
+class RuntimeError(ParserError):
+    """Class for error during executing."""
+
+    def __init__(self, msg, start, end=None):
+        ParserError.__init__(self, msg, start, end)
 
     def __str__(self):
         msg = _("Error at %d") % (self._range[0] + 1)
@@ -87,6 +132,20 @@ class Helper:
                 return val
 
         return _("No help about '%s' available, use help(index) for the index") % (topic)
+
+class EvalState:
+    '''
+    Evaluation state.
+
+    level: the current depth of recursion.
+    branch_vars: the variables used in this branch.
+    used_vars_ofs: dictionary of first offset where a variable is used.
+    '''
+
+    def __init__(self):
+        self.level = 0
+        self.branch_vars = []
+        self.used_var_ofs = {}
 
 class AstParser:
     '''
@@ -159,6 +218,7 @@ class AstParser:
 
     def __init__(self, ml=None, pl=None):
         self._namespace = {}
+        self._used_var_ofs = {}
 
         if ml is None:
             self.ml = MathLib()
@@ -289,7 +349,7 @@ class AstParser:
     def get_pre_operators(self):
         return self.PRE_OPS
 
-    def _resolve_arg(self, func, index, arg, level):
+    def _resolve_arg(self, func, index, arg, state):
         funcarg = (func, index)
         if funcarg in self._special_func_args:
             val = self._special_func_args[funcarg]
@@ -303,51 +363,57 @@ class AstParser:
                 else:
                     logging.error('Unable to resolve special arg %r', arg)
         else:
-            return self._process_node(arg, level)
+            return self._process_node(arg, state)
 
-    def _process_node(self, node, level=0, isfunc=False):
+    def _process_node(self, node, state, isfunc=False):
+        # Copy state, list objects will remain the same
+        state = copy.copy(state)
+        state.level += 1
         ofs = node.col_offset
 
         if node is None:
             return None
 
         elif isinstance(node, ast.Expression):
-            return self._process_node(node.body)
+            return self._process_node(node.body, state)
 
         elif isinstance(node, ast.BinOp):
-            left = self._process_node(node.left, level + 1)
-            right = self._process_node(node.right, level + 1)
+            left = self._process_node(node.left, state)
+            right = self._process_node(node.right, state)
             if left is None or right is None:
                 return None
             func = self.BINOP_MAP[type(node.op)]
-            return func(left, right)
+            try:
+                return func(left, right)
+            except Exception, e:
+                raise RuntimeError(str(e), node.right.col_offset - 1)
 
         elif isinstance(node, ast.UnaryOp):
-            operand = self._process_node(node.operand, level + 1)
+            operand = self._process_node(node.operand, state)
             if operand is None:
                 return None
             func = self.UNARYOP_MAP[type(node.op)]
             return func(operand)
 
         elif isinstance(node, ast.Compare):
-            left = self._process_node(node.left)
-            right = self._process_node(node.comparators[0])
+            left = self._process_node(node.left, state)
+            right = self._process_node(node.comparators[0], state)
             func = self.CMPOP_MAP[type(node.ops[0])]
             return func(left, right)
 
         elif isinstance(node, ast.Call):
-            func = self._process_node(node.func, level + 1, isfunc=True)
+            func = self._process_node(node.func, state, isfunc=True)
             if func is None:
                 return None
 
             for i in range(len(node.args)):
-                node.args[i] = self._resolve_arg(func, i, node.args[i], level + 1)
+                node.args[i] = self._resolve_arg(func, i, node.args[i], state)
                 if node.args[i] is None:
                     return None
             kwargs = {}
             for i in range(len(node.keywords)):
                 key = node.keywords[i].arg
-                val = self._process_node(node.keywords[i].value, level + 1)
+                val = self._process_node(node.keywords[i].value, state)
                 if key is None or val is None:
                     return None
                 kwargs[key] = val
@@ -357,7 +423,7 @@ class AstParser:
                 return ret
             except Exception, e:
                 msg = str(e)
-                raise ParseError(msg, ofs)
+                raise RuntimeError(msg, ofs)
 
         elif isinstance(node, ast.Num):
             return node.n
@@ -366,7 +432,7 @@ class AstParser:
             return node.s
 
         elif isinstance(node, ast.Tuple):
-            list = [self._process_node(i, level + 1) for i in node.elts]
+            list = [self._process_node(i, state) for i in node.elts]
             return tuple(list)
 
         elif isinstance(node, ast.Name):
@@ -374,9 +440,25 @@ class AstParser:
                 return self._helper.get_help()
 
             elif node.id in self._namespace:
+                if not isfunc:
+                    # Check whether variable was already used in this branch
+                    if node.id in state.branch_vars:
+                        raise RuntimeError(_('Recursion detected'), ofs)
+                    state.branch_vars = copy.copy(state.branch_vars)
+
+                    # Update where variable is first used
+                    if node.id not in state.used_var_ofs.keys():
+                        state.used_var_ofs[node.id] = node.col_offset
+                    elif node.col_offset < state.used_var_ofs[node.id]:
+                        state.used_var_ofs[node.id] = node.col_offset
+
                 var = self.get_var(node.id)
                 if type(var) is ast.Expression:
-                    return self._process_node(var.body)
+                    try:
+                        return self._process_node(var.body, state)
+                    except ParserError, e:
+                        e.set_range(ofs, ofs + len(node.id))
+                        raise e
                 else:
                     return var
             else:
@@ -384,17 +466,17 @@ class AstParser:
                     msg = _("Function '%s' not defined") % (node.id)
                 else:
                     msg = _("Variable '%s' not defined") % (node.id)
-                    raise ParseError(msg, ofs, ofs + len(node.id))
+                    raise RuntimeError(msg, ofs, ofs + len(node.id))
 
         elif isinstance(node, ast.Attribute):
-            parent = self._process_node(node.value)
+            parent = self._process_node(node.value, state)
             if parent:
                 try:
                     val = parent.__dict__[node.attr]
                     return val
                 except Exception, e:
                     msg = _("Attribute '%s' does not exist)") % node.value
-                    raise ParseError(msg, ofs, ofs + len(node.value))
+                    raise RuntimeError(msg, ofs, ofs + len(node.value))
 
             return None
 
@@ -402,6 +484,69 @@ class AstParser:
             logging.debug('Unknown node: %r', repr(node))
 
         return None
+
+    def walk_replace_node(self, node, func, level=0):
+        '''
+        Walk an ast tree and call func(node) on each node. If the function
+        call returns something different from None, the field will be
+        replaced by the return value.
+
+        The tree is processed depth-first. This function can be used to
+        evaluate a parse tree symbolically by reducing it to unresolvable
+        items only.
+        '''
+
+        if hasattr(node, '_fields') and node._fields is not None:
+            for field in node._fields:
+                fieldval = getattr(node, field)
+                self.walk_replace_node(fieldval, func, level=level+1)
+                ret = func(fieldval, level=level)
+                if ret is not None:
+                    setattr(node, field, ret)
+
+    def replace_variable(self, tree, var, replacement):
+        '''Replace ast.Name of name <var> with <replacement>.'''
+
+        def func(node, **kwargs):
+            if isinstance(node, ast.Name) and node.id == var:
+                return replacement
+            return None
+
+        self.walk_replace_node(tree, func)
+
+    def print_tree(self, tree):
+        '''Print an ast tree.'''
+
+        def func(node, **kwargs):
+            spaces = '  ' * kwargs['level']
+            print '%s%s' % (spaces, node)
+            return None
+
+        self.walk_replace_node(tree, func)
+
+    def _parse_func(self, node, level):
+        if isinstance(node, ast.BinOp):
+            if isinstance(node.left, ast.Num) and isinstance(node.right, ast.Num):
+                func = self.BINOP_MAP[type(node.op)]
+                ans = func(node.left.n, node.right.n)
+                ret = ast.Num()
+                ret.n = ans
+                return ret
+            else:
+                return None
+        elif isinstance(node, ast.Name):
+            if node.id in self._namespace:
+                var = self.get_var(node.id)
+                ret = ast.Num()
+                ret.n = var
+                return ret
+
+    def parse_symbolic(self, tree):
+        '''
+        Reduce an abstract syntax tree until it contains only numbers and
+        unresolved symbols.
+        '''
+        self.walk_replace_node(tree, self._parse_func)
 
     def _preprocess_eqn(self, eqn):
         eqn = unicode(eqn)
@@ -437,10 +582,13 @@ class AstParser:
         if type(eqn) in (types.StringType, types.UnicodeType):
             eqn = self.parse(eqn)
 
+        state = EvalState()
         if isinstance(eqn, ast.Expression):
-            ret = self._process_node(eqn.body)
+            ret = self._process_node(eqn.body, state)
         else:
-            ret = self._process_node(eqn)
+            ret = self._process_node(eqn, state)
+
+        self._used_var_ofs = state.used_var_ofs
 
         if type(ret) is types.FunctionType:
             return ret()
@@ -457,6 +605,21 @@ class AstParser:
             return self.evaluate(tree)
         else:
             return None
+
+    def get_last_used_vars(self):
+        '''
+        Return the variables that were accessed during the last evaluation
+        of an equation tree.
+        '''
+        return self._used_var_ofs.keys()
+
+    def get_var_used_ofs(self, varname):
+        '''
+        Return where variable <varname> is first used.
+        '''
+        if self._used_var_ofs is None:
+            return None
+        return self._used_var_ofs.get(varname, None)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
@@ -487,3 +650,14 @@ if __name__ == '__main__':
     ret = p.evaluate(eqn)
     print 'Eqn: %s, ret: %s' % (eqn, ret)
 
+    eqn = '12 * 1 + 3 * (apples - 1)'
+    tree = p.parse(eqn)
+    print 'Tree before:'
+    p.print_tree(tree)
+#    p.set_var('apples', 123)
+    p.parse_symbolic(tree)
+#    num = ast.Num()
+#    num.n = 123
+#    p.replace_variable(tree, 'apples', num)
+    print 'Tree after:'
+    p.print_tree(tree)
