@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-10 10:35-0500\n"
-"Last-Translator: Chema Q <jameson.quinn@gmail.com>\n"
+"PO-Revision-Date: 2008-12-25 00:48-0500\n"
+"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -35,35 +35,13 @@ msgstr "Funciones disponibles:"
 msgid "Writing to journal (%s)"
 msgstr "Escribiendo en el diario (%s)"
 
-#: calculate.py:522
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "Leyendo del diario (%s)"
-
-#: calculate.py:528
-msgid "Unable to determine version"
-msgstr "Incapaz de determinar la versión"
-
-#: calculate.py:533
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "Leyendo entrada del diario (versión %s)"
-
-# How can a 'state line' be invalid?
-# Good question, can't get it in testing, but the translation's good.
-#: calculate.py:538
-#, python-format
-msgid "State line invalid (%s)"
-msgstr "Línea de estado no válida (%s)"
-
-#: calculate.py:555
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Imposible leer entrada del diario, versión desconocida (%s)"
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): tipo invalido"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Error de procesamiento"
 
 #: eqnparser.py:58
 #, python-format
@@ -75,11 +53,10 @@ msgstr "nivel: %d, ofs %d"
 msgid "Error at %d"
 msgstr "Error en %d"
 
-# Text assigned to the 'help' variable
-# => Use help(test) for help about 'test', or help(index) for the index
-#: eqnparser.py:235
-msgid "help_var"
-msgstr "help_var"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Use help(test) para ayuda acerca de 'test', o help(indice) para el indice."
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -111,6 +88,10 @@ msgstr "Error de función: %s"
 msgid "Variable '%s' not defined"
 msgstr "La variable '%s' no está definida"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "No se esperaba paréntesis izquierda"
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "Error de procesamiento (paréntesis derecho)"
@@ -125,6 +106,10 @@ msgstr "No se esperaba un paréntesis derecho"
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Error de procesamiento (paréntesis derecho, sin left_val)"
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Error de procesamiento (paréntesis derecho, ningún nivel para cerrar)"
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Número no esperado"
@@ -132,6 +117,14 @@ msgstr "Número no esperado"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Operador no esperado"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Error de procesamiento: numero o variable esperada"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Numero o variable esperada"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -145,411 +138,9 @@ msgstr "Operador esperado"
 msgid "_parse(): returning None"
 msgstr "_parse(): devolviendo Nada"
 
-# These are translated in the .en pootle file too, or you can use the activity to see it the English test. Leaving fuzzy so that people see this note.
-# -----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# -----------------------------------------
-#: eqnparserhelp.py:37
-#, fuzzy
-msgid "help_acos"
-msgstr ""
-"acos(x), devuelve arcoseno de x. Es el ángulo que tiene el coseno dado. "
-"Definido para -1 <= x <= 1"
-
-# a one-letter word for "and" is very confusing here. The and function actually returns second argument... but not going there.
-#: eqnparserhelp.py:38
-msgid "help_and"
-msgstr "and(A,B): devuelve un valor \"cierto\" (no 0) si A y B son ciertos."
-
-#: eqnparserhelp.py:39
-msgid "help_asin"
-msgstr ""
-"asin(x), devuelve arcoseno de x. Es el ángulo que tiene el seno x. Definido "
-"para -1 <= x <= 1"
-
-#: eqnparserhelp.py:40
-msgid "help_atan"
-msgstr ""
-"atan(x), devuelve arcotangento de x. Es el ángulo que tiene el tangento x."
-
-# English says "x coordinate on unit circle", assuming you know angle and axis conventions. Bad.
-# -----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# -----------------------------------------
-#: eqnparserhelp.py:41
-msgid "help_cos"
-msgstr ""
-"cos(x), devuelve el coseno de x. Es el largo del lado menor adyacente al "
-"ángulo x de un triángulo recto cuando el otro lado (hipotenusa) mide 1. "
-
-# -----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# -----------------------------------------
-#: eqnparserhelp.py:42
-#, fuzzy
-msgid "help_cosh"
-msgstr "help_cosh"
-
-#: eqnparserhelp.py:43
-msgid "help_exp"
-msgstr "exp(x), devuelve e^x, ejemplo: exp(1)"
-
-# -----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# -----------------------------------------
-#: eqnparserhelp.py:44
-#, fuzzy
-msgid "help_fac"
-msgstr "help_fac"
-
-#: eqnparserhelp.py:45
-msgid "help_functions"
-msgstr "Muestra las funciones disponibles"
-
-#: eqnparserhelp.py:46
-#, fuzzy
-msgid "help_ln"
-msgstr "help_ln"
-
-#: eqnparserhelp.py:47
-msgid "help_operators"
-msgstr "Muestra los operadores disponibles"
-
-# Text assigned to the 'help' variable
-#: eqnparserhelp.py:48
-#, fuzzy
-msgid "help_or"
-msgstr "help_or"
-
-#: eqnparserhelp.py:49
-msgid "help_plot"
-msgstr "plot(expresión,rango), grafica una función. Ejemplo: plot(x^3,x=-2..2)"
-
-#: eqnparserhelp.py:50
-#, fuzzy
-msgid "help_sin"
-msgstr "help_sin"
-
-#: eqnparserhelp.py:51
-#, fuzzy
-msgid "help_sinh"
-msgstr "help_sinh"
-
-#: eqnparserhelp.py:52
-#, fuzzy
-msgid "help_sqrt"
-msgstr "sqrt(x), devuelve la raiz cuadrada de x. Definido para x >= 0"
-
-#: eqnparserhelp.py:53
-#, fuzzy
-msgid "help_square"
-msgstr "help_square"
-
-#: eqnparserhelp.py:54
-#, fuzzy
-msgid "help_tan"
-msgstr "help_tan"
-
-#: eqnparserhelp.py:55
-#, fuzzy
-msgid "help_tanh"
-msgstr "help_tanh"
-
-#: eqnparserhelp.py:56
-#, fuzzy
-msgid "help_test"
-msgstr "test es solo un ejemplo de la ayuda vea help(index)"
-
-#: eqnparserhelp.py:57
-msgid "help_variables"
-msgstr "muestra variables disponibles"
-
-# Text assigned to the 'help' variable
-#: eqnparserhelp.py:58
-msgid "help_xor"
-msgstr "help_xor"
-
-#: eqnparserhelp.py:69
-#, fuzzy
-msgid "help_usage"
-msgstr ""
-"Use help(test) para ayuda acerca de 'test', o help(index) para el indice"
-
-# -----------------------------------------
-# End of help topics
-# -----------------------------------------
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Temas"
-
-# should the command 'help(index)' be translated?
-#: eqnparserhelp.py:143
-#, python-format
-#, fuzzy
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "No hay ayuda disponible sobre '%s', use help(index) para el índice"
-
-#: layout.py:60
-msgid "Edit"
-msgstr "Editar"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "Álgebra"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "Trigonometría"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "Booleano"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "Constantes"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Formato"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "Etiqueta:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "Todas las ecuaciones"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "Mis ecuaciones"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "Mostrar historia"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "Mostrar variables"
-
-# This should use the locale specification -- xavi
-#: mathlib.py:58
-#, fuzzy
-msgid "thousand_sep"
-msgstr "thousand_sep"
-
-# fraction (as in a/b) or *decimal* separator? If decimal, should use the locale specification
-#: mathlib.py:63
-#, fuzzy
-msgid "fraction_sep"
-msgstr "function_sep"
-
-# Using U+00D7 MULTIPLICATION SIGN
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "×"
-
-# Using U+00F7 DIVISION SIGN
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "÷"
-
-#: mathlib.py:132
-msgid "Undefined"
-msgstr "No-definido"
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr "Error: tipo no soportado"
-
-#: toolbars.py:36
-msgid "Help"
-msgstr "Ayuda"
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr "Copiar"
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr "Pegar"
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr "Cortar"
-
-#: toolbars.py:99
-msgid "Square"
-msgstr "Cuadrado"
-
-#: toolbars.py:103
-msgid "Square root"
-msgstr "Raíz cuadrada"
-
-#: toolbars.py:109
-msgid "e to the power x"
-msgstr "e a la potencia x"
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr "Logaritmo natural"
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr "Factorial"
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr "Seno"
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr "Coseno"
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr "Tangente"
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr "Arcoseno"
-
-#: toolbars.py:149
-msgid "Arc cosine"
-msgstr "Arcocoseno"
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr "Arcotangente"
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr "Seno hiperbólico"
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr "Coseno hiperbólico"
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr "Tangente hiperbólica"
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr "Y lógico"
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr "O lógico"
-
-#: toolbars.py:174
-msgid "Logical xor"
-msgstr "O exclusivo lógico"
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr "Igual"
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr "No-igual"
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr "Pi"
-
-#: toolbars.py:202
-msgid "e"
-msgstr "e"
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr "Grados"
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr "Radianes"
-
-#~ msgid "Type error"
-#~ msgstr "Error de tipo"
-
-#, fuzzy
-#~ msgid "variable %s not defined"
-#~ msgstr "la variable '%s' no definida"
-
-#~ msgid "Function '%s' returned %s"
-#~ msgstr "La función '%s' retornó %s"
-
-#, fuzzy
-#~ msgid "Operator expected: %r"
-#~ msgstr "Número no esperado"
-
-#~ msgid "Parse error: ')' expected"
-#~ msgstr "Error de procesamiento: ')' esperado"
-
-#~ msgid "."
-#~ msgstr "."
-
-# Symbols for multiplication, division, fraction separator and thousand separator
-#~ msgid "*"
-#~ msgstr "*"
-
-#~ msgid "⨯"
-#~ msgstr "⨯"
-
-#~ msgid "/"
-#~ msgstr "/"
-
-#~ msgid "÷"
-#~ msgstr "÷"
-
-#~ msgid ","
-#~ msgstr ","
-
-#, fuzzy
-#~ msgid "enter"
-#~ msgstr "enter"
-
-# How can a 'state line' be invalid?
-# -----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# Symbols for multiplication, division, fraction separator and thousand separator
-# Text assigned to the 'help' variable
-# => Use help(test) for help about 'test', or help(index) for the index
-# This should use the locale specification -- xavi
-# fraction (as in a/b) or *decimal* separator? If decimal, should use the locale specification
-#, python-format
-#~ msgid "Error"
-#~ msgstr "Error"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Error de procesamiento"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Use help(test) para ayuda acerca de 'test', o help(indice) para el indice."
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "No se esperaba  paréntesis derecho"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Error de procesamiento (paréntesis derecho, ningún nivel para cerrar)"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Error de procesamiento: numero o variable esperada"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Numero o variable esperada"
-
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
@@ -644,9 +235,10 @@ msgstr "fac(x), Devuelve el factorial de x. Dado por x * (x-1) *"
 msgid "functions"
 msgstr "funciones"
 
+# functions() is translated, per above entry with just "functions"
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "funciones(), Devuelve uan lista de las funcones que estan definidas."
+msgstr "funciones(), Devuelve una lista de las funciones que están definidas."
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -665,9 +257,10 @@ msgstr ""
 msgid "operators"
 msgstr "operadores"
 
+# operators() is translated, per above entry with just "operators"
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr "operadores(), Devuelve una lista d eoperadores que estan definidos."
+msgstr "operadores(), Devuelve una lista de operadores que están definidos."
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -677,8 +270,8 @@ msgstr "or"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x, y), or logico, Devuelve verdadero si x and/or y es verdadero. de lo "
-"cuontrario devuelve Falso."
+"or(x, y), 'o' logico, Devuelve verdadero si x y/o y es verdadero. de lo "
+"contrario devuelve Falso."
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -744,7 +337,7 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x), Devuelve la tangente de x. Esta es la pendiente de la linea desde el "
+"tan(x), Devuelve la tangente de x. Esta es la pendiente de la línea desde el "
 "origen del circulo unitario hasta el punto en el circulo definido por el "
 "angulo x. Dado por sin(x) / cos(x)"
 
@@ -755,7 +348,7 @@ msgstr "tanh"
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"sinh(x), Devuelve la tangente hiperbolica de x. Dada por sinh(x) / cosh(x)"
+"sinh(x), Devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -792,6 +385,397 @@ msgstr ""
 msgid "index"
 msgstr "indice"
 
+# -----------------------------------------
+# End of help topics
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Temas"
+
+# should the command 'help(index)' be translated?
+#: eqnparserhelp.py:143
+#, python-format
+#, fuzzy
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "No hay ayuda disponible sobre '%s', use help(index) para el índice"
+
+#: layout.py:44
+#, fuzzy
+msgid "Clear"
+msgstr "Vaciar"
+
+#: layout.py:53
+#, fuzzy
+msgid "Enter"
+msgstr "entrar"
+
+#: layout.py:60
+msgid "Edit"
+msgstr "Editar"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "Álgebra"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "Trigonometría"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Booleano"
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Constantes"
+
+#: layout.py:65
+msgid "Format"
+msgstr "Formato"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "Etiqueta:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "Todas las ecuaciones"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "Mis ecuaciones"
+
+#: layout.py:120
+msgid "Show history"
+msgstr "Mostrar historia"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "Mostrar variables"
+
+# Using U+00D7 MULTIPLICATION SIGN
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "×"
+
+# Using U+00F7 DIVISION SIGN
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "÷"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "No-definido"
+
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr "Error: tipo no soportado"
+
+#: toolbars.py:36
+msgid "Help"
+msgstr "Ayuda"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Copiar"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Pegar"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Cortar"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "Cuadrado"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "Raíz cuadrada"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e a la potencia x"
+
 #: toolbars.py:113
 msgid "x to the power y"
 msgstr "x a la potencia y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "Logaritmo natural"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Factorial"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Seno"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Coseno"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangente"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arcoseno"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arcocoseno"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arcotangente"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Seno hiperbólico"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Coseno hiperbólico"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Tangente hiperbólica"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "Y lógico"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "O lógico"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "Igual"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "No-igual"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Grados"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radianes"
+
+#~ msgid "Inverse"
+#~ msgstr "Inversa"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "Grados / Radianes"
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "Leyendo del diario (%s)"
+
+#~ msgid "Unable to determine version"
+#~ msgstr "Incapaz de determinar la versión"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "Leyendo entrada del diario (versión %s)"
+
+# How can a 'state line' be invalid?
+# Good question, can't get it in testing, but the translation's good.
+#, python-format
+#~ msgid "State line invalid (%s)"
+#~ msgstr "Línea de estado no válida (%s)"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "Imposible leer entrada del diario, versión desconocida (%s)"
+
+# Text assigned to the 'help' variable
+# => Use help(test) for help about 'test', or help(index) for the index
+#~ msgid "help_var"
+#~ msgstr "help_var"
+
+# These are translated in the .en pootle file too, or you can use the activity to see it the English test. Leaving fuzzy so that people see this note.
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#, fuzzy
+#~ msgid "help_acos"
+#~ msgstr ""
+#~ "acos(x), devuelve arcoseno de x. Es el ángulo que tiene el coseno dado. "
+#~ "Definido para -1 <= x <= 1"
+
+# a one-letter word for "and" is very confusing here. The and function actually returns second argument... but not going there.
+#~ msgid "help_and"
+#~ msgstr "and(A,B): devuelve un valor \"cierto\" (no 0) si A y B son ciertos."
+
+#~ msgid "help_asin"
+#~ msgstr ""
+#~ "asin(x), devuelve arcoseno de x. Es el ángulo que tiene el seno x. Definido "
+#~ "para -1 <= x <= 1"
+
+#~ msgid "help_atan"
+#~ msgstr ""
+#~ "atan(x), devuelve arcotangento de x. Es el ángulo que tiene el tangento x."
+
+# English says "x coordinate on unit circle", assuming you know angle and axis conventions. Bad.
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#~ msgid "help_cos"
+#~ msgstr ""
+#~ "cos(x), devuelve el coseno de x. Es el largo del lado menor adyacente al "
+#~ "ángulo x de un triángulo recto cuando el otro lado (hipotenusa) mide 1. "
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#, fuzzy
+#~ msgid "help_cosh"
+#~ msgstr "help_cosh"
+
+#~ msgid "help_exp"
+#~ msgstr "exp(x), devuelve e^x, ejemplo: exp(1)"
+
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# -----------------------------------------
+#, fuzzy
+#~ msgid "help_fac"
+#~ msgstr "help_fac"
+
+#~ msgid "help_functions"
+#~ msgstr "Muestra las funciones disponibles"
+
+#, fuzzy
+#~ msgid "help_ln"
+#~ msgstr "help_ln"
+
+#~ msgid "help_operators"
+#~ msgstr "Muestra los operadores disponibles"
+
+# Text assigned to the 'help' variable
+#, fuzzy
+#~ msgid "help_or"
+#~ msgstr "help_or"
+
+#~ msgid "help_plot"
+#~ msgstr "plot(expresión,rango), grafica una función. Ejemplo: plot(x^3,x=-2..2)"
+
+#, fuzzy
+#~ msgid "help_sin"
+#~ msgstr "help_sin"
+
+#, fuzzy
+#~ msgid "help_sinh"
+#~ msgstr "help_sinh"
+
+#, fuzzy
+#~ msgid "help_sqrt"
+#~ msgstr "sqrt(x), devuelve la raiz cuadrada de x. Definido para x >= 0"
+
+#, fuzzy
+#~ msgid "help_square"
+#~ msgstr "help_square"
+
+#, fuzzy
+#~ msgid "help_tan"
+#~ msgstr "help_tan"
+
+#, fuzzy
+#~ msgid "help_tanh"
+#~ msgstr "help_tanh"
+
+#, fuzzy
+#~ msgid "help_test"
+#~ msgstr "test es solo un ejemplo de la ayuda vea help(index)"
+
+#~ msgid "help_variables"
+#~ msgstr "muestra variables disponibles"
+
+# Text assigned to the 'help' variable
+#~ msgid "help_xor"
+#~ msgstr "help_xor"
+
+#, fuzzy
+#~ msgid "help_usage"
+#~ msgstr ""
+#~ "Use help(test) para ayuda acerca de 'test', o help(index) para el indice"
+
+# This should use the locale specification -- xavi
+#, fuzzy
+#~ msgid "thousand_sep"
+#~ msgstr "thousand_sep"
+
+# fraction (as in a/b) or *decimal* separator? If decimal, should use the locale specification
+#, fuzzy
+#~ msgid "fraction_sep"
+#~ msgstr "function_sep"
+
+#~ msgid "Logical xor"
+#~ msgstr "O exclusivo lógico"
+
+#~ msgid "Type error"
+#~ msgstr "Error de tipo"
+
+#, fuzzy
+#~ msgid "variable %s not defined"
+#~ msgstr "la variable '%s' no definida"
+
+#~ msgid "Function '%s' returned %s"
+#~ msgstr "La función '%s' retornó %s"
+
+#, fuzzy
+#~ msgid "Operator expected: %r"
+#~ msgstr "Número no esperado"
+
+#~ msgid "Parse error: ')' expected"
+#~ msgstr "Error de procesamiento: ')' esperado"
+
+#~ msgid "."
+#~ msgstr "."
+
+# Symbols for multiplication, division, fraction separator and thousand separator
+#~ msgid "*"
+#~ msgstr "*"
+
+#~ msgid "⨯"
+#~ msgstr "⨯"
+
+#~ msgid "/"
+#~ msgstr "/"
+
+#~ msgid "÷"
+#~ msgstr "÷"
+
+#~ msgid ","
+#~ msgstr ","
+
+# How can a 'state line' be invalid?
+# -----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# Symbols for multiplication, division, fraction separator and thousand separator
+# Text assigned to the 'help' variable
+# => Use help(test) for help about 'test', or help(index) for the index
+# This should use the locale specification -- xavi
+# fraction (as in a/b) or *decimal* separator? If decimal, should use the locale specification
+#, python-format
+#~ msgid "Error"
+#~ msgstr "Error"
