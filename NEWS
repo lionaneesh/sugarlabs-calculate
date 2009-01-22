@@ -1,3 +1,5 @@
+28
+
 * Support 'real' scientific notation (#4250)
 * Add switching between exponential/scientific notation
 * Allow changing of number of displayed digits
