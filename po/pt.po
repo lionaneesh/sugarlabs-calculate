@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-20 19:45+0530\n"
-"PO-Revision-Date: 2008-08-26 08:25-0400\n"
-"Last-Translator: Eduardo H. Silva <HoboPrimate@gmail.com>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2009-02-15 01:41-0500\n"
+"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,6 +18,122 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calcular"
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Avaliação.equação() texto invalido (%s)"
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "Funções disponíveis:"
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Escrevendo no diário (%s)"
+
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "botão_pressionado(): tipo inválido"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Erro na avaliação"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "nível: %d, ofs %d"
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "Erro em %d"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Utiliza help(teste) para obteres ajuda sobre 'teste', ou help(index) para o "
+"índice"
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Função '%s' não definida"
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Número inválido de argumentos (%d em vez de %d)"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "função leva %d args"
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Incapaz de avaliar argumento %d: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "Erro de função: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variável '%s' não definida"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Parêntesis esquerdo inesperado"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "Erro de avaliação (parêntesis direito)"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "Parêntesis direito inesperado"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Erro de avaliação (parêntesis direito, nenhum val_esq)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Erro de avaliação (parêntesis direito, sem nível que feche)"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "Número não esperado"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "Operador não esperado"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Erro de avaliação: número ou variável esperados"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Número ou variável esperados"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "Operador inválido"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "Operador esperado"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): devolvendo Nenhum"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -223,7 +339,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#, fuzzy
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x), devolve a tangente hiperbólica de x. Obtido por sinh(x) / cosh(x)"
 
@@ -259,12 +376,6 @@ msgstr ""
 "Verdadeiro e y for Falso, ou y for Verdadeiro e x for Falso. Caso contrário "
 "devolve Falso (\"False\")"
 
-#: eqnparserhelp.py:128 eqnparser.py:249
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Utiliza help(teste) para obteres ajuda sobre 'teste', ou help(index) para o "
-"índice"
-
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
@@ -279,97 +390,13 @@ msgstr "Tópicos"
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "Não existe ajuda sobre '%s', use help(index) para ver o índice"
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Erro na avaliação"
+#: layout.py:44
+msgid "Clear"
+msgstr ""
 
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "nível: %d, ofs %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "Erro em %d"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Função '%s' não definida"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Número inválido de argumentos (%d em vez de %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "função leva %d args"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "Incapaz de avaliar argumento %d: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "Erro de função: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variável '%s' não definida"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Parêntesis esquerdo inesperado"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "Erro de avaliação (parêntesis direito)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "Parêntesis direito inesperado"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Erro de avaliação (parêntesis direito, nenhum val_esq)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Erro de avaliação (parêntesis direito, sem nível que feche)"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "Número não esperado"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Operador não esperado"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Erro de avaliação: número ou variável esperados"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Número ou variável esperados"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "Operador inválido"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Operador esperado"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): devolvendo Nenhum"
+#: layout.py:53
+msgid "Enter"
+msgstr ""
 
 #: layout.py:60
 msgid "Edit"
@@ -415,157 +442,137 @@ msgstr "Mostrar histórico"
 msgid "Show variables"
 msgstr "Mostrar variáveis"
 
-#: toolbars.py:53
-msgid "Help"
-msgstr "Ajuda"
-
-#: toolbars.py:111
-msgid "Copy"
-msgstr "Copiar"
-
-#: toolbars.py:115
-msgid "Paste"
-msgstr "Colar"
-
-#: toolbars.py:119
-msgid "Cut"
-msgstr "Cortar"
-
-#: toolbars.py:127
-msgid "Square"
-msgstr "Quadrado"
-
-#: toolbars.py:132
-msgid "Square root"
-msgstr "Raíz quadrada"
-
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "Inverso"
-
-#: toolbars.py:144
-msgid "e to the power x"
-msgstr "e elevado a x"
-
-#: toolbars.py:149
-msgid "x to the power y"
-msgstr "x elevado a y"
-
-#: toolbars.py:154
-msgid "Natural logarithm"
-msgstr "Logaritmo natural"
-
-#: toolbars.py:160
-msgid "Factorial"
-msgstr "Factorial"
-
-#: toolbars.py:168
-msgid "Sine"
-msgstr "Seno"
-
-#: toolbars.py:172
-msgid "Cosine"
-msgstr "Cosseno"
-
-#: toolbars.py:176
-msgid "Tangent"
-msgstr "Tangente"
-
-#: toolbars.py:182
-msgid "Arc sine"
-msgstr "Arco-seno"
-
-#: toolbars.py:186
-msgid "Arc cosine"
-msgstr "Arco-cosseno"
-
-#: toolbars.py:190
-msgid "Arc tangent"
-msgstr "Arco-tangente"
-
-#: toolbars.py:196
-msgid "Hyperbolic sine"
-msgstr "Seno hiperbólico"
-
-#: toolbars.py:200
-msgid "Hyperbolic cosine"
-msgstr "Cosseno hiperbólico"
-
-#: toolbars.py:204
-msgid "Hyperbolic tangent"
-msgstr "Tangente hiperbólica"
-
-#: toolbars.py:212
-msgid "Logical and"
-msgstr "Conjunção lógica E"
-
-#: toolbars.py:216
-msgid "Logical or"
-msgstr "Disjunção lógica OU"
-
-#: toolbars.py:226
-msgid "Equals"
-msgstr "É igual a"
-
-#: toolbars.py:229
-msgid "Not equals"
-msgstr "Não é igual a"
-
-#: toolbars.py:236
-msgid "Pi"
-msgstr "Pi"
-
-#: toolbars.py:240
-msgid "e"
-msgstr "e"
-
-#: toolbars.py:247
-msgid "Degrees"
-msgstr "Graus"
-
-#: toolbars.py:248
-msgid "Radians"
-msgstr "Radianos"
-
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "Graus / radianos"
-
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Indefinido"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Erro: tipo não suportado"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Avaliação.equação() texto invalido (%s)"
+#: toolbars.py:36
+msgid "Help"
+msgstr "Ajuda"
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "Funções disponíveis:"
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Copiar"
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Escrevendo no diário (%s)"
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Colar"
 
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "botão_pressionado(): tipo inválido"
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Cortar"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "Quadrado"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "Raíz quadrada"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e elevado a x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x elevado a y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "Logaritmo natural"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Factorial"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Seno"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Cosseno"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangente"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arco-seno"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arco-cosseno"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arco-tangente"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Seno hiperbólico"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Cosseno hiperbólico"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Tangente hiperbólica"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "Conjunção lógica E"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "Disjunção lógica OU"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "É igual a"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "Não é igual a"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Graus"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radianos"
+
+#~ msgid "Inverse"
+#~ msgstr "Inverso"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "Graus / radianos"
 
 #~ msgid "help_test"
 #~ msgstr "ajuda_teste"
