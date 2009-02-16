@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: 2008-03-29 04:17-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2008-10-20 12:48-0400\n"
 "Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -224,13 +224,13 @@ msgstr ""
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr "παρ"
+msgstr "πργ"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"παρ(x), επιστρέφει το παραγοντικού του x. Δίνεται από τον τύπο x * (x - 1)  "
-"* (x - 2) * ... * 1"
+"πργ(x), επιστρέφει το παραγοντικού του x. Δίνεται από τον τύπο x * (x - 1) * "
+"(x - 2) * ... * 1"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -252,7 +252,7 @@ msgid ""
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
 "λογ(x), επιστρέφει το φυσικό λογάριθμο του x. Αυτή είναι η τιμή όπου η "
-"δύναμη exp() είναι ίση με x. Ορίζεται για x >= 0"
+"δύναμη exp() είναι ίση με x. Ορίζεται για x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -277,14 +277,14 @@ msgstr ""
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr "σχεδ"
+msgstr "σχδ"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"σχεδ(συν, μετ=-α..β), σχεδιάζει τη συνάρτηση 'συν' με μεταβλητή 'μετ' στο "
+"σχδ(συν, μετ=-α..β), σχεδιάζει τη συνάρτηση 'συν' με μεταβλητή 'μετ' στο "
 "διάστημα [α,β]"
 
 #: eqnparserhelp.py:86
@@ -348,14 +348,13 @@ msgstr ""
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr "τοξυ"
+msgstr "εφυ"
 
 #: eqnparserhelp.py:107
-#, fuzzy
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"τοξυ(x), επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
-"συνυ(x) / ημυ(x)"
+"εφυ(x), επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
+"ημυ(x) / συνυ(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -404,6 +403,14 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 "Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
 "βοήθεια(περιεχόμενα) για τα περιεχόμενα"
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Καθαρισμός"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "Εισαγωγή"
 
 #: layout.py:60
 msgid "Edit"
@@ -460,129 +467,127 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Ακαθόριστο"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Σφάλμα: μη υποστηριζόμενος τύπος"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr "Βοήθεια"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr "Αντιγραφή"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr "Επικόλληση"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr "Αποκοπή"
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr "Τετράγωνο"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr "Τετραγωνική Ρίζα"
 
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "Αντιστροφή"
-
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "To e υψωμένο στη δύναμη x"
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr "Το x υψωμένο ση δύναμη x"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "Φυσικός Λογάριθμος"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr "Παραγοντικό"
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr "Ημίτονο"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "Συνημίτονο"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr "Εφαπτομένη"
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr "Τόξο Ημιτόνου"
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr "Τόξο Συνημιτόνου"
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr "Τόξο Εφαπτομένης"
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr "Υπερβολικό ημίτονο"
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr "Υπερβολικό συνημίτονο"
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr "Υπερβολική εφαπτομένη"
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "Λογικό \"καί\""
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "Λογικό \"ή\""
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr "Ισότητα"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "Ανισότητα"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr "π"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:247
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "Μοίρες"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr "Ακτίνια"
 
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "Μοίρες / ακτίνια"
+#~ msgid "Inverse"
+#~ msgstr "Αντιστροφή"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "Μοίρες / ακτίνια"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"
