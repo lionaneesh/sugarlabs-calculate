@@ -406,10 +406,9 @@ class AstParser:
             if func is None:
                 return None
 
-            for i in range(len(node.args)):
-                node.args[i] = self._resolve_arg(func, i, node.args[i], state)
-                if node.args[i] is None:
-                    return None
+            args = [self._resolve_arg(func, i, node.args[i], state) \
+                    for i in range(len(node.args))]
+
             kwargs = {}
             for i in range(len(node.keywords)):
                 key = node.keywords[i].arg
@@ -419,7 +418,7 @@ class AstParser:
                 kwargs[key] = val
 
             try:
-                ret = func(*node.args, **kwargs)
+                ret = func(*args, **kwargs)
                 return ret
             except Exception, e:
                 msg = str(e)
