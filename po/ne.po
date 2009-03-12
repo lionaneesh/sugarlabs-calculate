@@ -2,19 +2,18 @@
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
 # Reinier Heeres <reinier@heeres.eu>, 2007
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2009-03-02 04:44-0500\n"
+"Last-Translator: Pradosh Kharel <pradosh@olenepal.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -23,7 +22,7 @@ msgstr "क्यालकुलेटर"
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() %s वाक्याँश मिलेन"
+msgstr "Equation.parse() (%s) वाक्याँश मिलेन"
 
 #: calculate.py:210
 msgid "Available functions:"
@@ -36,11 +35,11 @@ msgstr "खातामा लेखिंदैछ (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr "थिचिएको_बटन(): प्रकार मिलेन"
+msgstr "button_pressed(): प्रकार मिलेन"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr "वाक्य त्रुटि "
+msgstr "वाक्य त्रुटि"
 
 #: eqnparser.py:58
 #, python-format
@@ -55,8 +54,8 @@ msgstr "%d मा त्रुटि"
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"'test' को मत्द्धतको लागि help(test), वा 'index' को मत्द्धतको लागि "
-"help'index' प्रयोग गर्नुहोस्"
+"'test' को मत्द्धतको लागि help(test), वा index को मत्द्धतको लागि help(index) "
+"प्रयोग गर्नुहोस्"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -66,7 +65,7 @@ msgstr "'%s' कार्य व्याक्या गरिएको छै�
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "दिइएको बुँदा संख्या मिलेन (%d हुनुपर्नेमा %d भयो"
+msgstr "दिइएको बुँदा संख्या मिलेन (%d हुनुपर्नेमा %d भयो)"
 
 #: eqnparser.py:360
 #, python-format
@@ -76,7 +75,7 @@ msgstr "कार्यले %d बँदा लिन्छ"
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "%d बुँदा वाक्यमा मिलेन: %s"
+msgstr "%d बुँदा वाक्यमा मिलेन: '%s'"
 
 #: eqnparser.py:380
 #, python-format
@@ -118,7 +117,7 @@ msgstr "कारक अकल्पनीय"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr "वाक्यमा त्रुटि: संख्या वा चर मान खाँचो "
+msgstr "वाक्यमा त्रुटि: संख्या वा चर मान खाँचो"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
@@ -130,7 +129,7 @@ msgstr "कारक मिलेन"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr "कारकको खाँचो "
+msgstr "कारकको खाँचो"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
@@ -336,7 +335,6 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-#, fuzzy
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cos(x)"
 
@@ -387,11 +385,11 @@ msgstr ""
 
 #: layout.py:44
 msgid "Clear"
-msgstr ""
+msgstr "सफा गर"
 
 #: layout.py:53
 msgid "Enter"
-msgstr ""
+msgstr "एन्टर"
 
 #: layout.py:60
 msgid "Edit"
@@ -440,12 +438,12 @@ msgstr "चर मानहरु देखाऊनुहोस्"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "*"
+msgstr "x"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "/"
+msgstr "÷"
 
 #: mathlib.py:132
 msgid "Undefined"
@@ -481,7 +479,7 @@ msgstr "बर्गमुल"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr "e to the power x "
+msgstr "e to the power x"
 
 #: toolbars.py:113
 msgid "x to the power y"
@@ -549,7 +547,7 @@ msgstr "बराबर नभएको"
 
 #: toolbars.py:199
 msgid "Pi"
-msgstr "पाई"
+msgstr "Pi"
 
 #: toolbars.py:202
 msgid "e"

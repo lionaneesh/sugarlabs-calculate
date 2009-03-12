@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-12-25 00:48-0500\n"
+"PO-Revision-Date: 2009-03-07 23:56-0500\n"
 "Last-Translator: Chris Leonard <cjl@laptop.org>\n"
 "Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr "Error de procesamiento (paréntesis derecho)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr "No se esperaba un paréntesis derecho"
+msgstr "Parentesis inesperado a la derecha"
 
 # Should 'left_val' be considered translateable?
 # No because it's a program internal. I bet this error never happens anyway.
@@ -153,8 +153,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), devuelve el arco coseno de x.  Este es el angulo para el cual el "
-"coseno es x. Definido para -1<=x<1"
+"acos(x), devuelve el arco coseno de x. Este es el angulo para el cual el "
+"coseno es x. Definido para -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -200,7 +200,7 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), Devuelve el coseno de x. Esta es la cordinada x en el circulo "
+"cos(x), devuelve el coseno de x. Esta es la cordinada x en el circulo "
 "unitario en el angulo x"
 
 #: eqnparserhelp.py:58
@@ -211,7 +211,7 @@ msgstr "cosh"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"cosh(x), Devuelve el coseno hiperbolico de x. Dado por (exp(x) + exp(-x)) / "
+"cosh(x), devuelve el coseno hiperbolico de x. Dado por (exp(x) + exp(-x)) / "
 "2"
 
 #: eqnparserhelp.py:61
@@ -220,7 +220,7 @@ msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "exp(x), Devuelve el exponente natural de x. Dado por e^x"
+msgstr "exp(x), devuelve el exponente natural de x. Dado por e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
@@ -228,7 +228,8 @@ msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr "fac(x), Devuelve el factorial de x. Dado por x * (x-1) *"
+msgstr ""
+"fac(x), devuelve el factorial de x. Dado por x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -238,7 +239,7 @@ msgstr "funciones"
 # functions() is translated, per above entry with just "functions"
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "funciones(), Devuelve una lista de las funciones que están definidas."
+msgstr "funciones(), devuelve una lista de las funciones que están definidas"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -250,7 +251,7 @@ msgid ""
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
 "ln(x), Devuelve el algoritmo natural de x. Este es el valor para el cual el "
-"exponente exp(x) es igual a x.Definido para x >= 0."
+"exponente exp(x) es igual a x. Definido para x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -260,7 +261,7 @@ msgstr "operadores"
 # operators() is translated, per above entry with just "operators"
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr "operadores(), Devuelve una lista de operadores que están definidos."
+msgstr "operadores(), devuelve una lista de operadores que están definidos"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -270,7 +271,7 @@ msgstr "or"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x, y), 'o' logico, Devuelve verdadero si x y/o y es verdadero. de lo "
+"or(x, y), \"o\" logico, Devuelve verdadero si x y/o y es verdadero, de lo "
 "contrario devuelve Falso."
 
 #: eqnparserhelp.py:82
@@ -294,8 +295,8 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), Devuelve el seno de x. Esta es la coordinada y en el circulo "
-"unitario en el angulo x."
+"sin(x), devuelve el seno de x. Esta es la coordinada y en el circulo "
+"unitario en el angulo x"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
@@ -305,7 +306,7 @@ msgstr "sinh"
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"sinh(x), devuelve el seno hiperbolico de x. Dado por ((exp(x)- exp(-x)) / 2"
+"sinh(x), devuelve el seno hiperbolico de x. Dado por (exp(x) - exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
@@ -321,11 +322,11 @@ msgstr ""
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr "Cuadrado"
+msgstr "cuadrado"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "cuadrado(x), devuelve el cuadrado de x. Dado por x * x "
+msgstr "cuadrado(x), devuelve el cuadrado de x. Dado por x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -348,7 +349,7 @@ msgstr "tanh"
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"sinh(x), Devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
+"sinh(x), devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -378,7 +379,7 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 "xor(x, y), xor logico. Devuelve Verdadero si x es verdadero (y y es Falso) o "
-"si y es Verdadero (y X es Falso), de lo contrario devuelve Falso "
+"si y es Verdadero (y X es Falso), de lo contrario devuelve Falso"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
@@ -394,19 +395,16 @@ msgstr "Temas"
 # should the command 'help(index)' be translated?
 #: eqnparserhelp.py:143
 #, python-format
-#, fuzzy
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "No hay ayuda disponible sobre '%s', use help(index) para el índice"
 
 #: layout.py:44
-#, fuzzy
 msgid "Clear"
 msgstr "Vaciar"
 
 #: layout.py:53
-#, fuzzy
 msgid "Enter"
-msgstr "entrar"
+msgstr "Entrar"
 
 #: layout.py:60
 msgid "Edit"
