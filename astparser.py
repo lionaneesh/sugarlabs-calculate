@@ -207,8 +207,8 @@ class AstParser:
     CMPOP_MAP = {
         ast.Gt: lambda x, y: x > y,
         ast.GtE: lambda x, y: x >= y,
-        ast.Is: lambda x, y: x == y,
-        ast.IsNot: lambda x, y: x != y,
+        ast.Eq: lambda x, y: x == y,
+        ast.NotEq: lambda x, y: x != y,
         ast.Lt: lambda x, y: x < y,
         ast.LtE: lambda x, y: x <= y,
     }
