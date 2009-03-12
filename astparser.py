@@ -197,7 +197,6 @@ class AstParser:
         ast.LShift: 'shift_left',
         ast.Mod: 'mod',
         ast.Mult: 'mul',
-        ast.NotEq: lambda x, y: x != y,
         ast.Or: lambda x, y: x or y,
         ast.Pow: 'pow',
         ast.RShift: 'shift_right',
@@ -582,10 +581,15 @@ class AstParser:
             eqn = self.parse(eqn)
 
         state = EvalState()
-        if isinstance(eqn, ast.Expression):
-            ret = self._process_node(eqn.body, state)
-        else:
-            ret = self._process_node(eqn, state)
+        try:
+            if isinstance(eqn, ast.Expression):
+                ret = self._process_node(eqn.body, state)
+            else:
+                ret = self._process_node(eqn, state)
+        except Exception, e:
+            logging.error('Internal error (%s): %s', type(e), str(e))
+            msg = _('Internal error')
+            raise ParseError(msg, 0)
 
         self._used_var_ofs = state.used_var_ofs
 
