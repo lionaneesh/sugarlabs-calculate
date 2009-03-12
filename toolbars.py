@@ -167,7 +167,7 @@ class AlgebraToolbar(gtk.Toolbar):
         self.insert(LineSeparator(), -1)
 
         self.insert(IconToolButton('algebra-fac', _('Factorial'),
-            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'fac'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(fac)')), -1)
 
 class TrigonometryToolbar(gtk.Toolbar):
