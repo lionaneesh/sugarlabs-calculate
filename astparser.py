@@ -586,6 +586,8 @@ class AstParser:
                 ret = self._process_node(eqn.body, state)
             else:
                 ret = self._process_node(eqn, state)
+        except (RuntimeError, ParserError), e:
+            raise e
         except Exception, e:
             logging.error('Internal error (%s): %s', type(e), str(e))
             msg = _('Internal error')
