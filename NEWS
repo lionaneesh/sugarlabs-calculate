@@ -1,3 +1,9 @@
+29
+
+* Fix plotting of functinos
+* Fix parsing of (in)equalities
+* Fix toolbar button issues
+
 28
 
 * Support 'real' scientific notation (#4250)
