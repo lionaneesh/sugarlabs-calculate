@@ -368,12 +368,12 @@ class AstParser:
         # Copy state, list objects will remain the same
         state = copy.copy(state)
         state.level += 1
-        ofs = node.col_offset
+        ofs = getattr(node, 'col_offset', 0)
 
         if node is None:
             return None
 
-        elif isinstance(node, ast.Expression):
+        elif isinstance(node, ast.Expression) or isinstance(node, ast.Module):
             return self._process_node(node.body, state)
 
         elif isinstance(node, ast.BinOp):

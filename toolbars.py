@@ -233,7 +233,7 @@ class BooleanToolbar(gtk.Toolbar):
         self.insert(LineSeparator(), -1)
 
         self.insert(IconToolButton('boolean-eq', _('Equals'),
-            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '=')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '==')), -1)
 
         self.insert(IconToolButton('boolean-neq', _('Not equals'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
