@@ -192,6 +192,7 @@ po/bn_IN.po
 po/bn.po
 po/Calculate.pot
 po/ca.po
+po/cpp.po
 po/cs.po
 po/de.po
 po/dz.po
@@ -216,10 +217,12 @@ po/it.po
 po/ja.po
 po/km.po
 po/ko.po
+po/mi.po
 po/mk.po
 po/ml.po
 po/mn.po
 po/mr.po
+po/ms.po
 po/mvo.po
 po/nb.po
 po/ne.po
@@ -246,6 +249,7 @@ po/te.po
 po/th.po
 po/tpi.po
 po/tr.po
+po/ug.po
 po/ur.po
 po/vi.po
 po/wa.po
