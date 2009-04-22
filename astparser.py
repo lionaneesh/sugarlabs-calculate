@@ -33,7 +33,7 @@ except ImportError:
     import _ast as ast
 
 from mathlib import MathLib
-from plotlib import PlotLib
+from plotlib import Plot
 
 PLOTHELP = _(
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
@@ -174,7 +174,7 @@ class AstParser:
 
     FLOAT_REGEXP_STR = '([+-]?[0-9]*\.?[0-9]+([eE][+-]?[0-9]+)?)'
     FLOAT_REGEXP = re.compile(FLOAT_REGEXP_STR)
-    RANGE_REGEXP = re.compile(FLOAT_REGEXP_STR + '\.\.' + FLOAT_REGEXP_STR)
+    RANGE_REGEXP = re.compile('=([^,]+)\.\.([^,]+)')
 
     # Unary and binary operator maps.
     # Mappings to a string will be replaced by calls to MathLib functions
@@ -225,7 +225,7 @@ class AstParser:
             self.ml = ml
 
         if pl is None:
-            self.pl = PlotLib(self)
+            self.pl = Plot(self)
         else:
             self.pl = pl
 
@@ -551,8 +551,8 @@ class AstParser:
         for key, val in self.OPERATOR_MAP.iteritems():
             eqn = eqn.replace(key, val)
 
-        # Replace a..b ranges with (a,b)
-        eqn = self.RANGE_REGEXP.sub(r'(\1,\3)', eqn)
+        # Replace =a..b ranges with (a,b)
+        eqn = self.RANGE_REGEXP.sub(r'=(\1,\2)', eqn)
 
         return eqn
 
@@ -646,7 +646,7 @@ if __name__ == '__main__':
     ret = p.evaluate(eqn)
     print 'Eqn: %s, ret: %s' % (eqn, ret)
 
-    eqn = 'plot(x**2,x=-2..2)'
+    eqn = 'plot(x**2,x=-2..2*(pi+1))'
     ret = p.evaluate(eqn)
     print 'Eqn: %s, ret: %s' % (eqn, ret)
 
