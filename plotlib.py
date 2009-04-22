@@ -22,22 +22,21 @@ import types
 import logging
 _logger = logging.getLogger('PlotLib')
 
-class PlotLib:
+USE_MPL = True
+
+class _PlotBase:
     """Class to generate an svg plot for a function.
     Evaluation of values is done using the EqnParser class."""
 
     def __init__(self, parser):
-        self.parser = parser
-
         self.svg_data = ""
-        self.set_size(0, 0)
-
-    def set_size(self, width, height):
-        self.width = width
-        self.height = height
+        self.parser = parser
 
     def get_svg(self):
         return self.svg_data
+
+    def set_svg(self, data):
+        self.svg_data = data
 
     def evaluate(self, eqn, var, range, points=100):
         x_old = self.parser.get_var(var)
@@ -61,6 +60,58 @@ class PlotLib:
 
         self.parser.set_var(var, x_old)
         return res
+
+    def export_plot(self, fn):
+        f = open(fn, "w")
+        f.write(self.get_svg())
+        f.close()
+
+    def produce_plot(self, vals, *args, **kwargs):
+        '''Function to produce the actual plot, override.'''
+        pass
+
+    def plot(self, eqn, **kwargs):
+        '''
+        Plot function <eqn>.
+
+        kwargs can contain: 'points'
+
+        The last item in kwargs is interpreted as the variable that should
+        be varied.
+        '''
+
+        _logger.debug('plot(): %r, %r', eqn, kwargs)
+
+        points = kwargs.pop('points', 100)
+        if len(kwargs) > 1:
+            _logger.error('Too many variables specified')
+            return None
+
+        for var, range in kwargs.iteritems():
+            _logger.info('Plot range for var %s: %r', var, range)
+
+        vals = self.evaluate(eqn, var, range, points=points)
+        _logger.debug('vals are %r', vals)
+        svg = self.produce_plot(vals, xlabel=var, ylabel='f(x)')
+        _logger.debug('SVG Data: %s', svg)
+        self.set_svg(svg)
+
+#        self.export_plot("/tmp/calculate_graph.svg")
+        if type(svg) is types.UnicodeType:
+            return svg.encode('utf-8')
+        else:
+            return svg
+
+class CustomPlot(_PlotBase):
+
+    def __init__(self, parser):
+        _PlotBase.__init__(self, parser)
+
+        self.set_size(0, 0)
+
+    def set_size(self, width, height):
+        self.width = width
+        self.height = height
 
     def create_image(self):
         self.svg_data = '<?xml version="1.0" standalone="no"?>\n'
@@ -143,58 +194,61 @@ class PlotLib:
         haszero = (startx < 0 & endx < 0)
 
     def draw_axes(self, labelx, labely):
+        """Draw axes on the plot."""
+
         self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
         self.add_text((0.50, 0.98), labelx)
 
         self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
         self.add_text((-0.50, 0.065), labely, rotate=-90)
 
-    def export_plot(self, fn):
-        f = open(fn, "w")
-        f.write(self.svg_data)
-        f.close()
-
-    def plot(self, eqn, **kwargs):
-        '''
-        Plot function <eqn>.
-
-        kwargs can contain: 'points'
-
-        The last item in kwargs is interpreted as the variable that should
-        be varied.
-        '''
-
-        _logger.debug('plot(): %r, %r', eqn, kwargs)
-
-        if 'points' in kwargs:
-            points = kwargs['points']
-            del kwargs['points']
-        else:
-            points = 100
-
-        if len(kwargs) > 1:
-            _logger.error('Too many variables specified')
-            return None
-
-        for var, range in kwargs.iteritems():
-            pass
-        _logger.info('Plot range for var %s: %r', var, range)
+    def produce_plot(self, vals, *args, **kwargs):
+        """Produce an svg plot."""
 
         self.set_size(250, 250)
         self.create_image()
 
-        # FIXME: should use equation as label
-        self.draw_axes(var, 'f(x)')
+        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''))
 
-        vals = self.evaluate(eqn, var, range, points=points)
-#        print 'vals: %r' % vals
         self.add_curve(vals)
 
         self.finish_image()
 
-#        self.export_plot("/tmp/calculate_graph.svg")
-        svg = self.get_svg()
-        if type(svg) is types.UnicodeType:
-            return svg.encode('utf-8')
-        else:
-            return svg
+        return self.svg_data
+
+class MPLPlot(_PlotBase):
+
+    def __init__(self, parser):
+        _PlotBase.__init__(self, parser)
+
+    def produce_plot(self, vals, **kwargs):
+        x = [c[0] for c in vals]
+        y = [c[1] for c in vals]
+
+        fig = pylab.figure()
+        fig.set_size_inches(5, 5)
+        ax = fig.add_subplot(111)
+
+        ax.plot(x, y, 'r-')
+
+        ax.set_xlabel(kwargs.get('xlabel', ''))
+        ax.set_ylabel(kwargs.get('ylabel', ''))
+
+        data = StringIO.StringIO()
+        fig.savefig(data)
+        return data.getvalue()
+
+if USE_MPL:
+    try:
+        import matplotlib as mpl
+        mpl.use('svg')
+        from matplotlib import pylab
+        import StringIO
+        Plot = MPLPlot
+        _logger.debug('Using matplotlib as plotting back-end')
+    except ImportError:
+        USE_MPL = False
+
+if not USE_MPL:
+    Plot = CustomPlot
+    _logger.debug('Using custom plotting back-end')
