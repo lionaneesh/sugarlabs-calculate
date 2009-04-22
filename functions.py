@@ -80,7 +80,7 @@ def _d(val):
         d = _Decimal(val)
         return d.normalize()
     elif type(val) is types.FloatType or hasattr(val, '__float__'):
-        s = '%.10e' % float(val)
+        s = '%.18e' % float(val)
         d = _Decimal(s)
         return d.normalize()
     else:

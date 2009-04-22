@@ -90,7 +90,7 @@ class MathLib:
             d = Decimal(val)
             return d.normalize()
         elif type(val) is types.FloatType or hasattr(val, '__float__'):
-            s = '%.10e' % float(val)
+            s = '%.18e' % float(val)
             d = Decimal(s)
             return d.normalize()
         else:
@@ -197,3 +197,14 @@ class MathLib:
 
         (sign, d, e) = n.normalize().as_tuple()
         return e >= 0
+
+if __name__ == "__main__":
+    ml = MathLib()
+    val = 0.99999999999999878
+    print 'is_int(%.18e): %s' % (val, ml.is_int(val))
+    # Beyond float precision
+    val = 0.999999999999999999
+    print 'is_int(%.18e): %s' % (val, ml.is_int(val))
+    val = ml.d(0.99999999999999878)**2
+    print 'is_int(%s): %s' % (val, ml.is_int(val))
+
