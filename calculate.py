@@ -56,12 +56,12 @@ def findchar(text, chars, ofs=0):
 
     level = 0
     for i in range(ofs, len(text)):
-        if text[i] == '(':
+        if text[i] in chars and level == 0:
+            return i
+        elif text[i] == '(':
             level += 1
         elif text[i] == ')':
             level -= 1
-        elif text[i] in chars and level == 0:
-            return i
 
     return -1
 
@@ -137,11 +137,15 @@ class Equation:
         _logger.debug('font-size: %d', fontsize)
         tagsuper = buf.create_tag(rise=fontsize/2)
 
+        ENDSET = list(AstParser.DIADIC_OPS)
+        ENDSET.extend((',', '(', ')'))
+
         ofs = 0
         while ofs <= len(text) and text.find('**', ofs) != -1:
             nextofs = text.find('**', ofs)
             buf.insert_with_tags(buf.get_end_iter(), text[ofs:nextofs], *tags)
-            nextofs2 = findchar(text, ['+','-', '*', '/'], nextofs + 2)
+            nextofs2 = findchar(text, ENDSET, nextofs + 2)
+            _logger.debug('nextofs2: %d, char=%c', nextofs2, text[nextofs2])
             if nextofs2 == -1:
                 nextofs2 = len(text)
             buf.insert_with_tags(buf.get_end_iter(), text[nextofs+2:nextofs2],
