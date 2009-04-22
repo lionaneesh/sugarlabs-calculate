@@ -1,6 +1,10 @@
+* Add support for matplotlib as plotting backend
+* Add support for complex plot ranges, e.g. -2*pi..2*pi
+* Fix superscript display bug
+
 29
 
-* Fix plotting of functinos
+* Fix plotting of functions
 * Fix parsing of (in)equalities
 * Fix toolbar button issues
 
