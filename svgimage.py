@@ -42,6 +42,7 @@ class SVGImage:
         self._pixbuf = self._handle.get_pixbuf()
         self._image = gtk.Image()
         self._image.set_from_pixbuf(self._pixbuf)
+        self._image.set_alignment(0.5, 0)
         return self._image
         
     def load(self, fn):
