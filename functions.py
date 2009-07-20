@@ -381,7 +381,7 @@ def sub(x, y):
         x = _d(x)
         y = _d(y)
     return x - y
-add.__doc__ = _('sub(x, y), return x - y')
+sub.__doc__ = _('sub(x, y), return x - y')
 
 def tan(x):
     return math.tan(_scale_angle(x))
