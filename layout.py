@@ -9,6 +9,10 @@ from sugar.activity import activity
 from sugar.graphics.roundbox import CanvasRoundBox
 from toolbars import *
 
+from sugar.activity.widgets import StopButton
+from sugar.activity.widgets import ActivityToolbarButton
+from sugar.graphics.toolbarbox import ToolbarButton, ToolbarBox
+
 class CalcLayout:
 
     FONT_SMALL_POINTS = 10
@@ -74,6 +78,7 @@ class CalcLayout:
         """Setup most of the dialog."""
 
 # Toolbar
+        """
         toolbox = activity.ActivityToolbox(self._parent)
         self._parent.set_toolbox(toolbox)
         toolbox.add_toolbar(_('Edit'), EditToolbar(self._parent))
@@ -82,6 +87,53 @@ class CalcLayout:
         toolbox.add_toolbar(_('Boolean'), BooleanToolbar(self._parent))
         toolbox.add_toolbar(_('Miscellaneous'), MiscToolbar(self._parent))
         toolbox.show_all()
+        """
+        
+        toolbar_box = ToolbarBox()
+        
+        activity_button = ActivityToolbarButton(self._parent)
+        toolbar_box.toolbar.insert(activity_button, 0)
+        
+        edit_toolbar = ToolbarButton()
+        edit_toolbar.props.page = EditToolbar(self._parent)
+        edit_toolbar.props.icon_name = 'toolbar-edit'
+        edit_toolbar.props.label = _('Edit')
+        toolbar_box.toolbar.insert(edit_toolbar, -1)
+        
+        algebra_toolbar = ToolbarButton()
+        algebra_toolbar.props.page = AlgebraToolbar(self._parent)
+        algebra_toolbar.props.icon_name = 'toolbar-algebra'
+        algebra_toolbar.props.label = _('Algebra')
+        toolbar_box.toolbar.insert(algebra_toolbar, -1)
+
+        trigonometry_toolbar = ToolbarButton()
+        trigonometry_toolbar.props.page = TrigonometryToolbar(self._parent)
+        trigonometry_toolbar.props.icon_name = 'toolbar-trigonometry'
+        trigonometry_toolbar.props.label = _('Trigonometry')
+        toolbar_box.toolbar.insert(trigonometry_toolbar, -1)
+
+        boolean_toolbar = ToolbarButton()
+        boolean_toolbar.props.page = BooleanToolbar(self._parent)
+        boolean_toolbar.props.icon_name = 'toolbar-boolean'
+        boolean_toolbar.props.label = _('Boolean')
+        toolbar_box.toolbar.insert(boolean_toolbar, -1)
+        
+        separator = gtk.SeparatorToolItem()
+        toolbar_box.toolbar.insert(separator, -1)
+
+        MiscToolbar(self._parent, toolbar=toolbar_box.toolbar)
+        
+        separator = gtk.SeparatorToolItem()
+        separator.props.draw = False
+        separator.set_expand(True)
+        separator.show()
+        toolbar_box.toolbar.insert(separator, -1)
+
+        stop = StopButton(self._parent)
+        toolbar_box.toolbar.insert(stop, -1)
+
+        toolbar_box.show_all()
+        self._parent.set_toolbar_box(toolbar_box)
 
 # Some layout constants
         self.input_font = pango.FontDescription(str='sans bold 12')

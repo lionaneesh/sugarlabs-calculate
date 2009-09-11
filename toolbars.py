@@ -128,6 +128,8 @@ class EditToolbar(gtk.Toolbar):
         self.insert(IconToolButton('edit-cut', _('Cut'),
             lambda x: calc.text_cut(),
             alt_html='Cut'), -1)
+            
+        self.show_all()
 
 class AlgebraToolbar(gtk.Toolbar):
     def __init__(self, calc):
@@ -169,6 +171,8 @@ class AlgebraToolbar(gtk.Toolbar):
         self.insert(IconToolButton('algebra-fac', _('Factorial'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'fac'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(fac)')), -1)
+            
+        self.show_all()
 
 class TrigonometryToolbar(gtk.Toolbar):
     def __init__(self, calc):
@@ -213,6 +217,8 @@ class TrigonometryToolbar(gtk.Toolbar):
         self.insert(IconToolButton('trigonometry-tanh', _('Hyperbolic tangent'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'tanh'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tanh)')), -1)
+            
+        self.show_all()
 
 class BooleanToolbar(gtk.Toolbar):
     def __init__(self, calc):
@@ -237,41 +243,46 @@ class BooleanToolbar(gtk.Toolbar):
 
         self.insert(IconToolButton('boolean-neq', _('Not equals'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
+            
+        self.show_all()
 
 class MiscToolbar(gtk.Toolbar):
-    def __init__(self, calc):
+    def __init__(self, calc, toolbar=None):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('constants-pi', _('Pi'),
+        if toolbar is None:
+            target_toolbar = self
+        else:
+            target_toolbar = toolbar
+
+        target_toolbar.insert(IconToolButton('constants-pi', _('Pi'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'pi'),
             alt_html='π'), -1)
 
-        self.insert(IconToolButton('constants-e', _('e'),
+        target_toolbar.insert(IconToolButton('constants-e', _('e'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
 
-        self.insert(LineSeparator(), -1)
+        target_toolbar.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('plot', _('Plot'),
+        target_toolbar.insert(IconToolButton('plot', _('Plot'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
 
-        self.insert(LineSeparator(), -1)
+        target_toolbar.insert(LineSeparator(), -1)
 
         el = [
             {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'deg'},
             {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'rad'},
         ]
-        self.insert(IconToggleToolButton(el, 
+        target_toolbar.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
                     _('Degrees / radians')), -1)
-
-        self.insert(LineSeparator(), -1)
 
         el = [
             {'icon': 'format-sci', 'html': 'sci'},
             {'icon': 'format-exp', 'html': 'exp'},
         ]
-        self.insert(IconToggleToolButton(el,
+        target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_format_type(x, calc),
                     _('Exponent / Scientific notation')), -1)
 
@@ -281,7 +292,7 @@ class MiscToolbar(gtk.Toolbar):
             {'icon': 'digits-15', 'html': '15'},
             {'icon': 'digits-6', 'html': '6'},
         ]
-        self.insert(IconToggleToolButton(el,
+        target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_digits(x, calc),
                     _('Number of shown digits')), -1)
 
