@@ -83,39 +83,36 @@ class CalcLayout:
 # Toolbar
         try:
             toolbar_box = ToolbarBox()
-            
+
             activity_button = ActivityToolbarButton(self._parent)
             toolbar_box.toolbar.insert(activity_button, 0)
             
-            edit_toolbar = ToolbarButton()
-            edit_toolbar.props.page = EditToolbar(self._parent)
-            edit_toolbar.props.icon_name = 'toolbar-edit'
-            edit_toolbar.props.label = _('Edit')
-            toolbar_box.toolbar.insert(edit_toolbar, -1)
-            
-            algebra_toolbar = ToolbarButton()
-            algebra_toolbar.props.page = AlgebraToolbar(self._parent)
-            algebra_toolbar.props.icon_name = 'toolbar-algebra'
-            algebra_toolbar.props.label = _('Algebra')
-            toolbar_box.toolbar.insert(algebra_toolbar, -1)
+            def append(icon_name, label, page):
+                toolbar_button = ToolbarButton()
+                toolbar_button.props.page = page
+                toolbar_button.props.icon_name = icon_name
+                toolbar_button.props.label = label
+                toolbar_box.toolbar.insert(toolbar_button, -1)
 
-            trigonometry_toolbar = ToolbarButton()
-            trigonometry_toolbar.props.page = TrigonometryToolbar(self._parent)
-            trigonometry_toolbar.props.icon_name = 'toolbar-trigonometry'
-            trigonometry_toolbar.props.label = _('Trigonometry')
-            toolbar_box.toolbar.insert(trigonometry_toolbar, -1)
-
-            boolean_toolbar = ToolbarButton()
-            boolean_toolbar.props.page = BooleanToolbar(self._parent)
-            boolean_toolbar.props.icon_name = 'toolbar-boolean'
-            boolean_toolbar.props.label = _('Boolean')
-            toolbar_box.toolbar.insert(boolean_toolbar, -1)
+            append('toolbar-edit',
+                   _('Edit'),
+                   EditToolbar(self._parent))
+                                  
+            append('toolbar-algebra',
+                   _('Algebra'),
+                   AlgebraToolbar(self._parent))
             
-            constant_toolbar = ToolbarButton()
-            constant_toolbar.props.page = MiscToolbar(self._parent)
-            constant_toolbar.props.icon_name = 'toolbar-constants'
-            constant_toolbar.props.label = _('Miscellaneous')
-            toolbar_box.toolbar.insert(constant_toolbar, -1)
+            append('toolbar-trigonometry',
+                   _('Trigonometry'),
+                   TrigonometryToolbar(self._parent))
+
+            append('toolbar-boolean',
+                   _('Boolean'),
+                   BooleanToolbar(self._parent))
+
+            append('toolbar-constants',
+                   _('Miscellaneous'),
+                   MiscToolbar(self._parent))
             
             separator = gtk.SeparatorToolItem()
             separator.props.draw = False
