@@ -263,7 +263,7 @@ class BooleanToolbar(gtk.Toolbar):
         self.show_all()
 
 class MiscToolbar(gtk.Toolbar):
-    def __init__(self, calc):
+    def __init__(self, calc, target_toolbar=None):
         gtk.Toolbar.__init__(self)
 
         self.insert(IconToolButton('constants-pi', _('Pi'),
@@ -279,19 +279,22 @@ class MiscToolbar(gtk.Toolbar):
         self.insert(IconToolButton('constants-goldenratio', _('φ'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, '1.618033988749895')), -1)
 
-        self.insert(LineSeparator(), -1)
+        if target_toolbar is None:
+            target_toolbar = self
+            
+        target_toolbar.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('plot', _('Plot'),
+        target_toolbar.insert(IconToolButton('plot', _('Plot'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
 
-        self.insert(LineSeparator(), -1)
+        target_toolbar.insert(LineSeparator(), -1)
 
         el = [
             {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'deg'},
             {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'rad'},
         ]
-        self.insert(IconToggleToolButton(el, 
+        target_toolbar.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
                     _('Degrees / radians')), -1)
 
@@ -299,7 +302,7 @@ class MiscToolbar(gtk.Toolbar):
             {'icon': 'format-sci', 'html': 'sci'},
             {'icon': 'format-exp', 'html': 'exp'},
         ]
-        self.insert(IconToggleToolButton(el,
+        target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_format_type(x, calc),
                     _('Exponent / Scientific notation')), -1)
 
@@ -309,7 +312,7 @@ class MiscToolbar(gtk.Toolbar):
             {'icon': 'digits-15', 'html': '15'},
             {'icon': 'digits-6', 'html': '6'},
         ]
-        self.insert(IconToggleToolButton(el,
+        target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_digits(x, calc),
                     _('Number of shown digits')), -1)
                     

@@ -87,32 +87,37 @@ class CalcLayout:
             activity_button = ActivityToolbarButton(self._parent)
             toolbar_box.toolbar.insert(activity_button, 0)
             
-            def append(icon_name, label, page):
+            def append(icon_name, label, page, position):
                 toolbar_button = ToolbarButton()
                 toolbar_button.props.page = page
                 toolbar_button.props.icon_name = icon_name
                 toolbar_button.props.label = label
-                toolbar_box.toolbar.insert(toolbar_button, -1)
+                toolbar_box.toolbar.insert(toolbar_button, position)
 
             append('toolbar-edit',
                    _('Edit'),
-                   EditToolbar(self._parent))
+                   EditToolbar(self._parent),
+                   -1)
                                   
             append('toolbar-algebra',
                    _('Algebra'),
-                   AlgebraToolbar(self._parent))
+                   AlgebraToolbar(self._parent),
+                   -1)
             
             append('toolbar-trigonometry',
                    _('Trigonometry'),
-                   TrigonometryToolbar(self._parent))
+                   TrigonometryToolbar(self._parent),
+                   -1)
 
             append('toolbar-boolean',
                    _('Boolean'),
-                   BooleanToolbar(self._parent))
+                   BooleanToolbar(self._parent),
+                   -1)
 
             append('toolbar-constants',
                    _('Miscellaneous'),
-                   MiscToolbar(self._parent))
+                   MiscToolbar(self._parent, target_toolbar=toolbar_box.toolbar),
+                   5)
             
             separator = gtk.SeparatorToolItem()
             separator.props.draw = False
