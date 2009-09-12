@@ -118,10 +118,11 @@ class CalcLayout:
         boolean_toolbar.props.label = _('Boolean')
         toolbar_box.toolbar.insert(boolean_toolbar, -1)
         
-        separator = gtk.SeparatorToolItem()
-        toolbar_box.toolbar.insert(separator, -1)
-
-        MiscToolbar(self._parent, toolbar=toolbar_box.toolbar)
+        constant_toolbar = ToolbarButton()
+        constant_toolbar.props.page = MiscToolbar(self._parent)
+        constant_toolbar.props.icon_name = 'toolbar-constants'
+        constant_toolbar.props.label = _('Miscellaneous')
+        toolbar_box.toolbar.insert(constant_toolbar, -1)
         
         separator = gtk.SeparatorToolItem()
         separator.props.draw = False

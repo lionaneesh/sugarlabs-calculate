@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY fill_color "#FFFFFF">
+]>
+<svg enable-background="new 0 0 55 55" height="55px" version="1.1" viewBox="0 0 55 55" width="55px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+<g display="block">
+    <g transform="translate(1,2)">
+        <g transform="scale(.6)">
+            <text x="14" y="39" font-size="40" font-family="Bitstream Vera Sans" font-weight="bold" fill="&fill_color;" stroke="none">π</text>
+        </g>
+    </g>
+    <g transform="translate(20,20)">
+        <g transform="scale(.6)">
+            <text x="14" y="39" font-size="40"  font-family="Bitstream Vera Sans" font-weight="bold" fill="&fill_color;" stroke="none">e</text>
+        </g>
+    </g>
+    <g transform="translate(2,18)">
+        <g transform="scale(.6)">
+            <text x="14" y="39" font-size="35"  font-family="Bitstream Vera Sans" font-weight="bold" fill="&fill_color;" stroke="none">φ</text>
+        </g>
+    </g>
+    <g transform="translate(22,-1)">
+        <g transform="scale(.6)">
+            <text x="14" y="39" font-size="33"  font-family="Bitstream Vera Sans" font-weight="bold" font-style="italic" fill="&fill_color;" stroke="none">γ</text>
+        </g>
+    </g>
+</g></svg>
