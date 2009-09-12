@@ -129,21 +129,9 @@ class EditToolbar(gtk.Toolbar):
         menu_item.show()
         copy_tool.get_palette().menu.append(menu_item)
 
-        """
-        self.insert(IconToolButton('edit-copy', _('Copy'),
-            lambda x: calc.text_copy(),
-            alt_html='Copy'), -1)
-        """
-
         self.insert(IconToolButton('edit-paste', _('Paste'),
             lambda x: calc.text_paste(),
             alt_html='Paste'), -1)
-
-        """
-        self.insert(IconToolButton('edit-cut', _('Cut'),
-            lambda x: calc.text_cut(),
-            alt_html='Cut'), -1)
-        """
                         
         self.show_all()
 
