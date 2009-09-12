@@ -699,8 +699,7 @@ class Calculate(ShareableActivity):
         self.remove_character(1)
 
     def keypress_cb(self, widget, event):
-        if self.label_entry.is_focus() or \
-            self.toolbox.get_activity_toolbar().title.is_focus():
+        if not self.text_entry.is_focus():
             return
 
         key = gtk.gdk.keyval_name(event.keyval)
