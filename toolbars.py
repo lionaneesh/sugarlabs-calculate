@@ -273,6 +273,12 @@ class MiscToolbar(gtk.Toolbar):
         self.insert(IconToolButton('constants-e', _('e'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
 
+        self.insert(IconToolButton('constants-eulersconstant', _('γ'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, '0.577215664901533')), -1)
+
+        self.insert(IconToolButton('constants-goldenratio', _('φ'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, '1.618033988749895')), -1)
+
         self.insert(LineSeparator(), -1)
 
         self.insert(IconToolButton('plot', _('Plot'),
