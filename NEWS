@@ -1,3 +1,11 @@
+31
+
+* Improve toolbar design (Gary C. Martin)
+* Add some constants (Gary C. Martin)
+* Parser improvements
+
+30
+
 * Add support for matplotlib as plotting backend
 * Add support for complex plot ranges, e.g. -2*pi..2*pi
 * Fix superscript display bug
