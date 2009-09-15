@@ -124,12 +124,12 @@ class EditToolbar(gtk.Toolbar):
         self.insert(copy_tool, -1)
 
         menu_item = MenuItem(_('Cut'))
-        
+
         try:
             menu_item.set_accelerator(_('<ctrl>x'))
         except AttributeError:
             pass
-            
+
         menu_item.connect('activate', lambda x: calc.text_cut())
         menu_item.show()
         copy_tool.get_palette().menu.append(menu_item)
