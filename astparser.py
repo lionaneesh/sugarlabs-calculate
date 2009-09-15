@@ -373,8 +373,11 @@ class AstParser:
         if node is None:
             return None
 
-        elif isinstance(node, ast.Expression) or isinstance(node, ast.Module):
+        elif isinstance(node, ast.Expression):
             return self._process_node(node.body, state)
+
+        elif isinstance(node, ast.Expr):
+            return self._process_node(node.value, state)
 
         elif isinstance(node, ast.BinOp):
             left = self._process_node(node.left, state)
@@ -451,20 +454,24 @@ class AstParser:
                         state.used_var_ofs[node.id] = node.col_offset
 
                 var = self.get_var(node.id)
-                if type(var) is ast.Expression:
-                    try:
+                try:
+                    if type(var) is ast.Expression:
                         return self._process_node(var.body, state)
-                    except ParserError, e:
-                        e.set_range(ofs, ofs + len(node.id))
-                        raise e
-                else:
-                    return var
+                    elif type(var) is ast.Expr:
+                        return self._process_node(var.value, state)
+                    else:
+                        return var
+                except ParserError, e:
+                    logging.debug('error: %r', e)
+                    e.set_range(ofs, ofs + len(node.id))
+                    raise e
+
             else:
                 if isfunc:
                     msg = _("Function '%s' not defined") % (node.id)
                 else:
                     msg = _("Variable '%s' not defined") % (node.id)
-                    raise RuntimeError(msg, ofs, ofs + len(node.id))
+                raise RuntimeError(msg, ofs, ofs + len(node.id))
 
         elif isinstance(node, ast.Attribute):
             parent = self._process_node(node.value, state)
@@ -565,10 +572,16 @@ class AstParser:
         logging.debug('Parsing preprocessed equation: %r', eqn)
 
         try:
-            tree = compile(eqn, '<string>', 'eval', ast.PyCF_ONLY_AST)
+            tree = compile(eqn, '<string>', 'exec', ast.PyCF_ONLY_AST)
         except SyntaxError, e:
             msg = _('Parse error')
             raise ParseError(msg, e.offset - 1)
+
+        if isinstance(tree, ast.Module):
+            if len(tree.body) != 1:
+                msg = _("Multiple statements not supported")
+                raise ParseError(msg)
+            return tree.body[0]
 
         return tree
 
@@ -654,6 +667,10 @@ if __name__ == '__main__':
     eqn = 'a * 5'
     ret = p.evaluate(eqn)
     print 'Eqn: %s, ret: %s' % (eqn, ret)
+
+    eqn = 'a = 1'
+    tree = p.parse(eqn)
+    p.print_tree(tree)
 
     eqn = '12 * 1 + 3 * (apples - 1)'
     tree = p.parse(eqn)
