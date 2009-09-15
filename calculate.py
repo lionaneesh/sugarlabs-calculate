@@ -181,7 +181,7 @@ class Equation:
             self.append_with_superscript_tags(buf, eqnstr, tagbignarrow)
 
         # Add result
-        if type(self.result) is types.StringType:
+        if type(self.result) in (types.StringType, types.UnicodeType):
             resstr = str(self.result)
             buf.insert_with_tags(buf.get_end_iter(), resstr,
                     tagsmallnarrow, tagjustright)
