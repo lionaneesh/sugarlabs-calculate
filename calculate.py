@@ -283,6 +283,7 @@ class Calculate(ShareableActivity):
         'c': lambda o: o.text_copy(),
         'v': lambda o: o.text_paste(),
         'x': lambda o: o.text_cut(),
+        'q': lambda o: o.close(),
     }
 
     SHIFT_KEYMAP = {
