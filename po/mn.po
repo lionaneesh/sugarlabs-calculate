@@ -6,13 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: 2008-07-29 04:58-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2009-09-21 14:04-0400\n"
 "Last-Translator: Odontsetseg Bat-Erdene <obat-erdene@suffolk.edu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 1.1.0rc2\n"
 
 #: activity/activity.info:2
@@ -251,12 +253,13 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "эсвэл"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"эсвэл(x, y), логик эсвэл. Хэрвээ x болон/эсвэл y зөв бол зөв, өөр бол буруу"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -269,23 +272,28 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:86
+#, fuzzy
 msgid "sin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:87
+#, fuzzy
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"cos(x), x-ийн cosine болох. Энэ нь x өнцгийн тойрог тутамдах x-координат юм"
 
 #: eqnparserhelp.py:90
+#, fuzzy
 msgid "sinh"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:91
+#, fuzzy
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
-msgstr ""
+msgstr "Гперболын cos(x), х-ийн гперболын cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
@@ -306,8 +314,9 @@ msgid "square(x), return the square of x. Given by x * x"
 msgstr ""
 
 #: eqnparserhelp.py:101
+#, fuzzy
 msgid "tan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -317,8 +326,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:106
+#, fuzzy
 msgid "tanh"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:107
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
@@ -358,7 +368,7 @@ msgstr ""
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "Сэдвүүд"
 
 #: eqnparserhelp.py:143
 #, python-format
@@ -367,15 +377,15 @@ msgstr ""
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Засварлах"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "Алгебр"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "Тригонометр"
 
 #: layout.py:63
 msgid "Boolean"
@@ -383,7 +393,7 @@ msgstr ""
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Тогтмол тоонууд"
 
 #: layout.py:65
 msgid "Format"
@@ -395,11 +405,11 @@ msgstr ""
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Бүх тэгшитгэлүүд"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "Миний тэгшитгэлүүд"
 
 #: layout.py:120
 msgid "Show history"
@@ -407,7 +417,7 @@ msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "Хувьсагчдыг харуулах"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -419,35 +429,35 @@ msgstr ""
 msgid "div_sym"
 msgstr ""
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "Тодорхойлогдоогүй"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Алдаа: дэмжигдээгүй хэлбэр"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "Тусламж"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Хуулах"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "Тавих"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr ""
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "Тэгш өнцөгт"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
@@ -455,90 +465,102 @@ msgstr ""
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr ""
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Натурал логарифм"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
-msgstr ""
+msgstr "Факториал"
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "Синус"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "Косинус"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
-msgstr ""
+msgstr "Тангенс"
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
-msgstr ""
+msgstr "Пи тоо"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
-msgstr ""
+msgstr "е тоо"
 
-#: toolbars.py:247
+#: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "Градус"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
-msgstr ""
+msgstr "Радиус"
 
 #: toolbars.py:252
 msgid "Degrees / radians"
 msgstr "Градус / радиан"
+
+#: eqnparserhelp.py:107
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Арилгах"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "Оруулах"
