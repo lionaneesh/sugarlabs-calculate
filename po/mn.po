@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-09-21 14:04-0400\n"
+"PO-Revision-Date: 2009-09-22 12:56-0400\n"
 "Last-Translator: Odontsetseg Bat-Erdene <obat-erdene@suffolk.edu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: mn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -37,7 +37,7 @@ msgstr "Бүртгэлийн дэвтэрт бичиж байна (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr "товч_дарагдсан(): ойлгомжгүй хэлбэр"
+msgstr "товч_дарагдсан(): буруу төрөл"
 
 #: eqnparser.py:33
 msgid "Parse error"
@@ -56,13 +56,13 @@ msgstr "%d-д алдаа гарлаа"
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"'Тест'-ын талаар тусламж авхыг хүсвэл help(test) эсвэл индексээс бол "
+"'Тест'-ын талаар тусламж авахыг хүсвэл help(test) эсвэл индексээс бол "
 "help(index)-ийг хэрэглэнэ үү"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "Функц '%s' тодорхойгүй"
+msgstr "Функц '%s' тодорхойлогдоогүй"
 
 #: eqnparser.py:359
 #, python-format
@@ -77,7 +77,7 @@ msgstr "функц %d хувьсагч авна"
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "%d хувьсагчыг задлан шинжлэх боломжгүй: '%s'"
+msgstr "%d хувьсагчыг задлах боломжгүй: '%s'"
 
 #: eqnparser.py:380
 #, python-format
@@ -198,28 +198,28 @@ msgstr ""
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr "Гперболын cos"
+msgstr "Гипербол cos"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr "Гперболын cos(x), х-ийн гперболын cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
+msgstr "Гипербол cos(x), х-ийн гипербол cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr "зэрэг"
+msgstr "зэрэгт"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "exp(x), x-ын натурал зэрэг хариулах. e^x-ээр өгөгдсөн"
+msgstr "exp(x), x зэрэг дэвшүүлэх. e^x -р өгөгдсөн"
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr "пактрал"
+msgstr "факториал"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr "fac(x), х-ын пактрал хариулах. x * (x - 1) * (x - 2) * ... өгөгдсөн"
+msgstr "fac(x), х-ын факториал олох. x * (x - 1) * (x - 2) * ... өгөгдсөн"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -228,7 +228,7 @@ msgstr "функцүүд"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "functions(), тодорхойлогдсон бүх функцүүдийн жагсаалтыг хариулах"
+msgstr "функцүүд(), тодорхойлогдсон бүх функцүүдийн жагсаалтыг хариулах"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -239,13 +239,13 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), x-ын натурал логритмыг хариулах. Энэ нь х-тэй тэнцүү exp()-ын хэмжээ. "
-"x >= 0 тохиолдолд тодорхойлогдсон."
+"ln(x), x-ын натурал логарифмыг олох. Энэ нь х-тэй тэнцүү exp()-ын хэмжээ. x "
+">= 0 тохиолдолд утга өгнө"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "Үйлдлүүд"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
