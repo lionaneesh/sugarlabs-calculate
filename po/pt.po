@@ -7,13 +7,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-02-15 01:41-0500\n"
-"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
+"PO-Revision-Date: 2009-09-25 09:29-0400\n"
+"Last-Translator: Eduardo H. Silva <HoboPrimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -338,8 +340,8 @@ msgstr ""
 msgid "tanh"
 msgstr "tanh"
 
+# English original is incorrect
 #: eqnparserhelp.py:107
-#, fuzzy
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x), devolve a tangente hiperbólica de x. Obtido por sinh(x) / cosh(x)"
@@ -392,11 +394,11 @@ msgstr "Não existe ajuda sobre '%s', use help(index) para ver o índice"
 
 #: layout.py:44
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 #: layout.py:53
 msgid "Enter"
-msgstr ""
+msgstr "Introduzir"
 
 #: layout.py:60
 msgid "Edit"
