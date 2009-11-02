@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-05-08 11:45-0400\n"
+"PO-Revision-Date: 2009-11-02 09:59-0400\n"
 "Last-Translator: Carlo Falciola <cfalciola@yahoo.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: it\n"
@@ -526,7 +526,7 @@ msgstr "Arcotangente"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
-msgstr "Seno iperbolico "
+msgstr "Seno iperbolico"
 
 #: toolbars.py:163
 msgid "Hyperbolic cosine"
