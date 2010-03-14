@@ -9,179 +9,393 @@ msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2007-11-23 11:00+0000\n"
-"Last-Translator: Nitin Vyas <nitvyas@gmail.com>\n"
+"PO-Revision-Date: 2010-02-15 04:49+0200\n"
+"Last-Translator: satyaakam goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
+"Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.0.2\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "गणना"
 
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() स्ट्रिंग अवैध (%s)"
+
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "उपलब्ध फंक्शन:"
 
-# ----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# ----------------------------------------
-# -----------------------------------------
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr "कोटिज्या सहायता"
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "दैनिकी मैं लिखा जा रहा है (%s)"
 
-#: eqnparserhelp.py:38
-msgid "help_asin"
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): अवैध किस्म"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "पार्स त्रुटि"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "स्तर: %d, ofs %d"
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "%d पर त्रुटि"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"'जांच' से संबंधित मदद के लिए help(test) का प्रयोग करें, अथवा अनुक्रमणिका के "
+"लिए help(index)"
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "कार्य '%s' पारिभाषित नहीं है"
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "तर्क की अवैध संख्या (%d इसके स्थान पर: %d)"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "कार्य %d तर्क लेता है"
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "तर्क %d पार्स नही कर सका: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "कार्य त्रुटि: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "चर '%s' पारिभाषित नहीं है"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "बायाँ कोष्ठक अवांछित"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "पार्स त्रुटि (दायाँ कोष्ठक)"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "दायाँ कोष्ठक अवांछित"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "पार्स त्रुटि (दायाँ कोष्ठक,  left_val नहीं है)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "पार्स त्रुटि (दाया कोष्ठक, बंद करने के लिए स्तर नहीं है)"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "संख्या वांछित नहीं"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "ऑपरेटर वांछित नहीं"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "पार्स त्रुटि: संख्या अथवा चर वांछित"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "संख्या अथवा चर वांछित"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "अवैध ऑपरेटर"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "ऑपरेटर वांछित है"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): लौटाया कुछ नहीं"
+
+#. TRANS: It is possible to translate commands. However, I would highly
+#. recommend NOT doing so for mathematical functions like cos(). help(),
+#. functions() etc should be translated.
+#: eqnparserhelp.py:39
+msgid "acos"
+msgstr "acos"
 
 #: eqnparserhelp.py:40
-msgid "help_exp"
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
 msgstr ""
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr ""
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr ""
+"acos(x), x का आर्क कोज्या बताता है. यह वह कोण है जिसका कोज्या x है. -1 <= x "
+"< 1 के लिए पारिभाषित"
 
 #: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr ""
+msgid "and"
+msgstr "and"
 
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr "वर्गमूल सहायता"
+#: eqnparserhelp.py:44
+msgid ""
+"and(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr "and(x,y), लॉजिकल and. x और y सही होने पर सही अथवा ग़लत बताता है"
 
 #: eqnparserhelp.py:46
-msgid "help_test"
-msgstr "परीक्षण सहायता"
+msgid "asin"
+msgstr "asin"
 
 #: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr "चर सहायता"
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin(x), x का आर्क ज्या बताता है. यह वह कोण है जिसके लिए ज्या x है. -1 <= x "
+"< 1  के लिए पारिभाषित"
+
+#: eqnparserhelp.py:50
+msgid "atan"
+msgstr "atan"
+
+#: eqnparserhelp.py:51
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan(x), x का आर्क स्पर्शज्या बताता है. यह वह कोण है जिसके लिए स्पर्शज्या x "
+"है. x के सभी मूल्यों के लिए पारिभाषित है"
+
+#: eqnparserhelp.py:54
+msgid "cos"
+msgstr "cos"
+
+#: eqnparserhelp.py:55
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr "cos(x), x का कोज्या बताता है. यह एकक वृत्त के x कोण पर x-अक्षांश है"
 
 #: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr "उपयोग सहायता"
+msgid "cosh"
+msgstr "cosh"
 
-# Text assigned to the 'help' variable
-#: eqnparser.py:234
-msgid "help_var"
+#: eqnparserhelp.py:59
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cosh(x), x का हाइपरबॉलिक कोज्या बताता है. (exp(x) + exp(-x)) / 2  द्वारा "
+"मिलता है"
 
-#-----------------------------------------
-# End of help topics
-#-----------------------------------------
-# ----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-# -----------------------------------------
+#: eqnparserhelp.py:61
+msgid "exp"
+msgstr "exp"
+
+#: eqnparserhelp.py:62
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x), x का नॅचुरल एक्सपोनेंट बताता है. e^x द्वारा दिया जाता है"
+
+#: eqnparserhelp.py:64
+msgid "fac"
+msgstr "fac"
+
+#: eqnparserhelp.py:65
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"fac(x), x का फॅक्टोरियल बताता है. x * (x - 1) * (x - 2) * द्वारा  मिलता है "
+"..."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:68
+msgid "functions"
+msgstr "functions"
+
+#: eqnparserhelp.py:69
+msgid "functions(), return a list of all the functions that are defined"
+msgstr "functions(), पारिभाषित किए गये फंक्शनों की सूची बताता है"
+
+#: eqnparserhelp.py:71
+msgid "ln"
+msgstr "ln"
+
+#: eqnparserhelp.py:72
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"ln(x), x का नॅचुरल लॉगरिद्म बताता है. यह वह मान है जहाँ एक्सपोनेंट exp() के "
+"बराबर x है. x >= 0 के लिए पारिभाषित."
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:76
+msgid "operators"
+msgstr "operators"
+
+#: eqnparserhelp.py:77
+msgid "operators(), return a list of the operators that are defined"
+msgstr "operators(),परिभाषित किए गये आपरेटर की सूची को वापस देता है "
+
+#: eqnparserhelp.py:79
+msgid "or"
+msgstr "or"
+
+#: eqnparserhelp.py:80
+msgid ""
+"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+msgstr "or(x,y), लॉजिकल or. x और/अथवा y सही होने पर सही अथवा गलत बताता है"
+
+#: eqnparserhelp.py:82
+msgid "plot"
+msgstr "plot"
+
+#: eqnparserhelp.py:83
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), समीकरण 'eqn' को चर 'var' की सीमा a से b में प्लाट करता "
+"है "
+
+#: eqnparserhelp.py:86
+msgid "sin"
+msgstr "sin"
+
+#: eqnparserhelp.py:87
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr "sin(x), x का ज्या वापस देता है. यह एकक वृत्त के x कोण पर y अक्षांश है"
+
+#: eqnparserhelp.py:90
+msgid "sinh"
+msgstr "sinh"
+
+#: eqnparserhelp.py:91
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+"sinh(x), x का हाइपरबॉलिक ज्या लौटाता है. (exp(x) - exp(-x)) / 2 द्वारा मिलता "
+"है"
+
+#: eqnparserhelp.py:93
+msgid "sqrt"
+msgstr "sqrt"
+
+#: eqnparserhelp.py:94
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"sqrt(x), x का वर्गमूल लौटाता है. यह वह मूल्य है जिसका वर्ग x के बराबर है. x "
+">= 0 के लिए पारिभाषित है."
+
+#: eqnparserhelp.py:97
+msgid "square"
+msgstr "square"
+
+#: eqnparserhelp.py:98
+msgid "square(x), return the square of x. Given by x * x"
+msgstr "square(x), x का वर्ग लौटाता है. जो x * x  द्वारा मिलता है"
+
+#: eqnparserhelp.py:101
+msgid "tan"
+msgstr "tan"
+
+#: eqnparserhelp.py:102
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+"tan(x), x का स्पर्शज्या लौटाता है. यह एकक वृत्त के मूल से एकक वृत्त पर किसी "
+"बिन्दु तक जाती हुई x अंश से पारिभाषित लकीर का झुकाव है. जो ज्या(x) / "
+"कोज्या(x) द्वारा मिलता है."
+
+#: eqnparserhelp.py:106
+msgid "tanh"
+msgstr "tanh"
+
+#: eqnparserhelp.py:107
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+"sinh(x), x का हाइपरबॉलिक ज्या बताता है. sinh(x) / cosh(x) द्वारा मिलता है"
+
+#: eqnparserhelp.py:109
+msgid "test"
+msgstr "जांच"
+
+#: eqnparserhelp.py:110
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"यह केवल जाँच विषय है. अनुक्रमणिका के लिए मदद(अनुक्रमणिका) का प्रयोग करें"
+
+#. TRANS: This command is descriptive, so can be translated
+#: eqnparserhelp.py:113
+msgid "variables"
+msgstr "चर"
+
+#: eqnparserhelp.py:114
+msgid "variables(), return a list of the variables that are currently defined"
+msgstr "variables(), वर्तमान में पारिभाषित किए गये चरों की सूची लौटाता है"
+
+#: eqnparserhelp.py:116
+msgid "xor"
+msgstr "xor"
+
+#: eqnparserhelp.py:117
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x, y), लॉजिकल xor. यदि x सही (और y ग़लत ) अथवा y सही (और x ग़लत )  होने "
+"पर ट्रू वापस देता है अथवा फॉल्स लौटाता है."
+
+#. TRANS: help(index), both 'index' and the translation  will work
+#: eqnparserhelp.py:131
+msgid "index"
+msgstr "अनुक्रमणिका"
 
 # -----------------------------------------
 # End of help topics
-#: eqnparserhelp.py:52
-msgid "Topics: "
-msgstr "विषय:"
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "विषय"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"'%s' के लिए मदद उपलब्ध नाह्न है, अनुक्रमणिका के लिए help(index) का उपयोग "
+"कीजिए"
 
-#: eqnparser.py:87
-msgid "Type error"
-msgstr "टाइप त्रुटि"
+#: layout.py:44
+msgid "Clear"
+msgstr "साफ करें"
 
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr ""
-
-#: eqnparser.py:299
-#, python-format
-msgid "variable %s not defined"
-msgstr ""
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr ""
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr ""
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr ""
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr ""
-
-#: eqnparser.py:358
-#, python-format
-msgid "Function '%s' returned %s"
-msgstr ""
-
-#: eqnparser.py:457
-#, python-format
-msgid "Variable '%s' undefined"
-msgstr ""
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr ""
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr ""
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr ""
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr ""
-
-#: eqnparser.py:565
-msgid "Parse error: ')' expected"
-msgstr ""
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr ""
-
-#: layout.py:46
-msgid "clear"
-msgstr ""
-
-#: layout.py:55
-msgid "enter"
-msgstr ""
+#: layout.py:53
+msgid "Enter"
+msgstr "एंटर"
 
 #: layout.py:60
 msgid "Edit"
@@ -189,15 +403,15 @@ msgstr "संपादन"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "बीजगणित"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "त्रिकोणमिति"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr "बूलिये"
+msgstr "बूलीयन"
 
 #: layout.py:64
 msgid "Constants"
@@ -205,7 +419,7 @@ msgstr "स्थिरांक"
 
 #: layout.py:65
 msgid "Format"
-msgstr "प्रारुप"
+msgstr "फॉर्मेट"
 
 #: layout.py:86
 msgid "Label:"
@@ -213,31 +427,41 @@ msgstr "लेबल:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "सभी समीकरण"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "मेरे समीकरण "
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "इतिहास दिखाएँ"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "चर दिखाएँ"
 
-#: mathlib.py:86
-msgid "Error"
-msgstr "त्रुटि"
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "mul_sym"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "div_sym"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "अपरिभाषित"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "त्रुटि: असमर्थित क़िस्म"
 
-#: plotlib.py:134
-msgid "Unable to parse range"
-msgstr ""
+#: toolbars.py:36
+msgid "Help"
+msgstr "मदद"
 
 #: toolbars.py:86
 msgid "Copy"
@@ -251,427 +475,130 @@ msgstr "चिपकाएँ"
 msgid "Cut"
 msgstr "काटें"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr ""
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr ""
-
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr ""
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr ""
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr ""
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr ""
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr ""
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr ""
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr ""
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr ""
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr ""
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr ""
-
-# -----------------------------------------
-# End of help topics
-#: eqnparserhelp.py:132
-#, fuzzy
-msgid "Topics"
-msgstr "विषय:"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr ""
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr ""
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr ""
-
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr ""
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr ""
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr ""
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr ""
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr ""
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
-msgid "acos"
-msgstr ""
-
-#: eqnparserhelp.py:40
-msgid ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
-msgstr ""
-
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr ""
-
-#: eqnparserhelp.py:47
-msgid ""
-"asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
-msgstr ""
-
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr ""
-
-#: eqnparserhelp.py:51
-msgid ""
-"atan(x), return the arc tangent of x. This is the angle for which the "
-"tangent is x. Defined for all x"
-msgstr ""
-
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr ""
-
-#: eqnparserhelp.py:55
-msgid ""
-"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
-"at the angle x"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr ""
-
-#: eqnparserhelp.py:59
-msgid ""
-"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr ""
-
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr ""
-
-#: eqnparserhelp.py:62
-msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
-
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr ""
-
-#: eqnparserhelp.py:65
-msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr ""
-
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr ""
-
-#: eqnparserhelp.py:72
-msgid ""
-"ln(x), return the natural logarithm of x. This is the value for which the "
-"exponent exp() equals x. Defined for x >= 0."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr ""
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr ""
-
-#: eqnparserhelp.py:80
-msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
-msgstr ""
-
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr ""
-
-#: eqnparserhelp.py:83
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-
-#: eqnparserhelp.py:86
-msgid "sin"
-msgstr ""
-
-#: eqnparserhelp.py:87
-msgid ""
-"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
-"the angle x"
-msgstr ""
-
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr ""
-
-#: eqnparserhelp.py:91
-msgid ""
-"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
-msgstr ""
-
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr ""
-
-#: eqnparserhelp.py:94
-msgid ""
-"sqrt(x), return the square root of x. This is the value for which the square "
-"equals x. Defined for x >= 0."
-msgstr ""
-
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr ""
-
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
-
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr ""
-
-#: eqnparserhelp.py:102
-msgid ""
-"tan(x), return the tangent of x. This is the slope of the line from the "
-"origin of the unit circle to the point on the unit circle defined by the "
-"angle x. Given by sin(x) / cos(x)"
-msgstr ""
-
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr ""
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
-
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr ""
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr ""
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr ""
-
-#: eqnparserhelp.py:117
-msgid ""
-"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
-"y is True (and x is False), else returns False"
-msgstr ""
-
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr ""
-
-#: mathlib.py:132
-msgid "Undefined"
-msgstr ""
-
-#: toolbars.py:36
-msgid "Help"
-msgstr ""
-
 #: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "वर्ग"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "वर्ग मूल"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr ""
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr ""
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr ""
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr ""
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr ""
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
-
-#: toolbars.py:149
-msgid "Arc cosine"
-msgstr ""
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr ""
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr ""
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr ""
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr ""
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr ""
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr ""
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr ""
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr ""
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr ""
-
-#: toolbars.py:202
-msgid "e"
-msgstr ""
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr ""
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr ""
+msgstr "e का घात x"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "x का घात y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "नेचुरल लॉगरिद्म"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "फॅक्टोरियल"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "ज्या"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "कोज्या"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "स्पर्शज्या"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "आर्क ज्या"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "आर्क कोज्या"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "आर्क स्पर्शज्या"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "हाइपरबोलिक ज्या"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "हाइपरबोलिक कोज्या"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "हाइपरबोलिक स्पर्शज्या"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "लॉजिकल and"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "लॉजिकल or"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "समान"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "असमान "
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "पाई"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "आंश"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "रेडियन्स"
+
+#~ msgid "Inverse"
+#~ msgstr "उलटा"
+
+#~ msgid "Degrees / radians"
+#~ msgstr "आंश/रेडियन्स"
+
+# ----------------------------------------
+# The help system uses topic msgid's that should be translated here.
+# ----------------------------------------
+# -----------------------------------------
+#~ msgid "help_acos"
+#~ msgstr "कोटिज्या सहायता"
+
+#~ msgid "help_sqrt"
+#~ msgstr "वर्गमूल सहायता"
+
+#~ msgid "help_test"
+#~ msgstr "परीक्षण सहायता"
+
+#~ msgid "help_variables"
+#~ msgstr "चर सहायता"
+
+#~ msgid "help_usage"
+#~ msgstr "उपयोग सहायता"
+
+# -----------------------------------------
+# End of help topics
+#~ msgid "Topics: "
+#~ msgstr "विषय:"
+
+#~ msgid "Type error"
+#~ msgstr "टाइप त्रुटि"
+
+#~ msgid "Error"
+#~ msgstr "त्रुटि"
