@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-02-15 04:49+0200\n"
-"Last-Translator: satyaakam goswami <satyaakam@gmail.com>\n"
+"PO-Revision-Date: 2010-03-22 22:49+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -254,7 +254,7 @@ msgstr "operators"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr "operators(),परिभाषित किए गये आपरेटर की सूची को वापस देता है "
+msgstr "operators(),परिभाषित किए गये आपरेटर की सूची को वापस देता है"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -275,7 +275,7 @@ msgid ""
 "range from a to b"
 msgstr ""
 "plot(eqn, var=-a..b), समीकरण 'eqn' को चर 'var' की सीमा a से b में प्लाट करता "
-"है "
+"है"
 
 #: eqnparserhelp.py:86
 msgid "sin"
@@ -330,7 +330,7 @@ msgid ""
 msgstr ""
 "tan(x), x का स्पर्शज्या लौटाता है. यह एकक वृत्त के मूल से एकक वृत्त पर किसी "
 "बिन्दु तक जाती हुई x अंश से पारिभाषित लकीर का झुकाव है. जो ज्या(x) / "
-"कोज्या(x) द्वारा मिलता है."
+"कोज्या(x) द्वारा मिलता है"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
@@ -369,7 +369,7 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 "xor(x, y), लॉजिकल xor. यदि x सही (और y ग़लत ) अथवा y सही (और x ग़लत )  होने "
-"पर ट्रू वापस देता है अथवा फॉल्स लौटाता है."
+"पर ट्रू वापस देता है अथवा फॉल्स लौटाता है"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
@@ -431,7 +431,7 @@ msgstr "सभी समीकरण"
 
 #: layout.py:118
 msgid "My equations"
-msgstr "मेरे समीकरण "
+msgstr "मेरे समीकरण"
 
 #: layout.py:120
 msgid "Show history"
@@ -549,7 +549,7 @@ msgstr "समान"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr "असमान "
+msgstr "असमान"
 
 #: toolbars.py:199
 msgid "Pi"
