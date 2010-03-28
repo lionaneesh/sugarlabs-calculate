@@ -2,12 +2,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-02-27 08:45+0200\n"
+"PO-Revision-Date: 2010-03-29 00:19+0200\n"
 "Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -15,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -33,7 +37,7 @@ msgstr "Verfügbare Funktionen:"
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "Schreibe ins Journal (%s)"
+msgstr "Schreibe ins Tagebuch (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -71,7 +75,7 @@ msgstr "Ungültige Anzahl von Argumenten (%d anstatt von %d)"
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "funktion nimmt %d Argumente"
+msgstr "Funktion erwartet %d Argumente"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
@@ -94,7 +98,7 @@ msgstr "Linke Klammer unerwartet"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr "Verarbeitungsfehler (Rechte Klammer)"
+msgstr "Verarbeitungsfehler (rechte Klammer)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
@@ -102,11 +106,11 @@ msgstr "Rechte Klammer unerwartet"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Verarbeitungsfehler (Rechte Klammer, linke fehlt)"
+msgstr "Verarbeitungsfehler (rechte Klammer, linke fehlt)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Verarbeitungsfehler (Rechte Klammer, keine Ebene zu schließen)"
+msgstr "Verarbeitungsfehler (rechte Klammer, keine Ebene zu schließen)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
@@ -152,7 +156,7 @@ msgid ""
 "is x. Defined for -1 <= x < 1"
 msgstr ""
 "acos(x) gibt den Arcuscosinus von x zurück. Das ist der Winkel für den der "
-"Cosinus x ist. Definiert for -1 <= x < 1"
+"Cosinus den Wert x hat. Definiert für -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -162,8 +166,8 @@ msgstr "and"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x,y), logisches und. Gibt Wahr zurück von x und y Wahr sind. Andernfalls "
-"wird Falsch zurückgegeben"
+"and(x,y), logisches Und. Gibt Wahr zurück, wenn x und y Wahr sind. "
+"Andernfalls wird Falsch zurückgegeben."
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -175,7 +179,7 @@ msgid ""
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x) gibt den Arcussinus von x zurück. Das ist der Winkel für den der "
-"Sinus x ist. Definiert für -1 <= x <= 1"
+"Sinus den Wert x hat. Definiert für -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
@@ -187,7 +191,7 @@ msgid ""
 "tangent is x. Defined for all x"
 msgstr ""
 "atan(x) gibt den Arcustangens von x zurück. Das ist der Winkel für den der "
-"Tangens x ist. Definiert für alle x"
+"Tangens den Wert x hat. Definiert für alle x"
 
 #: eqnparserhelp.py:54
 msgid "cos"
@@ -199,7 +203,7 @@ msgid ""
 "at the angle x"
 msgstr ""
 "cos(x), gibt den Cosinus von x zurück. Das ist die x-Koordinate am "
-"Einheitskreis beim Winkel x"
+"Einheitskreis beim Winkel x."
 
 #: eqnparserhelp.py:58
 msgid "cosh"
@@ -209,8 +213,8 @@ msgstr "cosh"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"cosh(x), gibt den Cosinus hyperbolicus von x zurück. Entspricht (exp(x) + "
-"exp(-x)) / 2"
+"cosh(x), gibt den Cosinus hyperbolicus von x zurück. Definiert durch (exp(x) "
+"+ exp(-x)) / 2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
@@ -218,7 +222,9 @@ msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "exp(x), gibt den naürlichen Exponent von x zurück. Entspricht e^x"
+msgstr ""
+"exp(x), gibt die natürliche Exponentialfunktion von x zurück. Definiert "
+"durch e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
@@ -227,8 +233,8 @@ msgstr "fac"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"fac(x), gibt die Fakultät von x zurück. Entspricht x * (x - 1) * (x - 2) * "
-"..."
+"fac(x), gibt die Fakultät von x zurück. Definiert durch x * (x - 1) * (x - "
+"2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -237,7 +243,7 @@ msgstr "funktionen"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "funktionen() gibt eine Liste der definierten Funktionen zurück"
+msgstr "funktionen() gibt eine Liste der definierten Funktionen zurück."
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -249,7 +255,7 @@ msgid ""
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
 "ln(x), gibt den natürlichen Logarithmus von x zurück. Dies ist der Wert für "
-"den der Exponent exp() gleich x ist. Werte für x >=0."
+"den der Exponent exp() gleich x ist. Definiert für x >=0"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -258,7 +264,7 @@ msgstr "operatoren"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr "operatoren() gibt eine Liste der definierten Operatoren zurück"
+msgstr "operatoren() gibt eine Liste der definierten Operatoren zurück."
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -268,8 +274,8 @@ msgstr "or"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x,y), logisches oder. Gibt Wahr zurück von x und/oder y Wahr sind. "
-"Andernfalls wird Falsch zurückgegeben"
+"or(x,y), logisches Oder. Gibt Wahr zurück, wenn x und/oder y Wahr sind. "
+"Andernfalls wird Falsch zurückgegeben."
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -280,8 +286,8 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b) plottet die Gleichung 'eqn' mit den Variablen 'var' im "
-"Bereich von a bis b"
+"plot(gln, var=-a..b) plottet die Gleichung 'gln' mit den Variablen 'var' im "
+"Bereich von a bis b."
 
 #: eqnparserhelp.py:86
 msgid "sin"
@@ -293,7 +299,7 @@ msgid ""
 "the angle x"
 msgstr ""
 "sin(x), gibt den Sinus von x zurück. Das ist die y-Koordinate am "
-"Einheitskreis beim Winkel x"
+"Einheitskreis beim Winkel x."
 
 #: eqnparserhelp.py:90
 msgid "sinh"
@@ -303,28 +309,28 @@ msgstr "sinh"
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"sinh(x), gibt den Sinus hyperbolicus von x zurück. Entspricht (exp(x) - "
+"sinh(x), gibt den Sinus hyperbolicus von x zurück. Definiert durch (exp(x) - "
 "exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr "wurzel"
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"wurzel(x), gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
-"Quadrat gleich x ist. Definiert für x >= 0."
+"sqrt(x), gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
+"Quadrat gleich x ist. Definiert für x >= 0"
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr "quadrat"
+msgstr "square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "quadrat(x), gibt das Quadrat von x zurück. Entspricht x * x"
+msgstr "square(x), gibt das Quadrat von x zurück. Definiert durch x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -336,9 +342,9 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x), gibt den Tangens von x zurück. Das ist die Steilheit der Linie vom "
+"tan(x), gibt den Tangens von x zurück. Das ist die Steigung der Linie vom "
 "Ursprung des Einheitskreises zum Punkt am Einheitskreis beim Winkel x. "
-"Entspricht sin(x) / cos(x)"
+"Definiert durch sin(x) / cos(x)"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
@@ -347,8 +353,8 @@ msgstr "tanh"
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"sinh(x), gibt den Tangens hyperbolicus von x zurück. Definiert als sinh(x) / "
-"cosh(x)"
+"tanh(x), gibt den Tangens hyperbolicus von x zurück. Definiert durch sinh(x) "
+"/ cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -357,7 +363,8 @@ msgstr "test"
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
-"Das ist nur ein Testthema, verwende Hilfe(Index) um zum Index zu gelangen"
+"Das ist nur ein Testthema, verwende hilfe(Index) um ein Übersicht zu "
+"erhalten."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
@@ -366,7 +373,7 @@ msgstr "variablen"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr "variablen(), gibt eine Liste der derzeit verwendeten Variablen zurück"
+msgstr "variablen(), gibt eine Liste der derzeit verwendeten Variablen zurück."
 
 #: eqnparserhelp.py:116
 msgid "xor"
@@ -377,14 +384,14 @@ msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
-"xor(x, y), logisches xor. Gibt 'Wahr' zurück wenn x 'Wahr' ist (und y "
-"'Falsch' ist) oder wenn y 'Wahr' ist (und x 'Falsch' ist ). Andernfalls wird "
-"'Falsch' zurückgegeben"
+"xor(x, y), logisches Entweder-Oder. Gibt Wahr zurück wenn entweder x Wahr "
+"ist (und y Falsch) oder wenn y Wahr ist (und x Falsch). Andernfalls wird "
+"Falsch zurückgegeben"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr "index"
+msgstr "Index"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
@@ -393,9 +400,7 @@ msgstr "Themen"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Keine Hilfe bezüglich '%s' verfügbar, verwende help(index) um Übersicht "
-"anzuzeigen"
+msgstr "Keine Hilfe zu '%s' verfügbar; verwende help(index) für die Übersicht."
 
 #: layout.py:44
 msgid "Clear"
@@ -419,7 +424,7 @@ msgstr "Trigonometrie"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr "Boole'sche Algebra"
+msgstr "Boolesche Algebra"
 
 #: layout.py:64
 msgid "Constants"
