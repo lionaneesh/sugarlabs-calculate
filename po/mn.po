@@ -249,7 +249,7 @@ msgstr "Үйлдлүүд"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "operators() нь тодорхойлогдсон бүх операторуудын жагсаалтыг өгдөг"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -263,60 +263,55 @@ msgstr ""
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "цэг"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
-msgstr ""
+msgstr "цэг(eqn, var=-a..b) нь eqn -н графикийг (-a,b) мужид зурна"
 
 #: eqnparserhelp.py:86
-#, fuzzy
 msgid "sin"
-msgstr "asin"
+msgstr "sin"
 
 #: eqnparserhelp.py:87
-#, fuzzy
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"cos(x), x-ийн cosine болох. Энэ нь x өнцгийн тойрог тутамдах x-координат юм"
+"sin(x), x-ийн sinus болох. Энэ нь x өнцгийн тойрог тутамдах y-координат юм"
 
 #: eqnparserhelp.py:90
-#, fuzzy
 msgid "sinh"
-msgstr "asin"
+msgstr "sinh"
 
 #: eqnparserhelp.py:91
-#, fuzzy
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
-msgstr "Гперболын cos(x), х-ийн гперболын cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
+msgstr "sinh(x), х-ийн гперболын cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "язгуур"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
-msgstr ""
+msgstr "sqrt(x) x тооноос квадрат язгуур гаргана. Х нь үргэлж эерэг тоо байна"
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "квадрат зэрэг"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "square(x) нь х-н квадрат зэргийн утгыг гаргана. x*x тай адил"
 
 #: eqnparserhelp.py:101
-#, fuzzy
 msgid "tan"
-msgstr "atan"
+msgstr "tan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -324,11 +319,13 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x)= тангенс(x) ба тэгш өнцөгт гурвалжны нэг хурц өнцгийн эсрэг катетийг "
+"налсан катетед хуваахад гарсан утгатай тэнцүү. sin(x) / cos(x) тай адилаар "
+"бодогдоно"
 
 #: eqnparserhelp.py:106
-#, fuzzy
 msgid "tanh"
-msgstr "atan"
+msgstr "tanh"
 
 #: eqnparserhelp.py:107
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
@@ -336,35 +333,38 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "туршилт"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "Энэ бол туршилтын агуулга. help(index) гэж дугаарлалтаа авна."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "хувьсагчид"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
+msgstr "хувьсагч()-р одоо хэрэглэж байгаа хувьсагчдын жагсаалтыг харж болно"
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), логик ҮГҮЙСГЭГЧ БУЮУ. x, y 2 хувьсагчийн зөвхөн аль нэг нь үнэн "
+"бол эцсийн утга нь ҮНЭН байна. (x = True, y = False буюу y = True, x = "
+"False), Бусад тохиолдолд ХУДАЛ"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "индекс"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
@@ -373,7 +373,7 @@ msgstr "Сэдвүүд"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "'%s' тухай лавлагаа олдсонгүй. help(index)-ийг ашиглан оролдоно уу"
 
 #: layout.py:60
 msgid "Edit"
@@ -389,7 +389,7 @@ msgstr "Тригонометр"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "Булийн"
 
 #: layout.py:64
 msgid "Constants"
@@ -397,11 +397,11 @@ msgstr "Тогтмол тоонууд"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Хэлбэр"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Тэмдэгт"
 
 #: layout.py:118
 msgid "All equations"
@@ -413,7 +413,7 @@ msgstr "Миний тэгшитгэлүүд"
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "Түүх үзэх"
 
 #: layout.py:120
 msgid "Show variables"
@@ -422,12 +422,12 @@ msgstr "Хувьсагчдыг харуулах"
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"
@@ -451,7 +451,7 @@ msgstr "Тавих"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "Огтлох"
 
 #: toolbars.py:99
 msgid "Square"
@@ -459,7 +459,7 @@ msgstr "Тэгш өнцөгт"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "Квадрат язгуур"
 
 #: toolbars.py:137
 msgid "Inverse"
@@ -467,11 +467,11 @@ msgstr ""
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
+msgstr "е-н х зэрэг"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "х-н у зэрэг"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
@@ -495,43 +495,43 @@ msgstr "Тангенс"
 
 #: toolbars.py:145
 msgid "Arc sine"
-msgstr ""
+msgstr "Арксинус"
 
 #: toolbars.py:149
 msgid "Arc cosine"
-msgstr ""
+msgstr "Арккосинус"
 
 #: toolbars.py:153
 msgid "Arc tangent"
-msgstr ""
+msgstr "Арктангенс"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "Гипербол синус"
 
 #: toolbars.py:163
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "Гипербол косинус"
 
 #: toolbars.py:167
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "Гипербол тангенс"
 
 #: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "Логик БА"
 
 #: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "Логик БУЮУ"
 
 #: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "Тэнцэтгэл"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "Тэнцэтгэл биш"
 
 #: toolbars.py:199
 msgid "Pi"
