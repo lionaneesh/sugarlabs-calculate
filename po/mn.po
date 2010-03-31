@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-09-22 12:56-0400\n"
-"Last-Translator: Odontsetseg Bat-Erdene <obat-erdene@suffolk.edu>\n"
+"PO-Revision-Date: 2010-03-31 20:43+0200\n"
+"Last-Translator: Cris Anderson <anderson861@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -148,18 +148,16 @@ msgstr "acos"
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
-msgstr ""
-"acos(x), x-ийн arc cosine-ийг гаргах. Энэ нь cosine-ийн x-д харгалзах өнцөг. "
-"-1 <= x < 1 хязгаарт"
+msgstr "acos(x), x-ийн arccosinus-ийг гаргах. x-н утга -1 <= x < 1 -д оршино"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr "ба"
+msgstr "and"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr "ба(x, y), логик ба. Хэрвээ x ба y үнэн бол үнэн, өөр нөхцөлд худал"
+msgstr "and(x, y), логик ба. Хэрвээ x ба y үнэн бол үнэн, өөр нөхцөлд худал"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -169,9 +167,7 @@ msgstr "asin"
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
-msgstr ""
-"asin(x), x-ийн arc sine гаргах. Энэ нь sine-ийн x-д харгалзах өнцөг. -1 <= x "
-"< 1 хязгаарт"
+msgstr "asin(x), x-ийн arcsinus гаргах. x-н утга -1 <= x < 1 -д оршино"
 
 #: eqnparserhelp.py:50
 msgid "atan"
@@ -182,7 +178,7 @@ msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"atan(x), x-ийн arc tangent гаргах. Энэ нь tangent-ийн x-д харгалзах өнцөг. "
+"atan(x), x-ийн arctangen гаргах. Энэ нь tangent-ийн x-д харгалзах өнцөг. "
 "Хязгааргүй"
 
 #: eqnparserhelp.py:54
@@ -194,16 +190,16 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), x-ийн cosine болох. Энэ нь x өнцгийн тойрог тутамдах x-координат юм"
+"cos(x), x-ийн cosinus болох. Энэ нь x өнцгийн тойрог тутамдах x-координат юм"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr "Гипербол cos"
+msgstr "cosh"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr "Гипербол cos(x), х-ийн гипербол cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
+msgstr "cosh(x), х-ийн гипербол cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
 #: eqnparserhelp.py:61
 msgid "exp"
@@ -215,7 +211,7 @@ msgstr "exp(x), x зэрэг дэвшүүлэх. e^x -р өгөгдсөн"
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr "факториал"
+msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -393,7 +389,7 @@ msgstr "Булийн"
 
 #: layout.py:64
 msgid "Constants"
-msgstr "Тогтмол тоонууд"
+msgstr "Тогтмолууд"
 
 #: layout.py:65
 msgid "Format"
@@ -435,7 +431,7 @@ msgstr "Тодорхойлогдоогүй"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr "Алдаа: дэмжигдээгүй хэлбэр"
+msgstr "Алдаа: үл дэмжигдэх төрөл"
 
 #: toolbars.py:36
 msgid "Help"
@@ -455,7 +451,7 @@ msgstr "Огтлох"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr "Тэгш өнцөгт"
+msgstr "Дөрвөлжин"
 
 #: toolbars.py:103
 msgid "Square root"
