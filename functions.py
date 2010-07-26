@@ -86,12 +86,22 @@ def _d(val):
     else:
         return None
 
-_angle_scaling = 1
+class ClassValue():
+    """
+    Class to share a value with the outside world.
+    This is required because plain floats / integers are not asigned by
+    reference, and can therefore not easily be changed in a different place.
+    """
+    def __init__(self, val):
+        self.value = val
+
+angle_scaling = ClassValue(1.0)
+
 def _scale_angle(x):
-    return x * _angle_scaling
+    return x * angle_scaling.value
 
 def _inv_scale_angle(x):
-    return x / _angle_scaling
+    return x / angle_scaling.value
 
 def abs(x):
     return math.fabs(x)
@@ -289,6 +299,9 @@ def mod(x, y):
         return x % y
     else:
         raise ValueError(_('Can only calculate x modulo <integer>'))
+mod.__doc__ = _(
+'mod(x, y), return the modulus of x with respect to y. This is the remainder \
+after dividing x by y.')
 
 def mul(x, y):
     if isinstance(x, _Decimal) or isinstance(y, _Decimal):

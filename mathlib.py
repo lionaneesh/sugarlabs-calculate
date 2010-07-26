@@ -40,7 +40,6 @@ class MathLib:
     FORMAT_SCIENTIFIC = 2
 
     def __init__(self):
-        self.set_angle_type(self.ANGLE_DEG)
         self.set_format_type(self.FORMAT_SCIENTIFIC)
         self.set_digit_limit(9)
 
@@ -68,10 +67,6 @@ class MathLib:
         self.div_sym = _('div_sym')
         if len(self.div_sym) == 0 or len(self.div_sym) > 3:
             self.div_sym = '/'
-
-    def set_angle_type(self, type):
-        self.angle_scaling = self.d(type)
-        _logger.debug('Angle type set to %s', self.angle_scaling)
 
     def set_format_type(self, fmt, digit_limit=9):
         self.format_type = fmt

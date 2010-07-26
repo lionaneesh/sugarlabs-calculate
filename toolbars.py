@@ -290,6 +290,7 @@ class MiscToolbar(gtk.Toolbar):
         target_toolbar.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
                     _('Degrees / radians')), -1)
+        self.update_angle_type('deg', calc)
 
         el = [
             {'icon': 'format-sci', 'html': 'sci'},
@@ -312,17 +313,22 @@ class MiscToolbar(gtk.Toolbar):
         self.show_all()
 
     def update_angle_type(self, text, calc):
+        var = calc.parser.get_var('angle_scaling')
+        if var is None:
+            _logger.warning('Variable angle_scaling not defined.')
+            return
+
         if text == 'deg':
-            calc.ml.set_angle_type(MathLib.ANGLE_DEG)
+            var.value = MathLib.ANGLE_DEG
         elif text == 'rad':
-            calc.ml.set_angle_type(MathLib.ANGLE_RAD)
-        _logger.debug('Angle type: %s', calc.ml.angle_scaling)
+            var.value = MathLib.ANGLE_RAD
+        _logger.debug('Angle scaling: %s', var.value)
 
     def update_format_type(self, text, calc):
         if text == 'exp':
             calc.ml.set_format_type(MathLib.FORMAT_EXPONENT)
         elif text == 'sci':
-            calc.ml.set_angle_type(MathLib.FORMAT_SCIENTIFIC)
+            calc.ml.set_format_type(MathLib.FORMAT_SCIENTIFIC)
         _logger.debug('Format type: %s', calc.ml.format_type)
 
     def update_digits(self, text, calc):
