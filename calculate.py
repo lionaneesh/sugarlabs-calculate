@@ -187,7 +187,7 @@ class Equation:
                     tagsmallnarrow, tagjustright)
         elif is_error:
             resstr = str(self.result)
-            buf.insert_with_tags(buf.get_end_iter(), resstr, tagbigger)
+            buf.insert_with_tags(buf.get_end_iter(), resstr, tagsmallnarrow)
             range = self.result.get_range()
             eqnstart = buf.get_iter_at_offset(eqnoffset + range[0])
             eqnend = buf.get_iter_at_offset(eqnoffset + range[1])
@@ -227,8 +227,13 @@ class Equation:
             buf.insert_with_tags(buf.get_end_iter(), labelstr, tagsmallnarrow)
         eqnstr = '%s\n' % str(self.equation)
         self.append_with_superscript_tags(buf, eqnstr, tagsmall)
+
         resstr = self.ml.format_number(self.result)
-        self.append_with_superscript_tags(buf, resstr, tagbig)
+        if len(resstr) > 30:
+            restag = tagsmall
+        else:
+            restag = tagbig
+        self.append_with_superscript_tags(buf, resstr, restag)
 
         buf.apply_tag(tagcolor, buf.get_start_iter(), buf.get_end_iter())
 
@@ -302,6 +307,14 @@ class Calculate(ShareableActivity):
         
         self.ml = MathLib()
         self.parser = AstParser(self.ml)
+
+        # These will result in 'Ans <operator character>' being inserted
+        self._chars_ans_diadic = [op[0] for op in self.parser.get_diadic_operators()]
+        try:
+            self._chars_ans_diadic.remove('-')
+        except:
+            pass
+
         self.KEYMAP['multiply'] = self.ml.mul_sym
         self.KEYMAP['divide'] = self.ml.div_sym
 
@@ -348,7 +361,11 @@ class Calculate(ShareableActivity):
         if len(eqn.label) > 0:
             text = eqn.label
         else:
-            text = self.parser.ml.format_number(eqn.result)
+            # don't insert plain text
+            if type(eqn.result) in (types.StringType, types.UnicodeType):
+                text = ''
+            else:
+                text = self.parser.ml.format_number(eqn.result)
 
         self.button_pressed(self.TYPE_TEXT, text)
         return True
@@ -794,10 +811,8 @@ class Calculate(ShareableActivity):
             if len(sel) == 2:
                 tlen -= (end - start)
 
-            if tlen == 0 and (str in self.parser.get_diadic_operators() \
-                    or str in self.parser.get_post_operators()) and \
-                    self.parser.get_var('Ans') is not None: # and \
-# logic better?     (str not in self.parser.get_pre_operators() or str == '+'):
+            if tlen == 0 and (str in self._chars_ans_diadic) and \
+                    self.parser.get_var('Ans') is not None:
                 ans = self.format_insert_ans()
                 self.text_entry.set_text(ans + str)
                 self.text_entry.set_position(len(ans) + len(str))
