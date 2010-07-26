@@ -309,6 +309,11 @@ class MiscToolbar(gtk.Toolbar):
         target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_digits(x, calc),
                     _('Number of shown digits')), -1)
+
+        el = ['10', '16', '2', '8']
+        target_toolbar.insert(TextToggleToolButton(el,
+                    lambda x: self.update_int_base(x, calc),
+                    _('Integer formatting base')), -1)
                     
         self.show_all()
 
@@ -334,4 +339,8 @@ class MiscToolbar(gtk.Toolbar):
     def update_digits(self, text, calc):
         calc.ml.set_digit_limit(int(text))
         _logger.debug('Digit limit: %s', calc.ml.digit_limit)
+
+    def update_int_base(self, text, calc):
+        calc.ml.set_integer_base(int(text))
+        _logger.debug('Integer base: %s', calc.ml.integer_base)
 
