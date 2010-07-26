@@ -235,11 +235,11 @@ class BooleanToolbar(gtk.Toolbar):
 
         self.insert(IconToolButton('boolean-and', _('Logical and'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '&'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(and))')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(And)')), -1)
 
         self.insert(IconToolButton('boolean-or', _('Logical or'),
             lambda x: calc.button_pressed(calc.TYPE_OP_POST, '|'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(or)')), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(Or)')), -1)
 
 #        self.insert(IconToolButton('boolean-xor', _('Logical xor'),
 #            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^'),
