@@ -31,6 +31,22 @@ _logger = logging.getLogger('MathLib')
 from gettext import gettext as _
 import locale
 
+# Python 2.5 does not have a binary formatter built-in
+def format_bin(n):
+    ret = '0b'
+    while n > 0:
+        if n & 1:
+            ret += '1'
+        else:
+            ret += '0'
+        n >>= 1
+    return ret
+
+try:
+    _BIN = bin
+except:
+    _BIN = format_bin
+
 class MathLib:
     ANGLE_DEG = math.pi/180
     ANGLE_RAD = 1
@@ -42,6 +58,8 @@ class MathLib:
     def __init__(self):
         self.set_format_type(self.FORMAT_SCIENTIFIC)
         self.set_digit_limit(9)
+        self.set_chop_zeros(True)
+        self.set_integer_base(10)
 
         self._setup_i18n()
 
@@ -72,9 +90,20 @@ class MathLib:
         self.format_type = fmt
         _logger.debug('Format type set to %s', fmt)
 
+    def set_integer_base(self, base):
+        if base not in (2, 8, 10, 16):
+            _logger.warning('Unsupported integer base requested')
+            return False
+        self.integer_base = base
+        _logger.debug('Integer base set to %s', base)
+
     def set_digit_limit(self, digits):
         self.digit_limit = digits
         _logger.debug('Digit limit set to %s', digits)
+
+    def set_chop_zeros(self, chop):
+        self.chop_zeros = bool(chop)
+        _logger.debug('Chop zeros set to %s', self.chop_zeros)
 
     def d(self, val):
         if isinstance(val, Decimal):
@@ -103,39 +132,40 @@ class MathLib:
         except Exception, inst:
             return None
 
-    def format_number(self, n):
-        if type(n) is types.BooleanType:
-            if n:
-                return 'True'
-            else:
-                return 'False'
-        elif type(n) is types.StringType:
-            return n
-        elif type(n) is types.UnicodeType:
-            return n
-        elif type(n) is types.NoneType:
-            return _('Undefined')
-        elif type(n) is types.IntType:
-            n = self.d(n)
-        elif type(n) is types.FloatType:
-            n = self.d(n)
-        elif type(n) is types.LongType:
-            n = self.d(n)
-        elif isinstance(n, Rational):
-            n = self.d(float(n))
-        elif not isinstance(n, Decimal):
-            return _('Error: unsupported type')
+    def _do_chop_zeros(self, digits, exp):
+        if not self.chop_zeros:
+            return (digits, exp)
+
+        i = len(digits) - 1
+        while digits[i] == 0 and i > 0:
+            i -= 1
+            exp -= 1
+
+        return (digits[:i+1], exp)
+
+    _BASE_FUNC_MAP = {
+        2: _BIN,
+        8: oct,
+        16: hex,
+    }
+    def format_int(self, n, base=None):
+        if base is None:
+            base = self.integer_base
+        ret = self._BASE_FUNC_MAP[base](long(n))
+        return ret.rstrip('L')
+
+    def format_decimal(self, n):
         (sign, digits, exp) = n.as_tuple()
+        digits, exp = self._do_chop_zeros(digits, exp)
         if len(digits) > self.digit_limit:
             exp += len(digits) - self.digit_limit
             digits = digits[:self.digit_limit]
-
         if sign:
             res = "-"
         else:
             res = ""
         int_len = len(digits) + exp
-        
+
         if int_len == 0:
             if exp < -self.digit_limit:
                 disp_exp = exp + len(digits) 
@@ -175,6 +205,34 @@ class MathLib:
 
         return res
 
+    def format_number(self, n):
+        if type(n) is types.BooleanType:
+            if n:
+                return 'True'
+            else:
+                return 'False'
+        elif type(n) is types.StringType:
+            return n
+        elif type(n) is types.UnicodeType:
+            return n
+        elif type(n) is types.NoneType:
+            return _('Undefined')
+        elif type(n) is types.IntType:
+            n = self.d(n)
+        elif type(n) is types.FloatType:
+            n = self.d(n)
+        elif type(n) is types.LongType:
+            n = self.d(n)
+        elif isinstance(n, Rational):
+            n = self.d(float(n))
+        elif not isinstance(n, Decimal):
+            return _('Error: unsupported type')
+
+        if self.is_int(n) and self.integer_base != 10:
+            return self.format_int(n)
+        else:
+            return self.format_decimal(n)
+
     def short_format(self, n):
         ret = self.format_number(n)
         if len(ret) > 7:
@@ -202,4 +260,10 @@ if __name__ == "__main__":
     print 'is_int(%.18e): %s' % (val, ml.is_int(val))
     val = ml.d(0.99999999999999878)**2
     print 'is_int(%s): %s' % (val, ml.is_int(val))
+    vals = ('0.1230', '12.34', '0.0123')
+    for valstr in vals:
+        val = ml.d(valstr)
+        print 'Formatted value: %s (from %s)' % (ml.format_number(val), valstr)
+    for base in (2, 8, 16):
+        print 'Format 252 in base %d: %s' % (base, ml.format_int(252, base))
 
