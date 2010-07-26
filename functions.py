@@ -191,13 +191,13 @@ def _do_gcd(a, b):
     if b == 0:
         return a
     else:
-        return self._do_gcd(b, a % b)
+        return _do_gcd(b, a % b)
 
-def gcd(self, a, b):
+def gcd( a, b):
     TYPES = (types.IntType, types.LongType)
-    if type(a) not in TYPES or type(b) not in types:
+    if type(a) not in TYPES or type(b) not in TYPES:
         raise ValueError(_('Invalid argument'))
-    return self._do_gcd(a, b)
+    return _do_gcd(a, b)
 gcd.__doc__ = _(
 'gcd(a, b), determine the greatest common denominator of a and b. \
 For example, the biggest factor that is shared by the numbers 15 and 18 is 3.')
@@ -301,7 +301,7 @@ log10.__doc__ = _(
 10^y equals x. Defined for x >= 0.')
 
 def mod(x, y):
-    if self.is_int(y):
+    if is_int(y):
         return x % y
     else:
         raise ValueError(_('Can only calculate x modulo <integer>'))
@@ -357,15 +357,15 @@ round.__doc__ = _('round(x), return the integer nearest to x.')
 
 def shift_left(x, y):
     if is_int(x) and is_int(y):
-        return d(int(x) << int(y))
+        return _d(int(x) << int(y))
     else:
         raise ValueError(_('Bitwise operations only apply to integers'))
 shift_left.__doc__ = _(
 'shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)')
 
-def shift_right(self, x, y):
+def shift_right(x, y):
     if is_int(x) and is_int(y):
-        return d(int(x) >> int(y))
+        return _d(int(x) >> int(y))
     else:
         raise ValueError(_('Bitwise operations only apply to integers'))
 shift_right.__doc__ = _(
