@@ -23,6 +23,7 @@ import inspect
 import math
 import copy
 import logging
+import decimal
 
 from gettext import gettext as _
 
@@ -215,8 +216,14 @@ class AstParser:
     _ARG_STRING = 0
     _ARG_NODE = 1
 
+    BUILTIN_VARS = {
+        'True': True,
+        'False': False,
+    }
+
     def __init__(self, ml=None, pl=None):
         self._namespace = {}
+        self._immutable_vars = []
         self._used_var_ofs = {}
 
         if ml is None:
@@ -229,16 +236,19 @@ class AstParser:
         else:
             self.pl = pl
 
+        for key, val in self.BUILTIN_VARS.iteritems():
+            self.set_var(key, val, immutable=True)
+
         # Help manager
         self._helper = Helper(self)
-        self.set_var('help', self._helper.get_help)
+        self.set_var('help', self._helper.get_help, immutable=True)
         self._special_func_args = {
             (self._helper.get_help, 0): self._ARG_STRING,
             (self.pl.plot, 0): self._ARG_NODE,
         }
 
         # Plug-in plot function
-        self.set_var('plot', self.pl.plot)
+        self.set_var('plot', self.pl.plot, immutable=True)
         self._helper.add_help('plot', PLOTHELP)
 
         self._load_plugins()
@@ -287,9 +297,15 @@ class AstParser:
         for op in self.BINOP_MAP.keys():
             logging.debug('    %s', op)
 
-    def set_var(self, name, value):
+    def set_var(self, name, value, immutable=False):
         '''Set variable <name> to <value>, which could be a function too.'''
+        name = unicode(name)
+        if name in self._immutable_vars:
+            return False
         self._namespace[unicode(name)] = value
+        if immutable:
+            self._immutable_vars.append(name)
+        return True
 
     def get_var(self, name):
         '''Return variable value, or None if non-existent.'''
@@ -427,6 +443,9 @@ class AstParser:
                 raise RuntimeError(msg, ofs)
 
         elif isinstance(node, ast.Num):
+            if type(node.n) == types.FloatType:
+                val = decimal.Decimal(str(node.n))
+                return val
             return node.n
 
         elif isinstance(node, ast.Str):
@@ -643,30 +662,6 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
 
     p = AstParser()
-    eqn = 'sin(45)'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
-
-    eqn = '2<=physics.c'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
-
-    eqn = 'help(functions)'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
-
-    eqn = 'factorize(105)'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
-
-    eqn = 'plot(x**2,x=-2..2*(pi+1))'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
-
-    p.set_var('a', 123)
-    eqn = 'a * 5'
-    ret = p.evaluate(eqn)
-    print 'Eqn: %s, ret: %s' % (eqn, ret)
 
     eqn = 'a = 1'
     tree = p.parse(eqn)
@@ -683,3 +678,23 @@ if __name__ == '__main__':
 #    p.replace_variable(tree, 'apples', num)
     print 'Tree after:'
     p.print_tree(tree)
+
+    eqns = (
+        'sin(45)',
+        '2<=physics.c',
+        'help(functions)',
+        'factorize(105)',
+#        'plot(x**2,x=-2..2*(pi+1))',
+        '(2 != 3) == False',
+        '2343.04*.85',
+        '1.23e25*.85',
+    )
+    for eqn in eqns:
+        ret = p.evaluate(eqn)
+        print 'Eqn: %s, ret: %s' % (eqn, ret)
+
+    p.set_var('a', 123)
+    eqn = 'a * 5'
+    ret = p.evaluate(eqn)
+    print 'Eqn: %s, ret: %s' % (eqn, ret)
+

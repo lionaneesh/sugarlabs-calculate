@@ -51,6 +51,7 @@ _FUNCTIONS = [
     _('fac'),
     _('factorize'),
     _('floor'),
+    _('inv'),
     _('is_int'),
     _('ln'),
     _('log10'),
@@ -64,6 +65,7 @@ _FUNCTIONS = [
     _('sinc'),
     _('sqrt'),
     _('sub'),
+    _('square'),
     _('tan'),
     _('tanh'),
     _('xor'),
@@ -260,6 +262,10 @@ def floor(x):
     return math.floor(float(x))
 floor.__doc__ = _('floor(x), return the largest integer smaller than x.')
 
+def inv(x):
+    return 1 / x
+inv.__doc__ = _('inv(x), return the inverse of x, which is 1 / x')
+
 def is_int(n):
     if type(n) in (types.IntType, types.LongType):
         return True
@@ -388,6 +394,10 @@ def sqrt(x):
 sqrt.__doc__ = _(
 'sqrt(x), return the square root of x. This is the value for which the square \
 equals x. Defined for x >= 0.')
+
+def square(x):
+    return x**2
+square.__doc__ = _('square(x), return x * x')
 
 def sub(x, y):
     if isinstance(x, _Decimal) or isinstance(y, _Decimal):
