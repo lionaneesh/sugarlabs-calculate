@@ -195,7 +195,7 @@ class CalcLayout:
         self.minebut = TextToggleToolButton(
             [_('All equations'), _('My equations')],
             self._all_equations_toggle_cb,
-            _('Change view between own and all eqauations'),
+            _('Change view between own and all equations'),
             index=True)
         self.varbut = TextToggleToolButton(
             [_('Show history'), _('Show variables')],
