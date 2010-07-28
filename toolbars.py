@@ -310,8 +310,13 @@ class MiscToolbar(gtk.Toolbar):
                     lambda x: self.update_digits(x, calc),
                     _('Number of shown digits')), -1)
 
-        el = ['10', '16', '2', '8']
-        target_toolbar.insert(TextToggleToolButton(el,
+        el = [
+            {'icon': 'base-10', 'html': '10'},
+            {'icon': 'base-2', 'html': '2'},
+            {'icon': 'base-16', 'html': '16'},
+            {'icon': 'base-8', 'html': '8'}
+        ]
+        target_toolbar.insert(IconToggleToolButton(el,
                     lambda x: self.update_int_base(x, calc),
                     _('Integer formatting base')), -1)
                     
