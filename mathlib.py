@@ -32,15 +32,17 @@ from gettext import gettext as _
 import locale
 
 # Python 2.5 does not have a binary formatter built-in
+# This requires a function b10bin() to interpret the result
 def format_bin(n):
-    ret = '0b'
+    bits = ''
     while n > 0:
         if n & 1:
-            ret += '1'
+            bits = '1' + bits
         else:
-            ret += '0'
+            bits = '0' + bits
         n >>= 1
-    return ret
+
+    return 'b10bin(%s)' % bits
 
 try:
     _BIN = bin

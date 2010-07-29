@@ -41,6 +41,7 @@ _FUNCTIONS = [
     _('atan'),
     _('atanh'),
     _('and'),
+    _('b10bin'),
     _('ceil'),
     _('cos'),
     _('cosh'),
@@ -88,7 +89,7 @@ def _d(val):
     else:
         return None
 
-class ClassValue():
+class ClassValue:
     """
     Class to share a value with the outside world.
     This is required because plain floats / integers are not asigned by
@@ -157,6 +158,25 @@ def atanh(x):
 atanh.__doc__ = _(
 'atanh(x), return the arc hyperbolic tangent of x. This is the value y for \
 which the hyperbolic tangent equals x.')
+
+def b10bin(x):
+    ret = 0
+    while x > 0:
+        ret <<= 1
+
+        y = x % 10
+        if y == 1:
+            ret += 1
+        elif y != 0:
+            raise ValueError(_('Number does not look binary in base 10'))
+
+        x /= 10
+
+    return ret
+
+b10bin.__doc__ = _(
+'b10bin(x), interpret a number written in base 10 as binary, e.g.: \
+b10bin(10111) = 23,')
 
 def ceil(x):
     return math.ceil(float(x))
