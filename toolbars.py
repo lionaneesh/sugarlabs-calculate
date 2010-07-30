@@ -274,8 +274,7 @@ class MiscToolbar(gtk.Toolbar):
 
         if target_toolbar is None:
             target_toolbar = self
-            
-        target_toolbar.insert(LineSeparator(), -1)
+            target_toolbar.insert(LineSeparator(), -1)
 
         target_toolbar.insert(IconToolButton('plot', _('Plot'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
