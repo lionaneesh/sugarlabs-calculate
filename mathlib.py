@@ -134,17 +134,6 @@ class MathLib:
         except Exception, inst:
             return None
 
-    def _do_chop_zeros(self, digits, exp):
-        if not self.chop_zeros:
-            return (digits, exp)
-
-        i = len(digits) - 1
-        while digits[i] == 0 and i > 0 and exp > 0:
-            i -= 1
-            exp -= 1
-
-        return (digits[:i+1], exp)
-
     _BASE_FUNC_MAP = {
         2: _BIN,
         8: oct,
@@ -157,8 +146,9 @@ class MathLib:
         return ret.rstrip('L')
 
     def format_decimal(self, n):
+        if self.chop_zeros:
+            n = n.normalize()
         (sign, digits, exp) = n.as_tuple()
-        digits, exp = self._do_chop_zeros(digits, exp)
         if len(digits) > self.digit_limit:
             exp += len(digits) - self.digit_limit
             digits = digits[:self.digit_limit]
@@ -262,9 +252,9 @@ if __name__ == "__main__":
     print 'is_int(%.18e): %s' % (val, ml.is_int(val))
     val = ml.d(0.99999999999999878)**2
     print 'is_int(%s): %s' % (val, ml.is_int(val))
-    vals = ('0.1230', '12.34', '0.0123', '1230', '123.0', '1.230e17')
+    vals = ('0.1230', '12.340', '0.0123', '1230', '123.0', '1.230e17')
     for valstr in vals:
-        val = ml.d(valstr)
+        val = Decimal(valstr)
         print 'Formatted value: %s (from %s)' % (ml.format_number(val), valstr)
     for base in (2, 8, 16):
         print 'Format 252 in base %d: %s' % (base, ml.format_int(252, base))
