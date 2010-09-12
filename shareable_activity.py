@@ -52,7 +52,7 @@ class ShareableActivity(activity.Activity):
 
         self._pservice = presenceservice.get_instance()
         self._owner = self._pservice.get_owner()
-        self._owner_id = str(self._owner._properties['nick'])
+        self._owner_id = str(self._owner.props.nick)
 
         self._service_path = kwargs.get('service_path',
             self._generate_service_path())
