@@ -10,12 +10,16 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-03-29 00:19+0200\n"
+"PO-Revision-Date: 2010-09-20 21:25+0200\n"
 "Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -64,7 +68,7 @@ msgstr "Fehler bei %d"
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Verwende Hilfe(Test) für Hilfe über 'Test' oder Hilfe(Index) für den Index"
+"Verwende help(Test) für Hilfe über 'Test' oder help(Index) für den Index"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -74,7 +78,7 @@ msgstr "Funktion '%s' nicht definiert"
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Ungültige Anzahl von Argumenten (%d anstatt von %d)"
+msgstr "Ungültige Anzahl von Argumenten (%d statt %d)"
 
 #: eqnparser.py:360
 #, python-format
@@ -110,7 +114,7 @@ msgstr "Rechte Klammer unerwartet"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Verarbeitungsfehler (rechte Klammer, linke fehlt)"
+msgstr "Verarbeitungsfehler (rechte Klammer, left_val fehlt)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
@@ -164,13 +168,13 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr "and"
+msgstr "und"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x,y), logisches Und. Gibt Wahr zurück, wenn x und y Wahr sind. "
+"und(x,y), logisches Und. Gibt Wahr zurück, wenn x und y Wahr sind. "
 "Andernfalls wird Falsch zurückgegeben."
 
 #: eqnparserhelp.py:46
@@ -272,13 +276,13 @@ msgstr "operatoren() gibt eine Liste der definierten Operatoren zurück."
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr "or"
+msgstr "oder"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x,y), logisches Oder. Gibt Wahr zurück, wenn x und/oder y Wahr sind. "
+"oder(x,y), logisches Oder. Gibt Wahr zurück, wenn x und/oder y Wahr sind. "
 "Andernfalls wird Falsch zurückgegeben."
 
 #: eqnparserhelp.py:82
@@ -318,23 +322,23 @@ msgstr ""
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr "sqrt"
+msgstr "wurzel"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"sqrt(x), gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
+"wurzel(x), gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
 "Quadrat gleich x ist. Definiert für x >= 0"
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr "square"
+msgstr "quadrat"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x), gibt das Quadrat von x zurück. Definiert durch x * x"
+msgstr "quadrat(x), gibt das Quadrat von x zurück. Definiert durch x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -362,12 +366,12 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr "test"
+msgstr "Test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
-"Das ist nur ein Testthema, verwende hilfe(Index) um ein Übersicht zu "
+"Das ist nur ein Testthema, verwende help(Index) um ein Übersicht zu "
 "erhalten."
 
 #. TRANS: This command is descriptive, so can be translated
@@ -381,14 +385,14 @@ msgstr "variablen(), gibt eine Liste der derzeit verwendeten Variablen zurück."
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr "xor"
+msgstr "xoder"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
-"xor(x, y), logisches Entweder-Oder. Gibt Wahr zurück wenn entweder x Wahr "
+"xoder(x, y), logisches Entweder-Oder. Gibt Wahr zurück wenn entweder x Wahr "
 "ist (und y Falsch) oder wenn y Wahr ist (und x Falsch). Andernfalls wird "
 "Falsch zurückgegeben"
 
@@ -404,7 +408,7 @@ msgstr "Themen"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Keine Hilfe zu '%s' verfügbar; verwende help(index) für die Übersicht."
+msgstr "Keine Hilfe zu '%s' verfügbar; verwende help(Index) für die Übersicht."
 
 #: layout.py:44
 msgid "Clear"
@@ -430,6 +434,10 @@ msgstr "Trigonometrie"
 msgid "Boolean"
 msgstr "Boolesche Algebra"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Konstanten"
@@ -450,6 +458,10 @@ msgstr "Alle Berechnungen"
 msgid "My equations"
 msgstr "Meine Berechnungen"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Ansicht zwischen eigenen und allen Gleichungen wechseln"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Verlauf anzeigen"
@@ -457,6 +469,10 @@ msgstr "Verlauf anzeigen"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Variablen anzeigen"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Ansicht zwischen Verlauf und Variablen wechseln"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -499,6 +515,10 @@ msgstr "Quadrat"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Quadratwurzel"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Kehrwert"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -576,6 +596,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Plotten"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Grad"
@@ -584,11 +608,21 @@ msgstr "Grad"
 msgid "Radians"
 msgstr "Radiant"
 
-#~ msgid "Inverse"
-#~ msgstr "Reziprok"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Grad / Radiant"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Grad / Radiant"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Exponent / Wissenschaftliche Notation"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Anzahl der angezeigten Stellen"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Ganzzahlige Basis"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"
