@@ -458,8 +458,9 @@ msgid "Square root"
 msgstr "Квадрат язгуур"
 
 #: toolbars.py:137
+#: toolbars.py:157
 msgid "Inverse"
-msgstr ""
+msgstr "Урвуу"
 
 #: toolbars.py:109
 msgid "e to the power x"
