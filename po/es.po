@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -8,14 +16,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-03-07 23:56-0500\n"
-"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
+"PO-Revision-Date: 2010-12-21 14:26+0200\n"
+"Last-Translator: Gonzalo <godiard@sugarlabs.org>\n"
 "Language-Team: Spanish\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -56,7 +65,7 @@ msgstr "Error en %d"
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Use help(test) para ayuda acerca de 'test', o help(indice) para el indice."
+"Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -98,7 +107,7 @@ msgstr "Error de procesamiento (paréntesis derecho)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr "Parentesis inesperado a la derecha"
+msgstr "Paréntesis derecho inesperado"
 
 # Should 'left_val' be considered translateable?
 # No because it's a program internal. I bet this error never happens anyway.
@@ -251,7 +260,7 @@ msgid ""
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
 "ln(x), Devuelve el algoritmo natural de x. Este es el valor para el cual el "
-"exponente exp(x) es igual a x. Definido para x >= 0."
+"exponente exp() es igual a x. Definido para x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -271,8 +280,8 @@ msgstr "or"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x, y), \"o\" logico, Devuelve verdadero si x y/o y es verdadero, de lo "
-"contrario devuelve Falso."
+"or(x, y), 'o' logico, Devuelve verdadero si x y/o y es verdadero, de lo "
+"contrario devuelve Falso"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -284,7 +293,7 @@ msgid ""
 "range from a to b"
 msgstr ""
 "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
-"el rango de a hasta b."
+"el rango de a hasta b"
 
 #: eqnparserhelp.py:86
 msgid "sin"
@@ -346,10 +355,11 @@ msgstr ""
 msgid "tanh"
 msgstr "tanh"
 
+# English text is incorrect
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"sinh(x), devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
+"tanh(x), devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -357,7 +367,7 @@ msgstr "prueba"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr "Este es solo un topico de prueba, use help(indice) para el indice."
+msgstr "Este es solo un topico de prueba, use help(indice) para el indice"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
@@ -384,7 +394,7 @@ msgstr ""
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr "indice"
+msgstr "índice"
 
 # -----------------------------------------
 # End of help topics
@@ -396,7 +406,7 @@ msgstr "Temas"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "No hay ayuda disponible sobre '%s', use help(index) para el índice"
+msgstr "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
 
 #: layout.py:44
 msgid "Clear"
@@ -422,6 +432,10 @@ msgstr "Trigonometría"
 msgid "Boolean"
 msgstr "Booleano"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Misceláneos"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Constantes"
@@ -442,13 +456,21 @@ msgstr "Todas las ecuaciones"
 msgid "My equations"
 msgstr "Mis ecuaciones"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Cambiar vista entre todas las ecuaciones y las propias"
+
 #: layout.py:120
 msgid "Show history"
-msgstr "Mostrar historia"
+msgstr "Mostrar historial"
 
 #: layout.py:120
 msgid "Show variables"
 msgstr "Mostrar variables"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Cambiar vista entre historial y variables"
 
 # Using U+00D7 MULTIPLICATION SIGN
 #. TRANS: multiplication symbol (default: '*')
@@ -493,6 +515,10 @@ msgstr "Cuadrado"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Raíz cuadrada"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inversa"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -570,6 +596,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Gráfico"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Grados"
@@ -578,11 +608,21 @@ msgstr "Grados"
 msgid "Radians"
 msgstr "Radianes"
 
-#~ msgid "Inverse"
-#~ msgstr "Inversa"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Grados / Radianes"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Grados / Radianes"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Exponente / Notación científica"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Número de dígitos visibles"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Base numérica"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"
