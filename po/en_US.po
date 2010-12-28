@@ -2,18 +2,24 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-11-03 00:45-0500\n"
-"Last-Translator: Desiree M Durham <desireemarie7@yahoo.com>\n"
+"PO-Revision-Date: 2010-12-08 05:47+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -403,6 +409,10 @@ msgstr "Trigonometry"
 msgid "Boolean"
 msgstr "Boolean"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Miscellaneous"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Constants"
@@ -423,6 +433,10 @@ msgstr "All equations"
 msgid "My equations"
 msgstr "My equations"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Change view between own and all equations"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Show history"
@@ -431,15 +445,19 @@ msgstr "Show history"
 msgid "Show variables"
 msgstr "Show variables"
 
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Change view between history and variables"
+
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "mul_sym"
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "div_sym"
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"
@@ -472,6 +490,10 @@ msgstr "Square"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Square root"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inverse"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -549,6 +571,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Degrees"
@@ -556,3 +582,19 @@ msgstr "Degrees"
 #: toolbars.py:210
 msgid "Radians"
 msgstr "Radians"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Degrees / radians"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Exponent / Scientific notation"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Number of shown digits"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Integer formatting base"
