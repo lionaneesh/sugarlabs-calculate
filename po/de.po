@@ -22,12 +22,36 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-09-20 21:25+0200\n"
+"PO-Revision-Date: 2011-01-18 10:43+0200\n"
 "Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -171,8 +195,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x) gibt den Arcuscosinus von x zurück. Das ist der Winkel für den der "
-"Cosinus den Wert x hat. Definiert für -1 <= x < 1"
+"acos(x) gibt den Arcuscosinus von x zurück. Das ist der Winkel, für den der "
+"Cosinus den Wert x hat. Definiert für -1 <= x <= 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -194,7 +218,7 @@ msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"asin(x) gibt den Arcussinus von x zurück. Das ist der Winkel für den der "
+"asin(x) gibt den Arcussinus von x zurück. Das ist der Winkel, für den der "
 "Sinus den Wert x hat. Definiert für -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
@@ -206,7 +230,7 @@ msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"atan(x) gibt den Arcustangens von x zurück. Das ist der Winkel für den der "
+"atan(x) gibt den Arcustangens von x zurück. Das ist der Winkel, für den der "
 "Tangens den Wert x hat. Definiert für alle x"
 
 #: eqnparserhelp.py:54
@@ -218,7 +242,7 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), gibt den Cosinus von x zurück. Das ist die x-Koordinate am "
+"cos(x) gibt den Cosinus von x zurück. Das ist die x-Koordinate am "
 "Einheitskreis beim Winkel x."
 
 #: eqnparserhelp.py:58
@@ -229,7 +253,7 @@ msgstr "cosh"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"cosh(x), gibt den Cosinus hyperbolicus von x zurück. Definiert durch (exp(x) "
+"cosh(x) gibt den Cosinus hyperbolicus von x zurück. Definiert durch (exp(x) "
 "+ exp(-x)) / 2"
 
 #: eqnparserhelp.py:61
@@ -239,8 +263,8 @@ msgstr "exp"
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr ""
-"exp(x), gibt die natürliche Exponentialfunktion von x zurück. Definiert "
-"durch e^x"
+"exp(x) gibt die natürliche Exponentialfunktion von x zurück. Definiert durch "
+"e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
@@ -249,8 +273,8 @@ msgstr "fac"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"fac(x), gibt die Fakultät von x zurück. Definiert durch x * (x - 1) * (x - "
-"2) * ..."
+"fac(x) gibt die Fakultät von x zurück. Definiert durch x * (x - 1) * (x - 2) "
+"* ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -314,7 +338,7 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), gibt den Sinus von x zurück. Das ist die y-Koordinate am "
+"sin(x) gibt den Sinus von x zurück. Das ist die y-Koordinate am "
 "Einheitskreis beim Winkel x."
 
 #: eqnparserhelp.py:90
@@ -325,7 +349,7 @@ msgstr "sinh"
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"sinh(x), gibt den Sinus hyperbolicus von x zurück. Definiert durch (exp(x) - "
+"sinh(x) gibt den Sinus hyperbolicus von x zurück. Definiert durch (exp(x) - "
 "exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
@@ -337,7 +361,7 @@ msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"wurzel(x), gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
+"wurzel(x) gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
 "Quadrat gleich x ist. Definiert für x >= 0"
 
 #: eqnparserhelp.py:97
@@ -346,7 +370,7 @@ msgstr "quadrat"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "quadrat(x), gibt das Quadrat von x zurück. Definiert durch x * x"
+msgstr "quadrat(x) gibt das Quadrat von x zurück. Definiert durch x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -358,7 +382,7 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x), gibt den Tangens von x zurück. Das ist die Steigung der Linie vom "
+"tan(x) gibt den Tangens von x zurück. Das ist die Steigung der Linie vom "
 "Ursprung des Einheitskreises zum Punkt am Einheitskreis beim Winkel x. "
 "Definiert durch sin(x) / cos(x)"
 
@@ -369,7 +393,7 @@ msgstr "tanh"
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"tanh(x), gibt den Tangens hyperbolicus von x zurück. Definiert durch sinh(x) "
+"tanh(x) gibt den Tangens hyperbolicus von x zurück. Definiert durch sinh(x) "
 "/ cosh(x)"
 
 #: eqnparserhelp.py:109
@@ -389,7 +413,7 @@ msgstr "variablen"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr "variablen(), gibt eine Liste der derzeit verwendeten Variablen zurück."
+msgstr "variablen() gibt eine Liste der derzeit verwendeten Variablen zurück."
 
 #: eqnparserhelp.py:116
 msgid "xor"
@@ -460,11 +484,11 @@ msgstr "Bezeichnung:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr "Alle Berechnungen"
+msgstr "Alle Gleichungen"
 
 #: layout.py:118
 msgid "My equations"
-msgstr "Meine Berechnungen"
+msgstr "Meine Gleichungen"
 
 #: layout.py:198
 msgid "Change view between own and all equations"
