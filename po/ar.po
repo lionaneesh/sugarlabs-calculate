@@ -23,7 +23,7 @@ msgstr "احسب"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "الدوال المتاحة:"
 
 #-----------------------------------------
 # The help system uses topic msgid's that should be translated here.
@@ -77,7 +77,6 @@ msgstr ""
 #-----------------------------------------
 # End of help topics
 #-----------------------------------------
-
 #: eqnparserhelp.py:52
 msgid "Topics: "
 msgstr ""
@@ -85,7 +84,7 @@ msgstr ""
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "لا يوجد مساعدة للموضوع %s, استخدم مساعدة(الرقم) للحصول على معلومات"
 
 #: eqnparser.py:87
 msgid "Type error"
@@ -94,7 +93,7 @@ msgstr ""
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "خطأ عند %d"
 
 #: eqnparser.py:299
 #, python-format
@@ -104,27 +103,27 @@ msgstr ""
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "الدالة '%s' غير معرفة"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "عدد العوامل غير صحيح (%d بدلاً من %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "الدالة تأخذ %d عوامل"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "غير قادر على تحليل العامل %d: '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "خطأ في الدالة: %s"
 
 #: eqnparser.py:358
 #, python-format
@@ -138,27 +137,27 @@ msgstr ""
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "خطأ تحليلي (قوس أيمن)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "قوس أيمن غير متوقع"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "خطأ تحليلي (قوس أيمن, لا يوجد قيمة على اليسار)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "خطأ تحليلي (قوس أيمن, لا يوجد مستوى للإغلاق)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "رقم غير متوقع"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "إشارة غير صحيحة"
 
 #: eqnparser.py:565
 msgid "Parse error: ')' expected"
@@ -166,7 +165,7 @@ msgstr ""
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_parse(): تعيد None"
 
 #: layout.py:46
 msgid "clear"
@@ -178,47 +177,47 @@ msgstr ""
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "تحرر"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "الجبر"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "الدوال المثلثية"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "المنطقيات"
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "الثوابت"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "التصميم"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "ملصق:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "جميع المعادلات"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "معادلاتي"
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "اظهر التاريخ"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "اظهر المتغيرات"
 
 #: mathlib.py:86
 msgid "Error"
@@ -226,7 +225,7 @@ msgstr ""
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "خطأ: نوع غير مدعوم"
 
 #: plotlib.py:134
 msgid "Unable to parse range"
@@ -234,25 +233,25 @@ msgstr ""
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "نسخ"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "لصق"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "قص"
 
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() جملة غير صحيحة (%s)"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "يكتب على الدفتر (%s)"
 
 #: calculate.py:506
 #, python-format
@@ -280,25 +279,25 @@ msgstr ""
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "الزر المضغوط (): نوع خاطئ"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "مستوى: %d من %d"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "المتغير '%s' غير معرف"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "إشارة غير متوقعة"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "إشارة متوقعة"
 
 #: eqnparserhelp.py:39
 msgid "help_cos"
@@ -310,7 +309,7 @@ msgstr ""
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "المواضيع"
 
 #. The separator to mark thousands (default: ',')
 #: mathlib.py:58
@@ -326,17 +325,17 @@ msgstr ""
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "إشارة_الضرب"
 
 #. The division symbol (default: '/')
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "إشارة_القسمة"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "خطأ تحليلي"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
@@ -344,67 +343,79 @@ msgstr ""
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "قوس أيسر غير متوقع"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr ""
+msgstr "خطأ تحليلي: رقم أو متغير متوقع"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "رقم أو متغير متوقع"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "قا"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"قا(س), قاس يساوي طول الوتر مقسوما على طول الضلع المجاور للزاوية س في المثلث "
+"القائم .ورياضيا يعبر عنه بالمعكوس الضربي لدالة جيب التمام أي نستخرجه بالآله "
+"الحاسبة كالتالي :جتا(س)^-1"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "و"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"و(س, ص), 'و' المنطق. تُرجع صحيح إذا كانت س و ص صحيحتان, غير ذلك تُرجع خطأ"
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "قتا"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"قتا(س),  قتاس يساوي طول الوتر مقسوما على طول الضلع المقابل للزاوية س في "
+"المثلث القائم .ورياضيا يعبر عنه بالمعكوس الضربي لدالة الجيب أي نستخرجه "
+"بالآله الحاسبة كالتالي :جا(س)^-1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "ظتا"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"ظتا(س), ظتاس يساوي طول الضلع المجاور للزاوية س مقسوما على طول الضلع المقابل "
+"في المثلث القائم. ورياضيا يعبر عنه بالمعكوس الضربي لدالة الظل أي نستخرجه "
+"بالآله الحاسبة كالتالي :ظا(س)^-1"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "جتا"
 
 #: eqnparserhelp.py:55
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"جتا(س), تعمل على إرجاع جتا الزاوية للقيمة س. و النتيجة عبارة عن الأحداثي س "
+"على دائرة الوحدة عند الزاوية س"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
@@ -425,7 +436,7 @@ msgstr ""
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "مضروب"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -434,11 +445,11 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "الدالات"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
+msgstr "الدالات(), يعمل على إرجاع جميع الدالات المعرفة"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -453,40 +464,45 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "الإشارات"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "الإشارات(), يعمل على ارجاع جميع الإشارات المعرفة"
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "أو"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"أو(س, ص), 'أو' المنطق. تُرجع صحيح إذا كانت س و/أو ص صحيحة/صحيحتان, غير ذلك "
+"تُرجع خطأ"
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "ارسم"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"ارسم(المعادلة, س=-أ,.., ب), يرسم المعادلة مع المتغير س في الفترة من -أ إلى ب"
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "جا"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"جا(س), يعمل على إرجاع الجاب للقيمة س. هذه القيمة هي الأحداثية ص على دائرة "
+"الوحدة عند الزاوية س"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
@@ -499,7 +515,7 @@ msgstr ""
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "الجذر_التربيعي"
 
 #: eqnparserhelp.py:94
 msgid ""
@@ -509,15 +525,15 @@ msgstr ""
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "مربع"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "مربع(س), تعمل على إرجاع مربع س, معطى بالمعادلة س*س"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "ظا"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -525,6 +541,9 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"ظا(س), تعمل على إرجاع الظل للقيمة س. هذا هو المنحنى الواصل بين نقطة الأصل "
+"مركز دائرة الوحدة و النقطة الواقعة على دائرة الوحدة المعرفة بالزاوية س. حيث "
+"ظا(س)= جا(س)/جتا(س)"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
@@ -536,20 +555,20 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "تجربة"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "هذا فقط موضوع اختباري, استخدم مساعدة(رقم) للرقم المطلوب"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "المتغيرات"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
+msgstr "المتغيرات(), تعمل على إرجاع قائمة بالمتغيرات المعرفة حالياً بالبرنامج "
 
 #: eqnparserhelp.py:116
 msgid "xor"
@@ -560,63 +579,65 @@ msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"يعمل على إرجاع صح إذا كانت x صحيحة و y خاطئة, أو y صحيحة و x خاطئة, غير ذلك "
+"يرجع خطأ"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "الفهرس"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "غير معرف"
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "مساعدة"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "مربع"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "الجذر التربيعي"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
+msgstr "هـ مرفوعة للقوة س"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "اللوغاريتم الطبيعي"
 
 #: toolbars.py:123
 msgid "Factorial"
-msgstr ""
+msgstr "مضروب"
 
 #: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "دالة الجيب"
 
 #: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "دالة جيب التمام"
 
 #: toolbars.py:139
 msgid "Tangent"
-msgstr ""
+msgstr "دالة الظل"
 
 #: toolbars.py:145
 msgid "Arc sine"
-msgstr ""
+msgstr "دالة قاطع التمام"
 
 #: toolbars.py:149
 msgid "Arc cosine"
-msgstr ""
+msgstr "دالة القاطع"
 
 #: toolbars.py:153
 msgid "Arc tangent"
-msgstr ""
+msgstr "دالة ظل التمام"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
@@ -632,19 +653,19 @@ msgstr ""
 
 #: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "'و' المنطق"
 
 #: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "'أو' المنطق"
 
 #: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "يساوي"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "لا يساوي"
 
 #: toolbars.py:199
 msgid "Pi"
@@ -656,12 +677,12 @@ msgstr ""
 
 #: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "درجة"
 
 #: toolbars.py:210
 msgid "Radians"
-msgstr ""
+msgstr "رادْيان"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "س مرفوعة للقوة ص"
