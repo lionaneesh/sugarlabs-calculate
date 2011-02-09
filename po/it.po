@@ -2,13 +2,17 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-03-25 22:18+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2011-02-09 13:16+0200\n"
+"Last-Translator: Carlo Falciola <cfalciola@yahoo.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +69,7 @@ msgstr "Funzione '%s' non definita"
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Errato numero di parametri (%d invece di %d)"
+msgstr "Numero di parametri errato (%d invece di %d)"
 
 #: eqnparser.py:360
 #, python-format
@@ -85,7 +89,7 @@ msgstr "Errore della funzione: %s"
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "La variabile '%s' indefinita"
+msgstr "La variabile '%s' non è definita"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
@@ -101,21 +105,23 @@ msgstr "Parentesi chiusa inattesa"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Errore di interpretazione (parentesi chiusa, left_val assente)"
+msgstr ""
+"Errore di interpretazione (parentesi chiusa, manca valore a sinistra della "
+"parentesi)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
 msgstr ""
-"Errore di interpretazione (parentesi chiusa, lnon esiste un livello "
+"Errore di interpretazione (parentesi chiusa, non esiste un livello "
 "equivalente da chiudere)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr "Numero inatteso"
+msgstr "Numero non previsto"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr "Operatore inatteso"
+msgstr "Operatore non previsto"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
@@ -412,6 +418,10 @@ msgstr "Trigonometria"
 msgid "Boolean"
 msgstr "Booleano"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Miscellanee"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Costanti"
@@ -432,6 +442,10 @@ msgstr "Tutte le equazioni"
 msgid "My equations"
 msgstr "Le mie equazioni"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Cambia vista: mostra tutte le equazioni o solo le proprie"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Mostra storico"
@@ -439,6 +453,10 @@ msgstr "Mostra storico"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Mostra variabili"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Scambia visualizzazione storico/variabili"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -483,6 +501,10 @@ msgstr "Quadrato"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Radice quadrata"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inverso"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -560,6 +582,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Disegna"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Gradi"
@@ -568,8 +594,18 @@ msgstr "Gradi"
 msgid "Radians"
 msgstr "Radianti"
 
-#~ msgid "Inverse"
-#~ msgstr "Inverso"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Gradi / radianti"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Gradi / radianti"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Notazione esponenziale scientifica"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Numero di decimali visuaizzati"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Base di formattazione dell'intero"
