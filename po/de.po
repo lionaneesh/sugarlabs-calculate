@@ -59,7 +59,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2011-01-18 10:43+0200\n"
+"PO-Revision-Date: 2011-05-03 00:25+0200\n"
 "Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -67,7 +67,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -302,8 +302,8 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), gibt den natürlichen Logarithmus von x zurück. Dies ist der Wert für "
-"den der Exponent exp() gleich x ist. Definiert für x >=0"
+"ln(x), gibt den natürlichen Logarithmus von x zurück. Dies ist der Wert, für "
+"den die Exponentialfunktion exp() gleich x ist. Definiert für x >=0"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -369,7 +369,7 @@ msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"wurzel(x) gibt die Quadratwurzel von x zurück. Das ist der Wert für den das "
+"wurzel(x) gibt die Quadratwurzel von x zurück. Das ist der Wert, für den das "
 "Quadrat gleich x ist. Definiert für x >= 0"
 
 #: eqnparserhelp.py:97
@@ -390,7 +390,7 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x) gibt den Tangens von x zurück. Das ist die Steigung der Linie vom "
+"tan(x) gibt den Tangens von x zurück. Das ist die Steigung der Strecke vom "
 "Ursprung des Einheitskreises zum Punkt am Einheitskreis beim Winkel x. "
 "Definiert durch sin(x) / cos(x)"
 
@@ -411,7 +411,7 @@ msgstr "Test"
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
-"Das ist nur ein Testthema, verwende help(Index) um ein Übersicht zu "
+"Das ist nur ein Testthema, verwende help(Index), um eine Übersicht zu "
 "erhalten."
 
 #. TRANS: This command is descriptive, so can be translated
@@ -456,7 +456,7 @@ msgstr "Löschen"
 
 #: layout.py:53
 msgid "Enter"
-msgstr "Bestätigen"
+msgstr "Eingeben"
 
 #: layout.py:60
 msgid "Edit"
