@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -7,17 +15,19 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-03-02 04:44-0500\n"
-"Last-Translator: Pradosh Kharel <pradosh@olenepal.org>\n"
+"PO-Revision-Date: 2011-03-02 06:54+0200\n"
+"Last-Translator: Shaswot <shaswot.kharel@olenepal.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "क्यालकुलेटर"
+msgstr "गणना गर"
 
 #: calculate.py:80
 #, python-format
@@ -147,18 +157,19 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
+"acos(x), यसले x को arc cosine फिर्ता गर्छ. यो त्यस्तो कोण हो जसको cosine "
+"चाहिँ x हुन्छ। यसको लागि -१ <= x < १ हुनु पर्छ।"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr "and"
+msgstr "र"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
+"and(x, y), logical and. यदि दुबै x र y True छ भने True फिर्ता गर्छ, नत्र "
+"False फिर्ता गर्छ।"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -407,6 +418,10 @@ msgstr "त्रिकोणमिति"
 msgid "Boolean"
 msgstr "बुलिन"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "विविध"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "अचल"
@@ -427,6 +442,10 @@ msgstr "सबै समिकरण"
 msgid "My equations"
 msgstr "मेरो समिकरण"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "आफ्नो र अरुको  समीकरण बिच द्रष्य परिवर्तन गर"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "ईतिहाँस देखाऊनुहोस्"
@@ -434,6 +453,10 @@ msgstr "ईतिहाँस देखाऊनुहोस्"
 #: layout.py:120
 msgid "Show variables"
 msgstr "चर मानहरु देखाऊनुहोस्"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "इतिहास र चलबिच द्रष्य परिवर्तन गर"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -476,6 +499,10 @@ msgstr "बर्ग"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "बर्गमुल"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "बिपरित"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -553,16 +580,30 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "प्लट"
+
 #: toolbars.py:209
 msgid "Degrees"
-msgstr "डिग्रि"
+msgstr "डिग्री"
 
 #: toolbars.py:210
 msgid "Radians"
 msgstr "रेडिएन"
 
-#~ msgid "Inverse"
-#~ msgstr "बिपरित"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "डिग्रि / रेडिएन"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "डिग्रि / रेडिएन"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "एक्सपोनेन्ट / वैज्ञानिक नोटेसन"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "देखाईएका अंकको सङ्ख्या"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "इन्टिजर ढाँचाको आधार"

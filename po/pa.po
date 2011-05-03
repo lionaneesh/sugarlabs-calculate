@@ -2,6 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #, fuzzy
 msgid ""
 msgstr ""
@@ -34,32 +42,12 @@ msgstr ""
 msgid "Writing to journal (%s)"
 msgstr ""
 
-#: calculate.py:522
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr ""
-
-#: calculate.py:528
-msgid "Unable to determine version"
-msgstr ""
-
-#: calculate.py:533
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr ""
-
-#: calculate.py:538
-#, python-format
-msgid "State line invalid (%s)"
-msgstr ""
-
-#: calculate.py:555
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
+msgstr ""
+
+#: eqnparser.py:33
+msgid "Parse error"
 msgstr ""
 
 #: eqnparser.py:58
@@ -72,8 +60,8 @@ msgstr ""
 msgid "Error at %d"
 msgstr ""
 
-#: eqnparser.py:235
-msgid "help_var"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 
 #: eqnparser.py:353 eqnparser.py:354
@@ -106,6 +94,10 @@ msgstr ""
 msgid "Variable '%s' not defined"
 msgstr ""
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr ""
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr ""
@@ -118,12 +110,24 @@ msgstr ""
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr ""
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr ""
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr ""
 
 #: eqnparser.py:550
 msgid "Operator not expected"
+msgstr ""
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr ""
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
 msgstr ""
 
 #: eqnparser.py:596
@@ -136,309 +140,6 @@ msgstr ""
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
-
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr ""
-
-#: eqnparserhelp.py:38
-msgid "help_and"
-msgstr ""
-
-#: eqnparserhelp.py:39
-msgid "help_asin"
-msgstr ""
-
-#: eqnparserhelp.py:40
-msgid "help_atan"
-msgstr ""
-
-#: eqnparserhelp.py:41
-msgid "help_cos"
-msgstr ""
-
-#: eqnparserhelp.py:42
-msgid "help_cosh"
-msgstr ""
-
-#: eqnparserhelp.py:43
-msgid "help_exp"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid "help_fac"
-msgstr ""
-
-#: eqnparserhelp.py:45
-msgid "help_functions"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "help_ln"
-msgstr ""
-
-#: eqnparserhelp.py:47
-msgid "help_operators"
-msgstr ""
-
-#: eqnparserhelp.py:48
-msgid "help_or"
-msgstr ""
-
-#: eqnparserhelp.py:49
-msgid "help_plot"
-msgstr ""
-
-#: eqnparserhelp.py:50
-msgid "help_sin"
-msgstr ""
-
-#: eqnparserhelp.py:51
-msgid "help_sinh"
-msgstr ""
-
-#: eqnparserhelp.py:52
-msgid "help_sqrt"
-msgstr ""
-
-#: eqnparserhelp.py:53
-msgid "help_square"
-msgstr ""
-
-#: eqnparserhelp.py:54
-msgid "help_tan"
-msgstr ""
-
-#: eqnparserhelp.py:55
-msgid "help_tanh"
-msgstr ""
-
-#: eqnparserhelp.py:56
-msgid "help_test"
-msgstr ""
-
-#: eqnparserhelp.py:57
-msgid "help_variables"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "help_xor"
-msgstr ""
-
-#: eqnparserhelp.py:69
-msgid "help_usage"
-msgstr ""
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr ""
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-
-#: layout.py:60
-msgid "Edit"
-msgstr ""
-
-#: layout.py:61
-msgid "Algebra"
-msgstr ""
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr ""
-
-#: layout.py:63
-msgid "Boolean"
-msgstr ""
-
-#: layout.py:64
-msgid "Constants"
-msgstr ""
-
-#: layout.py:65
-msgid "Format"
-msgstr ""
-
-#: layout.py:86
-msgid "Label:"
-msgstr ""
-
-#: layout.py:118
-msgid "All equations"
-msgstr ""
-
-#: layout.py:118
-msgid "My equations"
-msgstr ""
-
-#: layout.py:120
-msgid "Show history"
-msgstr ""
-
-#: layout.py:120
-msgid "Show variables"
-msgstr ""
-
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr ""
-
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr ""
-
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr ""
-
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr ""
-
-#: mathlib.py:132
-msgid "Undefined"
-msgstr ""
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr ""
-
-#: toolbars.py:36
-msgid "Help"
-msgstr ""
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr ""
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr ""
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr ""
-
-#: toolbars.py:99
-msgid "Square"
-msgstr ""
-
-#: toolbars.py:103
-msgid "Square root"
-msgstr ""
-
-#: toolbars.py:109
-msgid "e to the power x"
-msgstr ""
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr ""
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr ""
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr ""
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr ""
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr ""
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
-
-#: toolbars.py:149
-msgid "Arc cosine"
-msgstr ""
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr ""
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr ""
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr ""
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr ""
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr ""
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr ""
-
-#: toolbars.py:174
-msgid "Logical xor"
-msgstr ""
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr ""
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr ""
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr ""
-
-#: toolbars.py:202
-msgid "e"
-msgstr ""
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr ""
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr ""
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr ""
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr ""
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr ""
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
 msgstr ""
 
 #. TRANS: It is possible to translate commands. However, I would highly
@@ -653,6 +354,225 @@ msgstr ""
 msgid "index"
 msgstr ""
 
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr ""
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
+#: layout.py:60
+msgid "Edit"
+msgstr ""
+
+#: layout.py:61
+msgid "Algebra"
+msgstr ""
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr ""
+
+#: layout.py:63
+msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
+#: layout.py:64
+msgid "Constants"
+msgstr ""
+
+#: layout.py:65
+msgid "Format"
+msgstr ""
+
+#: layout.py:86
+msgid "Label:"
+msgstr ""
+
+#: layout.py:118
+msgid "All equations"
+msgstr ""
+
+#: layout.py:118
+msgid "My equations"
+msgstr ""
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
+#: layout.py:120
+msgid "Show history"
+msgstr ""
+
+#: layout.py:120
+msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr ""
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr ""
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr ""
+
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr ""
+
+#: toolbars.py:36
+msgid "Help"
+msgstr ""
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr ""
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr ""
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr ""
+
+#: toolbars.py:99
+msgid "Square"
+msgstr ""
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr ""
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr ""
+
 #: toolbars.py:113
 msgid "x to the power y"
+msgstr ""
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr ""
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr ""
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr ""
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr ""
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr ""
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr ""
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr ""
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr ""
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr ""
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr ""
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr ""
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr ""
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr ""
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr ""
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr ""
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr ""
+
+#: toolbars.py:202
+msgid "e"
+msgstr ""
+
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr ""
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr ""
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

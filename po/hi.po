@@ -1,3 +1,15 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # translation of calculate-activity.po to Hindi
 # Reinier Heeres <reinier@heeres.eu>, 2007.
 # G Karunakar <karunakar@indlinux.org>, 2007.
@@ -413,6 +425,10 @@ msgstr "त्रिकोणमिति"
 msgid "Boolean"
 msgstr "बूलीयन"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "स्थिरांक"
@@ -433,6 +449,10 @@ msgstr "सभी समीकरण"
 msgid "My equations"
 msgstr "मेरे समीकरण"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "इतिहास दिखाएँ"
@@ -440,6 +460,10 @@ msgstr "इतिहास दिखाएँ"
 #: layout.py:120
 msgid "Show variables"
 msgstr "चर दिखाएँ"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -482,6 +506,10 @@ msgstr "वर्ग"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "वर्ग मूल"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "उलटा"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -559,6 +587,11 @@ msgstr "पाई"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "आंश"
@@ -567,11 +600,21 @@ msgstr "आंश"
 msgid "Radians"
 msgstr "रेडियन्स"
 
-#~ msgid "Inverse"
-#~ msgstr "उलटा"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "आंश/रेडियन्स"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "आंश/रेडियन्स"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
 
 # ----------------------------------------
 # The help system uses topic msgid's that should be translated here.

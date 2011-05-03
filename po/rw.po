@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -6,18 +14,136 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-20 19:45+0530\n"
-"PO-Revision-Date: 2008-07-16 01:33+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2011-04-05 22:08+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: rw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1) ;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Kubara"
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() string invalid (%s)"
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "Akamaro kaboneka:"
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Kwandika kukinyamakuru (%s)"
+
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "Ububuto_ bwakanzwe(): Ubwoko butemewe"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Tambutsa ikosa"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "Urwego: %d, ofs %d"
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "Ikosa riri %d"
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Koresha gufasha(test) kugufasha kwerekeye 'test', or gufasha(index) for the "
+"index"
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Akamaro '%s' kadasobanuwe"
+
+#: eqnparser.py:359
+#, python-format, fuzzy
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "Umubare wibitekerezo  bitemewe"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "Akamaro kagyanye %d args"
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "Kuba udashobora gutambutsa igitekerezo %d: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "Akamaro kikosa: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variable '%s' Idasobanuye"
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Agakubo k`ibumoso katari kiteguwe"
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "Tambutsa ikosa( agakubo k`iburyo)"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "Agakubo k`iburyo katari kiteguwe"
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "Tambutsa ikosa (agakubo k`iburyo, no left_val)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Tambutsa ikosa(ikuba ryiburyo,ntarwego rufunga)"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "Umubare utatekerezwaga"
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "Ikimenyetso kitatekerezwaga"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Parse error: number or variable expected"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Number or variable expected"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "Ikimenyetso kitemewe"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "Ikimenyetso kemewe"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): returning None"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -219,7 +345,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#, fuzzy
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
@@ -251,12 +378,6 @@ msgstr ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 
-#: eqnparserhelp.py:128 eqnparser.py:249
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Koresha gufasha(test) kugufasha kwerekeye 'test', or gufasha(index) for the "
-"index"
-
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
@@ -271,97 +392,13 @@ msgstr "Imitwe yingenzi"
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "No help about '%s' available, use help(index) for the index"
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Tambutsa ikosa"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "Urwego: %d, ofs %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "Ikosa riri %d"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Akamaro '%s' kadasobanuwe"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
+#: layout.py:44
+msgid "Clear"
 msgstr ""
 
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "Akamaro kagyanye %d args"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "Kuba udashobora gutambutsa igitekerezo %d: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "Akamaro kikosa: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variable '%s' Idasobanuye"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Agakubo k`ibumoso katari kiteguwe"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "Tambutsa ikosa( agakubo k`iburyo)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "Agakubo k`iburyo katari kiteguwe"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Tambutsa ikosa (agakubo k`iburyo, no left_val)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Tambutsa  ikosa(ikuba ryiburyo,ntarwego rufunga)"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "Umubare utatekerezwaga"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Ikimenyetso kitatekerezwaga"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Parse error: number or variable expected"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Number or variable expected"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "Ikimenyetso kitemewe"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Ikimenyetso kemewe"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): returning None"
+#: layout.py:53
+msgid "Enter"
+msgstr ""
 
 #: layout.py:60
 msgid "Edit"
@@ -379,6 +416,10 @@ msgstr "Trigonometry"
 msgid "Boolean"
 msgstr "Boolean"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Ibidahinduka"
@@ -389,7 +430,7 @@ msgstr "uburyo fatizo"
 
 #: layout.py:86
 msgid "Label:"
-msgstr "gukurikiranya ibimenyetso"
+msgstr "gukurikiranya ibimenyetso:"
 
 #: layout.py:118
 msgid "All equations"
@@ -399,6 +440,10 @@ msgstr "Amahurizo yose"
 msgid "My equations"
 msgstr "Amahurizo yangye"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Erekana amateka"
@@ -407,121 +452,9 @@ msgstr "Erekana amateka"
 msgid "Show variables"
 msgstr "Show variables"
 
-#: toolbars.py:53
-msgid "Help"
-msgstr "Gufasha"
-
-#: toolbars.py:111
-msgid "Copy"
-msgstr "Gukoporora"
-
-#: toolbars.py:115
-msgid "Paste"
-msgstr "Gushyira ibyo wakoporoye ahandi hantu"
-
-#: toolbars.py:119
-msgid "Cut"
-msgstr "Gutema"
-
-#: toolbars.py:127
-msgid "Square"
-msgstr "Umubare wikubye kabiri"
-
-#: toolbars.py:132
-msgid "Square root"
-msgstr " Ikimenyetso cy`umubare wikuba wawugabanya ukabya ra wamubare"
-
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "Amacuri"
-
-#: toolbars.py:144
-msgid "e to the power x"
-msgstr "e igerekeranye kuri  x"
-
-#: toolbars.py:149
-msgid "x to the power y"
-msgstr "x igerekeranye kuri y"
-
-#: toolbars.py:154
-msgid "Natural logarithm"
-msgstr "logaritime  iri natureri"
-
-#: toolbars.py:160
-msgid "Factorial"
-msgstr "Factorial"
-
-#: toolbars.py:168
-msgid "Sine"
-msgstr "Sine"
-
-#: toolbars.py:172
-msgid "Cosine"
-msgstr "Cosine"
-
-#: toolbars.py:176
-msgid "Tangent"
-msgstr "Tangent"
-
-#: toolbars.py:182
-msgid "Arc sine"
-msgstr "Arc sine"
-
-#: toolbars.py:186
-msgid "Arc cosine"
-msgstr "Arc cosine"
-
-#: toolbars.py:190
-msgid "Arc tangent"
-msgstr "Arc tangent"
-
-#: toolbars.py:196
-msgid "Hyperbolic sine"
-msgstr "Hyperbolic sine"
-
-#: toolbars.py:200
-msgid "Hyperbolic cosine"
-msgstr "Hyperbolic cosine"
-
-#: toolbars.py:204
-msgid "Hyperbolic tangent"
-msgstr "Hyperbolic tangent"
-
-#: toolbars.py:212
-msgid "Logical and"
-msgstr "Logical and"
-
-#: toolbars.py:216
-msgid "Logical or"
-msgstr "Logical or"
-
-#: toolbars.py:226
-msgid "Equals"
-msgstr "Bingana"
-
-#: toolbars.py:229
-msgid "Not equals"
-msgstr "Ntago bingana"
-
-#: toolbars.py:236
-msgid "Pi"
-msgstr "Pi"
-
-#: toolbars.py:240
-msgid "e"
-msgstr "inyajwi "
-
-#: toolbars.py:247
-msgid "Degrees"
-msgstr "Ingano"
-
-#: toolbars.py:248
-msgid "Radians"
-msgstr "Radians"
-
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "Ingano/radians"
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -533,28 +466,143 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "Ikidasobanuye"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "Ikosa:ubwoko budafashijwe"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() string invalid (%s)"
+#: toolbars.py:36
+msgid "Help"
+msgstr "Gufasha"
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "Akamaro kaboneka"
+#: toolbars.py:86
+msgid "Copy"
+msgstr "Gukoporora"
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Kwandika kukinyamakuru (%s)"
+#: toolbars.py:89
+msgid "Paste"
+msgstr "Gushyira ibyo wakoporoye ahandi hantu"
 
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "Ububuto_ bwakanzwe(): Ubwoko butemewe"
+#: toolbars.py:92
+msgid "Cut"
+msgstr "Gutema"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "Umubare wikubye kabiri"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "Ikimenyetso cy`umubare wikuba wawugabanya ukabya ra wamubare"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Amacuri"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e igerekeranye kuri x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x igerekeranye kuri y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "logaritime iri natureri"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Factorial"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Sine"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Cosine"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangent"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arc sine"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arc cosine"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arc tangent"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Hyperbolic sine"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Hyperbolic cosine"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Hyperbolic tangent"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "Logical and"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "Logical or"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "Bingana"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "Ntago bingana"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "inyajwi"
+
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Ingano"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radians"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Ingano/radians"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""

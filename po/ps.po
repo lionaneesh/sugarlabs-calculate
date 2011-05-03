@@ -2,18 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-23 06:25-0500\n"
-"Last-Translator: usman mansoor ansari <jalalkut@gmail.com>\n"
+"PO-Revision-Date: 2009-07-02 02:17-0400\n"
+"Last-Translator: Abdulhadi Hairan <abdulhadi@paiwastoon.com.af>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ps\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -22,16 +32,16 @@ msgstr "شمېرل"
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "برابرښت، شننه() ناباوري مزی (%s)"
+msgstr "برابرون.جلاوالی() سلسله ناباوره ()"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr "شته کړنې: "
+msgstr "موجودې کړنې:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr " (%s) ورځپاڼه کې لیکل"
+msgstr "ژورنال ته لیکل"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -39,117 +49,116 @@ msgstr "تڼۍ_ زورشوې(): ناسم ډول"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr "د شننې تېروتنل"
+msgstr "د جلاکولو تېروتنه"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "کچه: %d، د %d"
+msgstr "کچه: ofs"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr "تېروتنه په %d کې"
+msgstr "په کې تېروتنه"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"د مرسته په اړه (ازمویل) لپاره وکاروﺉ مرسته(ازمویل)، یا لړیال لپاره "
+"د \"ازموینې\" په اړه مرستې لپاره مرسته(ازموینه) وکاروه٬ یا د لړیال لپاره "
 "مرسته(لړیال)"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "کړنې '%s'  ونه پېژندل شوې"
+msgstr "کړنه نده تعریف شوې"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "د ارزښتمنیو ناسمه شمېره (%d د %d پرځای)"
+msgstr "د دلیلونو ناباوره شمېر (په ځای د)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "کړنې %d args اخلي"
+msgstr "کړنه () دلیلونه اخلي"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "'%d' :%s د وېش ارزښتوړى ناوړتيا"
+msgstr "د دلیل د جلاکولو توان نلري:"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr "ناسمه کړنې: %s"
+msgstr "د کړنې تېروتنه:"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "بدلېدونکې '%s' ونه پېژندل شوې"
+msgstr "'%s' اوښتونکی ندی تعریف شوی"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr "غېرمترقبه کیڼې غبرګلیندۍ "
+msgstr "کیڼه غبرګلیندۍ نامتوقع وه"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr "وېشي تېروتنې (ښي غبرګلیندۍ)"
+msgstr "د جلاکولو تېروتنه (ښي غبرګلیندۍ)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-#, fuzzy
 msgid "Right parenthesis unexpected"
-msgstr "غېرمترقبه کیڼې غبرګلیندۍ "
+msgstr "ښي غبرګلیندۍ نامتوقع وه"
 
 #: eqnparser.py:527
-#, fuzzy
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "وېشي تېروتنې (ښي غبرګلیندۍ،  )"
+msgstr "د جلاکولو تېروتنه (ښي غبرګلیندۍ٬ نه کیڼ ـ ارزښت)"
 
 #: eqnparser.py:534
-#, fuzzy
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr "وېشي تېروتنې (ښي غبرګلیندۍ، )"
+msgstr "د جلاکولو تېروتنه (ښي غبرګلیندۍ٬ د بندولو کچه نشته)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr "غېر مترقبه شمېره"
+msgstr "شمېر نامتوقع و"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr "غېر مترقبه چلوونى"
+msgstr "چلوونکی نامتوقع و"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr "وېشي تېروتنې: د شمېرې يا مترقبه بدلېدونى"
+msgstr "د جلاکولو تېروتنه: شمېر یا اوښتونکی متوقع و"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr "شمېرې يا مترقبه بدلېدونى"
+msgstr "شمېر یا اوښتونکی متوقع و"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr "ناباوري چلوونى"
+msgstr "ناباوره چلوونکى"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr "مترقبه چلوونى"
+msgstr "چلوونکی متوقع و"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "ـ جلاکول(): راتلل هیڅ"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"acos(x), د x قوسی کوساین راګرځوی. دا هغه زاویه ده چې کوساین يې x دی. د 1 > x "
+"=> -1  لپاره تعریف شوی"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -159,150 +168,169 @@ msgstr "او"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"او(x, y)٬ عقلي او. ریښتیا راستنېږي که y او x ریښتیا وي٬ که نه نو درواغجن "
+"راستنېږي"
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"asin(x), return the arc sine of x. دا هغه زاویه ده چې ساين يې x دی. Defined "
+"for -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"atan(x), return the arc tangent of x. دا هغه زاویه ده چې ټانجانت يې x دی. "
+"Defined for all x"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
 #: eqnparserhelp.py:55
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"cos(x) د x کوساین راستنوي. دا د x په زاویه کې د واحد په دایره د x-کواردینات "
+"دی"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "هايپربوليک کوساين"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cosh(x)، د x هايپربوليک کوساين را ګرځوی. ورکړل شوی لخوا (exp(x) + exp(-x)) / "
+"2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
+msgstr "exp(x)٬ د x طبعي واضح کوونکی راستنوي. د e^x لخوا ورکړل شوی."
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "فکټوريل"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
+msgstr "fac(x)، د x فکټوريل راګرځوی. لخوا ورکړل شوی x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "کړنې"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
+msgstr "کړنې()٬ د هغو کړنو یو لیست راګرځوي چې تعریف شوې دي"
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "کې"
 
 #: eqnparserhelp.py:72
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"په (x) کې٬ د x طبعي لوګاریتم راګرځي. دا هغه ارزښت دی چې exp() واضح کوونکی یې "
+"د x سره برابرېږي. د x >= 0 لپاره تعریف شوی."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "چلوونکي"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "چلوونکي()٬ د چلوونکیو هغه لیست راستنوي چې تعریف شوی وي"
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr "او"
+msgstr "يا"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"یا (x, y)٬ عقلي یا. ریښتیا راستنوي که x او\\یا y ریښتیا وي٬ که نه نو درواغ "
+"راستنوي"
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "طرحه"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"طرحه (eqn, var=-a..b)٬ د 'eqn' برابرۍ طرحه د اوښتونکي 'var' سره د a نه د b "
+"تر کچې"
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "سین"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"sin(x)٬ د x ساین راستنوي. دا د x په زاویه کې د واحد د دایرې y-کواردینات دی"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "هايپربوليک ساين"
 
 #: eqnparserhelp.py:91
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"sinh(x)، د x هايپربوليک ساين راګرځوی. لخوا ورکړل شوی (exp(x) - exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "مربعي جذر"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x)، د x مربعي جذر راګرځوی. دا هغه قيمت دی چې مربع يې مساوي کيږي د x "
+"سره. د x >= 0 لپاره تعريف شوی."
 
 #: eqnparserhelp.py:97
-#, fuzzy
 msgid "square"
-msgstr "څلور ګوټى"
+msgstr "څلورګوټي (مربع)"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "square(x)، د x مربع راګرځوي. x * x ته ورکړ شوی"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "ټانجانت"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -310,46 +338,52 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x)، د x ټانجانت راګرځوي. دا د دايرې د واحد د پيل څخه تر هغه ټکي چې د "
+"دايرې د واحد پر سر دی او د x د زاويې لپاره پيژندل شوی، د ليکې ميلان دی. \n"
+"\n"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "هايپربوليک ټانجانت"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"tanh(x)، د x هايپربوليک ټانجانت راګرځوي.  ورکړل شوی لخوا sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "ازموينه"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "دا يواځې يو ازمېښتي سرليك دى، د مرستې لپاره د مرستې لړيال وكاروئ."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "اوښتونکي"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
+msgstr "اوښتونکي()٬ د هغو اوښتونکیو یو لیست راستنوي چې اوس مهال تعریف شوي وي"
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y)٬ عقلي xor. ریښتیا راستنېږي که هر x ریښتیا وي (او y درواغ وي) یا y "
+"ریښتیا وي (x درواغ وي). که نه نو درواغ راستنېږي"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr "لړيال"
+msgstr "لړيال (لست)"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
@@ -358,11 +392,19 @@ msgstr "سرليكونه"
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "د ' ' په اړه مرسته ترلاسه کېدلی شي. د لړیال لپاره مرسته(لړیال) وکاروه"
+
+#: layout.py:44
+msgid "Clear"
+msgstr "پاکول"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "ننوتل"
 
 #: layout.py:60
 msgid "Edit"
-msgstr "اېډېټ"
+msgstr "سمون"
 
 #: layout.py:61
 msgid "Algebra"
@@ -376,6 +418,10 @@ msgstr "مثلثات"
 msgid "Boolean"
 msgstr "بولۍ"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "ټاکلي"
@@ -386,41 +432,49 @@ msgstr "بڼه"
 
 #: layout.py:86
 msgid "Label:"
-msgstr "نښکه"
+msgstr "نښه:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr "ټول برابرښتونه"
+msgstr "ټول مساوات"
 
 #: layout.py:118
 msgid "My equations"
-msgstr "زما برابرښتونه"
+msgstr "زما مساوات"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
 
 #: layout.py:120
 msgid "Show history"
-msgstr "مخینه ښکاره کول"
+msgstr "مخينه ښودل"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr "بدلېدنې ښکاره کول"
+msgstr "اوښتونکي ښودل"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr "*"
+msgstr "mul_sym"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr "/"
+msgstr "div_sym"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr "ناپېژندلې"
+msgstr "ناپيژندلي"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr "تېروتنه: ناپېژندلې ډول"
+msgstr "تېروتنه: ناملاتړی ډول"
 
 #: toolbars.py:36
 msgid "Help"
@@ -432,76 +486,83 @@ msgstr "لمېسل"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr "سرېښل"
+msgstr "سریښل"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr "سکڼل"
+msgstr "پرېکول"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr "څلور ګوټى"
+msgstr "څلورګوټی"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr "څلور ګوټه  ریښه"
+msgstr "جذر مربع"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "معکوس"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
+msgstr "e په توان د x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x په توان د y"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
-msgstr "ساده لوګارېتم"
+msgstr "طبيعي لوګارتم"
 
 #: toolbars.py:123
-#, fuzzy
 msgid "Factorial"
-msgstr "فکټوریل"
+msgstr "فکټوريل"
 
 #: toolbars.py:131
 msgid "Sine"
-msgstr "ساین"
+msgstr "ساين"
 
 #: toolbars.py:135
 msgid "Cosine"
-msgstr "کوساین"
+msgstr "کوساين"
 
 #: toolbars.py:139
 msgid "Tangent"
-msgstr "ټانجان"
+msgstr "ټانجانت"
 
 #: toolbars.py:145
 msgid "Arc sine"
-msgstr "اې ار سي ساین"
+msgstr "ساين آرک"
 
 #: toolbars.py:149
 msgid "Arc cosine"
-msgstr "اې ار سي کوساین"
+msgstr "کوساين آرک"
 
 #: toolbars.py:153
 msgid "Arc tangent"
-msgstr "اې ار سي ټانجان"
+msgstr "د ټانجنت آرک"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
-msgstr "هایپربولیک ساین"
+msgstr "هايپربوليک ساين"
 
 #: toolbars.py:163
 msgid "Hyperbolic cosine"
-msgstr "هایپربولیک کوساین"
+msgstr "هايپربوليک کوساين"
 
 #: toolbars.py:167
 msgid "Hyperbolic tangent"
-msgstr "هایپربولیک ټانجان"
+msgstr "هایپربولیک ټانجانت"
 
 #: toolbars.py:175
 msgid "Logical and"
-msgstr "منطقي او"
+msgstr "عقلي او"
 
 #: toolbars.py:179
 msgid "Logical or"
-msgstr "منطقي یا"
+msgstr "لپاره عقلي"
 
 #: toolbars.py:189
 msgid "Equals"
@@ -513,11 +574,16 @@ msgstr "برابر ندي"
 
 #: toolbars.py:199
 msgid "Pi"
-msgstr "Pi"
+msgstr "پای"
 
 #: toolbars.py:202
 msgid "e"
-msgstr "e"
+msgstr "ی"
+
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "طرحه"
 
 #: toolbars.py:209
 msgid "Degrees"
@@ -525,8 +591,20 @@ msgstr "درجې"
 
 #: toolbars.py:210
 msgid "Radians"
-msgstr "راډیانونه"
+msgstr "لینده کچ"
 
-#: toolbars.py:113
-msgid "x to the power y"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "درجې / راديان"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

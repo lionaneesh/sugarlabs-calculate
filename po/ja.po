@@ -2,6 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -382,6 +390,10 @@ msgstr "三角法"
 msgid "Boolean"
 msgstr "論理関数"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "定数"
@@ -402,6 +414,10 @@ msgstr "すべての等式"
 msgid "My equations"
 msgstr "私の等式"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "履歴を表示"
@@ -409,6 +425,10 @@ msgstr "履歴を表示"
 #: layout.py:120
 msgid "Show variables"
 msgstr "変数を表示"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -451,6 +471,10 @@ msgstr "二乗"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "平方根"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "入れ替え(逆関数)"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -528,6 +552,11 @@ msgstr "π（円周率）"
 msgid "e"
 msgstr "e（オイラー数）"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "角度"
@@ -536,11 +565,21 @@ msgstr "角度"
 msgid "Radians"
 msgstr "ラジアン"
 
-#~ msgid "Inverse"
-#~ msgstr "入れ替え(逆関数)"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "角度/ラジアン"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "角度/ラジアン"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
 
 #, python-format
 #, fuzzy

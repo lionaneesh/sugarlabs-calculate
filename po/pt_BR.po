@@ -2,31 +2,40 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-20 19:59+0000\n"
-"Last-Translator: Juliano Bittencourt <juliano@laptop.org>\n"
+"PO-Revision-Date: 2010-03-01 06:34+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calcular"
 
-# Samblagem:"seqüência ordenada de caracteres (símbolos) do alfabeto de uma linguagem formal."
-# http://pt.wiktionary.org/wiki/samblagem
+# Samblagem:"seqüência ordenada de caracteres (símbolos) do alfabeto de uma linguagem formal."<br />
+# http://pt.wiktionary.org/wiki/samblagem<br />
 # se bem que nunca ouvi ou li o termo
 #: calculate.py:80
 #, python-format
-#, fuzzy
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equação.avaliação() samblagem inválida (%)"
+msgstr "Equação.avaliada() combinação letras/números inválida (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
@@ -37,33 +46,13 @@ msgstr "Funções disponíveis:"
 msgid "Writing to journal (%s)"
 msgstr "Escrevendo no diário (%s)"
 
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "Lendo do diário (%s)"
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr "Incapaz de determinar versão"
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "Lendo entrada do diário (versão %s)"
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr "Linha de estado inválida (%s)"
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "Incapaz de ler entrada do diário, versão desconhecida (%s)"
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "botão_pressionado(): tipo inválido"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Erro de Sintaxe"
 
 #: eqnparser.py:58
 #, python-format
@@ -75,9 +64,11 @@ msgstr "nível: %d, ofs %d"
 msgid "Error at %d"
 msgstr "Erro em %d"
 
-#: eqnparser.py:234
-msgid "help_var"
-msgstr "var_ajuda"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Use ajuda(teste) para obter ajuda sobre 'teste', ou ajuda(índice) para o "
+"índice"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -96,7 +87,6 @@ msgstr "função leva %d args"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
-#, fuzzy
 msgid "Unable to parse argument %d: '%s'"
 msgstr "Incapaz de avaliar argumento %d: '%s'"
 
@@ -110,8 +100,11 @@ msgstr "Erro de função: %s"
 msgid "Variable '%s' not defined"
 msgstr "Variável '%s' não definida"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Parêntesis esquerdo inesperado"
+
 #: eqnparser.py:516
-#, fuzzy
 msgid "Parse error (right parenthesis)"
 msgstr "Erro de avaliação (parêntesis direito)"
 
@@ -120,9 +113,12 @@ msgid "Right parenthesis unexpected"
 msgstr "Parêntesis direito inesperado"
 
 #: eqnparser.py:527
-#, fuzzy
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Erro de avaliação (parêntesis direito, nenhum val_esq)"
+msgstr "Erro de sintaxe (parêntesis direito, nenhum left_val)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Erro de avaliação (parêntesis direito, sem nível que feche)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
@@ -131,6 +127,14 @@ msgstr "Número não esperado"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Operador não esperado"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Erro de sintaxe: número ou variável esperado"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Número ou variável esperado"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -144,161 +148,9 @@ msgstr "Operador esperado"
 msgid "_parse(): returning None"
 msgstr "_avaliar(): devolvendo Nenhum"
 
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr "ajuda_acos"
-
-#: eqnparserhelp.py:38
-msgid "help_asin"
-msgstr "ajuda_asin"
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr "ajuda_cos"
-
-#: eqnparserhelp.py:40
-msgid "help_exp"
-msgstr "ajuda_exp"
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr "ajuda_funções"
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr "ajuda_operadores"
-
-#: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr "ajuda_plot"
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr "ajuda_sin"
-
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr "ajuda_sqrt"
-
-#: eqnparserhelp.py:46
-msgid "help_test"
-msgstr "ajuda_teste"
-
-#: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr "ajuda_variáveis"
-
-#: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr "ajuda_uso"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Tópicos"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Não existe ajuda sobre '%s', use ajuda(índice) para ver o índice"
-
-#: layout.py:60
-msgid "Edit"
-msgstr "Editar"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "Álgebra"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "Trigonometria"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "Booleano"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "Constantes"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Formato"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "Etiqueta:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "Todas equações"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "Minhas equações"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "Mostrar histórico"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "Mostrar variáveis"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-#, fuzzy
-msgid "thousand_sep"
-msgstr "sep_milhares"
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-#, fuzzy
-msgid "fraction_sep"
-msgstr "sep_frações"
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "*"
-
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "/"
-
-#: eqnparser.py:33
-#, fuzzy
-msgid "Parse error"
-msgstr "Erro na avaliação"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Use ajuda(teste) para obter ajuda sobre 'teste', ou ajuda(índice) para o "
-"índice"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Parêntesis esquerdo inesperado"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Erro de avaliação (parêntesis direito, sem nível que feche)"
-
-#: eqnparser.py:566
-#, fuzzy
-msgid "Parse error: number or variable expected"
-msgstr "Erro de avaliação: número ou variável esperados"
-
-#: eqnparser.py:567
-#, fuzzy
-msgid "Number or variable expected"
-msgstr "Número ou variável esperados"
-
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
@@ -321,12 +173,11 @@ msgstr "and"
 
 # acho que fui esperto em solucionar esta :)
 #: eqnparserhelp.py:44
-#, fuzzy
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x,y), Conjunção lógica E (\"and\"). Devolve Verdadeiro (\"True\") se x e y "
-"forem verdadeiros, caso contrário devolve Falso (\"False\")"
+"and(x,y), Conjunção lógica E (\"and\"). Retorna Verdadeiro (\"True\") se x e y "
+"forem verdadeiros, caso contrário retorna Falso (\"False\")"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -405,12 +256,11 @@ msgid "ln"
 msgstr "ln"
 
 #: eqnparserhelp.py:72
-#, fuzzy
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), devolve o logaritmo natural de x. Este é o valor cujo expoente exp() "
+"ln(x), Retorna o logaritmo natural de x. Este é o valor cujo expoente exp() "
 "é igual a x. Definido para x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
@@ -438,12 +288,11 @@ msgid "plot"
 msgstr "plot"
 
 #: eqnparserhelp.py:83
-#, fuzzy
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com  variável 'var' no "
+"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com a variável 'var' no "
 "intervalo entre a e b"
 
 #: eqnparserhelp.py:86
@@ -473,22 +322,20 @@ msgid "sqrt"
 msgstr "sqrt"
 
 #: eqnparserhelp.py:94
-#, fuzzy
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"sqrt(x), devolve a raiz quadrada de x. Este é o valor cujo quadrado (elevado "
-"a 2) é igual a x. Definido para x >= 0."
+"sqrt(x), retorna a raiz quadrada de x. Este é o valor cujo quadrado é igual "
+"a x. Definido para x >= 0."
 
 #: eqnparserhelp.py:97
 msgid "square"
 msgstr "square"
 
 #: eqnparserhelp.py:98
-#, fuzzy
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x), devolve o quadrado (elevado a 2) de x. Obtido por x * x"
+msgstr "square(x), devolve o quadrado de x. Obtido por x vezes x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -538,7 +385,6 @@ msgid "xor"
 msgstr "xor"
 
 #: eqnparserhelp.py:117
-#, fuzzy
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
@@ -551,6 +397,90 @@ msgstr ""
 #: eqnparserhelp.py:131
 msgid "index"
 msgstr "índice"
+
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "Tópicos"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Não existe ajuda sobre '%s', use ajuda(índice) para ver o índice"
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Limpar"
+
+# qual o contexto da utilização? tecla enter ou dar entrada em alguma variável?
+#: layout.py:53
+msgid "Enter"
+msgstr "Enter"
+
+#: layout.py:60
+msgid "Edit"
+msgstr "Editar"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "Álgebra"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "Trigonometria"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "Booleano"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
+#: layout.py:64
+msgid "Constants"
+msgstr "Constantes"
+
+#: layout.py:65
+msgid "Format"
+msgstr "Formato"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "Etiqueta:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "Todas equações"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "Minhas equações"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
+#: layout.py:120
+msgid "Show history"
+msgstr "Mostrar histórico"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "Mostrar variáveis"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "*"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"
@@ -584,10 +514,17 @@ msgstr "Quadrado"
 msgid "Square root"
 msgstr "Raiz Quadrada"
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
 #: toolbars.py:109
-#, fuzzy
 msgid "e to the power x"
-msgstr "e elevado a x"
+msgstr "e elevado ao expoente x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x elevado a y"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
@@ -642,14 +579,12 @@ msgid "Logical or"
 msgstr "Disjunção lógica OU"
 
 #: toolbars.py:189
-#, fuzzy
 msgid "Equals"
 msgstr "É igual a"
 
 #: toolbars.py:192
-#, fuzzy
 msgid "Not equals"
-msgstr "Não é igual a"
+msgstr "Não igual a"
 
 #: toolbars.py:199
 msgid "Pi"
@@ -659,6 +594,11 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Graus"
@@ -667,6 +607,84 @@ msgstr "Graus"
 msgid "Radians"
 msgstr "Radianos"
 
-#: toolbars.py:113
-msgid "x to the power y"
+#: toolbars.py:292
+msgid "Degrees / radians"
 msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "Lendo do diário (%s)"
+
+#~ msgid "Unable to determine version"
+#~ msgstr "Incapaz de determinar versão"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "Lendo entrada do diário (versão %s)"
+
+#, python-format
+#~ msgid "State line invalid (%s)"
+#~ msgstr "Linha de estado inválida (%s)"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "Incapaz de ler entrada do diário, versão desconhecida (%s)"
+
+#~ msgid "help_var"
+#~ msgstr "var_ajuda"
+
+#~ msgid "help_acos"
+#~ msgstr "ajuda_acos"
+
+#~ msgid "help_asin"
+#~ msgstr "ajuda_asin"
+
+#~ msgid "help_cos"
+#~ msgstr "ajuda_cos"
+
+#~ msgid "help_exp"
+#~ msgstr "ajuda_exp"
+
+#~ msgid "help_functions"
+#~ msgstr "ajuda_funções"
+
+#~ msgid "help_operators"
+#~ msgstr "ajuda_operadores"
+
+#~ msgid "help_plot"
+#~ msgstr "ajuda_plot"
+
+#~ msgid "help_sin"
+#~ msgstr "ajuda_sin"
+
+#~ msgid "help_sqrt"
+#~ msgstr "ajuda_sqrt"
+
+#~ msgid "help_test"
+#~ msgstr "ajuda_teste"
+
+#~ msgid "help_variables"
+#~ msgstr "ajuda_variáveis"
+
+#~ msgid "help_usage"
+#~ msgstr "ajuda_uso"
+
+#, fuzzy
+#~ msgid "thousand_sep"
+#~ msgstr "sep_milhares"
+
+#, fuzzy
+#~ msgid "fraction_sep"
+#~ msgstr "sep_frações"

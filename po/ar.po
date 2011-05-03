@@ -1,3 +1,7 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -21,83 +25,40 @@ msgstr ""
 msgid "Calculate"
 msgstr "احسب"
 
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() جملة غير صحيحة (%s)"
+
 #: calculate.py:210
 msgid "Available functions:"
 msgstr "الدوال المتاحة:"
 
-#-----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-#-----------------------------------------
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr ""
-
-#: eqnparserhelp.py:38
-msgid "help_asin"
-msgstr ""
-
-#: eqnparserhelp.py:40
-msgid "help_exp"
-msgstr ""
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr ""
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr ""
-
-#: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr ""
-
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "help_test"
-msgstr ""
-
-#: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr ""
-
-# Text assigned to the 'help' variable
-#: eqnparser.py:234
-msgid "help_var"
-msgstr ""
-
-#-----------------------------------------
-# End of help topics
-#-----------------------------------------
-#: eqnparserhelp.py:52
-msgid "Topics: "
-msgstr ""
-
-#: eqnparserhelp.py:143
+#: calculate.py:504
 #, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "لا يوجد مساعدة للموضوع %s, استخدم مساعدة(الرقم) للحصول على معلومات"
+msgid "Writing to journal (%s)"
+msgstr "يكتب على الدفتر (%s)"
 
-#: eqnparser.py:87
-msgid "Type error"
-msgstr ""
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "الزر المضغوط (): نوع خاطئ"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "خطأ تحليلي"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "مستوى: %d من %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
 msgstr "خطأ عند %d"
 
-#: eqnparser.py:299
-#, python-format
-msgid "variable %s not defined"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 
 #: eqnparser.py:353 eqnparser.py:354
@@ -125,15 +86,14 @@ msgstr "غير قادر على تحليل العامل %d: '%s'"
 msgid "Function error: %s"
 msgstr "خطأ في الدالة: %s"
 
-#: eqnparser.py:358
+#: eqnparser.py:481
 #, python-format
-msgid "Function '%s' returned %s"
-msgstr ""
+msgid "Variable '%s' not defined"
+msgstr "المتغير '%s' غير معرف"
 
-#: eqnparser.py:457
-#, python-format
-msgid "Variable '%s' undefined"
-msgstr ""
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "قوس أيسر غير متوقع"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
@@ -155,195 +115,9 @@ msgstr "خطأ تحليلي (قوس أيمن, لا يوجد مستوى للإغ�
 msgid "Number not expected"
 msgstr "رقم غير متوقع"
 
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "إشارة غير صحيحة"
-
-#: eqnparser.py:565
-msgid "Parse error: ')' expected"
-msgstr ""
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): تعيد None"
-
-#: layout.py:46
-msgid "clear"
-msgstr ""
-
-#: layout.py:55
-msgid "enter"
-msgstr ""
-
-#: layout.py:60
-msgid "Edit"
-msgstr "تحرر"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "الجبر"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "الدوال المثلثية"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "المنطقيات"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "الثوابت"
-
-#: layout.py:65
-msgid "Format"
-msgstr "التصميم"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "ملصق:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "جميع المعادلات"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "معادلاتي"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "اظهر التاريخ"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "اظهر المتغيرات"
-
-#: mathlib.py:86
-msgid "Error"
-msgstr ""
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr "خطأ: نوع غير مدعوم"
-
-#: plotlib.py:134
-msgid "Unable to parse range"
-msgstr ""
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr "نسخ"
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr "لصق"
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr "قص"
-
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() جملة غير صحيحة (%s)"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "يكتب على الدفتر (%s)"
-
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr ""
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr ""
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr ""
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr ""
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "الزر المضغوط (): نوع خاطئ"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "مستوى: %d من %d"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "المتغير '%s' غير معرف"
-
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "إشارة غير متوقعة"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "إشارة متوقعة"
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr ""
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "المواضيع"
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr ""
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr ""
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "إشارة_الضرب"
-
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "إشارة_القسمة"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "خطأ تحليلي"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "قوس أيسر غير متوقع"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
@@ -352,6 +126,18 @@ msgstr "خطأ تحليلي: رقم أو متغير متوقع"
 #: eqnparser.py:567
 msgid "Number or variable expected"
 msgstr "رقم أو متغير متوقع"
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "إشارة غير صحيحة"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "إشارة متوقعة"
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_parse(): تعيد None"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -418,8 +204,9 @@ msgstr ""
 "على دائرة الوحدة عند الزاوية س"
 
 #: eqnparserhelp.py:58
+#, fuzzy
 msgid "cosh"
-msgstr ""
+msgstr "جتا"
 
 #: eqnparserhelp.py:59
 msgid ""
@@ -505,8 +292,9 @@ msgstr ""
 "الوحدة عند الزاوية س"
 
 #: eqnparserhelp.py:90
+#, fuzzy
 msgid "sinh"
-msgstr ""
+msgstr "جا"
 
 #: eqnparserhelp.py:91
 msgid ""
@@ -546,8 +334,9 @@ msgstr ""
 "ظا(س)= جا(س)/جتا(س)"
 
 #: eqnparserhelp.py:106
+#, fuzzy
 msgid "tanh"
-msgstr ""
+msgstr "ظا"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
@@ -587,13 +376,112 @@ msgstr ""
 msgid "index"
 msgstr "الفهرس"
 
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "المواضيع"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "لا يوجد مساعدة للموضوع %s, استخدم مساعدة(الرقم) للحصول على معلومات"
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
+#: layout.py:60
+msgid "Edit"
+msgstr "تحرر"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "الجبر"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "الدوال المثلثية"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "المنطقيات"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
+#: layout.py:64
+msgid "Constants"
+msgstr "الثوابت"
+
+#: layout.py:65
+msgid "Format"
+msgstr "التصميم"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "ملصق:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "جميع المعادلات"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "معادلاتي"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
+#: layout.py:120
+msgid "Show history"
+msgstr "اظهر التاريخ"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "اظهر المتغيرات"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "إشارة_الضرب"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "إشارة_القسمة"
+
 #: mathlib.py:132
 msgid "Undefined"
 msgstr "غير معرف"
 
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr "خطأ: نوع غير مدعوم"
+
 #: toolbars.py:36
 msgid "Help"
 msgstr "مساعدة"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "نسخ"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "لصق"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "قص"
 
 #: toolbars.py:99
 msgid "Square"
@@ -603,9 +491,17 @@ msgstr "مربع"
 msgid "Square root"
 msgstr "الجذر التربيعي"
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
 #: toolbars.py:109
 msgid "e to the power x"
 msgstr "هـ مرفوعة للقوة س"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "س مرفوعة للقوة ص"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
@@ -675,6 +571,11 @@ msgstr ""
 msgid "e"
 msgstr ""
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "ارسم"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "درجة"
@@ -683,6 +584,18 @@ msgstr "درجة"
 msgid "Radians"
 msgstr "رادْيان"
 
-#: toolbars.py:113
-msgid "x to the power y"
-msgstr "س مرفوعة للقوة ص"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""

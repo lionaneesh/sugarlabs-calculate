@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-02-12 00:30-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2011-04-28 14:26+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: km\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "គិតលេខ"
 
 #: calculate.py:80
 #, python-format
@@ -32,7 +41,7 @@ msgstr ""
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "កត់ត្រាក្នុងសៀវភៅទានានុប្បវត្តិ (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -40,21 +49,23 @@ msgstr ""
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "កំហុសដកឃ្លា"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "ថ្នាក់:%d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "កំហុសនៅឯ %d"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"ប្រើជំនួយ (សាកល្បង) ដើម្បីជាជំនួយសំរាប់ 'សាកល្បង់' ឬ ជំនួយ (តាមលេខរៀង) "
+"សំរាប់លេខរៀង"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -64,7 +75,7 @@ msgstr ""
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "តាម​លំដាប់​លេខនៃផ្ទុយគ្នា (%d នៃតារាង %d)"
 
 #: eqnparser.py:360
 #, python-format
@@ -74,29 +85,29 @@ msgstr ""
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "មិនអាចញ៉ែកធាតុនៃភាពផ្ទុយគ្នា %d ៖ '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "កំហុសនៃមុខងារ ៖ %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "ប្រៃប្រួល '%s'​មិនបង្ហាញ"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "មិន​គួរ​មាន​រង្វង់​ក្រចក​ខាង​ឆ្វេង"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "មាន​កំហុស​ដក​ឃ្លា (រង្វង់ក្រចកខាងស្តាំ)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "មិន​គួរ​មាន​រង្វង់​ក្រចក​ខាងស្តាំ"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
@@ -149,7 +160,7 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "និង"
 
 #: eqnparserhelp.py:44
 msgid ""
@@ -214,7 +225,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "អនុគមន៍"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
@@ -241,7 +252,7 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "ឬ"
 
 #: eqnparserhelp.py:80
 msgid ""
@@ -289,11 +300,11 @@ msgstr ""
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "ជ្រុង"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "ជ្រុង(x), ត្រឡប់ជ្រុងទៅវិញ x, ផ្តលដោយ x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -316,20 +327,24 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "សាកល្បង"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
+"នេះគ្រាន់តែជាប្រធានបទសំរាប់សាកល្បង ដើប្បីប្រើប្រាស់ដល់ការជំនួយ (តរាង) "
+"សំរាប់តារាងតំរៀបអក្សរ"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "មានការប្រែប្រួល"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
 msgstr ""
+"មានការប្រែប្រួល() ត្រឡប់ក្រោយ ដែលជាតារាងដែលមានការប្រែប្រួល "
+"នៃការបញ្ជាក់បច្ចុប្បន្ននេះ"
 
 #: eqnparserhelp.py:116
 msgid "xor"
@@ -344,20 +359,28 @@ msgstr ""
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "តារាងតំរៀបអក្សរ"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "ប្រធានបទ"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr "សំអាត"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "បញ្ចូល"
+
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "កែ"
 
 #: layout.py:61
 msgid "Algebra"
@@ -371,17 +394,21 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "ផ្សេងៗ"
+
 #: layout.py:64
 msgid "Constants"
 msgstr ""
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "ទ្រង់ទ្រាយ"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "ស្លាក ៖"
 
 #: layout.py:118
 msgid "All equations"
@@ -391,12 +418,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
-#: layout.py:120
-msgid "Show history"
+#: layout.py:198
+msgid "Change view between own and all equations"
 msgstr ""
 
 #: layout.py:120
+msgid "Show history"
+msgstr "បង្ហាញប្រវត្ត"
+
+#: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -411,120 +446,140 @@ msgstr ""
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "មិនបាន​កំណត់"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "កំហុស​ ៖ ប្រភេទ​ដែល​មិន​បានគាំទ្រ"
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "ជំនួយ"
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "ចំលង"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "បិតត"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "កាត់"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "ជ្រុង"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "ប្រភាគ"
 
-#: toolbars.py:107
+#: toolbars.py:157
 msgid "Inverse"
-msgstr ""
+msgstr "បញ្ច្រាស"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e ទៅថាមពល x"
 
 #: toolbars.py:113
-msgid "e to the power x"
-msgstr ""
+msgid "x to the power y"
+msgstr "x ថាមពល y"
 
 #: toolbars.py:117
-msgid "x to the power y"
-msgstr ""
-
-#: toolbars.py:121
 msgid "Natural logarithm"
-msgstr ""
+msgstr "លោការីត​ធម្មជាតិ"
 
-#: toolbars.py:127
+#: toolbars.py:123
 msgid "Factorial"
-msgstr ""
+msgstr "នៃភាគរាយ"
 
-#: toolbars.py:135
+#: toolbars.py:131
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:139
+#: toolbars.py:135
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:143
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:153
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:157
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:163
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:167
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:171
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:179
+#: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "ត្រឹមត្រូវ​តាម​តក្កវិជ្ជា និង"
 
-#: toolbars.py:183
+#: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "ត្រឹមត្រូវ​តាម​តក្កវិជ្ជា​ ឬ"
 
-#: toolbars.py:193
+#: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "ស្មើ"
 
-#: toolbars.py:196
+#: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "មិនស្មើ"
 
-#: toolbars.py:203
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:206
+#: toolbars.py:202
 msgid "e"
+msgstr "e"
+
+#: toolbars.py:280
+msgid "Plot"
 msgstr ""
 
-#: toolbars.py:213
+#: toolbars.py:209
 msgid "Degrees"
+msgstr "អង្សា"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "រង្វាស់មុម"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
 msgstr ""
 
-#: toolbars.py:214
-msgid "Radians"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

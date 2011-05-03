@@ -2,20 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-07-30 21:26-0400\n"
-"Last-Translator: Ardian <ardian@tuxfamily.org>\n"
+"PO-Revision-Date: 2011-02-06 05:09+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -28,12 +36,12 @@ msgstr ""
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr "Funkcionet e pranishme:"
+msgstr "Funksionet në dispozicion:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "Duke shkruar në ditar"
+msgstr "Duke shkruar në ditar (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -41,12 +49,12 @@ msgstr ""
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Analizo Gabimin"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "leveli: %d, ofs %d"
+msgstr "niveli: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
@@ -56,7 +64,7 @@ msgstr "Gabim tek %d"
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Përdor ndihmë(test) për ndihmën rreth \"test\", ose ndihmë(indeks) për "
+"Përdor ndihmë(test) për ndihmën rreth 'test', ose ndihmë(indeks) për "
 "indeksin"
 
 #: eqnparser.py:353 eqnparser.py:354
@@ -72,12 +80,12 @@ msgstr "Numër invalid për argumentet (%d në vend të %d)"
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "funksioni merr  %d args"
+msgstr "funksioni merr %d args"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr "Nuk mund ti bëj argumentit analizë gramatikore"
+msgstr "Nuk mund ti bëj argumentit analizë gramatikore %d: '%s'"
 
 #: eqnparser.py:380
 #, python-format
@@ -124,7 +132,7 @@ msgstr ""
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "Numri ose ndryshorja e pritur"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -147,50 +155,63 @@ msgid "acos"
 msgstr "acos"
 
 #: eqnparserhelp.py:40
+#, fuzzy
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"acos(x), ju jep arc kosinusin e x-it. Ky është një kënd për të cilin "
+"kosinusi është x. I definuar për -1 <= x <= 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
 msgstr "dhe"
 
 #: eqnparserhelp.py:44
+#, fuzzy
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"or(x, y), logjikisht ose. Ju kthen E Vërtetë nëse x dhe/ose y janë Të "
+"Vërteta, përndryshe ju kthen I Rremë"
 
 #: eqnparserhelp.py:46
+#, fuzzy
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"asin(x), ju jep arc sinusin e x-it. Ky është një kënd për të cilin sinusi "
+"është x. I definuar për -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"atan(x), ju jep arkus tangjenten e x-it. Ky është një kënd për të cilin "
+"tangjenti është x. I definuar për të gjitha x-at"
 
 #: eqnparserhelp.py:54
-#, fuzzy
 msgid "cos"
-msgstr "acos"
+msgstr "cos"
 
 #: eqnparserhelp.py:55
+#, fuzzy
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"cos(x), ju jep kosinusin e x-it. Kjo është koordinata x në rrethin "
+"trigonometrik në këndin x"
 
 #: eqnparserhelp.py:58
 #, fuzzy
@@ -198,25 +219,29 @@ msgid "cosh"
 msgstr "acos"
 
 #: eqnparserhelp.py:59
+#, fuzzy
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cosh(x),ju jep kosinusin hiperbolik te x-it . Jipet nga (exp(x) + exp(-x)) / "
+"2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
+msgstr "exp(x), ju jep eksponentin e x-it. I dhënë nga e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
 msgstr ""
 
 #: eqnparserhelp.py:65
+#, fuzzy
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
+msgstr "fac(x), kthe faktorialin e x. Jepur nga x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -225,7 +250,7 @@ msgstr "funksionet"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
+msgstr "functions(), ju jep listën e të gjitha funksioneve që janë definuar"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -236,6 +261,8 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"ln(x), ju jep logaritmin e x-it. Kjo është vlera për të cilën eksponenti "
+"exp() është i barabartë me x. I definuar për x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -244,7 +271,7 @@ msgstr "operatorët"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "operators(), ju jep një list të operatorëve që janë definuar"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -254,6 +281,8 @@ msgstr "ose"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"or(x, y), logjikisht ose. Ju kthen E Vërtetë nëse x dhe/ose y janë Të "
+"Vërteta, përndryshe ju kthen I Rremë"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -267,60 +296,73 @@ msgstr ""
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"sin(x), ju jep sinusin e x-it. Kjo është koordinata y në rrethin "
+"trigonometrik në këndin x"
 
 #: eqnparserhelp.py:90
+#, fuzzy
 msgid "sinh"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:91
+#, fuzzy
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"sinh(x), kthen sinusin hiperbolik ë x. të dhëne nga (exp(x) - exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x), ju jep rrënjën katrore të x-it. Kjo është vlerë për të cilën "
+"katrori është i barabartë me x. I definuar për x >= 0."
 
 #: eqnparserhelp.py:97
-#, fuzzy
 msgid "square"
-msgstr "Katrror"
+msgstr "katror"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "square(x), ju jep katrorin e x-it. I dhënë me x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "tan"
 
 #: eqnparserhelp.py:102
+#, fuzzy
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x), kthe tangjentën e x. Kjo është pjerrtësia e vijës nga origjina e "
+"njësisë së rrethit në pikën e origjinës së rrethit të definuar nga krahu x. "
+"i dhënë nga sin(x) / cos(x)"
 
 #: eqnparserhelp.py:106
+#, fuzzy
 msgid "tanh"
-msgstr ""
+msgstr "tan"
 
 #: eqnparserhelp.py:107
+#, fuzzy
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"tanh(x), kthe tangjenten hiperbolike te x. Te dhënë nga sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -333,21 +375,26 @@ msgstr "Ky është vetëm një temë provë, përdorni ndihmë (index) për inde
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr "variablave"
+msgstr "ndryshoret"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
 msgstr ""
+"variables(), ju jep një list të ndryshoreve që janë momentalisht të definuar"
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
+#, fuzzy
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), logical xor. Kthehet në të vërtetë nëse x ështe i vërtetë (dhe y "
+"është false) ose y ështe i vërtetë (dhe x ështe false), përndryshe kthehet "
+"Falso"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
@@ -362,7 +409,7 @@ msgstr "Temat"
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
-"Nuk ka ndihmë për '% s' në dispozicion, përdorni ndihmë (index) për indeksin"
+"Nuk ka ndihmë për '%s' në dispozicion, përdorni ndihmë (index) për indeksin"
 
 #: layout.py:44
 msgid "Clear"
@@ -382,15 +429,19 @@ msgstr "Algjebra"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr "Trigjeometrija"
+msgstr "Trigonometria"
 
 #: layout.py:63
 msgid "Boolean"
 msgstr "Bolean"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
-msgstr "Konstanca"
+msgstr "Konstantet"
 
 #: layout.py:65
 msgid "Format"
@@ -408,13 +459,22 @@ msgstr "Të gjitha ekuacionet"
 msgid "My equations"
 msgstr "Ekuacionet e mija"
 
+#: layout.py:198
+#, fuzzy
+msgid "Change view between own and all equations"
+msgstr "Ndrysho pamjen ndërmjet të gjitha ekuacioneve dhe atyre të zotruara"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Shfaq historinë"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr "Shfaq veriablat"
+msgstr "Shfaq ndryshoret"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -452,23 +512,27 @@ msgstr "Prej"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr "Katrror"
+msgstr "Katror"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr "Rrënja katrrore"
+msgstr "Rrënja katrore"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr "në fuqinë e x"
+msgstr "e në fuqinë x"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr "x në fuqinë e y"
+msgstr "x në fuqinë y"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
-msgstr "Llogaritje natyrale"
+msgstr "Logaritëm natyral"
 
 #: toolbars.py:123
 msgid "Factorial"
@@ -476,11 +540,11 @@ msgstr "Faktrional"
 
 #: toolbars.py:131
 msgid "Sine"
-msgstr "Sinus"
+msgstr "Sinusi"
 
 #: toolbars.py:135
 msgid "Cosine"
-msgstr "Kosinus"
+msgstr "Kosinusi"
 
 #: toolbars.py:139
 msgid "Tangent"
@@ -488,15 +552,15 @@ msgstr "Tangjenta"
 
 #: toolbars.py:145
 msgid "Arc sine"
-msgstr ""
+msgstr "Arc Sinusi"
 
 #: toolbars.py:149
 msgid "Arc cosine"
-msgstr ""
+msgstr "Arc Kosinus"
 
 #: toolbars.py:153
 msgid "Arc tangent"
-msgstr ""
+msgstr "Arc Tangjenta"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
@@ -516,15 +580,15 @@ msgstr "Llogjik dhe"
 
 #: toolbars.py:179
 msgid "Logical or"
-msgstr "Llogjike ose"
+msgstr "Logjike ose"
 
 #: toolbars.py:189
 msgid "Equals"
-msgstr "Barazi"
+msgstr "Barabartë"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr "Jo barazim"
+msgstr "Jo e barabartë"
 
 #: toolbars.py:199
 msgid "Pi"
@@ -534,10 +598,30 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
 #: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "Shkallë"
 
 #: toolbars.py:210
 msgid "Radians"
+msgstr "Radian"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Eksponent / simbol shkencorë"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

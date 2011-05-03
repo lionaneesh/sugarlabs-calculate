@@ -2,18 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-01-14 21:12+0000\n"
-"Last-Translator: Jaume <jaume@nualart.com>\n"
+"PO-Revision-Date: 2011-01-20 05:19+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -36,6 +46,10 @@ msgstr "Escribint al Diari (%s)"
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): caràcter invàlid"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "Filtre d'error"
 
 #: eqnparser.py:58
 #, python-format
@@ -81,6 +95,10 @@ msgstr "Funció error: %s"
 msgid "Variable '%s' not defined"
 msgstr "Variable '%s' no definida"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "Hi ha un parèntesi dret inesperat"
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "Error analitzant (parèntesi dret)"
@@ -93,6 +111,10 @@ msgstr "Parèntesi dret inesperat"
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "Error analitzant (parèntesi dret, no hi ha valor a l'esquerra)"
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "Error de filtre (hi ha un parèntesi dret, que mai no s'obra)"
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "Número inesperat"
@@ -100,6 +122,14 @@ msgstr "Número inesperat"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "Operador inesperat"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "Error de filtre: número o variable esperada"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "Número o variable esperada"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -153,14 +183,14 @@ msgstr ""
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr "atan"
+msgstr "atg"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"atan(x), torna l'arc tangent de x. Aquest és l'angle, la tangent del qual és "
+"atg(x), torna l'arc tangent de x. Aquest és l'angle, la tangent del qual és "
 "x. Definit per tota x"
 
 #: eqnparserhelp.py:54
@@ -297,9 +327,8 @@ msgid "square(x), return the square of x. Given by x * x"
 msgstr "square(x), torna el quadrat de x. Donat per x * x"
 
 #: eqnparserhelp.py:101
-#, fuzzy
 msgid "tan"
-msgstr "atan"
+msgstr "tg"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -307,249 +336,274 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tg(x), torna la tangent de x. Això es la pendent d'una línia que va des de "
+"l'origen d'un cercle de radi ú, fins al tall que l'angle x fa en el cercle. "
+"I ve donada per: sin(x) / cos(x)"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "th"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
+msgstr "tgh(x), torna la tangent hiperbòlica de x. Donat per sinh(x) / cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "Aquest comentari és un test. Fes help(index) per anar a l'índex"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "variables"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
 msgstr ""
+"variables(), torna una llista de les variable que estan definides ara mateix"
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), xor lògic. Torna True si la x és True (i la y és False) o  si la "
+"y és True (i la x és False), altrament torna False"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "índex"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "Temes"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"No hi ha ajuda disponible sobre '%s', fes help(index) per aner a l'índex"
+
+#: layout.py:44
+msgid "Clear"
+msgstr "Neteja"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "Entra"
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "Àlgebra"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometria"
 
 #: layout.py:63
 msgid "Boolean"
+msgstr "Booleà"
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Constants"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Etiqueta:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Totes les eqüacions"
 
 #: layout.py:118
 msgid "My equations"
+msgstr "Les meves eqüacions"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
 msgstr ""
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "Mostra històric"
 
 #: layout.py:120
 msgid "Show variables"
+msgstr "Mostra variables"
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "No definit"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Error: aquest tipus no està disponible"
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "Ajuda"
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Còpia"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "Enganxa"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "Talla"
 
 #: toolbars.py:99
-#, fuzzy
 msgid "Square"
-msgstr "quadrat"
+msgstr "Quadrat"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "Arrel quadrada"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Invers"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr ""
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr ""
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr ""
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr ""
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr ""
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr ""
-
-#: toolbars.py:149
-msgid "Arc cosine"
-msgstr ""
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr ""
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr ""
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr ""
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr ""
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr ""
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr ""
-
-#: toolbars.py:174
-msgid "Logical xor"
-msgstr ""
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr ""
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr ""
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr ""
-
-#: toolbars.py:202
-msgid "e"
-msgstr ""
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr ""
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr ""
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr ""
-
-#: eqnparser.py:504
-#, fuzzy
-msgid "Left parenthesis unexpected"
-msgstr "Parèntesi dret inesperat"
-
-#: eqnparser.py:534
-#, fuzzy
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Error analitzant (parèntesi dret, no hi ha valor a l'esquerra)"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr ""
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr ""
+msgstr "e elevat a x"
 
 #: toolbars.py:113
 msgid "x to the power y"
+msgstr "x elevat a y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "Logaritme natural"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "Factorial"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "Sinus"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "Cosinus"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "Tangent"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arc sinus"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arc cosinus"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arc tangent"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "Sinus hiperbòlic"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "Cosinus hiperbòlic"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "Tangent hiperbòlica"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "i lògic"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "o lògica"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "Iguals"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "No iguals"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "Graus"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "Radians"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Graus / radians"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

@@ -2,29 +2,38 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-09-03 01:20-0400\n"
-"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
+"PO-Revision-Date: 2011-02-14 18:53+0200\n"
+"Last-Translator: Zafimamy Gabriella Ralaivao <gabriella@intnet.mu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: mg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Kajio"
 
+# string = chaîne = tandava
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() rohy tsy mandeha (%s)"
+msgstr "Fimira.parisa() tohitohy tsy mety (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
@@ -32,33 +41,32 @@ msgstr "Ireo lefa misy:"
 
 #: calculate.py:504
 #, python-format
-#, fuzzy
 msgid "Writing to journal (%s)"
-msgstr "Manoratra ao amin'ny firaiketana (%s)"
+msgstr "Manoratra amin'ny firaketana (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): karazana tsy mandeha"
+msgstr "bokotra_tsindriana(): karazana tsy mety"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr "Fahadisoan'ny parisa"
+msgstr "Parisa diso"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "haavo: %d, ofs %d"
+msgstr "vita parisa: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr "Fahadisoana eo amin'ny %d"
+msgstr "Diso ao amin'ny %d"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Ampiasao ny fanampiana(andrana) ho an'ny fanampiana momba ny 'andrana', na "
-"fanampiana(fanondro) ho an'ny fanondro"
+"Ampiasao ny torohevitra(andrana) hahazoana torohevitra momba ny 'andrana', "
+"na torohevitra(fanondro) ho an'ny fanondro"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -68,12 +76,12 @@ msgstr "Lefa '%s' tsy voafaritra"
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Isan'ny arogimanta tsy mandeha (%d fa tsy %d)"
+msgstr "Tsy mety ny isan'ny arogimanta (%d raha tokony ho %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr "Mandray arogimanta %d ny lefa"
+msgstr "Maka arogimanta %d ny lefa"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
@@ -83,7 +91,7 @@ msgstr "Tsy afaka manaparisa arogimanta %d: '%s'"
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr "Fahadisoan'ny lefa: %s"
+msgstr "Lefa diso: %s"
 
 #: eqnparser.py:481
 #, python-format
@@ -92,51 +100,51 @@ msgstr "Ova '%s' tsy voafaritra"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr "Fonosana havia tsy ampoizina"
+msgstr "Fonosana ankavia tsy ampoizina hisy"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr "Fahadisoan'ny parisa (fonosana havanana)"
+msgstr "Parisa diso (fonosana ankavanana)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr "Fonosana havanana tsy ampoizina"
+msgstr "Fonosana ankavanana tsy ampoizina hisy"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Fahadisoan'ny parisa (fonosana havanana, tsy misy left_val)"
+msgstr "Parisa diso (fonosana ankavanana, tsy misy vadiny ankavia)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Fahadisoan'ny parisa (fonosana havanana, tsy misy haabo hohidiana)"
+msgstr "Fahadisoan'ny parisa (fonosana ankavanana, tsy misy akatona)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr "Isa tsy antenaina"
+msgstr "Tarehimarika tsy ampoizina hisy"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr "Mpandraharaha tsy antenaina"
+msgstr "Operatera tsy ampoizina hisy"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr "Fahadisoan'ny parisa: isa na ova antenaina"
+msgstr "Parisa diso: tarehimarika na ova ampoizina hisy"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr "Isa na ova antenaina"
+msgstr "Tarehimarika na ova ampoizina hisy"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr "Mpandraharaha tsy mandeha"
+msgstr "Operatera tsy mety"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr "Mpandraharaha antenaina"
+msgstr "Operatera ampoizina hisy"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr "_parse(): miverina ho tsy misy"
+msgstr "_parisa(): tsy misy valiny"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -150,8 +158,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), mamerina ny arika kosinan'i x. Io dia ilay zoro izay manana kosina "
-"x. Voafaritra ho an'ny -1 <= x < 1"
+"acos(x), manome ny arika kosinan'i x. Io dia ilay zoro manana kosina x. "
+"Voafaritra ho an'ny -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -161,8 +169,8 @@ msgstr "and"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), and laojika. Miverina ho Marina raha marina x sy y, raha tsy "
-"izany dia miverina ho Diso"
+"and(x, y), and laojika. Manome valiny Marina raha marina x sy y, raha tsy "
+"izany dia manome valiny Diso"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -173,7 +181,7 @@ msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"asin(x), mamerina ny arika sinan'i x. Io dia ilay zoro izay manana sina x. "
+"asin(x), manome ny arika sinan'i x. Io dia ilay zoro manana sina x. "
 "Voafaritra ho an'ny -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
@@ -185,8 +193,8 @@ msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"atan(x), mamerina ny arika tanzantin'i x. Io dia ilay zoro izay manana "
-"tanzanty x. Voafaritra ho an'ny x rehetra"
+"atan(x), manome ny arika tanzantin'i x. Io dia ilay zoro manana tanzanty x. "
+"Voafaritra ho an'ny x rehetra"
 
 #: eqnparserhelp.py:54
 msgid "cos"
@@ -197,8 +205,8 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), mamerina ny kosinan'i x. Io dia ilay kaoridone x amin'ny "
-"faribolan'ny ventin'isa eo amin'ny zoro x"
+"cos(x), manome ny kosinan'i x. Io dia ilay fangitra x eo amin'ny ventim-"
+"paribolana amin'ny zoro x"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
@@ -208,8 +216,8 @@ msgstr "cosh"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"cosh(x), mamerina ny kosina hiperibolikan'i x. Omen'ny (exp(x) + exp(-x)) / "
-"2"
+"cosh(x), manome ny kosina hiperibaolikan'i x. Azo avy amin'ny (exp(x) + "
+"exp(-x)) / 2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
@@ -217,7 +225,7 @@ msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "exp(x), mamerina ny ekspozana natoralin'i x. Omen'ny e^x"
+msgstr "exp(x), manome ny fanatorahana natoralin'i x. Azo avy amin'ny e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
@@ -226,16 +234,16 @@ msgstr "fac"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"fac(x), mamerina ny factoriel an'i x. Omen'ny x * (x - 1) * (x - 2) * ..."
+"fac(x), manome ny fananon'i x. Azo avy amin'ny x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr "Ireo lefy"
+msgstr "Ireo lefa"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "functions(), mamerina lisitra iray misy ireo lefa rehetra voafaritra"
+msgstr "functions(), manome ny lisitr'ireo lefa rehetra izay voafaritra"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -246,18 +254,17 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), mamerina ny laogaritima natoralin'i x. Io dia ilay sanda manana "
-"exponent exp() mira x. Voafaritra ho an'i x >= 0."
+"ln(x), manome ny laogaritima natoralin'i x. Io dia ilay sanda manana "
+"fanatorahana exp() mira x. Voafaritra ho an'i x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr "mpandraharaha"
+msgstr "operatera"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
-"operators(), mamerina lisitra iray misy ireo mpandraharaha izay voafaritra"
+msgstr "operators(), manome ny lisitr'ireo operatera izay voafaritra"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -267,8 +274,8 @@ msgstr "or"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"or(x, y), or laojika. Miverina ho Marina raha Marina x na/sy y, rata tsy "
-"izany dia miverina ho Diso"
+"or(x, y), or laojika. Manome valiny Marina raha Marina x na/sy y, raha tsy "
+"izany dia manome valiny Diso"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -279,8 +286,8 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b), manoritra ny fimpimirana 'eqn' misy ova 'var' eo "
-"amin'ny lalaka manomboka amin'ny a ka hatramin'ny b"
+"plot(eqn, var=-a..b), manoritra ny fimira 'eqn' misy ova 'var' eo amin'ny "
+"lalaka manomboka amin'ny a ka hatramin'ny b"
 
 #: eqnparserhelp.py:86
 msgid "sin"
@@ -291,8 +298,8 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), mamerina ny sinan'i x. Io dia ilay coordonnée y eo amin'ny "
-"faribolan'ny ventin'isa eo amin'ny zoro x"
+"sin(x), manome ny sinan'i x. Io dia ilay fangitra y amin'ny ventim-"
+"paribolana eo amin'ny zoro x"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
@@ -302,7 +309,8 @@ msgstr "sinh"
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"sinh(x), mamerina ny sina hiperibaolikan'i x. Omen'ny (exp(x) - exp(-x)) / 2"
+"sinh(x), manome ny sina hiperibaolikan'i x. Azo avy amin'ny (exp(x) - "
+"exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
@@ -313,8 +321,8 @@ msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"sqrt(x), mamerina ny racine carrée an'i x. Io ilay sanda manana carré mira "
-"x. Voafaritra ha an'ny x >= 0."
+"sqrt(x), manome ny faka toradroan'i x. Io ilay sanda manana toradroa mira x. "
+"Voafaritra ho an'ny x >= 0."
 
 #: eqnparserhelp.py:97
 msgid "square"
@@ -322,7 +330,7 @@ msgstr "square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x), mamerina ny carré an-i x. Omen'ny x * x"
+msgstr "square(x), manome ny toradroan'i x. Azo avy amin'ny x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -417,19 +425,23 @@ msgstr "Trigonometria"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "Booleana"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Tsy voasokajy"
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Konstanta"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Endrika"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Marika:"
 
 #: layout.py:118
 msgid "All equations"
@@ -439,13 +451,21 @@ msgstr "Ireo lefa"
 msgid "My equations"
 msgstr "Ireo lefako"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Ovao ny seho manelanelana ny lefy rehetra sy ny ahy"
+
 #: layout.py:120
 msgid "Show history"
-msgstr "Asehoy ny tantara"
+msgstr "Asehoy ny diary"
 
 #: layout.py:120
 msgid "Show variables"
 msgstr "Asehoy ireo ova"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Ovao ny seho manelanelana ny diary sy ireo ova"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -463,7 +483,7 @@ msgstr "Tsy voafaritra"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr "Fahadisoana: karazana tsy zaka"
+msgstr "Olana: karazana tsy zaka"
 
 #: toolbars.py:36
 msgid "Help"
@@ -479,7 +499,7 @@ msgstr "Apetaho"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr "Tapaho"
+msgstr "Hetezo"
 
 #: toolbars.py:99
 msgid "Square"
@@ -488,6 +508,10 @@ msgstr "Carré"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Racine carrée"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Ivohony"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -530,9 +554,8 @@ msgid "Arc tangent"
 msgstr "Arika tanzanty"
 
 #: toolbars.py:159
-#, fuzzy
 msgid "Hyperbolic sine"
-msgstr "Kosina hiperibaolika"
+msgstr "Sina hiperibaolika"
 
 #: toolbars.py:163
 msgid "Hyperbolic cosine"
@@ -566,6 +589,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Sorito"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Degire"
@@ -573,3 +600,19 @@ msgstr "Degire"
 #: toolbars.py:210
 msgid "Radians"
 msgstr "Radiana"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Degire / radiana"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Fanatorahana / fanamarihana siantifika"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Isan'ny tarehimarika aseho"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Fototra mandrafitra isa natoraly"

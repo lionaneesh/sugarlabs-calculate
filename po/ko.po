@@ -2,74 +2,83 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2009-05-13 13:00-0400\n"
+"Last-Translator: Donghee Park <i4u_4ever@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "계산 활동"
 
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() 문자열이 옳지 않습니다 (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "사용 가능한 함수:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "일지에 쓰기 (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed(): 옮지 않은 타입"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Parse 에러"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "레벨: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "%d 에서 에러"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
+msgstr "'test' 에 대한 도움이 필요할때는 help(test), 목록을 볼려면 help(index)를 사용하세요 "
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "함수 '%s' 가 정의되지 않았습니다"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "인자의 갯수가 옳지 않습니다 (%d 대신 %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "함수는 %d개의 인자를 가지고 있습니다"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
@@ -355,6 +364,14 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr ""
@@ -369,6 +386,10 @@ msgstr ""
 
 #: layout.py:63
 msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
@@ -391,12 +412,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -441,8 +470,16 @@ msgstr ""
 msgid "Square root"
 msgstr ""
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
 #: toolbars.py:109
 msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""
 
 #: toolbars.py:117
@@ -513,6 +550,10 @@ msgstr ""
 msgid "e"
 msgstr ""
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr ""
@@ -521,6 +562,18 @@ msgstr ""
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:113
-msgid "x to the power y"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -7,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-02-24 23:24+0200\n"
+"PO-Revision-Date: 2010-12-12 10:24+0200\n"
 "Last-Translator: samy boutayeb <s.boutayeb@free.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: fr\n"
@@ -15,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -430,6 +438,10 @@ msgstr "Trigonométrie"
 msgid "Boolean"
 msgstr "Booléen"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Divers"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Constantes"
@@ -450,6 +462,10 @@ msgstr "Toutes les équations"
 msgid "My equations"
 msgstr "Mes équations"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Basculer entre la vue Mes équations et Toutes les équations"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Afficher l'historique"
@@ -457,6 +473,10 @@ msgstr "Afficher l'historique"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Afficher les variables"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Basculer entre Afficher l'historique et Afficher les variables"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -499,6 +519,10 @@ msgstr "Carré"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Racine carrée"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inverse"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -576,6 +600,10 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Degrés"
@@ -584,11 +612,21 @@ msgstr "Degrés"
 msgid "Radians"
 msgstr "Radians"
 
-#~ msgid "Inverse"
-#~ msgstr "Inverse"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Dégrés / radians"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Dégrés / radians"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Notation exposants / scientifique"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Nombre de chiffres visibles"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Base de format des entiers"
 
 # ----------------------------------------
 # The help system uses topic msgid's that should be translated here.

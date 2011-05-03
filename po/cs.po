@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2011-01-24 06:05+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "počítat"
 
 #: calculate.py:80
 #, python-format
@@ -40,7 +49,7 @@ msgstr ""
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Zpracování chyb"
 
 #: eqnparser.py:58
 #, python-format
@@ -139,7 +148,7 @@ msgstr ""
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:40
 msgid ""
@@ -149,7 +158,7 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "a"
 
 #: eqnparserhelp.py:44
 msgid ""
@@ -158,7 +167,7 @@ msgstr ""
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
@@ -168,7 +177,7 @@ msgstr ""
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
@@ -178,7 +187,7 @@ msgstr ""
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
 #: eqnparserhelp.py:55
 msgid ""
@@ -188,7 +197,7 @@ msgstr ""
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "cosh"
 
 #: eqnparserhelp.py:59
 msgid ""
@@ -197,7 +206,7 @@ msgstr ""
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -205,7 +214,7 @@ msgstr ""
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -214,7 +223,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "funkce"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
@@ -222,7 +231,7 @@ msgstr ""
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "v"
 
 #: eqnparserhelp.py:72
 msgid ""
@@ -233,7 +242,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "operátoři"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
@@ -241,7 +250,7 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "nebo"
 
 #: eqnparserhelp.py:80
 msgid ""
@@ -250,7 +259,7 @@ msgstr ""
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "plot"
 
 #: eqnparserhelp.py:83
 msgid ""
@@ -260,7 +269,7 @@ msgstr ""
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:87
 msgid ""
@@ -270,7 +279,7 @@ msgstr ""
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "sinh"
 
 #: eqnparserhelp.py:91
 msgid ""
@@ -279,7 +288,7 @@ msgstr ""
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
@@ -289,7 +298,7 @@ msgstr ""
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "kvadrát"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
@@ -297,7 +306,7 @@ msgstr ""
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "tan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -308,7 +317,7 @@ msgstr ""
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "tanh"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
@@ -316,7 +325,7 @@ msgstr ""
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
@@ -325,7 +334,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "proměnná"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
@@ -333,7 +342,7 @@ msgstr ""
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xnebo"
 
 #: eqnparserhelp.py:117
 msgid ""
@@ -344,11 +353,11 @@ msgstr ""
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "index"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "témata"
 
 #: eqnparserhelp.py:143
 #, python-format
@@ -357,69 +366,81 @@ msgstr ""
 
 #: layout.py:44
 msgid "Clear"
-msgstr ""
+msgstr "smazat"
 
 #: layout.py:53
 msgid "Enter"
-msgstr ""
+msgstr "potvrdit"
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "Algebra"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometrie"
 
 #: layout.py:63
 msgid "Boolean"
+msgstr "Booleova algebra"
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Konstanty"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Formát"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "štítek:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Všechny výpočty"
 
 #: layout.py:118
 msgid "My equations"
+msgstr "Mých výpočtů"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
 msgstr ""
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "Zobrazit historii"
 
 #: layout.py:120
 msgid "Show variables"
+msgstr "Zobrazit historii"
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "*"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "/"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "Undefined"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
@@ -427,26 +448,30 @@ msgstr ""
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "pomoc"
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovat"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "Vložit"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "Vystřihnout"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "Čtverec"
 
 #: toolbars.py:103
 msgid "Square root"
+msgstr "odmocnina"
+
+#: toolbars.py:157
+msgid "Inverse"
 msgstr ""
 
 #: toolbars.py:109
@@ -459,23 +484,23 @@ msgstr ""
 
 #: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Přirozený logaritmus"
 
 #: toolbars.py:123
 msgid "Factorial"
-msgstr ""
+msgstr "Fakulta"
 
 #: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "Sinus"
 
 #: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "Kosinus"
 
 #: toolbars.py:139
 msgid "Tangent"
-msgstr ""
+msgstr "Tangens"
 
 #: toolbars.py:145
 msgid "Arc sine"
@@ -515,15 +540,20 @@ msgstr ""
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "Nerovný"
 
 #: toolbars.py:199
 msgid "Pi"
-msgstr ""
+msgstr "Pi"
 
 #: toolbars.py:202
 msgid "e"
-msgstr ""
+msgstr "e"
+
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
 
 #: toolbars.py:209
 msgid "Degrees"
@@ -531,4 +561,20 @@ msgstr ""
 
 #: toolbars.py:210
 msgid "Radians"
+msgstr "Radián"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

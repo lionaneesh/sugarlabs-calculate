@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# translation of calculate-activity.po to Norsk bokmål
+# Kent Dahl <kentda@pvv.org>, 2008.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2009-09-02 01:41-0400\n"
+"Last-Translator: Chris Leonard <cjl@laptop.org>\n"
+"Language-Team: Norsk bokmål <i18n-no@lister.ping.uio.no>\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Beregne"
 
 #: calculate.py:80
 #, python-format
@@ -27,12 +36,12 @@ msgstr ""
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "Tilgjengelige funksjoner:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Skriver til dagbok (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
@@ -50,7 +59,7 @@ msgstr ""
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Feil ved %d"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
@@ -59,36 +68,36 @@ msgstr ""
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Funksjon '%s' er ikke definert"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Ugylding antall argumenter (%d i stedet for %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "funsksjon tar %d argumenter"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Kunne ikke tolke argument %d: '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Funksjonsfeil: %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "Variabel '%s' er ikke definert"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "Venstre parentes uventet"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
@@ -96,7 +105,7 @@ msgstr ""
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Høyre parentes uventet"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
@@ -288,8 +297,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:97
+#, fuzzy
 msgid "square"
-msgstr ""
+msgstr "Kvadrat"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
@@ -311,7 +321,7 @@ msgid "tanh"
 msgstr ""
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 
 #: eqnparserhelp.py:109
@@ -355,9 +365,17 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Endre"
 
 #: layout.py:61
 msgid "Algebra"
@@ -369,6 +387,10 @@ msgstr ""
 
 #: layout.py:63
 msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
@@ -391,12 +413,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -409,126 +439,142 @@ msgstr ""
 msgid "div_sym"
 msgstr ""
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr ""
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr ""
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "Hjelp"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr ""
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr ""
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "Kvadrat"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "Kvadratrot"
 
-#: toolbars.py:137
+#: toolbars.py:157
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
+msgstr "e opphøyd i x"
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "x opphøyd i y"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Naturlig logaritme"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "Sinus"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "Cosinus"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "Logisk og"
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "Logisk eller"
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "Lik"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "Ulik"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr ""
 
-#: toolbars.py:247
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
+#: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "Grader"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
+msgstr "Radianer"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
 msgstr ""
 
-#: toolbars.py:252
-msgid "Degrees / radians"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

@@ -2,11 +2,19 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-23 00:30-0400\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: 2008-02-11 08:15+0100\n"
 "Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -345,7 +353,7 @@ msgstr "టాన్ హెచ్"
 
 #: eqnparserhelp.py:107
 #, fuzzy
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "సైన్ (x), x యొక్క అతిపరావలయ టాంజెంట్ ను చూపుము. ఈ విధంగా sinh(x) / cosh(x)"
 
@@ -392,6 +400,14 @@ msgstr "విషయాలు"
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "'%s' గురించి సహాయము అందుబాటులో లేదు, సహాయము(సూచిక) నువాడండి"
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr "కూర్చు"
@@ -407,6 +423,10 @@ msgstr "త్రికోణమితి"
 #: layout.py:63
 msgid "Boolean"
 msgstr "బూలియాన్"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
 
 #: layout.py:64
 msgid "Constants"
@@ -428,6 +448,10 @@ msgstr "అన్ని సమీకరణాలు"
 msgid "My equations"
 msgstr "నా సమీకరణాలు"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "గతచరిత్ర చూపు"
@@ -435,6 +459,10 @@ msgstr "గతచరిత్ర చూపు"
 #: layout.py:120
 msgid "Show variables"
 msgstr "వేరియబుల్స్ ని చూపుము"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -446,126 +474,143 @@ msgstr "*"
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "నిర్వచింపబడలేదు"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "దోషం: సప్పోర్టు లేని రకము"
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr "సహాయము"
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr "నకలు"
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr "అతికించు"
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr "కత్తిరించు"
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr "నలుచదరము"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr "వర్గమూలం"
 
-#: toolbars.py:137
+#: toolbars.py:157
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr "ఇ(e) టు ది పవర్ ఆఫ్ ఎక్స్(x)"
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr "ఎక్స్(x) టు ది పవర్ ఆఫ్ వై(y)"
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr "సహజ లాగరిథం"
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr "ఫాక్టోరియల్"
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr "సైన్"
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr "కొసైన్"
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr "టాంజెంట్"
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr "ఆర్క్ సైన్"
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr "ఆర్క్ కొసైన్"
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr "ఆర్క్ టాంజెంట్"
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr "హైపర్ బోలిక్ సైన్"
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr "హైపర్ బోలిక్ కొసైన్"
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr "హైపర్ బోలికం టాంజెట్"
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr "లాజికల్ మరియు"
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr "లాజికల్ లేదా"
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr "సమానము"
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr "అసమానము"
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr "పై (Pi)"
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr "ఇ (e)"
 
-#: toolbars.py:247
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "ప్లాట్"
+
+#: toolbars.py:209
 msgid "Degrees"
 msgstr "డిగ్రీలు"
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr "రేడియనులు"
 
-#: toolbars.py:252
+#: toolbars.py:292
 msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

@@ -2,22 +2,148 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-20 19:45+0530\n"
-"PO-Revision-Date: 2008-09-26 09:18-0400\n"
-"Last-Translator: abdullah kocabas <abdullah.kocabas@abcdizustu.com>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2011-02-16 02:43+0200\n"
+"Last-Translator: <arslanilker@windowslive.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Hesap Makinesi"
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "eşitlik.ayırma() dizi geçerli değildir (%s)."
+
+#: calculate.py:210
+msgid "Available functions:"
+msgstr "geçerli fonksiyonlar"
+
+#: calculate.py:504
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "günlüğe yazınız (%s)."
+
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr "basılan tuş: geçersiz türdür."
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "ayrım hatası"
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
+msgstr "seviye: %d'nin %d'sidir."
+
+#: eqnparser.py:117
+#, python-format
+msgid "Error at %d"
+msgstr "%d'de hata vardır."
+
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"'test'ler hakkında yardım için yardım(test)i kullanın ya da içerik için "
+"yardım(içerik)i kullanın."
+
+#: eqnparser.py:353 eqnparser.py:354
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' fonksiyonu tanımlı değildir."
+
+#: eqnparser.py:359
+#, python-format
+msgid "Invalid number of arguments (%d instead of %d)"
+msgstr "geçersiz argüman sayısı (%d yerine %d)"
+
+#: eqnparser.py:360
+#, python-format
+msgid "function takes %d args"
+msgstr "fonksiyon %d args alır."
+
+#: eqnparser.py:370 eqnparser.py:371
+#, python-format
+msgid "Unable to parse argument %d: '%s'"
+msgstr "%d argümanını ayıramıyor: '%s'"
+
+#: eqnparser.py:380
+#, python-format
+msgid "Function error: %s"
+msgstr "görev hatası: %s"
+
+#: eqnparser.py:481
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "'%s' değişkeni tanımlanamıyor."
+
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "sol parantezler kullanılmamış."
+
+#: eqnparser.py:516
+msgid "Parse error (right parenthesis)"
+msgstr "ayırma hatası (sağ parantezler)"
+
+#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
+msgid "Right parenthesis unexpected"
+msgstr "sağ parantezler kullanılmamıştır."
+
+#: eqnparser.py:527
+msgid "Parse error (right parenthesis, no left_val)"
+msgstr "ayırma hatası (sağ parantez, solda boşluk yok)"
+
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "ayırma hatası (sağ parantez, kapatma yeri yok)"
+
+#: eqnparser.py:541 eqnparser.py:542
+msgid "Number not expected"
+msgstr "sayı kullanılmıyor."
+
+#: eqnparser.py:550
+msgid "Operator not expected"
+msgstr "işletici kullanılmıyor."
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "ayırma hatası: sayı ya da değişken bekleniyor."
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "sayı ya da değişken bekleniyor."
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr "geçersiz işletici"
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr "işletici bekleniyor."
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
+msgstr "_ayrım(): hiçbirine dönmeyiniz."
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
@@ -211,7 +337,7 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x), hiperbolik tanjant x'i verir. sinh(x) / cosh(x) ile gösterilir"
 
 #: eqnparserhelp.py:109
@@ -243,12 +369,6 @@ msgstr ""
 "xor(x,y) mantıksal xor'dur. x doğru (ve y yanlışsa)veya y doğru ( ve x "
 "yanlışsa) ise doğrudur, değilse yanlıştır."
 
-#: eqnparserhelp.py:128 eqnparser.py:249
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"'test'ler hakkında yardım için yardım(test)i kullanın ya da içerik için "
-"yardım(içerik)i kullanın."
-
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
@@ -264,97 +384,13 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 "'%s' hakkında yardım mevcut değil, içerik için yardım(içerik)'i kullanın."
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "ayrım hatası"
+#: layout.py:44
+msgid "Clear"
+msgstr "Temizleyiniz"
 
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "seviye: %d'nin %d'sidir."
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "%d'de hata vardır."
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' fonksiyonu tanımlı değildir."
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "geçersiz argüman sayısı (%d yerine %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "fonksiyon %d args alır."
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "%d argümanını ayıramıyor: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "görev hatası: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "'%s' değişkeni tanımlanamıyor."
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "sol parantezler kullanılmamış."
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "ayırma hatası (sağ parantezler)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "sağ parantezler kullanılmamıştır."
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "ayırma hatası (sağ parantez, solda boşluk yok)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "ayırma hatası (sağ parantez, kapatma yeri yok)"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "sayı kullanılmıyor."
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "işletici kullanılmıyor."
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "ayırma hatası: sayı ya da değişken bekleniyor."
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "sayı ya da değişken bekleniyor."
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "geçersiz işletici"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "işletici bekleniyor."
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_ayrım(): hiçbirine dönmeyiniz."
+#: layout.py:53
+msgid "Enter"
+msgstr "Enter tuşuna basınız"
 
 #: layout.py:60
 msgid "Edit"
@@ -371,6 +407,10 @@ msgstr "trigonometri"
 #: layout.py:63
 msgid "Boolean"
 msgstr "doğru ve yanlış değer alan"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Çeşitli"
 
 #: layout.py:64
 msgid "Constants"
@@ -392,6 +432,10 @@ msgstr "tüm eşitlikler"
 msgid "My equations"
 msgstr "eşitliklerim"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Kendi denklemin ve tüm denklemler arasında görünümü değiştir"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "geçmişi gösteriniz."
@@ -400,121 +444,9 @@ msgstr "geçmişi gösteriniz."
 msgid "Show variables"
 msgstr "değişkenleri gösteriniz."
 
-#: toolbars.py:53
-msgid "Help"
-msgstr "yardım"
-
-#: toolbars.py:111
-msgid "Copy"
-msgstr "kopyalayınız."
-
-#: toolbars.py:115
-msgid "Paste"
-msgstr "yapıştırınız."
-
-#: toolbars.py:119
-msgid "Cut"
-msgstr "kesiniz."
-
-#: toolbars.py:127
-msgid "Square"
-msgstr "kare"
-
-#: toolbars.py:132
-msgid "Square root"
-msgstr "karekök"
-
-#: toolbars.py:137
-msgid "Inverse"
-msgstr "ters"
-
-#: toolbars.py:144
-msgid "e to the power x"
-msgstr "e üssü x"
-
-#: toolbars.py:149
-msgid "x to the power y"
-msgstr "x üssü y"
-
-#: toolbars.py:154
-msgid "Natural logarithm"
-msgstr "doğal logaritma"
-
-#: toolbars.py:160
-msgid "Factorial"
-msgstr "çarpım"
-
-#: toolbars.py:168
-msgid "Sine"
-msgstr "sine"
-
-#: toolbars.py:172
-msgid "Cosine"
-msgstr "cosine"
-
-#: toolbars.py:176
-msgid "Tangent"
-msgstr "tanjant"
-
-#: toolbars.py:182
-msgid "Arc sine"
-msgstr "Arc sine"
-
-#: toolbars.py:186
-msgid "Arc cosine"
-msgstr "Arc cosine"
-
-#: toolbars.py:190
-msgid "Arc tangent"
-msgstr "Arc tanjant"
-
-#: toolbars.py:196
-msgid "Hyperbolic sine"
-msgstr "hiperbolik sine"
-
-#: toolbars.py:200
-msgid "Hyperbolic cosine"
-msgstr "hiperbolik cosine"
-
-#: toolbars.py:204
-msgid "Hyperbolic tangent"
-msgstr "hiperbolik tanjant"
-
-#: toolbars.py:212
-msgid "Logical and"
-msgstr "mantıksal doğrulama"
-
-#: toolbars.py:216
-msgid "Logical or"
-msgstr "mantıksal seçenekleme"
-
-#: toolbars.py:226
-msgid "Equals"
-msgstr "eşit"
-
-#: toolbars.py:229
-msgid "Not equals"
-msgstr "eşit değil"
-
-#: toolbars.py:236
-msgid "Pi"
-msgstr "pi"
-
-#: toolbars.py:240
-msgid "e"
-msgstr "e"
-
-#: toolbars.py:247
-msgid "Degrees"
-msgstr "derece"
-
-#: toolbars.py:248
-msgid "Radians"
-msgstr "radyan"
-
-#: toolbars.py:252
-msgid "Degrees / radians"
-msgstr "radyan derecesi"
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Tarih ve değişkenler arasında görünüm değiştir"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -526,28 +458,142 @@ msgstr "çarpma sembolü '*'"
 msgid "div_sym"
 msgstr "bölme sembolü '/'"
 
-#: mathlib.py:134
+#: mathlib.py:132
 msgid "Undefined"
 msgstr "tanımsız"
 
-#: mathlib.py:144
+#: mathlib.py:142
 msgid "Error: unsupported type"
 msgstr "hata: desteklenmeyen tür"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "eşitlik.ayırma() dizi geçerli değildir (%s)."
+#: toolbars.py:36
+msgid "Help"
+msgstr "yardım"
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "geçerli fonksiyonlar"
+#: toolbars.py:86
+msgid "Copy"
+msgstr "kopyalayınız."
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "günlüğe yazınız (%s)."
+#: toolbars.py:89
+msgid "Paste"
+msgstr "yapıştırınız."
 
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "basılan tuş: geçersiz türdür."
+#: toolbars.py:92
+msgid "Cut"
+msgstr "kesiniz."
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "kare"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "karekök"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "ters"
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e üssü x"
+
+#: toolbars.py:113
+msgid "x to the power y"
+msgstr "x üssü y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "doğal logaritma"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "çarpım"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "sine"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "cosine"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "tanjant"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "Arc sine"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "Arc cosine"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "Arc tanjant"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "hiperbolik sine"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "hiperbolik cosine"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "hiperbolik tanjant"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "mantıksal doğrulama"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "mantıksal seçenekleme"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "eşit"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "eşit değil"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "pi"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Grafik çiz"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "derece"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "radyan"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "radyan derecesi"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Üslü / Bilimsel gösterim"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Gösterilen hane sayısı"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""

@@ -2,6 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -417,6 +425,10 @@ msgstr "Goniometrie"
 msgid "Boolean"
 msgstr "Boolse"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Constanten"
@@ -437,6 +449,10 @@ msgstr "Alle vergelijkingen"
 msgid "My equations"
 msgstr "Mijn vergelijkingen"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Toon geschiedenis"
@@ -444,6 +460,10 @@ msgstr "Toon geschiedenis"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Toon variabelen"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -486,6 +506,10 @@ msgstr "Kwadraat"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Wortel"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inverse"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -563,6 +587,11 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "teken"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Graden"
@@ -571,11 +600,21 @@ msgstr "Graden"
 msgid "Radians"
 msgstr "Radialen"
 
-#~ msgid "Inverse"
-#~ msgstr "Inverse"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Graden / radialen"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Graden / radialen"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
 
 #, python-format
 #~ msgid "Reading from journal (%s)"

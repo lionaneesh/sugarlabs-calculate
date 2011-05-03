@@ -2,20 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-06-20 01:57-0400\n"
-"Last-Translator: Deependra Ariyadewa <deependra@gmail.com>\n"
+"PO-Revision-Date: 2011-01-22 16:02+0200\n"
+"Last-Translator: Thangamani <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -418,6 +426,10 @@ msgstr "திரிகோணகணிதம்"
 msgid "Boolean"
 msgstr "பூழியன்"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "மற்றவை"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "மாறிலிகள்"
@@ -438,6 +450,10 @@ msgstr "அனைத்து சமன்பாடுகளும்"
 msgid "My equations"
 msgstr "எனதுசமன்பாடுகள்"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "சொந்த மற்றும் அனைத்து சமன்பாடுகளுக்கும் பார்வையை மாற்று"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "வரலாற்றைக் காட்டு"
@@ -445,6 +461,10 @@ msgstr "வரலாற்றைக் காட்டு"
 #: layout.py:120
 msgid "Show variables"
 msgstr "மாறிகளைக்காட்டு"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "வரலாறு மற்றும் மாறிலிகளுக்கு இடைப்பட்ட பார்வையை மாற்று"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -487,6 +507,10 @@ msgstr "சதுரம்"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "வர்க்கமூலம்"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "தழைகீழ்"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -564,6 +588,10 @@ msgstr "பை"
 msgid "e"
 msgstr "இ"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "வரை"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "நிலை"
@@ -571,3 +599,19 @@ msgstr "நிலை"
 #: toolbars.py:210
 msgid "Radians"
 msgstr "ஒளிக்கதிர்கள்"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "கோணங்கள்/கோணளவு"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "எக்ஸ்போனன்ட் / அறிவியல் குறிப்பு"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "காட்டப்பட்டுள்ள எண்ணிலக்கங்கள்"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""

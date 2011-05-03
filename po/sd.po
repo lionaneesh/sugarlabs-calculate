@@ -2,12 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 00:30-0500\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -355,6 +363,14 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr ""
@@ -369,6 +385,10 @@ msgstr ""
 
 #: layout.py:63
 msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
@@ -391,12 +411,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -417,118 +445,134 @@ msgstr ""
 msgid "Error: unsupported type"
 msgstr ""
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr ""
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr ""
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr ""
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr ""
 
-#: toolbars.py:127
+#: toolbars.py:99
 msgid "Square"
 msgstr ""
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
-#: toolbars.py:137
+#: toolbars.py:157
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr ""
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr ""
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr ""
 
-#: toolbars.py:247
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
+#: toolbars.py:209
 msgid "Degrees"
 msgstr ""
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:252
+#: toolbars.py:292
 msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

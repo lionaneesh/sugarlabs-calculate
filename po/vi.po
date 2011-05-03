@@ -2,6 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -407,6 +415,10 @@ msgstr "Lượng giác"
 msgid "Boolean"
 msgstr "Luận lý"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Hằng số"
@@ -427,6 +439,10 @@ msgstr "Mọi phương trình"
 msgid "My equations"
 msgstr "Phương trình của mình"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Hiện lịch sử"
@@ -434,6 +450,10 @@ msgstr "Hiện lịch sử"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Hiện các biến"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -476,6 +496,10 @@ msgstr "Bình phương"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Căn bậc hai"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -553,6 +577,11 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Độ"
@@ -560,3 +589,19 @@ msgstr "Độ"
 #: toolbars.py:210
 msgid "Radians"
 msgstr "Radian"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""

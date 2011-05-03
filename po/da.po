@@ -2,302 +2,336 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2011-04-06 03:38+0200\n"
+"Last-Translator: Aputsiaq <aj@isit.gl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Beregn"
 
 #: calculate.py:80
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() streng ugyldig (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "Tilgængelige funktioner:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Skriver til journal (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed(): ugyldig type"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Fortolkningsfejl"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "niveau: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Fejl ved %d"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
+msgstr "Benyt help(test) for hjælp om 'test', eller help(index) for oversigt"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Funktionen '%s' er ikke defineret"
 
 #: eqnparser.py:359
 #, python-format
 msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
+msgstr "Ugyldigt antal argumenter (%d i stedet for %d)"
 
 #: eqnparser.py:360
 #, python-format
 msgid "function takes %d args"
-msgstr ""
+msgstr "funktionen tager %d argum"
 
 #: eqnparser.py:370 eqnparser.py:371
 #, python-format
 msgid "Unable to parse argument %d: '%s'"
-msgstr ""
+msgstr "Ikke i stand til at fortolke argument %d: '%s'"
 
 #: eqnparser.py:380
 #, python-format
 msgid "Function error: %s"
-msgstr ""
+msgstr "Funktionsfejl: %s"
 
 #: eqnparser.py:481
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "Variabel '%s' er ikke defineret"
 
 #: eqnparser.py:504
 msgid "Left parenthesis unexpected"
-msgstr ""
+msgstr "Venstreparentes er uventet"
 
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
-msgstr ""
+msgstr "Fortolkningsfejl (højreparantes)"
 
 #: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
 msgid "Right parenthesis unexpected"
-msgstr ""
+msgstr "Højreparentes er uventet"
 
 #: eqnparser.py:527
 msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
+msgstr "Fortolkningsfejl (højreparantes, ikke venstreværdi, left_val)"
 
 #: eqnparser.py:534
 msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
+msgstr "Fortolkningsfejl (højreparantes, intet niveau at lukke)"
 
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
-msgstr ""
+msgstr "Talværdi er ikke forventet"
 
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
+msgstr "Operator er ikke forventet"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr ""
+msgstr "Fortolkningsfejl: talværdi eller variabel forventet"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr ""
+msgstr "Talværdi eller variabel forventet"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "Ugyldig operator"
 
 #: eqnparser.py:603
 msgid "Operator expected"
-msgstr ""
+msgstr "Operator er forventet"
 
 #: eqnparser.py:616
 msgid "_parse(): returning None"
-msgstr ""
+msgstr "_parse(): returnerer None"
 
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:40
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"acos(x), returnerer arc cosinus af x. Dette er vinklen, hvor det gælder at "
+"cosinus er x. Defineret ved -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "and"
 
 #: eqnparserhelp.py:44
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"and(x, y), logisk og. Returnerer True hvis x og y er True, hvis ikke "
+"returneres False (True betyder Sand, False betyder Falsk)"
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"asin(x), returnerer arc sinus af x. Dette er vinklen hvor det gælder at "
+"sinus er x. Defineret ved -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"atan(x), returnerer arc tangenten for x. Dette er vinklen hvor det gælder at "
+"tangenten er x. Defineret ved alle x"
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
 #: eqnparserhelp.py:55
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"cos(x), returnerer cosinus af x. Dette er det x-koordinat på enhedscirklen "
+"ved vinklen x"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "cosh"
 
 #: eqnparserhelp.py:59
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cosh(x), returnerer det hyperbolske cosinus af x. Givet ved (exp(x) + "
+"exp(-x)) / 2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
+msgstr "exp(x), returnerer den naturlige eksponent af x. Givet ved e^x"
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
+"fac(x), returnerer fakulteten af x. Givet ved x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
 msgid "functions"
-msgstr ""
+msgstr "functions"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
+msgstr "functions(), returnerer en liste af alle de funktioner som er defineret"
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "ln"
 
 #: eqnparserhelp.py:72
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"ln(x), returnerer den naturlige logaritme for x. Dette er værdien for "
+"hvilken eksponenten exp() er lig med x. Defineret ved x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
 msgid "operators"
-msgstr ""
+msgstr "operatorer"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr ""
+msgstr "operators(), returnerer en liste af de operatorer som er defineret"
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: eqnparserhelp.py:80
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
+"or(x, y), logisk eller. Returnerer True hvis x og/eller y er sande, hvis "
+"ikke returneres False (falsk)"
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "plot"
 
 #: eqnparserhelp.py:83
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"plot(eqn, var=-a..b), plotter ligningen 'eqn' med variablen 'var' i "
+"intervallet fra a til b"
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:87
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"sin(x), returnerer sinus af x. Dette er y-koordinatet på enhedscirklen ved "
+"vinklen x"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "sinh"
 
 #: eqnparserhelp.py:91
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"sinh(x), returnerer den hyperbolske sinus for x. Givet ved (exp(x) - "
+"exp(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x), returnerer kvadratroden af x. Dette er værdien hvor det gælder at "
+"kvadratet er lig med x. Defineret ved x >= 0."
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+msgstr "square(x), returnerer kvadratet af x. Givet ved x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
-msgstr ""
+msgstr "tan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -305,230 +339,275 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x), returnerer tangenten af x. Dette er den hældning på linjen fra "
+"udgangspunktet på enhedscirklen til punktet på enhedscirklen som er "
+"defineret ved vinklen x. Givet ved sin(x) / cos(x)"
 
 #: eqnparserhelp.py:106
 msgid "tanh"
-msgstr ""
+msgstr "tanh"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"sinh(x), returnerer den hyperbolske tangent for x. Givet ved sinh(x) / "
+"cosh(x)"
 
 #: eqnparserhelp.py:109
 msgid "test"
-msgstr ""
+msgstr "test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "Dette er blot et test-emne, brug help(index) for oversigten"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
 msgid "variables"
-msgstr ""
+msgstr "variabler"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
 msgstr ""
+"variables(), returnerer en liste af de variabler som i øjeblikket er "
+"definerede"
 
 #: eqnparserhelp.py:116
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: eqnparserhelp.py:117
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), logisk xor. Returnerer True hvis enten x er sand (og y er falsk) "
+"eller y er sand (og x er falsk), hvis ikke returneres False"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
 msgid "index"
-msgstr ""
+msgstr "oversigt"
 
 #: eqnparserhelp.py:132
 msgid "Topics"
-msgstr ""
+msgstr "Emner"
 
 #: eqnparserhelp.py:143
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
+msgstr "Ingen hjælp om '%s' tilgængelig, brug help(index) for oversigten"
 
 #: layout.py:44
 msgid "Clear"
-msgstr ""
+msgstr "Ryd"
 
 #: layout.py:53
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Redigér"
 
 #: layout.py:61
 msgid "Algebra"
-msgstr ""
+msgstr "Algebra"
 
 #: layout.py:62
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometri"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr ""
+msgstr "Boolsk"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Diverse"
 
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Konstanter"
 
 #: layout.py:65
 msgid "Format"
-msgstr ""
+msgstr "Format"
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Mærkat:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Alle ligninger"
 
 #: layout.py:118
 msgid "My equations"
-msgstr ""
+msgstr "Mine ligninger"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Skift mellem visning af egne og alle ligninger"
 
 #: layout.py:120
 msgid "Show history"
-msgstr ""
+msgstr "Vis historik"
 
 #: layout.py:120
 msgid "Show variables"
-msgstr ""
+msgstr "Vis variabler"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Skift mellem visning af historik og variabler"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
 msgid "mul_sym"
-msgstr ""
+msgstr "mul_sym"
 
 #. TRANS: division symbol (default: '/')
 #: mathlib.py:79
 msgid "div_sym"
-msgstr ""
+msgstr "div_sym"
 
 #: mathlib.py:132
 msgid "Undefined"
-msgstr ""
+msgstr "Ikke defineret"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Fejl: type understøttes ikke"
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "Hjælp"
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Kopiér"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "Indsæt"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "Klip"
 
 #: toolbars.py:99
 msgid "Square"
-msgstr ""
+msgstr "Kvadrat"
 
 #: toolbars.py:103
 msgid "Square root"
-msgstr ""
+msgstr "Kvadratrod"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Invers"
 
 #: toolbars.py:109
 msgid "e to the power x"
-msgstr ""
+msgstr "e opløftet i x"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr ""
+msgstr "x opløftet i y"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Naturlig logaritme"
 
 #: toolbars.py:123
 msgid "Factorial"
-msgstr ""
+msgstr "Faktoriel"
 
 #: toolbars.py:131
 msgid "Sine"
-msgstr ""
+msgstr "Sinus"
 
 #: toolbars.py:135
 msgid "Cosine"
-msgstr ""
+msgstr "Cosinus"
 
 #: toolbars.py:139
 msgid "Tangent"
-msgstr ""
+msgstr "Tangent"
 
 #: toolbars.py:145
 msgid "Arc sine"
-msgstr ""
+msgstr "Arc sinus"
 
 #: toolbars.py:149
 msgid "Arc cosine"
-msgstr ""
+msgstr "Arc cosinus"
 
 #: toolbars.py:153
 msgid "Arc tangent"
-msgstr ""
+msgstr "Arc tangent"
 
 #: toolbars.py:159
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "Hyperbolsk sinus"
 
 #: toolbars.py:163
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "Hyperbolsk cosinus"
 
 #: toolbars.py:167
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "Hyperbolsk tangent"
 
 #: toolbars.py:175
 msgid "Logical and"
-msgstr ""
+msgstr "Logisk og"
 
 #: toolbars.py:179
 msgid "Logical or"
-msgstr ""
+msgstr "Logisk eller"
 
 #: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "Lig"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "Ulig"
 
 #: toolbars.py:199
 msgid "Pi"
-msgstr ""
+msgstr "Pi"
 
 #: toolbars.py:202
 msgid "e"
-msgstr ""
+msgstr "e"
+
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Plot"
 
 #: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "Grader"
 
 #: toolbars.py:210
 msgid "Radians"
-msgstr ""
+msgstr "Radianer"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Grader / radianer"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Eksponent / videnskabelig notation"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Antal viste cifre"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Base for formattering af heltal"

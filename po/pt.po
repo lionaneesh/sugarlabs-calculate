@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
@@ -7,15 +15,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-09-25 09:29-0400\n"
-"Last-Translator: Eduardo H. Silva <HoboPrimate@gmail.com>\n"
+"PO-Revision-Date: 2011-03-17 20:55+0200\n"
+"Last-Translator: <ttiagosousa@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.2.1\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -416,6 +424,10 @@ msgstr "Trigonometria"
 msgid "Boolean"
 msgstr "Booleano"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Diversos"
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Constantes"
@@ -436,6 +448,10 @@ msgstr "Todas as equações"
 msgid "My equations"
 msgstr "Minhas equações"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Mostrar histórico"
@@ -443,6 +459,10 @@ msgstr "Mostrar histórico"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Mostrar variáveis"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Mudar de visualização entre o historico e as variáveis"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -485,6 +505,10 @@ msgstr "Quadrado"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Raíz quadrada"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Inverso"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -562,6 +586,11 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Graus"
@@ -570,11 +599,21 @@ msgstr "Graus"
 msgid "Radians"
 msgstr "Radianos"
 
-#~ msgid "Inverse"
-#~ msgstr "Inverso"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Graus / radianos"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Graus / radianos"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Expoente / Notação científica"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Numéro de digitos mostrados"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Base de formatação inteira"
 
 #~ msgid "help_test"
 #~ msgstr "ajuda_teste"

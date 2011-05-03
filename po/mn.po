@@ -2,13 +2,21 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2010-03-31 20:43+0200\n"
-"Last-Translator: Cris Anderson <anderson861@gmail.com>\n"
+"PO-Revision-Date: 2010-10-10 05:41+0200\n"
+"Last-Translator: Bulgantamir Nerguin <ar_uul_us@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: mn\n"
 "MIME-Version: 1.0\n"
@@ -324,8 +332,8 @@ msgid "tanh"
 msgstr "tanh"
 
 #: eqnparserhelp.py:107
-msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
+msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr "х-н гиперболик синус нь sinh(x)."
 
 #: eqnparserhelp.py:109
 msgid "test"
@@ -371,6 +379,14 @@ msgstr "Сэдвүүд"
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr "'%s' тухай лавлагаа олдсонгүй. help(index)-ийг ашиглан оролдоно уу"
 
+#: layout.py:44
+msgid "Clear"
+msgstr "Арилгах"
+
+#: layout.py:53
+msgid "Enter"
+msgstr "Оруулах"
+
 #: layout.py:60
 msgid "Edit"
 msgstr "Засварлах"
@@ -386,6 +402,10 @@ msgstr "Тригонометр"
 #: layout.py:63
 msgid "Boolean"
 msgstr "Булийн"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
 
 #: layout.py:64
 msgid "Constants"
@@ -407,6 +427,10 @@ msgstr "Бүх тэгшитгэлүүд"
 msgid "My equations"
 msgstr "Миний тэгшитгэлүүд"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Түүх үзэх"
@@ -414,6 +438,10 @@ msgstr "Түүх үзэх"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Хувьсагчдыг харуулах"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -457,7 +485,6 @@ msgstr "Дөрвөлжин"
 msgid "Square root"
 msgstr "Квадрат язгуур"
 
-#: toolbars.py:137
 #: toolbars.py:157
 msgid "Inverse"
 msgstr "Урвуу"
@@ -538,6 +565,11 @@ msgstr "Пи тоо"
 msgid "e"
 msgstr "е тоо"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "цэг"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Градус"
@@ -546,18 +578,21 @@ msgstr "Градус"
 msgid "Radians"
 msgstr "Радиус"
 
-#: toolbars.py:252
+#: toolbars.py:292
 msgid "Degrees / radians"
 msgstr "Градус / радиан"
 
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: layout.py:44
-msgid "Clear"
-msgstr "Арилгах"
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
 
-#: layout.py:53
-msgid "Enter"
-msgstr "Оруулах"
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
+
+#~ msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#~ msgstr "х-н гиперболик тангенс нь tanh(x). sinh(x)/cosh(x) -н утга авна."

@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-10-20 12:48-0400\n"
+"PO-Revision-Date: 2011-02-20 13:13+0200\n"
 "Last-Translator: John Sarlis <sarlis@sch.gr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "Υπολόγισε"
+msgstr "Υπολογισμός"
 
 #: calculate.py:80
 #, python-format
@@ -27,7 +36,7 @@ msgstr "Equation.parse() λάθος συμβολοσειρά (%s)"
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr "Διαθέσιμες συναρτήσεις"
+msgstr "Διαθέσιμες συναρτήσεις:"
 
 #: calculate.py:504
 #, python-format
@@ -56,7 +65,7 @@ msgstr "Σφάλμα στο %d"
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
-"βοήθεια(περιεχόμενα) για τα περιεχόμενα."
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -151,8 +160,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"τοξσυν(x), επιστρέφει το τόξο του συνημιτόνου του x. Αυτή είναι η γωνία για "
-"την οποία το συνημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
+"Το τοξσυν(x) επιστρέφει το τόξο του συνημιτόνου του x. Αυτή είναι η γωνία "
+"για την οποία το συνημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -162,8 +171,8 @@ msgstr "και"
 msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"και(x, y), λογικό \"και\" (Σύζευξη). Επιστρέφει Αληθής αν x και y είναι Αληθή, "
-"διαφορετικά επιστρέφει Ψευδής"
+"Το και(x, y) είναι το λογικό \"και\" (Σύζευξη). Επιστρέφει Αληθής αν x και y "
+"είναι Αληθή, διαφορετικά επιστρέφει Ψευδής"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -174,8 +183,8 @@ msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"τοξημ(x), επιστρέφει το τόξο του ημιτόνου του x. Αυτή είναι η γωνία για την "
-"οποία το ημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
+"Το τοξημ(x) επιστρέφει το τόξο του ημιτόνου του x. Αυτή είναι η γωνία για "
+"την οποία το ημίτονο είναι x. Ορίζεται στο -1 <= x < 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
@@ -186,7 +195,7 @@ msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
-"τοξεφ(x), επιστρέφει το τόξο της εφαπτόμενης του x. Αυτή είναι η γωνία για "
+"Το τοξεφ(x) επιστρέφει το τόξο της εφαπτόμενης του x. Αυτή είναι η γωνία για "
 "την οποία η εφαπτόμενη είναι x. Ορίζεται για κάθε x"
 
 #: eqnparserhelp.py:54
@@ -198,8 +207,8 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"συν(x), επιστρέφει το συνημίτονο του x. Αυτή είναι η οριζόντια συντεταγμένη "
-"του τριγωνομετρικού κύκλου της γωνίας x"
+"Το συν(x) επιστρέφει το συνημίτονο του x. Αυτή είναι η οριζόντια "
+"συντεταγμένη του τριγωνομετρικού κύκλου της γωνίας x"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
@@ -209,7 +218,7 @@ msgstr "συνυ"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"συνυ(x), επιστρέφει το υπερβολικό συνημίτονο του x. Δίνεται από τον τύπο "
+"Το συνυ(x) επιστρέφει το υπερβολικό συνημίτονο του x. Δίνεται από τον τύπο "
 "(εκθ(x) + εκθ(-x)) / 2"
 
 #: eqnparserhelp.py:61
@@ -219,7 +228,7 @@ msgstr "εκθ"
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr ""
-"εκθ(x), επιστρέφει τη δύναμη x του νεπέριου αριθμού e. Δίνεται από τον τύπο "
+"Η εκθ(x) επιστρέφει τη δύναμη x του νεπέριου αριθμού e. Δίνεται από τον τύπο "
 "e^x"
 
 #: eqnparserhelp.py:64
@@ -229,8 +238,8 @@ msgstr "πργ"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"πργ(x), επιστρέφει το παραγοντικού του x. Δίνεται από τον τύπο x * (x - 1) * "
-"(x - 2) * ... * 1"
+"Το παρ(x), επιστρέφει το παραγοντικού του x. Δίνεται από τον τύπο x * (x - "
+"1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -251,8 +260,8 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"λογ(x), επιστρέφει το φυσικό λογάριθμο του x. Αυτή είναι η τιμή όπου η "
-"δύναμη exp() είναι ίση με x. Ορίζεται για x >= 0."
+"Το λογ(x), επιστρέφει το φυσικό λογάριθμο του x. Αυτή είναι η τιμή όπου ο "
+"εκθέτης της εκθ() ισούται με x. Ορίζεται για x >= 0."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:76
@@ -272,8 +281,8 @@ msgstr "ή"
 msgid ""
 "or(x, y), logical or. Returns True if x and/or y are True, else return False"
 msgstr ""
-"ή(x, y), λογικό \"ή\" (Διάζευξη). Επιστρέφει Ψευδής αν x και y είναι Ψευδής, "
-"διαφορετικά επιστρέφει Αληθής"
+"Το ή(x, y) είναι το λογικό \"ή\" (Διάζευξη). Επιστρέφει Ψευδής αν x και y "
+"είναι Ψευδής, διαφορετικά επιστρέφει Αληθής"
 
 #: eqnparserhelp.py:82
 msgid "plot"
@@ -296,7 +305,7 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"ημ(x), επιστρέφει το ημίτονο του x. Αυτή είναι η οριζόντια συντεταγμένη του "
+"Το ημ(x) επιστρέφει το ημίτονο του x. Αυτή είναι η κάθετη συντεταγμένη του "
 "τριγωνομετρικού κύκλου της γωνίας x"
 
 #: eqnparserhelp.py:90
@@ -307,8 +316,8 @@ msgstr "ημυ"
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"ημυ(x), επιστρέφει το υπερβολικό ημίτονο του x. Δίνεται από τον τύπο (εκθ(x) "
-"- εκθ(-x)) / 2"
+"Το ημυ(x) επιστρέφει το υπερβολικό ημίτονο του x. Δίνεται από τον τύπο "
+"(εκθ(x) - εκθ(-x)) / 2"
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
@@ -319,17 +328,17 @@ msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
-"τ_ρ(x), επιστρέφει την τετραγωνική ρίζα του x. Αυτή είναι η τιμή της οποίας "
+"Η τ_ρ(x) επιστρέφει την τετραγωνική ρίζα του x. Αυτή είναι η τιμή της οποίας "
 "το τετράγωνο ισούται με x. Ορίζεται για x >= 0."
 
 # τετρά - γωνο (τ_γ): Πιστεύω ότι στον κώδικα δε θα ήταν λογικό να βάλεις τετράγωνο(x) από το να γράψεις x*x το τ_γ(x) είναι πιο σύντομο.
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr "τ_γ"
+msgstr "τετρ"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "τ_γ(x), επιστρέφει το τετράγωνο του x. Δίνεται από τον τύπο x * x"
+msgstr "Το τετρ(x), επιστρέφει το τετράγωνο του x. Δίνεται από τον τύπο x * x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -341,7 +350,7 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"εφ(x), επιστρέφει την εφαπτόμενη του x. Είναι ένα ευθύγραμμο τμήμα που "
+"Η εφ(x) επιστρέφει την εφαπτόμενη του x. Είναι ένα ευθύγραμμο τμήμα που "
 "ξεκινάει από την τομή του άξονα του κύκλου με την περιφέρεια του κύκλου προς "
 "το σημείο που τέμνεται με την ακτίνα γωνίας x. Δίνεται από τον τύπο ημ(x) / "
 "συν(x)"
@@ -353,7 +362,7 @@ msgstr "εφυ"
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"εφυ(x), επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
+"Η εφυ(x) επιστρέφει την υπερβολική εφαπτόμενη του x. Δίνεται από τον τύπο "
 "ημυ(x) / συνυ(x)"
 
 #: eqnparserhelp.py:109
@@ -384,9 +393,9 @@ msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
-"είτε(x,y) To λογικό είτε: Επιστρέφει Αληθής αν η τιμή του x είναι "
-"διαφορετική από την τιμή του y. Αν η τιμή του x είναι ίση με του y "
-"επιστρέφει Ψευδής."
+"Το είτε(x,y) είναι τo λογικό \"είτε\" (Αποκλειστική Διάζευξη): Επιστρέφει "
+"Ψευδής όταν η τιμή του x ισούται με την τιμή του y διαφορετικά επιστρέφει "
+"Αληθής"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
@@ -426,7 +435,11 @@ msgstr "Τριγωνομετρία"
 
 #: layout.py:63
 msgid "Boolean"
-msgstr "Δυαδικό"
+msgstr "Λογική"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr "Διάφορα"
 
 #: layout.py:64
 msgid "Constants"
@@ -448,6 +461,10 @@ msgstr "Όλες οι εξισώσεις"
 msgid "My equations"
 msgstr "Οι εξισώσεις μου"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Αλλαγή μεταξύ των δικών μου και όλων των εξισώσεων"
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Εμφάνιση ιστορικού"
@@ -455,6 +472,10 @@ msgstr "Εμφάνιση ιστορικού"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Εμφάνιση μεταβλητών"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Αλλαγή προβολής μεταξύ ιστορικού και μεταβλητών"
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -499,13 +520,17 @@ msgstr "Τετράγωνο"
 msgid "Square root"
 msgstr "Τετραγωνική Ρίζα"
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Αντιστροφή"
+
 #: toolbars.py:109
 msgid "e to the power x"
 msgstr "To e υψωμένο στη δύναμη x"
 
 #: toolbars.py:113
 msgid "x to the power y"
-msgstr "Το x υψωμένο ση δύναμη x"
+msgstr "Το x υψωμένο στη δύναμη y"
 
 #: toolbars.py:117
 msgid "Natural logarithm"
@@ -553,7 +578,7 @@ msgstr "Υπερβολική εφαπτομένη"
 
 #: toolbars.py:175
 msgid "Logical and"
-msgstr "Λογικό \"καί\""
+msgstr "Λογικό \"και\""
 
 #: toolbars.py:179
 msgid "Logical or"
@@ -575,6 +600,10 @@ msgstr "π"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr "Σχεδιασμός"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Μοίρες"
@@ -583,11 +612,21 @@ msgstr "Μοίρες"
 msgid "Radians"
 msgstr "Ακτίνια"
 
-#~ msgid "Inverse"
-#~ msgstr "Αντιστροφή"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Μοίρες / ακτίνια"
 
-#~ msgid "Degrees / radians"
-#~ msgstr "Μοίρες / ακτίνια"
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr "Εκθέτης / Επιστημονικός συμβολισμός"
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr "Αριθμός εμφανιζόμενων ψηφίων"
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr "Βάση μορφοποίησης ακεραίου"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"

@@ -568,4 +568,3 @@ msgstr ""
 #: toolbars.py:316
 msgid "Integer formatting base"
 msgstr ""
-

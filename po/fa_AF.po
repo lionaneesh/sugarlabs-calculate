@@ -2,18 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-06 05:49-0500\n"
+"PO-Revision-Date: 2009-07-30 03:28-0400\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fa_AF\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 1.2.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -33,33 +43,13 @@ msgstr "عملیات در دسترس:"
 msgid "Writing to journal (%s)"
 msgstr "نوشتن به یادداشت (%s)"
 
-#: calculate.py:522
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr "خواندن از یادداشت (%s)"
-
-#: calculate.py:528
-msgid "Unable to determine version"
-msgstr "در تعین نمودن نگارش ناتوان هست"
-
-#: calculate.py:533
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr "در حال خواندن ثبت روزنامه (نگارش %s)"
-
-#: calculate.py:538
-#, python-format
-msgid "State line invalid (%s)"
-msgstr "خط وضعیت نامعتبر (%s)"
-
-#: calculate.py:555
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr "در خواندن ثبت روزنامه ناتوان هست، نگارش نامعلوم (%s)"
-
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
 msgstr "دکمه_فشارداده شده(): نوعیت نامعتبر"
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr "خطای تجزئیه"
 
 #: eqnparser.py:58
 #, python-format
@@ -71,9 +61,11 @@ msgstr "مرحله: %d از %d"
 msgid "Error at %d"
 msgstr "خطا در %d"
 
-#: eqnparser.py:235
-msgid "help_var"
-msgstr "کمک_متغیر"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"برای کمک درمورد 'امتحان' از کمک(امتحان) استفاده کنید، یا از کمک(شاخص) برای "
+"شاخص"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -105,6 +97,10 @@ msgstr "خطای عملکرد: %s"
 msgid "Variable '%s' not defined"
 msgstr "متغیر '%s' نامعين"
 
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
+msgstr "قوس چپ غیر منتظره"
+
 #: eqnparser.py:516
 msgid "Parse error (right parenthesis)"
 msgstr "خطای تجزیه (قوسهای راست)"
@@ -117,6 +113,10 @@ msgstr "قوسهای راست غیر منتظره"
 msgid "Parse error (right parenthesis, no left_val)"
 msgstr "خطای تجزیه (قوسهای راست، هیچ مقدار چپ نه)"
 
+#: eqnparser.py:534
+msgid "Parse error (right parenthesis, no level to close)"
+msgstr "خطای تجزئیه (قوس راست، هیچ سطحی برای بندش وجود ندارد)"
+
 #: eqnparser.py:541 eqnparser.py:542
 msgid "Number not expected"
 msgstr "شماره غیر منتظره"
@@ -124,6 +124,14 @@ msgstr "شماره غیر منتظره"
 #: eqnparser.py:550
 msgid "Operator not expected"
 msgstr "عملگرغیر منتظره"
+
+#: eqnparser.py:566
+msgid "Parse error: number or variable expected"
+msgstr "خطای تجزئیه: شماره یا متغیر غیر منتظره"
+
+#: eqnparser.py:567
+msgid "Number or variable expected"
+msgstr "شماره یا متغیر مورد انتظار"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -137,313 +145,9 @@ msgstr "عملگر مورد انتظار"
 msgid "_parse(): returning None"
 msgstr "_تجزئیه(): بازگشت هیچ"
 
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr "کمک_کوساین قوسی"
-
-#: eqnparserhelp.py:38
-msgid "help_and"
-msgstr "کمک_و"
-
-#: eqnparserhelp.py:39
-msgid "help_asin"
-msgstr "کمک_ساین قوسی"
-
-#: eqnparserhelp.py:40
-msgid "help_atan"
-msgstr "کمک_تانجانت قوسی"
-
-#: eqnparserhelp.py:41
-msgid "help_cos"
-msgstr "کمک_کوساین"
-
-#: eqnparserhelp.py:42
-msgid "help_cosh"
-msgstr "کمک_کوساین هایپربولی"
-
-#: eqnparserhelp.py:43
-msgid "help_exp"
-msgstr "کمک_توان"
-
-#: eqnparserhelp.py:44
-msgid "help_fac"
-msgstr "کمک_فکتوریل"
-
-#: eqnparserhelp.py:45
-msgid "help_functions"
-msgstr "کمک_عملیات"
-
-#: eqnparserhelp.py:46
-msgid "help_ln"
-msgstr "کمک_لوگاریتم طبیعی"
-
-#: eqnparserhelp.py:47
-msgid "help_operators"
-msgstr "کمک_عملگرها"
-
-#: eqnparserhelp.py:48
-msgid "help_or"
-msgstr "کمک_یا"
-
-#: eqnparserhelp.py:49
-msgid "help_plot"
-msgstr "کمک_نقشه"
-
-#: eqnparserhelp.py:50
-msgid "help_sin"
-msgstr "کمک_ساین"
-
-#: eqnparserhelp.py:51
-msgid "help_sinh"
-msgstr "کمک_ساین هایپربولی"
-
-#: eqnparserhelp.py:52
-msgid "help_sqrt"
-msgstr "کمک_جذرالمربع"
-
-#: eqnparserhelp.py:53
-msgid "help_square"
-msgstr "کمک_توان مربع"
-
-#: eqnparserhelp.py:54
-msgid "help_tan"
-msgstr "کمک_تانجانت"
-
-#: eqnparserhelp.py:55
-msgid "help_tanh"
-msgstr "کمک_تانجانت هایپربولی"
-
-#: eqnparserhelp.py:56
-msgid "help_test"
-msgstr "کمک_امتحان"
-
-#: eqnparserhelp.py:57
-msgid "help_variables"
-msgstr "کمک_متغیرات"
-
-#: eqnparserhelp.py:58
-msgid "help_xor"
-msgstr "کمک_xor"
-
-#: eqnparserhelp.py:69
-msgid "help_usage"
-msgstr "کمک_استعمال"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "عناوین"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"در مورد متغیر '%s' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
-"کنید"
-
-#: layout.py:60
-msgid "Edit"
-msgstr "ویرایش"
-
-#: layout.py:61
-msgid "Algebra"
-msgstr "الجبر"
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr "مثلثات"
-
-#: layout.py:63
-msgid "Boolean"
-msgstr "حساب بولی"
-
-#: layout.py:64
-msgid "Constants"
-msgstr "مستقل ها"
-
-#: layout.py:65
-msgid "Format"
-msgstr "قالب"
-
-#: layout.py:86
-msgid "Label:"
-msgstr "مطلب:"
-
-#: layout.py:118
-msgid "All equations"
-msgstr "همه معادله ها"
-
-#: layout.py:118
-msgid "My equations"
-msgstr "معادله های من"
-
-#: layout.py:120
-msgid "Show history"
-msgstr "تاریخچه را نشان بده"
-
-#: layout.py:120
-msgid "Show variables"
-msgstr "متغیرات را نشان بده"
-
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr "هزار_sep"
-
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr "کسر_sep"
-
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr "*"
-
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr "/"
-
-#: mathlib.py:132
-msgid "Undefined"
-msgstr "نامعین"
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr "خطا: نوعیت ناپشتیبانی شده"
-
-#: toolbars.py:36
-msgid "Help"
-msgstr "کمک"
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr "نقل بگیر"
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr "بچسپان"
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr "برش کن"
-
-#: toolbars.py:99
-msgid "Square"
-msgstr "مربع"
-
-#: toolbars.py:103
-msgid "Square root"
-msgstr "جذرالمربع"
-
-#: toolbars.py:109
-msgid "e to the power x"
-msgstr "e به توان x"
-
-#: toolbars.py:117
-msgid "Natural logarithm"
-msgstr "لوگاریتم طبیعی"
-
-#: toolbars.py:123
-msgid "Factorial"
-msgstr "فکتوریل"
-
-#: toolbars.py:131
-msgid "Sine"
-msgstr "ساین"
-
-#: toolbars.py:135
-msgid "Cosine"
-msgstr "کوساین"
-
-#: toolbars.py:139
-msgid "Tangent"
-msgstr "تانجانت"
-
-#: toolbars.py:145
-msgid "Arc sine"
-msgstr "ساین قوسی"
-
-#: toolbars.py:149
-msgid "Arc cosine"
-msgstr "کوساین قوسی"
-
-#: toolbars.py:153
-msgid "Arc tangent"
-msgstr "تانجانت قوسی"
-
-#: toolbars.py:159
-msgid "Hyperbolic sine"
-msgstr "ساین هایپربولی"
-
-#: toolbars.py:163
-msgid "Hyperbolic cosine"
-msgstr "کوساین هایپربولی"
-
-#: toolbars.py:167
-msgid "Hyperbolic tangent"
-msgstr "تانجانت هایپربولی"
-
-#: toolbars.py:175
-msgid "Logical and"
-msgstr "منطقی و"
-
-#: toolbars.py:179
-msgid "Logical or"
-msgstr "منطقی یا"
-
-#: toolbars.py:174
-msgid "Logical xor"
-msgstr "منطقی xor"
-
-#: toolbars.py:189
-msgid "Equals"
-msgstr "مساوی است"
-
-#: toolbars.py:192
-msgid "Not equals"
-msgstr "مساوی نیست"
-
-#: toolbars.py:199
-msgid "Pi"
-msgstr "پای"
-
-#: toolbars.py:202
-msgid "e"
-msgstr "e"
-
-#: toolbars.py:209
-msgid "Degrees"
-msgstr "درجه"
-
-#: toolbars.py:210
-msgid "Radians"
-msgstr "رادیان"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "خطای تجزئیه"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"برای کمک درمورد 'امتحان' از کمک(امتحان) استفاده کنید، یا از کمک(شاخص) برای "
-"شاخص"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "قوس چپ غیر منتظره"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "خطای تجزئیه (قوس راست، هیچ سطحی برای بندش وجود ندارد)"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "خطای تجزئیه: شماره یا متغیر غیر منتظره"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "شماره یا متغیر مورد انتظار"
-
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
 #. TRANS: It is possible to translate commands. However, I would highly
 #. recommend NOT doing so for mathematical functions like cos(). help(),
 #. functions() etc should be translated.
@@ -512,8 +216,8 @@ msgstr "کوساین هایپربولی"
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"کوساین هایپربولی(x)، کوساین هایپربولی x را برگردان. داده برای exp(x) + "
-"exp(-x)) / 2)"
+"کوساین هایپربولی(x)، کوساین هایپربولی x را برگردان. داده برای (exp(x) + "
+"exp(-x)) / 2"
 
 #: eqnparserhelp.py:61
 msgid "exp"
@@ -682,7 +386,329 @@ msgstr ""
 msgid "index"
 msgstr "شاخص"
 
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr "عناوین"
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"در مورد متغیر '%s' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
+"کنید"
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
+#: layout.py:60
+msgid "Edit"
+msgstr "ویرایش"
+
+#: layout.py:61
+msgid "Algebra"
+msgstr "الجبر"
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr "مثلثات"
+
+#: layout.py:63
+msgid "Boolean"
+msgstr "حساب بولی"
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
+#: layout.py:64
+msgid "Constants"
+msgstr "مستقل ها"
+
+#: layout.py:65
+msgid "Format"
+msgstr "قالب"
+
+#: layout.py:86
+msgid "Label:"
+msgstr "مطلب:"
+
+#: layout.py:118
+msgid "All equations"
+msgstr "همه معادله ها"
+
+#: layout.py:118
+msgid "My equations"
+msgstr "معادله های من"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
+#: layout.py:120
+msgid "Show history"
+msgstr "تاریخچه را نشان بده"
+
+#: layout.py:120
+msgid "Show variables"
+msgstr "متغیرات را نشان بده"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr "*"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr "/"
+
+#: mathlib.py:132
+msgid "Undefined"
+msgstr "نامعین"
+
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr "خطا: نوعیت ناپشتیبانی شده"
+
+#: toolbars.py:36
+msgid "Help"
+msgstr "کمک"
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr "نقل بگیر"
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr "بچسپان"
+
+#: toolbars.py:92
+msgid "Cut"
+msgstr "برش کن"
+
+#: toolbars.py:99
+msgid "Square"
+msgstr "مربع"
+
+#: toolbars.py:103
+msgid "Square root"
+msgstr "جذرالمربع"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
+#: toolbars.py:109
+msgid "e to the power x"
+msgstr "e به توان x"
+
 #: toolbars.py:113
 #, fuzzy
 msgid "x to the power y"
 msgstr "x به توان y"
+
+#: toolbars.py:117
+msgid "Natural logarithm"
+msgstr "لوگاریتم طبیعی"
+
+#: toolbars.py:123
+msgid "Factorial"
+msgstr "فکتوریل"
+
+#: toolbars.py:131
+msgid "Sine"
+msgstr "ساین"
+
+#: toolbars.py:135
+msgid "Cosine"
+msgstr "کوساین"
+
+#: toolbars.py:139
+msgid "Tangent"
+msgstr "تانجانت"
+
+#: toolbars.py:145
+msgid "Arc sine"
+msgstr "ساین قوسی"
+
+#: toolbars.py:149
+msgid "Arc cosine"
+msgstr "کوساین قوسی"
+
+#: toolbars.py:153
+msgid "Arc tangent"
+msgstr "تانجانت قوسی"
+
+#: toolbars.py:159
+msgid "Hyperbolic sine"
+msgstr "ساین هایپربولی"
+
+#: toolbars.py:163
+msgid "Hyperbolic cosine"
+msgstr "کوساین هایپربولی"
+
+#: toolbars.py:167
+msgid "Hyperbolic tangent"
+msgstr "تانجانت هایپربولی"
+
+#: toolbars.py:175
+msgid "Logical and"
+msgstr "منطقی و"
+
+#: toolbars.py:179
+msgid "Logical or"
+msgstr "منطقی یا"
+
+#: toolbars.py:189
+msgid "Equals"
+msgstr "مساوی است"
+
+#: toolbars.py:192
+msgid "Not equals"
+msgstr "مساوی نیست"
+
+#: toolbars.py:199
+msgid "Pi"
+msgstr "پای"
+
+#: toolbars.py:202
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "طرح"
+
+#: toolbars.py:209
+msgid "Degrees"
+msgstr "درجه"
+
+#: toolbars.py:210
+msgid "Radians"
+msgstr "رادیان"
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
+
+#, python-format
+#~ msgid "Reading from journal (%s)"
+#~ msgstr "خواندن از یادداشت (%s)"
+
+#~ msgid "Unable to determine version"
+#~ msgstr "در تعین نمودن نگارش ناتوان هست"
+
+#, python-format
+#~ msgid "Reading journal entry (version %s)"
+#~ msgstr "در حال خواندن ثبت روزنامه (نگارش %s)"
+
+#, python-format
+#~ msgid "State line invalid (%s)"
+#~ msgstr "خط وضعیت نامعتبر (%s)"
+
+#, python-format
+#~ msgid "Unable to read journal entry, unknown version (%s)"
+#~ msgstr "در خواندن ثبت روزنامه ناتوان هست، نگارش نامعلوم (%s)"
+
+#~ msgid "help_var"
+#~ msgstr "کمک_متغیر"
+
+#~ msgid "help_acos"
+#~ msgstr "کمک_کوساین قوسی"
+
+#~ msgid "help_and"
+#~ msgstr "کمک_و"
+
+#~ msgid "help_asin"
+#~ msgstr "کمک_ساین قوسی"
+
+#~ msgid "help_atan"
+#~ msgstr "کمک_تانجانت قوسی"
+
+#~ msgid "help_cos"
+#~ msgstr "کمک_کوساین"
+
+#~ msgid "help_cosh"
+#~ msgstr "کمک_کوساین هایپربولی"
+
+#~ msgid "help_exp"
+#~ msgstr "کمک_توان"
+
+#~ msgid "help_fac"
+#~ msgstr "کمک_فکتوریل"
+
+#~ msgid "help_functions"
+#~ msgstr "کمک_عملیات"
+
+#~ msgid "help_ln"
+#~ msgstr "کمک_لوگاریتم طبیعی"
+
+#~ msgid "help_operators"
+#~ msgstr "کمک_عملگرها"
+
+#~ msgid "help_or"
+#~ msgstr "کمک_یا"
+
+#~ msgid "help_plot"
+#~ msgstr "کمک_نقشه"
+
+#~ msgid "help_sin"
+#~ msgstr "کمک_ساین"
+
+#~ msgid "help_sinh"
+#~ msgstr "کمک_ساین هایپربولی"
+
+#~ msgid "help_sqrt"
+#~ msgstr "کمک_جذرالمربع"
+
+#~ msgid "help_square"
+#~ msgstr "کمک_توان مربع"
+
+#~ msgid "help_tan"
+#~ msgstr "کمک_تانجانت"
+
+#~ msgid "help_tanh"
+#~ msgstr "کمک_تانجانت هایپربولی"
+
+#~ msgid "help_test"
+#~ msgstr "کمک_امتحان"
+
+#~ msgid "help_variables"
+#~ msgstr "کمک_متغیرات"
+
+#~ msgid "help_xor"
+#~ msgstr "کمک_xor"
+
+#~ msgid "help_usage"
+#~ msgstr "کمک_استعمال"
+
+#~ msgid "thousand_sep"
+#~ msgstr "هزار_sep"
+
+#~ msgid "fraction_sep"
+#~ msgstr "کسر_sep"
+
+#~ msgid "Logical xor"
+#~ msgstr "منطقی xor"

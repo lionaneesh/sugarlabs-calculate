@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # Polish translation of calculate-activity
 # Copyright (C) FSF
 # This file is distributed under the same license as the calculate-activity.
@@ -354,6 +362,14 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr ""
@@ -368,6 +384,10 @@ msgstr ""
 
 #: layout.py:63
 msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
@@ -390,12 +410,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -440,8 +468,16 @@ msgstr ""
 msgid "Square root"
 msgstr ""
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
 #: toolbars.py:109
 msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""
 
 #: toolbars.py:117
@@ -512,6 +548,10 @@ msgstr ""
 msgid "e"
 msgstr ""
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr ""
@@ -520,6 +560,18 @@ msgstr ""
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:113
-msgid "x to the power y"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

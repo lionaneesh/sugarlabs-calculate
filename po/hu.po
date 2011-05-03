@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2011-03-13 17:26+0200\n"
+"Last-Translator: <klpeter@windowslive.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Számol"
 
 #: calculate.py:80
 #, python-format
@@ -27,7 +36,7 @@ msgstr ""
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "Elérhető funkciók"
 
 #: calculate.py:504
 #, python-format
@@ -36,21 +45,21 @@ msgstr ""
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "megnyomott_gomb(): érvénytelen gombnyomás"
 
 #: eqnparser.py:33
 msgid "Parse error"
-msgstr ""
+msgstr "Feldolgozási hiba"
 
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "szint: %d, ofs %d"
 
 #: eqnparser.py:117
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "Hiba a %d"
 
 #: eqnparser.py:249 eqnparserhelp.py:128
 msgid "Use help(test) for help about 'test', or help(index) for the index"
@@ -59,7 +68,7 @@ msgstr ""
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Funkció '%s' nincs beállítva"
 
 #: eqnparser.py:359
 #, python-format
@@ -124,7 +133,7 @@ msgstr ""
 
 #: eqnparser.py:596
 msgid "Invalid operator"
-msgstr ""
+msgstr "Érvénytelen szolgáltató"
 
 #: eqnparser.py:603
 msgid "Operator expected"
@@ -365,7 +374,7 @@ msgstr ""
 
 #: layout.py:60
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: layout.py:61
 msgid "Algebra"
@@ -379,9 +388,13 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
-msgstr ""
+msgstr "Állandók"
 
 #: layout.py:65
 msgid "Format"
@@ -389,14 +402,19 @@ msgstr ""
 
 #: layout.py:86
 msgid "Label:"
-msgstr ""
+msgstr "Cimke:"
 
 #: layout.py:118
 msgid "All equations"
-msgstr ""
+msgstr "Minden egyenlet"
 
 #: layout.py:118
+#, fuzzy
 msgid "My equations"
+msgstr "Minden egyenlet"
+
+#: layout.py:198
+msgid "Change view between own and all equations"
 msgstr ""
 
 #: layout.py:120
@@ -405,6 +423,10 @@ msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -423,23 +445,23 @@ msgstr ""
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Hiba: nem támogatott típus"
 
 #: toolbars.py:36
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
 #: toolbars.py:86
 msgid "Copy"
-msgstr ""
+msgstr "Másolás"
 
 #: toolbars.py:89
 msgid "Paste"
-msgstr ""
+msgstr "Beillesztés"
 
 #: toolbars.py:92
 msgid "Cut"
-msgstr ""
+msgstr "Kivágás"
 
 #: toolbars.py:99
 msgid "Square"
@@ -447,6 +469,10 @@ msgstr ""
 
 #: toolbars.py:103
 msgid "Square root"
+msgstr "Négyzetgyök"
+
+#: toolbars.py:157
+msgid "Inverse"
 msgstr ""
 
 #: toolbars.py:109
@@ -511,11 +537,11 @@ msgstr ""
 
 #: toolbars.py:189
 msgid "Equals"
-msgstr ""
+msgstr "Egyenlő"
 
 #: toolbars.py:192
 msgid "Not equals"
-msgstr ""
+msgstr "Nem egyenlő"
 
 #: toolbars.py:199
 msgid "Pi"
@@ -525,10 +551,30 @@ msgstr ""
 msgid "e"
 msgstr ""
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
 #: toolbars.py:209
 msgid "Degrees"
-msgstr ""
+msgstr "Fokok"
 
 #: toolbars.py:210
 msgid "Radians"
+msgstr ""
+
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

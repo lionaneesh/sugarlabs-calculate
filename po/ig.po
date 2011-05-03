@@ -1,93 +1,60 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # POT file for the Calculate activity
 # Copyright (C) 2007
 # This file is distributed under the same license as the Calculate package.
 # Reinier Heeres <reinier@heeres.eu>, 2007
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2011-01-26 03:56+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.0.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
+#, fuzzy
 msgid "Calculate"
+msgstr " "
+
+#: calculate.py:80
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
 msgstr ""
 
 #: calculate.py:210
 msgid "Available functions:"
 msgstr ""
 
-#-----------------------------------------
-# The help system uses topic msgid's that should be translated here.
-#-----------------------------------------
-#. These are the help topics and should explain how things work
-#: eqnparserhelp.py:37
-msgid "help_acos"
-msgstr ""
-
-#: eqnparserhelp.py:38
-msgid "help_asin"
-msgstr ""
-
-#: eqnparserhelp.py:40
-msgid "help_exp"
-msgstr ""
-
-#: eqnparserhelp.py:41
-msgid "help_functions"
-msgstr ""
-
-#: eqnparserhelp.py:42
-msgid "help_operators"
-msgstr ""
-
-#: eqnparserhelp.py:43
-msgid "help_plot"
-msgstr ""
-
-#: eqnparserhelp.py:45
-msgid "help_sqrt"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "help_test"
-msgstr ""
-
-#: eqnparserhelp.py:47
-msgid "help_variables"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "help_usage"
-msgstr ""
-
-# Text assigned to the 'help' variable
-#: eqnparser.py:234
-msgid "help_var"
-msgstr ""
-
-#-----------------------------------------
-# End of help topics
-#-----------------------------------------
-
-#: eqnparserhelp.py:52
-msgid "Topics: "
-msgstr ""
-
-#: eqnparserhelp.py:143
+#: calculate.py:504
 #, python-format
-msgid "No help about '%s' available, use help(index) for the index"
+msgid "Writing to journal (%s)"
 msgstr ""
 
-#: eqnparser.py:87
-msgid "Type error"
+#: calculate.py:788
+msgid "button_pressed(): invalid type"
+msgstr ""
+
+#: eqnparser.py:33
+msgid "Parse error"
+msgstr ""
+
+#: eqnparser.py:58
+#, python-format
+msgid "level: %d, ofs %d"
 msgstr ""
 
 #: eqnparser.py:117
@@ -95,9 +62,8 @@ msgstr ""
 msgid "Error at %d"
 msgstr ""
 
-#: eqnparser.py:299
-#, python-format
-msgid "variable %s not defined"
+#: eqnparser.py:249 eqnparserhelp.py:128
+msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 
 #: eqnparser.py:353 eqnparser.py:354
@@ -125,14 +91,13 @@ msgstr ""
 msgid "Function error: %s"
 msgstr ""
 
-#: eqnparser.py:358
+#: eqnparser.py:481
 #, python-format
-msgid "Function '%s' returned %s"
+msgid "Variable '%s' not defined"
 msgstr ""
 
-#: eqnparser.py:457
-#, python-format
-msgid "Variable '%s' undefined"
+#: eqnparser.py:504
+msgid "Left parenthesis unexpected"
 msgstr ""
 
 #: eqnparser.py:516
@@ -155,194 +120,8 @@ msgstr ""
 msgid "Number not expected"
 msgstr ""
 
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr ""
-
-#: eqnparser.py:565
-msgid "Parse error: ')' expected"
-msgstr ""
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr ""
-
-#: layout.py:46
-msgid "clear"
-msgstr ""
-
-#: layout.py:55
-msgid "enter"
-msgstr ""
-
-#: layout.py:60
-msgid "Edit"
-msgstr ""
-
-#: layout.py:61
-msgid "Algebra"
-msgstr ""
-
-#: layout.py:62
-msgid "Trigonometry"
-msgstr ""
-
-#: layout.py:63
-msgid "Boolean"
-msgstr ""
-
-#: layout.py:64
-msgid "Constants"
-msgstr ""
-
-#: layout.py:65
-msgid "Format"
-msgstr ""
-
-#: layout.py:86
-msgid "Label:"
-msgstr ""
-
-#: layout.py:118
-msgid "All equations"
-msgstr ""
-
-#: layout.py:118
-msgid "My equations"
-msgstr ""
-
-#: layout.py:120
-msgid "Show history"
-msgstr ""
-
-#: layout.py:120
-msgid "Show variables"
-msgstr ""
-
-#: mathlib.py:86
-msgid "Error"
-msgstr ""
-
-#: mathlib.py:142
-msgid "Error: unsupported type"
-msgstr ""
-
-#: plotlib.py:134
-msgid "Unable to parse range"
-msgstr ""
-
-#: toolbars.py:86
-msgid "Copy"
-msgstr ""
-
-#: toolbars.py:89
-msgid "Paste"
-msgstr ""
-
-#: toolbars.py:92
-msgid "Cut"
-msgstr ""
-
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr ""
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr ""
-
-#: calculate.py:506
-#, python-format
-msgid "Reading from journal (%s)"
-msgstr ""
-
-#: calculate.py:512
-msgid "Unable to determine version"
-msgstr ""
-
-#: calculate.py:517
-#, python-format
-msgid "Reading journal entry (version %s)"
-msgstr ""
-
-#: calculate.py:522
-#, python-format
-msgid "State line invalid (%s)"
-msgstr ""
-
-#: calculate.py:539
-#, python-format
-msgid "Unable to read journal entry, unknown version (%s)"
-msgstr ""
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr ""
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr ""
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr ""
-
 #: eqnparser.py:550
 msgid "Operator not expected"
-msgstr ""
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr ""
-
-#: eqnparserhelp.py:39
-msgid "help_cos"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid "help_sin"
-msgstr ""
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr ""
-
-#. The separator to mark thousands (default: ',')
-#: mathlib.py:58
-msgid "thousand_sep"
-msgstr ""
-
-#. The separator to mark fractions (default: '.')
-#: mathlib.py:63
-msgid "fraction_sep"
-msgstr ""
-
-#. The multiplication symbol (default: '*')
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
-msgid "mul_sym"
-msgstr ""
-
-#. The division symbol (default: '/')
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
-msgid "div_sym"
-msgstr ""
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr ""
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
 msgstr ""
 
 #: eqnparser.py:566
@@ -351,6 +130,18 @@ msgstr ""
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
+msgstr ""
+
+#: eqnparser.py:596
+msgid "Invalid operator"
+msgstr ""
+
+#: eqnparser.py:603
+msgid "Operator expected"
+msgstr ""
+
+#: eqnparser.py:616
+msgid "_parse(): returning None"
 msgstr ""
 
 #. TRANS: It is possible to translate commands. However, I would highly
@@ -565,12 +356,111 @@ msgstr ""
 msgid "index"
 msgstr ""
 
+#: eqnparserhelp.py:132
+msgid "Topics"
+msgstr ""
+
+#: eqnparserhelp.py:143
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
+#: layout.py:60
+msgid "Edit"
+msgstr ""
+
+#: layout.py:61
+msgid "Algebra"
+msgstr ""
+
+#: layout.py:62
+msgid "Trigonometry"
+msgstr ""
+
+#: layout.py:63
+msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
+#: layout.py:64
+msgid "Constants"
+msgstr ""
+
+#: layout.py:65
+msgid "Format"
+msgstr ""
+
+#: layout.py:86
+msgid "Label:"
+msgstr ""
+
+#: layout.py:118
+msgid "All equations"
+msgstr ""
+
+#: layout.py:118
+msgid "My equations"
+msgstr ""
+
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
+#: layout.py:120
+msgid "Show history"
+msgstr ""
+
+#: layout.py:120
+msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:74
+msgid "mul_sym"
+msgstr ""
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:79
+msgid "div_sym"
+msgstr ""
+
 #: mathlib.py:132
 msgid "Undefined"
 msgstr ""
 
+#: mathlib.py:142
+msgid "Error: unsupported type"
+msgstr ""
+
 #: toolbars.py:36
 msgid "Help"
+msgstr ""
+
+#: toolbars.py:86
+msgid "Copy"
+msgstr ""
+
+#: toolbars.py:89
+msgid "Paste"
+msgstr ""
+
+#: toolbars.py:92
+msgid "Cut"
 msgstr ""
 
 #: toolbars.py:99
@@ -581,8 +471,16 @@ msgstr ""
 msgid "Square root"
 msgstr ""
 
+#: toolbars.py:157
+msgid "Inverse"
+msgstr ""
+
 #: toolbars.py:109
 msgid "e to the power x"
+msgstr ""
+
+#: toolbars.py:113
+msgid "x to the power y"
 msgstr ""
 
 #: toolbars.py:117
@@ -653,6 +551,10 @@ msgstr ""
 msgid "e"
 msgstr ""
 
+#: toolbars.py:280
+msgid "Plot"
+msgstr ""
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr ""
@@ -661,6 +563,18 @@ msgstr ""
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:113
-msgid "x to the power y"
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

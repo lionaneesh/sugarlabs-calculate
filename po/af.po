@@ -2,23 +2,32 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-05 00:30-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"PO-Revision-Date: 2011-02-06 04:55+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.3\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "Kokotoa"
 
 #: calculate.py:80
 #, python-format
@@ -27,16 +36,16 @@ msgstr ""
 
 #: calculate.py:210
 msgid "Available functions:"
-msgstr ""
+msgstr "Beskikbare funksies:"
 
 #: calculate.py:504
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Skriftelik aan Journel (%s)"
 
 #: calculate.py:788
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed(): ongeldige tipe"
 
 #: eqnparser.py:33
 msgid "Parse error"
@@ -45,7 +54,7 @@ msgstr ""
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr ""
+msgstr "vlak: %d, van %d"
 
 #: eqnparser.py:117
 #, python-format
@@ -139,7 +148,7 @@ msgstr ""
 #. functions() etc should be translated.
 #: eqnparserhelp.py:39
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
 #: eqnparserhelp.py:40
 msgid ""
@@ -149,7 +158,7 @@ msgstr ""
 
 #: eqnparserhelp.py:43
 msgid "and"
-msgstr ""
+msgstr "en"
 
 #: eqnparserhelp.py:44
 msgid ""
@@ -158,7 +167,7 @@ msgstr ""
 
 #: eqnparserhelp.py:46
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
 #: eqnparserhelp.py:47
 msgid ""
@@ -168,7 +177,7 @@ msgstr ""
 
 #: eqnparserhelp.py:50
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:51
 msgid ""
@@ -178,7 +187,7 @@ msgstr ""
 
 #: eqnparserhelp.py:54
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
 #: eqnparserhelp.py:55
 msgid ""
@@ -188,7 +197,7 @@ msgstr ""
 
 #: eqnparserhelp.py:58
 msgid "cosh"
-msgstr ""
+msgstr "cosh"
 
 #: eqnparserhelp.py:59
 msgid ""
@@ -197,7 +206,7 @@ msgstr ""
 
 #: eqnparserhelp.py:61
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
 #: eqnparserhelp.py:62
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -205,7 +214,7 @@ msgstr ""
 
 #: eqnparserhelp.py:64
 msgid "fac"
-msgstr ""
+msgstr "fac"
 
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -222,7 +231,7 @@ msgstr ""
 
 #: eqnparserhelp.py:71
 msgid "ln"
-msgstr ""
+msgstr "In"
 
 #: eqnparserhelp.py:72
 msgid ""
@@ -241,7 +250,7 @@ msgstr ""
 
 #: eqnparserhelp.py:79
 msgid "or"
-msgstr ""
+msgstr "of"
 
 #: eqnparserhelp.py:80
 msgid ""
@@ -250,7 +259,7 @@ msgstr ""
 
 #: eqnparserhelp.py:82
 msgid "plot"
-msgstr ""
+msgstr "Plot"
 
 #: eqnparserhelp.py:83
 msgid ""
@@ -260,7 +269,7 @@ msgstr ""
 
 #: eqnparserhelp.py:86
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
 #: eqnparserhelp.py:87
 msgid ""
@@ -270,7 +279,7 @@ msgstr ""
 
 #: eqnparserhelp.py:90
 msgid "sinh"
-msgstr ""
+msgstr "sinh"
 
 #: eqnparserhelp.py:91
 msgid ""
@@ -279,7 +288,7 @@ msgstr ""
 
 #: eqnparserhelp.py:93
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: eqnparserhelp.py:94
 msgid ""
@@ -289,15 +298,16 @@ msgstr ""
 
 #: eqnparserhelp.py:97
 msgid "square"
-msgstr ""
+msgstr "vierkante"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
 msgstr ""
 
 #: eqnparserhelp.py:101
+#, fuzzy
 msgid "tan"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:102
 msgid ""
@@ -307,8 +317,9 @@ msgid ""
 msgstr ""
 
 #: eqnparserhelp.py:106
+#, fuzzy
 msgid "tanh"
-msgstr ""
+msgstr "atan"
 
 #: eqnparserhelp.py:107
 msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
@@ -355,6 +366,14 @@ msgstr ""
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
+#: layout.py:44
+msgid "Clear"
+msgstr ""
+
+#: layout.py:53
+msgid "Enter"
+msgstr ""
+
 #: layout.py:60
 msgid "Edit"
 msgstr ""
@@ -369,6 +388,10 @@ msgstr ""
 
 #: layout.py:63
 msgid "Boolean"
+msgstr ""
+
+#: layout.py:118
+msgid "Miscellaneous"
 msgstr ""
 
 #: layout.py:64
@@ -391,12 +414,20 @@ msgstr ""
 msgid "My equations"
 msgstr ""
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr ""
 
 #: layout.py:120
 msgid "Show variables"
+msgstr ""
+
+#: layout.py:203
+msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
@@ -417,118 +448,136 @@ msgstr ""
 msgid "Error: unsupported type"
 msgstr ""
 
-#: toolbars.py:53
+#: toolbars.py:36
 msgid "Help"
 msgstr ""
 
-#: toolbars.py:111
+#: toolbars.py:86
 msgid "Copy"
 msgstr ""
 
-#: toolbars.py:115
+#: toolbars.py:89
 msgid "Paste"
 msgstr ""
 
-#: toolbars.py:119
+#: toolbars.py:92
 msgid "Cut"
 msgstr ""
 
-#: toolbars.py:127
+#: toolbars.py:99
+#, fuzzy
 msgid "Square"
-msgstr ""
+msgstr "vierkante"
 
-#: toolbars.py:132
+#: toolbars.py:103
 msgid "Square root"
 msgstr ""
 
-#: toolbars.py:137
+#: toolbars.py:157
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:144
+#: toolbars.py:109
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:113
 msgid "x to the power y"
 msgstr ""
 
-#: toolbars.py:154
+#: toolbars.py:117
 msgid "Natural logarithm"
 msgstr ""
 
-#: toolbars.py:160
+#: toolbars.py:123
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:168
+#: toolbars.py:131
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:172
+#: toolbars.py:135
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:176
+#: toolbars.py:139
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:182
+#: toolbars.py:145
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:186
+#: toolbars.py:149
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:190
+#: toolbars.py:153
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:196
+#: toolbars.py:159
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:200
+#: toolbars.py:163
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:204
+#: toolbars.py:167
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:212
+#: toolbars.py:175
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:216
+#: toolbars.py:179
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:226
+#: toolbars.py:189
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:229
+#: toolbars.py:192
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:236
+#: toolbars.py:199
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:240
+#: toolbars.py:202
 msgid "e"
 msgstr ""
 
-#: toolbars.py:247
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "Plot"
+
+#: toolbars.py:209
 msgid "Degrees"
 msgstr ""
 
-#: toolbars.py:248
+#: toolbars.py:210
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:252
+#: toolbars.py:292
 msgid "Degrees / radians"
+msgstr ""
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
 msgstr ""

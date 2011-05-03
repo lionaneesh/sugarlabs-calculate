@@ -2,18 +2,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2009-01-28 16:30-0500\n"
-"Last-Translator: Susanna Björverud <susanna.bjorverud@telia.com>\n"
+"PO-Revision-Date: 2010-02-12 05:59+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -55,7 +65,7 @@ msgstr "Fel vid %d"
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Skriv help(test) för att få hjälp om ämnet 'test'm, eller skriv help(index) "
-"för att se vilka ämnen som finns tillgängliga."
+"för att se vilka ämnen som finns tillgängliga"
 
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
@@ -121,11 +131,11 @@ msgstr "Förväntade inte en operator"
 
 #: eqnparser.py:566
 msgid "Parse error: number or variable expected"
-msgstr "Tolkningsfel: Förväntar ett tal eller en variabel."
+msgstr "Tolkningsfel: Förväntar ett tal eller en variabel"
 
 #: eqnparser.py:567
 msgid "Number or variable expected"
-msgstr "Förväntade ett tal eller en variabel."
+msgstr "Förväntade ett tal eller en variabel"
 
 #: eqnparser.py:596
 msgid "Invalid operator"
@@ -152,7 +162,7 @@ msgid ""
 "is x. Defined for -1 <= x < 1"
 msgstr ""
 "acos(x) returnerar arkus consinus av x Alltså den vinkel för vilken "
-"cos(vinkel) = x. X definieras som -1 <= x <= 1."
+"cos(vinkel) = x. X definieras som -1 <= x <= 1"
 
 #: eqnparserhelp.py:43
 msgid "and"
@@ -163,7 +173,7 @@ msgid ""
 "and(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
 "och(x, y), logiskt och. Returnerar Sant om x och y är båda sanna, annars "
-"returnerar den Falskt."
+"returnerar den Falskt"
 
 #: eqnparserhelp.py:46
 msgid "asin"
@@ -175,7 +185,7 @@ msgid ""
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x) returnerar arksinus av x. Alltså den vinkel för vilken sin(vinkel) = "
-"x. X devifieras som -1 <= x <= 1."
+"x. X devifieras som -1 <= x <= 1"
 
 #: eqnparserhelp.py:50
 msgid "atan"
@@ -187,7 +197,7 @@ msgid ""
 "tangent is x. Defined for all x"
 msgstr ""
 "atan(x) returnerar arktangens av x. Alltså den vinkel för vilken tan(vinkel) "
-"= x. Alla värden på x är giltiga."
+"= x. Alla värden på x är giltiga"
 
 #: eqnparserhelp.py:54
 msgid "cos"
@@ -199,7 +209,7 @@ msgid ""
 "at the angle x"
 msgstr ""
 "cos(x), returnerar cosinus av x. Alltså x-koordinaten på enhetscirkeln för "
-"vinkeln x."
+"vinkeln x"
 
 #: eqnparserhelp.py:58
 msgid "cosh"
@@ -227,8 +237,7 @@ msgstr "fac"
 #: eqnparserhelp.py:65
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"fac(x), returnerar fakulteten av  x. Ges av x! =  x * (x - 1) * (x - 2) * "
-"..."
+"fac(x), returnerar fakulteten av x. Ges av x! =  x * (x - 1) * (x - 2) * ..."
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:68
@@ -237,7 +246,7 @@ msgstr "funktioner"
 
 #: eqnparserhelp.py:69
 msgid "functions(), return a list of all the functions that are defined"
-msgstr "funktioner() returnerar en lista över alla definierade funktioner."
+msgstr "funktioner() returnerar en lista över alla definierade funktioner"
 
 #: eqnparserhelp.py:71
 msgid "ln"
@@ -258,7 +267,7 @@ msgstr "operatorer"
 
 #: eqnparserhelp.py:77
 msgid "operators(), return a list of the operators that are defined"
-msgstr "operatorer returnerar en lista med alla operatorer som har definierats."
+msgstr "operatorer returnerar en lista med alla operatorer som har definierats"
 
 #: eqnparserhelp.py:79
 msgid "or"
@@ -293,7 +302,7 @@ msgid ""
 "the angle x"
 msgstr ""
 "sin(x) returnerar sinus av x. Detta är y-koordinaten på enhetscirkeln vid "
-"vinkel x."
+"vinkel x"
 
 #: eqnparserhelp.py:90
 msgid "sinh"
@@ -324,7 +333,7 @@ msgstr "square"
 
 #: eqnparserhelp.py:98
 msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x) returnerar kvadraten av x. Ges av x^2=x*x."
+msgstr "square(x) returnerar kvadraten av x. Ges av x^2=x*x"
 
 #: eqnparserhelp.py:101
 msgid "tan"
@@ -356,7 +365,7 @@ msgstr "test"
 
 #: eqnparserhelp.py:110
 msgid "This is just a test topic, use help(index) for the index"
-msgstr "Detta är bara ett testämne, använd help(index) för att nå indexet."
+msgstr "Detta är bara ett testämne, använd help(index) för att nå indexet"
 
 #. TRANS: This command is descriptive, so can be translated
 #: eqnparserhelp.py:113
@@ -365,7 +374,7 @@ msgstr "variabler"
 
 #: eqnparserhelp.py:114
 msgid "variables(), return a list of the variables that are currently defined"
-msgstr "variabler() returnerar en lista över alla definierade variabler."
+msgstr "variabler() returnerar en lista över alla definierade variabler"
 
 #: eqnparserhelp.py:116
 msgid "xor"
@@ -378,7 +387,7 @@ msgid ""
 msgstr ""
 "xor(x, y) logiskt exklusivt eller. Fungerar som det vi i vanligt tal "
 "betraktar som eller, dvs returnerar sant om antingen x eller y är sant. "
-"Annars returnerar falskt."
+"Annars returnerar falskt"
 
 #. TRANS: help(index), both 'index' and the translation  will work
 #: eqnparserhelp.py:131
@@ -420,6 +429,10 @@ msgstr "Trigonometri"
 msgid "Boolean"
 msgstr "Boolsk"
 
+#: layout.py:118
+msgid "Miscellaneous"
+msgstr ""
+
 #: layout.py:64
 msgid "Constants"
 msgstr "Konstanter"
@@ -430,7 +443,7 @@ msgstr "Format"
 
 #: layout.py:86
 msgid "Label:"
-msgstr "Etikett: "
+msgstr "Etikett:"
 
 #: layout.py:118
 msgid "All equations"
@@ -440,6 +453,10 @@ msgstr "Alla ekvationer"
 msgid "My equations"
 msgstr "Mina ekvationer"
 
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr ""
+
 #: layout.py:120
 msgid "Show history"
 msgstr "Visa tidigare åtgärder"
@@ -447,6 +464,10 @@ msgstr "Visa tidigare åtgärder"
 #: layout.py:120
 msgid "Show variables"
 msgstr "Visa variabler"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
 #: mathlib.py:74
@@ -464,7 +485,7 @@ msgstr "Inte definierad"
 
 #: mathlib.py:142
 msgid "Error: unsupported type"
-msgstr "Fel: Stödjer inte den typen."
+msgstr "Fel: Stödjer inte den typen"
 
 #: toolbars.py:36
 msgid "Help"
@@ -489,6 +510,10 @@ msgstr "Kvadrat"
 #: toolbars.py:103
 msgid "Square root"
 msgstr "Kvadratrot"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "Invers"
 
 #: toolbars.py:109
 msgid "e to the power x"
@@ -566,6 +591,11 @@ msgstr "Pi"
 msgid "e"
 msgstr "e"
 
+#: toolbars.py:280
+#, fuzzy
+msgid "Plot"
+msgstr "plot"
+
 #: toolbars.py:209
 msgid "Degrees"
 msgstr "Grader"
@@ -574,11 +604,21 @@ msgstr "Grader"
 msgid "Radians"
 msgstr "Radianer"
 
+#: toolbars.py:292
+msgid "Degrees / radians"
+msgstr "Grader / Radianer"
+
+#: toolbars.py:301
+msgid "Exponent / Scientific notation"
+msgstr ""
+
+#: toolbars.py:311
+msgid "Number of shown digits"
+msgstr ""
+
+#: toolbars.py:316
+msgid "Integer formatting base"
+msgstr ""
+
 #~ msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 #~ msgstr "tanh(x) returnerar tangens hyperbolikus av x. Ges av sinh(x) / cosh(x)"
-
-#~ msgid "Inverse"
-#~ msgstr "Invers"
-
-#~ msgid "Degrees / radians"
-#~ msgstr "Grader / Radianer"
