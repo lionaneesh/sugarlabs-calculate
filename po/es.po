@@ -195,7 +195,7 @@ msgstr "asin"
 #: eqnparserhelp.py:47
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
+"ix. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x), Devuelve el arco seno de x. Este es el angulo para el cual el seno "
 "es x. Definido para -1<=x<=1"
