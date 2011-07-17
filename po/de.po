@@ -59,7 +59,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2011-05-03 00:25+0200\n"
+"PO-Revision-Date: 2011-07-17 22:53+0200\n"
 "Last-Translator: Markus <m.slg@gmx.de>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: de\n"
@@ -98,7 +98,7 @@ msgstr "Verarbeitungsfehler"
 #: eqnparser.py:58
 #, python-format
 msgid "level: %d, ofs %d"
-msgstr "Ebene: %d, von %d"
+msgstr "Ebene: %d von %d"
 
 #: eqnparser.py:117
 #, python-format
@@ -113,7 +113,7 @@ msgstr ""
 #: eqnparser.py:353 eqnparser.py:354
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "Funktion '%s' nicht definiert"
+msgstr "Funktion '%s' ist nicht definiert"
 
 #: eqnparser.py:359
 #, python-format
@@ -302,7 +302,7 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), gibt den natürlichen Logarithmus von x zurück. Dies ist der Wert, für "
+"ln(x) gibt den natürlichen Logarithmus von x zurück. Dies ist der Wert, für "
 "den die Exponentialfunktion exp() gleich x ist. Definiert für x >=0"
 
 #. TRANS: This command is descriptive, so can be translated
