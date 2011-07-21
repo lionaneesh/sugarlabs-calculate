@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2011-07-21 20:42+0200\n"
+"PO-Revision-Date: 2011-07-21 20:45+0200\n"
 "Last-Translator: Myckel Habets <myckel@sdf.lonestar.org>\n"
 "Language-Team: English\n"
 "Language: nl\n"
@@ -427,7 +427,7 @@ msgstr "Boolse"
 
 #: layout.py:118
 msgid "Miscellaneous"
-msgstr "Diversen "
+msgstr "Diversen"
 
 #: layout.py:64
 msgid "Constants"
@@ -589,7 +589,7 @@ msgstr "e"
 
 #: toolbars.py:280
 msgid "Plot"
-msgstr "tekenen"
+msgstr "Tekenen"
 
 #: toolbars.py:209
 msgid "Degrees"
