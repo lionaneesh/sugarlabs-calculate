@@ -633,7 +633,7 @@ msgid "Radians"
 msgstr ""
 
 #: toolbars.py:291
-msgid "Degrees / radians"
+msgid "Degrees / Radians"
 msgstr ""
 
 #: toolbars.py:300

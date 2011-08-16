@@ -288,7 +288,7 @@ class MiscToolbar(gtk.Toolbar):
         ]
         target_toolbar.insert(IconToggleToolButton(el, 
                     lambda x: self.update_angle_type(x, calc),
-                    _('Degrees / radians')), -1)
+                    _('Degrees / Radians')), -1)
         self.update_angle_type('deg', calc)
 
         el = [
