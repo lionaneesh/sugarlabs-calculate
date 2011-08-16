@@ -729,7 +729,7 @@ msgstr ""
 
 #: astparser.py:502
 #, python-format
-msgid "Attribute '%s' does not exist)"
+msgid "Attribute '%s' does not exist"
 msgstr ""
 
 #: astparser.py:596

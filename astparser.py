@@ -499,7 +499,7 @@ class AstParser:
                     val = parent.__dict__[node.attr]
                     return val
                 except Exception, e:
-                    msg = _("Attribute '%s' does not exist)") % node.value
+                    msg = _("Attribute '%s' does not exist") % node.value
                     raise RuntimeError(msg, ofs, ofs + len(node.value))
 
             return None
