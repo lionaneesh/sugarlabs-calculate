@@ -138,7 +138,7 @@ add.__doc__ = _('add(x, y), return x + y')
 def asin(x):
     return _inv_scale_angle(math.asin(x))
 asin.__doc__ = _(
-'asin(x), return the arc sine of x. This is the angle for which the sine is ix. \
+'asin(x), return the arc sine of x. This is the angle for which the sine is x. \
 Defined for -1 <= x <= 1')
 
 def asinh(x):
