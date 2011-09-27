@@ -1,0 +1,963 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"PO-Revision-Date: 2011-09-27 04:56+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: hus\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
+
+# ajixtaláb=número. Ajum ajixtaláb=Lector de números=Calculadora. La palabra original del ingles significa "Calcular" no "Calculadora". (Zurik)
+# Tsalpanchixtaláb=calcular
+#: activity/activity.info:2
+msgid "Calculate"
+msgstr "Tsalpanchixtaláb"
+
+#: functions.py:35
+msgid "add"
+msgstr "punk'uy"
+
+#: functions.py:36
+msgid "abs"
+msgstr "abs"
+
+#: functions.py:37
+msgid "acos"
+msgstr "acos"
+
+#: functions.py:38
+msgid "acosh"
+msgstr "acos"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+msgid "asinh"
+msgstr "asinh"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+msgid "atanh"
+msgstr "atan"
+
+#: functions.py:43
+msgid "and"
+msgstr "and"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr "b10bin"
+
+#: functions.py:45
+msgid "ceil"
+msgstr "ceil"
+
+#: functions.py:46
+msgid "cos"
+msgstr "cos"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "cosh"
+
+#: functions.py:48
+msgid "div"
+msgstr "div"
+
+#: functions.py:49
+msgid "gcd"
+msgstr "gcd"
+
+#: functions.py:50
+msgid "exp"
+msgstr "exp"
+
+#: functions.py:51
+msgid "factorial"
+msgstr "factorial"
+
+#: functions.py:52
+msgid "fac"
+msgstr "fac"
+
+#: functions.py:53
+msgid "factorize"
+msgstr "factorize"
+
+#: functions.py:54
+msgid "floor"
+msgstr "floor"
+
+#: functions.py:55
+msgid "inv"
+msgstr "inv"
+
+#: functions.py:56
+msgid "is_int"
+msgstr "is_int"
+
+#: functions.py:57
+msgid "ln"
+msgstr "ln"
+
+# logarithm base 10
+#: functions.py:58
+msgid "log10"
+msgstr "log10"
+
+#: functions.py:59
+msgid "mul"
+msgstr "mul"
+
+#: functions.py:60
+msgid "or"
+msgstr "or"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr "rand_float"
+
+#: functions.py:62
+msgid "rand_int"
+msgstr "rand_int"
+
+#: functions.py:63
+msgid "round"
+msgstr "round"
+
+#: functions.py:64
+msgid "sin"
+msgstr "sin"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "sinh"
+
+#: functions.py:66
+msgid "sinc"
+msgstr "sinc"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "sqrt"
+
+#: functions.py:68
+msgid "sub"
+msgstr "sub"
+
+# tsabchíl punk'uxtaláb - cuadrado, como es una función no debiera de traducirse.
+#: functions.py:69
+msgid "square"
+msgstr "square"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "tanh"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+"abs(x), in wichbál an valor absoluto xin k'al x, xi in le' kin uluw -x abal "
+"x < 0"
+
+#: functions.py:117
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"acos(x), in wichbál an arco coseno xin k'al x. Axé' pel an kexem abal jawa' "
+"an coseno pel x. Éxbadh abal -1 <= x < 1"
+
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+"acosh(x), in wichbál an arco coseno hiperbólico xin k'al x. Axé' pel in "
+"jalbíl y abal jawa' an coseno hiperbólico pel x."
+
+#: functions.py:129
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"And(x, y), and lógico. In wichbál Chubax max x ani y pel Chubax, max i in "
+"wichbál Yab chubax"
+
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr "add(x, y), return x + y"
+
+#: functions.py:141
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin(x), in wichbál an arco seno xin k'al x. Axé' pel an kexem abal jawa' an "
+"seno pel x. Éxbadh abal -1 <= x <= 1"
+
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
+"asinh(x), in wichbál an arco seno hiperbólico xin k'al x. Axé' pel in jalbíl "
+"y abal jawa' an seno hiperbólico pel x."
+
+#: functions.py:153
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan(x), in wichbál an arco tangente xin k'al x. Axé' pel an kexem abal "
+"jawa' an tangente pel x. Éxbadh abal patal an x"
+
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
+"atanh(x), in wichbál an arco tangente hiperbólica xin k'al x. Axé' pel in "
+"jalbíl y abal jawa' an tangente hiperbólica pel x."
+
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr "An ajixtaláb yab tejwa' jant'odha' juni binario tin áknixtal 10"
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+"b10bin(x), in éjtiyal juni ajixtaláb dhuchadh tin áknixtal 10 jant'odha' i "
+"binario, t'ipodh: b10bin(10111) = 23,"
+
+# ceil(x), devuelve el menor entero mayor que x. (Zurik)
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr "ceil(x), in wichbal xi talbel putat ani xi púlik abal ka yaney."
+
+#: functions.py:188
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"cos(x), in wichbál an coseno xin k'al x. Axé' pel an coordenada x al an "
+"júnkats kwechodhtaláb al an ángulo x"
+
+#: functions.py:194
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"cosh(x), in wichbál an coseno hiperbólico xin k'al x. Ejtidh jantodha' "
+"(exp(x) + exp(-x)) / 2"
+
+# No se puede dividir entre cero
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr "No se puede dividir entre cero"
+
+#: functions.py:219
+msgid "Invalid argument"
+msgstr "Yab bats'udh ódhaxtaláb"
+
+# gcd(a, b), determina el mayor común denominador de a y b. Por ejemplo, el factor mayor que es compartido por los números 15 y 18 es 3.
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+
+#: functions.py:227
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr ""
+"exp(x), in wichbál an exponente natural xin k'al x. Ejtidh jant'odha' e^x"
+
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr "An factorial expidh exbadh abal i putat ajixtaláb"
+
+#: functions.py:244
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+"factorial(n), in wichbál an factorial xin k'al n. Ejtidh jant'odha' n * (n - "
+"1) * (n - 2) * ..."
+
+#: functions.py:250
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"fac(x), in wichbál an factorial xin k'al x. Ejtidh jant'odha' x * (x - 1) * "
+"(x - 2) * ..."
+
+# floor(x), devuelve el mayor entero más pequeño que x.
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr "floor(x), in wichbal xi púlik putat ani xi talbel."
+
+# inv(x), devuelve la inversa de x, que es 1 / x
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr "inv es (x), in wichbal an x xi 1 / x"
+
+#: functions.py:309
+#: functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr "An Logarithm(x) expidh éxbadh abal x > 0"
+
+#: functions.py:311
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"ln(x), in wichbál an logaritmo natural xin k'al x. Axé' pel an ajixtaláb "
+"abal jawa' an exponente exp() pel x. Éxbadh abal x >= 0."
+
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+"log10(x), in wichbál an logaritmo áknixtal 10 in k'al x. Axé' pel in jalbíl "
+"y abal jawa' 10^y pel x. Éxbidh abal x >= 0."
+
+# Puede sólo calcular x módulo <integer>
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr "expidh i ejtowal ki t'ipox ba' an tejwomedhomtalab <integer>"
+
+# mod(x, y), devueve el módulo de x con respecto de y. Este es el restante después de dividir x por y.
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+"mod(x, y), ka wichba' an tejwomedhomtalab xi x, tin kwenta k'al y, axe' pel "
+"in taltal k'al an pejkaxtalab x tin tse'jeltal k'al an y."
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr "mul(x, y), in wichbál x * y"
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr "negate(x), in wichbál -x"
+
+#: functions.py:346
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
+msgstr ""
+"Or(x, y), o lógico. In wichbál Chubax max x o y pelchik Chubax, max i in "
+"wichbal Yab Chubax"
+
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr "pow(x, y), in wichbál x tin tsapík a y (x**y)"
+
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+"rand_float(), in wichbál juni tsipkats yab aykadh ajixtaláb xi k'wajat ti "
+"0.0 ma ti 1.0"
+
+#: functions.py:371
+msgid ""
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
+"rand_int([<maxval>]), in wichbál junij yab aykadh putat ajixtaláb xi k'wajal "
+"ti 0 ma ti <maxval>. <maxval> pel juni walkadh odhaxtaláb axi ok'xidh "
+"punudhits ti 65535."
+
+# round(x), devuelve el entero más próximo a x.
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr "round(x), in wichbál an putat ajixtaláb xi ejtil x."
+
+# Operaciones al nivel de bits sólo aplican para enteros.
+#: functions.py:382
+#: functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr "An bits t'ajnel expidh éxbadh abal i putat ajixtaláb"
+
+# shift_left(x, y), cambia (recorre, mueve) x por y bits a la izquierda (multiplicación por 2 por bit)
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+"shift_left(x, y), in adhk'iyal x k'al y i bits tin k'watab (multiply by 2 "
+"per bit)"
+
+# shift_right(x, y), cambia (recorre, mueve) x por y bits a la derecha (división por 2 por bit)
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+"shift_right(x, y), in adhk'iyal x k'al y i bits tin wínab (divide by 2 per "
+"bit)"
+
+#: functions.py:397
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+"sin(x), in wichbál an seno xin k'al x. Axé' pel an coordenada y al an "
+"júnkats kwechodhtaláb al an ángulo x"
+
+#: functions.py:403
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+"sinh(x), in wichbál an seno hiperbólico xin k'al x. Ejtidh jant'odha' "
+"(exp(x) - exp(-x)) / 2"
+
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
+"sinc(x), in wichbál an sinc xin k'al x. Axé' ejtidh jant'odha' sin(x) / x."
+
+#: functions.py:415
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"sqrt(x), in wichbál an raíz cuadrada xin k'al x. Axé' pel an ajixtaláb abal "
+"jawa' an tsabchíl puk'uxtaláb pel x. Éxbadh abal x >= 0."
+
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr "square(x), in wichbál x * x"
+
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr "sub(x, y), in wichbál x - y"
+
+#: functions.py:432
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+"tan(x), in wichbál an tangente xin k'al x. Axé' játs an pendiente in k'al an "
+"kits'lab ma ti in tujtal an júnkats kwechodhtaláb ma ti tuk ti al an "
+"kwechodhtalab a xi ts'ejkadh k'al an ángulo x. Ejtidh jant'odha' sin(x) / "
+"cos(x)"
+
+#: functions.py:439
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+"tanh(x), in wichbál an tangente hiperbólica xin k'al x. Ejtidh jant'odha' "
+"sinh(x) / cosh(x)"
+
+# yab chubax = no verdadero, falso
+#: functions.py:444
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x,y), xor lógico. In wichbál Chubax max x pél chubax (ani y pél Yab "
+"Chubax) o max y pél Chubax (ani x Yab Chubax), max yab ani' in wichbál Yab "
+"Chubax"
+
+#: layout.py:68
+msgid "Clear"
+msgstr "T'oka'"
+
+#: layout.py:77
+msgid "Enter"
+msgstr "Otskan"
+
+#: layout.py:98
+#: layout.py:138
+msgid "Edit"
+msgstr "Jalk'uy"
+
+#: layout.py:103
+#: layout.py:139
+msgid "Algebra"
+msgstr "Álgebra"
+
+# Triángulo = oxts'uptal
+# Trigonometría= In lejbaxtal an oxts'uptal
+#: layout.py:108
+#: layout.py:140
+msgid "Trigonometry"
+msgstr "Trigonometría"
+
+#: layout.py:113
+#: layout.py:141
+msgid "Boolean"
+msgstr "Booleano"
+
+#: layout.py:118
+#: layout.py:142
+msgid "Miscellaneous"
+msgstr "Xalumtaláb"
+
+#: layout.py:163
+msgid "Label:"
+msgstr "Úwbijláb:"
+
+#: layout.py:196
+msgid "All equations"
+msgstr "Patal an ecuaciones"
+
+#: layout.py:196
+msgid "My equations"
+msgstr "U ecuaciones"
+
+# wal = vista
+#: layout.py:198
+msgid "Change view between own and all equations"
+msgstr "Ka jaluw in wal ti al patal an ecuaciones ani xi a k'al"
+
+# Historial = T'ilab k'al jita'
+#: layout.py:201
+msgid "Show history"
+msgstr "Itej met'adh"
+
+#: layout.py:201
+msgid "Show variables"
+msgstr "Tejwa'méjdha' an bijilábchik"
+
+#: layout.py:203
+msgid "Change view between history and variables"
+msgstr "Ka jaluw in wal ti xi itej met'adh ani an bijlábchik"
+
+#. TRANS: multiplication symbol (default: '*')
+#: mathlib.py:82
+msgid "mul_sym"
+msgstr "mul_sym"
+
+#. TRANS: division symbol (default: '/')
+#: mathlib.py:87
+msgid "div_sym"
+msgstr "div_sym"
+
+# No definido = yab elan, yab dhuchadh
+#: mathlib.py:211
+msgid "Undefined"
+msgstr "Yab elan"
+
+#: mathlib.py:221
+msgid "Error: unsupported type"
+msgstr "K'ibts'ontaláb: yab exladh dhuche'"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() k'ibts'odh dhuchlab (%s)"
+
+# No se puede asignar etiqueta: causará recursión
+#: calculate.py:473
+msgid "Can not assign label: will cause recursion"
+msgstr "Can not assign label: will cause recursion"
+
+# chudhél dhuchláb úw=diario, periódico
+#: calculate.py:545
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Dhuchum ti chudhél dhuchadh úw(%s)"
+
+# k'ibts'odh dhuche'=tipo inválido
+#: calculate.py:828
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): k'ibts'odh dhuche'"
+
+# ayuda = tolmix (verbo conjugado en 3a. p). Como sustantivo = tolmixtaláb
+#: toolbars.py:53
+msgid "Help"
+msgstr "Tolmixtaláb"
+
+# Copiar=K'ot'bixtaláb (como sustantivo) y k'ot'biy (conjugado en pretérito)
+#: toolbars.py:121
+msgid "Copy"
+msgstr "K'ot'biy"
+
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr "<ctrl>c"
+
+#: toolbars.py:126
+msgid "Cut"
+msgstr "Et'oy"
+
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr "<ctrl>x"
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "Ts'at'k'a'"
+
+#: toolbars.py:147
+msgid "Square"
+msgstr "Square"
+
+#: toolbars.py:152
+msgid "Square root"
+msgstr "Square root"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "K'et'ách"
+
+# Se empleará así
+#: toolbars.py:164
+msgid "e to the power x"
+msgstr "e ti al in tsapík a x"
+
+#: toolbars.py:169
+msgid "x to the power y"
+msgstr "x ti al in tsapík a y"
+
+#: toolbars.py:174
+msgid "Natural logarithm"
+msgstr "Logaritmo natural"
+
+#: toolbars.py:180
+msgid "Factorial"
+msgstr "Factorial"
+
+#: toolbars.py:190
+msgid "Sine"
+msgstr "Seno"
+
+# Se respetará la palabra
+#: toolbars.py:194
+msgid "Cosine"
+msgstr "Coseno"
+
+# Se dejará igual
+#: toolbars.py:198
+msgid "Tangent"
+msgstr "Tangente"
+
+# Se dejará igual
+#: toolbars.py:204
+msgid "Arc sine"
+msgstr "Arcoseno"
+
+# Se utilizará la misma palabra
+#: toolbars.py:208
+msgid "Arc cosine"
+msgstr "Arcocoseno"
+
+# Se empleará la misma palabra
+#: toolbars.py:212
+msgid "Arc tangent"
+msgstr "Arcotangente"
+
+# Se utilizará la misma palabra
+#: toolbars.py:218
+msgid "Hyperbolic sine"
+msgstr "Seno hiperbólico"
+
+# la misma palabra se dejará
+#: toolbars.py:222
+msgid "Hyperbolic cosine"
+msgstr "Coseno hiperbólico"
+
+# Se utilizará la misma palabra
+#: toolbars.py:226
+msgid "Hyperbolic tangent"
+msgstr "Tangente hiperbólica"
+
+# Se dejará igual
+#: toolbars.py:236
+msgid "Logical and"
+msgstr "Y lógico"
+
+#: toolbars.py:240
+msgid "Logical or"
+msgstr "O lógico"
+
+#: toolbars.py:250
+msgid "Equals"
+msgstr "Jununúl"
+
+#: toolbars.py:253
+msgid "Not equals"
+msgstr "Yab jununúl"
+
+# Se deja igual
+#: toolbars.py:262
+msgid "Pi"
+msgstr "Pi"
+
+# Se emplea la misma
+#: toolbars.py:266
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:269
+msgid "γ"
+msgstr "γ"
+
+#: toolbars.py:272
+msgid "φ"
+msgstr "φ"
+
+# Se deja igual
+#: toolbars.py:279
+msgid "Plot"
+msgstr "T'ipoxtaláb"
+
+# Grados = Kexem
+# Grado en matemáticas tiene un significado distinto. Yo sugeriría Lejbaxtaláb. (Zurik)
+#: toolbars.py:286
+msgid "Degrees"
+msgstr "Grados"
+
+# se deja igual
+#: toolbars.py:287
+msgid "Radians"
+msgstr "Radianes"
+
+# Se utilizarán las mismas palabras
+#: toolbars.py:291
+msgid "Degrees / Radians"
+msgstr "Grados / Radianes"
+
+# Notación científica-cómo escritura breve de números.
+#: toolbars.py:300
+msgid "Exponent / Scientific notation"
+msgstr "In tsapík/ we'kats Dhuchadh ajixtaláb"
+
+# dígitos = dhuche'-ajixtaláb
+#: toolbars.py:310
+msgid "Number of shown digits"
+msgstr "Ajixtaláb ti tejwa' dhuche'-ajixtaláb"
+
+# Base = Aknixtaláb
+#: toolbars.py:320
+msgid "Integer formatting base"
+msgstr "In aknixtal an ajixtaláb"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), in t'ipoyal an ecuación 'eqn' k'al an bijláb 'var' tin "
+"áy an a ma ti b"
+
+# Error de procesamiento en %d
+# parse=procesamiento, análisis
+#: astparser.py:59
+#, python-format
+#, python-format, ,
+msgid "Parse error at %d"
+msgstr "k'ibtsontalab k'al an wat'bedhomtalab ti %d"
+
+#: astparser.py:71
+#: astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "K'ibts'ontaláb ti %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Axé' expidh pél jún i t'ilab takaxtaláb, ka ayendha' help(ólnomdhuchlab) "
+"abal an ólnomdhuchlab"
+
+# ólnomdhuchlab=índice
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Ka ayendha' help(test) abal an tolmix ti in ébál an 'test', o help(indice) "
+"abal an ólnomdhuchlab"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "ólnomdhuchlab"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "bijidhuchlab"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "T'ilabchik"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "bijlábchik"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Bijilábchik"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "t'ajnél"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "T'ajnél"
+
+# Revisar ya en contexto si el comando index esta traducido
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Yab wa'ats i tolmixtaláb k'al '%s', ka eyendha' an help(index) abal an index"
+
+# ayuda = tolmix (verbo conjugado en 3a. p). Como sustantivo = tolmixtaláb
+#: astparser.py:459
+msgid "help"
+msgstr "tolmixtaláb"
+
+# Recursión detectada
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "exbadh tejwomedhomtalab xi bijidh"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "An t'ajnél '%s' yab elan"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "An bijlab '%s' yab elan"
+
+# El atributo '%s' no existe
+#: astparser.py:502
+#, python-format
+#, python-format, ,
+msgid "Attribute '%s' does not exist"
+msgstr "Xi yab u tejwomel \"%s\" yán wa'ats"
+
+# K'ibts'ontaláb ti ál an áyláb=error de procesamiento.
+#: astparser.py:596
+msgid "Parse error"
+msgstr "K'ibts'ontaláb ti ál an áyláb"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Pilchik i abatnomtaláb xi inbáj junkudh"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Ál k'ibts'ontaláb"
+
+# Jolat T'ajnél = Funciones disponíbles
+#~ msgid "Available functions:"
+#~ msgstr "Jolat t'ajnél:"
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "t'ek'ém: %d, ofs %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "An yantolom ódhaxtaláb k'ibtsodh (pelak %d ani elan %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "an t'ajnél in ayendhál %d i odhaxtaláb"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "Yab ka ejtow ka t'aja' an áyláb ti ódhaxtaláb %d: '%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "K'ibts'odh t'ajnél: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "Yab ayábak jún i k'watbéj maplab"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "K'ibts'ontaláb ti al an áynaxtaláb (winab maplab)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "Yab ayábak jún i winbej maplab"
+
+# winab=derecho
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "K'ibts'ontaláb ti áynaxtaláb (winab maplab, yab k'al i left_val)"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr ""
+#~ "K'ibts'ontaláb ti aynaxtaláb (winab maplab, manij jún in t'ek'ém abal ka "
+#~ "mapuyat)"
+
+#~ msgid "Number not expected"
+#~ msgstr "Yab aychidh ajixtaláb"
+
+#~ msgid "Operator not expected"
+#~ msgstr "Yab aychidh t'iplab"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "K'ibts'ontaláb ti aynaxtaláb: ayabak juni ajixtaláb o juni bijláb"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "Ayabak juni ajixtaláb o juni bijláb"
+
+#~ msgid "Invalid operator"
+#~ msgstr "Yab bats'udh t'iplab"
+
+#~ msgid "Operator expected"
+#~ msgstr "Áychidh t'iplab"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_parse(): wichbom Yab jant'oj"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "functions(), in wichbál jún k'elab i t'ajnél a xi k'wajat lejkidh"
+
+#~ msgid "operators"
+#~ msgstr "t'iplab"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "operators(), in wichbál jun k'elab i t'iplabchik a xi k'wajat lejkidh"
+
+#~ msgid "plot"
+#~ msgstr "plot"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr ""
+#~ "square(x), in wichbál an tsabchíl punk'uxtaláb xin k'al x. Ejtidh jant'odha' "
+#~ "x * x"
+
+#~ msgid "test"
+#~ msgstr "takaxtaláb"
+
+# k'elab = lista, menú
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr "variables(), in wichbál jún i k'elab i bijilábchik a xi elnének xók'ij"
+
+#~ msgid "Constants"
+#~ msgstr "Junini' in éy"
+
+#~ msgid "Format"
+#~ msgstr "T'ipodhtaláb"
