@@ -14,457 +14,540 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-10-26 10:23-0400\n"
-"Last-Translator: Yuan Chao <yuanchao@gmail.com>\n"
+"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"PO-Revision-Date: 2011-05-22 18:09+0200\n"
+"Last-Translator: Chen, Kenzen <fallwind@seed.net.tw>\n"
 "Language-Team: Yuan Chao <yuanchao@gmail.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "計算機"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() 無效的字串 (%s)"
+#: functions.py:35
+msgid "add"
+msgstr ""
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "現有函式："
+#: functions.py:36
+msgid "abs"
+msgstr ""
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "寫入日誌 (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): 無效的型態"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "分析錯誤"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "階層：%d / %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "%d 有錯誤"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "請用 help(test) 取得 'test' 的協助訊息，或請用 help(index) 參閱索引"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "函數 '%s' 未定義"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "無效的參數個數 (%d 而非 %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "函數須要 %d 個參數"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "無法分析參數 %d：'%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "函數錯誤：%s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "變數 '%s' 未定義"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "不預期的左括號"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "分析錯誤 (右括號)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "不預期的右括號"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "分析錯誤 (右括號無 left_val)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "分析錯誤 (右括號不對稱)"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "非預期的數字."
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "非預期的運算子"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "分析錯誤：預期為數字或變數"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "預期為數字或變數"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "無效的運算子"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "預期為運算子"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): 無傳回值"
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
+#: functions.py:37
 msgid "acos"
 msgstr "acos"
 
-#: eqnparserhelp.py:40
+#: functions.py:38
+#, fuzzy
+msgid "acosh"
+msgstr "acos"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+#, fuzzy
+msgid "asinh"
+msgstr "asin"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+#, fuzzy
+msgid "atanh"
+msgstr "atan"
+
+#: functions.py:43
+msgid "and"
+msgstr "and"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+#: functions.py:46
+msgid "cos"
+msgstr "cos"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "cosh"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr "exp"
+
+#: functions.py:51
+#, fuzzy
+msgid "factorial"
+msgstr "階乘"
+
+#: functions.py:52
+msgid "fac"
+msgstr "fac"
+
+#: functions.py:53
+#, fuzzy
+msgid "factorize"
+msgstr "階乘"
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr "ln"
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr "or"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
+msgid "sin"
+msgstr "sin"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "sinh"
+
+#: functions.py:66
+#, fuzzy
+msgid "sinc"
+msgstr "sin"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "sqrt"
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr "square"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "tanh"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr "acos(x) 傳回 x 的反餘弦值，也就是當餘弦值為 x 時的角度大小。定義範圍 -1 <= x < 1。"
 
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "and"
-
-#: eqnparserhelp.py:44
+#: functions.py:123
 msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+#, fuzzy
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr "and(x,y) 邏輯運算「且」，只有當 x 與 y 都為真時傳回真，否則傳回假。"
 
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr "asin"
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr ""
 
-#: eqnparserhelp.py:47
+#: functions.py:141
+#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr "asin(x) 傳回 x 的反正弦值，也就是當正弦值為 x 時的角度大小。定義範圍 -1 <= x < 1。"
 
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr "atan"
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
 
-#: eqnparserhelp.py:51
+#: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr "acos(x) 傳回 x 的反正切值，也就是當正切函數值為 x 時的角度大小。定義範圍 x 可為任意實數。"
 
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr "cos"
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
 
-#: eqnparserhelp.py:55
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr "cos(x) 傳回 x 的餘弦值，也就是單位圓上，與通過圓心水平線與交角 x 直線的 x-坐標。"
 
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr "cosh"
-
-#: eqnparserhelp.py:59
+#: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr "cosh(x) 傳回 x 的雙曲餘弦函數值，也就是 (exp(x) + exp(-x)) / 2"
 
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr "exp"
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr ""
 
-#: eqnparserhelp.py:62
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr "exp(x) 傳回自然對數的 x 次方，也就是 e^x"
 
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr "fac"
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
 
-#: eqnparserhelp.py:65
+#: functions.py:244
+#, fuzzy
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr "fac(x) 傳回 x 的階乘，也就是 x * (x - 1) * (x - 2) * ..."
+
+#: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr "fac(x) 傳回 x 的階乘，也就是 x * (x - 1) * (x - 2) * ..."
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr "functions"
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr ""
 
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "functions() 傳回目前已定義的函數列表"
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr ""
 
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr "ln"
+#: functions.py:309
+#: functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
 
-#: eqnparserhelp.py:72
+#: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr "lx(x) 傳回 x 的自然對數值，也就是當 exp() 等於 x 的數值，定義在 x >=0 區間。"
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "operators"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "operators() 傳回目前已定義的運算子"
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr "or"
-
-#: eqnparserhelp.py:80
+#: functions.py:320
 msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
+#, fuzzy
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr "or(x, y) 傳回邏輯運算「或」，也就是當 x 或 y 至少其一為真時，傳回真。"
 
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr "plot"
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr ""
 
-#: eqnparserhelp.py:83
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
 msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr "plot(eqn, var=-a..b) 畫出方程式 'eqn' 在 a 到 b 之間的圖形。"
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
 
-#: eqnparserhelp.py:86
-msgid "sin"
-msgstr "sin"
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr ""
 
-#: eqnparserhelp.py:87
+#: functions.py:382
+#: functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr "sin(x) 傳回 x 的正弦函數值，也就是單位圓上，與通過圓心水平線與交角 x 直線的 y-坐標。"
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr "sinh"
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr "sinh(x) 傳回 x 的雙曲正弦函數值，也就是 (exp(x) - exp(-x)) / 2"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr "sqrt"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr "sqrt(x) 傳回 x 的平方根，也就是平方等於 x 的數值，當 x >= 0 有意義。"
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr "square"
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x) 傳回 x 的平方值，也就是 x * x"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "tan"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr "tan(x) 傳回 x 的正切函數值，也就是單位圓上，通過圓心與水平線夾角 x 直線的斜率。也等於 sin(x) / cos(x)。"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr "tanh"
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#: functions.py:439
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x) 傳回 x 的雙曲正切函數值。也等於 sinh(x) / cosh(x)。"
 
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr "test"
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "這是測試主題，請用 help(index) 參閱索引"
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr "variables"
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr "variables() 會傳回目前已定義的變數列表"
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr "xor"
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr "xor(x, y) 邏輯運算「互斥或」，當只有 x 或 y 其中之一為真時傳回真，否則傳回假"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr "索引"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "主題"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "沒有關於 '%s' 的協助訊息，請用 help(index) 參閱索引"
-
-#: layout.py:44
+#: layout.py:68
 msgid "Clear"
 msgstr "清除"
 
-#: layout.py:53
+#: layout.py:77
 msgid "Enter"
 msgstr "輸入"
 
-#: layout.py:60
+#: layout.py:98
+#: layout.py:138
 msgid "Edit"
 msgstr "編輯"
 
-#: layout.py:61
+#: layout.py:103
+#: layout.py:139
 msgid "Algebra"
 msgstr "代數運算"
 
-#: layout.py:62
+#: layout.py:108
+#: layout.py:140
 msgid "Trigonometry"
 msgstr "三角函數"
 
-#: layout.py:63
+#: layout.py:113
+#: layout.py:141
 msgid "Boolean"
 msgstr "布林邏輯運算"
 
 #: layout.py:118
+#: layout.py:142
 msgid "Miscellaneous"
-msgstr ""
+msgstr "雜項"
 
-#: layout.py:64
-msgid "Constants"
-msgstr "常數"
-
-#: layout.py:65
-msgid "Format"
-msgstr "格式"
-
-#: layout.py:86
+#: layout.py:163
 msgid "Label:"
 msgstr "標記："
 
-#: layout.py:118
+#: layout.py:196
 msgid "All equations"
 msgstr "所有方程式"
 
-#: layout.py:118
+#: layout.py:196
 msgid "My equations"
 msgstr "我的方程式"
 
 #: layout.py:198
 msgid "Change view between own and all equations"
-msgstr ""
+msgstr "切換擁有或全部檢視"
 
-#: layout.py:120
+#: layout.py:201
 msgid "Show history"
 msgstr "顯示歷史紀錄"
 
-#: layout.py:120
+#: layout.py:201
 msgid "Show variables"
 msgstr "顯示變數"
 
 #: layout.py:203
 msgid "Change view between history and variables"
-msgstr ""
+msgstr "切換變數或歷史檢視"
 
 #. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "＊"
 
 #. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "／"
 
-#: mathlib.py:132
+#: mathlib.py:211
 msgid "Undefined"
 msgstr "未定義"
 
-#: mathlib.py:142
+#: mathlib.py:221
 msgid "Error: unsupported type"
 msgstr "錯誤：不支援的型態"
 
-#: toolbars.py:36
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() 無效的字串 (%s)"
+
+#: calculate.py:473
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:545
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "寫入日誌 (%s)"
+
+#: calculate.py:828
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): 無效的型態"
+
+#: toolbars.py:53
 msgid "Help"
 msgstr "幫助"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "複製"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "貼上"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "剪下"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "貼上"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr "平方"
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr "平方根"
 
@@ -472,107 +555,301 @@ msgstr "平方根"
 msgid "Inverse"
 msgstr "負號"
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr "e 的 x 次方"
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr "x 的 y 次方"
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr "自然對數值"
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr "階乘"
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr "正弦函數"
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr "餘弦函數"
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr "正切函數"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr "反正弦函數"
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr "反餘弦函數"
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr "反正割函數"
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr "雙曲正弦函數"
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr "雙曲餘弦函數"
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr "雙曲正切函數"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr "邏輯運算 且"
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr "邏輯運算 或"
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr "＝"
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr "不等於"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr "Pi"
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:280
-#, fuzzy
-msgid "Plot"
-msgstr "plot"
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
 
-#: toolbars.py:209
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
+msgid "Plot"
+msgstr "作圖"
+
+#: toolbars.py:286
 msgid "Degrees"
 msgstr "角度"
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr "徑度"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+#, fuzzy
+msgid "Degrees / Radians"
 msgstr "角度／徑度"
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
-msgstr ""
+msgstr "指數／科學記號"
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
+msgstr "小數點後第幾位"
+
+#: toolbars.py:320
+msgid "Integer formatting base"
+msgstr "整數模式"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr "plot(eqn, var=-a..b) 畫出方程式 'eqn' 在 a 到 b 之間的圖形。"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
 msgstr ""
 
-#: toolbars.py:316
-msgid "Integer formatting base"
+#: astparser.py:71
+#: astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d 有錯誤"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "這是測試主題，請用 help(index) 參閱索引"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "請用 help(test) 取得 'test' 的協助訊息，或請用 help(index) 參閱索引"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "索引"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "主題"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "主題"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "變數"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "變數"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "functions"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "沒有關於 '%s' 的協助訊息，請用 help(index) 參閱索引"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "幫助"
+
+#: astparser.py:466
+msgid "Recursion detected"
 msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "函數 '%s' 未定義"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "變數 '%s' 未定義"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "分析錯誤"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#~ msgid "Available functions:"
+#~ msgstr "現有函式："
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "階層：%d / %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "無效的參數個數 (%d 而非 %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "函數須要 %d 個參數"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "無法分析參數 %d：'%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "函數錯誤：%s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "不預期的左括號"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "分析錯誤 (右括號)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "不預期的右括號"
+
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "分析錯誤 (右括號無 left_val)"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "分析錯誤 (右括號不對稱)"
+
+#~ msgid "Number not expected"
+#~ msgstr "非預期的數字."
+
+#~ msgid "Operator not expected"
+#~ msgstr "非預期的運算子"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "分析錯誤：預期為數字或變數"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "預期為數字或變數"
+
+#~ msgid "Invalid operator"
+#~ msgstr "無效的運算子"
+
+#~ msgid "Operator expected"
+#~ msgstr "預期為運算子"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_parse(): 無傳回值"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "functions() 傳回目前已定義的函數列表"
+
+#~ msgid "operators"
+#~ msgstr "operators"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "operators() 傳回目前已定義的運算子"
+
+#~ msgid "plot"
+#~ msgstr "plot"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr "square(x) 傳回 x 的平方值，也就是 x * x"
+
+#~ msgid "test"
+#~ msgstr "test"
+
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr "variables() 會傳回目前已定義的變數列表"
+
+#~ msgid "Constants"
+#~ msgstr "常數"
+
+#~ msgid "Format"
+#~ msgstr "格式"
