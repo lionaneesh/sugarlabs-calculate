@@ -14,299 +14,391 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-11-14 11:07-0500\n"
+"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"PO-Revision-Date: 2011-08-26 09:06+0200\n"
 "Last-Translator: korakurider <korakurider@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.1.0rc2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.1\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calculate"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() の文字列が無効です(%s)"
+#: functions.py:35
+msgid "add"
+msgstr "追加"
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "利用可能な関数："
+#: functions.py:36
+msgid "abs"
+msgstr "abs"
 
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "ジャーナルへ保存中(%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): 無効なタイプです"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "文法チェックエラー"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "レベル: %d, ofs %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "%dにエラーがあります"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "'test'についてのヘルプを見るにはhelp(test)と入力してください。索引を見るにはhelp(index)と入力します。"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "関数'%s'が定義されていません。"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "引数の数が違います(正しくは%dで、%dは間違いです。）"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "この関数は%d個の引数をとります。"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "%dに与えられた右の引数に問題があります。: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "関数のエラー: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "変数 '%s' が定義されていません。"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "余計な左カッコがあります。"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "文法チェックエラー（右カッコ）"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "余計な右カッコがあります。"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "文法チェックエラー（右カッコ、左辺値なし）"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "文法チェックエラー（右カッコ、あるいは閉じる対象のレベル無し）"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "数値が現れてはいけません。"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "演算子は指定できません。"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "文法エラー：数値もしくは変数を指定してください。"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "数値もしくは変数を指定してください。"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "無効な演算子です"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "演算子を指定してください。"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_parse(): 返す値がありません"
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
+#: functions.py:37
 msgid "acos"
 msgstr "acos"
 
-#: eqnparserhelp.py:40
+#: functions.py:38
+msgid "acosh"
+msgstr "acosh"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+msgid "asinh"
+msgstr "asinh"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+msgid "atanh"
+msgstr "atanh"
+
+#: functions.py:43
+msgid "and"
+msgstr "and"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+#: functions.py:46
+msgid "cos"
+msgstr "cos"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "cosh"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr "exp"
+
+#: functions.py:51
+msgid "factorial"
+msgstr "階乗"
+
+#: functions.py:52
+msgid "fac"
+msgstr "fac"
+
+#: functions.py:53
+msgid "factorize"
+msgstr "階乗"
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr "ln"
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr "or"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
+msgid "sin"
+msgstr "sin"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "sinh"
+
+#: functions.py:66
+msgid "sinc"
+msgstr "sinc"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "sqrt"
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr "二乗"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "tanh"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr "関数acos(x)はxに対するアークコサインを返します。これは-1<= x <1の範囲にあるxを与えるコサインの角度となります。"
 
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "and"
-
-#: eqnparserhelp.py:44
+#: functions.py:123
 msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+#, fuzzy
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr "関数and(x,y)は論理積です。これはxとyが共に真のとき真(true)を返します。それ以外の場合は偽(false)を返します。"
 
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr "asin"
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr ""
 
-#: eqnparserhelp.py:47
+#: functions.py:141
+#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr "関数asin(x)はxに対するアークサインを返します。これは-1<= x <1で定義されるxに対するサインの角度です。"
 
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr "atan"
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
 
-#: eqnparserhelp.py:51
+#: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr "関数atan(x)はxに対するアークタンジェントを返します。これは全てのxに対し、タンジェントを与える角度を返します。"
 
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr "cos"
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
 
-#: eqnparserhelp.py:55
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr "関数cos(x)はxのコサインを返します。これは単位円における角度xの時のx座標の値です。"
 
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr "cosh"
-
-#: eqnparserhelp.py:59
+#: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr "関数cosh(x)はxに対するハイパーボリックコサインを返します。この値は(exp(x)+exp(-x))/2によって与えられます。"
 
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr "exp"
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr ""
 
-#: eqnparserhelp.py:62
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr "関数exp(x)は,xに対する自然に対する指数関数の値を返します。この値はe^xで与えられます。"
 
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr "fac"
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
 
-#: eqnparserhelp.py:65
+#: functions.py:244
+#, fuzzy
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr "関数fac(x)はxの階乗を返します。これはx*(x-1)*(x-2)*...で与えられます。"
+
+#: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr "関数fac(x)はxの階乗を返します。これはx*(x-1)*(x-2)*...で与えられます。"
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr "functions"
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr ""
 
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "関数functions()は定義されている全ての関数のリストを返します。"
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr ""
 
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr "ln"
+#: functions.py:309
+#: functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
 
-#: eqnparserhelp.py:72
+#: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr "関数ln(x)はxに対する自然対数を返します。これはx >=0 であるxに対し、exp()がxとなるような値です。"
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "operators"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "関数operators()は、定義済み演算子のリストを返します。"
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr "or"
-
-#: eqnparserhelp.py:80
+#: functions.py:320
 msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
+#, fuzzy
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr "関数or(x,y)は論理和orです。これはxと／またはyが真のとき真(true)を返し、それ以外は偽(false)を返す関数です。"
 
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr "plot"
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr ""
 
-#: eqnparserhelp.py:83
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
 msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr "関数plot(eqn var=-a..b)は、等式'eqn'に対するaからbの範囲の変数'var'について関数を作画します。"
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
 
-#: eqnparserhelp.py:86
-msgid "sin"
-msgstr "sin"
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr ""
 
-#: eqnparserhelp.py:87
+#: functions.py:382
+#: functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr "関数sin(x)は、xのサインを返します。これは単位円上の角度xにおけるy座標の値となります。"
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr "sinh"
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr "関数sinh(x)はxに対するハイパーボリックサインを返します。これは(exp(x)-exp(-x))/2により与えられます。"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr "sqrt"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr "関数sqrt(x)はxの平方根を与えます。これはx >=0であるようなxに対し、その二乗がxとなるような値です。"
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr "二乗"
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr "関数square(x)は、xの二乗を返します。これはx*xで与えられます。"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "tan"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
@@ -315,36 +407,12 @@ msgstr ""
 "関数tan(x)はxのタンジェントを返します。これは単位円において原点からの直線が角度xで単位円と交わるときの、直線の傾きを与えます。またこれはsin("
 "x)/cos(x)で与えられます。"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr "tanh"
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#: functions.py:439
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "関数sinh(x)はハイパーボリックタンジェントを返します。これはsinh(x)/cosh(x)で与えられます。"
 
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr "test"
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "単にtestのトピックスです。索引はhelp(index)と入力してください。"
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr "variables"
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr "関数variables()は現在定義されている変数群をリストで返します。"
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr "xor"
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
@@ -352,65 +420,48 @@ msgstr ""
 "関数xor(x,y)は排他的論理和を返します。これはxが真でyが偽、もしくはxが偽でyが真の時のみ真(true)となり、それ以外のときは偽(false)"
 "となるような関数です。"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr "index"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "トピックス"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "'%s' に関するヘルプ情報はありません。help(index)で索引を確認してください"
-
-#: layout.py:44
+#: layout.py:68
 msgid "Clear"
 msgstr "クリア"
 
-#: layout.py:53
+#: layout.py:77
 msgid "Enter"
 msgstr "入力"
 
-#: layout.py:60
+#: layout.py:98
+#: layout.py:138
 msgid "Edit"
 msgstr "編集"
 
-#: layout.py:61
+#: layout.py:103
+#: layout.py:139
 msgid "Algebra"
 msgstr "代数"
 
-#: layout.py:62
+#: layout.py:108
+#: layout.py:140
 msgid "Trigonometry"
 msgstr "三角法"
 
-#: layout.py:63
+#: layout.py:113
+#: layout.py:141
 msgid "Boolean"
 msgstr "論理関数"
 
 #: layout.py:118
+#: layout.py:142
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:64
-msgid "Constants"
-msgstr "定数"
-
-#: layout.py:65
-msgid "Format"
-msgstr "書式"
-
-#: layout.py:86
+#: layout.py:163
 msgid "Label:"
 msgstr "ラベル:"
 
-#: layout.py:118
+#: layout.py:196
 msgid "All equations"
 msgstr "すべての等式"
 
-#: layout.py:118
+#: layout.py:196
 msgid "My equations"
 msgstr "私の等式"
 
@@ -418,11 +469,11 @@ msgstr "私の等式"
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:120
+#: layout.py:201
 msgid "Show history"
 msgstr "履歴を表示"
 
-#: layout.py:120
+#: layout.py:201
 msgid "Show variables"
 msgstr "変数を表示"
 
@@ -431,44 +482,70 @@ msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
 #. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:132
+#: mathlib.py:211
 msgid "Undefined"
 msgstr "未定義"
 
-#: mathlib.py:142
+#: mathlib.py:221
 msgid "Error: unsupported type"
 msgstr "エラー: 取り扱えない型です"
 
-#: toolbars.py:36
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() の文字列が無効です(%s)"
+
+#: calculate.py:473
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:545
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "ジャーナルへ保存中(%s)"
+
+#: calculate.py:828
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): 無効なタイプです"
+
+#: toolbars.py:53
 msgid "Help"
 msgstr "ヘルプ"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "コピー"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "貼り付け"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "切り取り"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "貼り付け"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr "二乗"
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr "平方根"
 
@@ -476,110 +553,305 @@ msgstr "平方根"
 msgid "Inverse"
 msgstr "入れ替え(逆関数)"
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr "eのx乗"
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr "xのy乗"
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr "自然対数"
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr "階乗"
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr "正弦（sin）"
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr "余弦（cos）"
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr "正接（tan）"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr "逆正弦（arcsin）"
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr "逆余弦（arccos）"
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr "逆正接（arctan）"
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr "双曲正弦（sinh）"
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr "双曲余弦（cosh）"
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr "双曲正接（tanh）"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr "論理積（AND）"
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr "論理和（OR）"
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr "等号"
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr "不等号"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr "π（円周率）"
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr "e（オイラー数）"
 
-#: toolbars.py:280
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
 #, fuzzy
 msgid "Plot"
 msgstr "plot"
 
-#: toolbars.py:209
+#: toolbars.py:286
 msgid "Degrees"
 msgstr "角度"
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr "ラジアン"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+#, fuzzy
+msgid "Degrees / Radians"
 msgstr "角度/ラジアン"
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr "関数plot(eqn var=-a..b)は、等式'eqn'に対するaからbの範囲の変数'var'について関数を作画します。"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71
+#: astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%dにエラーがあります"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "単にtestのトピックスです。索引はhelp(index)と入力してください。"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "'test'についてのヘルプを見るにはhelp(test)と入力してください。索引を見るにはhelp(index)と入力します。"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "index"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "トピックス"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "トピックス"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "variables"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "variables"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "functions"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "'%s' に関するヘルプ情報はありません。help(index)で索引を確認してください"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "ヘルプ"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "関数'%s'が定義されていません。"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "変数 '%s' が定義されていません。"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "文法チェックエラー"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#~ msgid "Available functions:"
+#~ msgstr "利用可能な関数："
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "レベル: %d, ofs %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "引数の数が違います(正しくは%dで、%dは間違いです。）"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "この関数は%d個の引数をとります。"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "%dに与えられた右の引数に問題があります。: '%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "関数のエラー: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "余計な左カッコがあります。"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "文法チェックエラー（右カッコ）"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "余計な右カッコがあります。"
+
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "文法チェックエラー（右カッコ、左辺値なし）"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "文法チェックエラー（右カッコ、あるいは閉じる対象のレベル無し）"
+
+#~ msgid "Number not expected"
+#~ msgstr "数値が現れてはいけません。"
+
+#~ msgid "Operator not expected"
+#~ msgstr "演算子は指定できません。"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "文法エラー：数値もしくは変数を指定してください。"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "数値もしくは変数を指定してください。"
+
+#~ msgid "Invalid operator"
+#~ msgstr "無効な演算子です"
+
+#~ msgid "Operator expected"
+#~ msgstr "演算子を指定してください。"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_parse(): 返す値がありません"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "関数functions()は定義されている全ての関数のリストを返します。"
+
+#~ msgid "operators"
+#~ msgstr "operators"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "関数operators()は、定義済み演算子のリストを返します。"
+
+#~ msgid "plot"
+#~ msgstr "plot"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr "関数square(x)は、xの二乗を返します。これはx*xで与えられます。"
+
+#~ msgid "test"
+#~ msgstr "test"
+
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr "関数variables()は現在定義されている変数群をリストで返します。"
+
+#~ msgid "Constants"
+#~ msgstr "定数"
+
+#~ msgid "Format"
+#~ msgstr "書式"
 
 #, python-format
 #, fuzzy
