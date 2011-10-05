@@ -78,15 +78,20 @@ class MathLib:
         if self.fraction_sep == "" or self.fraction_sep == None:
             self.fraction_sep = "."
 
-        # TRANS: multiplication symbol (default: '*')
+        # TRANS: multiplication symbol (default: '×')
         self.mul_sym = _('mul_sym')
         if len(self.mul_sym) == 0 or len(self.mul_sym) > 3:
-            self.mul_sym = '*'
+            self.mul_sym = '×'
 
-        # TRANS: division symbol (default: '/')
+        # TRANS: division symbol (default: '÷')
         self.div_sym = _('div_sym')
         if len(self.div_sym) == 0 or len(self.div_sym) > 3:
-            self.div_sym = '/'
+            self.div_sym = '÷'
+
+        # TRANS: equal symbol (default: '=')
+        self.equ_sym = _('equ_sym')
+        if len(self.equ_sym) == 0 or len(self.equ_sym) > 3:
+            self.equ_sym = '='
 
     def set_format_type(self, fmt, digit_limit=9):
         self.format_type = fmt

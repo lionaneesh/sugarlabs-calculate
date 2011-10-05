@@ -47,6 +47,7 @@ class CalcLayout:
 
         mul_sym = self._parent.ml.mul_sym
         div_sym = self._parent.ml.div_sym
+        equ_sym = self._parent.ml.equ_sym
 
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
@@ -74,7 +75,7 @@ class CalcLayout:
             [4, 2, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
             [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [3, 3, 3, _('Enter'), self.col_gray1, lambda w: self._parent.process()],
+            [3, 3, 3, equ_sym, self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):

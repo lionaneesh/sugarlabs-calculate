@@ -258,8 +258,8 @@ class Calculate(ShareableActivity):
         'plus': '+',
         'minus': '-',
         'asterisk': '*',
-        'multiply': '',
-        'divide': '',
+        'multiply': '×',
+        'divide': '÷',
         'slash': '/',
         'BackSpace': lambda o: o.remove_character(-1),
         'Delete': lambda o: o.remove_character(1),
@@ -317,6 +317,7 @@ class Calculate(ShareableActivity):
 
         self.KEYMAP['multiply'] = self.ml.mul_sym
         self.KEYMAP['divide'] = self.ml.div_sym
+        self.KEYMAP['equal'] = self.ml.equ_sym
 
         self.clipboard = gtk.Clipboard()
         self.select_reason = self.SELECT_SELECT
