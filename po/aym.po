@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-11-19 19:37+0200\n"
+"PO-Revision-Date: 2011-11-23 07:22+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: aym\n"
@@ -16,12 +16,12 @@ msgstr ""
 #  "Calculadora"
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "jakhuña"
+msgstr "Jakhuña"
 
 #  "sum"
 #: functions.py:35
 msgid "add"
-msgstr "Yapxataña"
+msgstr "yapxataña"
 
 #  "abs"
 #: functions.py:36
@@ -191,7 +191,7 @@ msgstr "sub"
 #  "cuadrado"
 #: functions.py:69
 msgid "square"
-msgstr "Kajuna"
+msgstr "kajuna"
 
 #  "tan"
 #: functions.py:70
@@ -245,7 +245,7 @@ msgstr ""
 #  "sum(x, y), devuelta x + y"
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr "Yapxataña(x,y), kutiyaniwa x + y"
+msgstr "yapxataña(x, y), kutiyaniwa x + y"
 
 #  "asin(x), Devuelve el arco seno de x. Este es el ángulo para el cual el seno "
 #  "es x. Definido para -1<=x<=1"
@@ -255,7 +255,7 @@ msgid ""
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x), kutiyaniwa kurmi seno x ukata, ukaxa kuchu ukatakisti seno ukaxa x. "
-"ukataki -1 <= x < 1"
+"ukataki -1 <= x <= 1"
 
 #  "asinh(x), devuelve el arco ceno hiperbólico de x. Este es el valor de y para "
 #  "el cual el seno hiperbólico es x."
@@ -264,7 +264,7 @@ msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
-"asinh(x), kurmi seno hiperbólico kutiyaniwa x ukata, ukaxa y ukawa kataqixa "
+"asinh(x), kurmi seno hiperbólico kutiyaniwa x ukata, Ukaxa y ukawa kataqixa "
 "seno hiperbólico x ukawa."
 
 #  "atan(x), Devuelve el arco tangente de x. Este es el ángulo para el cual la "
@@ -284,13 +284,13 @@ msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
-"atanh(x), kurmi tangente hiperbólico kutiyaniwa x ukata, ukaxa y ukawa "
+"atanh(x), kurmi tangente hiperbólico kutiyaniwa x ukata, Ukaxa y ukawa "
 "kataqixa tangente hiperbólico x ukawa."
 
 #  "El número no parece binario en base 10"
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr "Jakhuxa Janiwa binario en base 10 wakisiti"
+msgstr "Jakhuxa janiwa binario en base 10 wakisiti"
 
 #  "b10bin(x), interpreta un número escrito en base 10 como binario, ej.: "
 #  "b10bin(10111) = 23,"
@@ -299,7 +299,7 @@ msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
 msgstr ""
-"b10bin(x), qhananchaña Jakhu base 10 qillqata binario ukhamaru, "
+"b10bin(x), qhananchaña jakhu base 10 qillqata binario ukhamaru, "
 "b10bin(10111) = 23,"
 
 #  "ceil(x), devuelve el menor entero mayor que x."
@@ -314,7 +314,7 @@ msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), kutiyaniwa coseno x ukata. ukaxa coordena x muyuna ukankiwa uka "
+"cos(x), kutiyaniwa coseno x ukata. Ukaxa coordena x muyuna ukankiwa uka "
 "mayakiwa k'uchu x ukaxa"
 
 #  cosh(x), devuelve el coseno hiperbólico de x.  (exp(x) + exp(-x)) / ukxata churata
@@ -327,7 +327,7 @@ msgstr "cosh(x), kutiyaniwal coseno hiperbólico x ukata. (exp(x) + exp(-x)) / 2
 #  "No se puede dividir por cero"
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr "ch'usaxa janiwa jaljayasiti"
+msgstr "Ch'usaxa janiwa jaljayasiti"
 
 #  "Argumento inválido"
 #: functions.py:219
@@ -418,7 +418,7 @@ msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
-"mod(x, y), kutiyaniwa módulo x ukata y. akaxa jilt'awax jaljayawita y "
+"mod(x, y), kutiyaniwa módulo x ukata y. Akaxa jilt'awax jaljayawita y "
 "ukharu."
 
 #  "mul(x, y), devuelve x * y"
@@ -443,12 +443,12 @@ msgstr ""
 #  "pow(x, y), devuelve x a la potencia y (x**y)"
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr "pow(x, y), x Kutiyaniwa y piqiñch'at'aru (x**y)"
+msgstr "pow(x, y), x kutiyaniwa y piqiñch'at'aru (x**y)"
 
 #  "rand_float(), retorna un numero de punto flotante aleatorio entre 0.0 y 1.0"
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
-msgstr "rand_float(), kutiyaniwa Jakhu Kawkirixita 0.0 ukhampita1.0"
+msgstr "rand_float(), kutiyaniwa Jakhu kawkirixita 0.0 ukhampita 1.0"
 
 #  "rand_int([<maxval>]), retorna un valor entero aleatorio entre 0 y <maxval>. "
 #  "<maxval> is un argumento opcional y tiene valor 65535 por defecto."
@@ -457,7 +457,7 @@ msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
-"rand_int([<maxval>]), kutiyaniwa Kawkiri phuqata jhakhuwi 0 ukhamaraki "
+"rand_int([<maxval>]), kutiyaniwa kawkiri phuqata jhakhuwi 0 ukhamaraki "
 "<maxval>.<maxval> uka amuyt'awixa 65535 akatxamata uñasiriwa."
 
 #  "round(x), retorna el entero mas cercano a x."
@@ -469,7 +469,7 @@ msgstr "round(x), kutiyaniwa phuqata x jak'anqiri."
 #: functions.py:382
 #: functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr "bits lurawinakaxa phuqatanatakiwa"
+msgstr "Bits lurawinakaxa phuqatanatakiwa"
 
 #  "shift_left(x, y), desplaza a la izquierda x por y bits (multiplica por 2 por "
 #  "cada bit)"
@@ -494,7 +494,7 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), kutiyiwa seno x ukata. ukaxa coordinada ukhamaraki sapa muyuna x "
+"sin(x), kutiyiwa seno x ukata. Ukaxa coordinada ukhamaraki sapa muyuna x "
 "k'uchu ukana"
 
 #  "sinh(x), devuelve el seno hiperbolico de x. Dado por (exp(x) - exp(-x)) / 2"
@@ -557,13 +557,13 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 "xor(x, y), xor logico. chiqapa kutiyaniniwa x chani chiqapipana (y "
-"k'aripana) jani ukasti y chiqapipana ( X es k'aripana), jani ukasti "
+"k'aripana) jani ukasti y chiqapipana ( x es k'aripana), jani ukasti "
 "kutiyaniniwa k'ari"
 
 #  "Vaciar"
 #: layout.py:68
 msgid "Clear"
-msgstr "pichsuña"
+msgstr "Pichsuña"
 
 #  "Entrar"
 #: layout.py:77
@@ -592,28 +592,28 @@ msgstr "Trigonometría"
 #: layout.py:113
 #: layout.py:141
 msgid "Boolean"
-msgstr "chiqapa/k'ari"
+msgstr "Chiqapa/k'ari"
 
 #  "Misceláneos"
 #: layout.py:118
 #: layout.py:142
 msgid "Miscellaneous"
-msgstr "kunaymana"
+msgstr "Kunaymana"
 
 #  "Etiqueta:"
 #: layout.py:163
 msgid "Label:"
-msgstr "chimpunaka:"
+msgstr "Chimpunaka:"
 
 #  "Todas las ecuaciones"
 #: layout.py:196
 msgid "All equations"
-msgstr "qawayata ecuaciones"
+msgstr "Qawayata ecuaciones"
 
 #  "Mis ecuaciones"
 #: layout.py:196
 msgid "My equations"
-msgstr "nayankiri ecuaciones"
+msgstr "Nayankiri ecuaciones"
 
 #  "Cambiar vista entre todas las ecuaciones y las propias"
 #: layout.py:198
@@ -623,7 +623,7 @@ msgstr "mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
 #  "Mostrar historial"
 #: layout.py:201
 msgid "Show history"
-msgstr "Lurata Uñachayaña"
+msgstr "Lurata uñachayaña"
 
 #  "Mostrar variables"
 #: layout.py:201
@@ -633,7 +633,7 @@ msgstr "variable Uñachayaña"
 #  "Cambiar vista entre historial y variables"
 #: layout.py:203
 msgid "Change view between history and variables"
-msgstr "mayxata lurawi ukhamaraki variable uñjaña"
+msgstr "Mayxata lurawi ukhamaraki variable uñjaña"
 
 #  "×"
 #. TRANS: multiplication symbol (default: '*')
@@ -650,7 +650,7 @@ msgstr "div_sym"
 #  "No-definido"
 #: mathlib.py:211
 msgid "Undefined"
-msgstr "jani amuyata"
+msgstr "Jani amuyata"
 
 #  "Error: tipo no soportado"
 #: mathlib.py:221
@@ -682,12 +682,12 @@ msgstr "button_pressed(): kut'ayata casta"
 #  "Ayuda"
 #: toolbars.py:53
 msgid "Help"
-msgstr "yanapt'awi"
+msgstr "Yanapt'awi"
 
 #  "Copiar"
 #: toolbars.py:121
 msgid "Copy"
-msgstr "talliqaña"
+msgstr "Talliqaña"
 
 #  "<ctrl>c"
 #: toolbars.py:122
@@ -697,7 +697,7 @@ msgstr "<ctrl>c"
 #  "Cortar"
 #: toolbars.py:126
 msgid "Cut"
-msgstr "apaqaña"
+msgstr "Apaqaña"
 
 #  "<ctrl>x"
 #: toolbars.py:129
@@ -707,12 +707,12 @@ msgstr "<ctrl>x"
 #  "Pegar"
 #: toolbars.py:137
 msgid "Paste"
-msgstr "lip'iyaña"
+msgstr "Lip'iyaña"
 
 #  "Cuadrado"
 #: toolbars.py:147
 msgid "Square"
-msgstr "payanchaña"
+msgstr "Payanchaña"
 
 #  "Raíz cuadrada"
 #: toolbars.py:152
@@ -722,7 +722,7 @@ msgstr "Raíz cuadrada"
 #  "Inversa"
 #: toolbars.py:157
 msgid "Inverse"
-msgstr "yaqapa"
+msgstr "Yaqapa"
 
 #  "e a la potencia x"
 #: toolbars.py:164
@@ -737,7 +737,7 @@ msgstr "x piq'inchaña y ukaru"
 #  "Logaritmo natural"
 #: toolbars.py:174
 msgid "Natural logarithm"
-msgstr "Logaritmo Yatita"
+msgstr "Logaritmo yatita"
 
 #  "Factorial"
 #: toolbars.py:180
@@ -747,22 +747,22 @@ msgstr "Factorial"
 #  "Seno"
 #: toolbars.py:190
 msgid "Sine"
-msgstr "seno"
+msgstr "Seno"
 
 #  "Coseno"
 #: toolbars.py:194
 msgid "Cosine"
-msgstr "coseno"
+msgstr "Coseno"
 
 #  "Tangente"
 #: toolbars.py:198
 msgid "Tangent"
-msgstr "tangente"
+msgstr "Tangente"
 
 #  "Arcoseno"
 #: toolbars.py:204
 msgid "Arc sine"
-msgstr "arcoseno"
+msgstr "Arcoseno"
 
 #  "Arcocoseno"
 #: toolbars.py:208
@@ -807,7 +807,7 @@ msgstr "Kikipa"
 #  "No-igual"
 #: toolbars.py:253
 msgid "Not equals"
-msgstr "mayxa"
+msgstr "Mayxa"
 
 #  "Pi"
 #: toolbars.py:262
@@ -832,7 +832,7 @@ msgstr "φ"
 #  "Gráfico"
 #: toolbars.py:279
 msgid "Plot"
-msgstr "jirsuwi"
+msgstr "Jirsuwi"
 
 #  "Grados"
 #: toolbars.py:286
@@ -857,7 +857,7 @@ msgstr "Exponente / Notación científica"
 #  "Número de dígitos visibles"
 #: toolbars.py:310
 msgid "Number of shown digits"
-msgstr "Jakhunakana Jakhupa Uñachayata"
+msgstr "Jakhunakana jakhupa uñachayata"
 
 #  "Base numérica"
 #: toolbars.py:320
@@ -890,13 +890,13 @@ msgstr "%d ukana Pantjata"
 #  "Este es solo un topico de prueba, use help(indice) para el indice"
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
-msgstr "Akaxa yantawikiwa, uñjañamawa Yanapt'awi(indice) qalltuwitakixa"
+msgstr "Akaxa yantawikiwa, uñjañamawa yanapt'awi(indice) qalltuwitakixa"
 
 #  "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
 #: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Apnaqañamawa Yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
+"Apnaqañamawa yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
 "qalltuwitakixa"
 
 #  "índice"
@@ -913,7 +913,7 @@ msgstr "amuytawinaka"
 #  "Temas"
 #: astparser.py:110
 msgid "Topics"
-msgstr "amuytawinaka"
+msgstr "Amuytawinaka"
 
 #  "variables"
 #. TRANS: This command is descriptive, so can be translated
@@ -930,19 +930,19 @@ msgstr "Variables"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
 msgid "functions"
-msgstr "Lurañataki"
+msgstr "lurañataki"
 
 #  "Funciones"
 #: astparser.py:126
 msgid "Functions"
-msgstr "lurañataki"
+msgstr "Lurañataki"
 
 #  "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
 #: astparser.py:135
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
-"janiwa yanapt'awixa utxiti '%s' ukatakixa, Apnaqasmawa Yanapt'awi(índice) "
+"Janiwa yanapt'awixa utxiti '%s' ukatakixa, apnaqasmawa yanapt'awi(índice) "
 "qalltañawitakixa"
 
 #  "ayuda"
@@ -953,7 +953,7 @@ msgstr "yanapt'awi"
 #  "Recursión detectada"
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr "jaljtawixa uñjatawa"
+msgstr "Jaljtawixa uñjatawa"
 
 #  "La función '%s' no está definida"
 #: astparser.py:490
@@ -965,13 +965,13 @@ msgstr "'%s' lurawixa janiwa amtutakiti"
 #: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "variable '%s' janiwa amtutakiti"
+msgstr "Variable '%s' janiwa amtutakiti"
 
 #  "Atributo '%s' no existe"
 #: astparser.py:502
 #, python-format
 msgid "Attribute '%s' does not exist"
-msgstr "Atributo '%s' Janiwa utjiti"
+msgstr "Atributo '%s' janiwa utjiti"
 
 #  "Error de procesamiento"
 #: astparser.py:596
