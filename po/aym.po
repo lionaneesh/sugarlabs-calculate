@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-11-23 07:22+0200\n"
+"PO-Revision-Date: 2011-11-26 02:07+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: aym\n"
@@ -332,7 +332,7 @@ msgstr "Ch'usaxa janiwa jaljayasiti"
 #  "Argumento inválido"
 #: functions.py:219
 msgid "Invalid argument"
-msgstr "jani wakisiri Amuyt'äwi"
+msgstr "Jani wakisiri Amuyt'äwi"
 
 #  "gcd(a, b), determina el máximo común divisor entre a y b. Por ejemplo, el "
 #  "factor más grande que divide a los números 15 y 18 es 3."
@@ -618,7 +618,7 @@ msgstr "Nayankiri ecuaciones"
 #  "Cambiar vista entre todas las ecuaciones y las propias"
 #: layout.py:198
 msgid "Change view between own and all equations"
-msgstr "mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
+msgstr "Mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
 
 #  "Mostrar historial"
 #: layout.py:201
@@ -628,7 +628,7 @@ msgstr "Lurata uñachayaña"
 #  "Mostrar variables"
 #: layout.py:201
 msgid "Show variables"
-msgstr "variable Uñachayaña"
+msgstr "Variable Uñachayaña"
 
 #  "Cambiar vista entre historial y variables"
 #: layout.py:203
@@ -878,7 +878,7 @@ msgstr ""
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr "amuytawitaki Pantjata %d ukana"
+msgstr "Amuytawitaki Pantjata %d ukana"
 
 #  "Error en %d"
 #: astparser.py:71
@@ -894,6 +894,7 @@ msgstr "Akaxa yantawikiwa, uñjañamawa yanapt'awi(indice) qalltuwitakixa"
 
 #  "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
 #: astparser.py:106
+#, fuzzy
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Apnaqañamawa yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
@@ -986,4 +987,4 @@ msgstr "Janiwa walja amtuwixa lurasiñapakiti"
 #  "Error interno"
 #: astparser.py:625
 msgid "Internal error"
-msgstr "kikipana Pantjata"
+msgstr "Kikipana pantjata"
