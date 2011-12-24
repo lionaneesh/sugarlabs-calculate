@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-08-16 21:34+0200\n"
-"Last-Translator: <anush.mkrtchyan@ca1492.com>\n"
+"PO-Revision-Date: 2011-12-24 04:49+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -35,34 +35,37 @@ msgstr "ավելացնել"
 
 #: functions.py:36
 msgid "abs"
-msgstr ""
+msgstr "հանել"
 
+# արկկոսինուս
 #: functions.py:37
 msgid "acos"
 msgstr "acos"
 
+# Հիպերբոլիկ արկկոսինուս
 #: functions.py:38
-#, fuzzy
 msgid "acosh"
-msgstr "acos"
+msgstr "acosh"
 
+# ասինուս
 #: functions.py:39
 msgid "asin"
 msgstr "asin"
 
+# Հիպերբոլիկ ասինուս
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "asinh"
 
+# արկտանգես
 #: functions.py:41
 msgid "atan"
 msgstr "atan"
 
+# Հիպերբոլիկ արկտանգես
 #: functions.py:42
-#, fuzzy
 msgid "atanh"
-msgstr "atan"
+msgstr "atanh"
 
 #: functions.py:43
 msgid "and"
@@ -70,69 +73,72 @@ msgstr "և"
 
 #: functions.py:44
 msgid "b10bin"
-msgstr ""
+msgstr "b10bin"
 
+# Մաթեմատիկայում իրական x ամբողջ թիվը`կլորացված մինչև մոտակա նվազագույն ամբողջը: Կոչվում է նաև հատակ /ֆրանսերեն` entier, անգլերեն` floor/:
 #: functions.py:45
 msgid "ceil"
-msgstr ""
+msgstr "ceil"
 
 #: functions.py:46
 msgid "cos"
-msgstr "cos"
+msgstr "կոսինուս"
 
 #: functions.py:47
 msgid "cosh"
-msgstr "cosh"
+msgstr "Հիպերբոլիկ կոսինուս"
 
 #: functions.py:48
 msgid "div"
-msgstr ""
+msgstr "բաժանում"
 
+# (Greatest common divisor) Ամենամեծ ընդհանուր բաժանարար
 #: functions.py:49
 msgid "gcd"
-msgstr ""
+msgstr "աըբ"
 
 #: functions.py:50
 msgid "exp"
 msgstr "exp"
 
+# Ընդհանուր գործակցային
 #: functions.py:51
-#, fuzzy
 msgid "factorial"
 msgstr "Ֆակտորիալ"
 
 #: functions.py:52
 msgid "fac"
-msgstr "fac"
+msgstr "Գործոն"
 
 #: functions.py:53
-#, fuzzy
 msgid "factorize"
-msgstr "Ֆակտորիալ"
+msgstr "Վերլուծել արտադրիչների"
 
+# Կլորացումով հաջորդ նվազագույն ամբողջին հավասարված թիվ
+# 
 #: functions.py:54
 msgid "floor"
-msgstr ""
+msgstr "հատակ"
 
 #: functions.py:55
 msgid "inv"
-msgstr ""
+msgstr "հակադիր"
 
 #: functions.py:56
 msgid "is_int"
-msgstr ""
+msgstr "ընդհանուր թիվ"
 
 #: functions.py:57
 msgid "ln"
-msgstr "ln"
+msgstr "բնական լոգարիթմ"
 
 #: functions.py:58
 msgid "log10"
-msgstr ""
+msgstr "լոգարիթմ10"
 
 #: functions.py:59
 msgid "mul"
-msgstr ""
+msgstr "բազմապատկել"
 
 #: functions.py:60
 msgid "or"
@@ -140,36 +146,36 @@ msgstr "կամ"
 
 #: functions.py:61
 msgid "rand_float"
-msgstr ""
+msgstr "պատահական_փոփոխուն թվեր"
 
 #: functions.py:62
 msgid "rand_int"
-msgstr ""
+msgstr "պատահական ամբողջ թվեր"
 
 #: functions.py:63
 msgid "round"
-msgstr ""
+msgstr "կլորացում"
 
 #: functions.py:64
 msgid "sin"
-msgstr "sin"
+msgstr "սինուս"
 
 #: functions.py:65
 msgid "sinh"
-msgstr "sinh"
+msgstr "հիպերբոլիկ սինուս"
 
+# Կարդինալ սինուս,
 #: functions.py:66
-#, fuzzy
 msgid "sinc"
-msgstr "sin"
+msgstr "sinc"
 
 #: functions.py:67
 msgid "sqrt"
-msgstr "sqrt"
+msgstr "Քառակուսի արմատ"
 
 #: functions.py:68
 msgid "sub"
-msgstr ""
+msgstr "հանել"
 
 #: functions.py:69
 msgid "square"
@@ -177,61 +183,70 @@ msgstr "քառակուսի"
 
 #: functions.py:70
 msgid "tan"
-msgstr "tan"
+msgstr "տանգես"
 
 #: functions.py:71
 msgid "tanh"
-msgstr "tanh"
+msgstr "Հիպերբոլիկ տանգես"
 
 #: functions.py:72
 msgid "xor"
-msgstr "xկամ"
+msgstr "բացառիկ բազհանում"
 
+# abs - աբսցեզ
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
 msgstr ""
+"abs(x) վերականգնում է x -ի բացարձակ արժեքը, ինչը նշանակում է -x, երբ x < 0:"
 
+# acos(x) -arc cosine x - արկկոսինուս x,
 #: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), վերադարձնում է arc cosine x. Սա այն անկյունն է, որի կոսինուսը "
+"acos(x), վերադարձնում է x.- ի արկկոսինուսը: Սա այն անկյունն է, որի կոսինուսը "
 "հավասար է x. սահմանված -1 <= x < 1"
 
+# acosh(x) -հիպերբոլիկ արկկոսինուս
 #: functions.py:123
 msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
+"acosh(x). վերադարձնում է x -ի հիպերբոլիկ արկկոսինուսը: Սա այն արժեքն է, որի "
+"դեպքում հիպերբոլիկ կոսինուսը հավասար է x-ի:"
 
 #: functions.py:129
-#, fuzzy
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), տրամաբանական and. Վերադարձնում է Ճիշտ եթե x և y ճիշտ են, հակառակ "
+"and(x, y), տրամաբանական և. Վերադարձնում է Ճիշտ եթե x և y ճիշտ են, հակառակ "
 "դեպքում` սխալ"
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "add(x, y), վերադարձնում է x + y"
 
 #: functions.py:141
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"asin(x), վերադարձնում է arc sin x. Սա այն անկյունն է, որի կոսինուսը հավասար "
-"է x. սահմանված -1 <= x < 1"
+"asin(x), վերադարձնում է x.- ի արկկոսինուսը: Սա այն անկյունն է, որի կոսինուսը "
+"հավասար է x. սահմանված -1 <= x < 1"
 
+# asinh -Հիպերբոլիկ արկսինուս
 #: functions.py:147
 msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
+"asinh(x) վերականգնում է x-ի հիպերբոլիկ սինուսը: Սա այն արժեքն է, որի դեպքում "
+"հիպերբոլիկ սինուսը հավասար է x-ի:"
 
+# atan(x), վերականգնում է x-ի արկտանգեսը: Սա այն անկյունն է, որի տանգեսը հավասար է x: Սահմանված է բոլոր x-երի համար:
+# 
 #: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
@@ -240,32 +255,38 @@ msgstr ""
 "atan(x), վերադարձնում է arc tangent of x. Սա այն անկյունն է, որի tangent "
 "հավասար է x. սահմանված է բոլոր x համար"
 
+# atanh-հիպերբոլիկ արկտանգես:
 #: functions.py:159
 msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
+"atanh(x), վերականգնում է x-ի հիպերբոլիկ արկտանգեսը: Սա այն արժեքն է, որի "
+"դեպքում հիպերբոլիկ տանգեսը հավասար է x-ի:"
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr ""
+msgstr "10-ի հիմքում ընկած թիվը երկնիշ չէ"
 
 #: functions.py:178
 msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
 msgstr ""
+"b10bin(x), 10 -ի հիմքում գրված թիվը մեկնաբանվում է որպես երկնիշ, օր.` "
+"b10bin(10111) = 23,"
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr ""
+msgstr "ceil(x), ամենափոքր ընդհանուր թիվը դարձնում է x-ից մեծ:"
 
 #: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), վերադարձնում է cosine x. Սա x-կոորդինատն է միավոր շրջանագծի x անկյան"
+"cos(x), վերադարձնում է x-ի կոսինուսը. Սա x-դիրքացույցն է միավոր շրջանագծի x "
+"անկյան"
 
 #: functions.py:194
 msgid ""
@@ -276,32 +297,36 @@ msgstr ""
 
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "Չի կարելի բաժանել զրոյի"
 
 #: functions.py:219
 msgid "Invalid argument"
-msgstr ""
+msgstr "անվավեր փաստրակ"
 
 #: functions.py:222
 msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
+"gcd(a, b), սահմանում է a և b -ի ամենամեծ պարզ հայտարարը: Օրինակ` 15 և18 "
+"թվերի բաժանվող ամենամեծ հայտարարը 3 -ն է"
 
+#  exponent - աստիճանացույց
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "exp(x), վերադարձնում է x բնական էկսպոնենտը . Տրված է e^x"
+msgstr "exp(x), վերադարձնում է x բնական աստիճանացույցը . Տրված է e^x"
 
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr ""
+msgstr "Ֆակտորիալը սահմանված է միայն ամբողջ թվերի համար"
 
+# factorial - ընդհանուր գործակից
 #: functions.py:244
-#, fuzzy
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
-"fac(x), վերադարձնել x-ի ֆակտորիալը: Տրված է x * (x - 1) * (x - 2) * ...-ով"
+"(n) ֆակտորիալ, վերադարձնել n-ի ֆակտորիալը: Տրված է x * (n - 1) * (n - 2) * "
+"...-ով"
 
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -310,16 +335,16 @@ msgstr ""
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr ""
+msgstr "floor(x), ամենամեծ ընդհանուր թիվը դարձնում է x-ից փոքր"
 
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr ""
+msgstr "inv(x), դարձնում է x-ի հակադարձը, որը 1 / x է"
 
 #: functions.py:309
 #: functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr ""
+msgstr "(x) լոգարիթմը սահմանված է միայն x > 0 համար"
 
 #: functions.py:311
 msgid ""
@@ -334,63 +359,77 @@ msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
+"log10(x), 10 -ի հիմքում ընկած թիվը դարձնում է x-ի լոգարիթմը: Սա y-ի արժեքն "
+"է, որի համար 10^y հավասար է x: Սահմանված է x >= 0"
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr ""
+msgstr "Կարող է հաշվել միայն x modul-ը /ամբողջ/"
 
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
+"mod(x, y), վերականգնել x -ի մոդուլներն y - նկատմամբ: Սա հիշեցում է x-ը y-ի "
+"վրա բաժանելուց հետո:"
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "mul(x, y), դարձնում է x * y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr ""
+msgstr "negate(x), դարձնում է -x"
 
 #: functions.py:346
-#, fuzzy
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"or(x, y), տրամաբանական կամ: Վերադարձները Ճիշտ են, եթե x-ը եւ/կամ y-ը Ճիշտ "
-"են, այլապես վերադարձը Կեղծ է"
+"or(x, y), տրամաբանական կամ: Վերադարձնում է Ճիշտ, եթե x-ը և/կամ y-ը Ճիշտ են, "
+"այլապես վերադարձը Կեղծ է"
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr ""
+msgstr "pow(x, y), վերականգնում է x -ի արժեքն y -ի հանդեպ (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
 msgstr ""
+"rand_float(), հազվադեպ տատանվող ցուցանիշ թիվը դարձնում է 0.0 -ի և 1.0-ի միջև"
 
+# rand_int( - պատահական ամբողջ
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
+"rand_int([<maxval>]), վերականգնել 0 -ի և <maxval> ի միջև: <maxval> -ը "
+"ընտրովի արգումենտ է և ի սկզբանե հաստատված է 65535:"
 
+# round - կլորացված
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr ""
+msgstr "round(x), վերականգնել x -ն ամենամոտ ամբողջը:"
 
 #: functions.py:382
 #: functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr ""
+msgstr "Բիթային լրացման գործողությունները կիրառել միայն ամբողջ թվերի վրա"
 
+# shift_left -  տեղաշարժել դեպի ձախ
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
+"shift_left(x, y), տեղաշարժել x -ը y բայթ դեպի ձախ (բազմապատկել 2 ամեն թայթի "
+"համար)"
 
+# shift_right - տեղաշարժել դեպի աջ
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
 msgstr ""
+"shift_right(x, y), տեղաշարժել x -ը y բիթ դեպի աջ (բաժանել 2 -ի ամեն բիթի "
+"համար)"
 
 #: functions.py:397
 msgid ""
@@ -410,6 +449,8 @@ msgstr ""
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
 msgstr ""
+"sinc(x), վերականգնել x-ի sinc -ը կարդինալ սինուսը/: Սա տրված է sin(x) / x - "
+"ով."
 
 #: functions.py:415
 msgid ""
@@ -421,11 +462,11 @@ msgstr ""
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "քառակուսին(x), վերադարձնել x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "sub(x, y), վերադարձնում է x - y"
 
 #: functions.py:432
 msgid ""
@@ -438,7 +479,6 @@ msgstr ""
 "sin(x) / cos(x)-ով"
 
 #: functions.py:439
-#, fuzzy
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x), վերադարձնել x-ի հիպերբոլային տանգենսը: Տրված է sinh(x) / cosh(x)-ով"
@@ -533,11 +573,11 @@ msgstr "Սխալ. ոչ-ստանդարտ տեսակ"
 #: calculate.py:109
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() ոչ ստույգ տող (%s)"
+msgstr "Equation.parse() տողն անվավեր է (%s)"
 
 #: calculate.py:473
 msgid "Can not assign label: will cause recursion"
-msgstr ""
+msgstr "Հնարավոր չէ նշանակել պիտակ. կառաջացնի ռեկուրսիա"
 
 #: calculate.py:545
 #, python-format
@@ -554,11 +594,11 @@ msgstr "Օգնություն"
 
 #: toolbars.py:121
 msgid "Copy"
-msgstr "Կրկնօրինակել"
+msgstr "կրկնօրինակել"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
-msgstr ""
+msgstr "<ctrl>c"
 
 #: toolbars.py:126
 msgid "Cut"
@@ -566,7 +606,7 @@ msgstr "Կտրել"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
-msgstr ""
+msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
@@ -582,7 +622,7 @@ msgstr "Քառակուսի արմատ"
 
 #: toolbars.py:157
 msgid "Inverse"
-msgstr "Հակառակ շրջել"
+msgstr "Շրջել"
 
 #: toolbars.py:164
 msgid "e to the power x"
@@ -662,11 +702,11 @@ msgstr "e"
 
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "γ"
 
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
 #: toolbars.py:279
 msgid "Plot"
@@ -676,12 +716,12 @@ msgstr "Սխեմա"
 msgid "Degrees"
 msgstr "Աստիճաններ"
 
+# Ռադիաններ
 #: toolbars.py:287
 msgid "Radians"
-msgstr "Ռադիաններ"
+msgstr "Rad"
 
 #: toolbars.py:291
-#, fuzzy
 msgid "Degrees / Radians"
 msgstr "Աստիճաններ / ռադիաններ"
 
@@ -708,13 +748,13 @@ msgstr ""
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr ""
+msgstr "Ձևակերպման ձախողում %d-ում"
 
 #: astparser.py:71
 #: astparser.py:83
 #, python-format
 msgid "Error at %d"
-msgstr "վրիպում %d-ում"
+msgstr "սխալ %d-ում"
 
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
@@ -732,7 +772,6 @@ msgid "index"
 msgstr "ինդեքս"
 
 #: astparser.py:109
-#, fuzzy
 msgid "topics"
 msgstr "Թեմաներ"
 
@@ -743,12 +782,11 @@ msgstr "Թեմաներ"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr "փոփխականներ"
+msgstr "փոփոխականներ"
 
 #: astparser.py:119
-#, fuzzy
 msgid "Variables"
-msgstr "փոփխականներ"
+msgstr "փոփոխականներ"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
@@ -756,7 +794,6 @@ msgid "functions"
 msgstr "ֆունկցիաներ"
 
 #: astparser.py:126
-#, fuzzy
 msgid "Functions"
 msgstr "ֆունկցիաներ"
 
@@ -768,13 +805,12 @@ msgstr ""
 "help(index)-ը"
 
 #: astparser.py:459
-#, fuzzy
 msgid "help"
 msgstr "Օգնություն"
 
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr ""
+msgstr "Ռեկուրսիա է հայտնաբերված"
 
 #: astparser.py:490
 #, python-format
@@ -789,7 +825,7 @@ msgstr "'%s' փոփոխականը սահմանված չէ"
 #: astparser.py:502
 #, python-format
 msgid "Attribute '%s' does not exist"
-msgstr ""
+msgstr "'%s' ատրիբուտը գոյություն չունի"
 
 #: astparser.py:596
 msgid "Parse error"
@@ -797,11 +833,11 @@ msgstr "Վերլուծման սխալ"
 
 #: astparser.py:601
 msgid "Multiple statements not supported"
-msgstr ""
+msgstr "Բազմակի փաստարկները չեն սատարվում"
 
 #: astparser.py:625
 msgid "Internal error"
-msgstr ""
+msgstr "Ներքին սխալ"
 
 #~ msgid "Available functions:"
 #~ msgstr "Հասանելի ֆունկցիաներ"
