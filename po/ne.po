@@ -14,20 +14,141 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-09-09 13:06+0200\n"
-"Last-Translator:  <aman.maharjan@olenepal.org>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-01-31 06:14+0200\n"
+"Last-Translator: aman0115 <aman.maharjan@olenepal.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ne\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "गणना गर"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), यसले a देखि b को दायरमा 'var' चलको साथ 'eqn' समिकरण "
+"खण्ड गर्छ"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "%d मा parse त्रुटि छ"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d मा त्रुटि"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"यो एउटा परिक्षण शिर्षक मात्र हो, अनुक्रमणिकाको लागि help(index) प्रयोग "
+"गर्नुहोस्"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"'test' को मत्द्धतको लागि help(test), वा index को मत्द्धतको लागि help(index) "
+"प्रयोग गर्नुहोस्"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "सुचि"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "शिर्षकहरु"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "शिर्षक"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "चलहरु"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "चलहरु"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "कार्यहरु"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "कार्यहरु"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"'%s' को बारेमा मत्द्धत पाईएन, index को बारेमा मत्द्धत लिन help(index) प्रयोग "
+"गर्नुहोस्"
+
+#: astparser.py:459
+msgid "help"
+msgstr "मदत"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "recursion पता लाग्यो"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' कार्य व्याख्या गरिएको छैन्"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "चर '%s' व्याख्या गरिएको छैन"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "गुण '%s' रहेको छैन्"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Parse त्रुटि"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "बहु-विवरणहरु समर्थन गरिदैन"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "आंतरिक त्रुटि"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() (%s) वाक्याँश मिलेन"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "लेबल निर्दिष्ट गर्न मिल्दैन: recursion उत्पन्न हुनेछ"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "खातामा लेखिंदैछ (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): प्रकार मिलेन"
 
 #: functions.py:35
 msgid "add"
@@ -217,7 +338,7 @@ msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"asin(x), यसले xको arc sine फर्काउछ. sine xभएको यहि त्यो कोण हो।  -1 <= x <= "
+"asin(x), यसले xको arc sine फर्काउछ. sine xभएको यहि त्यो कोण हो। -1 <= x <= "
 "1को लागि परिभाषित"
 
 #: functions.py:147
@@ -258,7 +379,7 @@ msgstr ""
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr "ceil(x), यसले x भन्दा ठूलो सबभन्दा सानो  पूर्णांक फिर्ता गर्छ।"
+msgstr "ceil(x), यसले x भन्दा ठूलो सबभन्दा सानो पूर्णांक फिर्ता गर्छ।"
 
 #: functions.py:188
 msgid ""
@@ -287,8 +408,8 @@ msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
-"gcd(a,b), यसले a  र b को सबै भन्दा ठुलो सामान्य भाजक निर्धारित गर्छ। "
-"उदाहरणको लागि, १५ र १८ले शेयर गर्ने सबभन्दा ठुलो भाज्य ३ हो।"
+"gcd(a,b), यसले a र b को सबै भन्दा ठुलो सामान्य भाजक निर्धारित गर्छ। उदाहरणको "
+"लागि, १५ र १८ले शेयर गर्ने सबभन्दा ठुलो भाज्य ३ हो।"
 
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -320,8 +441,7 @@ msgstr "floor(x), यसले x भन्दा सानो सबभन्द
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), xको उल्टा फिर्ता गर्छ, जुन १/x हो"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "x>० लाई मात्र Logarithm(x) परिभाषित गर्छ"
 
@@ -359,7 +479,7 @@ msgstr "mul(x,y), x*y फर्काउँछ।"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr "negate(x), -x फर्काउँछ। "
+msgstr "negate(x), -x फर्काउँछ।"
 
 #: functions.py:346
 msgid ""
@@ -381,15 +501,14 @@ msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
-"rand_int([<maxwal>]), ० र <maxwal>  बिचको क्रमरहित पूर्णांक फर्काउँछ। "
+"rand_int([<maxwal>]), ० र <maxwal> बिचको क्रमरहित पूर्णांक फर्काउँछ। "
 "<maxwal> वैकल्पिक बहस हो र यो पूर्वनिर्धारितद्वारा ६५५३५मा स्थापित हुन्छ।"
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
 msgstr "round(x), xसँग सबभन्दा नजिकको पूर्णांक फर्काउँछ।"
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "पूर्णांकहरुलाई मात्र bitwise operationहरु लागु हुन्छ"
 
@@ -419,7 +538,7 @@ msgstr ""
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr "sinc(x), xको sinc  फर्काउँछ । यो sin(x)/x द्वारा जनाउँछ।"
+msgstr "sinc(x), xको sinc फर्काउँछ । यो sin(x)/x द्वारा जनाउँछ।"
 
 #: functions.py:415
 msgid ""
@@ -431,7 +550,7 @@ msgstr ""
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr "square(x), x*x  फिर्ता गर्छ।"
+msgstr "square(x), x*x फिर्ता गर्छ।"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
@@ -443,7 +562,7 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x), यसले x को tangent फर्काउँछ । यो एकाई वृत्तको शिर्षविन्दुबाट  एकाई "
+"tan(x), यसले x को tangent फर्काउँछ । यो एकाई वृत्तको शिर्षविन्दुबाट एकाई "
 "वृत्तमा बिन्दुसम्म x कोणद्वारा परिभाषित गरेको रेखाको झुकाव हो । sin(x) / "
 "cos(x) द्वारा निर्धारित"
 
@@ -461,102 +580,80 @@ msgstr ""
 "xor(x, y), logical xor। x True (र y False हुँदा) अथवा y True (र x False "
 "हुँदा) भए True फर्काउँछ, नत्र False फर्काउँछ"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "सफा गर"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "एन्टर"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "सम्पादन"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "बिजगणित"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "त्रिकोणमिति"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "बुलिन"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "विविध"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "ईंकित"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "सबै समिकरण"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "मेरो समिकरण"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
-msgstr "आफ्नो र अरुको  समीकरण बिच द्रष्य परिवर्तन गर"
+msgstr "आफ्नो र अरुको समीकरण बिच द्रष्य परिवर्तन गर"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "ईतिहाँस देखाऊनुहोस्"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "चर मानहरु देखाऊनुहोस्"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "इतिहास र चलबिच द्रष्य परिवर्तन गर"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr "equ_sym"
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "वाक्या नगरिएको"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "त्रुति: असमर्थ प्रकार"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() (%s) वाक्याँश मिलेन"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "लेबल निर्दिष्ट गर्न मिल्दैन: recursion उत्पन्न हुनेछ"
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "खातामा लेखिंदैछ (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): प्रकार मिलेन"
 
 #: toolbars.py:53
 msgid "Help"
@@ -706,109 +803,8 @@ msgstr "देखाईएका अंकको सङ्ख्या"
 msgid "Integer formatting base"
 msgstr "इन्टिजर ढाँचाको आधार"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), यसले a देखि b को दायरमा  'var' चलको साथ 'eqn' समिकरण "
-"खण्ड गर्छ"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "%d मा parse त्रुटि छ"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "%d मा त्रुटि"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"यो एउटा परिक्षण शिर्षक मात्र हो, अनुक्रमणिकाको लागि help(index) प्रयोग "
-"गर्नुहोस्"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"'test' को मत्द्धतको लागि help(test), वा index को मत्द्धतको लागि help(index) "
-"प्रयोग गर्नुहोस्"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "सुचि"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "शिर्षकहरु"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "शिर्षक"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "चलहरु"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "चलहरु"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "कार्यहरु"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "कार्यहरु"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"'%s' को बारेमा मत्द्धत पाईएन, index को बारेमा मत्द्धत लिन help(index) प्रयोग "
-"गर्नुहोस्"
-
-#: astparser.py:459
-msgid "help"
-msgstr "मदत"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "recursion पता लाग्यो"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' कार्य व्याख्या गरिएको छैन्"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "चर '%s' व्याख्या गरिएको छैन"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "गुण '%s' रहेको छैन्"
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Parse त्रुटि"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "बहु-विवरणहरु समर्थन गरिदैन"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "आंतरिक त्रुटि"
+#~ msgid "Enter"
+#~ msgstr "एन्टर"
 
 #~ msgid "Available functions:"
 #~ msgstr "उपलब्घ कार्यहरु"
