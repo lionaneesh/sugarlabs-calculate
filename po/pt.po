@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-01-31 22:28+0200\n"
+"PO-Revision-Date: 2012-02-01 00:23+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
@@ -647,7 +647,7 @@ msgstr "/"
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr ""
+msgstr "="
 
 #: mathlib.py:216
 msgid "Undefined"
