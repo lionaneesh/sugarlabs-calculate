@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2012-01-23 00:37+0200\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-01-31 22:28+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
@@ -28,6 +28,124 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Calcular"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com variável 'var' no "
+"intervalo entre a e b"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "Erro sintáctico em %d"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Erro em %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Este é apenas um tópico de teste, utiliza help(index) para obteres o índice"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Utiliza help(test) para obteres ajuda sobre 'test', ou help(index) para o "
+"índice"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "índice"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "topics"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Tópicos"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "variables"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Variáveis"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "Funções"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Não existe ajuda sobre '%s', usa help(index) para ver o índice"
+
+#: astparser.py:459
+msgid "help"
+msgstr "help"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "Detectada recursão"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Função '%s' não está definida"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variável '%s' não está definida"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "Atributo '%s' não existe"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Erro sintáctico"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Não são suportadas múltiplas instruções"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Erro interno"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() cadeia de caracteres (string) inválida (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Não é possível associar etiqueta: irá causar recursão"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Escrevendo no Diário (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): tipo inválido"
 
 #: functions.py:35
 msgid "add"
@@ -205,7 +323,7 @@ msgstr ""
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"And(x,y), Conjunção lógica (\"E\"). Devolve Verdadeiro (True) se x e y forem "
+"And(x, y), Conjunção lógica (\"E\"). Devolve Verdadeiro (True) se x e y forem "
 "verdadeiros, caso contrário devolve Falso (False)"
 
 #: functions.py:136
@@ -319,8 +437,7 @@ msgstr "floor(x), devolve o maior número inteiro menor ou igual a x."
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), devolve o inverso de x, que é 1 / x"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "Logarithm(x) é definido apenas para x > 0"
 
@@ -337,7 +454,7 @@ msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
-"log10(x) devolve o logaritmo de x na base 10. Este é o valor y cujo 10^y é "
+"log10(x), devolve o logaritmo de x na base 10. Este é o valor y cujo 10^y é "
 "igual a x. Definido para x >= 0."
 
 #: functions.py:327
@@ -390,8 +507,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr "round(x), devolve o número inteiro mais próximo de x."
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "Operações de lógica binária apenas se aplicam a números inteiros"
 
@@ -466,102 +582,80 @@ msgstr ""
 "caso x é Verdadeiro e y é Falso, ou x é Falso e y é Verdadeiro. Caso "
 "contrário devolve Falso (False)"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Limpar"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Introduzir"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Editar"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Álgebra"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Trigonometria"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Booleano"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Etiqueta:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Todas as equações"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "As minhas equações"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Mudar de visualização entre as tuas equações e todas as equações"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Mostrar histórico"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Mostrar variáveis"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Mudar de visualização entre o histórico e as variáveis"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Indefinido"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Erro: tipo não suportado"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() texto inválido (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "Não é possível associar etiqueta: irá causar recursão"
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Escrevendo no Diário (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): tipo inválido"
 
 #: toolbars.py:53
 msgid "Help"
@@ -711,106 +805,8 @@ msgstr "Número de dígitos exibidos"
 msgid "Integer formatting base"
 msgstr "Base da formatação dos números inteiros"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com variável 'var' no "
-"intervalo entre a e b"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "Erro sintáctico em %d"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "Erro em %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"Este é apenas um tópico de teste, utiliza help(index) para obteres o índice"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Utiliza help(test) para obteres ajuda sobre 'test', ou help(index) para o "
-"índice"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "índice"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "topics"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "Tópicos"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "variables"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "Variáveis"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "functions"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "Funções"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Não existe ajuda sobre '%s', usa help(index) para ver o índice"
-
-#: astparser.py:459
-msgid "help"
-msgstr "help"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "Detectada recursão"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Função '%s' não está definida"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variável '%s' não está definida"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "Atributo '%s' não existe"
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Erro sintáctico"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "Não são suportadas múltiplas instruções"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "Erro interno"
+#~ msgid "Enter"
+#~ msgstr "Introduzir"
 
 #~ msgid "Available functions:"
 #~ msgstr "Funções disponíveis:"
