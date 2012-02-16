@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-12-24 04:49+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-02-06 17:43+0200\n"
+"Last-Translator: anush.mkrtchyan <anush.mkrtchyan@ca1492.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hy\n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,125 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Հաշվել"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), նախագծել 'eqn' հավասարումը 'var' փոփոխականով, a-ից b "
+"շարքի մեջ"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "Ձևակերպման ձախողում %d-ում"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "սխալ %d-ում"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Սա պարզապես փորձնական թեմա է, ինդեքսի համար օգտագործեք help(index)-ը"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Օգտագործիր օգնություն(test) 'test'-ի մասին օգնության համար, կամ "
+"օգնություն(index) index-ի համար"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "ինդեքս"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "Թեմաներ"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Թեմաներ"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "փոփոխականներ"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "փոփոխականներ"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "ֆունկցիաներ"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "ֆունկցիաներ"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"'%s'-ի վերաբերյալ որևէ օգնություն չի տրամադրվում, ինդեքսի համար օգտագործեք "
+"help(index)-ը"
+
+#: astparser.py:459
+msgid "help"
+msgstr "Օգնություն"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "Ռեկուրսիա է հայտնաբերված"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' ֆունկցիան անորոշ Է"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "'%s' փոփոխականը սահմանված չէ"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "'%s' ատրիբուտը գոյություն չունի"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Վերլուծման սխալ"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Բազմակի փաստարկները չեն սատարվում"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Ներքին սխալ"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() տողն անվավեր է (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Հնարավոր չէ նշանակել պիտակ. կառաջացնի ռեկուրսիա"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Գրանցում մատյան (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): սխալ տիպ"
 
 #: functions.py:35
 msgid "add"
@@ -115,7 +234,7 @@ msgid "factorize"
 msgstr "Վերլուծել արտադրիչների"
 
 # Կլորացումով հաջորդ նվազագույն ամբողջին հավասարված թիվ
-# 
+#
 #: functions.py:54
 msgid "floor"
 msgstr "հատակ"
@@ -246,7 +365,7 @@ msgstr ""
 "հիպերբոլիկ սինուսը հավասար է x-ի:"
 
 # atan(x), վերականգնում է x-ի արկտանգեսը: Սա այն անկյունն է, որի տանգեսը հավասար է x: Սահմանված է բոլոր x-երի համար:
-# 
+#
 #: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
@@ -341,8 +460,7 @@ msgstr "floor(x), ամենամեծ ընդհանուր թիվը դարձնում 
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), դարձնում է x-ի հակադարձը, որը 1 / x է"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "(x) լոգարիթմը սահմանված է միայն x > 0 համար"
 
@@ -412,8 +530,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr "round(x), վերականգնել x -ն ամենամոտ ամբողջը:"
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "Բիթային լրացման գործողությունները կիրառել միայն ամբողջ թվերի վրա"
 
@@ -491,102 +608,80 @@ msgstr ""
 "xor(x, y), տրամաբանական xկամ: Վերադարձները Ճիշտ են, եթե կամ x-ն է Ճիշտ (եւ "
 "y-ը՝ Կեղծ), կամ y-ն է Ճիշտ եւ (եւ x-ը՝ Կեղծ), այլապես վերադարձերը Կեղծ են"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Մաքրել"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Մուտք"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "խմբագրել"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Հանրահաշիվ"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Եռանկյունաչափություն"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Բուլյան"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Զանազան"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Պիտակ."
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Բոլոր հավասարումները"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Իմ հավասարումները"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Փոփոխել տեսարանն իմ սեփական, եւ բոլոր հավասարումների միջեւ"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Ցույց տալ պատմությունը"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Ցույց տալ փոփոխականները"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Փոփոխել տեսարանը պատմության եւ փոփոխականների միջեւ"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr "="
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Չսահմանված"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Սխալ. ոչ-ստանդարտ տեսակ"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() տողն անվավեր է (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "Հնարավոր չէ նշանակել պիտակ. կառաջացնի ռեկուրսիա"
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Գրանցում մատյան (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): սխալ տիպ"
 
 #: toolbars.py:53
 msgid "Help"
@@ -737,107 +832,8 @@ msgstr "Ցույց տրված թվերի քանակը"
 msgid "Integer formatting base"
 msgstr "Ամբողջական թվի ձեւավորման հիմքը"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), նախագծել 'eqn' հավասարումը 'var' փոփոխականով, a-ից b "
-"շարքի մեջ"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "Ձևակերպման ձախողում %d-ում"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "սխալ %d-ում"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "Սա պարզապես փորձնական թեմա է, ինդեքսի համար օգտագործեք help(index)-ը"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Օգտագործիր օգնություն(test) 'test'-ի մասին օգնության համար, կամ "
-"օգնություն(index) index-ի համար"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "ինդեքս"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "Թեմաներ"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "Թեմաներ"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "փոփոխականներ"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "փոփոխականներ"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "ֆունկցիաներ"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "ֆունկցիաներ"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"'%s'-ի վերաբերյալ որեւ օգնություն չի տրամադրվում, ինդեքսի համար օգտագործեք "
-"help(index)-ը"
-
-#: astparser.py:459
-msgid "help"
-msgstr "Օգնություն"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "Ռեկուրսիա է հայտնաբերված"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' ֆունկցիան անորոշ Է"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "'%s' փոփոխականը սահմանված չէ"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "'%s' ատրիբուտը գոյություն չունի"
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Վերլուծման սխալ"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "Բազմակի փաստարկները չեն սատարվում"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "Ներքին սխալ"
+#~ msgid "Enter"
+#~ msgstr "Մուտք"
 
 #~ msgid "Available functions:"
 #~ msgstr "Հասանելի ֆունկցիաներ"
