@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-01-29 18:59+0200\n"
+"PO-Revision-Date: 2012-02-16 21:53+0200\n"
 "Last-Translator: Aputsiaq Niels <aj@isit.gl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: da\n"
@@ -326,7 +326,7 @@ msgstr ""
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr "add(x,y), returnér x + y"
+msgstr "add(x, y), returnér x + y"
 
 #: functions.py:141
 msgid ""
@@ -404,7 +404,7 @@ msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
-"gcd(a, b) bestem den største fælles nævner for a og b. For eksempel, den "
+"gcd(a, b), bestem den største fælles nævner for a og b. For eksempel, den "
 "største faktor som er delt af tallene 15 og 18 er 3."
 
 #: functions.py:227
