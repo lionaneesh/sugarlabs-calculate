@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-02-06 17:43+0200\n"
-"Last-Translator: anush.mkrtchyan <anush.mkrtchyan@ca1492.com>\n"
+"PO-Revision-Date: 2012-02-17 07:26+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hy\n"
 "MIME-Version: 1.0\n"
@@ -689,7 +689,7 @@ msgstr "Օգնություն"
 
 #: toolbars.py:121
 msgid "Copy"
-msgstr "կրկնօրինակել"
+msgstr "Պատճենել"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
