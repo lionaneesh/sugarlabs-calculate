@@ -14,275 +14,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2008-02-11 08:15+0100\n"
-"Last-Translator: Satyanarayana Murthy Saladi <saladism@gmail.com>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2011-11-27 01:11+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Pootle 1.0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "లెక్కపెట్టు"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "సమీకరణ విశ్లేషణ() స్ట్రింగ్ సరైనది కాదు (%s)"
-
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "లభ్యమయ్యే ధర్మములు:"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "పద్దులో నిక్షిప్తంచేస్తున్నా(%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "నొక్కబడిన మీట(): సరైనది కాదు"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "గణన దోషం"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "స్థాయి: %d యొక్క %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "%d వద్ద దోషం"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"'పరిక్ష ' గురించి సహాయానికై సహయము(పరిక్ష)ను వాడండి, లేదా 'విషయసూచిక' కై "
-"సహయము(విషయసూచిక)ను వాడండి "
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' ధర్మము నిర్దేశింపబడలేదు"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "అస్ఫష్ట ఆదేశాలు (%d బదులుగా %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "%d args ను గణన లోకి తీసుకోబడింది"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "%d: '%s ఆజ్నగుణింపబడలేదు"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "దోషం: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "'%s' స్ఫష్టంగా నిర్వచింపబడలేదు"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "అనూహ్య ఆజ్ణలు"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "విశ్లేషణదోషం (కుడి బ్రాకెట్)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "కుడి బ్రాకెట్ కై ఎదురుచూడడం లేదు"
-
-# needs improving
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "విశ్లేషణదోషం"
-
-# needs improving
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "విశ్లేషణదోషం"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "అంకె కై యెదురుచూడడములేదు"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "ఆపరేటరుకై యెదురుచూడడములేదు"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "విశ్లేషణదోషం: అంకె గాని లేదా వేరియబులు కై ఎదురుచూస్తున్నా"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "అంకె గాని లేదా వేరియబులు కై ఎదురుచూస్తున్నా"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "ఆపెరేటర్ సరైనది కాదు"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "ఆపరేటర్ కై యెదురుచూస్తున్నా"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_గణన (): నిష్ఫలము"
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
-msgid "acos"
-msgstr "ఆకోస్"
-
-#: eqnparserhelp.py:40
-msgid ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
-msgstr ""
-"ఆకోస్ (x), x యొక్క ఆర్క్ కొసైన్ ను తెలుపుము. ఇది x ను కొసైను గా కలిగిఉన్న "
-"కోణము. నిర్వచనం  -1 <= x < 1"
-
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "మరియు"
-
-#: eqnparserhelp.py:44
-msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr ""
-"మరియు(x, y), లాజికల్ మరియు. x మరియు y లు నిజమైతే నిజమని చూపుతుంది, లేనిచో "
-"తప్పు అని చూపుతుంది"
-
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr "ఆసైను"
-
-#: eqnparserhelp.py:47
-msgid ""
-"asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
-msgstr ""
-"ఆసైను (x), x యొక్క ఆర్క్ సైన్ ను తెలుపుము. ఇది x ను సైను గా కలిగిఉన్న కోణము. "
-"నిర్వచనం -1 <= x <= 1"
-
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr "ఆటేన్"
-
-#: eqnparserhelp.py:51
-msgid ""
-"atan(x), return the arc tangent of x. This is the angle for which the "
-"tangent is x. Defined for all x"
-msgstr ""
-"ఆటేన్ (x), x యొక్క ఆర్క్ టాంజెంట్ ను తెలుపును. ఇది x ను టాంజెంట్ గా "
-"కలిగిఉన్న కోణము.నిర్వచనం అన్ని x లకూ వర్తించును"
-
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr "కోస్"
-
-#: eqnparserhelp.py:55
-msgid ""
-"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
-"at the angle x"
-msgstr ""
-"కోస్ (x), x యొక్క కొసైన్ ను తెలుపుము. ఇది x కోణము వద్ద ప్రమాణ వృత్తముపై ఉండే "
-"x కోఆర్డినేట్"
-
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr "కాస్ హెచ్"
-
-#: eqnparserhelp.py:59
-msgid ""
-"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr ""
-"కాస్ హెచ్ (x), x యొక్క అతిపరావలయ కొసైను ను చూపుము. ఈవిధంగా (exp(x) + "
-"exp(-x)) / 2"
-
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr "ఎక్స్ పొ"
-
-#: eqnparserhelp.py:62
-msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "ఎక్స్ పొ(x), x యొక్క సహజ ఎక్స్ పొనెంట్ ను చూపుము. ఈ విధంగా e^x"
-
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr "ఫాక్ట్"
-
-#: eqnparserhelp.py:65
-msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-"ఫాక్ట్ (x), x యొక్క ఫాక్టొరియల్ ను చూపుము. ఈ విధంగా x * (x - 1) * (x - 2) * "
-"..."
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr "ధర్మములు"
-
-# why not ధర్మములు
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "ప్రమేయాలు (), నిర్వచింపబడిన అన్నిప్రమేయాలను చూపుము"
-
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr "ఇన్"
-
-#: eqnparserhelp.py:72
-msgid ""
-"ln(x), return the natural logarithm of x. This is the value for which the "
-"exponent exp() equals x. Defined for x >= 0."
-msgstr ""
-"(x) లో x సహజ సంవర్గమానమును చూపుము. ఇది x తో సమాన ఎక్స్ పొనెంట్ exp() కలిగి "
-"ఉన్న విలువ. ఈ విధంగ x >= 0."
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "ఆపెరేటర్లు"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "ఆపెరేటర్లు (), నిర్వచింపబడిన ఆపరేటర్ల లిస్ట్ ను ఇమ్ము"
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr "లేదా"
-
-#: eqnparserhelp.py:80
-msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
-msgstr ""
-"లేక (x, y),లాజికల్ లేక. x and/or yనిజమైతే నిజమని తెలుపు లేక పోతే తప్పని "
-"తెలుపు"
-
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr "ప్లాట్"
-
-#: eqnparserhelp.py:83
+#: astparser.py:40
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
@@ -290,11 +37,484 @@ msgstr ""
 "ప్లాట్(eqn, var=-a..b), a to b పరిధి లో 'var' ను వేరియబుల్ గాకలిగిన 'eqn' "
 "సమీకరణాన్ని ప్లాట్ చేయుము."
 
-#: eqnparserhelp.py:86
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d వద్ద దోషం"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "ఇది పరీక్ష విషయము మాత్రమే, సూచికకై సహాయము(సూచిక) ను వాడండి"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"'పరిక్ష ' గురించి సహాయానికై సహయము(పరిక్ష)ను వాడండి, లేదా 'విషయసూచిక' కై "
+"సహయము(విషయసూచిక)ను వాడండి"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "సూచిక"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "విషయాలు"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "విషయాలు"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "వేరియబుల్స్"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "వేరియబుల్స్"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "ధర్మములు"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "ధర్మములు"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "'%s' గురించి సహాయము అందుబాటులో లేదు, సహాయము(సూచిక) నువాడండి"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "సహాయము"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' ధర్మము నిర్దేశింపబడలేదు"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "'%s' స్ఫష్టంగా నిర్వచింపబడలేదు"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "గణన దోషం"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "సమీకరణ విశ్లేషణ() స్ట్రింగ్ సరైనది కాదు (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "పద్దులో నిక్షిప్తంచేస్తున్నా(%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "నొక్కబడిన మీట(): సరైనది కాదు"
+
+#: functions.py:35
+msgid "add"
+msgstr ""
+
+#: functions.py:36
+msgid "abs"
+msgstr ""
+
+#: functions.py:37
+msgid "acos"
+msgstr "ఆకోస్"
+
+#: functions.py:38
+#, fuzzy
+msgid "acosh"
+msgstr "ఆకోస్"
+
+#: functions.py:39
+msgid "asin"
+msgstr "ఆసైను"
+
+#: functions.py:40
+#, fuzzy
+msgid "asinh"
+msgstr "ఆసైను"
+
+#: functions.py:41
+msgid "atan"
+msgstr "ఆటేన్"
+
+#: functions.py:42
+#, fuzzy
+msgid "atanh"
+msgstr "ఆటేన్"
+
+#: functions.py:43
+msgid "and"
+msgstr "మరియు"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+#: functions.py:46
+msgid "cos"
+msgstr "కోస్"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "కాస్ హెచ్"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr "ఎక్స్ పొ"
+
+#: functions.py:51
+#, fuzzy
+msgid "factorial"
+msgstr "ఫాక్టోరియల్"
+
+#: functions.py:52
+msgid "fac"
+msgstr "ఫాక్ట్"
+
+#: functions.py:53
+#, fuzzy
+msgid "factorize"
+msgstr "ఫాక్టోరియల్"
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr "ఇన్"
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr "లేదా"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
 msgid "sin"
 msgstr "సైన్"
 
-#: eqnparserhelp.py:87
+#: functions.py:65
+msgid "sinh"
+msgstr "సైన్ హెచ్"
+
+#: functions.py:66
+#, fuzzy
+msgid "sinc"
+msgstr "సైన్"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "వర్గమూలం"
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr "నలుచదరము"
+
+#: functions.py:70
+msgid "tan"
+msgstr "టేన్"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "టాన్ హెచ్"
+
+#: functions.py:72
+msgid "xor"
+msgstr "ఎక్స్ ఆర్"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"ఆకోస్ (x), x యొక్క ఆర్క్ కొసైన్ ను తెలుపుము. ఇది x ను కొసైను గా కలిగిఉన్న "
+"కోణము. నిర్వచనం  -1 <= x < 1"
+
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+#, fuzzy
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"మరియు(x, y), లాజికల్ మరియు. x మరియు y లు నిజమైతే నిజమని చూపుతుంది, లేనిచో "
+"తప్పు అని చూపుతుంది"
+
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr ""
+
+#: functions.py:141
+#, fuzzy
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"ఆసైను (x), x యొక్క ఆర్క్ సైన్ ను తెలుపుము. ఇది x ను సైను గా కలిగిఉన్న కోణము. "
+"నిర్వచనం -1 <= x <= 1"
+
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
+
+#: functions.py:153
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"ఆటేన్ (x), x యొక్క ఆర్క్ టాంజెంట్ ను తెలుపును. ఇది x ను టాంజెంట్ గా "
+"కలిగిఉన్న కోణము.నిర్వచనం అన్ని x లకూ వర్తించును"
+
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
+
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"కోస్ (x), x యొక్క కొసైన్ ను తెలుపుము. ఇది x కోణము వద్ద ప్రమాణ వృత్తముపై ఉండే "
+"x కోఆర్డినేట్"
+
+#: functions.py:194
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"కాస్ హెచ్ (x), x యొక్క అతిపరావలయ కొసైను ను చూపుము. ఈవిధంగా (exp(x) + "
+"exp(-x)) / 2"
+
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr ""
+
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "ఎక్స్ పొ(x), x యొక్క సహజ ఎక్స్ పొనెంట్ ను చూపుము. ఈ విధంగా e^x"
+
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
+
+#: functions.py:244
+#, fuzzy
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+"ఫాక్ట్ (x), x యొక్క ఫాక్టొరియల్ ను చూపుము. ఈ విధంగా x * (x - 1) * (x - 2) * "
+"..."
+
+#: functions.py:250
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"ఫాక్ట్ (x), x యొక్క ఫాక్టొరియల్ ను చూపుము. ఈ విధంగా x * (x - 1) * (x - 2) * "
+"..."
+
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr ""
+
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr ""
+
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
+
+#: functions.py:311
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"(x) లో x సహజ సంవర్గమానమును చూపుము. ఇది x తో సమాన ఎక్స్ పొనెంట్ exp() కలిగి "
+"ఉన్న విలువ. ఈ విధంగ x >= 0."
+
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
+#, fuzzy
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
+msgstr ""
+"లేక (x, y),లాజికల్ లేక. x and/or yనిజమైతే నిజమని తెలుపు లేక పోతే తప్పని "
+"తెలుపు"
+
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr ""
+
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
+msgid ""
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
+
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr ""
+
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
@@ -302,22 +522,18 @@ msgstr ""
 "సైన్(x), x యొక్క సైను ను చూపుము. ఇది ప్రమాణ వృత్తముపై, x కోణము వద్ద y "
 "కోఆర్డినేట్."
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr "సైన్ హెచ్"
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
 "సైన్ హెచ్ (x), x యొక్క అతిపరావలయ సైను ను చూపుము. ఈవిధంగా(exp(x) - exp(-x)) / "
 "2"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr "వర్గమూలం"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
@@ -325,19 +541,15 @@ msgstr ""
 "స్క్వేర్ రూట్ (x), x యొక్క వర్గమూలమును చూపుము. ఇది వర్గము x కు సమానం గా ఉండే "
 "విలువ. ఈ విధంగా x >= 0."
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr "నలుచదరము"
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr "వర్గం (x), x యొక్క వర్గమును చూపుము. ఈ విధం గా x * x"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "టేన్"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
@@ -347,38 +559,13 @@ msgstr ""
 "వృత్తం పై x కోణం వద్ద నున్న బిందువు కు మధ్య గీయబడిన రేఖ యొక్క వాలు/స్లోపు. ఈ "
 "విధంగా sin(x) / cos(x)"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr "టాన్ హెచ్"
-
-#: eqnparserhelp.py:107
+#: functions.py:439
 #, fuzzy
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "సైన్ (x), x యొక్క అతిపరావలయ టాంజెంట్ ను చూపుము. ఈ విధంగా sinh(x) / cosh(x)"
 
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr "పరిక్షించు"
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "ఇది పరీక్ష విషయము మాత్రమే, సూచికకై సహాయము(సూచిక) ను వాడండి"
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr "వేరియబుల్స్"
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr "వేరియబుల్స్ (), నిర్వచింపబడిన వేరియబుల్స్ లిస్ట్ ను చూపుము"
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr "ఎక్స్ ఆర్"
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
@@ -386,123 +573,110 @@ msgstr ""
 "ఎక్స్ ఆర్ (x, y), లాజికల్ ఎక్స్ ఆర్. x సరైనది (మరియు y తప్పు) లేక y సరైనది "
 "(మరియు x తప్పు) అయితే నిజమని చూపు, కానిచో తప్పు అని చూపు"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr "సూచిక"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "విషయాలు"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "'%s' గురించి సహాయము అందుబాటులో లేదు, సహాయము(సూచిక) నువాడండి"
-
-#: layout.py:44
+#: layout.py:69
 msgid "Clear"
 msgstr ""
 
-#: layout.py:53
-msgid "Enter"
-msgstr ""
-
-#: layout.py:60
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "కూర్చు"
 
-#: layout.py:61
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "ఆల్జీబ్రా"
 
-#: layout.py:62
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "త్రికోణమితి"
 
-#: layout.py:63
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "బూలియాన్"
 
-#: layout.py:118
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:64
-msgid "Constants"
-msgstr "స్థిర విలువలు"
-
-#: layout.py:65
-msgid "Format"
-msgstr "ఫార్మెట్"
-
-#: layout.py:86
+#: layout.py:164
 msgid "Label:"
 msgstr "లేబుల్:"
 
-#: layout.py:118
+#: layout.py:197
 msgid "All equations"
 msgstr "అన్ని సమీకరణాలు"
 
-#: layout.py:118
+#: layout.py:197
 msgid "My equations"
 msgstr "నా సమీకరణాలు"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show history"
 msgstr "గతచరిత్ర చూపు"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show variables"
 msgstr "వేరియబుల్స్ ని చూపుము"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:132
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "నిర్వచింపబడలేదు"
 
-#: mathlib.py:142
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "దోషం: సప్పోర్టు లేని రకము"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "సహాయము"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "నకలు"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "అతికించు"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "కత్తిరించు"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "అతికించు"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr "నలుచదరము"
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr "వర్గమూలం"
 
@@ -510,107 +684,204 @@ msgstr "వర్గమూలం"
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr "ఇ(e) టు ది పవర్ ఆఫ్ ఎక్స్(x)"
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr "ఎక్స్(x) టు ది పవర్ ఆఫ్ వై(y)"
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr "సహజ లాగరిథం"
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr "ఫాక్టోరియల్"
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr "సైన్"
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr "కొసైన్"
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr "టాంజెంట్"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr "ఆర్క్ సైన్"
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr "ఆర్క్ కొసైన్"
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr "ఆర్క్ టాంజెంట్"
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr "హైపర్ బోలిక్ సైన్"
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr "హైపర్ బోలిక్ కొసైన్"
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr "హైపర్ బోలికం టాంజెట్"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr "లాజికల్ మరియు"
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr "లాజికల్ లేదా"
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr "సమానము"
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr "అసమానము"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr "పై (Pi)"
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr "ఇ (e)"
 
-#: toolbars.py:280
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
 #, fuzzy
 msgid "Plot"
 msgstr "ప్లాట్"
 
-#: toolbars.py:209
+#: toolbars.py:286
 msgid "Degrees"
 msgstr "డిగ్రీలు"
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr "రేడియనులు"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+msgid "Degrees / Radians"
 msgstr ""
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Available functions:"
+#~ msgstr "లభ్యమయ్యే ధర్మములు:"
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "స్థాయి: %d యొక్క %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "అస్ఫష్ట ఆదేశాలు (%d బదులుగా %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "%d args ను గణన లోకి తీసుకోబడింది"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "%d: '%s ఆజ్నగుణింపబడలేదు"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "దోషం: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "అనూహ్య ఆజ్ణలు"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "విశ్లేషణదోషం (కుడి బ్రాకెట్)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "కుడి బ్రాకెట్ కై ఎదురుచూడడం లేదు"
+
+# needs improving
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "విశ్లేషణదోషం"
+
+# needs improving
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "విశ్లేషణదోషం"
+
+#~ msgid "Number not expected"
+#~ msgstr "అంకె కై యెదురుచూడడములేదు"
+
+#~ msgid "Operator not expected"
+#~ msgstr "ఆపరేటరుకై యెదురుచూడడములేదు"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "విశ్లేషణదోషం: అంకె గాని లేదా వేరియబులు కై ఎదురుచూస్తున్నా"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "అంకె గాని లేదా వేరియబులు కై ఎదురుచూస్తున్నా"
+
+#~ msgid "Invalid operator"
+#~ msgstr "ఆపెరేటర్ సరైనది కాదు"
+
+#~ msgid "Operator expected"
+#~ msgstr "ఆపరేటర్ కై యెదురుచూస్తున్నా"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_గణన (): నిష్ఫలము"
+
+# why not ధర్మములు
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "ప్రమేయాలు (), నిర్వచింపబడిన అన్నిప్రమేయాలను చూపుము"
+
+#~ msgid "operators"
+#~ msgstr "ఆపెరేటర్లు"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "ఆపెరేటర్లు (), నిర్వచింపబడిన ఆపరేటర్ల లిస్ట్ ను ఇమ్ము"
+
+#~ msgid "plot"
+#~ msgstr "ప్లాట్"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr "వర్గం (x), x యొక్క వర్గమును చూపుము. ఈ విధం గా x * x"
+
+#~ msgid "test"
+#~ msgstr "పరిక్షించు"
+
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr "వేరియబుల్స్ (), నిర్వచింపబడిన వేరియబుల్స్ లిస్ట్ ను చూపుము"
+
+#~ msgid "Constants"
+#~ msgstr "స్థిర విలువలు"
+
+#~ msgid "Format"
+#~ msgstr "ఫార్మెట్"

@@ -14,24 +14,141 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-05-22 18:09+0200\n"
-"Last-Translator: Chen, Kenzen <fallwind@seed.net.tw>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-01-24 01:31+0200\n"
+"Last-Translator: eonjae <eonjae@gmail.com>\n"
 "Language-Team: Yuan Chao <yuanchao@gmail.com>\n"
-"Language: \n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "計算機"
+msgstr "計算"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr "plot(eqn, var=-a..b) 畫出方程式 'eqn' 在 a 到 b 之間的圖形。"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d 有錯誤"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "這是測試主題，請用 help(index) 參閱索引"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "請用 help(test) 取得 'test' 的協助訊息，或請用 help(index) 參閱索引"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "索引"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "主題"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "主題"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "變數"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "變數"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "functions"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "沒有關於 '%s' 的協助訊息，請用 help(index) 參閱索引"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "幫助"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "函數 '%s' 未定義"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "變數 '%s' 未定義"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "分析錯誤"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() 無效的字串 (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "寫入日誌 (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): 無效的型態"
 
 #: functions.py:35
 msgid "add"
-msgstr ""
+msgstr "加"
 
 #: functions.py:36
 msgid "abs"
@@ -51,9 +168,8 @@ msgid "asin"
 msgstr "asin"
 
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "反雙曲正弦"
 
 #: functions.py:41
 msgid "atan"
@@ -66,7 +182,7 @@ msgstr "atan"
 
 #: functions.py:43
 msgid "and"
-msgstr "and"
+msgstr "和"
 
 #: functions.py:44
 msgid "b10bin"
@@ -78,15 +194,15 @@ msgstr ""
 
 #: functions.py:46
 msgid "cos"
-msgstr "cos"
+msgstr "餘弦"
 
 #: functions.py:47
 msgid "cosh"
-msgstr "cosh"
+msgstr "雙曲餘弦"
 
 #: functions.py:48
 msgid "div"
-msgstr ""
+msgstr "散度"
 
 #: functions.py:49
 msgid "gcd"
@@ -303,8 +419,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -362,8 +477,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -422,102 +536,80 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr "xor(x, y) 邏輯運算「互斥或」，當只有 x 或 y 其中之一為真時傳回真，否則傳回假"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "清除"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "輸入"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "編輯"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "代數運算"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "三角函數"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "布林邏輯運算"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "標記："
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "所有方程式"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "我的方程式"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "切換擁有或全部檢視"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "顯示歷史紀錄"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "顯示變數"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "切換變數或歷史檢視"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "＊"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "／"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "未定義"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "錯誤：不支援的型態"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() 無效的字串 (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "寫入日誌 (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): 無效的型態"
 
 #: toolbars.py:53
 msgid "Help"
@@ -668,105 +760,8 @@ msgstr "小數點後第幾位"
 msgid "Integer formatting base"
 msgstr "整數模式"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr "plot(eqn, var=-a..b) 畫出方程式 'eqn' 在 a 到 b 之間的圖形。"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "%d 有錯誤"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "這是測試主題，請用 help(index) 參閱索引"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "請用 help(test) 取得 'test' 的協助訊息，或請用 help(index) 參閱索引"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "索引"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "主題"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "主題"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "變數"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "變數"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "functions"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "functions"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "沒有關於 '%s' 的協助訊息，請用 help(index) 參閱索引"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "幫助"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "函數 '%s' 未定義"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "變數 '%s' 未定義"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "分析錯誤"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "輸入"
 
 #~ msgid "Available functions:"
 #~ msgstr "現有函式："

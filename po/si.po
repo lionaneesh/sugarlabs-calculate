@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-09-28 08:09+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-02-03 09:40+0200\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <si@li.org>\n"
 "Language: si\n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,124 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "ගණනය කරන්න"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), 'eqn' සමීකරණය 'var' විචල්‍යයන් සමඟ a සිට b දක්වා වූ "
+"පරාසයේ අඳියි"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "%d හි ව්‍යාකරණ විග්‍රහ කිරීමේ දෝෂයක්"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d හි දෝෂයකි"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"මෙය හුදෙක් පරීක්ෂණාත්මක මාතෘකාවක් පමණි, සුචිය සඳහා help(index) භාවිතා කරන්න"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"'test' ගැන උදව් සඳහා help(test) හෝ index ගැන උදව් සඳහා help(index) භාවිතා "
+"කරන්න"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "සුචිය"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "මාතෘකා"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "මාතෘකා"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "විචල්‍යයන්"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "විචල්‍යයන්"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "ක්‍රියා"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "'%s' සම්බන්ධයෙන්  උදව් නොපවතී,සුචිය සඳහා  help(index)භාවිතා කරන්නx"
+
+#: astparser.py:459
+msgid "help"
+msgstr "උදව්"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "නැවත නැවත සිදුවීම හඳුනාගන්නා ලදි"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' ක්‍රියාවලිය අර්ථදක්වා නැත"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "'%s' විචල්‍ය අර්ථදක්වා නැත"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "'%s' විස්තරකය නොපවතී"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "විශ්ලේෂණ දෝෂයකි"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "බහු ප්‍රකාශන සහය දක්වන්නේ නැත"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "අභ්‍යන්තර දෝෂය"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() අනුලකුණුවැල වලංගු නොවේ (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "ලේබලයක් ආදේශ කිරීමට නොහැක: නැවත නැවත සිදු කිරීමක් වනු ඇත"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "ජ'නලයට ලියවේ (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): වලංගු නොවන වර්ගයකි"
 
 #: functions.py:35
 msgid "add"
@@ -186,13 +304,12 @@ msgid "abs(x), return absolute value of x, which means -x for x < 0"
 msgstr "abs(x), x හි නියත අගය ලබා දෙයි, එනම් x <0 සඳහා -x"
 
 #: functions.py:117
-#, fuzzy
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
+"acos(x), කෝසයින අගය ලබා දෙයි. මෙය කෝයිනය x වන කෝණයයි. -1 <= x < 1 සඳහා අර්ථ "
+"දැක්වේ"
 
 #: functions.py:123
 msgid ""
@@ -315,8 +432,7 @@ msgstr "floor(x), x ට වඩා අඩු විශාලම නිඛිල �
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), x හි ප්‍රතිලෝමය ලබා දෙයි, එනම් 1 / x"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "Logarithm(x) අර්ථ දක්වන්නේ x > 0 සඳහා පමණි"
 
@@ -382,8 +498,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr "round(x), x ට ආසන්නතම නිඛිල සංඛ්‍යාව ලබා දෙයි."
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "බිටු අනුව මෙහෙයුම් නිඛිල සංඛ්‍යා වලට පමණක් යෙදෙයි"
 
@@ -453,102 +568,80 @@ msgstr ""
 "xor(x, y), තාර්කික xor. x හා y දෙකින් එකක් පමණක් සත්‍ය විට සත්‍ය ද අන්සෑම "
 "විටකම අසත්‍ය ද එවයි"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "පවිත්‍ර කරන්න"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "ස්ථිර කරන්න"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "සකසන්න"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "වීජ ගණිතය"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "ත්‍රිකෝණමිතිය"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "බූලීය"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "විවිධ"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "ලේබලය:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "සියළු සමීකරණ"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "මගේ සමීකරණ"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "අයිති සහ සියළු සමීකරණ අතර දසුන වෙනස් කරන්න"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "ඉතිහාසය පෙන්වන්න"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "විචල්‍යයන් පෙන්වන්න"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "අතීතය සහ විචල්‍ය අතර දසුන වෙනස් කරන්න"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr "="
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "අර්ථදක්වා නැත"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "දෝෂයක්: සහය නොදක්වන වර්ගයකි"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() අනුලකුණුවැල වලංගු නොවේ (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "ලේබලයක් ආදේශ කිරීමට නොහැක: නැවත නැවත සිදු කිරීමක් වනු ඇත"
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "ජ'නලයට ලියවේ (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): වලංගු නොවන වර්ගයකි"
 
 #: toolbars.py:53
 msgid "Help"
@@ -698,106 +791,8 @@ msgstr "පෙන්වන ඉලක්කම් ගණන"
 msgid "Integer formatting base"
 msgstr "නිඛිල සංඛ්‍යා ආකෘතිකරණය කිරීමේ පාදය"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), 'eqn' සමීකරණය 'var' විචල්‍යයන් සමඟ a සිට b දක්වා වූ "
-"පරාසයේ අඳියි"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "%d හි ව්‍යාකරණ විග්‍රහ කිරීමේ දෝෂයක්"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "%d හි දෝෂයකි"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"මෙය හුදෙක් පරීක්ෂණාත්මක මාතෘකාවක් පමණි, සුචිය සඳහා help(index) භාවිතා කරන්න"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"'test' ගැන උදව් සඳහා help(test) හෝ index ගැන උදව් සඳහා help(index) භාවිතා "
-"කරන්න"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "සුචිය"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "මාතෘකා"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "මාතෘකා"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "විචල්‍යයන්"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "විචල්‍යයන්"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "functions"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "ක්‍රියා"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "'%s' සම්බන්ධයෙන්  උදව් නොපවතී,සුචිය සඳහා  help(index)භාවිතා කරන්නx"
-
-#: astparser.py:459
-msgid "help"
-msgstr "උදව්"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "නැවත නැවත සිදුවීම හඳුනාගන්නා ලදි"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' ක්‍රියාවලිය අර්ථදක්වා නැත"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "'%s' විචල්‍ය අර්ථදක්වා නැත"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "'%s' විස්තරකය නොපවතී"
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "විශ්ලේෂණ දෝෂයකි"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "බහු ප්‍රකාශන සහය දක්වන්නේ නැත"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "අභ්‍යන්තර දෝෂය"
+#~ msgid "Enter"
+#~ msgstr "ස්ථිර කරන්න"
 
 #~ msgid "Available functions:"
 #~ msgstr "පවතින ක්‍රියාවලි:"

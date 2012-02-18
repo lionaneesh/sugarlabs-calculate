@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-01-15 23:12+0200\n"
 "Last-Translator: Sebastian Nitu <sebastian.nitu@live.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ro\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,136 +30,299 @@ msgstr ""
 msgid "Calculate"
 msgstr "Calculează"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
 msgstr ""
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "Funcții disponibile:"
-
-#: calculate.py:504
+#: astparser.py:59
 #, python-format
-msgid "Writing to journal (%s)"
-msgstr "Se scrie în jurnal (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
+msgid "Parse error at %d"
 msgstr ""
 
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Eroare de analiză"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "nivel: %d, din %d"
-
-#: eqnparser.py:117
+#: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
 msgstr "Eroare la %d"
 
-#: eqnparser.py:249 eqnparserhelp.py:128
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+
+#: astparser.py:106
 #, fuzzy
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Folosiţi help(test) pentru ajutor despre „test”, sau help(index) pentru "
 "cuprinsul ajutorului"
 
-#: eqnparser.py:353 eqnparser.py:354
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr ""
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "Subiecte"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Subiecte"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr ""
+
+#: astparser.py:119
+msgid "Variables"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr ""
+
+#: astparser.py:126
+msgid "Functions"
+msgstr ""
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Nu există înformații despre '%s', foloseșe help(index) pentru a afișa lista"
+
+#: astparser.py:459
+msgid "help"
+msgstr ""
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
 #, python-format
 msgid "Function '%s' not defined"
 msgstr "Funcția '%s' nu este definită"
 
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Număr nevalid de argumente (%d în loc de %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "funcţia are %d argumente"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "Nu am putut analiza argumentul %d: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "Eroare în funcţie: %s"
-
-#: eqnparser.py:481
+#: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
 msgstr "Variabila  '%s'  nu este definită"
 
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Se aştepta o paranteză stânga"
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
 
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "Eroare la analiza textului (paranteza închisă)"
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Eroare de analiză"
 
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "Nu se aştepta o paranteză închisă"
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
 
-#: eqnparser.py:527
-#, fuzzy
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Eroare de analiză (paranteza dreapta, nu există valoare_stânga)"
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
 
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Eroare de analiză (paranteza dreapta, nu se poate închide)"
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr ""
 
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "Nu se aştepta un număr"
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
 
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Nu se aştepta un operator"
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Se scrie în jurnal (%s)"
 
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Eroare analiză: se aştepta număr sau variabilă"
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr ""
 
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Se aştepta un număr sau o variabilă"
+#: functions.py:35
+msgid "add"
+msgstr ""
 
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "Operator nevalid"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Se aştepta un operator"
-
-#: eqnparser.py:616
-#, fuzzy
-msgid "_parse(): returning None"
-msgstr "_parse(): a returnat Nimic"
+#: functions.py:36
+msgid "abs"
+msgstr ""
 
 # TRANS: It is possible to translate commands. However, I would highly
 # recommend NOT doing so for mathematical functions like cos(). help(),
 # functions() etc should be translated.
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
+#: functions.py:37
 msgid "acos"
 msgstr "acos"
 
-#: eqnparserhelp.py:40
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#: functions.py:38
+#, fuzzy
+msgid "acosh"
+msgstr "acos"
+
+#: functions.py:39
+msgid "asin"
+msgstr ""
+
+#: functions.py:40
+msgid "asinh"
+msgstr ""
+
+#: functions.py:41
+#, fuzzy
+msgid "atan"
+msgstr "tan"
+
+#: functions.py:42
+#, fuzzy
+msgid "atanh"
+msgstr "tan"
+
+#: functions.py:43
+msgid "and"
+msgstr ""
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#: functions.py:46
+#, fuzzy
+msgid "cos"
+msgstr "acos"
+
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#: functions.py:47
+#, fuzzy
+msgid "cosh"
+msgstr "acos"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr ""
+
+#: functions.py:51
+msgid "factorial"
+msgstr ""
+
+#: functions.py:52
+msgid "fac"
+msgstr ""
+
+#: functions.py:53
+msgid "factorize"
+msgstr ""
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr ""
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr ""
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
+msgid "sin"
+msgstr ""
+
+#: functions.py:65
+msgid "sinh"
+msgstr ""
+
+#: functions.py:66
+msgid "sinc"
+msgstr ""
+
+#: functions.py:67
+msgid "sqrt"
+msgstr ""
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr ""
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+#, fuzzy
+msgid "tanh"
+msgstr "tan"
+
+#: functions.py:72
+msgid "xor"
+msgstr ""
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
@@ -167,22 +330,25 @@ msgstr ""
 "acos(x), returnează arc cosinusul lui x. Acesta este unghiul pentru care "
 "cosinusul este x. Definit pentru -1 <= x < 1"
 
-#: eqnparserhelp.py:43
-msgid "and"
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
 msgstr ""
 
-#: eqnparserhelp.py:44
+#: functions.py:129
+#, fuzzy
 msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
 "and(x, y), ŞI logic. Returnează advăvar x şi y sunt adevărate, altfel "
 "returnează fals"
 
-#: eqnparserhelp.py:46
-msgid "asin"
+#: functions.py:136
+msgid "add(x, y), return x + y"
 msgstr ""
 
-#: eqnparserhelp.py:47
+#: functions.py:141
 #, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
@@ -191,12 +357,13 @@ msgstr ""
 "acos(x), returnează arc cosinusul lui x. Acesta este unghiul pentru care "
 "cosinusul este x. Definit pentru -1 <= x < 1"
 
-#: eqnparserhelp.py:50
-#, fuzzy
-msgid "atan"
-msgstr "tan"
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
 
-#: eqnparserhelp.py:51
+#: functions.py:153
 #, fuzzy
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
@@ -205,63 +372,81 @@ msgstr ""
 "acos(x), returnează arc cosinusul lui x. Acesta este unghiul pentru care "
 "cosinusul este x. Definit pentru -1 <= x < 1"
 
-# TRANS: It is possible to translate commands. However, I would highly
-# recommend NOT doing so for mathematical functions like cos(). help(),
-# functions() etc should be translated.
-#: eqnparserhelp.py:54
-#, fuzzy
-msgid "cos"
-msgstr "acos"
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
 
-#: eqnparserhelp.py:55
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
 
-# TRANS: It is possible to translate commands. However, I would highly
-# recommend NOT doing so for mathematical functions like cos(). help(),
-# functions() etc should be translated.
-#: eqnparserhelp.py:58
-#, fuzzy
-msgid "cosh"
-msgstr "acos"
-
-#: eqnparserhelp.py:59
+#: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
 
-#: eqnparserhelp.py:61
-msgid "exp"
+#: functions.py:198
+msgid "Can not divide by zero"
 msgstr ""
 
-#: eqnparserhelp.py:62
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr ""
 
-#: eqnparserhelp.py:64
-msgid "fac"
+#: functions.py:231
+msgid "Factorial only defined for integers"
 msgstr ""
 
-#: eqnparserhelp.py:65
+#: functions.py:244
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+
+#: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
 msgstr ""
 
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "functions(), return o listă cu toate funcţiile definite"
-
-#: eqnparserhelp.py:71
-msgid "ln"
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: eqnparserhelp.py:72
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
+
+#: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
@@ -269,241 +454,219 @@ msgstr ""
 "ln(x), returnează logaritmul natural din x. Acesta este valoarea pentru care "
 "exponentul exp() este egal cu x. Definit pentru x >= 0."
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "operatori"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "operators(), returnează o listă cu operatorii definiţi"
-
-#: eqnparserhelp.py:79
-msgid "or"
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
 msgstr ""
 
-#: eqnparserhelp.py:80
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
 #, fuzzy
 msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
 "and(x, y), ŞI logic. Returnează advăvar x şi y sunt adevărate, altfel "
 "returnează fals"
 
-#: eqnparserhelp.py:82
-msgid "plot"
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
 msgstr ""
 
-#: eqnparserhelp.py:83
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
 msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
 
-#: eqnparserhelp.py:86
-msgid "sin"
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: eqnparserhelp.py:87
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr ""
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
 msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
 
-#: eqnparserhelp.py:97
-msgid "square"
+#: functions.py:420
+msgid "square(x), return x * x"
 msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
 msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "tan"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
 
-#: eqnparserhelp.py:106
-#, fuzzy
-msgid "tanh"
-msgstr "tan"
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#: functions.py:439
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr ""
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr ""
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr ""
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr ""
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Subiecte"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Nu există înformații despre '%s', foloseșe help(index) pentru a afișa lista"
-
-#: layout.py:44
+#: layout.py:69
 #, fuzzy
 msgid "Clear"
 msgstr "curăţă"
 
-#: layout.py:53
-#, fuzzy
-msgid "Enter"
-msgstr "calculează"
-
-#: layout.py:60
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Modifică"
 
-#: layout.py:61
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Algegră"
 
-#: layout.py:62
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Trigonometrie"
 
-#: layout.py:63
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Logică"
 
-#: layout.py:118
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:64
-msgid "Constants"
-msgstr "Constante"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Unitate de măsură"
-
-#: layout.py:86
+#: layout.py:164
 msgid "Label:"
 msgstr "Eticheta:"
 
-#: layout.py:118
+#: layout.py:197
 msgid "All equations"
 msgstr "Toate ecuaţiile"
 
-#: layout.py:118
+#: layout.py:197
 msgid "My equations"
 msgstr "Ecuaţiile mele"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show history"
 msgstr "Afişează istoria"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show variables"
 msgstr "Afişează variabilele"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:132
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr ""
 
-#: mathlib.py:142
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Eroare: tip nesuportat"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr ""
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "Copiază"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "Lipeşte"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "Taie"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "Lipeşte"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr ""
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr ""
 
@@ -511,109 +674,197 @@ msgstr ""
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr ""
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr ""
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr ""
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr ""
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr ""
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr ""
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr ""
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr ""
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr ""
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr ""
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr ""
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr ""
 
-#: toolbars.py:280
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
 msgid "Plot"
 msgstr ""
 
-#: toolbars.py:209
+#: toolbars.py:286
 msgid "Degrees"
 msgstr ""
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr ""
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+msgid "Degrees / Radians"
 msgstr ""
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Enter"
+#~ msgstr "calculează"
+
+#~ msgid "Available functions:"
+#~ msgstr "Funcții disponibile:"
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "nivel: %d, din %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "Număr nevalid de argumente (%d în loc de %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "funcţia are %d argumente"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "Nu am putut analiza argumentul %d: '%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "Eroare în funcţie: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "Se aştepta o paranteză stânga"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "Eroare la analiza textului (paranteza închisă)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "Nu se aştepta o paranteză închisă"
+
+#, fuzzy
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "Eroare de analiză (paranteza dreapta, nu există valoare_stânga)"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "Eroare de analiză (paranteza dreapta, nu se poate închide)"
+
+#~ msgid "Number not expected"
+#~ msgstr "Nu se aştepta un număr"
+
+#~ msgid "Operator not expected"
+#~ msgstr "Nu se aştepta un operator"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "Eroare analiză: se aştepta număr sau variabilă"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "Se aştepta un număr sau o variabilă"
+
+#~ msgid "Invalid operator"
+#~ msgstr "Operator nevalid"
+
+#~ msgid "Operator expected"
+#~ msgstr "Se aştepta un operator"
+
+#, fuzzy
+#~ msgid "_parse(): returning None"
+#~ msgstr "_parse(): a returnat Nimic"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "functions(), return o listă cu toate funcţiile definite"
+
+#~ msgid "operators"
+#~ msgstr "operatori"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "operators(), returnează o listă cu operatorii definiţi"
+
+#~ msgid "Constants"
+#~ msgstr "Constante"
+
+#~ msgid "Format"
+#~ msgstr "Unitate de măsură"
 
 #-----------------------------------------
 # End of help topics

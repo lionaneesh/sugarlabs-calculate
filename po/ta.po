@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-09-28 09:39+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2011-10-27 06:18+0200\n"
+"Last-Translator: Thangamani <thangam.arunx@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ta\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,6 +28,128 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "கணி"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"புள்ளி(eqn, var=-a..b), என்பது சமன்பாடு 'eqn' ஐ, a..b வரையுள்ள வீச்சிலுள்ள "
+"மாறி 'var' யுடன் plot செய்யும்"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "தவறுat %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "இது ஒரு பரீட்சித்தல் விடயம்.உதவிக்காக அடையாளத்தை உபயோகி"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "உதவி தேவைப்படுவதற்கான பரீட்சித்தலில் அல்லது அடையாளத்திற்கான உதவி"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "அடையாளம்"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "விடயம்"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "விடயம்"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "மாறிகள்"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "மாறிகள்"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "தொழிற்பாடுகள்"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "தொழிற்பாடுகள்"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "'%s' இதற்கான உதவி கிடைக்கவில்லை.உதவிக்கு அடையாளத்தை உபயோகி."
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "உதவி"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+#, python-format,
+msgid "Function '%s' not defined"
+msgstr "செயற்பாடு '%s' வரையறுக்கப்படவில்லை"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "மாறி '%s' வரையறுக்கப்படவில்லை"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "தவறான அலகு"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+#, python-format,
+msgid "Equation.parse() string invalid (%s)"
+msgstr "சமன்பாடு.பிரித்துப்பார்த்தல்() சரியான வரி இல்லை (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+#, python-format,
+msgid "Writing to journal (%s)"
+msgstr "சஞ்சிகைக்கு பதியப்படுகிறது (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "பொருத்தமற்ற முறையில் பொத்தான் அழுத்தப்பட்டுள்ளது"
 
 #: functions.py:35
 msgid "add"
@@ -196,10 +318,11 @@ msgstr ""
 "நிர்ணயிக்கப்பட்டுள்ளது"
 
 #: functions.py:123
+#, fuzzy
 msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
-msgstr ""
+msgstr "acosh(x), arc hyperbolic கோசைன்x க்கு திரும்பும். இது தான் "
 
 #: functions.py:129
 msgid ""
@@ -221,10 +344,11 @@ msgstr ""
 "போதுள்ள கோணமாகும். -1 <= x <= 1 க்காக வரையறுக்கப்பட்டுள்ளது"
 
 #: functions.py:147
+#, fuzzy
 msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
-msgstr ""
+msgstr "acosh(x), arc hyperbolic கோசைன்x க்கு திரும்பும். இது தான் "
 
 #: functions.py:153
 msgid ""
@@ -235,10 +359,11 @@ msgstr ""
 "இருக்கும் போதுள்ள கோணமாகும். அனைத்து x க்கும் வரையறுக்கப்பட்டுள்ளது"
 
 #: functions.py:159
+#, fuzzy
 msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
-msgstr ""
+msgstr "acosh(x), arc hyperbolic கோசைன்x க்கு திரும்பும். இது தான் "
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
@@ -314,8 +439,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -377,8 +501,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -449,104 +572,80 @@ msgstr ""
 "xor(x, y),தர்க்கித்த xor. x உண்மையானால் மீண்டும் திரும்புதலுடன் உண்மை(and y "
 "is False)/y உண்மையானால் (and x is False),மீண்டும் பிழை"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "நீக்கு"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "பதிக"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "திருத்து"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "அட்சரகணிதம்"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "திரிகோணகணிதம்"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "பூழியன்"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "மற்றவை"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "பெயர்ச்சீட்டு"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "அனைத்து சமன்பாடுகளும்"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "எனதுசமன்பாடுகள்"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "சொந்த மற்றும் அனைத்து சமன்பாடுகளுக்கும் பார்வையை மாற்று"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "வரலாற்றைக் காட்டு"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "மாறிகளைக்காட்டு"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "வரலாறு மற்றும் மாறிலிகளுக்கு இடைப்பட்ட பார்வையை மாற்று"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "தடையற்ற"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "தவறு ஒத்துழைப்பில்லாத வகை"
-
-#: calculate.py:109
-#, python-format
-#, python-format,
-msgid "Equation.parse() string invalid (%s)"
-msgstr "சமன்பாடு.பிரித்துப்பார்த்தல்() சரியான வரி இல்லை (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-#, python-format,
-msgid "Writing to journal (%s)"
-msgstr "சஞ்சிகைக்கு பதியப்படுகிறது (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "பொருத்தமற்ற முறையில் பொத்தான் அழுத்தப்பட்டுள்ளது"
 
 #: toolbars.py:53
 msgid "Help"
@@ -697,108 +796,8 @@ msgstr "காட்டப்பட்டுள்ள எண்ணிலக்�
 msgid "Integer formatting base"
 msgstr "மாறிலிகளின் அடிப்படை வடிவாக்கம்"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"புள்ளி(eqn, var=-a..b), என்பது சமன்பாடு 'eqn' ஐ, a..b வரையுள்ள வீச்சிலுள்ள "
-"மாறி 'var' யுடன் plot செய்யும்"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "தவறுat %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "இது ஒரு பரீட்சித்தல் விடயம்.உதவிக்காக அடையாளத்தை உபயோகி"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "உதவி தேவைப்படுவதற்கான பரீட்சித்தலில் அல்லது அடையாளத்திற்கான உதவி"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "அடையாளம்"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "விடயம்"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "விடயம்"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "மாறிகள்"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "மாறிகள்"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "தொழிற்பாடுகள்"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "தொழிற்பாடுகள்"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "'%s' இதற்கான உதவி கிடைக்கவில்லை.உதவிக்கு அடையாளத்தை உபயோகி."
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "உதவி"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-#, python-format,
-msgid "Function '%s' not defined"
-msgstr "செயற்பாடு '%s' வரையறுக்கப்படவில்லை"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "மாறி '%s' வரையறுக்கப்படவில்லை"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "தவறான அலகு"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "பதிக"
 
 #~ msgid "Available functions:"
 #~ msgstr "கிடைக்கக் கூடிய செயற்பாடுகள்:"

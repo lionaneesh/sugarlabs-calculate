@@ -14,566 +14,797 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
-"PO-Revision-Date: 2011-03-20 05:26+0200\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2011-10-04 04:27+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: sw\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr ""
+msgstr "mahesabu"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr ""
-
-#: calculate.py:210
-msgid "Available functions:"
-msgstr ""
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr ""
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr ""
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr ""
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr ""
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr ""
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr ""
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr ""
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr ""
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr ""
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr ""
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr ""
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr ""
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr ""
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr ""
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr ""
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr ""
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr ""
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr ""
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr ""
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr ""
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr ""
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr ""
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr ""
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
-msgid "acos"
-msgstr ""
-
-#: eqnparserhelp.py:40
-msgid ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
-msgstr ""
-
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr ""
-
-#: eqnparserhelp.py:44
-msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr ""
-
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr ""
-
-#: eqnparserhelp.py:47
-msgid ""
-"asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
-msgstr ""
-
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr ""
-
-#: eqnparserhelp.py:51
-msgid ""
-"atan(x), return the arc tangent of x. This is the angle for which the "
-"tangent is x. Defined for all x"
-msgstr ""
-
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr ""
-
-#: eqnparserhelp.py:55
-msgid ""
-"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
-"at the angle x"
-msgstr ""
-
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr ""
-
-#: eqnparserhelp.py:59
-msgid ""
-"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr ""
-
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr ""
-
-#: eqnparserhelp.py:62
-msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr ""
-
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr ""
-
-#: eqnparserhelp.py:65
-msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr ""
-
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr ""
-
-#: eqnparserhelp.py:72
-msgid ""
-"ln(x), return the natural logarithm of x. This is the value for which the "
-"exponent exp() equals x. Defined for x >= 0."
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr ""
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr ""
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr ""
-
-#: eqnparserhelp.py:80
-msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
-msgstr ""
-
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr ""
-
-#: eqnparserhelp.py:83
+#: astparser.py:40
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
 
-#: eqnparserhelp.py:86
-msgid "sin"
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
 msgstr ""
 
-#: eqnparserhelp.py:87
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr ""
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "kielezo"
+
+#: astparser.py:109
+msgid "topics"
+msgstr ""
+
+#: astparser.py:110
+msgid "Topics"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr ""
+
+#: astparser.py:119
+msgid "Variables"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr ""
+
+#: astparser.py:126
+msgid "Functions"
+msgstr ""
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+
+#: astparser.py:459
+msgid "help"
+msgstr "msaada"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr ""
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr ""
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr ""
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse () string batili (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Je, si hawawajui studio: utasababisha recursion"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Kuandika na jarida (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): aina iko batili"
+
+#: functions.py:35
+msgid "add"
+msgstr "kuongeza"
+
+#: functions.py:36
+msgid "abs"
+msgstr "abs"
+
+#: functions.py:37
+msgid "acos"
+msgstr "acos"
+
+#: functions.py:38
+msgid "acosh"
+msgstr "acosh"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+msgid "asinh"
+msgstr "asinh"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+msgid "atanh"
+msgstr "atanh"
+
+#: functions.py:43
+msgid "and"
+msgstr "na"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr "b10bin"
+
+#: functions.py:45
+msgid "ceil"
+msgstr "ceil"
+
+#: functions.py:46
+msgid "cos"
+msgstr "cos"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "cosh"
+
+#: functions.py:48
+msgid "div"
+msgstr "div"
+
+#: functions.py:49
+msgid "gcd"
+msgstr "gcd"
+
+#: functions.py:50
+msgid "exp"
+msgstr "exp"
+
+#: functions.py:51
+msgid "factorial"
+msgstr "viwanda"
+
+#: functions.py:52
+msgid "fac"
+msgstr "fac"
+
+#: functions.py:53
+msgid "factorize"
+msgstr "factorize"
+
+#: functions.py:54
+msgid "floor"
+msgstr "sakafu"
+
+#: functions.py:55
+msgid "inv"
+msgstr "inv"
+
+#: functions.py:56
+msgid "is_int"
+msgstr "iko_int"
+
+#: functions.py:57
+msgid "ln"
+msgstr "ndani"
+
+#: functions.py:58
+msgid "log10"
+msgstr "logi10"
+
+#: functions.py:59
+msgid "mul"
+msgstr "mul"
+
+#: functions.py:60
+msgid "or"
+msgstr "au"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr "rand kuelewa"
+
+#: functions.py:62
+msgid "rand_int"
+msgstr "rand_int"
+
+#: functions.py:63
+msgid "round"
+msgstr "duru"
+
+#: functions.py:64
+msgid "sin"
+msgstr "sin"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "sinh"
+
+#: functions.py:66
+msgid "sinc"
+msgstr "sinc"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "sqrt"
+
+#: functions.py:68
+msgid "sub"
+msgstr "ndogo"
+
+#: functions.py:69
+msgid "square"
+msgstr "mraba"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "tanh"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr "abs(x), kurudi kabisa thamani ya x, ambayo ina maanisha -x kwa x<0"
+
+#: functions.py:117
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"acos(x), kurudi ni arc cosine ya x, Hii ni kwa angle ambayo cosine ni x. "
+"Hufafanuliwa kwa        -1 <= x <1"
+
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+"acosh(x), kurudi ni hyperbolic cosine ya x, Hii inamaanisha kwa y ambayo "
+"hyperbolic cosine ni sawa na x"
+
+#: functions.py:129
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"NA (x,y), mantiki na. kurudi kweli kama x na y ziko kweli, ama kurudi uongo"
+
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr "Ongeza(x,y), kurudi x=y"
+
+#: functions.py:141
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"asin(x), kurudi arc ya sin ya x. hii ni angle yenye sin ni x. hufafanuliwa "
+"kwa -1<=x<=1"
+
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
+"asinh(x), kurudi hyperbolic arc ya sin ya x. Hii thamani ya y kwenye "
+"hyperbolic sine iko x"
+
+#: functions.py:153
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"atan(x), kurudi arc tangent wa x, Hii ni angle kwenye tangent iko x. "
+"hufafanuliwa kwa x yoye."
+
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
+"atanh(x), kurudi hyperbolic arc ya tangent wa x. Hii thamani ya y kwenye "
+"hyperbolic tangent iko x"
+
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr "Idadi haangalii binary katika msingi 10"
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+"b10bin(x), kutafsiri idadi yaliyoandikwa katika wigo wa 10 kama binary, "
+"e.g.:b10bin(10111)=23,"
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr "ceil(x), kurudi integer ndogo lakini kubwa kuliko x."
+
+#: functions.py:188
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"cos(x), kurudi cosine wa x. Hii ni x-kuratibu juu ya mzunguko wa kitengo "
+"katika x angle"
+
+#: functions.py:194
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"cosh(x), kurudi hyperbolic cosine wa x. Kutokana na (exp (x) + exp (-x)) / 2"
+
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr "huwezi kugawanya na sifuri"
+
+#: functions.py:219
+msgid "Invalid argument"
+msgstr "hoja batili"
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+"gcd(a,b), kuamua denominateri kubwa ya kawaida kati ya a na b. Kwa mfano, "
+"sababu kubwa ya kuwa pamoja na idadi ya 15 na 18 ni 3."
+
+#: functions.py:227
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x), kurudi exponent ya asili ya x. Kutokana na e ^ x"
+
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr "Viwanda vya defined kwa ajili ya integers tu"
+
+#: functions.py:244
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+"viwanda (n), kurudi viwanda ya n. Kutokana na n * (n - 1) * (n - 2) * ..."
+
+#: functions.py:250
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr "fac(x), kurudi viwanda wa x. Kutokana na x * (x - 1) * (x - 2) * ..."
+
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr "sakafu (x), kurudi integer kubwa lakini ndogo kuliko x."
+
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr "inv (x), kurudi Inverse ya x, ambayo ni 1 /x"
+
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr "Logarithm (x) iko defined kwa x> 0 tu"
+
+#: functions.py:311
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"Ln(x), kurudi logarithm ya asili ya x. Hii ni kwa thamani ambayo exp "
+"exponent () ni sawa na x. Hufafanuliwa kwa x> = 0."
+
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+"log10 (x), kurudi msingi 10 logarithm ya x. Hii ni y thamani ambayo ni sawa "
+"na 10 ^ y x. Hufafanuliwa kwa x> = 0"
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr "Anaweza tu kufanya mahesabu ya x modulo <integer>"
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+"Mod (x, y), kurudi modulus ya x kwa heshima na y. Hii ni salio baada ya "
+"kugawa x kwa y."
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr "mul(x,y), kurudi x*y"
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr "yanatofautiana (x), kurudi-x"
+
+#: functions.py:346
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
+msgstr ""
+"Au (x, y), mantiki au. kurudi kweli kama x au y ni kweli, mwingine anarudi "
+"uongo"
+
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr "Pow (x, y), x kurudi kwa nguvu y (x ** y)"
+
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+"kuelea_rand (), kurudi random fyaliyo na hatua kadhaa kati ya 0.0 na 1.0"
+
+#: functions.py:371
+msgid ""
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
+"rand_int ([<maxval>]), kurudi integer random kati ya 0 na <maxval>. <maxval> "
+"ni hoja hiari na ni kuweka 65,535 kwa default."
+
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr "pande zote (x), kurudi kwa karibu integer x."
+
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr "Kidogo tu shughuli busara yaombwa na integers tu"
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+"mabadiliko ya kushoto (x, y), x kuhama kwa bits y wa kushoto (kuzidisha kwa "
+"2 per bit)"
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+"mabadiliko ya haki (x, y), x kuhama kwa bits y haki (kugawanya kwa 2 per "
+"bit)"
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"dhambi (x), kurudi sine ya x. Hii ni y-kuratibu juu ya mzunguko wa kitengo "
+"katika x angle"
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr ""
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"sinh (x), kurudi sine hyperbolic ya x. Kutokana na (exp (x) - exp (-x)) / 2"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr ""
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr "sinc (x), kurudi sinc ya x. Hii ni kutokana na dhambi (x) / x"
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt (x), kurudi mizizi ya mraba ya x. Hii ni thamani ya mraba ambayo ni "
+"sawa na x. Hufafanuliwa kwa x> = 0."
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr ""
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr "mraba (x), kurudi x * x"
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr ""
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr "ndogo (x, y), kurudi x - y"
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr ""
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan (x), kurudi tangent ya x. Hii ni mteremko wa mstari kutoka asili ya "
+"mzunguko wa kitengo kwa uhakika juu ya mzunguko wa kitengo defined by x. "
+"angle Kutokana na dhambi (x) / cos (x)"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
+#: functions.py:439
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"tanh (x), kurudi tangent hyperbolic ya x. Kutokana na sinh (x) / cosh (x)"
 
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr ""
-
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr ""
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr ""
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr ""
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor (x, y), mantiki xor. kurudi kweli kama x ama ni kweli (na y ni uongo) au "
+"y ni kweli (na x ni uongo), mwingine anarudi uongo"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr ""
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr ""
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-
-#: layout.py:44
+#: layout.py:69
 msgid "Clear"
-msgstr ""
+msgstr "wazi"
 
-#: layout.py:53
-msgid "Enter"
-msgstr ""
-
-#: layout.py:60
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Hariri"
 
-#: layout.py:61
+#: layout.py:104 layout.py:140
 msgid "Algebra"
-msgstr ""
+msgstr "Algebra"
 
-#: layout.py:62
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometry"
 
-#: layout.py:63
+#: layout.py:114 layout.py:142
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
-#: layout.py:118
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Miscellaneous"
 
-#: layout.py:64
-msgid "Constants"
-msgstr ""
-
-#: layout.py:65
-msgid "Format"
-msgstr ""
-
-#: layout.py:86
+#: layout.py:164
 msgid "Label:"
-msgstr ""
+msgstr "studio"
 
-#: layout.py:118
+#: layout.py:197
 msgid "All equations"
-msgstr ""
+msgstr "equations zote"
 
-#: layout.py:118
+#: layout.py:197
 msgid "My equations"
-msgstr ""
+msgstr "equation yangu"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
-msgstr ""
+msgstr "badilisha maoni kati ya equations ya mwenyewe na ya wote"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show history"
-msgstr ""
+msgstr "Onyesha historia"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show variables"
-msgstr ""
+msgstr "Onyesha vigezo"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
-msgstr ""
+msgstr "badilisha maoni kati ya historia na vigezo"
 
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
 msgid "mul_sym"
-msgstr ""
+msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
 msgid "div_sym"
+msgstr "div_sym"
+
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
 msgstr ""
 
-#: mathlib.py:132
+#: mathlib.py:216
 msgid "Undefined"
-msgstr ""
+msgstr "kisichojulikana"
 
-#: mathlib.py:142
+#: mathlib.py:226
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "kosa:aina hai supportiwe"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "Msaada"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
-msgstr "Nakili"
+msgstr "Nakala"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr ""
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr "<ctrl>c"
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
-msgstr ""
+msgstr "kata"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr "<ctrl>x"
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "kuweka"
+
+#: toolbars.py:147
 msgid "Square"
-msgstr ""
+msgstr "mraba"
 
-#: toolbars.py:103
+#: toolbars.py:152
+#, fuzzy
 msgid "Square root"
-msgstr ""
+msgstr "Kipeuo"
 
 #: toolbars.py:157
+#, fuzzy
 msgid "Inverse"
-msgstr ""
+msgstr "Kinyume"
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr ""
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr ""
 
-#: toolbars.py:117
+#: toolbars.py:174
+#, fuzzy
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Logi Asili"
 
-#: toolbars.py:123
+#: toolbars.py:180
+#, fuzzy
 msgid "Factorial"
-msgstr ""
+msgstr "Zao mtiririko"
 
-#: toolbars.py:131
+#: toolbars.py:190
+#, fuzzy
 msgid "Sine"
-msgstr ""
+msgstr "Sini"
 
-#: toolbars.py:135
+#: toolbars.py:194
+#, fuzzy
 msgid "Cosine"
-msgstr ""
+msgstr "Kosini"
 
-#: toolbars.py:139
+#: toolbars.py:198
+#, fuzzy
 msgid "Tangent"
-msgstr ""
+msgstr "Tanjiti"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr ""
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr ""
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr ""
 
-#: toolbars.py:159
+#: toolbars.py:218
+#, fuzzy
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "Sini Hipaboliki"
 
-#: toolbars.py:163
+#: toolbars.py:222
+#, fuzzy
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "Kosini Hipaboliki"
 
-#: toolbars.py:167
+#: toolbars.py:226
+#, fuzzy
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "Tanjiti Hipaboliki"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr ""
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr ""
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
-msgstr ""
+msgstr "Sawa"
 
-#: toolbars.py:192
+#: toolbars.py:253
+#, fuzzy
 msgid "Not equals"
-msgstr ""
+msgstr "Sio Sawa"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr ""
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr ""
 
-#: toolbars.py:280
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
 msgid "Plot"
 msgstr ""
 
-#: toolbars.py:209
+#: toolbars.py:286
+#, fuzzy
 msgid "Degrees"
-msgstr ""
+msgstr "Digrii"
 
-#: toolbars.py:210
+#: toolbars.py:287
+#, fuzzy
 msgid "Radians"
-msgstr ""
+msgstr "Radiani"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
-msgstr ""
+#: toolbars.py:291
+#, fuzzy
+msgid "Degrees / Radians"
+msgstr "Digrii / Radiani"
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Enter"
+#~ msgstr "kuingia"

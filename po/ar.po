@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-09-23 11:37+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,124 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "احسب"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"ارسم(المعادلة, س=-أ,.., ب), يرسم المعادلة مع المتغير س في الفترة من -أ إلى ب"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "خطأ عند %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "هذا فقط موضوع اختباري, استخدم مساعدة(رقم) للرقم المطلوب"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "الفهرس"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "المواضيع"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "المواضيع"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "المتغيرات"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "المتغيرات"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "الدالات"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "الدالات"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "لا يوجد مساعدة للموضوع %s, استخدم مساعدة(الرقم) للحصول على معلومات"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "مساعدة"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "الدالة '%s' غير معرفة"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "المتغير '%s' غير معرف"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "خطأ تحليلي"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() جملة غير صحيحة (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "يكتب على الدفتر (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "الزر المضغوط (): نوع خاطئ"
 
 #: functions.py:35
 msgid "add"
@@ -314,8 +432,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -375,8 +492,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -441,102 +557,80 @@ msgstr ""
 "يعمل على إرجاع صح إذا كانت x صحيحة و y خاطئة, أو y صحيحة و x خاطئة, غير ذلك "
 "يرجع خطأ"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr ""
 
-#: layout.py:77
-msgid "Enter"
-msgstr ""
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "تحرر"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "الجبر"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "الدوال المثلثية"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "المنطقيات"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "ملصق:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "جميع المعادلات"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "معادلاتي"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "اظهر التاريخ"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "اظهر المتغيرات"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "إشارة_الضرب"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "إشارة_القسمة"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "غير معرف"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "خطأ: نوع غير مدعوم"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() جملة غير صحيحة (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "يكتب على الدفتر (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "الزر المضغوط (): نوع خاطئ"
 
 #: toolbars.py:53
 msgid "Help"
@@ -685,107 +779,6 @@ msgstr ""
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr ""
-
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"ارسم(المعادلة, س=-أ,.., ب), يرسم المعادلة مع المتغير س في الفترة من -أ إلى ب"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "خطأ عند %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "هذا فقط موضوع اختباري, استخدم مساعدة(رقم) للرقم المطلوب"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "الفهرس"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "المواضيع"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "المواضيع"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "المتغيرات"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "المتغيرات"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "الدالات"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "الدالات"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "لا يوجد مساعدة للموضوع %s, استخدم مساعدة(الرقم) للحصول على معلومات"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "مساعدة"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "الدالة '%s' غير معرفة"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "المتغير '%s' غير معرف"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "خطأ تحليلي"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
 msgstr ""
 
 #~ msgid "Available functions:"

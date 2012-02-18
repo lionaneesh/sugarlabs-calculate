@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-09-17 09:22+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: ps\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -28,6 +28,129 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "شمېرل"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"طرحه (eqn, var=-a..b)٬ د 'eqn' برابرۍ طرحه د اوښتونکي 'var' سره د a نه د b "
+"تر کچې"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "په کې تېروتنه %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "دا يواځې يو ازمېښتي سرليك دى، د مرستې لپاره د مرستې لړيال وكاروئ."
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"د \"ازموینې\" په اړه مرستې لپاره مرسته(ازموینه) وکاروه٬ یا د لړیال لپاره "
+"مرسته(لړیال)"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "لړيال (لست)"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "سرليكونه"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "سرليكونه"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "اوښتونکي"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "اوښتونکي"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "کړنې"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "کړنې"
+
+#: astparser.py:135
+#, python-format
+#, python-format, fuzzy
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "د ' ' په اړه مرسته ترلاسه کېدلی شي. د لړیال لپاره مرسته(لړیال) وکاروه"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "مرسته"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+#, python-format, fuzzy
+msgid "Function '%s' not defined"
+msgstr "کړنه نده تعریف شوې"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "'%s' اوښتونکی ندی تعریف شوی"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "د جلاکولو تېروتنه"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "برابرون.جلاوالی() سلسله ناباوره (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "ژورنال ته لیکل (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "تڼۍ_ زورشوې(): ناسم ډول"
 
 #: functions.py:35
 msgid "add"
@@ -315,8 +438,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -378,8 +500,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -447,102 +568,80 @@ msgstr ""
 "xor(x, y)٬ عقلي xor. ریښتیا راستنېږي که هر x ریښتیا وي (او y درواغ وي) یا y "
 "ریښتیا وي (x درواغ وي). که نه نو درواغ راستنېږي"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "پاکول"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "ننوتل"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "سمون"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "الجبر"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "مثلثات"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "بولۍ"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "نښه:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "ټول مساوات"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "زما مساوات"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "مخينه ښودل"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "اوښتونکي ښودل"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "ناپيژندلي"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "تېروتنه: ناملاتړی ډول"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "برابرون.جلاوالی() سلسله ناباوره (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "ژورنال ته لیکل (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "تڼۍ_ زورشوې(): ناسم ډول"
 
 #: toolbars.py:53
 msgid "Help"
@@ -694,109 +793,8 @@ msgstr ""
 msgid "Integer formatting base"
 msgstr ""
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"طرحه (eqn, var=-a..b)٬ د 'eqn' برابرۍ طرحه د اوښتونکي 'var' سره د a نه د b "
-"تر کچې"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "په کې تېروتنه %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "دا يواځې يو ازمېښتي سرليك دى، د مرستې لپاره د مرستې لړيال وكاروئ."
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"د \"ازموینې\" په اړه مرستې لپاره مرسته(ازموینه) وکاروه٬ یا د لړیال لپاره "
-"مرسته(لړیال)"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "لړيال (لست)"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "سرليكونه"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "سرليكونه"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "اوښتونکي"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "اوښتونکي"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "کړنې"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "کړنې"
-
-#: astparser.py:135
-#, python-format, fuzzy
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "د ' ' په اړه مرسته ترلاسه کېدلی شي. د لړیال لپاره مرسته(لړیال) وکاروه"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "مرسته"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format, fuzzy
-msgid "Function '%s' not defined"
-msgstr "کړنه نده تعریف شوې"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "'%s' اوښتونکی ندی تعریف شوی"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "د جلاکولو تېروتنه"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "ننوتل"
 
 #~ msgid "Available functions:"
 #~ msgstr "موجودې کړنې:"

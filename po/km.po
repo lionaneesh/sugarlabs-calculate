@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-10-08 09:45+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,123 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "គិតលេខ"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "កំហុសនៅឯ %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"នេះគ្រាន់តែជាប្រធានបទសំរាប់សាកល្បង ដើប្បីប្រើប្រាស់ដល់ការជំនួយ (តរាង) "
+"សំរាប់តារាងតំរៀបអក្សរ"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"ប្រើជំនួយ (សាកល្បង) ដើម្បីជាជំនួយសំរាប់ 'សាកល្បង់' ឬ ជំនួយ (តាមលេខរៀង) "
+"សំរាប់លេខរៀង"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "តារាងតំរៀបអក្សរ"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "ប្រធានបទ"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "ប្រធានបទ"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "មានការប្រែប្រួល"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "អថេរ"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "អនុគមន៍"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "អនុគមន៍"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+
+#: astparser.py:459
+msgid "help"
+msgstr "ជំនួយ"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr ""
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "ប្រៃប្រួល '%s'​មិនបង្ហាញ"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "កំហុសដកឃ្លា"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "កំហុស​ខាង​ក្នុង"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr ""
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "កត់ត្រាក្នុងសៀវភៅទានានុប្បវត្តិ (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr ""
 
 #: functions.py:35
 msgid "add"
@@ -297,8 +414,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -355,8 +471,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -414,102 +529,80 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "សំអាត"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "បញ្ចូល"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "កែ"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr ""
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr ""
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "ប៊ូលីន"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "ផ្សេងៗ"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "ស្លាក ៖"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr ""
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr ""
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "បង្ហាញប្រវត្ត"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "បង្ហាញ​អថេរ"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr ""
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr ""
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "មិនបាន​កំណត់"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "កំហុស​ ៖ ប្រភេទ​ដែល​មិន​បានគាំទ្រ"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr ""
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "កត់ត្រាក្នុងសៀវភៅទានានុប្បវត្តិ (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr ""
 
 #: toolbars.py:53
 msgid "Help"
@@ -660,102 +753,5 @@ msgstr ""
 msgid "Integer formatting base"
 msgstr ""
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "កំហុសនៅឯ %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"នេះគ្រាន់តែជាប្រធានបទសំរាប់សាកល្បង ដើប្បីប្រើប្រាស់ដល់ការជំនួយ (តរាង) "
-"សំរាប់តារាងតំរៀបអក្សរ"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"ប្រើជំនួយ (សាកល្បង) ដើម្បីជាជំនួយសំរាប់ 'សាកល្បង់' ឬ ជំនួយ (តាមលេខរៀង) "
-"សំរាប់លេខរៀង"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "តារាងតំរៀបអក្សរ"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "ប្រធានបទ"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "ប្រធានបទ"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "មានការប្រែប្រួល"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "អថេរ"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "អនុគមន៍"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "អនុគមន៍"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-
-#: astparser.py:459
-msgid "help"
-msgstr "ជំនួយ"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr ""
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "ប្រៃប្រួល '%s'​មិនបង្ហាញ"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "កំហុសដកឃ្លា"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "កំហុស​ខាង​ក្នុង"
+#~ msgid "Enter"
+#~ msgstr "បញ្ចូល"

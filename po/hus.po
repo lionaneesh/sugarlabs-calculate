@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-09-27 04:56+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: hus\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -22,6 +22,139 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Tsalpanchixtaláb"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), in t'ipoyal an ecuación 'eqn' k'al an bijláb 'var' tin "
+"áy an a ma ti b"
+
+# Error de procesamiento en %d
+# parse=procesamiento, análisis
+#: astparser.py:59
+#, python-format
+#, python-format, ,
+msgid "Parse error at %d"
+msgstr "k'ibtsontalab k'al an wat'bedhomtalab ti %d"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "K'ibts'ontaláb ti %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Axé' expidh pél jún i t'ilab takaxtaláb, ka ayendha' help(ólnomdhuchlab) "
+"abal an ólnomdhuchlab"
+
+# ólnomdhuchlab=índice
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Ka ayendha' help(test) abal an tolmix ti in ébál an 'test', o help(indice) "
+"abal an ólnomdhuchlab"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "ólnomdhuchlab"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "bijidhuchlab"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "T'ilabchik"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "bijlábchik"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Bijilábchik"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "t'ajnél"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "T'ajnél"
+
+# Revisar ya en contexto si el comando index esta traducido
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Yab wa'ats i tolmixtaláb k'al '%s', ka eyendha' an help(index) abal an index"
+
+# ayuda = tolmix (verbo conjugado en 3a. p). Como sustantivo = tolmixtaláb
+#: astparser.py:459
+msgid "help"
+msgstr "tolmixtaláb"
+
+# Recursión detectada
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "exbadh tejwomedhomtalab xi bijidh"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "An t'ajnél '%s' yab elan"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "An bijlab '%s' yab elan"
+
+# El atributo '%s' no existe
+#: astparser.py:502
+#, python-format
+#, python-format, ,
+msgid "Attribute '%s' does not exist"
+msgstr "Xi yab u tejwomel \"%s\" yán wa'ats"
+
+# K'ibts'ontaláb ti ál an áyláb=error de procesamiento.
+#: astparser.py:596
+msgid "Parse error"
+msgstr "K'ibts'ontaláb ti ál an áyláb"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Pilchik i abatnomtaláb xi inbáj junkudh"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Ál k'ibts'ontaláb"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() k'ibts'odh dhuchlab (%s)"
+
+# No se puede asignar etiqueta: causará recursión
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Can not assign label: will cause recursion"
+
+# chudhél dhuchláb úw=diario, periódico
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Dhuchum ti chudhél dhuchadh úw(%s)"
+
+# k'ibts'odh dhuche'=tipo inválido
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): k'ibts'odh dhuche'"
 
 #: functions.py:35
 msgid "add"
@@ -324,8 +457,7 @@ msgstr "floor(x), in wichbal xi púlik putat ani xi talbel."
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv es (x), in wichbal an x xi 1 / x"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "An Logarithm(x) expidh éxbadh abal x > 0"
 
@@ -399,8 +531,7 @@ msgid "round(x), return the integer nearest to x."
 msgstr "round(x), in wichbál an putat ajixtaláb xi ejtil x."
 
 # Operaciones al nivel de bits sólo aplican para enteros.
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "An bits t'ajnel expidh éxbadh abal i putat ajixtaláb"
 
@@ -481,110 +612,85 @@ msgstr ""
 "Chubax) o max y pél Chubax (ani x Yab Chubax), max yab ani' in wichbál Yab "
 "Chubax"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "T'oka'"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Otskan"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Jalk'uy"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Álgebra"
 
 # Triángulo = oxts'uptal
 # Trigonometría= In lejbaxtal an oxts'uptal
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Trigonometría"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Booleano"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Xalumtaláb"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Úwbijláb:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Patal an ecuaciones"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "U ecuaciones"
 
 # wal = vista
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Ka jaluw in wal ti al patal an ecuaciones ani xi a k'al"
 
 # Historial = T'ilab k'al jita'
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Itej met'adh"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Tejwa'méjdha' an bijilábchik"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Ka jaluw in wal ti xi itej met'adh ani an bijlábchik"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
 # No definido = yab elan, yab dhuchadh
-#: mathlib.py:211
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Yab elan"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "K'ibts'ontaláb: yab exladh dhuche'"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() k'ibts'odh dhuchlab (%s)"
-
-# No se puede asignar etiqueta: causará recursión
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "Can not assign label: will cause recursion"
-
-# chudhél dhuchláb úw=diario, periódico
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Dhuchum ti chudhél dhuchadh úw(%s)"
-
-# k'ibts'odh dhuche'=tipo inválido
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): k'ibts'odh dhuche'"
 
 # ayuda = tolmix (verbo conjugado en 3a. p). Como sustantivo = tolmixtaláb
 #: toolbars.py:53
@@ -756,118 +862,8 @@ msgstr "Ajixtaláb ti tejwa' dhuche'-ajixtaláb"
 msgid "Integer formatting base"
 msgstr "In aknixtal an ajixtaláb"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), in t'ipoyal an ecuación 'eqn' k'al an bijláb 'var' tin "
-"áy an a ma ti b"
-
-# Error de procesamiento en %d
-# parse=procesamiento, análisis
-#: astparser.py:59
-#, python-format
-#, python-format, ,
-msgid "Parse error at %d"
-msgstr "k'ibtsontalab k'al an wat'bedhomtalab ti %d"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "K'ibts'ontaláb ti %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"Axé' expidh pél jún i t'ilab takaxtaláb, ka ayendha' help(ólnomdhuchlab) "
-"abal an ólnomdhuchlab"
-
-# ólnomdhuchlab=índice
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Ka ayendha' help(test) abal an tolmix ti in ébál an 'test', o help(indice) "
-"abal an ólnomdhuchlab"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "ólnomdhuchlab"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "bijidhuchlab"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "T'ilabchik"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "bijlábchik"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "Bijilábchik"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "t'ajnél"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "T'ajnél"
-
-# Revisar ya en contexto si el comando index esta traducido
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Yab wa'ats i tolmixtaláb k'al '%s', ka eyendha' an help(index) abal an index"
-
-# ayuda = tolmix (verbo conjugado en 3a. p). Como sustantivo = tolmixtaláb
-#: astparser.py:459
-msgid "help"
-msgstr "tolmixtaláb"
-
-# Recursión detectada
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "exbadh tejwomedhomtalab xi bijidh"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "An t'ajnél '%s' yab elan"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "An bijlab '%s' yab elan"
-
-# El atributo '%s' no existe
-#: astparser.py:502
-#, python-format
-#, python-format, ,
-msgid "Attribute '%s' does not exist"
-msgstr "Xi yab u tejwomel \"%s\" yán wa'ats"
-
-# K'ibts'ontaláb ti ál an áyláb=error de procesamiento.
-#: astparser.py:596
-msgid "Parse error"
-msgstr "K'ibts'ontaláb ti ál an áyláb"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "Pilchik i abatnomtaláb xi inbáj junkudh"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "Ál k'ibts'ontaláb"
+#~ msgid "Enter"
+#~ msgstr "Otskan"
 
 # Jolat T'ajnél = Funciones disponíbles
 #~ msgid "Available functions:"

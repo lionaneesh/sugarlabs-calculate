@@ -18,55 +18,171 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-07-21 20:45+0200\n"
-"Last-Translator: Myckel Habets <myckel@sdf.lonestar.org>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2011-10-25 20:48+0200\n"
+"Last-Translator: whe <heppew@yahoo.com>\n"
 "Language-Team: English\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "Rekenmachine"
+msgstr "Bereken"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(verg, var=a..b), tekent de vergelijking 'verg' met de variabelen 'var' "
+"in het bereik a tot b"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "Vertaalfout bij %d"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Fout bij %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Dit is gewoon een test onderwerp, gebruik help(index) voor de index"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr "Gebruik help(test) voor hulp over 'test', of help(index) voor de index"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "index"
+
+# -----------------------------------------
+# End of help topics
+#: astparser.py:109
+msgid "topics"
+msgstr "onderwerpen"
+
+# -----------------------------------------
+# End of help topics
+#: astparser.py:110
+msgid "Topics"
+msgstr "Onderwerpen"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "variabelen"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Variabelen"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functies"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "Functies"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Geen help over '%s' beschikbaar, gebruik help(index) voor de index"
+
+#: astparser.py:459
+msgid "help"
+msgstr "help"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "Recursie ontdekt"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Functie '%s' niet gedefinieerd"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variabele '%s' niet gedefinieerd"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "Attribuut '%s' bestaat niet"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Verwerkingsfout"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Meer statements niet ondersteund"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Interne fout"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() ongeldige tekenreeks (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Kan geen label toekennen: veroorzaakt recursie"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Schrijven naar dagboek (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): ongeldig type"
 
 #: functions.py:35
 msgid "add"
-msgstr ""
+msgstr "tel op"
 
 #: functions.py:36
 msgid "abs"
-msgstr ""
+msgstr "absoluut"
 
 #: functions.py:37
 msgid "acos"
-msgstr "acos"
+msgstr "arccos"
 
 #: functions.py:38
-#, fuzzy
 msgid "acosh"
-msgstr "acos"
+msgstr "acosh"
 
 #: functions.py:39
 msgid "asin"
 msgstr "asin"
 
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "asinh"
 
 #: functions.py:41
 msgid "atan"
 msgstr "atan"
 
 #: functions.py:42
-#, fuzzy
 msgid "atanh"
-msgstr "atan"
+msgstr "atanh"
 
 #: functions.py:43
 msgid "and"
@@ -74,11 +190,11 @@ msgstr "en"
 
 #: functions.py:44
 msgid "b10bin"
-msgstr ""
+msgstr "b10bin"
 
 #: functions.py:45
 msgid "ceil"
-msgstr ""
+msgstr "ceil"
 
 #: functions.py:46
 msgid "cos"
@@ -90,41 +206,39 @@ msgstr "cosh"
 
 #: functions.py:48
 msgid "div"
-msgstr ""
+msgstr "div"
 
 #: functions.py:49
 msgid "gcd"
-msgstr ""
+msgstr "ggd"
 
 #: functions.py:50
 msgid "exp"
 msgstr "exp"
 
 #: functions.py:51
-#, fuzzy
 msgid "factorial"
-msgstr "Faculteit"
+msgstr "faculteit"
 
 #: functions.py:52
 msgid "fac"
 msgstr "fac"
 
 #: functions.py:53
-#, fuzzy
 msgid "factorize"
-msgstr "Faculteit"
+msgstr "faculiteit berekenen"
 
 #: functions.py:54
 msgid "floor"
-msgstr ""
+msgstr "floor"
 
 #: functions.py:55
 msgid "inv"
-msgstr ""
+msgstr "inv"
 
 #: functions.py:56
 msgid "is_int"
-msgstr ""
+msgstr "is_geheel_getal"
 
 #: functions.py:57
 msgid "ln"
@@ -132,11 +246,11 @@ msgstr "ln"
 
 #: functions.py:58
 msgid "log10"
-msgstr ""
+msgstr "log10"
 
 #: functions.py:59
 msgid "mul"
-msgstr ""
+msgstr "vermenigvuldig"
 
 #: functions.py:60
 msgid "or"
@@ -144,15 +258,15 @@ msgstr "of"
 
 #: functions.py:61
 msgid "rand_float"
-msgstr ""
+msgstr "willekeurig_drijvendekomma"
 
 #: functions.py:62
 msgid "rand_int"
-msgstr ""
+msgstr "willekeurig_geheel"
 
 #: functions.py:63
 msgid "round"
-msgstr ""
+msgstr "afgerond"
 
 #: functions.py:64
 msgid "sin"
@@ -163,9 +277,8 @@ msgid "sinh"
 msgstr "sinh"
 
 #: functions.py:66
-#, fuzzy
 msgid "sinc"
-msgstr "sin"
+msgstr "sinc"
 
 #: functions.py:67
 msgid "sqrt"
@@ -173,7 +286,7 @@ msgstr "sqrt"
 
 #: functions.py:68
 msgid "sub"
-msgstr ""
+msgstr "sub"
 
 #: functions.py:69
 msgid "square"
@@ -194,6 +307,7 @@ msgstr "xof"
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
 msgstr ""
+"absoluut(x), geeft de absolute waarde terug van x, dat betekent -x als x < 0"
 
 #: functions.py:117
 msgid ""
@@ -208,20 +322,20 @@ msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
+"acosh(x), geeft de boog hyperbolicus cosinus van x. Dit is de waarde y "
+"waarvoor de hyperbolische cosinus gelijk is aan x."
 
 #: functions.py:129
-#, fuzzy
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"en(x, y), logische en. Geeft Waar als x en y Waar zijn, anders geeft Onwaar"
+"En(x, y), logische en. Geeft Waar als x en y Waar zijn, anders geeft Onwaar"
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "telop(x, y), geeft de waarde van x + y"
 
 #: functions.py:141
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
@@ -234,6 +348,8 @@ msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
+"asinh(x), geeft de hyperbolische boogsinus van x. Dit is de waarde y "
+"waarvoor de hyperbolische sinus gelijk is aan x."
 
 #: functions.py:153
 msgid ""
@@ -248,20 +364,24 @@ msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
+"atanh(x), geeft de hyperbolische boogtangens van x. Dit is de waarde y "
+"waarvoor hyperbolische tangens gelijk is aan x."
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr ""
+msgstr "Getal ziet er niet binair uit in basis 10"
 
 #: functions.py:178
 msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
 msgstr ""
+"b10bin(x), vertaalt een getal geschreven in base 10 als binair, b.v.: "
+"b10bin(10111) = 23,"
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr ""
+msgstr "plafond(x), geeft het kleinste gehele getal groter dan x."
 
 #: functions.py:188
 msgid ""
@@ -280,17 +400,19 @@ msgstr ""
 
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "Kan niet delen door nul"
 
 #: functions.py:219
 msgid "Invalid argument"
-msgstr ""
+msgstr "Ongeldig argument"
 
 #: functions.py:222
 msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
+"ggd(a, b), bepaal de grootst gemene deler van a en b. Bijvoorbeeld, de "
+"grootste factor die gedeeld wordt door de getallen 15 en 18 is 3."
 
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -298,10 +420,9 @@ msgstr "exp(x), geeft de natuurlijke exponent van x. Gegeven door e^x"
 
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr ""
+msgstr "Faculteit is alleen gedefinieerd voor gehele getallen"
 
 #: functions.py:244
-#, fuzzy
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
@@ -314,16 +435,15 @@ msgstr ""
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr ""
+msgstr "bodem(x), geeft het grootste gehele getal dat kleiner is dan x."
 
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr ""
+msgstr "invers(x), geeft de inverse van x, dat is 1 / x"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr ""
+msgstr "Logaritme(x) is alleen gedefinieerd voor x > 0"
 
 #: functions.py:311
 msgid ""
@@ -338,62 +458,71 @@ msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
+"log10(x), geeft de basis 10 logaritme van x. Dit os de waarde y waarvoor "
+"10^y gelijk is aan x. Gedefinieerd voor x>= 0."
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr ""
+msgstr "Kan alleen berekenen x modulo <geheelgetal>"
 
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
+"modulo(x, y), geeft de modulus van x met betrekking tot y. Dit is de rest na "
+"deling van x door y."
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "vermenigvuldig(x, y), geeft x * y terug"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr ""
+msgstr "negatief(x), geeft -x terug"
 
 #: functions.py:346
-#, fuzzy
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"of(x, y), logische of. Geeft Waar als x en/of y Waar zijn, anders Onwaar"
+"Of(x, y), logische of. Geeft Waar als x en/of y Waar zijn, anders Onwaar"
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr ""
+msgstr "macht(x, y), geeft x tot de macht y (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
 msgstr ""
+"rand_float(), geeft een willekeurig drijvende komma getal terug tussen 0.0 "
+"en 1.0"
 
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
+"willekeurig_geheel([<maxwaarde>]), geeft een willkeurig geheel getal tussen "
+"0 en <maxwaarde>. <maxwaarde> is een optioneel argument en is standaard "
+"ingesteld op 65535."
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr ""
+msgstr "afgerond(x), geeft het dichtst bijzijnde gehele getal bij x."
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr ""
+msgstr "Bit-gewijze bewerkingen zijn alleen van toepassing op gehele getallen"
 
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
+"schuif_links(x, y), schuift x y bits naar links (vermenigvuldig met 2 per "
+"bit)"
 
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
-msgstr ""
+msgstr "schuif_rechts(x, y), schuift x y bits naar rechts (deel door 2 per bit)"
 
 #: functions.py:397
 msgid ""
@@ -412,7 +541,7 @@ msgstr ""
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr ""
+msgstr "sinc(x), geeft de sinc van x. Dit is gegeven door sin(x) / x."
 
 #: functions.py:415
 msgid ""
@@ -424,11 +553,11 @@ msgstr ""
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "kwadraat(x), geeft x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "verminder(x, y), geeft x - y"
 
 #: functions.py:432
 msgid ""
@@ -441,10 +570,9 @@ msgstr ""
 "gedefinieerd door de hoek x. Gedefinieerd door sin(x) / cos(x)"
 
 #: functions.py:439
-#, fuzzy
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"sinh(x), geeft de tangens hyperbolicus van x. Gedefinieerd door sinh(x) / "
+"tanh(x), geeft de tangens hyperbolicus van x. Gedefinieerd door sinh(x) / "
 "cosh(x)"
 
 #: functions.py:444
@@ -455,103 +583,81 @@ msgstr ""
 "xof(x, y), logische xof. Geeft Waar indien of x Waar is (en y is Onwaar) of "
 "y Waar is (en x is Onwaar), anders geeft Onwaar"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Wissen"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Invoer"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Bewerken"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Algebra"
 
 # Trigonometrie is te lang en wordt afgekapt in de activiteit. Volgens wikipedia zijn deze 2 woorden synoniem.
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Goniometrie"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Boolse"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Diversen"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Naam:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Alle vergelijkingen"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Mijn vergelijkingen"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Verander weergave tussen eigen en alle vergelijkingen"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Toon geschiedenis"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Toon variabelen"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Verander weergave tussen geschiedenis en variabelen"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Ongedefinieerd"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Fout: type niet ondersteund"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() ongeldige tekenreeks (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Schrijven naar dagboek (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): ongeldig type"
 
 #: toolbars.py:53
 msgid "Help"
@@ -563,7 +669,7 @@ msgstr "Kopiëren"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
-msgstr ""
+msgstr "<ctrl>c"
 
 #: toolbars.py:126
 msgid "Cut"
@@ -571,7 +677,7 @@ msgstr "Knippen"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
-msgstr ""
+msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
@@ -667,11 +773,11 @@ msgstr "e"
 
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "y"
 
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
 #: toolbars.py:279
 msgid "Plot"
@@ -686,7 +792,6 @@ msgid "Radians"
 msgstr "Radialen"
 
 #: toolbars.py:291
-#, fuzzy
 msgid "Degrees / Radians"
 msgstr "Graden / radialen"
 
@@ -702,111 +807,8 @@ msgstr "Aantal decimalen om weer te geven"
 msgid "Integer formatting base"
 msgstr "Formaat basis van gehele getallen"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(verg, var=a..b), tekent de vergelijking 'verg' met de variabelen 'var' "
-"in het bereik a tot b"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "Fout bij %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "Dit is gewoon een test onderwerp, gebruik help(index) voor de index"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr "Gebruik help(test) voor hulp over 'test', of help(index) voor de index"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "index"
-
-# -----------------------------------------
-# End of help topics
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "Onderwerpen"
-
-# -----------------------------------------
-# End of help topics
-#: astparser.py:110
-msgid "Topics"
-msgstr "Onderwerpen"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "variabelen"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "variabelen"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "functies"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "functies"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Geen help over '%s' beschikbaar, gebruik help(index) voor de index"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "Help"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Functie '%s' niet gedefinieerd"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variabele '%s' niet gedefinieerd"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Verwerkingsfout"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "Invoer"
 
 #~ msgid "Available functions:"
 #~ msgstr "Beschikbare functies:"

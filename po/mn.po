@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-09-27 12:54+0200\n"
 "Last-Translator: Cris Anderson <anderson861@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,159 +29,322 @@ msgstr ""
 msgid "Calculate"
 msgstr "Тооцоолох"
 
-#: calculate.py:80
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr "цэг(eqn, var=-a..b) нь eqn -н графикийг (-a,b) мужид зурна"
+
+#: astparser.py:59
 #, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Тэгшитгэл.задлан шинжлэл() оруулсан зүйл ойлгомжгүй (%s)"
+msgid "Parse error at %d"
+msgstr ""
 
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "Боломжит функцүүд:"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Бүртгэлийн дэвтэрт бичиж байна (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "товч_дарагдсан(): буруу төрөл"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "Задлан шинжлэлийн алдаа"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "түвшин: %d, ofs %d"
-
-#: eqnparser.py:117
+#: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
 msgstr "%d-д алдаа гарлаа"
 
-#: eqnparser.py:249 eqnparserhelp.py:128
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Энэ бол туршилтын агуулга. help(index) гэж дугаарлалтаа авна."
+
+#: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "'Тест'-ын талаар тусламж авахыг хүсвэл help(test) эсвэл индексээс бол "
 "help(index)-ийг хэрэглэнэ үү"
 
-#: eqnparser.py:353 eqnparser.py:354
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "индекс"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "Сэдвүүд"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Сэдвүүд"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "хувьсагчид"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "хувьсагчид"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "функцүүд"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "функцүүд"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "'%s' тухай лавлагаа олдсонгүй. help(index)-ийг ашиглан оролдоно уу"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "Тусламж"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
 #, python-format
 msgid "Function '%s' not defined"
 msgstr "Функц '%s' тодорхойлогдоогүй"
 
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "Аргументын тоо буруу (%d-ын оронд %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "функц %d хувьсагч авна"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "%d хувьсагчыг задлах боломжгүй: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "Функцийн алдаа: %s"
-
-#: eqnparser.py:481
+#: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
 msgstr "'%s' хувьсах хэмжигдэхүүн тодорхойгүй"
 
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "Зүүн хаалтын тэмдэг шаардлагагүй"
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
 
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг)"
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Задлан шинжлэлийн алдаа"
 
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "Баруун хаалтын тэмдэг шаардлагагүй"
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
 
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг, зүүн_тоо байхгүй)"
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
 
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг, хаах түвшин байхгүй)"
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Тэгшитгэл.задлан шинжлэл() оруулсан зүйл ойлгомжгүй (%s)"
 
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "Тоо шаардлагагүй"
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
 
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "Логик холбоос шаардлагагүй"
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Бүртгэлийн дэвтэрт бичиж байна (%s)"
 
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "Задлан шинжлэлийн алдаа: тоо эсвэл хувьсах хэмжигдэхүүн шаардлагатай"
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "товч_дарагдсан(): буруу төрөл"
 
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "Тоо эсвэл хувьсах хэмжигдэхүүн шаардлагатай"
+#: functions.py:35
+msgid "add"
+msgstr ""
 
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "Буруу логик холбоос"
+#: functions.py:36
+msgid "abs"
+msgstr ""
 
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "Логик холбоос шаардлагатай"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_задлан шинжлэл(): None-ийг буцаана"
-
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
+#: functions.py:37
 msgid "acos"
 msgstr "acos"
 
-#: eqnparserhelp.py:40
+#: functions.py:38
+#, fuzzy
+msgid "acosh"
+msgstr "acos"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+#, fuzzy
+msgid "asinh"
+msgstr "asin"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+#, fuzzy
+msgid "atanh"
+msgstr "atan"
+
+#: functions.py:43
+msgid "and"
+msgstr "and"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+#: functions.py:46
+msgid "cos"
+msgstr "cos"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "cosh"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr "зэрэгт"
+
+#: functions.py:51
+#, fuzzy
+msgid "factorial"
+msgstr "Факториал"
+
+#: functions.py:52
+msgid "fac"
+msgstr "fac"
+
+#: functions.py:53
+#, fuzzy
+msgid "factorize"
+msgstr "Факториал"
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr "ln"
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr "эсвэл"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
+msgid "sin"
+msgstr "sin"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "sinh"
+
+#: functions.py:66
+#, fuzzy
+msgid "sinc"
+msgstr "sin"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "язгуур"
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr "квадрат зэрэг"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "tanh"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr "acos(x), x-ийн arccosinus-ийг гаргах. x-н утга -1 <= x < 1 -д оршино"
 
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "and"
-
-#: eqnparserhelp.py:44
+#: functions.py:123
 msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+#, fuzzy
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr "and(x, y), логик ба. Хэрвээ x ба y үнэн бол үнэн, өөр нөхцөлд худал"
 
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr "asin"
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr ""
 
-#: eqnparserhelp.py:47
+#: functions.py:141
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr "asin(x), x-ийн arcsinus гаргах. x-н утга -1 <= x < 1 -д оршино"
 
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr "atan"
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
 
-#: eqnparserhelp.py:51
+#: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
@@ -189,56 +352,83 @@ msgstr ""
 "atan(x), x-ийн arctangen гаргах. Энэ нь tangent-ийн x-д харгалзах өнцөг. "
 "Хязгааргүй"
 
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr "cos"
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
 
-#: eqnparserhelp.py:55
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
 "cos(x), x-ийн cosinus болох. Энэ нь x өнцгийн тойрог тутамдах x-координат юм"
 
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr "cosh"
-
-#: eqnparserhelp.py:59
+#: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr "cosh(x), х-ийн гипербол cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr "зэрэгт"
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr ""
 
-#: eqnparserhelp.py:62
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr "exp(x), x зэрэг дэвшүүлэх. e^x -р өгөгдсөн"
 
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr "fac"
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
 
-#: eqnparserhelp.py:65
+#: functions.py:244
+#, fuzzy
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr "fac(x), х-ын факториал олох. x * (x - 1) * (x - 2) * ... өгөгдсөн"
+
+#: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr "fac(x), х-ын факториал олох. x * (x - 1) * (x - 2) * ... өгөгдсөн"
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr "функцүүд"
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr ""
 
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "функцүүд(), тодорхойлогдсон бүх функцүүдийн жагсаалтыг хариулах"
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr ""
 
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr "ln"
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
 
-#: eqnparserhelp.py:72
+#: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
@@ -246,78 +436,98 @@ msgstr ""
 "ln(x), x-ын натурал логарифмыг олох. Энэ нь х-тэй тэнцүү exp()-ын хэмжээ. x "
 ">= 0 тохиолдолд утга өгнө"
 
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "Үйлдлүүд"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "operators() нь тодорхойлогдсон бүх операторуудын жагсаалтыг өгдөг"
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr "эсвэл"
-
-#: eqnparserhelp.py:80
+#: functions.py:320
 msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
+#, fuzzy
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
 "эсвэл(x, y), логик эсвэл. Хэрвээ x болон/эсвэл y зөв бол зөв, өөр бол буруу"
 
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr "цэг"
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr ""
 
-#: eqnparserhelp.py:83
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
 msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr "цэг(eqn, var=-a..b) нь eqn -н графикийг (-a,b) мужид зурна"
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
 
-#: eqnparserhelp.py:86
-msgid "sin"
-msgstr "sin"
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr ""
 
-#: eqnparserhelp.py:87
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
 "sin(x), x-ийн sinus болох. Энэ нь x өнцгийн тойрог тутамдах y-координат юм"
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr "sinh"
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr "sinh(x), х-ийн гперболын cos. (exp(x) + exp(-x)) / 2 өгөгдсөн"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr "язгуур"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr "sqrt(x) x тооноос квадрат язгуур гаргана. Х нь үргэлж эерэг тоо байна."
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr "квадрат зэрэг"
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr "square(x) нь х-н квадрат зэргийн утгыг гаргана. x*x тай адил"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "tan"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
@@ -327,36 +537,11 @@ msgstr ""
 "налсан катетед хуваахад гарсан утгатай тэнцүү. sin(x) / cos(x) тай адилаар "
 "бодогдоно"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr "tanh"
+#: functions.py:439
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr "х-н гиперболик тангенс нь tanh(x). sinh(x)/cosh(x) -н утга авна."
 
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr "х-н гиперболик синус нь sinh(x)."
-
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr "туршилт"
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "Энэ бол туршилтын агуулга. help(index) гэж дугаарлалтаа авна."
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr "хувьсагчид"
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr "хувьсагч()-р одоо хэрэглэж байгаа хувьсагчдын жагсаалтыг харж болно"
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr "xor"
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
@@ -365,123 +550,110 @@ msgstr ""
 "бол эцсийн утга нь ҮНЭН байна. (x = True, y = False буюу y = True, x = "
 "False), Бусад тохиолдолд ХУДАЛ"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr "индекс"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "Сэдвүүд"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "'%s' тухай лавлагаа олдсонгүй. help(index)-ийг ашиглан оролдоно уу"
-
-#: layout.py:44
+#: layout.py:69
 msgid "Clear"
 msgstr "Арилгах"
 
-#: layout.py:53
-msgid "Enter"
-msgstr "Оруулах"
-
-#: layout.py:60
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Засварлах"
 
-#: layout.py:61
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Алгебр"
 
-#: layout.py:62
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Тригонометр"
 
-#: layout.py:63
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Булийн"
 
-#: layout.py:118
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:64
-msgid "Constants"
-msgstr "Тогтмолууд"
-
-#: layout.py:65
-msgid "Format"
-msgstr "Хэлбэр"
-
-#: layout.py:86
+#: layout.py:164
 msgid "Label:"
 msgstr "Тэмдэгт"
 
-#: layout.py:118
+#: layout.py:197
 msgid "All equations"
 msgstr "Бүх тэгшитгэлүүд"
 
-#: layout.py:118
+#: layout.py:197
 msgid "My equations"
 msgstr "Миний тэгшитгэлүүд"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show history"
 msgstr "Түүх үзэх"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show variables"
 msgstr "Хувьсагчдыг харуулах"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:132
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Тодорхойлогдоогүй"
 
-#: mathlib.py:142
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Алдаа: үл дэмжигдэх төрөл"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "Тусламж"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "Хуулах"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "Тавих"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "Огтлох"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "Тавих"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr "Дөрвөлжин"
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr "Квадрат язгуур"
 
@@ -489,109 +661,205 @@ msgstr "Квадрат язгуур"
 msgid "Inverse"
 msgstr "Урвуу"
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr "е-н х зэрэг"
 
-#: toolbars.py:113
+#: toolbars.py:169
 msgid "x to the power y"
 msgstr "х-н у зэрэг"
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr "Натурал логарифм"
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr "Факториал"
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr "Синус"
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr "Косинус"
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr "Тангенс"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr "Арксинус"
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr "Арккосинус"
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr "Арктангенс"
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr "Гипербол синус"
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr "Гипербол косинус"
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr "Гипербол тангенс"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr "Логик БА"
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr "Логик БУЮУ"
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr "Тэнцэтгэл"
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr "Тэнцэтгэл биш"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr "Пи тоо"
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr "е тоо"
 
-#: toolbars.py:280
-msgid "Plot"
+#: toolbars.py:269
+msgid "γ"
 msgstr ""
 
-#: toolbars.py:209
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
+#, fuzzy
+msgid "Plot"
+msgstr "цэг"
+
+#: toolbars.py:286
 msgid "Degrees"
 msgstr "Градус"
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr "Радиус"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+#, fuzzy
+msgid "Degrees / Radians"
 msgstr "Градус / радиан"
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
 
-#~ msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-#~ msgstr "х-н гиперболик тангенс нь tanh(x). sinh(x)/cosh(x) -н утга авна."
+#~ msgid "Available functions:"
+#~ msgstr "Боломжит функцүүд:"
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "түвшин: %d, ofs %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "Аргументын тоо буруу (%d-ын оронд %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "функц %d хувьсагч авна"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "%d хувьсагчыг задлах боломжгүй: '%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "Функцийн алдаа: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "Зүүн хаалтын тэмдэг шаардлагагүй"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "Баруун хаалтын тэмдэг шаардлагагүй"
+
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг, зүүн_тоо байхгүй)"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "Задлан шинжлэлийн алдаа (баруун хаалтын тэмдэг, хаах түвшин байхгүй)"
+
+#~ msgid "Number not expected"
+#~ msgstr "Тоо шаардлагагүй"
+
+#~ msgid "Operator not expected"
+#~ msgstr "Логик холбоос шаардлагагүй"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "Задлан шинжлэлийн алдаа: тоо эсвэл хувьсах хэмжигдэхүүн шаардлагатай"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "Тоо эсвэл хувьсах хэмжигдэхүүн шаардлагатай"
+
+#~ msgid "Invalid operator"
+#~ msgstr "Буруу логик холбоос"
+
+#~ msgid "Operator expected"
+#~ msgstr "Логик холбоос шаардлагатай"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_задлан шинжлэл(): None-ийг буцаана"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "функцүүд(), тодорхойлогдсон бүх функцүүдийн жагсаалтыг хариулах"
+
+#~ msgid "operators"
+#~ msgstr "Үйлдлүүд"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "operators() нь тодорхойлогдсон бүх операторуудын жагсаалтыг өгдөг"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr "square(x) нь х-н квадрат зэргийн утгыг гаргана. x*x тай адил"
+
+#~ msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#~ msgstr "х-н гиперболик синус нь sinh(x)."
+
+#~ msgid "test"
+#~ msgstr "туршилт"
+
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr "хувьсагч()-р одоо хэрэглэж байгаа хувьсагчдын жагсаалтыг харж болно"
+
+#~ msgid "Enter"
+#~ msgstr "Оруулах"
+
+#~ msgid "Constants"
+#~ msgstr "Тогтмолууд"
+
+#~ msgid "Format"
+#~ msgstr "Хэлбэр"

@@ -14,11 +14,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-26 11:55-0500\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2009-07-30 03:28-0400\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: fa_AF\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,258 +29,7 @@ msgstr ""
 msgid "Calculate"
 msgstr "محاسبه"
 
-#: calculate.py:80
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "معادله. تجزيه() رشته نادرست (%s)"
-
-#: calculate.py:210
-msgid "Available functions:"
-msgstr "عملیات در دسترس:"
-
-#: calculate.py:504
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "نوشتن به یادداشت (%s)"
-
-#: calculate.py:788
-msgid "button_pressed(): invalid type"
-msgstr "دکمه_فشارداده شده(): نوعیت نامعتبر"
-
-#: eqnparser.py:33
-msgid "Parse error"
-msgstr "خطای تجزئیه"
-
-#: eqnparser.py:58
-#, python-format
-msgid "level: %d, ofs %d"
-msgstr "مرحله: %d از %d"
-
-#: eqnparser.py:117
-#, python-format
-msgid "Error at %d"
-msgstr "خطا در %d"
-
-#: eqnparser.py:249 eqnparserhelp.py:128
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"برای کمک درمورد 'امتحان' از کمک(امتحان) استفاده کنید، یا از کمک(شاخص) برای "
-"شاخص"
-
-#: eqnparser.py:353 eqnparser.py:354
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "عملکرد '%s' نامعین"
-
-#: eqnparser.py:359
-#, python-format
-msgid "Invalid number of arguments (%d instead of %d)"
-msgstr "شماره نامعتبر استدلال ها (%d در عوض %d)"
-
-#: eqnparser.py:360
-#, python-format
-msgid "function takes %d args"
-msgstr "عملکرد %d استدلال میگیرد"
-
-#: eqnparser.py:370 eqnparser.py:371
-#, python-format
-msgid "Unable to parse argument %d: '%s'"
-msgstr "برای تجزیه استدلال %d ناتوان هست: '%s'"
-
-#: eqnparser.py:380
-#, python-format
-msgid "Function error: %s"
-msgstr "خطای عملکرد: %s"
-
-#: eqnparser.py:481
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "متغیر '%s' نامعين"
-
-#: eqnparser.py:504
-msgid "Left parenthesis unexpected"
-msgstr "قوس چپ غیر منتظره"
-
-#: eqnparser.py:516
-msgid "Parse error (right parenthesis)"
-msgstr "خطای تجزیه (قوسهای راست)"
-
-#: eqnparser.py:517 eqnparser.py:528 eqnparser.py:535 eqnparser.py:610
-msgid "Right parenthesis unexpected"
-msgstr "قوسهای راست غیر منتظره"
-
-#: eqnparser.py:527
-msgid "Parse error (right parenthesis, no left_val)"
-msgstr "خطای تجزیه (قوسهای راست، هیچ مقدار چپ نه)"
-
-#: eqnparser.py:534
-msgid "Parse error (right parenthesis, no level to close)"
-msgstr "خطای تجزئیه (قوس راست، هیچ سطحی برای بندش وجود ندارد)"
-
-#: eqnparser.py:541 eqnparser.py:542
-msgid "Number not expected"
-msgstr "شماره غیر منتظره"
-
-#: eqnparser.py:550
-msgid "Operator not expected"
-msgstr "عملگرغیر منتظره"
-
-#: eqnparser.py:566
-msgid "Parse error: number or variable expected"
-msgstr "خطای تجزئیه: شماره یا متغیر غیر منتظره"
-
-#: eqnparser.py:567
-msgid "Number or variable expected"
-msgstr "شماره یا متغیر مورد انتظار"
-
-#: eqnparser.py:596
-msgid "Invalid operator"
-msgstr "عملگر نامعتبر"
-
-#: eqnparser.py:603
-msgid "Operator expected"
-msgstr "عملگر مورد انتظار"
-
-#: eqnparser.py:616
-msgid "_parse(): returning None"
-msgstr "_تجزئیه(): بازگشت هیچ"
-
-# TRANS: It is possible to translate commands. However, I would highly
-# recommend NOT doing so for mathematical functions like cos(). help(),
-# functions() etc should be translated.
-#. TRANS: It is possible to translate commands. However, I would highly
-#. recommend NOT doing so for mathematical functions like cos(). help(),
-#. functions() etc should be translated.
-#: eqnparserhelp.py:39
-msgid "acos"
-msgstr "کوساین قوسی"
-
-#: eqnparserhelp.py:40
-msgid ""
-"acos(x), return the arc cosine of x. This is the angle for which the cosine "
-"is x. Defined for -1 <= x < 1"
-msgstr ""
-"کوساین قوسی (x)، کوساین قوسی x را برگردان. این زاویه ایست که کوساین آن x "
-"است. تعریف شده برای x خورد باشد از -1 <= x < 1"
-
-#: eqnparserhelp.py:43
-msgid "and"
-msgstr "و"
-
-#: eqnparserhelp.py:44
-msgid ""
-"and(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr "و(x,y)، منطقی و. درست میشود اگر x و y درست باشند، علاوه ازین غلط میشود"
-
-#: eqnparserhelp.py:46
-msgid "asin"
-msgstr "ساین قوسی"
-
-#: eqnparserhelp.py:47
-msgid ""
-"asin(x), return the arc sine of x. This is the angle for which the sine is "
-"x. Defined for -1 <= x <= 1"
-msgstr ""
-"ساین قوسی(x)، ساین قوسی x را برگردان. این زاویه ایست که ساین برای آن x است. "
-"تعریف شده طوریکه -1 <= x <= 1"
-
-#: eqnparserhelp.py:50
-msgid "atan"
-msgstr "تانجانت قوسی"
-
-#: eqnparserhelp.py:51
-msgid ""
-"atan(x), return the arc tangent of x. This is the angle for which the "
-"tangent is x. Defined for all x"
-msgstr ""
-"تانجانت قوسی(x)، تانجانت قوسی x را برگردان. این زاویه ایست که تانجانت برای "
-"آن x است. تعریف شده برای همه xها"
-
-#: eqnparserhelp.py:54
-msgid "cos"
-msgstr "کوساین"
-
-#: eqnparserhelp.py:55
-msgid ""
-"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
-"at the angle x"
-msgstr ""
-"کوساین(x)، کوساین قوسی x را برگردان. این کواردانت x بر روی دایره واحد در "
-"زاویه x است"
-
-#: eqnparserhelp.py:58
-msgid "cosh"
-msgstr "کوساین هایپربولی"
-
-#: eqnparserhelp.py:59
-msgid ""
-"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
-msgstr ""
-"کوساین هایپربولی(x)، کوساین هایپربولی x را برگردان. داده برای (exp(x) + "
-"exp(-x)) / 2"
-
-#: eqnparserhelp.py:61
-msgid "exp"
-msgstr "توان"
-
-#: eqnparserhelp.py:62
-msgid "exp(x), return the natural exponent of x. Given by e^x"
-msgstr "توان (x)، توان طبیعی x را برگردان. داده شده به e به توان x"
-
-#: eqnparserhelp.py:64
-msgid "fac"
-msgstr "فکتوریل"
-
-#: eqnparserhelp.py:65
-msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-"فکتوریل(x)، فکتوریل x را برگردان. داده شده برای x * (x - 1) * (x - 2) * ..."
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:68
-msgid "functions"
-msgstr "توابع"
-
-#: eqnparserhelp.py:69
-msgid "functions(), return a list of all the functions that are defined"
-msgstr "توابع()، یک لستی از همه توابع تعریف شده را بازگردان"
-
-#: eqnparserhelp.py:71
-msgid "ln"
-msgstr "لوگاریتم طبیعی"
-
-#: eqnparserhelp.py:72
-msgid ""
-"ln(x), return the natural logarithm of x. This is the value for which the "
-"exponent exp() equals x. Defined for x >= 0."
-msgstr ""
-"لوگاریتم طبیعی(x)، لوگاریتم طبیعی x را برگردان. این مقداریست که برای آن توان "
-"exp() مساویست به x. تعریف شده برای x >= 0."
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:76
-msgid "operators"
-msgstr "عملگرها"
-
-#: eqnparserhelp.py:77
-msgid "operators(), return a list of the operators that are defined"
-msgstr "عملگرها()، یک لستی از همه عملگرهای تعریف شده را بازگردان"
-
-#: eqnparserhelp.py:79
-msgid "or"
-msgstr "یا"
-
-#: eqnparserhelp.py:80
-msgid ""
-"or(x, y), logical or. Returns True if x and/or y are True, else return False"
-msgstr ""
-"یا(x, y)، منطقی ی. بازمیگرداند اگر x و/یا درست باشند، علاوه ازین غلط میباشد"
-
-#: eqnparserhelp.py:82
-msgid "plot"
-msgstr "طرح"
-
-#: eqnparserhelp.py:83
+#: astparser.py:40
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
@@ -288,31 +37,503 @@ msgstr ""
 "طرح(eqn, var=-a..b)، معادله 'eqn' را طرح کن با متغیر 'var' در ميدان حدود "
 "تغييرات a تا b"
 
-#: eqnparserhelp.py:86
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "خطا در %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "این صرف یک عنوان امتحان است، برای شاخص از کمک(شاخص) استفاده کنید"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"برای کمک درمورد 'امتحان' از کمک(امتحان) استفاده کنید، یا از کمک(شاخص) برای "
+"شاخص"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "شاخص"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "عناوین"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "عناوین"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "متغییرات"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "متغییرات"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "توابع"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "توابع"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"در مورد متغیر '%s' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
+"کنید"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "کمک"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "عملکرد '%s' نامعین"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "متغیر '%s' نامعين"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "خطای تجزئیه"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "معادله. تجزيه() رشته نادرست (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "نوشتن به یادداشت (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "دکمه_فشارداده شده(): نوعیت نامعتبر"
+
+#: functions.py:35
+msgid "add"
+msgstr ""
+
+#: functions.py:36
+msgid "abs"
+msgstr ""
+
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#: functions.py:37
+msgid "acos"
+msgstr "کوساین قوسی"
+
+# TRANS: It is possible to translate commands. However, I would highly
+# recommend NOT doing so for mathematical functions like cos(). help(),
+# functions() etc should be translated.
+#: functions.py:38
+#, fuzzy
+msgid "acosh"
+msgstr "کوساین قوسی"
+
+#: functions.py:39
+msgid "asin"
+msgstr "ساین قوسی"
+
+#: functions.py:40
+#, fuzzy
+msgid "asinh"
+msgstr "ساین قوسی"
+
+#: functions.py:41
+msgid "atan"
+msgstr "تانجانت قوسی"
+
+#: functions.py:42
+#, fuzzy
+msgid "atanh"
+msgstr "تانجانت قوسی"
+
+#: functions.py:43
+msgid "and"
+msgstr "و"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr ""
+
+#: functions.py:45
+msgid "ceil"
+msgstr ""
+
+#: functions.py:46
+msgid "cos"
+msgstr "کوساین"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "کوساین هایپربولی"
+
+#: functions.py:48
+msgid "div"
+msgstr ""
+
+#: functions.py:49
+msgid "gcd"
+msgstr ""
+
+#: functions.py:50
+msgid "exp"
+msgstr "توان"
+
+#: functions.py:51
+#, fuzzy
+msgid "factorial"
+msgstr "فکتوریل"
+
+#: functions.py:52
+msgid "fac"
+msgstr "فکتوریل"
+
+#: functions.py:53
+#, fuzzy
+msgid "factorize"
+msgstr "فکتوریل"
+
+#: functions.py:54
+msgid "floor"
+msgstr ""
+
+#: functions.py:55
+msgid "inv"
+msgstr ""
+
+#: functions.py:56
+msgid "is_int"
+msgstr ""
+
+#: functions.py:57
+msgid "ln"
+msgstr "لوگاریتم طبیعی"
+
+#: functions.py:58
+msgid "log10"
+msgstr ""
+
+#: functions.py:59
+msgid "mul"
+msgstr ""
+
+#: functions.py:60
+msgid "or"
+msgstr "یا"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr ""
+
+#: functions.py:62
+msgid "rand_int"
+msgstr ""
+
+#: functions.py:63
+msgid "round"
+msgstr ""
+
+#: functions.py:64
 msgid "sin"
 msgstr "ساین"
 
-#: eqnparserhelp.py:87
+#: functions.py:65
+msgid "sinh"
+msgstr "ساین هایپربولی"
+
+#: functions.py:66
+#, fuzzy
+msgid "sinc"
+msgstr "ساین"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "جذرالمربع"
+
+#: functions.py:68
+msgid "sub"
+msgstr ""
+
+#: functions.py:69
+msgid "square"
+msgstr "مربع"
+
+#: functions.py:70
+msgid "tan"
+msgstr "تانجانت"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "تانجانت هایپربولی"
+
+#: functions.py:72
+msgid "xor"
+msgstr "ياى ضمنى"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+
+#: functions.py:117
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+"کوساین قوسی (x)، کوساین قوسی x را برگردان. این زاویه ایست که کوساین آن x "
+"است. تعریف شده برای x خورد باشد از -1 <= x < 1"
+
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+#, fuzzy
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr "و(x,y)، منطقی و. درست میشود اگر x و y درست باشند، علاوه ازین غلط میشود"
+
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr ""
+
+#: functions.py:141
+#, fuzzy
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+"ساین قوسی(x)، ساین قوسی x را برگردان. این زاویه ایست که ساین برای آن x است. "
+"تعریف شده طوریکه -1 <= x <= 1"
+
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
+
+#: functions.py:153
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+"تانجانت قوسی(x)، تانجانت قوسی x را برگردان. این زاویه ایست که تانجانت برای "
+"آن x است. تعریف شده برای همه xها"
+
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
+
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr ""
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr ""
+
+#: functions.py:188
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+"کوساین(x)، کوساین قوسی x را برگردان. این کواردانت x بر روی دایره واحد در "
+"زاویه x است"
+
+#: functions.py:194
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+"کوساین هایپربولی(x)، کوساین هایپربولی x را برگردان. داده برای (exp(x) + "
+"exp(-x)) / 2"
+
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr ""
+
+#: functions.py:219
+msgid "Invalid argument"
+msgstr ""
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "توان (x)، توان طبیعی x را برگردان. داده شده به e به توان x"
+
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
+
+#: functions.py:244
+#, fuzzy
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+"فکتوریل(x)، فکتوریل x را برگردان. داده شده برای x * (x - 1) * (x - 2) * ..."
+
+#: functions.py:250
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"فکتوریل(x)، فکتوریل x را برگردان. داده شده برای x * (x - 1) * (x - 2) * ..."
+
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr ""
+
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr ""
+
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr ""
+
+#: functions.py:311
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"لوگاریتم طبیعی(x)، لوگاریتم طبیعی x را برگردان. این مقداریست که برای آن توان "
+"exp() مساویست به x. تعریف شده برای x >= 0."
+
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr ""
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr ""
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr ""
+
+#: functions.py:346
+#, fuzzy
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
+msgstr ""
+"یا(x, y)، منطقی ی. بازمیگرداند اگر x و/یا درست باشند، علاوه ازین غلط میباشد"
+
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr ""
+
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+
+#: functions.py:371
+msgid ""
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
+
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr ""
+
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr ""
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+
+#: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr "ساین(x)، ساین x را برگردان. این کواردانت y در دایره واحد بر زاویه x است"
 
-#: eqnparserhelp.py:90
-msgid "sinh"
-msgstr "ساین هایپربولی"
-
-#: eqnparserhelp.py:91
+#: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
 "sinh(x)، ساین هایپربولی x را برگردان. داده شده برای (exp(x) - exp(-x)) / 2"
 
-#: eqnparserhelp.py:93
-msgid "sqrt"
-msgstr "جذرالمربع"
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
 
-#: eqnparserhelp.py:94
+#: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
@@ -320,19 +541,15 @@ msgstr ""
 "جذرالمربع(x)، جذرالمربع x را برگردان. این مقداریست که مربع آن مساویت به x. "
 "تعریف شده برای x >= 0."
 
-#: eqnparserhelp.py:97
-msgid "square"
-msgstr "مربع"
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr ""
 
-#: eqnparserhelp.py:98
-msgid "square(x), return the square of x. Given by x * x"
-msgstr "مربع(x)، مربع x را برگردان. دادا شده برای x * x"
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr ""
 
-#: eqnparserhelp.py:101
-msgid "tan"
-msgstr "تانجانت"
-
-#: eqnparserhelp.py:102
+#: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
@@ -341,39 +558,14 @@ msgstr ""
 "تانجانت(x)، تانجانت x را برگردان. این میل یک خط از مبداء واحد دایره تا نقطه "
 "بر واحد دایره تعریف شده برای زاویه x است. داده شده ساین(x) / کوساین(x)"
 
-#: eqnparserhelp.py:106
-msgid "tanh"
-msgstr "تانجانت هایپربولی"
-
-#: eqnparserhelp.py:107
-msgid "sinh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+#: functions.py:439
+#, fuzzy
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x)، تانجانت هایپربولی x را برگردان. داده شده برای داده شده sinh(x) / "
 "cosh(x)"
 
-#: eqnparserhelp.py:109
-msgid "test"
-msgstr "امتحان"
-
-#: eqnparserhelp.py:110
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "این صرف یک عنوان امتحان است، برای شاخص از کمک(شاخص) استفاده کنید"
-
-#. TRANS: This command is descriptive, so can be translated
-#: eqnparserhelp.py:113
-msgid "variables"
-msgstr "متغییرات"
-
-#: eqnparserhelp.py:114
-msgid "variables(), return a list of the variables that are currently defined"
-msgstr ""
-"متغییرات()، یک لستی از متغییراتی که در همین حال تعریف شده اند را برگردان"
-
-#: eqnparserhelp.py:116
-msgid "xor"
-msgstr "ياى ضمنى"
-
-#: eqnparserhelp.py:117
+#: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
@@ -381,125 +573,110 @@ msgstr ""
 "xor(x, y)، منطقی xor. درست میگردد اگر x درست باشد (وy غلط) ویا هم y درست "
 "باشد(و x غلط)، علاو براین غلط میگردد"
 
-#. TRANS: help(index), both 'index' and the translation  will work
-#: eqnparserhelp.py:131
-msgid "index"
-msgstr "شاخص"
-
-#: eqnparserhelp.py:132
-msgid "Topics"
-msgstr "عناوین"
-
-#: eqnparserhelp.py:143
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"در مورد متغیر '%s' هیچ کمکی وجود ندارد، از شاخص برای رهنمایی(شاخص) استفاده "
-"کنید"
-
-#: layout.py:44
+#: layout.py:69
 msgid "Clear"
 msgstr ""
 
-#: layout.py:53
-msgid "Enter"
-msgstr ""
-
-#: layout.py:60
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "ویرایش"
 
-#: layout.py:61
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "الجبر"
 
-#: layout.py:62
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "مثلثات"
 
-#: layout.py:63
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "حساب بولی"
 
-#: layout.py:118
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:64
-msgid "Constants"
-msgstr "مستقل ها"
-
-#: layout.py:65
-msgid "Format"
-msgstr "قالب"
-
-#: layout.py:86
+#: layout.py:164
 msgid "Label:"
 msgstr "مطلب:"
 
-#: layout.py:118
+#: layout.py:197
 msgid "All equations"
 msgstr "همه معادله ها"
 
-#: layout.py:118
+#: layout.py:197
 msgid "My equations"
 msgstr "معادله های من"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show history"
 msgstr "تاریخچه را نشان بده"
 
-#: layout.py:120
+#: layout.py:202
 msgid "Show variables"
 msgstr "متغیرات را نشان بده"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
-#: mathlib.py:74
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
-#: mathlib.py:79
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:132
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "نامعین"
 
-#: mathlib.py:142
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "خطا: نوعیت ناپشتیبانی شده"
 
-#: toolbars.py:36
+#: toolbars.py:53
 msgid "Help"
 msgstr "کمک"
 
-#: toolbars.py:86
+#: toolbars.py:121
 msgid "Copy"
 msgstr "نقل بگیر"
 
-#: toolbars.py:89
-msgid "Paste"
-msgstr "بچسپان"
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr ""
 
-#: toolbars.py:92
+#: toolbars.py:126
 msgid "Cut"
 msgstr "برش کن"
 
-#: toolbars.py:99
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr ""
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "بچسپان"
+
+#: toolbars.py:147
 msgid "Square"
 msgstr "مربع"
 
-#: toolbars.py:103
+#: toolbars.py:152
 msgid "Square root"
 msgstr "جذرالمربع"
 
@@ -507,111 +684,206 @@ msgstr "جذرالمربع"
 msgid "Inverse"
 msgstr ""
 
-#: toolbars.py:109
+#: toolbars.py:164
 msgid "e to the power x"
 msgstr "e به توان x"
 
-#: toolbars.py:113
+#: toolbars.py:169
 #, fuzzy
 msgid "x to the power y"
 msgstr "x به توان y"
 
-#: toolbars.py:117
+#: toolbars.py:174
 msgid "Natural logarithm"
 msgstr "لوگاریتم طبیعی"
 
-#: toolbars.py:123
+#: toolbars.py:180
 msgid "Factorial"
 msgstr "فکتوریل"
 
-#: toolbars.py:131
+#: toolbars.py:190
 msgid "Sine"
 msgstr "ساین"
 
-#: toolbars.py:135
+#: toolbars.py:194
 msgid "Cosine"
 msgstr "کوساین"
 
-#: toolbars.py:139
+#: toolbars.py:198
 msgid "Tangent"
 msgstr "تانجانت"
 
-#: toolbars.py:145
+#: toolbars.py:204
 msgid "Arc sine"
 msgstr "ساین قوسی"
 
-#: toolbars.py:149
+#: toolbars.py:208
 msgid "Arc cosine"
 msgstr "کوساین قوسی"
 
-#: toolbars.py:153
+#: toolbars.py:212
 msgid "Arc tangent"
 msgstr "تانجانت قوسی"
 
-#: toolbars.py:159
+#: toolbars.py:218
 msgid "Hyperbolic sine"
 msgstr "ساین هایپربولی"
 
-#: toolbars.py:163
+#: toolbars.py:222
 msgid "Hyperbolic cosine"
 msgstr "کوساین هایپربولی"
 
-#: toolbars.py:167
+#: toolbars.py:226
 msgid "Hyperbolic tangent"
 msgstr "تانجانت هایپربولی"
 
-#: toolbars.py:175
+#: toolbars.py:236
 msgid "Logical and"
 msgstr "منطقی و"
 
-#: toolbars.py:179
+#: toolbars.py:240
 msgid "Logical or"
 msgstr "منطقی یا"
 
-#: toolbars.py:189
+#: toolbars.py:250
 msgid "Equals"
 msgstr "مساوی است"
 
-#: toolbars.py:192
+#: toolbars.py:253
 msgid "Not equals"
 msgstr "مساوی نیست"
 
-#: toolbars.py:199
+#: toolbars.py:262
 msgid "Pi"
 msgstr "پای"
 
-#: toolbars.py:202
+#: toolbars.py:266
 msgid "e"
 msgstr "e"
 
-#: toolbars.py:280
+#: toolbars.py:269
+msgid "γ"
+msgstr ""
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
 #, fuzzy
 msgid "Plot"
 msgstr "طرح"
 
-#: toolbars.py:209
+#: toolbars.py:286
 msgid "Degrees"
 msgstr "درجه"
 
-#: toolbars.py:210
+#: toolbars.py:287
 msgid "Radians"
 msgstr "رادیان"
 
-#: toolbars.py:292
-msgid "Degrees / radians"
+#: toolbars.py:291
+msgid "Degrees / Radians"
 msgstr ""
 
-#: toolbars.py:301
+#: toolbars.py:300
 msgid "Exponent / Scientific notation"
 msgstr ""
 
-#: toolbars.py:311
+#: toolbars.py:310
 msgid "Number of shown digits"
 msgstr ""
 
-#: toolbars.py:316
+#: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Available functions:"
+#~ msgstr "عملیات در دسترس:"
+
+#, python-format
+#~ msgid "level: %d, ofs %d"
+#~ msgstr "مرحله: %d از %d"
+
+#, python-format
+#~ msgid "Invalid number of arguments (%d instead of %d)"
+#~ msgstr "شماره نامعتبر استدلال ها (%d در عوض %d)"
+
+#, python-format
+#~ msgid "function takes %d args"
+#~ msgstr "عملکرد %d استدلال میگیرد"
+
+#, python-format
+#~ msgid "Unable to parse argument %d: '%s'"
+#~ msgstr "برای تجزیه استدلال %d ناتوان هست: '%s'"
+
+#, python-format
+#~ msgid "Function error: %s"
+#~ msgstr "خطای عملکرد: %s"
+
+#~ msgid "Left parenthesis unexpected"
+#~ msgstr "قوس چپ غیر منتظره"
+
+#~ msgid "Parse error (right parenthesis)"
+#~ msgstr "خطای تجزیه (قوسهای راست)"
+
+#~ msgid "Right parenthesis unexpected"
+#~ msgstr "قوسهای راست غیر منتظره"
+
+#~ msgid "Parse error (right parenthesis, no left_val)"
+#~ msgstr "خطای تجزیه (قوسهای راست، هیچ مقدار چپ نه)"
+
+#~ msgid "Parse error (right parenthesis, no level to close)"
+#~ msgstr "خطای تجزئیه (قوس راست، هیچ سطحی برای بندش وجود ندارد)"
+
+#~ msgid "Number not expected"
+#~ msgstr "شماره غیر منتظره"
+
+#~ msgid "Operator not expected"
+#~ msgstr "عملگرغیر منتظره"
+
+#~ msgid "Parse error: number or variable expected"
+#~ msgstr "خطای تجزئیه: شماره یا متغیر غیر منتظره"
+
+#~ msgid "Number or variable expected"
+#~ msgstr "شماره یا متغیر مورد انتظار"
+
+#~ msgid "Invalid operator"
+#~ msgstr "عملگر نامعتبر"
+
+#~ msgid "Operator expected"
+#~ msgstr "عملگر مورد انتظار"
+
+#~ msgid "_parse(): returning None"
+#~ msgstr "_تجزئیه(): بازگشت هیچ"
+
+#~ msgid "functions(), return a list of all the functions that are defined"
+#~ msgstr "توابع()، یک لستی از همه توابع تعریف شده را بازگردان"
+
+#~ msgid "operators"
+#~ msgstr "عملگرها"
+
+#~ msgid "operators(), return a list of the operators that are defined"
+#~ msgstr "عملگرها()، یک لستی از همه عملگرهای تعریف شده را بازگردان"
+
+#~ msgid "plot"
+#~ msgstr "طرح"
+
+#~ msgid "square(x), return the square of x. Given by x * x"
+#~ msgstr "مربع(x)، مربع x را برگردان. دادا شده برای x * x"
+
+#~ msgid "test"
+#~ msgstr "امتحان"
+
+#~ msgid "variables(), return a list of the variables that are currently defined"
+#~ msgstr ""
+#~ "متغییرات()، یک لستی از متغییراتی که در همین حال تعریف شده اند را برگردان"
+
+#~ msgid "Constants"
+#~ msgstr "مستقل ها"
+
+#~ msgid "Format"
+#~ msgstr "قالب"
 
 #, python-format
 #~ msgid "Reading from journal (%s)"

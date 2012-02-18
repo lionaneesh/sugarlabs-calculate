@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-07-12 21:05+0200\n"
 "Last-Translator: <alex.olpc@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,131 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Вычислить"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), рисует график функции 'eqn' по переменной 'var' в "
+"диапазоне от a до b"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Ошибка в %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Это тестовая справочная статья, используйте help(index) для получения "
+"индекса"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Используйте help(test) для получения справки о  'test', или help(index) для "
+"получения индекса"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "index"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "Разделы"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Разделы"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "variables"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "variables"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "functions"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "functions"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Не могу найти справочной информации для '%s'. Попробуйте воспользоваться "
+"индексом help(index)"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "Справка"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Функция '%s' неопределена"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Переменная '%s' не определена"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Ошибка разбора"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() неверная строка (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Запись в журнал (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): неправильный тип"
 
 #: functions.py:35
 msgid "add"
@@ -317,8 +442,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -380,8 +504,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -454,102 +577,80 @@ msgstr ""
 "аргументов различну (например, x = True и y = False или y = True и x = "
 "False), в противном случае возвращает False"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Очистить"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Ввести"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Редактировать"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Алгебра"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Тригонометрия"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Логика"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Метка:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Все уравнения"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Мои уравнения"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Сменить вид между своими и всеми уравнениями"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Показать историю"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Показать переменные"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Сменить вид между историей и переменными"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Неопределено"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Ошибка: тип данных не поддерживается"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() неверная строка (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Запись в журнал (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): неправильный тип"
 
 #: toolbars.py:53
 msgid "Help"
@@ -702,113 +803,8 @@ msgstr "Количество показываемых знаков"
 msgid "Integer formatting base"
 msgstr ""
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), рисует график функции 'eqn' по переменной 'var' в "
-"диапазоне от a до b"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "Ошибка в %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"Это тестовая справочная статья, используйте help(index) для получения "
-"индекса"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Используйте help(test) для получения справки о  'test', или help(index) для "
-"получения индекса"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "index"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "Разделы"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "Разделы"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "variables"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "variables"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "functions"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "functions"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Не могу найти справочной информации для '%s'. Попробуйте воспользоваться "
-"индексом help(index)"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "Справка"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Функция '%s' неопределена"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Переменная '%s' не определена"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Ошибка разбора"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "Ввести"
 
 #~ msgid "Available functions:"
 #~ msgstr "Доступные функции:"

@@ -14,9 +14,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-10-20 20:16+0200\n"
-"Last-Translator: Jakub <jamarat@o2.pl>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-02-07 19:00+0200\n"
+"Last-Translator: Marcin <ulinski.marcin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,123 @@ msgstr ""
 
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "Oblicz"
+msgstr "Kalkulator"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(fn, zmienna=-a..b), rysuje wykres funkcji 'fn' jednej zmiennej "
+"'zmienna' dla zakresu zmiennej od a do b. Np. plot(sin(x), x=-90..90)"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "Błąd analizy ciągu znaków w %d"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Błąd w %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "To jest testowy temat, użyj help(index) aby dotrzeć do indeksu"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Użyj help(test) aby otrzymać pomoc dla 'test' lub help(index) dla indeksu"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "index"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "tematy"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Tematy"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "zmienne"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Zmienne"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "funkcje"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "Funkcje"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr "Nie ma pomocy na temat '%s', użyj help(index) aby wyświetlić indeks"
+
+#: astparser.py:459
+msgid "help"
+msgstr "Pomoc"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "Wykryto zapętlenie"
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Funkcja '%s' nie jest zdefiniowana"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Zmienna '%s' nie jest zdefiniowana"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "Parametr '%s' nie istnieje"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Błąd analizy napisu"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Wielokrotne wyrażenia nie są obsługiwane"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Błąd wewnętrzny"
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() niewłaściwy ciąg znaków (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Nie mogę przypisać etykiety, spowodowałoby to rekurencję"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Zapisuję do dziennika (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): niepoprawny typ"
 
 #: functions.py:35
 msgid "add"
@@ -70,6 +186,7 @@ msgstr "and"
 msgid "b10bin"
 msgstr "b10bin"
 
+# http://pl.wikipedia.org/wiki/Pod%C5%82oga_i_sufit
 #: functions.py:45
 msgid "ceil"
 msgstr "ceil"
@@ -220,7 +337,7 @@ msgid ""
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x), zwraca arcus sinus z x. Jest to kąt dla którego sinusem jest x. "
-"Zdefiniowane dla -1 <= x <= 1."
+"Zdefiniowane dla -1 <= x <= 1"
 
 #: functions.py:147
 msgid ""
@@ -323,8 +440,7 @@ msgstr "floor(x), zwraca największą liczbę całkowitą mniejszą od x."
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), zwraca odwrotność z x, czyli 1/x"
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "Logarytm(x) jest zdefiniowany tylko dla x > 0"
 
@@ -346,13 +462,13 @@ msgstr ""
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr "Można obliczyć tylko resztę z dzielenia x przez liczbę całkowitą."
+msgstr "Można obliczyć tylko resztę z dzielenia x przez liczbę całkowitą"
 
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
-msgstr "mod(x,y), zwraca resztę z dzielenia x przez y"
+msgstr "mod(x,y), zwraca resztę z dzielenia x przez y."
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
@@ -392,8 +508,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr "round(x), zwraca najbliższą liczbę całkowitą do x."
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "Operacje binarne dotyczą tylko liczb całkowitych"
 
@@ -458,7 +573,7 @@ msgstr ""
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
 "tanh(x), zwraca tangens hiperboliczny z x. Zdefiniowane jako sinh(x) / "
-"cosh(x)."
+"cosh(x)"
 
 #: functions.py:444
 msgid ""
@@ -469,102 +584,80 @@ msgstr ""
 "jeżeli x jest 'Prawda' (oraz y jest 'Fałsz') lub y jest 'Prawda' (oraz x "
 "jest 'Fałsz') w przeciwnym wypadku zwraca 'Fałsz'"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Wyczyść"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Zatwierdź"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Edytuj"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Trygonometria"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Logiczne"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Różne"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Etykieta:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Wszystkie równania"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Moje równania"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Zmień widok między moimi a wszystkimi równaniami"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Pokaż historię"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Pokaż zmienne"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Zmień widok między historą a zmiennymi"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "mul_sym"
+msgstr "·"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr "div_sym"
+msgstr "÷"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr "="
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Niezdefiniowane"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Błąd: nieobsługiwany typ"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() niewłaściwy ciąg znaków (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "Nie mogę przypisać etykiety, spowodowałoby to rekurencję."
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Zapisuję do dziennika (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): niepoprawny typ"
 
 #: toolbars.py:53
 msgid "Help"
@@ -714,104 +807,8 @@ msgstr "Liczba pokazywanych cyfr"
 msgid "Integer formatting base"
 msgstr "Podstawa liczb całkowitych"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(fn, zmienna=-a..b), rysuje wykres funkcji 'fn' jednej zmiennej "
-"'zmienna' dla zakresu zmiennej od a do b. Np. plot(sin(x), x=-90..90)"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "Błąd analizy ciągu znaków w %d"
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "Błąd w %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "To jest testowy temat, użyj help(index) aby dotrzeć do indeksu"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Użyj help(test) aby otrzymać pomoc dla 'test' lub help(index) dla indeksu"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "index"
-
-#: astparser.py:109
-msgid "topics"
-msgstr "tematy"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "Tematy"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "zmienne"
-
-#: astparser.py:119
-msgid "Variables"
-msgstr "Zmienne"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "funkcje"
-
-#: astparser.py:126
-msgid "Functions"
-msgstr "Funkcje"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Nie ma pomocy na temat '%s', użyj help(index) aby wyświetlić indeks"
-
-#: astparser.py:459
-msgid "help"
-msgstr "Pomoc"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "Wykryto zapętlenie"
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Funkcja '%s' nie jest zdefiniowana"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Zmienna '%s' nie jest zdefiniowana"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "Parametr '%s' nie istnieje"
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Błąd analizy napisu"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "Wielokrotne wyrażenia nie są obsługiwane"
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr "Błąd wewnętrzny"
+#~ msgid "Enter"
+#~ msgstr "Zatwierdź"
 
 #~ msgid "Available functions:"
 #~ msgstr "Dostępne funkcje:"

@@ -1,12 +1,16 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-11-26 02:07+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: aym\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,6 +21,152 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Jakhuña"
+
+#  "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
+#  "el rango de a hasta b"
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), 'eqn' ecuación rixita 'var' variable ukampi a ukata b "
+"ukaru"
+
+#  "Error de procesamiento en %d"
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "Amuytawitaki Pantjata %d ukana"
+
+#  "Error en %d"
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d ukana Pantjata"
+
+#  "Este es solo un topico de prueba, use help(indice) para el indice"
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr "Akaxa yantawikiwa, uñjañamawa yanapt'awi(indice) qalltuwitakixa"
+
+#  "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
+#: astparser.py:106
+#, fuzzy
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Apnaqañamawa yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
+"qalltuwitakixa"
+
+#  "índice"
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "qalltuwi"
+
+#  "temas"
+#: astparser.py:109
+msgid "topics"
+msgstr "amuytawinaka"
+
+#  "Temas"
+#: astparser.py:110
+msgid "Topics"
+msgstr "Amuytawinaka"
+
+#  "variables"
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "variables"
+
+#  "Variables"
+#: astparser.py:119
+msgid "Variables"
+msgstr "Variables"
+
+#  "funciones"
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "lurañataki"
+
+#  "Funciones"
+#: astparser.py:126
+msgid "Functions"
+msgstr "Lurañataki"
+
+#  "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Janiwa yanapt'awixa utxiti '%s' ukatakixa, apnaqasmawa yanapt'awi(índice) "
+"qalltañawitakixa"
+
+#  "ayuda"
+#: astparser.py:459
+msgid "help"
+msgstr "yanapt'awi"
+
+#  "Recursión detectada"
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "Jaljtawixa uñjatawa"
+
+#  "La función '%s' no está definida"
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "'%s' lurawixa janiwa amtutakiti"
+
+#  "La variable '%s' no está definida"
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Variable '%s' janiwa amtutakiti"
+
+#  "Atributo '%s' no existe"
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr "Atributo '%s' janiwa utjiti"
+
+#  "Error de procesamiento"
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Pantjata amuyt'awixa"
+
+#  "Declaraciones multiples no estan soportadas"
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Janiwa walja amtuwixa lurasiñapakiti"
+
+#  "Error interno"
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Kikipana pantjata"
+
+#  "Equation.parse() cadena invalida (%s)"
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() jani amtuta (%s)"
+
+#  "No puedo asignar etiqueta: causará recursión"
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "Janiwa sutiyañjamakiti: jaljtayasiniwa"
+
+#  "Escribiendo en el diario (%s)"
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Sapüru luräwiru qilqantaña (%s)"
+
+#  "button_pressed(): tipo invalido"
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): kut'ayata casta"
 
 #  "sum"
 #: functions.py:35
@@ -381,8 +531,7 @@ msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr "inv(x), kutiyaniwa mayniripa x, 1 / x ukhamarakiwa"
 
 #  "Logarithm(x) solo definido para x > 0"
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr "Logarithm(x) akatakiwa x > 0"
 
@@ -466,8 +615,7 @@ msgid "round(x), return the integer nearest to x."
 msgstr "round(x), kutiyaniwa phuqata x jak'anqiri."
 
 #  "Operaciones sobre bits solo se aplican a enteros"
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr "Bits lurawinakaxa phuqatanatakiwa"
 
@@ -561,123 +709,96 @@ msgstr ""
 "kutiyaniniwa k'ari"
 
 #  "Vaciar"
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Pichsuña"
 
-#  "Entrar"
-#: layout.py:77
-msgid "Enter"
-msgstr "Mantaña"
-
 #  "Editar"
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Chiqachaña"
 
 #  "Álgebra"
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Algebra"
 
 #  "Trigonometría"
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Trigonometría"
 
 #  "Booleano"
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Chiqapa/k'ari"
 
 #  "Misceláneos"
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Kunaymana"
 
 #  "Etiqueta:"
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Chimpunaka:"
 
 #  "Todas las ecuaciones"
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Qawayata ecuaciones"
 
 #  "Mis ecuaciones"
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Nayankiri ecuaciones"
 
 #  "Cambiar vista entre todas las ecuaciones y las propias"
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
 
 #  "Mostrar historial"
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Lurata uñachayaña"
 
 #  "Mostrar variables"
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Variable Uñachayaña"
 
 #  "Cambiar vista entre historial y variables"
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Mayxata lurawi ukhamaraki variable uñjaña"
 
 #  "×"
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "mul_sym"
 
 #  "÷"
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "div_sym"
 
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
 #  "No-definido"
-#: mathlib.py:211
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Jani amuyata"
 
 #  "Error: tipo no soportado"
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Pantjata: kut'ayata casta"
-
-#  "Equation.parse() cadena invalida (%s)"
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() jani amtuta (%s)"
-
-#  "No puedo asignar etiqueta: causará recursión"
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr "Janiwa sutiyañjamakiti: jaljtayasiniwa"
-
-#  "Escribiendo en el diario (%s)"
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Sapüru luräwiru qilqantaña (%s)"
-
-#  "button_pressed(): tipo invalido"
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): kut'ayata casta"
 
 #  "Ayuda"
 #: toolbars.py:53
@@ -864,127 +985,6 @@ msgstr "Jakhunakana jakhupa uñachayata"
 msgid "Integer formatting base"
 msgstr "Jhakhunaka base"
 
-#  "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
-#  "el rango de a hasta b"
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), 'eqn' ecuación rixita 'var' variable ukampi a ukata b "
-"ukaru"
-
-#  "Error de procesamiento en %d"
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr "Amuytawitaki Pantjata %d ukana"
-
-#  "Error en %d"
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "%d ukana Pantjata"
-
-#  "Este es solo un topico de prueba, use help(indice) para el indice"
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr "Akaxa yantawikiwa, uñjañamawa yanapt'awi(indice) qalltuwitakixa"
-
-#  "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
-#: astparser.py:106
-#, fuzzy
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Apnaqañamawa yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
-"qalltuwitakixa"
-
-#  "índice"
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "qalltuwi"
-
-#  "temas"
-#: astparser.py:109
-msgid "topics"
-msgstr "amuytawinaka"
-
-#  "Temas"
-#: astparser.py:110
-msgid "Topics"
-msgstr "Amuytawinaka"
-
-#  "variables"
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "variables"
-
-#  "Variables"
-#: astparser.py:119
-msgid "Variables"
-msgstr "Variables"
-
-#  "funciones"
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "lurañataki"
-
-#  "Funciones"
-#: astparser.py:126
-msgid "Functions"
-msgstr "Lurañataki"
-
-#  "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Janiwa yanapt'awixa utxiti '%s' ukatakixa, apnaqasmawa yanapt'awi(índice) "
-"qalltañawitakixa"
-
-#  "ayuda"
-#: astparser.py:459
-msgid "help"
-msgstr "yanapt'awi"
-
-#  "Recursión detectada"
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr "Jaljtawixa uñjatawa"
-
-#  "La función '%s' no está definida"
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "'%s' lurawixa janiwa amtutakiti"
-
-#  "La variable '%s' no está definida"
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Variable '%s' janiwa amtutakiti"
-
-#  "Atributo '%s' no existe"
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr "Atributo '%s' janiwa utjiti"
-
-#  "Error de procesamiento"
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Pantjata amuyt'awixa"
-
-#  "Declaraciones multiples no estan soportadas"
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr "Janiwa walja amtuwixa lurasiñapakiti"
-
-#  "Error interno"
-#: astparser.py:625
-msgid "Internal error"
-msgstr "Kikipana pantjata"
+#  "Entrar"
+#~ msgid "Enter"
+#~ msgstr "Mantaña"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
 "PO-Revision-Date: 2011-08-31 10:30+0200\n"
 "Last-Translator: Yannis <kiolalis@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,131 @@ msgstr ""
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "Υπολογισμός"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"σχδ(συν, μετ=-α..β), σχεδιάζει τη συνάρτηση 'συν' με μεταβλητή 'μετ' στο "
+"διάστημα [α,β]"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Σφάλμα στο %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Αυτό είναι ένα δοκιμαστικό θέμα, χρησιμοποίησε βοήθεια(περιεχόμενα) για τα "
+"περιεχόμενα"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "ευρετήριο"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "Θέματα"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Θέματα"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "μεταβλητές"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "μεταβλητές"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "συναρτήσεις"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "συναρτήσεις"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
+"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "Βοήθεια"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "Η συνάρτηση '%s' δεν είναι καθορισμένη"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "Η μεταβλητή '%s' δεν εχει καθοριστεί"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Λάθος ανάλυσης"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Equation.parse() λάθος συμβολοσειρά (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Εγγραφή στο ημερολόγιο (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "button_pressed(): μη αποδεκτός τύπος"
 
 #: functions.py:35
 msgid "add"
@@ -328,8 +453,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -392,8 +516,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -467,103 +590,81 @@ msgstr ""
 "Ψευδής όταν η τιμή του x ισούται με την τιμή του y διαφορετικά επιστρέφει "
 "Αληθής"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "Καθαρισμός"
 
-#: layout.py:77
-msgid "Enter"
-msgstr "Εισαγωγή"
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "Άλγεβρα"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "Τριγωνομετρία"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "Λογική"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "Ετικέτα:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "Όλες οι εξισώσεις"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "Οι εξισώσεις μου"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr "Αλλαγή μεταξύ των δικών μου και όλων των εξισώσεων"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "Εμφάνιση ιστορικού"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "Εμφάνιση μεταβλητών"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr "Αλλαγή προβολής μεταξύ ιστορικού και μεταβλητών"
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
 # Σύμβολο διαίρεσης (προκαθορισμένο: '/')
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "Ακαθόριστο"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "Σφάλμα: μη υποστηριζόμενος τύπος"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() λάθος συμβολοσειρά (%s)"
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "Εγγραφή στο ημερολόγιο (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): μη αποδεκτός τύπος"
 
 #: toolbars.py:53
 msgid "Help"
@@ -714,113 +815,8 @@ msgstr "Αριθμός εμφανιζόμενων ψηφίων"
 msgid "Integer formatting base"
 msgstr "Βάση μορφοποίησης ακεραίου"
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"σχδ(συν, μετ=-α..β), σχεδιάζει τη συνάρτηση 'συν' με μεταβλητή 'μετ' στο "
-"διάστημα [α,β]"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "Σφάλμα στο %d"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"Αυτό είναι ένα δοκιμαστικό θέμα, χρησιμοποίησε βοήθεια(περιεχόμενα) για τα "
-"περιεχόμενα"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"Δοκίμασε βοήθεια(δοκιμή) για βοήθεια σχετικά με το 'δοκιμή', ή "
-"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "ευρετήριο"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "Θέματα"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "Θέματα"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "μεταβλητές"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "μεταβλητές"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "συναρτήσεις"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "συναρτήσεις"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"Δεν υπάρχει βοήθεια για το(ν) / τη(ν) '%s', χρησιμοποίησε "
-"βοήθεια(περιεχόμενα) για τα περιεχόμενα"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "Βοήθεια"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "Η συνάρτηση '%s' δεν είναι καθορισμένη"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "Η μεταβλητή '%s' δεν εχει καθοριστεί"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-msgid "Parse error"
-msgstr "Λάθος ανάλυσης"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
+#~ msgid "Enter"
+#~ msgstr "Εισαγωγή"
 
 #~ msgid "Available functions:"
 #~ msgstr "Διαθέσιμες συναρτήσεις:"

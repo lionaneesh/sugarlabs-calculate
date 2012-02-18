@@ -14,24 +14,148 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xo-bundled\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-14 05:07+0100\n"
-"PO-Revision-Date: 2011-01-19 16:35+0200\n"
-"Last-Translator: sauparna <sauparna.palchowdhury@gmail.com>\n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-01-12 08:23+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: Bengali <core@bengalinux.org>\n"
-"Language: \n"
+"Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Pootle 2.0.3\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
 msgstr "গণনা"
 
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr ""
+"plot(eqn, var=-a..b), a থেকে b সীমায় চলক 'var' এর সাথে সমীকরণ 'eqn' প্লট করো"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr ""
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "%d তে ত্রুটি"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"এটি শুধুমাত্র একটি পরীক্ষন বিষয়, ইনডেক্সের জন্য সহায়তা(ইনডেক্স) ব্যবহার করো"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"'পরীক্ষা' সম্পর্কে সহায়তার জন্য সহায়তা(পরীক্ষা), অথবা ইনডেক্সের জন্য সহায়তা "
+"(ইনডেক্স) ব্যবহার করো"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "ইনডেক্স"
+
+#: astparser.py:109
+#, fuzzy
+msgid "topics"
+msgstr "বিষয়বস্তু"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "বিষয়বস্তু"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "চলক"
+
+#: astparser.py:119
+#, fuzzy
+msgid "Variables"
+msgstr "চলক"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "ফাংশন"
+
+#: astparser.py:126
+#, fuzzy
+msgid "Functions"
+msgstr "ফাংশন"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"%s' উপস্থিতি সম্পর্কে কোনে সহায়তা নেই, ইনডেক্সের জন্য সহায়তা(ইনডেক্স) "
+"ব্যবহার করো"
+
+#: astparser.py:459
+#, fuzzy
+msgid "help"
+msgstr "সহায়িকা"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr ""
+
+#: astparser.py:490
+#, python-format
+msgid "Function '%s' not defined"
+msgstr "ফাংশন '%s' নির্ধারণ করা হয়নি"
+
+#: astparser.py:492
+#, python-format
+msgid "Variable '%s' not defined"
+msgstr "চলক '%s' নির্ধারণ করা হয়নি"
+
+#: astparser.py:502
+#, python-format
+msgid "Attribute '%s' does not exist"
+msgstr ""
+
+#: astparser.py:596
+#, fuzzy
+msgid "Parse error"
+msgstr "পার্স ত্রুটি"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr ""
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr ""
+
+#: calculate.py:109
+#, python-format
+msgid "Equation.parse() string invalid (%s)"
+msgstr ""
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr ""
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "সাময়িকীতে লেখা হচ্ছে (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr ""
+
 #: functions.py:35
 msgid "add"
-msgstr ""
+msgstr "যোগ"
 
 #: functions.py:36
 msgid "abs"
@@ -42,27 +166,24 @@ msgid "acos"
 msgstr "acos"
 
 #: functions.py:38
-#, fuzzy
 msgid "acosh"
-msgstr "acos"
+msgstr "acosh"
 
 #: functions.py:39
 msgid "asin"
 msgstr "asin"
 
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "asinh"
 
 #: functions.py:41
 msgid "atan"
 msgstr "atan"
 
 #: functions.py:42
-#, fuzzy
 msgid "atanh"
-msgstr "atan"
+msgstr "atanh"
 
 #: functions.py:43
 msgid "and"
@@ -159,9 +280,8 @@ msgid "sinh"
 msgstr "sinh"
 
 #: functions.py:66
-#, fuzzy
 msgid "sinc"
-msgstr "sin"
+msgstr "sinc"
 
 #: functions.py:67
 msgid "sqrt"
@@ -211,7 +331,7 @@ msgstr ""
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), লজিক্যাল and। x এবং y True হলে True রিটার্ন করে, অন্যথায় False "
+"And(x, y), লজিক্যাল and। x এবং y True হলে True রিটার্ন করে, অন্যথায় False "
 "রিটার্ন করে"
 
 #: functions.py:136
@@ -312,8 +432,7 @@ msgstr ""
 msgid "inv(x), return the inverse of x, which is 1 / x"
 msgstr ""
 
-#: functions.py:309
-#: functions.py:318
+#: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
 msgstr ""
 
@@ -354,7 +473,7 @@ msgstr ""
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"or(x, y), লজিক্যাল or। x এবং/অথবা y True হলে True রিটার্ন করে, অন্যথায় False "
+"Or(x, y), লজিক্যাল or। x এবং/অথবা y True হলে True রিটার্ন করে, অন্যথায় False "
 "রিটার্ন করে"
 
 #: functions.py:361
@@ -375,8 +494,7 @@ msgstr ""
 msgid "round(x), return the integer nearest to x."
 msgstr ""
 
-#: functions.py:382
-#: functions.py:390
+#: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
 msgstr ""
 
@@ -441,102 +559,80 @@ msgstr ""
 "xor(x, y), লজিক্যাল xor। যদি x True হয় (এবং y False) অথবা y True (এবং x "
 "False) তবে True রিটার্ন করে, অন্যথায় False রিটার্ন করে"
 
-#: layout.py:68
+#: layout.py:69
 msgid "Clear"
 msgstr "মুছো"
 
-#: layout.py:77
-msgid "Enter"
-msgstr ""
-
-#: layout.py:98
-#: layout.py:138
+#: layout.py:99 layout.py:139
 msgid "Edit"
 msgstr "সম্পাদন"
 
-#: layout.py:103
-#: layout.py:139
+#: layout.py:104 layout.py:140
 msgid "Algebra"
 msgstr "বীজগনিত"
 
-#: layout.py:108
-#: layout.py:140
+#: layout.py:109 layout.py:141
 msgid "Trigonometry"
 msgstr "ত্রিকোনোমিতি"
 
-#: layout.py:113
-#: layout.py:141
+#: layout.py:114 layout.py:142
 msgid "Boolean"
 msgstr "বুলিয়ান"
 
-#: layout.py:118
-#: layout.py:142
+#: layout.py:119 layout.py:143
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:163
+#: layout.py:164
 msgid "Label:"
 msgstr "লেবেল:"
 
-#: layout.py:196
+#: layout.py:197
 msgid "All equations"
 msgstr "সব সমীকরণ"
 
-#: layout.py:196
+#: layout.py:197
 msgid "My equations"
 msgstr "আমার প্রশ্ন"
 
-#: layout.py:198
+#: layout.py:199
 msgid "Change view between own and all equations"
 msgstr ""
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show history"
 msgstr "ইতিহাস দেখাও"
 
-#: layout.py:201
+#: layout.py:202
 msgid "Show variables"
 msgstr "চলকগুলো দেখাও"
 
-#: layout.py:203
+#: layout.py:204
 msgid "Change view between history and variables"
 msgstr ""
 
-#. TRANS: multiplication symbol (default: '*')
+#. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
 msgstr "*"
 
-#. TRANS: division symbol (default: '/')
+#. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
 msgstr "/"
 
-#: mathlib.py:211
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr ""
+
+#: mathlib.py:216
 msgid "Undefined"
 msgstr "অনির্ধারিত"
 
-#: mathlib.py:221
+#: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "ত্রুটি: অসমর্থিত ধরণ"
-
-#: calculate.py:109
-#, python-format
-msgid "Equation.parse() string invalid (%s)"
-msgstr ""
-
-#: calculate.py:473
-msgid "Can not assign label: will cause recursion"
-msgstr ""
-
-#: calculate.py:545
-#, python-format
-msgid "Writing to journal (%s)"
-msgstr "সাময়িকীতে লেখা হচ্ছে (%s)"
-
-#: calculate.py:828
-msgid "button_pressed(): invalid type"
-msgstr ""
 
 #: toolbars.py:53
 msgid "Help"
@@ -689,113 +785,6 @@ msgstr ""
 msgid "Integer formatting base"
 msgstr ""
 
-#: astparser.py:40
-msgid ""
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
-"range from a to b"
-msgstr ""
-"plot(eqn, var=-a..b), a থেকে b সীমায় চলক 'var' এর সাথে সমীকরণ 'eqn' প্লট করো"
-
-#: astparser.py:59
-#, python-format
-msgid "Parse error at %d"
-msgstr ""
-
-#: astparser.py:71
-#: astparser.py:83
-#, python-format
-msgid "Error at %d"
-msgstr "%d তে ত্রুটি"
-
-#: astparser.py:94
-msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
-"এটি শুধুমাত্র একটি পরীক্ষন বিষয়, ইনডেক্সের জন্য সহায়তা(ইনডেক্স) ব্যবহার করো"
-
-#: astparser.py:106
-msgid "Use help(test) for help about 'test', or help(index) for the index"
-msgstr ""
-"'পরীক্ষা' সম্পর্কে সহায়তার জন্য সহায়তা(পরীক্ষা), অথবা ইনডেক্সের জন্য সহায়তা "
-"(ইনডেক্স) ব্যবহার করো"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:109
-msgid "index"
-msgstr "ইনডেক্স"
-
-#: astparser.py:109
-#, fuzzy
-msgid "topics"
-msgstr "বিষয়বস্তু"
-
-#: astparser.py:110
-msgid "Topics"
-msgstr "বিষয়বস্তু"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:118
-msgid "variables"
-msgstr "চলক"
-
-#: astparser.py:119
-#, fuzzy
-msgid "Variables"
-msgstr "চলক"
-
-#. TRANS: This command is descriptive, so can be translated
-#: astparser.py:125
-msgid "functions"
-msgstr "ফাংশন"
-
-#: astparser.py:126
-#, fuzzy
-msgid "Functions"
-msgstr "ফাংশন"
-
-#: astparser.py:135
-#, python-format
-msgid "No help about '%s' available, use help(index) for the index"
-msgstr ""
-"%s' উপস্থিতি সম্পর্কে কোনে সহায়তা নেই, ইনডেক্সের জন্য সহায়তা(ইনডেক্স) "
-"ব্যবহার করো"
-
-#: astparser.py:459
-#, fuzzy
-msgid "help"
-msgstr "সহায়িকা"
-
-#: astparser.py:466
-msgid "Recursion detected"
-msgstr ""
-
-#: astparser.py:490
-#, python-format
-msgid "Function '%s' not defined"
-msgstr "ফাংশন '%s' নির্ধারণ করা হয়নি"
-
-#: astparser.py:492
-#, python-format
-msgid "Variable '%s' not defined"
-msgstr "চলক '%s' নির্ধারণ করা হয়নি"
-
-#: astparser.py:502
-#, python-format
-msgid "Attribute '%s' does not exist"
-msgstr ""
-
-#: astparser.py:596
-#, fuzzy
-msgid "Parse error"
-msgstr "পার্স ত্রুটি"
-
-#: astparser.py:601
-msgid "Multiple statements not supported"
-msgstr ""
-
-#: astparser.py:625
-msgid "Internal error"
-msgstr ""
-
 #~ msgid "Available functions:"
 #~ msgstr "বিদ্যমান ফাংশন:"
 
@@ -861,9 +850,6 @@ msgstr ""
 
 #~ msgid "operators(), return a list of the operators that are defined"
 #~ msgstr "operators(), নির্ধারিত অপারেটরের তালিকা রিটার্ন করে"
-
-#~ msgid "plot"
-#~ msgstr "plot"
 
 #~ msgid "square(x), return the square of x. Given by x * x"
 #~ msgstr "square(x), x এর বর্গমূল রিটার্ন করে। x * x"
