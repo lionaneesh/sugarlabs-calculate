@@ -15,10 +15,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2011-10-16 20:45+0200\n"
+"PO-Revision-Date: 2012-03-16 11:09+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: rw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,7 +47,7 @@ msgstr "Ikosa riri %d"
 
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
-msgstr "uyunumutwe wisuzumabumenyi,koresha ubutabazi(index)for index"
+msgstr "Uyunumutwe wisuzumabumenyi,koresha ubutabazi(index)for index"
 
 #: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
@@ -61,9 +61,8 @@ msgid "index"
 msgstr "index"
 
 #: astparser.py:109
-#, fuzzy
 msgid "topics"
-msgstr "Imitwe yingenzi"
+msgstr "imitwe yingenzi"
 
 #: astparser.py:110
 msgid "Topics"
@@ -71,23 +70,19 @@ msgstr "Imitwe yingenzi"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
-#, fuzzy
 msgid "variables"
-msgstr "Ibihinduka"
+msgstr "ibihinduka"
 
 #: astparser.py:119
-#, fuzzy
 msgid "Variables"
 msgstr "Ibihinduka"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
-#, fuzzy
 msgid "functions"
-msgstr "Imimaro"
+msgstr "imimaro"
 
 #: astparser.py:126
-#, fuzzy
 msgid "Functions"
 msgstr "Imimaro"
 
@@ -97,9 +92,8 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
 #: astparser.py:459
-#, fuzzy
 msgid "help"
-msgstr "ifashayobora"
+msgstr "ubufasha"
 
 #: astparser.py:466
 msgid "Recursion detected"
@@ -113,7 +107,7 @@ msgstr "Akamaro '%s' kadasobanuwe"
 #: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "Variable '%s' Idasobanuye"
+msgstr "Variable '%s' idasobanuye"
 
 #: astparser.py:502
 #, python-format
@@ -134,9 +128,9 @@ msgstr ""
 
 #: calculate.py:109
 #, python-format
-#, python-format, fuzzy
+#, python-format, 
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() ikurikiranyanyuguti sibyo (%s)"
+msgstr "Equation.parse() string invalid (%s)"
 
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
@@ -149,7 +143,7 @@ msgstr "Kwandika kukinyamakuru (%s)"
 
 #: calculate.py:829
 msgid "button_pressed(): invalid type"
-msgstr "Ububuto_ bwakanzwe(): Ubwoko butemewe"
+msgstr "ububuto_ bwakanzwe(): ubwoko butemewe"
 
 #: functions.py:35
 msgid "add"
@@ -216,18 +210,16 @@ msgid "exp"
 msgstr "exp"
 
 #: functions.py:51
-#, fuzzy
 msgid "factorial"
-msgstr "Fagitoriyeri"
+msgstr "factorial"
 
 #: functions.py:52
 msgid "fac"
 msgstr "fac"
 
 #: functions.py:53
-#, fuzzy
 msgid "factorize"
-msgstr "Fagitoriyeri"
+msgstr "factorize"
 
 #: functions.py:54
 msgid "floor"
@@ -291,7 +283,7 @@ msgstr ""
 
 #: functions.py:69
 msgid "square"
-msgstr "Igishushanyo kimpande enye zingana"
+msgstr "igishushanyo kimpande enye zingana"
 
 #: functions.py:70
 msgid "tan"
@@ -510,11 +502,11 @@ msgstr ""
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "square(x), return x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "sub(x, y), return x - y"
 
 #: functions.py:432
 msgid ""
@@ -535,14 +527,12 @@ msgid ""
 msgstr ""
 
 #: layout.py:69
-#, fuzzy
 msgid "Clear"
-msgstr "Gusiba"
+msgstr "Siba"
 
 #: layout.py:99 layout.py:139
-#, fuzzy
 msgid "Edit"
-msgstr "Guhindura"
+msgstr "Hindura"
 
 #: layout.py:104 layout.py:140
 msgid "Algebra"
@@ -550,19 +540,19 @@ msgstr "Imihiriko"
 
 #: layout.py:109 layout.py:141
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometry"
 
 #: layout.py:114 layout.py:142
 msgid "Boolean"
-msgstr "Nyabule"
+msgstr "Boolean"
 
 #: layout.py:119 layout.py:143
 msgid "Miscellaneous"
-msgstr "Binyuranye"
+msgstr "Miscellaneous"
 
 #: layout.py:164
 msgid "Label:"
-msgstr "gukurikiranya ibimenyetso:"
+msgstr "Akarango:"
 
 #: layout.py:197
 msgid "All equations"
@@ -570,55 +560,54 @@ msgstr "Amahurizo yose"
 
 #: layout.py:197
 msgid "My equations"
-msgstr "Amahurizo yangye"
+msgstr "Amahurizo yanjye"
 
 #: layout.py:199
 msgid "Change view between own and all equations"
-msgstr ""
+msgstr "Hindura uko amahurizo yihariye n'amahurizo yose agaragara"
 
 #: layout.py:202
 msgid "Show history"
 msgstr "Erekana amateka"
 
 #: layout.py:202
-#, fuzzy
 msgid "Show variables"
-msgstr "Kugaragaza igihinduka"
+msgstr "Garagaza ibihinduka"
 
 #: layout.py:204
 msgid "Change view between history and variables"
-msgstr ""
+msgstr "Hindura uko ibihinduka n'urutonde bigaragara"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "*"
+msgstr "mul_sym"
 
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr "/"
+msgstr "div_sym"
 
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr ""
+msgstr "equ_sym"
 
 #: mathlib.py:216
 msgid "Undefined"
-msgstr "Ikidasobanuye"
+msgstr "Kidasobanuye"
 
 #: mathlib.py:226
 msgid "Error: unsupported type"
-msgstr "Ikosa:ubwoko budafashijwe"
+msgstr "Ikosa:ubwoko butemerwa"
 
 #: toolbars.py:53
 msgid "Help"
-msgstr "Gufasha"
+msgstr "Fasha"
 
 #: toolbars.py:121
 msgid "Copy"
-msgstr "Gukoporora"
+msgstr "Koporora"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
@@ -626,7 +615,7 @@ msgstr "<ctrl>c"
 
 #: toolbars.py:126
 msgid "Cut"
-msgstr "Gutema"
+msgstr "Kata"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
@@ -634,11 +623,11 @@ msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
-msgstr "Gushyira ibyo wakoporoye ahandi hantu"
+msgstr "Omeka"
 
 #: toolbars.py:147
 msgid "Square"
-msgstr "Umubare wikubye kabiri"
+msgstr "Kare"
 
 #: toolbars.py:152
 msgid "Square root"
@@ -646,7 +635,7 @@ msgstr "Ikimenyetso cy`umubare wikuba wawugabanya ukabya ra wamubare"
 
 #: toolbars.py:157
 msgid "Inverse"
-msgstr "Amacuri"
+msgstr "Curika"
 
 #: toolbars.py:164
 msgid "e to the power x"
@@ -658,7 +647,7 @@ msgstr "x igerekeranye kuri y"
 
 #: toolbars.py:174
 msgid "Natural logarithm"
-msgstr "logaritime iri natureri"
+msgstr "Logaritime iri y'umwimerere"
 
 #: toolbars.py:180
 #, fuzzy
@@ -678,19 +667,16 @@ msgid "Tangent"
 msgstr "Tanjante"
 
 #: toolbars.py:204
-#, fuzzy
 msgid "Arc sine"
-msgstr "Sinisi agaheto"
+msgstr "Arc sinisi"
 
 #: toolbars.py:208
-#, fuzzy
 msgid "Arc cosine"
-msgstr "Cosinisi agaheto"
+msgstr "Arc cosinisi"
 
 #: toolbars.py:212
-#, fuzzy
 msgid "Arc tangent"
-msgstr "Tanjante agaheto"
+msgstr "Arc tanjante"
 
 #: toolbars.py:218
 msgid "Hyperbolic sine"
@@ -706,11 +692,11 @@ msgstr "Tanjante iperiborike"
 
 #: toolbars.py:236
 msgid "Logical and"
-msgstr "Nyabule NA"
+msgstr "Logike na"
 
 #: toolbars.py:240
 msgid "Logical or"
-msgstr "Nyabule CYANGWA"
+msgstr "Logike cg"
 
 #: toolbars.py:250
 msgid "Equals"
@@ -726,20 +712,19 @@ msgstr "Pi"
 
 #: toolbars.py:266
 msgid "e"
-msgstr "inyajwi"
+msgstr "e"
 
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "Y"
 
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
 #: toolbars.py:279
-#, fuzzy
 msgid "Plot"
-msgstr "Gutandukanya"
+msgstr "Plot"
 
 #: toolbars.py:286
 msgid "Degrees"
@@ -747,24 +732,23 @@ msgstr "Dogere"
 
 #: toolbars.py:287
 msgid "Radians"
-msgstr "Radiya"
+msgstr "Radiyani"
 
 #: toolbars.py:291
 msgid "Degrees / Radians"
-msgstr "Dogere / Radiya"
+msgstr "Dogere / Radiyani"
 
 #: toolbars.py:300
-#, fuzzy
 msgid "Exponent / Scientific notation"
-msgstr "Ubwikube / Cya gihanga"
+msgstr "Exponent / inyandiko Scientific"
 
 #: toolbars.py:310
 msgid "Number of shown digits"
-msgstr ""
+msgstr "Umubare w'inyuguti zerekanwe"
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr ""
+msgstr "Aho bategurira imibare"
 
 #, fuzzy
 #~ msgid "Enter"
