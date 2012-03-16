@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-09 04:28+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-03-09 11:55+0200\n"
+"Last-Translator: Aputsiaq Niels <aj@isit.gl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -299,7 +299,7 @@ msgstr "xor"
 
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
-msgstr "abs(x), returnér absolut værdi af x, hvilket betyder -x for x < 0"
+msgstr "abs(x), returnerer absolut værdi af x, hvilket betyder -x for x < 0"
 
 #: functions.py:117
 msgid ""
@@ -314,8 +314,8 @@ msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
-"acosh(x), returnér den arc-hyperboliske cosinus af x. Dette er værdien y for "
-"hvilken den hyperbolske cosinus er lig x."
+"acosh(x), returnerer den arc-hyperboliske cosinus af x. Dette er værdien y "
+"for hvilken den hyperbolske cosinus er lig x."
 
 #: functions.py:129
 msgid ""
@@ -326,14 +326,14 @@ msgstr ""
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr "add(x, y), returnér x + y"
+msgstr "add(x, y), returnerer x + y"
 
 #: functions.py:141
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"asin(x), returnér arc sinus af x. Dette er vinklen for hvilken sinus er x. "
+"asin(x), returnerer arc sinus af x. Dette er vinklen for hvilken sinus er x. "
 "Defineret ved -1 <= x <= 1"
 
 #: functions.py:147
@@ -341,7 +341,7 @@ msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
-"asinh(x), returnér den arc-hyperbolske sinus af x. Dette er værdien y for "
+"asinh(x), returnerer den arc-hyperbolske sinus af x. Dette er værdien y for "
 "hvilken den hyperbolske sinus er lig x."
 
 #: functions.py:153
@@ -357,8 +357,8 @@ msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
-"atanh(x), returnér den arc-hyperbolske tangent af x. Dette er værdien y for "
-"hvilken hyperbolske tangent er lig x."
+"atanh(x), returnerer den arc-hyperbolske tangent af x. Dette er værdien y "
+"for hvilken hyperbolske tangent er lig x."
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
@@ -374,7 +374,7 @@ msgstr ""
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr "ceil(x), returnér det mindste heltal større end x."
+msgstr "ceil(x), returnerer det mindste heltal som er større end x."
 
 #: functions.py:188
 msgid ""
@@ -429,11 +429,11 @@ msgstr ""
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr "floor(x), returnér det største heltal mindre end x."
+msgstr "floor(x), returner det største heltal mindre end x."
 
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr "inv(x), returnér det inverse af x, hvilket er 1 / x"
+msgstr "inv(x), returnerer det inverse af x, hvilket er 1 / x"
 
 #: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
@@ -452,8 +452,8 @@ msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
-"log10(x), returnér base 10 logaritmen for x. Dette er værdien y for hvilken "
-"10^y er lig x. Defineret for x >= 0."
+"log10(x), returnerer base 10 logaritmen for x. Dette er værdien y for "
+"hvilken 10^y er lig x. Defineret for x >= 0."
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
@@ -464,16 +464,16 @@ msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
-"mod(x, y), returnér modulus af x respektiv for y. Dette er det resterende "
+"mod(x, y), returnerer modulus af x respektiv for y. Dette er det resterende "
 "efter division af x med y."
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr "mul(x, y), returnér x * y"
+msgstr "mul(x, y), returnerer x * y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr "negate(x), returnér -x"
+msgstr "negate(x), returnerer -x"
 
 #: functions.py:346
 msgid ""
@@ -484,23 +484,23 @@ msgstr ""
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr "pow(x, y), returnér x opløftet i y (x**y)"
+msgstr "pow(x, y), returnerer x opløftet i y (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
-msgstr "rand_float(), returnér et tilfældigt flydepunkttal mellem 0.0 og 1.0"
+msgstr "rand_float(), returnerer et tilfældigt flydepunkttal mellem 0.0 og 1.0"
 
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
-"rand_int([<maxval>]), returnér et tilfældigt heltal mellem 0 og <maxval>. "
+"rand_int([<maxval>]), returnerer et tilfældigt heltal mellem 0 og <maxval>. "
 "<maxval> er et valgfrit argument og er sat til 65535 som standard."
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr "round(x), returnér heltallet som er tættest på x."
+msgstr "round(x), returnerer det heltal som er tættest på x."
 
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
@@ -533,7 +533,8 @@ msgstr ""
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr "sinc(x), returnér sinc-funktionen af x. Dette er givet ved sin(x) / x."
+msgstr ""
+"sinc(x), returnerer sinc-funktionen af x. Dette er givet ved sin(x) / x."
 
 #: functions.py:415
 msgid ""
@@ -545,11 +546,11 @@ msgstr ""
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr "square(x), returnér x * x"
+msgstr "square(x), returnerer x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr "sub(x, y), returnér x - y"
+msgstr "sub(x, y), returnerer x - y"
 
 #: functions.py:432
 msgid ""
