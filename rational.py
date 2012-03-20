@@ -113,7 +113,7 @@ class Rational:
 
     def __div__(self, rval):
         if isinstance(rval, Rational):
-            ret = Rational(self.d * rval.d, self.n * rval.n)
+            ret = Rational(self.n * rval.d, self.d * rval.n)
         elif type(rval) is types.IntType or type(rval) is types.LongType:
             ret = Rational(self.n, self.d * rval)
         else:
