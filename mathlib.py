@@ -221,7 +221,7 @@ class MathLib:
         elif type(n) is types.LongType:
             n = self.d(n)
         elif isinstance(n, Rational):
-            n = self.d(float(n))
+            n = self.d(Decimal(n.n) / Decimal(n.d))
         elif not isinstance(n, Decimal):
             return _('Error: unsupported type')
 
