@@ -766,7 +766,7 @@ class Calculate(ShareableActivity):
         self.button_pressed(self.TYPE_TEXT, str)
 
 # This function should be split up properly
-    def button_pressed(self, type, str):
+    def button_pressed(self, str_type, str):
         sel = self.text_entry.get_selection_bounds()
         pos = self.text_entry.get_position()
 
@@ -783,7 +783,7 @@ class Calculate(ShareableActivity):
             _logger.error('button_pressed(): len(sel) != 0 or 2')
             return False
 
-        if type == self.TYPE_FUNCTION:
+        if str_type == self.TYPE_FUNCTION:
             if len(sel) == 0:
                 self.text_entry.insert_text(str + '()', pos)
                 self.text_entry.set_position(pos + len(str) + 1)
@@ -791,13 +791,13 @@ class Calculate(ShareableActivity):
                 self.text_entry.set_text(text[:start] + str + '(' + text[start:end] + ')' + text[end:])
                 self.text_entry.set_position(end + len(str) + 2)
 
-        elif type == self.TYPE_OP_PRE:
+        elif str_type == self.TYPE_OP_PRE:
             if len(sel) is 2:
                 pos = start
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
-        elif type == self.TYPE_OP_POST:
+        elif str_type == self.TYPE_OP_POST:
             if len(sel) is 2:
                 pos = end
             elif pos == 0:
@@ -807,7 +807,7 @@ class Calculate(ShareableActivity):
             self.text_entry.insert_text(str, pos)
             self.text_entry.set_position(pos + len(str))
 
-        elif type == self.TYPE_TEXT:
+        elif str_type == self.TYPE_TEXT:
             tlen = len(self.text_entry.get_text())
             if len(sel) == 2:
                 tlen -= (end - start)
