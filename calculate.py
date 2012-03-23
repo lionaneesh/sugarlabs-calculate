@@ -762,11 +762,11 @@ class Calculate(ShareableActivity):
         else:
             self.text_entry.set_text(self.old_eqs[self.showing_version].equation)
 
-    def add_text(self, str):
-        self.button_pressed(self.TYPE_TEXT, str)
+    def add_text(self, input_str):
+        self.button_pressed(self.TYPE_TEXT, input_str)
 
 # This function should be split up properly
-    def button_pressed(self, str_type, str):
+    def button_pressed(self, str_type, input_str):
         sel = self.text_entry.get_selection_bounds()
         pos = self.text_entry.get_position()
 
@@ -785,45 +785,45 @@ class Calculate(ShareableActivity):
 
         if str_type == self.TYPE_FUNCTION:
             if len(sel) == 0:
-                self.text_entry.insert_text(str + '()', pos)
-                self.text_entry.set_position(pos + len(str) + 1)
+                self.text_entry.insert_text(input_str + '()', pos)
+                self.text_entry.set_position(pos + len(input_str) + 1)
             else:
-                self.text_entry.set_text(text[:start] + str + '(' + text[start:end] + ')' + text[end:])
-                self.text_entry.set_position(end + len(str) + 2)
+                self.text_entry.set_text(text[:start] + input_str + '(' + text[start:end] + ')' + text[end:])
+                self.text_entry.set_position(end + len(input_str) + 2)
 
         elif str_type == self.TYPE_OP_PRE:
             if len(sel) is 2:
                 pos = start
-            self.text_entry.insert_text(str, pos)
-            self.text_entry.set_position(pos + len(str))
+            self.text_entry.insert_text(input_str, pos)
+            self.text_entry.set_position(pos + len(input_str))
 
         elif str_type == self.TYPE_OP_POST:
             if len(sel) is 2:
                 pos = end
             elif pos == 0:
                 ans = self.format_insert_ans()
-                str = ans + str
+                input_str = ans + input_str
                 self.ans_inserted = True
-            self.text_entry.insert_text(str, pos)
-            self.text_entry.set_position(pos + len(str))
+            self.text_entry.insert_text(input_str, pos)
+            self.text_entry.set_position(pos + len(input_str))
 
         elif str_type == self.TYPE_TEXT:
             tlen = len(self.text_entry.get_text())
             if len(sel) == 2:
                 tlen -= (end - start)
 
-            if tlen == 0 and (str in self._chars_ans_diadic) and \
+            if tlen == 0 and (input_str in self._chars_ans_diadic) and \
                     self.parser.get_var('Ans') is not None:
                 ans = self.format_insert_ans()
-                self.text_entry.set_text(ans + str)
-                self.text_entry.set_position(len(ans) + len(str))
+                self.text_entry.set_text(ans + input_str)
+                self.text_entry.set_position(len(ans) + len(input_str))
                 self.ans_inserted = True
             elif len(sel) is 2:
-                self.text_entry.set_text(text[:start] + str + text[end:])
-                self.text_entry.set_position(pos + start - end + len(str))
+                self.text_entry.set_text(text[:start] + input_str + text[end:])
+                self.text_entry.set_position(pos + start - end + len(input_str))
             else:
-                self.text_entry.insert_text(str, pos)
-                self.text_entry.set_position(pos + len(str))
+                self.text_entry.insert_text(input_str, pos)
+                self.text_entry.set_position(pos + len(input_str))
 
         else:
             _logger.error(_('button_pressed(): invalid type'))
