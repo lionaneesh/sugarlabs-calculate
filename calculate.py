@@ -813,7 +813,8 @@ class Calculate(ShareableActivity):
                 tlen -= (end - start)
 
             if tlen == 0 and (input_str in self._chars_ans_diadic) and \
-                    self.parser.get_var('Ans') is not None:
+                    self.parser.get_var('Ans') is not None and \
+                    type(self.parser.get_var('Ans')) is not str:
                 ans = self.format_insert_ans()
                 self.text_entry.set_text(ans + input_str)
                 self.text_entry.set_position(len(ans) + len(input_str))
