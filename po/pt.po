@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-23 20:28+0200\n"
+"PO-Revision-Date: 2012-03-24 16:14+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
@@ -802,7 +802,7 @@ msgstr "Número de dígitos exibidos"
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr "Base da formatação dos números inteiros"
+msgstr "Base de formatação dos números inteiros"
 
 #~ msgid "Enter"
 #~ msgstr "Introduzir"
