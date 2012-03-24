@@ -128,7 +128,7 @@ msgstr ""
 
 #: calculate.py:109
 #, python-format
-#, python-format, 
+#, python-format,
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() string invalid (%s)"
 
@@ -319,8 +319,9 @@ msgid ""
 msgstr ""
 
 #: functions.py:136
+#, fuzzy
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "sub(x, y), return x - y"
 
 #: functions.py:141
 msgid ""
@@ -437,8 +438,9 @@ msgid ""
 msgstr ""
 
 #: functions.py:337
+#, fuzzy
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "sub(x, y), return x - y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
