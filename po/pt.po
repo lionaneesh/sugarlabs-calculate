@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-24 16:14+0200\n"
+"PO-Revision-Date: 2012-03-27 15:24+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
@@ -34,7 +34,7 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com a variável 'var' no "
+"plot(eqn, var=-a..b), traça gráfico da equação 'eqn' com a variável 'var' no "
 "intervalo de 'a' a 'b'"
 
 #: astparser.py:59
@@ -778,7 +778,7 @@ msgstr "Número de Ouro"
 
 #: toolbars.py:279
 msgid "Plot"
-msgstr "Gráfico da função (Plot)"
+msgstr "Traçar gráfico de função"
 
 #: toolbars.py:286
 msgid "Degrees"
