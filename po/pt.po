@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-02-01 00:23+0200\n"
+"PO-Revision-Date: 2012-03-27 15:24+0200\n"
 "Last-Translator: Eduardo H. <hoboprimate@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: pt\n"
@@ -34,13 +34,13 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b), cria gráfico da equação 'eqn' com variável 'var' no "
-"intervalo entre a e b"
+"plot(eqn, var=-a..b), traça gráfico da equação 'eqn' com a variável 'var' no "
+"intervalo de 'a' a 'b'"
 
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr "Erro sintáctico em %d"
+msgstr "Erro sintático em %d"
 
 #: astparser.py:71 astparser.py:83
 #, python-format
@@ -61,7 +61,7 @@ msgstr ""
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:109
 msgid "index"
-msgstr "índice"
+msgstr "index"
 
 #: astparser.py:109
 msgid "topics"
@@ -92,7 +92,7 @@ msgstr "Funções"
 #: astparser.py:135
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
-msgstr "Não existe ajuda sobre '%s', usa help(index) para ver o índice"
+msgstr "Não existe ajuda sobre '%s', utiliza help(index) para ver o índice"
 
 #: astparser.py:459
 msgid "help"
@@ -100,17 +100,17 @@ msgstr "help"
 
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr "Detectada recursão"
+msgstr "Detetada recursão"
 
 #: astparser.py:490
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "Função '%s' não está definida"
+msgstr "Função '%s' não definida"
 
 #: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "Variável '%s' não está definida"
+msgstr "Variável '%s' não definida"
 
 #: astparser.py:502
 #, python-format
@@ -119,7 +119,7 @@ msgstr "Atributo '%s' não existe"
 
 #: astparser.py:596
 msgid "Parse error"
-msgstr "Erro sintáctico"
+msgstr "Erro sintático"
 
 #: astparser.py:601
 msgid "Multiple statements not supported"
@@ -132,16 +132,16 @@ msgstr "Erro interno"
 #: calculate.py:109
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() cadeia de caracteres (string) inválida (%s)"
+msgstr "Equation.parse() texto inválido (%s)"
 
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
-msgstr "Não é possível associar etiqueta: irá causar recursão"
+msgstr "Não é possível associar etiqueta: irá causar \"recursão\""
 
 #: calculate.py:546
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "Escrevendo no Diário (%s)"
+msgstr "A escrever no Diário (%s)"
 
 #: calculate.py:829
 msgid "button_pressed(): invalid type"
@@ -213,7 +213,7 @@ msgstr "exp"
 
 #: functions.py:51
 msgid "factorial"
-msgstr "factorial"
+msgstr "fatorial"
 
 #: functions.py:52
 msgid "fac"
@@ -301,14 +301,14 @@ msgstr "xor"
 
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
-msgstr "abs(x), devolve o valor absoluto de x, ou seja -x para x < 0"
+msgstr "abs(x), devolve o valor absoluto de x, o que significa -x para x < 0"
 
 #: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), devolve o arco co-seno de x. Este é o ângulo cujo co-seno é x. "
+"acos(x), devolve o arco cosseno de x. Este é o ângulo cujo cosseno é x. "
 "Definido para -1 <= x < 1"
 
 #: functions.py:123
@@ -316,15 +316,15 @@ msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
-"acosh(x), devolve o arco co-seno hiperbólico de x. Este é o valor y cujo co-"
-"seno hiperbólico é igual a x."
+"acosh(x), devolve o arco cosseno hiperbólico de x. Este é o valor y cujo "
+"cosseno hiperbólico é igual a x."
 
 #: functions.py:129
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"And(x, y), Conjunção lógica (\"E\"). Devolve Verdadeiro (True) se x e y forem "
-"verdadeiros, caso contrário devolve Falso (False)"
+"And(x, y), Conjunção lógica (\"and\"). Devolve \"True\"(Verdadeiro) se x e y "
+"forem verdadeiros, caso contrário devolve \"False\" (Falso)"
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
@@ -343,7 +343,7 @@ msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
-"asinh(x), devolve o arco seno hiperbólico de x. Este é o valor x cujo seno "
+"asinh(x), devolve o arco seno hiperbólico de x. Este é o valor y cujo seno "
 "hiperbólico é igual a x."
 
 #: functions.py:153
@@ -376,21 +376,21 @@ msgstr ""
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr "ceil(x), devolve o menor número inteiro maior ou igual x."
+msgstr "ceil(x), devolve o menor número inteiro maior ou igual a x."
 
 #: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
-"cos(x), devolve o co-seno de x. Esta é a coordenada x do círculo unitário no "
+"cos(x), devolve o cosseno de x. Esta é a coordenada X do círculo unitário no "
 "ângulo x"
 
 #: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
-"cosh(x), devolve o co-seno hiperbólico de x. Obtido por (exp(x) + exp(-x)) / "
+"cosh(x), devolve o cosseno hiperbólico de x. Obtido por (exp(x) + exp(-x)) / "
 "2"
 
 #: functions.py:198
@@ -407,7 +407,7 @@ msgid ""
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
 "gcd(a, b), determina o maior denominador comum de a e b. Por exemplo, o "
-"maior factor comum dos números 15 e 18 é 3."
+"maior fator comum dos números 15 e 18 é 3."
 
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -421,13 +421,12 @@ msgstr "Factorial é definido apenas para números inteiros"
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
-"factorial(n), devolve o factorial de n. Obtido por n * (n - 1) * (n - 2) * "
+"factorial(n), devolve o fatorial de n. Obtido por n * (n - 1) * (n - 2) * "
 "..."
 
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr ""
-"fac(x), devolve o factorial de x. Obtido por x * (x - 1) * (x - 2) * ..."
+msgstr "fac(x), devolve o fatorial de x. Obtido por x * (x - 1) * (x - 2) * ..."
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
@@ -481,12 +480,12 @@ msgstr "negate(x), devolve -x"
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"Or(x, y), disjunção lógica (\"Ou\"). Devolve Verdadeiro (True) se x e/ou y "
-"forem verdadeiros, caso contrário devolve Falso (False)"
+"Or(x, y), disjunção lógica (\"or\"). Devolve \"True\"(Verdadeiro) se x ou y "
+"forem verdadeiros, caso contrário devolve \"Falso\"(Falso)"
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr "pow(x, y), devolve x elevado a y (x**y)"
+msgstr "pow(x, y), devolve x elevado à potência y (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
@@ -501,7 +500,7 @@ msgid ""
 msgstr ""
 "rand_int([<maxval>]), devolve um número inteiro aleatório entre 0 e "
 "<maxval>, <maxval> é um argumento opcional e está definido para 65535 por "
-"padrão."
+"omissão."
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
@@ -528,7 +527,7 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), devolve o seno de x. Esta é a coordenada y no círculo unitário no "
+"sin(x), devolve o seno de x. Esta é a coordenada Y no círculo unitário no "
 "ângulo x"
 
 #: functions.py:403
@@ -563,9 +562,9 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
-"tan(x), devolve a tangente de x. Esta é a inclinação da linha desde a origem "
-"do círculo unitário até ao ponto no círculo unitário definido pelo ângulo "
-"x. Obtido por sin(x) / cos(x)"
+"tan(x), devolve a tangente de x. Esta é a inclinação da linha que vai desde "
+"a origem do círculo unitário até ao ponto no círculo unitário definido pelo "
+"ângulo x. Obtido por sin(x) / cos(x)"
 
 # English original is incorrect
 #: functions.py:439
@@ -578,9 +577,9 @@ msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
-"xor(x, y), disjunção exclusiva (\"Ou exclusivo\"). Devolve Verdadeiro (True ) "
-"caso x é Verdadeiro e y é Falso, ou x é Falso e y é Verdadeiro. Caso "
-"contrário devolve Falso (False)"
+"xor(x, y), disjunção exclusiva (\"xor\"). Devolve \"True\"(Verdadeiro) se x é "
+"Verdadeiro e y é Falso, ou y é Verdadeiro e x é Falso. Caso contrário "
+"devolve \"False\"(Falso)"
 
 #: layout.py:69
 msgid "Clear"
@@ -620,7 +619,7 @@ msgstr "As minhas equações"
 
 #: layout.py:199
 msgid "Change view between own and all equations"
-msgstr "Mudar de visualização entre as tuas equações e todas as equações"
+msgstr "Mudar a vista entre as tuas equações e todas as equações"
 
 #: layout.py:202
 msgid "Show history"
@@ -632,7 +631,7 @@ msgstr "Mostrar variáveis"
 
 #: layout.py:204
 msgid "Change view between history and variables"
-msgstr "Mudar de visualização entre o histórico e as variáveis"
+msgstr "Mudar a vista entre o histórico e as variáveis"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -687,7 +686,7 @@ msgstr "Quadrado"
 
 #: toolbars.py:152
 msgid "Square root"
-msgstr "Raíz quadrada"
+msgstr "Raiz quadrada"
 
 #: toolbars.py:157
 msgid "Inverse"
@@ -707,7 +706,7 @@ msgstr "Logaritmo natural"
 
 #: toolbars.py:180
 msgid "Factorial"
-msgstr "Factorial"
+msgstr "Fatorial"
 
 #: toolbars.py:190
 msgid "Sine"
@@ -715,7 +714,7 @@ msgstr "Seno"
 
 #: toolbars.py:194
 msgid "Cosine"
-msgstr "Co-seno"
+msgstr "Cosseno"
 
 #: toolbars.py:198
 msgid "Tangent"
@@ -727,7 +726,7 @@ msgstr "Arco seno"
 
 #: toolbars.py:208
 msgid "Arc cosine"
-msgstr "Arco co-seno"
+msgstr "Arco cosseno"
 
 #: toolbars.py:212
 msgid "Arc tangent"
@@ -739,7 +738,7 @@ msgstr "Seno hiperbólico"
 
 #: toolbars.py:222
 msgid "Hyperbolic cosine"
-msgstr "Co-seno hiperbólico"
+msgstr "Cosseno hiperbólico"
 
 #: toolbars.py:226
 msgid "Hyperbolic tangent"
@@ -747,11 +746,11 @@ msgstr "Tangente hiperbólica"
 
 #: toolbars.py:236
 msgid "Logical and"
-msgstr "Conjunção lógica (\"E\")"
+msgstr "Conjunção lógica (\"and\")"
 
 #: toolbars.py:240
 msgid "Logical or"
-msgstr "Disjunção lógica (\"Ou\")"
+msgstr "Disjunção lógica (\"or\")"
 
 #: toolbars.py:250
 msgid "Equals"
@@ -779,7 +778,7 @@ msgstr "Número de Ouro"
 
 #: toolbars.py:279
 msgid "Plot"
-msgstr "Gráfico de função (Plot)"
+msgstr "Traçar gráfico de função"
 
 #: toolbars.py:286
 msgid "Degrees"
@@ -803,7 +802,7 @@ msgstr "Número de dígitos exibidos"
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr "Base da formatação dos números inteiros"
+msgstr "Base de formatação dos números inteiros"
 
 #~ msgid "Enter"
 #~ msgstr "Introduzir"

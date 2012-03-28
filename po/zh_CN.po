@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-22 06:32+0200\n"
+"PO-Revision-Date: 2012-03-24 05:04+0200\n"
 "Last-Translator: lite <litekok@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: zh_CN\n"
@@ -149,7 +149,7 @@ msgstr "button_pressed(): 无效类型"
 
 #: functions.py:35
 msgid "add"
-msgstr "加add"
+msgstr "相加add"
 
 #: functions.py:36
 msgid "abs"
@@ -185,7 +185,7 @@ msgstr "与and"
 
 #: functions.py:44
 msgid "b10bin"
-msgstr "十进制转二进制b10bin"
+msgstr "二进制转十进制b10bin"
 
 #: functions.py:45
 msgid "ceil"
@@ -209,106 +209,99 @@ msgstr "最大公约数gcd"
 
 #: functions.py:50
 msgid "exp"
-msgstr "exp"
+msgstr "e 的指定数乘幂exp"
 
 #: functions.py:51
-#, fuzzy
 msgid "factorial"
-msgstr "阶乘"
+msgstr "阶乘函数factorial"
 
 #: functions.py:52
 msgid "fac"
-msgstr "fac"
+msgstr "阶乘fac"
 
 #: functions.py:53
-#, fuzzy
 msgid "factorize"
-msgstr "阶乘"
+msgstr "因式分解factorize"
 
 #: functions.py:54
 msgid "floor"
-msgstr ""
+msgstr "舍去法取整floor"
 
 #: functions.py:55
 msgid "inv"
-msgstr ""
+msgstr "矩阵的逆inv"
 
 #: functions.py:56
 msgid "is_int"
-msgstr ""
+msgstr "是整数吗？"
 
 #: functions.py:57
 msgid "ln"
-msgstr "ln"
+msgstr "自然对数ln"
 
 #: functions.py:58
 msgid "log10"
-msgstr ""
+msgstr "常用对数log10"
 
 #: functions.py:59
 msgid "mul"
-msgstr ""
+msgstr "相乘mul"
 
 #: functions.py:60
 msgid "or"
-msgstr "or"
+msgstr "或or"
 
 #: functions.py:61
 msgid "rand_float"
-msgstr ""
+msgstr "随机浮点数rand_float"
 
 #: functions.py:62
 msgid "rand_int"
-msgstr ""
+msgstr "随机整数rand_int"
 
 #: functions.py:63
 msgid "round"
-msgstr ""
+msgstr "四舍五入法取整round"
 
 #: functions.py:64
-#, fuzzy
 msgid "sin"
-msgstr "sin"
+msgstr "正弦sin"
 
 #: functions.py:65
-#, fuzzy
 msgid "sinh"
-msgstr "sinh"
+msgstr "双曲正弦sinh"
 
 #: functions.py:66
-#, fuzzy
 msgid "sinc"
-msgstr "sinc"
+msgstr "sinc函数"
 
 #: functions.py:67
 msgid "sqrt"
-msgstr "sqrt"
+msgstr "平方根sqrt"
 
 #: functions.py:68
 msgid "sub"
-msgstr ""
+msgstr "相减sub"
 
 #: functions.py:69
 msgid "square"
-msgstr "square"
+msgstr "平方square"
 
 #: functions.py:70
-#, fuzzy
 msgid "tan"
-msgstr "tan"
+msgstr "正切tan"
 
 #: functions.py:71
-#, fuzzy
 msgid "tanh"
-msgstr "tanh"
+msgstr "双曲正切tanh"
 
 #: functions.py:72
 msgid "xor"
-msgstr "xor"
+msgstr "异或xor"
 
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
-msgstr ""
+msgstr "abs(x)，返回x的绝对值，当 x<0 时该值为 -x"
 
 #: functions.py:117
 msgid ""
@@ -320,20 +313,18 @@ msgstr "acos(x), 返回x的反余弦值。 这是余弦为x的角度值。x应�
 msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
-msgstr ""
+msgstr "acosh(x)，返回x的双曲余弦。该值的双曲余弦等于x。"
 
 #: functions.py:129
-#, fuzzy
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
-msgstr "and(x, y)，逻辑与。x，y都为真则为真，否则为假。"
+msgstr "and(x, y)，逻辑与。x，y都为真则为真，否则为假"
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "add(x, y)，返回 x + y"
 
 #: functions.py:141
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
@@ -343,7 +334,7 @@ msgstr "asin(x), 返回x的反正弦值，也就是正弦为x的角度值。范�
 msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
-msgstr ""
+msgstr "asinh(x)，返回x的双曲正弦。该值的双曲正弦等于x。"
 
 #: functions.py:153
 msgid ""
@@ -355,21 +346,21 @@ msgstr "atan(x), 返回x的反正切值，也就是正切为x的角度值。定�
 msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
-msgstr ""
+msgstr "atanh(x)，返回x的双曲正切。该值的双曲正切等于x。"
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr ""
+msgstr "数值不是二进制数"
 
 #: functions.py:178
 msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
-msgstr ""
+msgstr "b10bin(x)，转换二进制成十进制，例如 b10bin(10111)=23，"
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr ""
+msgstr "ceil(x)，返回大于x的最小整数。"
 
 #: functions.py:188
 msgid ""
@@ -384,17 +375,17 @@ msgstr "cosh(x),返回x的双曲余弦值，也就是 (exp(x) + exp(-x)) / 2"
 
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "不能被零除"
 
 #: functions.py:219
 msgid "Invalid argument"
-msgstr ""
+msgstr "无效的参数"
 
 #: functions.py:222
 msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
-msgstr ""
+msgstr "gcd(a, b)，返回a和b的最大公约数。例如，15和18的最大公约数为3。"
 
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -402,95 +393,93 @@ msgstr "exp(x), 返回自然指数的x次幂，也就是e^x。"
 
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr ""
+msgstr "只能是整数的阶乘"
 
 #: functions.py:244
-#, fuzzy
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
-msgstr "fac(x),返回x的阶乘，也就是x * (x - 1) * (x - 2) * ..."
+msgstr "factorial(n)，返回n的阶乘，也就是n * (n - 1) * (n - 2) * ..."
 
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
-msgstr "fac(x),返回x的阶乘，也就是x * (x - 1) * (x - 2) * ..."
+msgstr "fac(x)，返回x的阶乘，也就是x * (x - 1) * (x - 2) * ..."
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr ""
+msgstr "floor(x)，返回小于x的最大整数。"
 
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr ""
+msgstr "inv(x)，返回x的倒数，即 1 / x"
 
 #: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr ""
+msgstr "Logarithm(x)中x只能>0"
 
 #: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
-msgstr "ln(x), 返回x的自然对数值，也就是当exp()等于x的值。定义x >= 0。"
+msgstr "ln(x)，返回x的自然对数值，也就是当exp()等于x的值。定义x >= 0。"
 
 #: functions.py:320
 msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
-msgstr ""
+msgstr "log10(x)，返回底数为 10的x的对数值. 也就是10^y等于x的y值。x 必须 >= 0。"
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr ""
+msgstr "只能计算 x 整除 <integer> 的余数"
 
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
-msgstr ""
+msgstr "mod(x, y)，返回x对于y的模。也就是x整除y的余数。"
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "mul(x, y)，返回 x * y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr ""
+msgstr "negate(x)，返回 -x"
 
 #: functions.py:346
-#, fuzzy
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
-msgstr "or(x, y), 逻辑或。只要x或y有一个为真则为真，否则为假"
+msgstr "or(x, y)，逻辑或。只要x或y有一个为真则为真，否则为假"
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr ""
+msgstr "pow(x, y)，返回x的y次方 (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
-msgstr ""
+msgstr "rand_float()，返回0.0和1.0之间的一个随机浮点数"
 
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
-msgstr ""
+msgstr "rand_int([<maxval>])，返回0和 <maxval> 之间的一个随机整数。<maxval>是可选参赛，缺省值为65535。"
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr ""
+msgstr "round(x)，返回最接近x的整数。"
 
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr ""
+msgstr "位运算只适用于整数"
 
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
-msgstr ""
+msgstr "shift_left(x, y)，将x向左位移y位（每位乘以2）"
 
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
-msgstr ""
+msgstr "shift_right(x, y)，将x向右位移y位（每位除以2）"
 
 #: functions.py:397
 msgid ""
@@ -505,7 +494,7 @@ msgstr "sinh(x), 返回x的双曲正弦值，也就是 (exp(x) - exp(-x)) / 2"
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr ""
+msgstr "sinc(x), 返回x的sinc值。也就是 sin(x)/x。"
 
 #: functions.py:415
 msgid ""
@@ -515,11 +504,11 @@ msgstr "sqrt(x), 返回x的平方根，也就是平方等于x的数值，定义x
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "square(x), 返回 x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "sub(x, y), 返回 x - y"
 
 #: functions.py:432
 msgid ""
@@ -529,9 +518,8 @@ msgid ""
 msgstr "tan(x), 返回x的正切值，也就是单位圆上，通过圆心与横轴夹角为x的直线的斜率，即sin(x) / cos(x)"
 
 #: functions.py:439
-#, fuzzy
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
-msgstr "sinh(x), 返回x的双曲正切值，即 sinh(x) / cosh(x)"
+msgstr "sinh(x), 返回x的双曲正切值，也就是 sinh(x) / cosh(x)"
 
 #: functions.py:444
 msgid ""
@@ -561,7 +549,7 @@ msgstr "布尔代数"
 
 #: layout.py:119 layout.py:143
 msgid "Miscellaneous"
-msgstr ""
+msgstr "杂项"
 
 #: layout.py:164
 msgid "Label:"
@@ -577,7 +565,7 @@ msgstr "我的方程式"
 
 #: layout.py:199
 msgid "Change view between own and all equations"
-msgstr ""
+msgstr "在个人视图和所有方程视图之间切换"
 
 #: layout.py:202
 msgid "Show history"
@@ -589,7 +577,7 @@ msgstr "显示变量"
 
 #: layout.py:204
 msgid "Change view between history and variables"
-msgstr ""
+msgstr "在历史视图和变量视图之间切换"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -604,7 +592,7 @@ msgstr "÷"
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr ""
+msgstr "equ_sym"
 
 #: mathlib.py:216
 msgid "Undefined"
@@ -624,7 +612,7 @@ msgstr "复制"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
-msgstr ""
+msgstr "<ctrl>c"
 
 #: toolbars.py:126
 msgid "Cut"
@@ -632,7 +620,7 @@ msgstr "剪切"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
-msgstr ""
+msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
@@ -648,7 +636,7 @@ msgstr "平方根"
 
 #: toolbars.py:157
 msgid "Inverse"
-msgstr ""
+msgstr "倒数"
 
 #: toolbars.py:164
 msgid "e to the power x"
@@ -728,16 +716,15 @@ msgstr "e"
 
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "γ"
 
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
 #: toolbars.py:279
-#, fuzzy
 msgid "Plot"
-msgstr "plot"
+msgstr "绘画"
 
 #: toolbars.py:286
 msgid "Degrees"
@@ -749,19 +736,19 @@ msgstr "弧度"
 
 #: toolbars.py:291
 msgid "Degrees / Radians"
-msgstr ""
+msgstr "度/弧度"
 
 #: toolbars.py:300
 msgid "Exponent / Scientific notation"
-msgstr ""
+msgstr "指数/科学记数法"
 
 #: toolbars.py:310
 msgid "Number of shown digits"
-msgstr ""
+msgstr "显示位数的数量"
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr ""
+msgstr "整型格式"
 
 #~ msgid "Enter"
 #~ msgstr "输入"
