@@ -28,7 +28,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-01-30 03:36+0200\n"
+"PO-Revision-Date: 2012-04-03 05:10+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -563,7 +563,7 @@ msgstr ""
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr "sinc(x), devuelve el seno cardinal de x.  Dado por sin(x) / x."
+msgstr "sinc(x), devuelve el seno cardinal de x. Dado por sin(x) / x."
 
 #: functions.py:415
 msgid ""
