@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-16 18:43+0200\n"
+"PO-Revision-Date: 2012-04-05 06:24+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: rw\n"
@@ -123,8 +123,9 @@ msgid "Multiple statements not supported"
 msgstr ""
 
 #: astparser.py:625
+#, fuzzy
 msgid "Internal error"
-msgstr ""
+msgstr "Ikosa ryimbere"
 
 #: calculate.py:109
 #, python-format
@@ -143,15 +144,16 @@ msgstr "Kwandika kukinyamakuru (%s)"
 
 #: calculate.py:829
 msgid "button_pressed(): invalid type"
-msgstr "ububuto_ bwakanzwe(): ubwoko butemewe"
+msgstr "ububuto_bwakanzwe(): ubwoko butemewe"
 
 #: functions.py:35
 msgid "add"
-msgstr ""
+msgstr "ongeraho"
 
 #: functions.py:36
+#, fuzzy
 msgid "abs"
-msgstr ""
+msgstr "abs"
 
 #: functions.py:37
 msgid "acos"
@@ -198,12 +200,14 @@ msgid "cosh"
 msgstr "cosh"
 
 #: functions.py:48
+#, fuzzy
 msgid "div"
-msgstr ""
+msgstr "div"
 
 #: functions.py:49
+#, fuzzy
 msgid "gcd"
-msgstr ""
+msgstr "gcd"
 
 #: functions.py:50
 msgid "exp"
@@ -226,12 +230,14 @@ msgid "floor"
 msgstr ""
 
 #: functions.py:55
+#, fuzzy
 msgid "inv"
-msgstr ""
+msgstr "inv"
 
 #: functions.py:56
+#, fuzzy
 msgid "is_int"
-msgstr ""
+msgstr "is_int"
 
 #: functions.py:57
 msgid "ln"
@@ -242,8 +248,9 @@ msgid "log10"
 msgstr "log10"
 
 #: functions.py:59
+#, fuzzy
 msgid "mul"
-msgstr ""
+msgstr "gukuba"
 
 #: functions.py:60
 msgid "or"
@@ -278,8 +285,9 @@ msgid "sqrt"
 msgstr "sqrt"
 
 #: functions.py:68
+#, fuzzy
 msgid "sub"
-msgstr ""
+msgstr "kuramo"
 
 #: functions.py:69
 msgid "square"
@@ -321,7 +329,7 @@ msgstr ""
 #: functions.py:136
 #, fuzzy
 msgid "add(x, y), return x + y"
-msgstr "sub(x, y), return x - y"
+msgstr "ongeraho (x, y),gar()uka x + y"
 
 #: functions.py:141
 msgid ""
@@ -373,8 +381,9 @@ msgid ""
 msgstr ""
 
 #: functions.py:198
+#, fuzzy
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "Kugabanya na zeru"
 
 #: functions.py:219
 msgid "Invalid argument"
@@ -440,7 +449,7 @@ msgstr ""
 #: functions.py:337
 #, fuzzy
 msgid "mul(x, y), return x * y"
-msgstr "sub(x, y), return x - y"
+msgstr "kuba(x, y), garuka x * y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
@@ -503,12 +512,14 @@ msgid ""
 msgstr ""
 
 #: functions.py:420
+#, fuzzy
 msgid "square(x), return x * x"
-msgstr "square(x), return x * x"
+msgstr "kare(x), garuka x * x"
 
 #: functions.py:427
+#, fuzzy
 msgid "sub(x, y), return x - y"
-msgstr "sub(x, y), return x - y"
+msgstr "kuraho(x, y), garuka x - y"
 
 #: functions.py:432
 msgid ""
