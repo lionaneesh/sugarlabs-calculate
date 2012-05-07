@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-09 04:11+0200\n"
+"PO-Revision-Date: 2012-05-07 08:44+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ne\n"
@@ -606,7 +606,7 @@ msgstr "विविध"
 
 #: layout.py:164
 msgid "Label:"
-msgstr "ईंकित"
+msgstr "ईंकित:"
 
 #: layout.py:197
 msgid "All equations"
