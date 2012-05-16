@@ -10,20 +10,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2012-02-27 06:34+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Translate Toolkit 1.1.1rc4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -90,8 +90,9 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
 
 #: astparser.py:459
+#, fuzzy
 msgid "help"
-msgstr ""
+msgstr "ياردەم"
 
 #: astparser.py:466
 msgid "Recursion detected"
@@ -523,12 +524,14 @@ msgid ""
 msgstr ""
 
 #: layout.py:69
+#, fuzzy
 msgid "Clear"
-msgstr ""
+msgstr "تازىلاش"
 
 #: layout.py:99 layout.py:139
+#, fuzzy
 msgid "Edit"
-msgstr ""
+msgstr "تەھرىرلەش"
 
 #: layout.py:104 layout.py:140
 msgid "Algebra"
@@ -598,28 +601,32 @@ msgid "Error: unsupported type"
 msgstr ""
 
 #: toolbars.py:53
+#, fuzzy
 msgid "Help"
-msgstr ""
+msgstr "ياردەم"
 
 #: toolbars.py:121
+#, fuzzy
 msgid "Copy"
-msgstr ""
+msgstr "كۆچۈرۈش"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
 msgstr ""
 
 #: toolbars.py:126
+#, fuzzy
 msgid "Cut"
-msgstr ""
+msgstr "كەس"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
 msgstr ""
 
 #: toolbars.py:137
+#, fuzzy
 msgid "Paste"
-msgstr ""
+msgstr "چاپلاش"
 
 #: toolbars.py:147
 msgid "Square"
