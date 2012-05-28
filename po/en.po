@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-01-30 02:08+0200\n"
+"PO-Revision-Date: 2012-05-28 21:18+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: English\n"
 "Language: en\n"
@@ -625,7 +625,7 @@ msgstr "Change view between history and variables"
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "*"
+msgstr "×"
 
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
