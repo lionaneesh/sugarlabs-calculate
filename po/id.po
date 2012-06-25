@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2011-04-06 14:55+0200\n"
-"Last-Translator: <arief.utama@gmail.com>\n"
+"PO-Revision-Date: 2012-06-25 19:22+0200\n"
+"Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.1\n"
+"X-Generator: Pootle 2.0.5\n"
 
 #: activity/activity.info:2
 msgid "Calculate"
@@ -34,11 +34,13 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"plot(eqn, var=-a..b), menggambar persamaan 'eqn' dengan variabel 'var' yang "
+"nilainya antara a sampai dengan b"
 
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr ""
+msgstr "Galat penguraian pada %d"
 
 #: astparser.py:71 astparser.py:83
 #, python-format
@@ -47,58 +49,59 @@ msgstr "Kesalahan pada %d"
 
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
-msgstr ""
+msgstr "Ini hanya sekedar topik percobaan, gunakan help(index) untuk indeks"
 
 #: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
 "Gunakan help(test) untuk bantuan tentang 'test', atau help(index) untuk "
-"bantuan tentang index"
+"bantuan tentang indeks"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:109
 msgid "index"
-msgstr ""
+msgstr "indeks"
 
 #: astparser.py:109
 msgid "topics"
-msgstr ""
+msgstr "topik"
 
 #: astparser.py:110
 msgid "Topics"
-msgstr ""
+msgstr "Topik"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr ""
+msgstr "variabel"
 
 #: astparser.py:119
 msgid "Variables"
-msgstr ""
+msgstr "Variabel"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
 msgid "functions"
-msgstr "fungsi-fungsi"
+msgstr "fungsi"
 
 #: astparser.py:126
-#, fuzzy
 msgid "Functions"
-msgstr "fungsi-fungsi"
+msgstr "Fungsi"
 
 #: astparser.py:135
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"Tidak ada bantuan tentang '%s' yang tersedia, gunakan help(index) untuk "
+"indeks"
 
 #: astparser.py:459
 msgid "help"
-msgstr ""
+msgstr "bantuan"
 
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr ""
+msgstr "Rekursi terdeteksi"
 
 #: astparser.py:490
 #, python-format
@@ -113,7 +116,7 @@ msgstr "Variabel '%s' tidak dikenal"
 #: astparser.py:502
 #, python-format
 msgid "Attribute '%s' does not exist"
-msgstr ""
+msgstr "Atribut '%s' tidak ada"
 
 #: astparser.py:596
 msgid "Parse error"
@@ -121,11 +124,11 @@ msgstr "Terjadi kesalahan saat menguraikan"
 
 #: astparser.py:601
 msgid "Multiple statements not supported"
-msgstr ""
+msgstr "Pernyataan berganda tak didukung"
 
 #: astparser.py:625
 msgid "Internal error"
-msgstr ""
+msgstr "Galat internal"
 
 #: calculate.py:109
 #, python-format
@@ -134,7 +137,7 @@ msgstr "Equation.parse() string invalid (%s)"
 
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
-msgstr ""
+msgstr "Tak bisa menetapkan label: akan menyebabkan rekursi"
 
 #: calculate.py:546
 #, python-format
@@ -148,11 +151,11 @@ msgstr "button_pressed(): invalid type"
 
 #: functions.py:35
 msgid "add"
-msgstr ""
+msgstr "tambah"
 
 #: functions.py:36
 msgid "abs"
-msgstr ""
+msgstr "abs"
 
 # Leaving this the same as it's a generic math function
 #: functions.py:37
@@ -161,39 +164,36 @@ msgstr "acos"
 
 # Leaving this the same as it's a generic math function
 #: functions.py:38
-#, fuzzy
 msgid "acosh"
-msgstr "acos"
+msgstr "acosh"
 
 #: functions.py:39
 msgid "asin"
 msgstr "asin"
 
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "asinh"
 
 #: functions.py:41
 msgid "atan"
 msgstr "atan"
 
 #: functions.py:42
-#, fuzzy
 msgid "atanh"
-msgstr "atan"
+msgstr "atanh"
 
 #: functions.py:43
 msgid "and"
-msgstr "dan"
+msgstr "and"
 
 #: functions.py:44
 msgid "b10bin"
-msgstr ""
+msgstr "b10bin"
 
 #: functions.py:45
 msgid "ceil"
-msgstr ""
+msgstr "ceil"
 
 #: functions.py:46
 msgid "cos"
@@ -205,11 +205,11 @@ msgstr "cosh"
 
 #: functions.py:48
 msgid "div"
-msgstr ""
+msgstr "div"
 
 #: functions.py:49
 msgid "gcd"
-msgstr ""
+msgstr "gcd"
 
 #: functions.py:50
 msgid "exp"
@@ -217,7 +217,7 @@ msgstr "exp"
 
 #: functions.py:51
 msgid "factorial"
-msgstr ""
+msgstr "faktorial"
 
 #: functions.py:52
 msgid "fac"
@@ -225,19 +225,19 @@ msgstr "fac"
 
 #: functions.py:53
 msgid "factorize"
-msgstr ""
+msgstr "faktorkan"
 
 #: functions.py:54
 msgid "floor"
-msgstr ""
+msgstr "floor"
 
 #: functions.py:55
 msgid "inv"
-msgstr ""
+msgstr "inv"
 
 #: functions.py:56
 msgid "is_int"
-msgstr ""
+msgstr "is_int"
 
 #: functions.py:57
 msgid "ln"
@@ -245,113 +245,110 @@ msgstr "ln"
 
 #: functions.py:58
 msgid "log10"
-msgstr ""
+msgstr "log10"
 
 #: functions.py:59
 msgid "mul"
-msgstr ""
+msgstr "mul"
 
 #: functions.py:60
 msgid "or"
-msgstr ""
+msgstr "or"
 
 #: functions.py:61
 msgid "rand_float"
-msgstr ""
+msgstr "rand_float"
 
 #: functions.py:62
 msgid "rand_int"
-msgstr ""
+msgstr "rand_int"
 
 #: functions.py:63
 msgid "round"
-msgstr ""
+msgstr "round"
 
 #: functions.py:64
-#, fuzzy
 msgid "sin"
-msgstr "asin"
+msgstr "sin"
 
 #: functions.py:65
-#, fuzzy
 msgid "sinh"
-msgstr "asin"
+msgstr "sinh"
 
 #: functions.py:66
-#, fuzzy
 msgid "sinc"
-msgstr "asin"
+msgstr "sinc"
 
 #: functions.py:67
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
 #: functions.py:68
 msgid "sub"
-msgstr ""
+msgstr "sub"
 
 #: functions.py:69
 msgid "square"
-msgstr ""
+msgstr "square"
 
 #: functions.py:70
-#, fuzzy
 msgid "tan"
-msgstr "atan"
+msgstr "tan"
 
 #: functions.py:71
-#, fuzzy
 msgid "tanh"
-msgstr "atan"
+msgstr "tanh"
 
 #: functions.py:72
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
-msgstr ""
+msgstr "abs(x), menghitung nilai absolut x, yang berarti -x untuk x < 0"
 
 #: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), mengembalikan nilai arcus cosinus dari x, Nilai ini adalah sudut "
-"dimana nilai cosinus nya adalah x. Dimana x berada direntang -1 <= x < 1"
+"acos(x), mengembalikan nilai arcus cosinus dari x. Nilai ini adalah sudut "
+"dimana nilai cosinusnya adalah x. Didefinisikan bagi rentang -1 <= x < 1"
 
 #: functions.py:123
 msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
+"acosh(x), menghitung arc cosinus hiperbolik dari x. Ini adalah nilai y "
+"dimana cosinus hiperboliknya sama dengan x."
 
 #: functions.py:129
-#, fuzzy
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), logika and (dan). Mengembalikan True jika x dan y bernilai True, "
+"and(x, y), fungsi logika dan. Mengembalikan True jika x dan y bernilai True, "
 "jika tidak akan mengembalikan nilai False"
 
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "add(x, y), menghitung x + y"
 
 #: functions.py:141
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
 "asin(x), mengembalikan nilai arcus sinus dari x. Nilai ini adalah sudut "
-"dimana sinusnya adalah x. Dimana x berada direntang -1 <= x <= 1"
+"dimana sinusnya adalah x. Didefinisikan bagi entang -1 <= x <= 1"
 
 #: functions.py:147
 msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
+"asinh(x), mengembalikan nilai arcus sinus hiperbolik dari x. Ini adalah "
+"nilai y dimana sinus hiperboliknya adalah x."
 
 #: functions.py:153
 msgid ""
@@ -366,20 +363,24 @@ msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
+"atanh(x), mengembalikan nilai arcus tangen hiperbolik dari x. Ini adalah "
+"nilai y dimana tangen hiperboliknya adalah x."
 
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr ""
+msgstr "Angka tak nampak biner dalam basis 10"
 
 #: functions.py:178
 msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
 msgstr ""
+"b10bin(x), menginterpretasi suatu bilangan yang ditulis dalam basis 10 "
+"sebagai biner, mis.: b10bin(10111) = 23,"
 
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr ""
+msgstr "ceil(x), mengembalikan bilangan bulat terkecil yang lebih dari x."
 
 #: functions.py:188
 msgid ""
@@ -398,17 +399,20 @@ msgstr ""
 
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "Tak bisa membagi dengan nol"
 
 #: functions.py:219
 msgid "Invalid argument"
-msgstr ""
+msgstr "Argumen tak valid"
 
 #: functions.py:222
 msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
+"gcd(a, b), menentukan greatest common denominator (faktor persekutuan "
+"bersama) dari a dan b. Sebagai contoh, faktor terbesar yang dimiliki bersama "
+"oleh bilangan 15 dan 18 adalah 3."
 
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
@@ -416,15 +420,14 @@ msgstr "exp(x), mengembalikan nilai exponen natural x. Sama dengan e^x"
 
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr ""
+msgstr "Faktorial hanya didefinisikan bagi bilangan bulat"
 
 #: functions.py:244
-#, fuzzy
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
-"fac(x), mengembalikan nilai faktorial dari x. Sama dengan x * (x - 1) * (x - "
-"2) * ..."
+"factorial(n), mengembalikan nilai faktorial dari n. Sama dengan n * (n - 1) "
+"* (n - 2) * ..."
 
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -434,15 +437,15 @@ msgstr ""
 
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr ""
+msgstr "floor(x), mengembalikan bilangan bulat terbesar yang kurang dari x."
 
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr ""
+msgstr "inv(x), mengembalikan kebalikan x, yaitu 1 / x"
 
 #: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr ""
+msgstr "Logaritma(x) hanya didefinisikan bagi x > 0"
 
 #: functions.py:311
 msgid ""
@@ -450,104 +453,111 @@ msgid ""
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
 "ln(x), mengembalikan nilai logaritma natural dari x. Nilai ini adalah nilai "
-"dimana exponen exp() sama dengan x. Berlaku untuk x >= 0"
+"dimana exponen exp() sama dengan x. Berlaku untuk x >= 0."
 
 #: functions.py:320
 msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
+"log10(x), mengembalikan logaritma basis 10 dari x. Ini adalah nilai y dimana "
+"10^y sama dengan x. Didefinisikan bagi x >= 0."
 
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr ""
+msgstr "Hanya dapat menghitung x modulus <integer>"
 
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
+"mod(x, y), mengembalikan modulus x terhadap y. Ini adalah sisa setelah "
+"pembagian x oleh y."
 
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "mul(x, y), menghitung x * y"
 
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr ""
+msgstr "negate(x), mengembalikan -x"
 
 #: functions.py:346
-#, fuzzy
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"and(x, y), logika and (dan). Mengembalikan True jika x dan y bernilai True, "
-"jika tidak akan mengembalikan nilai False"
+"Or(x, y), logika or. Mengembalikan True jika x atau y bernilai True, jika "
+"tidak akan mengembalikan nilai False"
 
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr ""
+msgstr "pow(x, y), mengembalikan x pangkat y (x**y)"
 
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
-msgstr ""
+msgstr "rand_float(), mengembalikan angka pecahan acak antara 0.0 dan 1.0"
 
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
+"rand_int([<maxval>]), mengembalikan bilangan bulat acak antara 0 dan "
+"<maxval>, <maxval> adalah argumen opsional dan nilai bakunya 65535."
 
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr ""
+msgstr "round(x), mengembalikan bilangan bulat terdekat dengan x."
 
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr ""
+msgstr "Operasi bitwise hanya berlaku bagi bilangan bulat"
 
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
+"shift_left(x, y), menggeser x sebanyak y bit ke kiri (mengalikan 2 per bit)"
 
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
 msgstr ""
+"shift_right(x, y), menggeser x sebanyak y bit ke kanan (membagi 2 per bit)"
 
 #: functions.py:397
-#, fuzzy
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"cos(x), mengembalikan nilai cosinus dari x. Nilai ini adalah koordinat-x "
-"dari lingkaran pada sudut x"
+"sin(x), mengembalikan nilai sinus dari x. Ini adalah koordinat-y dari "
+"lingkaran berjari-jari 1 pada sudut x"
 
 #: functions.py:403
-#, fuzzy
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
-"cosh(x), mengembalikan nilai cosinus hiperbolik dari x. Sama dengan (exp(x) "
-"+ exp(-x)) / 2"
+"sinh(x), mengembalikan nilai cosinus hiperbolik dari x. Sama dengan (exp(x) "
+"- exp(-x)) / 2"
 
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
-msgstr ""
+msgstr "sinc(x), mengembalikan sinc dari x. Ini diperoleh dari sin(x) / x."
 
 #: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x), mengembalikan akar kuadrat dari x. Ini adalah nilai yang kuadratnya "
+"sama dengan x. Didefinisikan bagi x >= 0."
 
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "square(x), mengembalikan x * x"
 
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "sub(x, y), menghitung x - y"
 
 #: functions.py:432
 msgid ""
@@ -555,20 +565,27 @@ msgid ""
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x), mengembalikan tangen dari x. Ini adalah kemiringan garis dari titik "
+"pangkal dari lingkaran berjari-jari satu ke titik pada lingkaran yang "
+"didefinisikan oleh sudut x. Diperoleh dari sin(x) / cos(x)"
 
 #: functions.py:439
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"tanh(x), mengembalikan tangen hiperbolik dari x. Diperoleh dari sinh(x) / "
+"cosh(x)"
 
 #: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), xor lojik. Mengembalikan True bila x True (dan y False) atau y "
+"True (dan x False), selain itu mengembalikan False"
 
 #: layout.py:69
 msgid "Clear"
-msgstr ""
+msgstr "Bersihkan"
 
 #: layout.py:99 layout.py:139
 msgid "Edit"
@@ -576,74 +593,74 @@ msgstr "Sunting"
 
 #: layout.py:104 layout.py:140
 msgid "Algebra"
-msgstr ""
+msgstr "Aljabar"
 
 #: layout.py:109 layout.py:141
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometri"
 
 #: layout.py:114 layout.py:142
 msgid "Boolean"
-msgstr ""
+msgstr "Boolean"
 
 #: layout.py:119 layout.py:143
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Rupa-rupa"
 
 #: layout.py:164
 msgid "Label:"
-msgstr ""
+msgstr "Label:"
 
 #: layout.py:197
 msgid "All equations"
-msgstr ""
+msgstr "Semua persamaan"
 
 #: layout.py:197
 msgid "My equations"
-msgstr ""
+msgstr "Persamaanku"
 
 #: layout.py:199
 msgid "Change view between own and all equations"
-msgstr ""
+msgstr "Ubah tilikan antara persamaan milikku dan semua"
 
 #: layout.py:202
 msgid "Show history"
-msgstr ""
+msgstr "Tampilkan riwayat"
 
 #: layout.py:202
 msgid "Show variables"
-msgstr ""
+msgstr "Tampilkan variabel"
 
 #: layout.py:204
 msgid "Change view between history and variables"
-msgstr ""
+msgstr "Ubah tilikan antara riwayat dan variabel"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr ""
+msgstr "×"
 
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr ""
+msgstr "÷"
 
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr ""
+msgstr "="
 
 #: mathlib.py:216
 msgid "Undefined"
-msgstr ""
+msgstr "Tak terdefinisi"
 
 #: mathlib.py:226
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Galat: tipe tak didukung"
 
 #: toolbars.py:53
 msgid "Help"
-msgstr ""
+msgstr "Bantuan"
 
 #: toolbars.py:121
 msgid "Copy"
@@ -651,143 +668,143 @@ msgstr "Salin"
 
 #: toolbars.py:122
 msgid "<ctrl>c"
-msgstr ""
+msgstr "<ctrl>c"
 
 #: toolbars.py:126
 msgid "Cut"
-msgstr ""
+msgstr "Potong"
 
 #: toolbars.py:129
 msgid "<ctrl>x"
-msgstr ""
+msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
-msgstr ""
+msgstr "Tempel"
 
 #: toolbars.py:147
 msgid "Square"
-msgstr ""
+msgstr "Kuadrat"
 
 #: toolbars.py:152
 msgid "Square root"
-msgstr ""
+msgstr "Akar kuadrat"
 
 #: toolbars.py:157
 msgid "Inverse"
-msgstr ""
+msgstr "Inverse"
 
 #: toolbars.py:164
 msgid "e to the power x"
-msgstr ""
+msgstr "e pangkat x"
 
 #: toolbars.py:169
 msgid "x to the power y"
-msgstr ""
+msgstr "x pangkat y"
 
 #: toolbars.py:174
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Logaritma natural"
 
 #: toolbars.py:180
 msgid "Factorial"
-msgstr ""
+msgstr "Faktorial"
 
 #: toolbars.py:190
 msgid "Sine"
-msgstr ""
+msgstr "Sinus"
 
 #: toolbars.py:194
 msgid "Cosine"
-msgstr ""
+msgstr "Cosinus"
 
 #: toolbars.py:198
 msgid "Tangent"
-msgstr ""
+msgstr "Tangen"
 
 #: toolbars.py:204
 msgid "Arc sine"
-msgstr ""
+msgstr "Arc sinus"
 
 #: toolbars.py:208
 msgid "Arc cosine"
-msgstr ""
+msgstr "Arc cosinus"
 
 #: toolbars.py:212
 msgid "Arc tangent"
-msgstr ""
+msgstr "Arc tangen"
 
 #: toolbars.py:218
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "Sinus hiperbolik"
 
 #: toolbars.py:222
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "Cosinus hiperbolik"
 
 #: toolbars.py:226
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "Tangen hiperbolik"
 
 #: toolbars.py:236
 msgid "Logical and"
-msgstr ""
+msgstr "And lojik"
 
 #: toolbars.py:240
 msgid "Logical or"
-msgstr ""
+msgstr "Or lojik"
 
 #: toolbars.py:250
 msgid "Equals"
-msgstr ""
+msgstr "Sama dengan"
 
 #: toolbars.py:253
 msgid "Not equals"
-msgstr ""
+msgstr "Tidak sama dengan"
 
 #: toolbars.py:262
 msgid "Pi"
-msgstr ""
+msgstr "Pi"
 
 #: toolbars.py:266
 msgid "e"
-msgstr ""
+msgstr "e"
 
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "γ"
 
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
 #: toolbars.py:279
 msgid "Plot"
-msgstr ""
+msgstr "Plot"
 
 #: toolbars.py:286
 msgid "Degrees"
-msgstr ""
+msgstr "Derajat"
 
 #: toolbars.py:287
 msgid "Radians"
-msgstr ""
+msgstr "Radian"
 
 #: toolbars.py:291
 msgid "Degrees / Radians"
-msgstr ""
+msgstr "Derajat / Radian"
 
 #: toolbars.py:300
 msgid "Exponent / Scientific notation"
-msgstr ""
+msgstr "Eksponen / notasi ilmiah"
 
 #: toolbars.py:310
 msgid "Number of shown digits"
-msgstr ""
+msgstr "Cacah dijit yang ditampilkan"
 
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr ""
+msgstr "Basis pemformatan bilangan bulat"
 
 #~ msgid "Available functions:"
 #~ msgstr "Fungsi-fungsi tersedia:"
