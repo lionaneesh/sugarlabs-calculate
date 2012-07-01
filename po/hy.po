@@ -2,21 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-02-17 07:26+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-07-01 06:21+0200\n"
+"Last-Translator: Jasmine <udea_jasmine@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: hy\n"
 "MIME-Version: 1.0\n"
@@ -40,12 +32,12 @@ msgstr ""
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr "Ձևակերպման ձախողում %d-ում"
+msgstr "Ձևակերպման սխալ %d-ում"
 
 #: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
-msgstr "սխալ %d-ում"
+msgstr "Վրիպում %d-ում"
 
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
@@ -54,13 +46,13 @@ msgstr "Սա պարզապես փորձնական թեմա է, ինդեքսի հ�
 #: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Օգտագործիր օգնություն(test) 'test'-ի մասին օգնության համար, կամ "
+"Օգտագործիր օգնություն(test) 'test'-ի վերաբերյալ օգնության համար, կամ "
 "օգնություն(index) index-ի համար"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:109
 msgid "index"
-msgstr "ինդեքս"
+msgstr "Ինդեքս"
 
 #: astparser.py:109
 msgid "topics"
@@ -73,11 +65,11 @@ msgstr "Թեմաներ"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr "փոփոխականներ"
+msgstr "Փոփոխականներ"
 
 #: astparser.py:119
 msgid "Variables"
-msgstr "փոփոխականներ"
+msgstr "Փոփոխականներ"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
@@ -130,6 +122,7 @@ msgstr "Բազմակի փաստարկները չեն սատարվում"
 msgid "Internal error"
 msgstr "Ներքին սխալ"
 
+# Equation - հավասարում
 #: calculate.py:109
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
@@ -137,24 +130,25 @@ msgstr "Equation.parse() տողն անվավեր է (%s)"
 
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
-msgstr "Հնարավոր չէ նշանակել պիտակ. կառաջացնի ռեկուրսիա"
+msgstr "Հնարավոր չէ պիտակել. ռեկուրսիա կառաջացնի"
 
 #: calculate.py:546
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "Գրանցում մատյան (%s)"
+msgstr "Գրանցում Մատյանում (%s)"
 
+# button_pressed - կոճակը սեղմված է
 #: calculate.py:829
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): սխալ տիպ"
 
 #: functions.py:35
 msgid "add"
-msgstr "ավելացնել"
+msgstr "Ավելացնել"
 
 #: functions.py:36
 msgid "abs"
-msgstr "հանել"
+msgstr "Հանել"
 
 # արկկոսինուս
 #: functions.py:37
@@ -199,17 +193,19 @@ msgstr "b10bin"
 msgid "ceil"
 msgstr "ceil"
 
+# Կոսինուս
 #: functions.py:46
 msgid "cos"
-msgstr "կոսինուս"
+msgstr "cos"
 
+# Հիպերբոլիկ կոսինուս
 #: functions.py:47
 msgid "cosh"
-msgstr "Հիպերբոլիկ կոսինուս"
+msgstr "cosh"
 
 #: functions.py:48
 msgid "div"
-msgstr "բաժանում"
+msgstr "Բաժանում"
 
 # (Greatest common divisor) Ամենամեծ ընդհանուր բաժանարար
 #: functions.py:49
@@ -234,14 +230,13 @@ msgid "factorize"
 msgstr "Վերլուծել արտադրիչների"
 
 # Կլորացումով հաջորդ նվազագույն ամբողջին հավասարված թիվ
-#
 #: functions.py:54
 msgid "floor"
-msgstr "հատակ"
+msgstr "Հատակ"
 
 #: functions.py:55
 msgid "inv"
-msgstr "հակադիր"
+msgstr "Հակադիր"
 
 #: functions.py:56
 msgid "is_int"
@@ -275,13 +270,15 @@ msgstr "պատահական ամբողջ թվեր"
 msgid "round"
 msgstr "կլորացում"
 
+# Սինուս
 #: functions.py:64
 msgid "sin"
-msgstr "սինուս"
+msgstr "sin"
 
+# Հիպերբոլիկ սինուս
 #: functions.py:65
 msgid "sinh"
-msgstr "հիպերբոլիկ սինուս"
+msgstr "sinh"
 
 # Կարդինալ սինուս,
 #: functions.py:66
@@ -300,17 +297,20 @@ msgstr "հանել"
 msgid "square"
 msgstr "քառակուսի"
 
+# տանգես
 #: functions.py:70
 msgid "tan"
-msgstr "տանգես"
+msgstr "tan"
 
+# Հիպերբոլիկ տանգես
 #: functions.py:71
 msgid "tanh"
-msgstr "Հիպերբոլիկ տանգես"
+msgstr "tanh"
 
+# Տրամաբանական դարպաս /ծրագրավորման կամ մաթեմատիկայի մեջ/:
 #: functions.py:72
 msgid "xor"
-msgstr "բացառիկ բազհանում"
+msgstr "xor"
 
 # abs - աբսցեզ
 #: functions.py:112
@@ -514,7 +514,8 @@ msgstr "pow(x, y), վերականգնում է x -ի արժեքն y -ի հանդ
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
 msgstr ""
-"rand_float(), հազվադեպ տատանվող ցուցանիշ թիվը դարձնում է 0.0 -ի և 1.0-ի միջև"
+"rand_float(), պատահական  տատանման ցուցանիշ թիվը դարձնում է 0.0 -ի և 1.0-ի "
+"միջև"
 
 # rand_int( - պատահական ամբողջ
 #: functions.py:371
@@ -528,7 +529,7 @@ msgstr ""
 # round - կլորացված
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr "round(x), վերականգնել x -ն ամենամոտ ամբողջը:"
+msgstr "round(x), վերականգնել x - ին ամենամոտ ամբողջը:"
 
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
@@ -538,14 +539,14 @@ msgstr "Բիթային լրացման գործողությունները կիր�
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
-"shift_left(x, y), տեղաշարժել x -ը y բայթ դեպի ձախ (բազմապատկել 2 ամեն թայթի "
-"համար)"
+"shift_left(x, y), տեղաշարժել x -ը «y» բայթ դեպի ձախ (բազմապատկել 2 ամեն "
+"թայթի համար)"
 
 # shift_right - տեղաշարժել դեպի աջ
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
 msgstr ""
-"shift_right(x, y), տեղաշարժել x -ը y բիթ դեպի աջ (բաժանել 2 -ի ամեն բիթի "
+"shift_right(x, y), տեղաշարժել x -ը «y» բայթ դեպի աջ (բաժանել 2 -ի ամեն բիթի "
 "համար)"
 
 #: functions.py:397
@@ -554,7 +555,7 @@ msgid ""
 "the angle x"
 msgstr ""
 "sin(x), վերադարձնել x-ի սինուսը: Սա միավորի շրջանագծի վրա x անկյան տակ "
-"գտնվող y կոորդինատն է:"
+"գտնվող y դիրքացույցն է:"
 
 #: functions.py:403
 msgid ""
@@ -598,7 +599,7 @@ msgstr ""
 #: functions.py:439
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
-"tanh(x), վերադարձնել x-ի հիպերբոլային տանգենսը: Տրված է sinh(x) / cosh(x)-ով"
+"tanh(x), վերադարձնել x-ի հիպերբոլային տանգեսը: Տրված է sinh(x) / cosh(x)-ով"
 
 #: functions.py:444
 msgid ""
@@ -614,7 +615,7 @@ msgstr "Մաքրել"
 
 #: layout.py:99 layout.py:139
 msgid "Edit"
-msgstr "խմբագրել"
+msgstr "Խմբագրել"
 
 #: layout.py:104 layout.py:140
 msgid "Algebra"
@@ -660,16 +661,19 @@ msgstr "Ցույց տալ փոփոխականները"
 msgid "Change view between history and variables"
 msgstr "Փոփոխել տեսարանը պատմության եւ փոփոխականների միջեւ"
 
+# multiplication symbol - Բազմապատկման նշան
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "*"
+msgstr "x"
 
+# div_sym: Division Symbol - Բաժանման նշան
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr "/"
+msgstr "÷"
 
+# equ_sym: equation symbol - հավասարման նշան
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
@@ -681,7 +685,7 @@ msgstr "Չսահմանված"
 
 #: mathlib.py:226
 msgid "Error: unsupported type"
-msgstr "Սխալ. ոչ-ստանդարտ տեսակ"
+msgstr "Սխալ. չսատարված տեսակ"
 
 #: toolbars.py:53
 msgid "Help"
@@ -705,7 +709,7 @@ msgstr "<ctrl>x"
 
 #: toolbars.py:137
 msgid "Paste"
-msgstr "Տեղադրել"
+msgstr "Փակցնել"
 
 #: toolbars.py:147
 msgid "Square"
@@ -831,92 +835,3 @@ msgstr "Ցույց տրված թվերի քանակը"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Ամբողջական թվի ձեւավորման հիմքը"
-
-#~ msgid "Enter"
-#~ msgstr "Մուտք"
-
-#~ msgid "Available functions:"
-#~ msgstr "Հասանելի ֆունկցիաներ"
-
-#, python-format
-#~ msgid "level: %d, ofs %d"
-#~ msgstr "մակարդակ. %d, խորք %d"
-
-#, python-format
-#~ msgid "Invalid number of arguments (%d instead of %d)"
-#~ msgstr "Արգումենտների սխալ թիվ (%d instead of %d)"
-
-#, python-format
-#~ msgid "function takes %d args"
-#~ msgstr "ֆւնկցիան վերցնում է %d արգ"
-
-#, python-format
-#~ msgid "Unable to parse argument %d: '%s'"
-#~ msgstr "Հնարավոր չէ կիրառել արգումենտ՝ %d: '%s'"
-
-#, python-format
-#~ msgid "Function error: %s"
-#~ msgstr "Ֆունկցիաի վրիպում. %s"
-
-#~ msgid "Left parenthesis unexpected"
-#~ msgstr "Ձախ փակագիծն ավելորդ է"
-
-#~ msgid "Parse error (right parenthesis)"
-#~ msgstr "Վերլուծման վրիպում (բացակայում է աջ փակագիծը)"
-
-#~ msgid "Right parenthesis unexpected"
-#~ msgstr "Աջ փակագիծն ավելորդ է"
-
-#~ msgid "Parse error (right parenthesis, no left_val)"
-#~ msgstr "Վերլուծման վրիպում(աջ փակագիծ, չկա left_val)"
-
-#~ msgid "Parse error (right parenthesis, no level to close)"
-#~ msgstr "Վերլուծման վրիպում (աջ փակագիծ, չկա level to close)"
-
-#~ msgid "Number not expected"
-#~ msgstr "Անսպասելի թիվ"
-
-#~ msgid "Operator not expected"
-#~ msgstr "Անսպասելի օպերատոր"
-
-#~ msgid "Parse error: number or variable expected"
-#~ msgstr "Վերլուծման վրիպւմ. սպասվում էր թիվ կամ փոփոխական"
-
-#~ msgid "Number or variable expected"
-#~ msgstr "Սպասված է թիվ կամ փոփոխական"
-
-#~ msgid "Invalid operator"
-#~ msgstr "Անվավեր օպերատոր"
-
-#~ msgid "Operator expected"
-#~ msgstr "Բաց տողած օպերատոր"
-
-#~ msgid "_parse(): returning None"
-#~ msgstr "_parse(): վերադարձնել None"
-
-#~ msgid "functions(), return a list of all the functions that are defined"
-#~ msgstr "functions(), վերադարձնել բոլոր սահմանված ֆունկցիաների ցանկը"
-
-#~ msgid "operators"
-#~ msgstr "օպերատորներ"
-
-#~ msgid "operators(), return a list of the operators that are defined"
-#~ msgstr "operators(), վերադարձնել սահմանված օպերատորների ցանկը"
-
-#~ msgid "plot"
-#~ msgstr "նախագծել"
-
-#~ msgid "square(x), return the square of x. Given by x * x"
-#~ msgstr "square(x), վերադարձնել x-ի քառակուսին: Տրված է x * x-ով"
-
-#~ msgid "test"
-#~ msgstr "փորձարկում"
-
-#~ msgid "variables(), return a list of the variables that are currently defined"
-#~ msgstr "variables(), վերադարձնել ներկայիս սահմանված փոփոխականների ցանկը"
-
-#~ msgid "Constants"
-#~ msgstr "Հաստատուններ"
-
-#~ msgid "Format"
-#~ msgstr "Ձեւաչափ"
