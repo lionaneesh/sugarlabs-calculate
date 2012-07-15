@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2011-11-26 02:07+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-07-06 13:48+0200\n"
+"Last-Translator: EdgarQuispeChambi <quispedgar@yahoo.es>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: aym\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,7 +20,7 @@ msgstr ""
 #  "Calculadora"
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "Jakhuña"
+msgstr "Jakhthapiña"
 
 #  "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
 #  "el rango de a hasta b"
@@ -29,20 +29,20 @@ msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
-"plot(eqn, var=-a..b), 'eqn' ecuación rixita 'var' variable ukampi a ukata b "
-"ukaru"
+"plot(eqn, var=-a..b), 'eqn' jakhjaña apsuña uka 'var' sata wakisiri "
+"mayjt'ayirinakampi, uka 'a' ukata 'b' wakichatkama"
 
 #  "Error de procesamiento en %d"
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr "Amuytawitaki Pantjata %d ukana"
+msgstr "Wakichatanaka thaqtañana pantjata %d"
 
 #  "Error en %d"
 #: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
-msgstr "%d ukana Pantjata"
+msgstr "Pantjatawa utji %d"
 
 #  "Este es solo un topico de prueba, use help(indice) para el indice"
 #: astparser.py:94
