@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2011-12-11 08:39+0200\n"
+"PO-Revision-Date: 2012-05-19 22:55+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: ur\n"
@@ -92,8 +92,9 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr "کوئی مدد نہيں'%s' موجود، مدد استعمال کريں(فہرست) فہرست کے ليے"
 
 #: astparser.py:459
+#, fuzzy
 msgid "help"
-msgstr ""
+msgstr "مدد"
 
 #: astparser.py:466
 msgid "Recursion detected"
@@ -218,16 +219,18 @@ msgid "exp"
 msgstr "exp"
 
 #: functions.py:51
+#, fuzzy
 msgid "factorial"
-msgstr ""
+msgstr "جز ضربیہ"
 
 #: functions.py:52
 msgid "fac"
 msgstr "fac"
 
 #: functions.py:53
+#, fuzzy
 msgid "factorize"
-msgstr ""
+msgstr "جز ضربیہ"
 
 #: functions.py:54
 msgid "floor"
@@ -293,8 +296,9 @@ msgid "sub"
 msgstr ""
 
 #: functions.py:69
+#, fuzzy
 msgid "square"
-msgstr ""
+msgstr "مربع"
 
 #: functions.py:70
 #, fuzzy
@@ -569,8 +573,9 @@ msgid "Boolean"
 msgstr "بولئين"
 
 #: layout.py:119 layout.py:143
+#, fuzzy
 msgid "Miscellaneous"
-msgstr ""
+msgstr "متفرق"
 
 #: layout.py:164
 msgid "Label:"
@@ -612,20 +617,23 @@ msgstr "/"
 
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
+#, fuzzy
 msgid "equ_sym"
-msgstr ""
+msgstr "="
 
 #: mathlib.py:216
+#, fuzzy
 msgid "Undefined"
-msgstr ""
+msgstr "غیروضاحتی"
 
 #: mathlib.py:226
 msgid "Error: unsupported type"
 msgstr "غلطی: سپورٹڈ نمونہ ہے"
 
 #: toolbars.py:53
+#, fuzzy
 msgid "Help"
-msgstr ""
+msgstr "مدد"
 
 #: toolbars.py:121
 msgid "Copy"
@@ -648,16 +656,18 @@ msgid "Paste"
 msgstr "جوڑيں"
 
 #: toolbars.py:147
+#, fuzzy
 msgid "Square"
-msgstr ""
+msgstr "مربع"
 
 #: toolbars.py:152
 msgid "Square root"
 msgstr ""
 
 #: toolbars.py:157
+#, fuzzy
 msgid "Inverse"
-msgstr ""
+msgstr "مقلوب"
 
 #: toolbars.py:164
 msgid "e to the power x"
@@ -672,8 +682,9 @@ msgid "Natural logarithm"
 msgstr ""
 
 #: toolbars.py:180
+#, fuzzy
 msgid "Factorial"
-msgstr ""
+msgstr "جز ضربیہ"
 
 #: toolbars.py:190
 msgid "Sine"
@@ -720,8 +731,9 @@ msgid "Logical or"
 msgstr ""
 
 #: toolbars.py:250
+#, fuzzy
 msgid "Equals"
-msgstr ""
+msgstr "مساوی کرتا ہے"
 
 #: toolbars.py:253
 msgid "Not equals"
@@ -749,12 +761,14 @@ msgid "Plot"
 msgstr "پلاٹ"
 
 #: toolbars.py:286
+#, fuzzy
 msgid "Degrees"
-msgstr ""
+msgstr "درجے"
 
 #: toolbars.py:287
+#, fuzzy
 msgid "Radians"
-msgstr ""
+msgstr "نیم قطری"
 
 #: toolbars.py:291
 msgid "Degrees / Radians"
