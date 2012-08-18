@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-22 02:06+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-05-19 14:38+0200\n"
+"Last-Translator: Yuan <yuanchao@gmail.com>\n"
 "Language-Team: Yuan Chao <yuanchao@gmail.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
@@ -81,9 +81,8 @@ msgid "functions"
 msgstr "functions"
 
 #: astparser.py:126
-#, fuzzy
 msgid "Functions"
-msgstr "functions"
+msgstr "函數"
 
 #: astparser.py:135
 #, python-format
@@ -91,13 +90,12 @@ msgid "No help about '%s' available, use help(index) for the index"
 msgstr "沒有關於 '%s' 的協助訊息，請用 help(index) 參閱索引"
 
 #: astparser.py:459
-#, fuzzy
 msgid "help"
-msgstr "幫助"
+msgstr "輔助說明"
 
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr ""
+msgstr "偵測到遞迴"
 
 #: astparser.py:490
 #, python-format
