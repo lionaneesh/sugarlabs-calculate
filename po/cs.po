@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-16 10:54+0200\n"
-"Last-Translator: Chris <cjl@laptop.org>\n"
+"PO-Revision-Date: 2012-07-02 13:01+0200\n"
+"Last-Translator: jui <appukonrad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -63,7 +63,6 @@ msgid "index"
 msgstr "index"
 
 #: astparser.py:109
-#, fuzzy
 msgid "topics"
 msgstr "témata"
 
@@ -79,7 +78,7 @@ msgstr "proměnné"
 #: astparser.py:119
 #, fuzzy
 msgid "Variables"
-msgstr "Proměnná"
+msgstr "Proměnné"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
@@ -135,9 +134,9 @@ msgstr "Vnitřní chyba programu"
 
 #: calculate.py:109
 #, python-format
-#, python-format, fuzzy
+#, python-format,
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Řetězec '%s' Equation.parse() není platný"
+msgstr "Řetězec (%s) Equation.parse() není platný"
 
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
