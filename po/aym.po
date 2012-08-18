@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-07-06 13:48+0200\n"
+"PO-Revision-Date: 2012-08-16 21:09+0200\n"
 "Last-Translator: EdgarQuispeChambi <quispedgar@yahoo.es>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: aym\n"
@@ -20,7 +20,7 @@ msgstr ""
 #  "Calculadora"
 #: activity/activity.info:2
 msgid "Calculate"
-msgstr "Jakhthapiña"
+msgstr "Jakhsuña"
 
 #  "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
 #  "el rango de a hasta b"
@@ -30,183 +30,184 @@ msgid ""
 "range from a to b"
 msgstr ""
 "plot(eqn, var=-a..b), 'eqn' jakhjaña apsuña uka 'var' sata wakisiri "
-"mayjt'ayirinakampi, uka 'a' ukata 'b' wakichatkama"
+"mayjt'ayirinakampi, ukata 'a' ukata 'b' wakichatkama"
 
 #  "Error de procesamiento en %d"
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr "Wakichatanaka thaqtañana pantjata %d"
+msgstr "Wakichatanaka apsuñana pantjata %d"
 
 #  "Error en %d"
 #: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
-msgstr "Pantjatawa utji %d"
+msgstr "Pantjata %d"
 
 #  "Este es solo un topico de prueba, use help(indice) para el indice"
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
-msgstr "Akaxa yantawikiwa, uñjañamawa yanapt'awi(indice) qalltuwitakixa"
+msgstr ""
+"Akawa yant'äwina maya yatxataña wakichataxa, yanapt'äwi (qalltaña) wakichata "
+"apnaqasa qalltma"
 
 #  "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
 #: astparser.py:106
-#, fuzzy
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
-"Apnaqañamawa yanapt'awi 'test' ukataki, jani ukasti yanapt'awi(indice) "
-"qalltuwitakixa"
+"Yanaptäwi (jiskht'äwinaka) apnaqama uka jiskht'äwinaka tuqita yanapañataki, "
+"jani ukaxa yanapt'äwi (qalltaña) apnaqasa wakichatanakampi qalltañataki"
 
 #  "índice"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:109
 msgid "index"
-msgstr "qalltuwi"
+msgstr "qalltäwi"
 
 #  "temas"
 #: astparser.py:109
 msgid "topics"
-msgstr "amuytawinaka"
+msgstr "amtäwinaka"
 
 #  "Temas"
 #: astparser.py:110
 msgid "Topics"
-msgstr "Amuytawinaka"
+msgstr "Amuytäwinaka"
 
 #  "variables"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr "variables"
+msgstr "mayjt'ayirinaka"
 
 #  "Variables"
 #: astparser.py:119
 msgid "Variables"
-msgstr "Variables"
+msgstr "Mayjt'ayirinaka"
 
 #  "funciones"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
 msgid "functions"
-msgstr "lurañataki"
+msgstr "wakisirinaka"
 
 #  "Funciones"
 #: astparser.py:126
 msgid "Functions"
-msgstr "Lurañataki"
+msgstr "Wakisirinaka"
 
 #  "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
 #: astparser.py:135
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
-"Janiwa yanapt'awixa utxiti '%s' ukatakixa, apnaqasmawa yanapt'awi(índice) "
-"qalltañawitakixa"
+"Uka tuqita janiwa yanapt'axa utjiti '%s', yanapt'iri (qalltaña) apnaqma "
+"wakichatanakampi qalltañataki"
 
 #  "ayuda"
 #: astparser.py:459
 msgid "help"
-msgstr "yanapt'awi"
+msgstr "yanapt'äwi"
 
 #  "Recursión detectada"
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr "Jaljtawixa uñjatawa"
+msgstr "T'aqaqtäwi katjaña"
 
 #  "La función '%s' no está definida"
 #: astparser.py:490
 #, python-format
 msgid "Function '%s' not defined"
-msgstr "'%s' lurawixa janiwa amtutakiti"
+msgstr "Uka wakisirixa '%s' jukha chaniru jani qhanstayiti"
 
 #  "La variable '%s' no está definida"
 #: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr "Variable '%s' janiwa amtutakiti"
+msgstr "Mayjt'ayirixa '%s' jukha chaniru jani qhanstayiti"
 
 #  "Atributo '%s' no existe"
 #: astparser.py:502
 #, python-format
 msgid "Attribute '%s' does not exist"
-msgstr "Atributo '%s' janiwa utjiti"
+msgstr "Cha'amanchiri '%s' janiwa qhanstiti"
 
 #  "Error de procesamiento"
 #: astparser.py:596
 msgid "Parse error"
-msgstr "Pantjata amuyt'awixa"
+msgstr "Wakichäwinaka pantjata"
 
 #  "Declaraciones multiples no estan soportadas"
 #: astparser.py:601
 msgid "Multiple statements not supported"
-msgstr "Janiwa walja amtuwixa lurasiñapakiti"
+msgstr "Kunaymana amuyunakaxa janiwa suma katuqatati"
 
 #  "Error interno"
 #: astparser.py:625
 msgid "Internal error"
-msgstr "Kikipana pantjata"
+msgstr "Wakichäwi taypina pantjata"
 
 #  "Equation.parse() cadena invalida (%s)"
 #: calculate.py:109
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr "Equation.parse() jani amtuta (%s)"
+msgstr "Equation.parse() sata wakichäwi saräwi sayt'ayata (%s)"
 
 #  "No puedo asignar etiqueta: causará recursión"
 #: calculate.py:474
 msgid "Can not assign label: will cause recursion"
-msgstr "Janiwa sutiyañjamakiti: jaljtayasiniwa"
+msgstr "Sutiyaña chimpu janiwa uchayasiti: T'aqasïwimpiwa sayt'ani"
 
 #  "Escribiendo en el diario (%s)"
 #: calculate.py:546
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr "Sapüru luräwiru qilqantaña (%s)"
+msgstr "Sapüru wakichäwinaka qillqthapisa (%s)"
 
 #  "button_pressed(): tipo invalido"
 #: calculate.py:829
 msgid "button_pressed(): invalid type"
-msgstr "button_pressed(): kut'ayata casta"
+msgstr "button_pressed(): sata wakichata sayt'ayata"
 
 #  "sum"
 #: functions.py:35
 msgid "add"
-msgstr "yapxataña"
+msgstr "Jach'aptayaña"
 
 #  "abs"
 #: functions.py:36
 msgid "abs"
-msgstr "abs"
+msgstr "´abs' sata wakichatanaka"
 
 #  "acos"
 #: functions.py:37
 msgid "acos"
-msgstr "acos"
+msgstr "'acos' sata wakichatanaka"
 
 #  "acosh"
 #: functions.py:38
 msgid "acosh"
-msgstr "acosh"
+msgstr "'acosh' sata wakichatanaka"
 
 #  "asin"
 #: functions.py:39
 msgid "asin"
-msgstr "asin"
+msgstr "'asin' sata wakichatanaka"
 
 #  "asinh"
 #: functions.py:40
 msgid "asinh"
-msgstr "asinh"
+msgstr "'asinh' sata wakichatanaka"
 
 #  "atan"
 #: functions.py:41
 msgid "atan"
-msgstr "atan"
+msgstr "'atan' sata wakichatanaka"
 
 #  "atanh"
 #: functions.py:42
 msgid "atanh"
-msgstr "atanh"
+msgstr "'atanh' sata wakichatanaka"
 
 #  "and"
 #: functions.py:43
@@ -216,52 +217,52 @@ msgstr "ukata"
 #  "b10bin"
 #: functions.py:44
 msgid "b10bin"
-msgstr "b10bin"
+msgstr "'b10bin' sata wakichatanaka"
 
 #  "cell"
 #: functions.py:45
 msgid "ceil"
-msgstr "ceil"
+msgstr "jakaña"
 
 #  "cos"
 #: functions.py:46
 msgid "cos"
-msgstr "cos"
+msgstr "'cos' sata wakichatanaka"
 
 #  "cosh"
 #: functions.py:47
 msgid "cosh"
-msgstr "cosh"
+msgstr "'cosh' sata wakichatanaka"
 
 #  "div"
 #: functions.py:48
 msgid "div"
-msgstr "div"
+msgstr "'div' sata wakichatanaka"
 
 #  "mcd"
 #: functions.py:49
 msgid "gcd"
-msgstr "mcd"
+msgstr "'mcd' sata wakichatanaka"
 
 #  "exp"
 #: functions.py:50
 msgid "exp"
-msgstr "exp"
+msgstr "'exp' sata wakichatanaka"
 
 #  "factorial"
 #: functions.py:51
 msgid "factorial"
-msgstr "factorial"
+msgstr "'factorial' sata wakichata"
 
 #  "fac"
 #: functions.py:52
 msgid "fac"
-msgstr "fac"
+msgstr "'fac' sata wakichatanaka"
 
 #  "factorizar"
 #: functions.py:53
 msgid "factorize"
-msgstr "factorizar"
+msgstr "jaljayaña"
 
 #  "piso"
 #: functions.py:54
@@ -271,97 +272,99 @@ msgstr "uraqi"
 #  "inv"
 #: functions.py:55
 msgid "inv"
-msgstr "inv"
+msgstr "'inv' sata wakichata"
 
 #  "is_int"
 #: functions.py:56
 msgid "is_int"
-msgstr "is_int"
+msgstr "'is_int' sata wakichata"
 
 #  "ln"
 #: functions.py:57
 msgid "ln"
-msgstr "ln"
+msgstr "'ln' sata wakichata"
 
 #  "log10"
 #: functions.py:58
 msgid "log10"
-msgstr "log10"
+msgstr "'log10' sata wakichata"
 
 #  "mul"
 #: functions.py:59
 msgid "mul"
-msgstr "mul"
+msgstr "'mul' sata wakichata"
 
 #  "or"
 #: functions.py:60
 msgid "or"
-msgstr "or"
+msgstr "'or' sata wakichata"
 
 #  "rand_float"
 #: functions.py:61
 msgid "rand_float"
-msgstr "rand_float"
+msgstr "´rand_float' sata wakichata"
 
 #  "rand_int"
 #: functions.py:62
 msgid "rand_int"
-msgstr "rand_int"
+msgstr "'rand_int' sata wakichata"
 
 #  "redondeo"
 #: functions.py:63
 msgid "round"
-msgstr "phuqaña"
+msgstr "phuqachaña"
 
 #  "sin"
 #: functions.py:64
 msgid "sin"
-msgstr "sin"
+msgstr "jucha"
 
 #  "sinh"
 #: functions.py:65
 msgid "sinh"
-msgstr "sinh"
+msgstr "'sinh' sata wakichata"
 
 #  "sinc"
 #: functions.py:66
 msgid "sinc"
-msgstr "sinc"
+msgstr "'sinc' sata wakichata"
 
 #  "sqrt"
 #: functions.py:67
 msgid "sqrt"
-msgstr "sqrt"
+msgstr "'sqrt' sata wakichata"
 
 #  "sub"
 #: functions.py:68
 msgid "sub"
-msgstr "sub"
+msgstr "'sub' sata wakichata"
 
 #  "cuadrado"
 #: functions.py:69
 msgid "square"
-msgstr "kajuna"
+msgstr "pusi k'uchuni kajuna"
 
 #  "tan"
 #: functions.py:70
 msgid "tan"
-msgstr "tan"
+msgstr "'tan' sata wakichata"
 
 #  "tanh"
 #: functions.py:71
 msgid "tanh"
-msgstr "tanh"
+msgstr "'tanh' sata wakichata"
 
 #  "xor"
 #: functions.py:72
 msgid "xor"
-msgstr "xor"
+msgstr "'xor' sata wakichata"
 
 #  "abs(x), devuelve el valor absoluto de x, que significa -x para x < 0"
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
-msgstr "abs(x), kutiyaniwa ukhamatixa x, ukasti saña muniwa -x ukaxa x < 0"
+msgstr ""
+"abs(x), wakichataxa uka 'x' wakisiriru chanipa kuttayi, ukasti -x ukaxa x < "
+"0 uka saña muni"
 
 #  "acos(x), devuelve el arco coseno de x. Este es el ángulo para el cual el "
 #  "coseno es x. Definido para -1 <= x < 1"
@@ -370,8 +373,8 @@ msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
-"acos(x), kutiyaniwa kurmi coseno x ukata, ukaxa kuchu ukatakisti coseno "
-"ukaxa x. ukataki -1 <= x < 1"
+"acos(x), wakichataxa uka 'x' wakisiriru arco coseno wakisiripa kuttayi. "
+"Ukapi coseno wakisiri chanipa uka x. Ukasti akïriaki -1 <= x < 1"
 
 #  "acosh(x), devuelve el arco coseno hiperbólico de x. Este es el valor de y "
 #  "para el cual el coseno hiperbólico es x."
@@ -380,8 +383,8 @@ msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
-"acosh(x), kurmi coseno hiperbólico kutiyaniwa x ukata, ukaxa y ukawa "
-"kataqixa coseno hiperbólico x ukawa."
+"acosh(x), arco coseno hiperbólico 'x' wakisiriru kuttayi. Ukapi uka 'y' "
+"wakisirina chanipaxa ukatpi coseno hiperbólico chanixa 'x' wakisiparaki."
 
 #  "And(x, y), and logico, Devuelve Verdadero si x e y son verdaderos, de lo "
 #  "contrario retorna Falso"
@@ -389,8 +392,9 @@ msgstr ""
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"And(x, y), and logico, chiqapa kutiyaniniwa x ukhamaraki e chikapipana, jani "
-"ukasti q'ari kutiyaniwa"
+"And(x, y), ukasti chiqapawa. Chiqapa kuttayiwa kunattixa 'x' ukata 'y' "
+"wakisirinakapa chiqapipana, jani ukhamipana uka Jani chiqapa wakichatawa "
+"kutinispa."
 
 #  "sum(x, y), devuelta x + y"
 #: functions.py:136
