@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-08-21 07:06+0200\n"
+"PO-Revision-Date: 2012-08-22 01:27+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: aym\n"
@@ -394,7 +394,7 @@ msgid ""
 msgstr ""
 "And(x, y), ukasti chiqapawa. Chiqapa kuttayiwa kunapachatixa 'x' ukata 'y' "
 "wakisirinakapa chiqapipana, jani ukhamipana uka Jani chiqapa wakichatawa "
-"kutinispa."
+"kutinispa"
 
 #  "sum(x, y), devuelta x + y"
 #: functions.py:136
@@ -475,7 +475,7 @@ msgid ""
 "at the angle x"
 msgstr ""
 "cos(x), wakichataxa x coseno wakisiri chanipa kuttayi. Ukasti x cordenada "
-"katupawa uka x maya k'uchu chanini maya sapa muyu taypina utji."
+"katupawa uka x maya k'uchu chanini maya sapa muyu taypina utji"
 
 #  cosh(x), devuelve el coseno hiperbólico de x.  (exp(x) + exp(-x)) / ukxata churata
 # 2
@@ -489,7 +489,7 @@ msgstr ""
 #  "No se puede dividir por cero"
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr "Ch'usa wakichataxa janiwa jaljayañjamati"
+msgstr "Jani kunani wakichataxa janiwa jaljayañjamati"
 
 #  "Argumento inválido"
 #: functions.py:219
@@ -503,7 +503,7 @@ msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
-"gcd(a, b), uka wakichataxa a ukata b chaninakapa máximo común divisor "
+"gcd(a, b), uka wakichataxa a ukata b chaninakapampi máximo común divisor "
 "chanipa apsuraki. Sañäni, 15 ukata 18 jakhunakaru 3 jilïri jakuwa jaljtayi."
 
 #  "exp(x), devuelve el exponente natural de x. Dado por e^x"
@@ -514,7 +514,7 @@ msgstr "exp(x), uka wakichataxa x chaniparu wakisiri exponente natural kuttayi"
 #  "Factorial solo esta definido para enteros"
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr "Factorial phuqatanakakiwa ukaxa"
+msgstr "Factorial wakichataxa phuqata jakhunakataki wakichatawa"
 
 #  "factorial(x), devuelve el factorial de x. Dado por x * (x - 1) * (x - 2) * "
 #  "..."
@@ -522,30 +522,32 @@ msgstr "Factorial phuqatanakakiwa ukaxa"
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
-"factorial(x), kutiyaniwa factorial x ukata, x * (x - 1) * (x - 2) * ukata "
-"churata ..."
+"factorial(x), uka wakichataxa x factorial chanipa kuttayi. Ukasti akhamata "
+"phuqasiraki x * (x - 1) * (x - 2) * ..."
 
 #  "fac(x), devuelve el factorial de x. Dado por x * (x - 1) * (x - 2) * ..."
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
-"fac(x), kutiyaniwa factorial x ukata, x * (x - 1) * (x - 2) * ukata churata "
-"..."
+"fac(x), uka wakichataxa x factorial chanipa kuttayi. Ukasti akhamata "
+"phuqasiraki x * (x - 1) * (x - 2) * ..."
 
 #  "floor(x), devuelve el mayor entero menor que x."
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr "floor(x), kutiyaniwa jila phuxach'ata x arkiripa."
+msgstr ""
+"floor(x), uka wakichataxa x chanipa arkirita jila jakhu phuqata kuttayi."
 
 #  "inv(x), devuelve el inverso de x, que es 1 / x"
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr "inv(x), kutiyaniwa mayniripa x, 1 / x ukhamarakiwa"
+msgstr ""
+"inv(x), uka wakichataxa x chanipa maynipa kuttayi, ukasti akhamata 1 / x"
 
 #  "Logarithm(x) solo definido para x > 0"
 #: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr "Logarithm(x) akatakiwa x > 0"
+msgstr "Logarithm(x) uka wakichataxa akhmataki wakichatawa x > 0"
 
 #  "ln(x), devuelve el algoritmo natural de x. Este es el valor para el cual el "
 #  "exponente exp() es igual a x. Definido para x >= 0."
@@ -554,8 +556,9 @@ msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
-"ln(x), kutiyaniwa Yatita algoritmo x ukata. exp() piq'iñchiripaxa x "
-"kikipakiwa. x >= 0 akatakiwa."
+"ln(x),uka wakichataxa x algoritmo natural chanipa kuttayi. Uka chanitakipi "
+"uka exponente exp() chanipaxa x chanipa khuskhakiwa. Ukasti akhamata "
+"phuqasiraki x >= 0."
 
 #  "log10(x), devuelve el logaritmo en base 10 de x. Este es el valor para el "
 #  "cual 10^y es igual a x. Definido para x >= 0."
@@ -564,13 +567,14 @@ msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
-"log10(x), kutiyaniwa logaritmo x base 10 ukana. Akaxa 10^y kikipakiwa x "
-"ukampixa. akatakiwa x>=0."
+"log10(x), uka wakichataxa x chaniru base 10 wakichatampi algoritmo chanipa "
+"kuttayi. Uka chanitakixa 10^y chanipaxa x chanipa khuskhakiwa. Ukasti "
+"akhamataki x>=0."
 
 #  "Solo se puede calcular x módulo <integer>"
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr "x modulo tantiyañakiwa <integer>"
+msgstr "Ukasti x módulo wakichatampikiwa chanichasispa <integer>"
 
 #  "mod(x, y), devuelve el módulo de x respecto a y. Esto es el resto de dividir "
 #  "x entre y."
@@ -579,18 +583,18 @@ msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
-"mod(x, y), kutiyaniwa módulo x ukata y. Akaxa jilt'awax jaljayawita y "
-"ukharu."
+"mod(x, y), uka wakichataxa x módulo wakichata chani uka y chanipata sipana "
+"kuttayi. Ukasti misturakiwa x chanimpi y chanimpi jaljayasa."
 
 #  "mul(x, y), devuelve x * y"
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr "mul(x, y), kutiyaniwa x * y"
+msgstr "mul(x, y), uka wakichataxa x * y chanipa kuttayi"
 
 #  "negate(x), devuelve -x"
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr "negate(x), kutiyaniwa -x"
+msgstr "negate(x), uka wakichataxa -x chani kuttayani"
 
 #  "Or(x, y), 'o' logico, Devuelve Verdadero si x y/o y es verdadero, de lo "
 #  "contrario devuelve Falso"
@@ -598,18 +602,20 @@ msgstr "negate(x), kutiyaniwa -x"
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"Or(x, y), 'o' logico, kutiyaninwa chikqapa x y/o chiqapipana y ukhamaraki, "
-"janiukhaxa k'ari kutiyaniwa"
+"Or(x, y), 'o' logico, uka wakichataxa niyaki x jani/ukaxa y chiqapipana "
+"chiqpacha kuttayani. Jani ukhamipana Jani chiqapa kuttayani"
 
 #  "pow(x, y), devuelve x a la potencia y (x**y)"
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr "pow(x, y), x kutiyaniwa y piqiñch'at'aru (x**y)"
+msgstr "pow(x, y), uka wakichataxa x chani y chani payachasawa (x**y) kuttayi"
 
 #  "rand_float(), retorna un numero de punto flotante aleatorio entre 0.0 y 1.0"
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
-msgstr "rand_float(), kutiyaniwa Jakhu kawkirixita 0.0 ukhampita 1.0"
+msgstr ""
+"rand_float(), uka wakichataxa 0.0 wakisiriru punti flotante aleatorio jakhu "
+"chanipa kuttayi ukata 1.0"
 
 #  "rand_int([<maxval>]), retorna un valor entero aleatorio entre 0 y <maxval>. "
 #  "<maxval> is un argumento opcional y tiene valor 65535 por defecto."
@@ -618,34 +624,35 @@ msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
-"rand_int([<maxval>]), kutiyaniwa kawkiri phuqata jhakhuwi 0 ukhamaraki "
-"<maxval>.<maxval> uka amuyt'awixa 65535 akatxamata uñasiriwa."
+"rand_int([<maxval>]), uka wakichataxa 0 ukata chani entero aleatorio kuttayi "
+"ukasti wakisiri qhananchatarjama, ukana chanipaxa 65535, akatjamata "
+"uñasitapata."
 
 #  "round(x), retorna el entero mas cercano a x."
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr "round(x), kutiyaniwa phuqata x jak'anqiri."
+msgstr "round(x), uka wakichataxa x chani jak'ankiri phuqata jakhu kuttayi."
 
 #  "Operaciones sobre bits solo se aplican a enteros"
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr "Bits lurawinakaxa phuqatanatakiwa"
+msgstr "Uka bits chanichañanakaxa parisa jakhunakampikiwa phuqasi"
 
 #  "shift_left(x, y), desplaza a la izquierda x por y bits (multiplica por 2 por "
 #  "cada bit)"
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
-"shift_left(x, y), x chiqaru jithjtayaña bits ukaru (payptayiwa sapa maya "
-"bit)"
+"shift_left(x, y), uka wakichataxa x chaniru y chanipampiwa ch'iqaru "
+"jithjtayi (sapa bit chaniru 2 jakhumpi jakhsuma)"
 
 #  "shift_right(x, y), desplaza a la derecha x por y bits (divide por 2 por cada "
 #  "bit)"
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
 msgstr ""
-"shift_right(x, y), x kupiru jithjtayaña bits ukaru (payptayiwa sapa maya "
-"bit)"
+"shift_right(x, y), uka wakichataxa x chaniru y chanipampiwa ch'iqaru "
+"jithjtayi (sapa bit chaniru 2 jakhumpi jaljtayma)"
 
 #  "sin(x), devuelve el seno de x. Esta es la coordinada y en el circulo "
 #  "unitario en el angulo x"
@@ -654,8 +661,8 @@ msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
-"sin(x), kutiyiwa seno x ukata. Ukaxa coordinada ukhamaraki sapa muyuna x "
-"k'uchu ukana"
+"sin(x), uka wakichataxa x chaniru seno chani kuttayi. Ukawa y chanina "
+"coordinada chanipaxa ukasti maya sapa muyuna x k'uchuna"
 
 #  "sinh(x), devuelve el seno hiperbolico de x. Dado por (exp(x) - exp(-x)) / 2"
 #: functions.py:403
@@ -789,18 +796,18 @@ msgstr "Mayxata lurawi ukhamaraki variable uñjaña"
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "mul_sym"
+msgstr "×"
 
 #  "÷"
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr "div_sym"
+msgstr "÷"
 
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr ""
+msgstr "="
 
 #  "No-definido"
 #: mathlib.py:216
