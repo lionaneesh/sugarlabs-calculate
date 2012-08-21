@@ -1,0 +1,781 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"PO-Revision-Date: 2012-08-21 21:49+0200\n"
+"Last-Translator: usuariopame04 <proyecto.olpc@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pbs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Pootle 2.0.5\n"
+
+#: activity/activity.info:2
+msgid "Calculate"
+msgstr "Ndatsjaurabe'en"
+
+#: astparser.py:40
+msgid ""
+"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
+"range from a to b"
+msgstr "ndanu ravu se lue'ue lupup navú a luljung kuvu se vunjuts navu b"
+
+#: astparser.py:59
+#, python-format
+msgid "Parse error at %d"
+msgstr "nip majau lutsjau nanji lupa %d"
+
+#: astparser.py:71 astparser.py:83
+#, python-format
+msgid "Error at %d"
+msgstr "Nip majau lutsjau lupá mi'ia ravú %d"
+
+#: astparser.py:94
+msgid "This is just a test topic, use help(index) for the index"
+msgstr ""
+"Sau' mjang ma nanju se mve k'ua luju'u kiajaut navu niñ'ieje kujui ma naju'u "
+"nanú pu nimviup"
+
+#: astparser.py:106
+msgid "Use help(test) for help about 'test', or help(index) for the index"
+msgstr ""
+"Ki't navú niñ'ieje' se ve'eje test kujui laju'u labaik ma nanu navu test "
+"maiñ navu help laniá'at kiñú pu nimviup"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:109
+msgid "index"
+msgstr "nimviup"
+
+#: astparser.py:109
+msgid "topics"
+msgstr "kimvia' ngunjiu' kad-er k'ua ma lasau'"
+
+#: astparser.py:110
+msgid "Topics"
+msgstr "Kimvia' ngunjú'"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:118
+msgid "variables"
+msgstr "valiima lu'ue vumaun'"
+
+#: astparser.py:119
+msgid "Variables"
+msgstr "Valiima lu'ue vumaun'"
+
+#. TRANS: This command is descriptive, so can be translated
+#: astparser.py:125
+msgid "functions"
+msgstr "kad-er ndavaí"
+
+#: astparser.py:126
+msgid "Functions"
+msgstr "Kad-er ndavaí"
+
+#: astparser.py:135
+#, python-format
+msgid "No help about '%s' available, use help(index) for the index"
+msgstr ""
+"Kad-ep limi naba'aik re ranji \"%s\" ki't navu naba'aik kujui ma naju'u ma "
+"nanu pu nimviup"
+
+#: astparser.py:459
+msgid "help"
+msgstr "nabaaikj"
+
+#: astparser.py:466
+msgid "Recursion detected"
+msgstr "lichja'aun tsukueet vumang ma napup"
+
+#: astparser.py:490
+#, python-format
+#, python-format,
+msgid "Function '%s' not defined"
+msgstr "Ndavaí %s' kad-ep mvumang kanen ndavaí"
+
+#: astparser.py:492
+#, python-format
+#, python-format,
+msgid "Variable '%s' not defined"
+msgstr "Re vajau '%s' kad-ep mvumang kja majau"
+
+#: astparser.py:502
+#, python-format
+#, python-format,
+msgid "Attribute '%s' does not exist"
+msgstr "Peuk stinkjia' '%s' nip limi"
+
+#: astparser.py:596
+msgid "Parse error"
+msgstr "Ndich'u kupu se lu'ue manaja lutsjau"
+
+#: astparser.py:601
+msgid "Multiple statements not supported"
+msgstr "Ravu se k'ua vat'e l'u'up kad-ep majau matsjau"
+
+#: astparser.py:625
+msgid "Internal error"
+msgstr "Ndich'u kiñye'p"
+
+#: calculate.py:109
+#, python-format
+#, python-format,
+msgid "Equation.parse() string invalid (%s)"
+msgstr "Ndanu. parse() ngulje'e nip majau (%s)"
+
+#: calculate.py:474
+msgid "Can not assign label: will cause recursion"
+msgstr "kad-ep tuju'u numejep ndanù: ma napup natsjau"
+
+#: calculate.py:546
+#, python-format
+msgid "Writing to journal (%s)"
+msgstr "Me'ets kily'e pu xiñi'iuxiñi'iu matsjau (%s)"
+
+#: calculate.py:829
+msgid "button_pressed(): invalid type"
+msgstr "Matès pu ndapul'se nip li'iajaun'"
+
+#: functions.py:35
+msgid "add"
+msgstr "mave'iñ malei"
+
+#: functions.py:36
+msgid "abs"
+msgstr "abs"
+
+#: functions.py:37
+msgid "acos"
+msgstr "mapaat peuk vakja"
+
+#: functions.py:38
+msgid "acosh"
+msgstr "kanen"
+
+#: functions.py:39
+msgid "asin"
+msgstr "asin"
+
+#: functions.py:40
+msgid "asinh"
+msgstr "asinh"
+
+#: functions.py:41
+msgid "atan"
+msgstr "atan"
+
+#: functions.py:42
+msgid "atanh"
+msgstr "atanh"
+
+#: functions.py:43
+msgid "and"
+msgstr "i"
+
+#: functions.py:44
+msgid "b10bin"
+msgstr "b seska'ai bin"
+
+#: functions.py:45
+msgid "ceil"
+msgstr "kimvi' kutaukunju'"
+
+#: functions.py:46
+msgid "cos"
+msgstr "stikiuang manaung"
+
+#: functions.py:47
+msgid "cosh"
+msgstr "ngutue' nimiai'ñ ngukuang"
+
+#: functions.py:48
+msgid "div"
+msgstr "div"
+
+#: functions.py:49
+msgid "gcd"
+msgstr "ngutue' manù skad-a vakja"
+
+#: functions.py:50
+msgid "exp"
+msgstr "kad-er luju'u"
+
+#: functions.py:51
+msgid "factorial"
+msgstr "kad-er lu'uè"
+
+#: functions.py:52
+msgid "fac"
+msgstr "kul'us ly'ik kandaut"
+
+#: functions.py:53
+msgid "factorize"
+msgstr "kad-er k'ua mane'e"
+
+#: functions.py:54
+msgid "floor"
+msgstr "kupù makaats kutù"
+
+#: functions.py:55
+msgid "inv"
+msgstr "inv"
+
+#: functions.py:56
+msgid "is_int"
+msgstr "is-int"
+
+#: functions.py:57
+msgid "ln"
+msgstr "kinkie'"
+
+#: functions.py:58
+msgid "log10"
+msgstr "ma napup seska'i"
+
+#: functions.py:59
+msgid "mul"
+msgstr "maleìma"
+
+#: functions.py:60
+msgid "or"
+msgstr "tameiñ rijian"
+
+#: functions.py:61
+msgid "rand_float"
+msgstr "ta'ats'"
+
+#: functions.py:62
+msgid "rand_int"
+msgstr "kanen malep"
+
+#: functions.py:63
+msgid "round"
+msgstr "maveiñ skad-a mamejep"
+
+#: functions.py:64
+msgid "sin"
+msgstr "nip lumei"
+
+#: functions.py:65
+msgid "sinh"
+msgstr "make'"
+
+#: functions.py:66
+msgid "sinc"
+msgstr "Nip lumei"
+
+#: functions.py:67
+msgid "sqrt"
+msgstr "sqrt"
+
+#: functions.py:68
+msgid "sub"
+msgstr "sub"
+
+#: functions.py:69
+msgid "square"
+msgstr "kiñui muú"
+
+#: functions.py:70
+msgid "tan"
+msgstr "tan"
+
+#: functions.py:71
+msgid "tanh"
+msgstr "kujui"
+
+#: functions.py:72
+msgid "xor"
+msgstr "xor"
+
+#: functions.py:112
+msgid "abs(x), return absolute value of x, which means -x for x < 0"
+msgstr ""
+"abs(x) vikiñ ravu se vakja nejeiñ re ravu x, se nji lu'uei nejeñ -x si x< 0"
+
+#: functions.py:117
+msgid ""
+"acos(x), return the arc cosine of x. This is the angle for which the cosine "
+"is x. Defined for -1 <= x < 1"
+msgstr ""
+
+#: functions.py:123
+msgid ""
+"acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
+"which the hyperbolic cosine equals x."
+msgstr ""
+
+#: functions.py:129
+msgid ""
+"And(x, y), logical and. Returns True if x and y are True, else returns False"
+msgstr ""
+"And(x,y), and peuk vakja, miant se lik'iajam ne x se mujui navu y, kja majau "
+"matsjau, se nip majau ñjuust nip lik'iajam"
+
+#: functions.py:136
+msgid "add(x, y), return x + y"
+msgstr "lamejep (x, y) tsukueet kad-a x lamejep navu y"
+
+#: functions.py:141
+msgid ""
+"asin(x), return the arc sine of x. This is the angle for which the sine is "
+"x. Defined for -1 <= x <= 1"
+msgstr ""
+
+#: functions.py:147
+msgid ""
+"asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
+"the hyperbolic sine equals x."
+msgstr ""
+
+#: functions.py:153
+msgid ""
+"atan(x), return the arc tangent of x. This is the angle for which the "
+"tangent is x. Defined for all x"
+msgstr ""
+
+#: functions.py:159
+msgid ""
+"atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
+"which the hyperbolic tangent equals x."
+msgstr ""
+
+#: functions.py:171
+msgid "Number does not look binary in base 10"
+msgstr "Pu nabe'en nip lichja'aun se mve vakejé kanuima ne nabe'en seska'ai"
+
+#: functions.py:178
+msgid ""
+"b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
+"(10111) = 23,"
+msgstr ""
+"b10bin(x), ñuut ne nabe'en majuu'ts se mapup seska'ai kjamve kanuima vakeje, "
+"ñuut nanji se bai ma nanu: b10bin(1011)23,"
+
+#: functions.py:183
+msgid "ceil(x), return the smallest integer larger than x."
+msgstr "cdil(x), vikiñ nese matseje se lumei navu mi'ia mad-uaja'p ne x."
+
+#: functions.py:188
+msgid ""
+"cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
+"at the angle x"
+msgstr ""
+
+#: functions.py:194
+msgid ""
+"cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
+msgstr ""
+
+#: functions.py:198
+msgid "Can not divide by zero"
+msgstr "Nip mvania'at masajaiñ kiñkiemejep de se nip lumei ne nabe'en"
+
+#: functions.py:219
+msgid "Invalid argument"
+msgstr "Kad-ep makuas ne se ki'ieje'"
+
+#: functions.py:222
+msgid ""
+"gcd(a, b), determine the greatest common denominator of a and b. For "
+"example, the biggest factor that is shared by the numbers 15 and 18 is 3."
+msgstr ""
+
+#: functions.py:227
+msgid "exp(x), return the natural exponent of x. Given by e^x"
+msgstr "exp(x), vikiñ navu se nd-ajap malejeiñ navu x. makeje' ne e^x"
+
+#: functions.py:231
+msgid "Factorial only defined for integers"
+msgstr ""
+"Nanji se ma'ei makeje' ne re rabe'en sau' make' se me'ets lipia re rave'en"
+
+#: functions.py:244
+msgid ""
+"factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
+msgstr ""
+"factorial(x), vikiñ ne se ma'ei makeje' ne rabe'en se lumei x. se makeje' x* "
+"(x-1)*(x-2)* ..."
+
+#: functions.py:250
+msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"fac(x), vikiñ ne se ma'ei makeje' ne x. se makeje' ne x * (x-1) * (x-2) * "
+"..."
+
+#: functions.py:283
+msgid "floor(x), return the largest integer smaller than x."
+msgstr "f00r(x), kue'e vikiñ ne mad-uajap mi'ia lipia ne sukue'e lumei x."
+
+#: functions.py:287
+msgid "inv(x), return the inverse of x, which is 1 / x"
+msgstr "inv(x) kue'e vikiñ ravu se malejeiñ se rake lutsjau ne x, se lumei 1/x"
+
+#: functions.py:309 functions.py:318
+msgid "Logarithm(x) only defined for x > 0"
+msgstr "Logarithm(x) sau' matsjap malejeiñ nanji x>0"
+
+#: functions.py:311
+msgid ""
+"ln(x), return the natural logarithm of x. This is the value for which the "
+"exponent exp() equals x. Defined for x >= 0."
+msgstr ""
+"In(x) kue'e vikiñ napú se d-ajap malejei ne x. nanji ne lukuas lumei ne "
+"ve'eje exponente exp() skad-a vakja ne x>=0."
+
+#: functions.py:320
+msgid ""
+"log10(x), return the base 10 logarithm of x. This is the value y for which "
+"10^y equals x. Defined for x >= 0."
+msgstr ""
+"log10(x), kue'e vikiñ navu se malejeiñ se mamejep re rabe'en nanji se lu'uei "
+"lupup seska'ai ne x. nanji ne lulejeiñ ne seska'ai^ se skad-a vakja ne x se "
+"me'ei malejeiñ x>=0."
+
+#: functions.py:327
+msgid "Can only calculate x modulo <integer>"
+msgstr "Sau' me'ei mapaat peuk vakja ne se vat'ei k'eje'"
+
+#: functions.py:329
+msgid ""
+"mod(x, y), return the modulus of x with respect to y. This is the remainder "
+"after dividing x by y."
+msgstr ""
+"mod(x,Y), kue'e vikiñ ne se me'ei makeje' ne x se me'ei ne y. nanji ne "
+"vat'ei tsa'ajaiñ kiñkiemejep ne x maiñ ne y."
+
+#: functions.py:337
+msgid "mul(x, y), return x * y"
+msgstr "mul(x,y), kue'e vikiñ x*y"
+
+#: functions.py:341
+msgid "negate(x), return -x"
+msgstr "negate(x), cue'e vikiñ -x"
+
+#: functions.py:346
+msgid ""
+"Or(x, y), logical or. Returns True if x or y is True, else returns False"
+msgstr ""
+"And(x,y), and peuk vakja, miant se lik'iajam ne x se mujui navu y, kja majau "
+"matsjau, se nip majau ñjuust nip lik'iajam"
+
+#: functions.py:361
+msgid "pow(x, y), return x to the power y (x**y)"
+msgstr "pow(x,y), kue'e vikiñ ne x manajap y (x**y)"
+
+#: functions.py:366
+msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
+msgstr ""
+"rand-float(), kue'e ne rabe'en se lu'uei lupup ta'ats n'ujuñ kiñkie' 0.0 y "
+"1.0"
+
+#: functions.py:371
+msgid ""
+"rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
+"<maxval> is an optional argument and is set to 65535 by default."
+msgstr ""
+
+#: functions.py:376
+msgid "round(x), return the integer nearest to x."
+msgstr "round(x), viñujuik lake pu mi'ia se lunup ne x."
+
+#: functions.py:382 functions.py:390
+msgid "Bitwise operations only apply to integers"
+msgstr "Kad-er se vum'ejep kimvia bits sau' mamajep rese mi'ia lipia"
+
+#: functions.py:384
+msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
+msgstr ""
+"shift_left(x,y), make'en' namá ma meje'ep se lumei x navu y (kanuima me'ei "
+"mamejep kanda bit)"
+
+#: functions.py:392
+msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
+msgstr ""
+"shift_right(x,y), kin' nimia pu ma majaut' se lumei ne x na'a y bits "
+"(masajaiñ kanuima kanda bit)"
+
+#: functions.py:397
+msgid ""
+"sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
+"the angle x"
+msgstr ""
+
+#: functions.py:403
+msgid ""
+"sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
+msgstr ""
+
+#: functions.py:410
+msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
+msgstr ""
+
+#: functions.py:415
+msgid ""
+"sqrt(x), return the square root of x. This is the value for which the square "
+"equals x. Defined for x >= 0."
+msgstr ""
+"kue'e vikiñ ne nimviup pu kiñui mu se lumei x. nanji ne vakja ve'ejei ne "
+"kiñui muu lu'ui nejeiñ x. mi'ia malejeiñ x>=0."
+
+#: functions.py:420
+msgid "square(x), return x * x"
+msgstr "kiñui muu(x), kue'e vikiñ x * x"
+
+#: functions.py:427
+msgid "sub(x, y), return x - y"
+msgstr "sub(x,y), kue'e vikiñ x - y"
+
+#: functions.py:432
+msgid ""
+"tan(x), return the tangent of x. This is the slope of the line from the "
+"origin of the unit circle to the point on the unit circle defined by the "
+"angle x. Given by sin(x) / cos(x)"
+msgstr ""
+
+#: functions.py:439
+msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
+msgstr ""
+
+#: functions.py:444
+msgid ""
+"xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
+"y is True (and x is False), else returns False"
+msgstr ""
+"xor(x, y), xor matsjau kue'e mateiñ lik'iajam ne x likiajai' (y y nip "
+"likiajai') se mve likiajai' (y X nip likiajai'), kujui kue'e vikiñ nip "
+"likiajai'"
+
+#: layout.py:69
+msgid "Clear"
+msgstr "Matseiñ'"
+
+#: layout.py:99 layout.py:139
+msgid "Edit"
+msgstr "Malejeiñ"
+
+#: layout.py:104 layout.py:140
+msgid "Algebra"
+msgstr "Ravu se vunu'u lumei re rabe'en mi'ia kad-er make'"
+
+#: layout.py:109 layout.py:141
+msgid "Trigonometry"
+msgstr "Re se vake' manatsjau sad-ia se tichjau rabe'en"
+
+#: layout.py:114 layout.py:142
+msgid "Boolean"
+msgstr "kily'e se vat'ei kje' ma natsjau rabe'en"
+
+#: layout.py:119 layout.py:143
+msgid "Miscellaneous"
+msgstr "lixaal' valei riñja"
+
+#: layout.py:164
+msgid "Label:"
+msgstr "Mamejep ndanú:"
+
+#: layout.py:197
+msgid "All equations"
+msgstr "Mi'ia kad-er me'ei mamujup re rabe'en"
+
+#: layout.py:197
+msgid "My equations"
+msgstr "Re kauk rabe'enk tulejeuñ"
+
+#: layout.py:199
+msgid "Change view between own and all equations"
+msgstr "Mavaun' kale me'ei mapajaú mi'ia re rabe'en me'ei malejeiñ"
+
+#: layout.py:202
+msgid "Show history"
+msgstr "Nda'u'up peuk nan'ia kutejeiñ"
+
+#: layout.py:202
+msgid "Show variables"
+msgstr "Nda'u'up valeima ndavai"
+
+#: layout.py:204
+msgid "Change view between history and variables"
+msgstr "mavaun' se me'ei mapajau' se nan'ia kutejeiñ maiñ se valeima ndavaí"
+
+#. TRANS: multiplication symbol (default: '×')
+#: mathlib.py:82
+msgid "mul_sym"
+msgstr "x"
+
+#. TRANS: division symbol (default: '÷')
+#: mathlib.py:87
+msgid "div_sym"
+msgstr "div_sym"
+
+#. TRANS: equal symbol (default: '=')
+#: mathlib.py:92
+msgid "equ_sym"
+msgstr "equ_sym"
+
+#: mathlib.py:216
+msgid "Undefined"
+msgstr "kad-ep k'ua mvakeje'"
+
+#: mathlib.py:226
+msgid "Error: unsupported type"
+msgstr "Kad-ep maleix makjaat"
+
+#: toolbars.py:53
+#, fuzzy
+msgid "Help"
+msgstr "Nabaaik"
+
+#: toolbars.py:121
+msgid "Copy"
+msgstr "Make'eik"
+
+#: toolbars.py:122
+msgid "<ctrl>c"
+msgstr "<ctrl> c"
+
+#: toolbars.py:126
+msgid "Cut"
+msgstr "Mata'aung"
+
+#: toolbars.py:129
+msgid "<ctrl>x"
+msgstr "<ctrl>x"
+
+#: toolbars.py:137
+msgid "Paste"
+msgstr "Makua'al"
+
+#: toolbars.py:147
+msgid "Square"
+msgstr "kiñuimuu"
+
+#: toolbars.py:152
+msgid "Square root"
+msgstr "Nimviu ne kiñuimuu"
+
+#: toolbars.py:157
+msgid "Inverse"
+msgstr "ke'e maa ngupeix"
+
+#: toolbars.py:164
+msgid "e to the power x"
+msgstr "e ne manajap x"
+
+#: toolbars.py:169
+msgid "x to the power y"
+msgstr "x ne manajap y"
+
+#: toolbars.py:174
+msgid "Natural logarithm"
+msgstr "Ne nabe'en se lupup matsjau sani'a se ma nalejeiñ mi'ia rabe'en"
+
+#: toolbars.py:180
+msgid "Factorial"
+msgstr "kad-er lu'uè"
+
+#: toolbars.py:190
+msgid "Sine"
+msgstr "kinchil'"
+
+#: toolbars.py:194
+msgid "Cosine"
+msgstr ""
+"re se vat'ei vat'ejeiñ se vatsjau rabe'en be'en ne kanju muu maiñ ne kiñui "
+"muu"
+
+#: toolbars.py:198
+msgid "Tangent"
+msgstr "Liviuch'"
+
+#: toolbars.py:204
+msgid "Arc sine"
+msgstr ""
+
+#: toolbars.py:208
+msgid "Arc cosine"
+msgstr ""
+
+#: toolbars.py:212
+msgid "Arc tangent"
+msgstr ""
+
+#: toolbars.py:218
+msgid "Hyperbolic sine"
+msgstr ""
+
+#: toolbars.py:222
+msgid "Hyperbolic cosine"
+msgstr ""
+
+#: toolbars.py:226
+msgid "Hyperbolic tangent"
+msgstr ""
+
+#: toolbars.py:236
+msgid "Logical and"
+msgstr "peuk se k'ua ve'eje lukuas"
+
+#: toolbars.py:240
+msgid "Logical or"
+msgstr "Matsjau"
+
+#: toolbars.py:250
+msgid "Equals"
+msgstr "Skad-a vakjá"
+
+#: toolbars.py:253
+msgid "Not equals"
+msgstr "kad-ep skad-a mvakja"
+
+#: toolbars.py:262
+msgid "Pi"
+msgstr "Pi"
+
+#: toolbars.py:266
+msgid "e"
+msgstr "e"
+
+#: toolbars.py:269
+msgid "γ"
+msgstr "Y"
+
+#: toolbars.py:272
+msgid "φ"
+msgstr ""
+
+#: toolbars.py:279
+msgid "Plot"
+msgstr "Sad-ia se vatsjau"
+
+#: toolbars.py:286
+msgid "Degrees"
+msgstr "Ndanu se mapá maiñ se matsé"
+
+#: toolbars.py:287
+msgid "Radians"
+msgstr ""
+
+#: toolbars.py:291
+msgid "Degrees / Radians"
+msgstr ""
+
+#: toolbars.py:300
+msgid "Exponent / Scientific notation"
+msgstr "Ne kamang/ kad-er se lumei majau lik'iajam lukuas"
+
+#: toolbars.py:310
+msgid "Number of shown digits"
+msgstr "rabe'en lichja'aun keich'"
+
+#: toolbars.py:320
+msgid "Integer formatting base"
+msgstr "kimbia' se nde'ets rabe'en"
