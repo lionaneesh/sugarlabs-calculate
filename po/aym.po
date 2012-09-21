@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-08-22 01:27+0200\n"
+"PO-Revision-Date: 2012-09-21 19:55+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: aym\n"
@@ -172,7 +172,7 @@ msgstr "button_pressed(): sata wakichata sayt'ayata"
 #  "sum"
 #: functions.py:35
 msgid "add"
-msgstr "Jach'aptayaña"
+msgstr "jach'aptayaña"
 
 #  "abs"
 #: functions.py:36
@@ -399,7 +399,7 @@ msgstr ""
 #  "sum(x, y), devuelta x + y"
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr "Jakhuxataña(x, y), kutsuyaña x + y"
+msgstr "jakhuxataña(x, y), kutsuyaña x + y"
 
 #  "asin(x), Devuelve el arco seno de x. Este es el ángulo para el cual el seno "
 #  "es x. Definido para -1<=x<=1"
