@@ -1,5 +1,6 @@
 [Activity]
 name = Calculate
+summary = This is the place to get the answer to a quick problem, but that is not the limit! You can also explore Algebra, Trigonometry, Boolean and more!
 bundle_id = org.laptop.Calculate
 icon = calculate
 exec = sugar-activity calculate.Calculate -s
