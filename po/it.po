@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-01-12 17:59+0200\n"
-"Last-Translator: Bucefalo <sorrentino.maurizio@informaticaapplicata.com>\n"
+"PO-Revision-Date: 2012-09-06 00:01+0200\n"
+"Last-Translator: arosella <arosella@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -61,9 +61,8 @@ msgid "index"
 msgstr "indice"
 
 #: astparser.py:109
-#, fuzzy
 msgid "topics"
-msgstr "Argomenti"
+msgstr "argomenti"
 
 #: astparser.py:110
 msgid "Topics"
@@ -72,12 +71,11 @@ msgstr "Argomenti"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr "variables"
+msgstr "variabili"
 
 #: astparser.py:119
-#, fuzzy
 msgid "Variables"
-msgstr "variables"
+msgstr "Variabili"
 
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
@@ -85,9 +83,8 @@ msgid "functions"
 msgstr "funzioni"
 
 #: astparser.py:126
-#, fuzzy
 msgid "Functions"
-msgstr "funzioni"
+msgstr "Funzioni"
 
 #: astparser.py:135
 #, python-format
@@ -97,9 +94,8 @@ msgstr ""
 "l'indice"
 
 #: astparser.py:459
-#, fuzzy
 msgid "help"
-msgstr "Aiuto"
+msgstr "aiuto"
 
 #: astparser.py:466
 msgid "Recursion detected"
@@ -163,27 +159,24 @@ msgid "acos"
 msgstr "acos"
 
 #: functions.py:38
-#, fuzzy
 msgid "acosh"
-msgstr "acos"
+msgstr "acosh"
 
 #: functions.py:39
 msgid "asin"
 msgstr "asin"
 
 #: functions.py:40
-#, fuzzy
 msgid "asinh"
-msgstr "asin"
+msgstr "asinh"
 
 #: functions.py:41
 msgid "atan"
 msgstr "atan"
 
 #: functions.py:42
-#, fuzzy
 msgid "atanh"
-msgstr "atan"
+msgstr "atanh"
 
 #: functions.py:43
 msgid "and"
@@ -218,9 +211,8 @@ msgid "exp"
 msgstr "exp"
 
 #: functions.py:51
-#, fuzzy
 msgid "factorial"
-msgstr "Fattoriale"
+msgstr "fattoriale"
 
 #: functions.py:52
 msgid "fac"
@@ -327,11 +319,10 @@ msgid ""
 msgstr ""
 
 #: functions.py:129
-#, fuzzy
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
-"and(x, y), and logico. Ritorna True (vero) se x e y sono True, altrimenti "
+"And(x, y), and logico. Ritorna True (vero) se x e y sono True, altrimenti "
 "ritorna False (falso)"
 
 #: functions.py:136
@@ -339,13 +330,12 @@ msgid "add(x, y), return x + y"
 msgstr ""
 
 #: functions.py:141
-#, fuzzy
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
-"acos(x), ritorna l'arcoseno di x. Che è l'angolo per cui il coseno vale x. "
-"Definito per -1 <= x < 1"
+"asin(x), ritorna l'arcoseno di x. Che è l'angolo il cui seno vale x. "
+"Definito per -1 <= x <= 1"
 
 #: functions.py:147
 msgid ""
@@ -418,10 +408,11 @@ msgid "Factorial only defined for integers"
 msgstr ""
 
 #: functions.py:244
-#, fuzzy
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
-msgstr "fac(x), ritorna il fattoriale di x. Dato da x * (x - 1) * (x - 2) * ..."
+msgstr ""
+"factorial(n), ritorna il fattoriale di n. Dato da n * (n - 1) * (n - 2) * "
+"..."
 
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
@@ -472,11 +463,10 @@ msgid "negate(x), return -x"
 msgstr ""
 
 #: functions.py:346
-#, fuzzy
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
-"or(x, y),or logico. Ritorna True (vero) se x e/o y sono True (vero), "
+"Or(x, y),or logico. Ritorna True (vero) se x e/o y sono True (vero), "
 "altrimenti ritorna False (falso)"
 
 #: functions.py:361
@@ -554,7 +544,6 @@ msgstr ""
 "definito dall'angolo x. Calcolato da sin(x) / cos(x)"
 
 #: functions.py:439
-#, fuzzy
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr "tanh(x), ritorna la tangente iperbolica di x. Data da sinh(x) / cosh(x)"
 
@@ -777,9 +766,8 @@ msgid "Radians"
 msgstr "Radianti"
 
 #: toolbars.py:291
-#, fuzzy
 msgid "Degrees / Radians"
-msgstr "Gradi / radianti"
+msgstr "Gradi / Radianti"
 
 #: toolbars.py:300
 msgid "Exponent / Scientific notation"
