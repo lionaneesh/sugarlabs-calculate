@@ -125,7 +125,7 @@ msgstr "Hapa ā-roto"
 
 #: calculate.py:109
 #, python-format
-#, python-format, 
+#, python-format,
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Ine.poroporo() aho muhu (%s)"
 
