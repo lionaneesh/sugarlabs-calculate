@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-03 00:33-0400\n"
 "PO-Revision-Date: 2012-05-05 08:57+0200\n"
 "Last-Translator: whe <heppew@yahoo.com>\n"
 "Language-Team: English\n"
@@ -29,9 +29,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Bereken"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -148,7 +155,7 @@ msgstr "Kan geen label toekennen: veroorzaakt recursie"
 msgid "Writing to journal (%s)"
 msgstr "Schrijven naar dagboek (%s)"
 
-#: calculate.py:829
+#: calculate.py:830
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): ongeldig type"
 
