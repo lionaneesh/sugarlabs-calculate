@@ -51,31 +51,35 @@ class CalcLayout:
 
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
-            [0, 0, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
-            [1, 0, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
-            [2, 0, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
-      
-            [0, 1, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
-            [1, 1, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
-            [2, 1, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
-      
-            [0, 2, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
-            [1, 2, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
-            [2, 2, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
-      
-            [0, 3, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
-            [1, 3, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+            [0, 0, 2, u'\u2190', self.col_gray3, lambda w: self._parent.move_left()],
+            [2, 0, 2, u'\u2192', self.col_gray3, lambda w: self._parent.move_right()],
+            [4, 0, 2, u'\u232B', self.col_gray3, lambda w: self._parent.remove_character(-1)],
 
-            [3, 0, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
+            [0, 1, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
+            [1, 1, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
+            [2, 1, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
+      
+            [0, 2, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
+            [1, 2, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
+            [2, 2, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
+      
+            [0, 3, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
+            [1, 3, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
+            [2, 3, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
+      
+            [0, 4, 2, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
+            [2, 4, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+
+            [3, 1, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
  
-            [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
-            [4, 1, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
-            [5, 1, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
-            [3, 2, 1, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
-            [4, 2, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
-            [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
+            [3, 2, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
+            [4, 2, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
+            [5, 2, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
+            [3, 3, 1, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
+            [4, 3, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
+            [5, 3, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [3, 3, 3, equ_sym, self.col_gray1, lambda w: self._parent.process()],
+            [3, 4, 3, equ_sym, self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
@@ -171,14 +175,14 @@ class CalcLayout:
         label1 = gtk.Label(_('Label:'))
         label1.modify_fg(gtk.STATE_NORMAL, self.col_white)
         label1.set_alignment(1, 0.5)
-        hc1.pack_start(label1, expand=False, fill=False, padding=0)
+        hc1.pack_start(label1, expand=False, fill=False, padding=10)
         self.label_entry = gtk.Entry()
         self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
-        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=0)
+        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=10)
         self.grid.attach(eb2, 0, 6, 0, 2)
         
         self.text_entry = gtk.Entry()
-        self.text_entry.set_size_request(400, 100)
+        self.text_entry.set_size_request(-1, 75)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.input_font)
         self.text_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
@@ -189,10 +193,10 @@ class CalcLayout:
         eb2 = gtk.EventBox()
         eb2.add(eb)
         eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
-        self.grid.attach(eb2, 0, 6, 2, 5)
+        self.grid.attach(eb2, 0, 6, 2, 4)
 
 # Left part: buttons
-        self.pad = gtk.Table(4, 6, True)
+        self.pad = gtk.Table(5, 6, True)
         self.pad.set_row_spacings(12)
         self.pad.set_col_spacings(12)
         self.pad.set_border_width(12)
@@ -206,7 +210,7 @@ class CalcLayout:
         eb = gtk.EventBox()
         eb.add(self.pad)
         eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
-        self.grid.attach(eb, 0, 6, 5, 16)
+        self.grid.attach(eb, 0, 6, 4, 16)
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
