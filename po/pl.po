@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-03 00:33-0400\n"
 "PO-Revision-Date: 2012-02-07 19:00+0200\n"
 "Last-Translator: Marcin <ulinski.marcin@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,9 +26,16 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Kalkulator"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -142,7 +149,7 @@ msgstr "Nie mogę przypisać etykiety, spowodowałoby to rekurencję"
 msgid "Writing to journal (%s)"
 msgstr "Zapisuję do dziennika (%s)"
 
-#: calculate.py:829
+#: calculate.py:830
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): niepoprawny typ"
 
