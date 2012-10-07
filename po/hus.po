@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-03 00:33-0400\n"
 "PO-Revision-Date: 2012-03-16 18:47+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,9 +19,16 @@ msgstr ""
 
 # ajixtaláb=número. Ajum ajixtaláb=Lector de números=Calculadora. La palabra original del ingles significa "Calcular" no "Calculadora". (Zurik)
 # Tsalpanchixtaláb=calcular
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Tsalpanchixtaláb"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -152,7 +159,7 @@ msgid "Writing to journal (%s)"
 msgstr "Dhuchum ti chudhél dhuchadh úw(%s)"
 
 # k'ibts'odh dhuche'=tipo inválido
-#: calculate.py:829
+#: calculate.py:830
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): k'ibts'odh dhuche'"
 
