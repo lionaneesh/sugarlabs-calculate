@@ -609,20 +609,30 @@ class Calculate(ShareableActivity):
             if pos + dir <= len(self.text_entry.get_text()) and pos + dir >= 0:
                 if dir < 0:
                     self.text_entry.delete_text(pos+dir, pos)
+                    pos -= 1
                 else:
                     self.text_entry.delete_text(pos, pos+dir)
+                    pos += 1
         else:
             self.text_entry.delete_text(sel[0], sel[1])
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def move_left(self):
         pos = self.text_entry.get_position()
         if pos > 0:
-            self.text_entry.set_position(pos - 1)
+            pos -= 1
+            self.text_entry.set_position(pos)
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def move_right(self):
         pos = self.text_entry.get_position()
         if pos < len(self.text_entry.get_text()):
-            self.text_entry.set_position(pos + 1)
+            pos += 1
+            self.text_entry.set_position(pos)
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def label_entered(self):
         if len(self.label_entry.get_text()) > 0:
