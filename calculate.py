@@ -210,7 +210,7 @@ class Equation:
             return self.result.get_image()
 
         w = gtk.TextView()
-        w.set_wrap_mode(gtk.WRAP_WORD)
+        w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         w.connect('realize', _textview_realize_cb)
         buf = w.get_buffer()
 

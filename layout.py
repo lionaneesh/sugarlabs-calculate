@@ -231,7 +231,7 @@ class CalcLayout:
 # Right part: last equation
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
-        self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
+        self.last_eq.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         self.last_eq.connect('realize', self._textview_realize_cb)
         self.last_eq.set_border_width(2)
         self.last_eq.modify_bg(gtk.STATE_NORMAL, self.col_gray1)
