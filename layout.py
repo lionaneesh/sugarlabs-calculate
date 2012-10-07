@@ -149,7 +149,7 @@ class CalcLayout:
 
 # Some layout constants
         self.input_font = pango.FontDescription(str='sans bold 12')
-        self.button_font = pango.FontDescription(str='sans bold 18')
+        self.button_font = pango.FontDescription(str='sans bold 16')
         self.col_white = self.create_color(1.00, 1.00, 1.00)
         self.col_gray1 = self.create_color(0.76, 0.76, 0.76)
         self.col_gray2 = self.create_color(0.50, 0.50, 0.50)
@@ -158,12 +158,13 @@ class CalcLayout:
         self.col_red = self.create_color(1.00, 0.00, 0.00)
 
 # Big - Table, 16 rows, 10 columns, homogeneously divided
-        self.grid = gtk.Table(16, 11, True)
-        self.grid.set_border_width(3)
+        self.grid = gtk.Table(26, 11, True)
+        self.grid.set_border_width(0)
         self.grid.set_row_spacings(0)
-        self.grid.set_col_spacings(6)
+        self.grid.set_col_spacings(4)
 
 # Left part: container and input
+        vc1 = gtk.VBox(False, 0)
         hc1 = gtk.HBox(False, 10)
         eb = gtk.EventBox()
         eb.add(hc1)
@@ -178,8 +179,8 @@ class CalcLayout:
         hc1.pack_start(label1, expand=False, fill=False, padding=10)
         self.label_entry = gtk.Entry()
         self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
-        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=10)
-        self.grid.attach(eb2, 0, 6, 0, 2)
+        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=0)
+        vc1.pack_start(eb2, expand=False)
         
         self.text_entry = gtk.Entry()
         self.text_entry.set_size_request(-1, 75)
@@ -193,7 +194,8 @@ class CalcLayout:
         eb2 = gtk.EventBox()
         eb2.add(eb)
         eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
-        self.grid.attach(eb2, 0, 6, 2, 4)
+        vc1.pack_start(eb2, expand=True, fill=True, padding=0)
+        self.grid.attach(vc1, 0, 7, 0, 6)
 
 # Left part: buttons
         self.pad = gtk.Table(9, 6, True)
@@ -210,7 +212,7 @@ class CalcLayout:
         eb = gtk.EventBox()
         eb.add(self.pad)
         eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
-        self.grid.attach(eb, 0, 6, 4, 16)
+        self.grid.attach(eb, 0, 7, 6, 26)
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
@@ -226,7 +228,7 @@ class CalcLayout:
             index=True)
         hc2.add(self.minebut)
         hc2.add(self.varbut)
-        self.grid.attach(hc2, 6, 11, 0, 1)
+        self.grid.attach(hc2, 7, 11, 0, 2)
         
 # Right part: last equation
         self.last_eq = gtk.TextView()
@@ -235,7 +237,7 @@ class CalcLayout:
         self.last_eq.connect('realize', self._textview_realize_cb)
         self.last_eq.set_border_width(2)
         self.last_eq.modify_bg(gtk.STATE_NORMAL, self.col_gray1)
-        self.grid.attach(self.last_eq, 6, 11, 1, 5)
+        self.grid.attach(self.last_eq, 7, 11, 2, 5)
 
 # Right part: history
         scrolled_window = gtk.ScrolledWindow()
@@ -255,7 +257,7 @@ class CalcLayout:
         vbox.pack_start(self.history_vbox)
         vbox.pack_start(self.variable_vbox)
         scrolled_window.add_with_viewport(vbox)
-        self.grid.attach(scrolled_window, 6, 11, 5, 16)
+        self.grid.attach(scrolled_window, 7, 11, 5, 26)
 
     def show_it(self):
         """Show the dialog."""
