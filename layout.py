@@ -171,10 +171,10 @@ class CalcLayout:
         label1 = gtk.Label(_('Label:'))
         label1.modify_fg(gtk.STATE_NORMAL, self.col_white)
         label1.set_alignment(1, 0.5)
-        hc1.add(label1)
+        hc1.pack_start(label1, expand=False, fill=False, padding=0)
         self.label_entry = gtk.Entry()
         self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
-        hc1.add(self.label_entry)
+        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=0)
         self.grid.attach(eb2, 0, 6, 0, 2)
         
         self.text_entry = gtk.Entry()
