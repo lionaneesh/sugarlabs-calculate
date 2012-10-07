@@ -155,28 +155,47 @@ class CalcLayout:
 
 # Big - Table, 16 rows, 10 columns, homogeneously divided
         self.grid = gtk.Table(16, 11, True)
-        self.grid.set_border_width(6)
-        self.grid.set_row_spacings(6)
-        self.grid.set_col_spacings(6)
+        self.grid.set_border_width(0)
+        self.grid.set_row_spacings(0)
+        self.grid.set_col_spacings(0)
 
 # Left part: container and input
         hc1 = gtk.HBox(False, 10)
+        eb = gtk.EventBox()
+        eb.add(hc1)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        eb.set_border_width(12)
+        eb2 = gtk.EventBox()
+        eb2.add(eb)
+        eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
         label1 = gtk.Label(_('Label:'))
+        label1.modify_fg(gtk.STATE_NORMAL, self.col_white)
+        label1.set_alignment(1, 0.5)
         hc1.add(label1)
         self.label_entry = gtk.Entry()
+        self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
         hc1.add(self.label_entry)
-        self.grid.attach(hc1, 0, 6, 0, 1)
+        self.grid.attach(eb2, 0, 6, 0, 2)
         
         self.text_entry = gtk.Entry()
         self.text_entry.set_size_request(400, 100)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.input_font)
-        self.grid.attach(self.text_entry, 0, 6, 1, 5)
+        self.text_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
+        eb = gtk.EventBox()
+        eb.add(self.text_entry)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        eb.set_border_width(12)
+        eb2 = gtk.EventBox()
+        eb2.add(eb)
+        eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        self.grid.attach(eb2, 0, 6, 2, 5)
 
 # Left part: buttons
         self.pad = gtk.Table(4, 6, True)
-        self.pad.set_row_spacings(6)
-        self.pad.set_col_spacings(6)
+        self.pad.set_row_spacings(12)
+        self.pad.set_col_spacings(12)
+        self.pad.set_border_width(12)
         self.create_button_data()
         self.buttons = {}
         for x, y, w, cap, bgcol, cb in self.button_data:
@@ -184,12 +203,10 @@ class CalcLayout:
             self.buttons[cap] = button
             self.pad.attach(button, x, x+w, y, y+1)
 
-# Not for now...
-#        self.pad_ebox = gtk.EventBox()
-#        self.pad_ebox.add(self.pad)
-#        self.pad_ebox.modify_bg(gtk.STATE_NORMAL, self.col_black)
-
-        self.grid.attach(self.pad, 0, 6, 5, 16)
+        eb = gtk.EventBox()
+        eb.add(self.pad)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        self.grid.attach(eb, 0, 6, 5, 16)
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
