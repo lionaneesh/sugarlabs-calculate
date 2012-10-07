@@ -151,7 +151,7 @@ class CalcLayout:
         self.input_font = pango.FontDescription(str='sans bold 12')
         self.button_font = pango.FontDescription(str='sans bold 18')
         self.col_white = self.create_color(1.00, 1.00, 1.00)
-        self.col_gray1 = self.create_color(0.75, 0.75, 0.75)
+        self.col_gray1 = self.create_color(0.76, 0.76, 0.76)
         self.col_gray2 = self.create_color(0.50, 0.50, 0.50)
         self.col_gray3 = self.create_color(0.25, 0.25, 0.25)
         self.col_black = self.create_color(0.00, 0.00, 0.00)
@@ -159,9 +159,9 @@ class CalcLayout:
 
 # Big - Table, 16 rows, 10 columns, homogeneously divided
         self.grid = gtk.Table(16, 11, True)
-        self.grid.set_border_width(0)
+        self.grid.set_border_width(3)
         self.grid.set_row_spacings(0)
-        self.grid.set_col_spacings(0)
+        self.grid.set_col_spacings(6)
 
 # Left part: container and input
         hc1 = gtk.HBox(False, 10)
@@ -233,6 +233,8 @@ class CalcLayout:
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
         self.last_eq.connect('realize', self._textview_realize_cb)
+        self.last_eq.set_border_width(2)
+        self.last_eq.modify_bg(gtk.STATE_NORMAL, self.col_gray1)
         self.grid.attach(self.last_eq, 6, 11, 1, 5)
 
 # Right part: history
@@ -241,12 +243,12 @@ class CalcLayout:
 
         self.history_vbox = gtk.VBox()
         self.history_vbox.set_homogeneous(False)
-        self.history_vbox.set_border_width(6)
+        self.history_vbox.set_border_width(0)
         self.history_vbox.set_spacing(4)
 
         self.variable_vbox = gtk.VBox()
         self.variable_vbox.set_homogeneous(False)
-        self.variable_vbox.set_border_width(6)
+        self.variable_vbox.set_border_width(0)
         self.variable_vbox.set_spacing(4)
 
         vbox = gtk.VBox()
