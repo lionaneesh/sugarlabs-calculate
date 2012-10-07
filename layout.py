@@ -51,35 +51,35 @@ class CalcLayout:
 
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
-            [0, 0, 2, u'\u2190', self.col_gray3, lambda w: self._parent.move_left()],
-            [2, 0, 2, u'\u2192', self.col_gray3, lambda w: self._parent.move_right()],
-            [4, 0, 2, u'\u232B', self.col_gray3, lambda w: self._parent.remove_character(-1)],
+            [0, 0, 2, 1, u'\u2190', self.col_gray3, lambda w: self._parent.move_left()],
+            [2, 0, 2, 1, u'\u2192', self.col_gray3, lambda w: self._parent.move_right()],
+            [4, 0, 2, 1, u'\u232B', self.col_gray3, lambda w: self._parent.remove_character(-1)],
 
-            [0, 1, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
-            [1, 1, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
-            [2, 1, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
+            [0, 1, 1, 2, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
+            [1, 1, 1, 2, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
+            [2, 1, 1, 2, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
       
-            [0, 2, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
-            [1, 2, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
-            [2, 2, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
+            [0, 3, 1, 2, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
+            [1, 3, 1, 2, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
+            [2, 3, 1, 2, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
       
-            [0, 3, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
-            [1, 3, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
-            [2, 3, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
+            [0, 5, 1, 2, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
+            [1, 5, 1, 2, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
+            [2, 5, 1, 2, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
       
-            [0, 4, 2, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
-            [2, 4, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+            [0, 7, 2, 2, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
+            [2, 7, 1, 2, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
 
-            [3, 1, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
+            [3, 1, 3, 2, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
  
-            [3, 2, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
-            [4, 2, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
-            [5, 2, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
-            [3, 3, 1, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
-            [4, 3, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
-            [5, 3, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
+            [3, 3, 1, 2, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
+            [4, 3, 1, 2, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
+            [5, 3, 1, 2, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
+            [3, 5, 1, 2, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
+            [4, 5, 1, 2, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
+            [5, 5, 1, 2, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [3, 4, 3, equ_sym, self.col_gray1, lambda w: self._parent.process()],
+            [3, 7, 3, 2, equ_sym, self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
@@ -149,11 +149,11 @@ class CalcLayout:
 
 # Some layout constants
         self.input_font = pango.FontDescription(str='sans bold 12')
-        self.button_font = pango.FontDescription(str='sans bold 16')
+        self.button_font = pango.FontDescription(str='sans bold 18')
         self.col_white = self.create_color(1.00, 1.00, 1.00)
-        self.col_gray1 = self.create_color(0.69, 0.71, 0.72)
-        self.col_gray2 = self.create_color(0.51, 0.51, 0.53)
-        self.col_gray3 = self.create_color(0.30, 0.30, 0.31)
+        self.col_gray1 = self.create_color(0.75, 0.75, 0.75)
+        self.col_gray2 = self.create_color(0.50, 0.50, 0.50)
+        self.col_gray3 = self.create_color(0.25, 0.25, 0.25)
         self.col_black = self.create_color(0.00, 0.00, 0.00)
         self.col_red = self.create_color(1.00, 0.00, 0.00)
 
@@ -196,16 +196,16 @@ class CalcLayout:
         self.grid.attach(eb2, 0, 6, 2, 4)
 
 # Left part: buttons
-        self.pad = gtk.Table(5, 6, True)
+        self.pad = gtk.Table(9, 6, True)
         self.pad.set_row_spacings(12)
         self.pad.set_col_spacings(12)
         self.pad.set_border_width(12)
         self.create_button_data()
         self.buttons = {}
-        for x, y, w, cap, bgcol, cb in self.button_data:
-            button = self.create_button(_(cap), cb, self.col_white, bgcol, w)
+        for x, y, w, h, cap, bgcol, cb in self.button_data:
+            button = self.create_button(_(cap), cb, self.col_white, bgcol, w, h)
             self.buttons[cap] = button
-            self.pad.attach(button, x, x+w, y, y+1)
+            self.pad.attach(button, x, x + w, y, y + h)
 
         eb = gtk.EventBox()
         eb.add(self.pad)
@@ -326,21 +326,23 @@ class CalcLayout:
         self.history_vbox.hide()
         self.variable_vbox.show()
 
-    def create_button(self, cap, cb, fgcol, bgcol, width):
+    def create_button(self, cap, cb, fgcol, bgcol, width, height):
         """Create a button that is set up properly."""
         button = gtk.Button(_(cap))
-        self.modify_button_appearance(button, fgcol, bgcol, width)
+        self.modify_button_appearance(button, fgcol, bgcol, width, height)
         button.connect("clicked", cb)
         button.connect("key_press_event", self._parent.ignore_key_cb)
         return button
 
-    def modify_button_appearance(self, button, fgcol, bgcol, width):
+    def modify_button_appearance(self, button, fgcol, bgcol, width, height):
         """Modify button style."""
         width = 50 * width
-        button.get_child().set_size_request(width, 50)
+        height = 50 * height
+        button.get_child().set_size_request(width, height)
         button.get_child().modify_font(self.button_font)
         button.get_child().modify_fg(gtk.STATE_NORMAL, fgcol)
         button.modify_bg(gtk.STATE_NORMAL, bgcol)
+        button.modify_bg(gtk.STATE_PRELIGHT, bgcol)
 
     def _all_equations_toggle_cb(self, index):
         if index == 0:
