@@ -526,15 +526,31 @@ class Calculate(ShareableActivity):
         if name in reserved:
             return None
         w = gtk.TextView()
+        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+        w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
+        w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
         w.connect('realize', _textview_realize_cb)
-        w.set_left_margin(5)
-        w.set_right_margin(5)
         buf = w.get_buffer()
 
-        col = self.color.get_fill_color()
+        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            col = gtk.gdk.color_parse('white')
+        else:
+            col = gtk.gdk.color_parse('black')
+
         tag = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW,
                 foreground=col)
-        text = '%s:\t%s' % (name,str(value))
+        text = '%s:' % (name)
+        buf.insert_with_tags(buf.get_end_iter(), text, tag)
+        tag = buf.create_tag(font=CalcLayout.FONT_SMALL,
+                foreground=col)
+        text = '%s' % (str(value))
         buf.insert_with_tags(buf.get_end_iter(), text, tag)
 
         return w
