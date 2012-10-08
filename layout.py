@@ -7,6 +7,7 @@ import gtk
 import pango
 from sugar.activity import activity
 from sugar.graphics.roundbox import CanvasRoundBox
+from sugar.graphics.combobox import ComboBox
 from toolbars import *
 
 try:
@@ -216,18 +217,14 @@ class CalcLayout:
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton(
-            [_('All equations'), _('My equations')],
-            self._all_equations_toggle_cb,
-            _('Change view between own and all equations'),
-            index=True)
-        self.varbut = TextToggleToolButton(
-            [_('Show history'), _('Show variables')],
-            self._history_toggle_cb,
-            _('Change view between history and variables'),
-            index=True)
-        hc2.add(self.minebut)
-        hc2.add(self.varbut)
+        combo = ComboBox()
+        combo.append_item(0, _('All equations'))
+        combo.append_item(1, _('My equations'))
+        combo.append_item(2, _('Show variables'))
+        combo.set_active(0)
+        combo.connect('changed', self._history_filter_cb)
+        hc2.pack_start(combo) 
+        hc2.set_border_width(6)
         self.grid.attach(hc2, 7, 11, 0, 2)
         
 # Right part: last equation
@@ -237,7 +234,7 @@ class CalcLayout:
         self.last_eq.connect('realize', self._textview_realize_cb)
         self.last_eq.set_border_width(2)
         self.last_eq.modify_bg(gtk.STATE_NORMAL, self.col_gray1)
-        self.grid.attach(self.last_eq, 7, 11, 2, 5)
+        self.grid.attach(self.last_eq, 7, 11, 2, 7)
 
 # Right part: history
         scrolled_window = gtk.ScrolledWindow()
@@ -257,7 +254,7 @@ class CalcLayout:
         vbox.pack_start(self.history_vbox)
         vbox.pack_start(self.variable_vbox)
         scrolled_window.add_with_viewport(vbox)
-        self.grid.attach(scrolled_window, 7, 11, 5, 26)
+        self.grid.attach(scrolled_window, 7, 11, 7, 26)
 
     def show_it(self):
         """Show the dialog."""
@@ -348,16 +345,15 @@ class CalcLayout:
         button.modify_bg(gtk.STATE_NORMAL, bgcol)
         button.modify_bg(gtk.STATE_PRELIGHT, bgcol)
 
-    def _all_equations_toggle_cb(self, index):
-        if index == 0:
-            self.show_all_history()
-        else:
-            self.show_own_history()
-
-    def _history_toggle_cb(self, index):
-        if index == 0:
+    def _history_filter_cb(self, combo):
+        selection = combo.get_active()
+        if selection == 0:
             self.show_history()
-        else:
+            self.show_all_history()
+        elif selection == 1:
+            self.show_history()
+            self.show_own_history()
+        elif selection == 2:
             self.show_variables()
 
     def _textview_realize_cb(self, widget):
