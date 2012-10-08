@@ -210,7 +210,13 @@ class Equation:
             return self.result.get_image()
 
         w = gtk.TextView()
+        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
         w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
+        w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
         w.connect('realize', _textview_realize_cb)
         buf = w.get_buffer()
 
@@ -218,7 +224,13 @@ class Equation:
         tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
         tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
             justification=gtk.JUSTIFY_RIGHT)
-        col = self.color.get_fill_color()
+        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            col = gtk.gdk.color_parse('white')
+        else:
+            col = gtk.gdk.color_parse('black')
         tagcolor = buf.create_tag(foreground=col)
 
         # Add label, equation and result
