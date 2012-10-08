@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-03-09 11:55+0200\n"
+"POT-Creation-Date: 2012-10-03 00:33-0400\n"
+"PO-Revision-Date: 2012-10-08 15:54+0200\n"
 "Last-Translator: Aputsiaq Niels <aj@isit.gl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: da\n"
@@ -25,9 +25,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Beregn"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
+"Det er stedet med svar på hurtige problemer, men ikke blot dette! Du kan "
+"også udforske algebra, trigonometri, boolske operatorer og mere!"
 
 #: astparser.py:40
 msgid ""
@@ -141,7 +150,7 @@ msgstr "Kan ikke tildele etiketten: vil forårsage rekursion"
 msgid "Writing to journal (%s)"
 msgstr "Skriver til journal (%s)"
 
-#: calculate.py:829
+#: calculate.py:830
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): ugyldig type"
 
