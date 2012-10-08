@@ -185,6 +185,7 @@ class CalcLayout:
         vc1.pack_start(eb2, expand=False)
         
         self.text_entry = gtk.Entry()
+        self.text_entry.props.im_module = 'gtk-im-context-simple'
         self.text_entry.set_size_request(-1, 75)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.input_font)
