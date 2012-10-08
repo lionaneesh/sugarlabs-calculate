@@ -342,9 +342,6 @@ class Calculate(ShareableActivity):
         self.connect("key_press_event", self.keypress_cb)
         self.connect("destroy", self.cleanup_cb)
         self.color = sugar.profile.get_color()
-##        self.icon = CanvasIcon(
-##            icon_name = 'theme:stock-buddy',
-##            xo_color = XoColor(self.color))     
 
         self.layout = CalcLayout(self)
         self.label_entry = self.layout.label_entry
