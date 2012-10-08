@@ -6,6 +6,7 @@ pygtk.require('2.0')
 import gtk
 import pango
 from sugar.activity import activity
+import sugar.profile
 from sugar.graphics.roundbox import CanvasRoundBox
 from sugar.graphics.combobox import ComboBox
 from toolbars import *
@@ -232,8 +233,23 @@ class CalcLayout:
         self.last_eq.set_editable(False)
         self.last_eq.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         self.last_eq.connect('realize', self._textview_realize_cb)
-        self.last_eq.set_border_width(2)
-        self.last_eq.modify_bg(gtk.STATE_NORMAL, self.col_gray1)
+        self.last_eq.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(
+                                 sugar.profile.get_color().get_fill_color()))
+        self.last_eq.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(
+                                 sugar.profile.get_color().get_stroke_color()))
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
+
+        bright = (gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).red_float +
+                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).green_float +
+                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            self.last_eq.modify_text(gtk.STATE_NORMAL, self.col_white)
+        else:
+            self.last_eq.modify_text(gtk.STATE_NORMAL, self.col_black)
+
         self.grid.attach(self.last_eq, 7, 11, 2, 7)
 
 # Right part: history
