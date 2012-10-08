@@ -210,7 +210,13 @@ class Equation:
             return self.result.get_image()
 
         w = gtk.TextView()
-        w.set_wrap_mode(gtk.WRAP_WORD)
+        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+        w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
+        w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
         w.connect('realize', _textview_realize_cb)
         buf = w.get_buffer()
 
@@ -218,7 +224,13 @@ class Equation:
         tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
         tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
             justification=gtk.JUSTIFY_RIGHT)
-        col = self.color.get_fill_color()
+        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            col = gtk.gdk.color_parse('white')
+        else:
+            col = gtk.gdk.color_parse('black')
         tagcolor = buf.create_tag(foreground=col)
 
         # Add label, equation and result
@@ -514,15 +526,31 @@ class Calculate(ShareableActivity):
         if name in reserved:
             return None
         w = gtk.TextView()
+        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+        w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
+        w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        w.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
         w.connect('realize', _textview_realize_cb)
-        w.set_left_margin(5)
-        w.set_right_margin(5)
         buf = w.get_buffer()
 
-        col = self.color.get_fill_color()
+        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            col = gtk.gdk.color_parse('white')
+        else:
+            col = gtk.gdk.color_parse('black')
+
         tag = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW,
                 foreground=col)
-        text = '%s:\t%s' % (name,str(value))
+        text = '%s:' % (name)
+        buf.insert_with_tags(buf.get_end_iter(), text, tag)
+        tag = buf.create_tag(font=CalcLayout.FONT_SMALL,
+                foreground=col)
+        text = '%s' % (str(value))
         buf.insert_with_tags(buf.get_end_iter(), text, tag)
 
         return w
@@ -609,20 +637,30 @@ class Calculate(ShareableActivity):
             if pos + dir <= len(self.text_entry.get_text()) and pos + dir >= 0:
                 if dir < 0:
                     self.text_entry.delete_text(pos+dir, pos)
+                    pos -= 1
                 else:
                     self.text_entry.delete_text(pos, pos+dir)
+                    pos += 1
         else:
             self.text_entry.delete_text(sel[0], sel[1])
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def move_left(self):
         pos = self.text_entry.get_position()
         if pos > 0:
-            self.text_entry.set_position(pos - 1)
+            pos -= 1
+            self.text_entry.set_position(pos)
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def move_right(self):
         pos = self.text_entry.get_position()
         if pos < len(self.text_entry.get_text()):
-            self.text_entry.set_position(pos + 1)
+            pos += 1
+            self.text_entry.set_position(pos)
+        self.text_entry.grab_focus()
+        self.text_entry.set_position(pos) 
 
     def label_entered(self):
         if len(self.label_entry.get_text()) > 0:

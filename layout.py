@@ -6,7 +6,9 @@ pygtk.require('2.0')
 import gtk
 import pango
 from sugar.activity import activity
+import sugar.profile
 from sugar.graphics.roundbox import CanvasRoundBox
+from sugar.graphics.combobox import ComboBox
 from toolbars import *
 
 try:
@@ -51,31 +53,35 @@ class CalcLayout:
 
         self.button_data = [
 # [x, y, width, label, bgcol, cb]
-            [0, 0, 1, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
-            [1, 0, 1, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
-            [2, 0, 1, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
-      
-            [0, 1, 1, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
-            [1, 1, 1, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
-            [2, 1, 1, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
-      
-            [0, 2, 1, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
-            [1, 2, 1, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
-            [2, 2, 1, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
-      
-            [0, 3, 1, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
-            [1, 3, 1, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+            [0, 0, 2, 1, u'\u2190', self.col_gray3, lambda w: self._parent.move_left()],
+            [2, 0, 2, 1, u'\u2192', self.col_gray3, lambda w: self._parent.move_right()],
+            [4, 0, 2, 1, u'\u232B', self.col_gray3, lambda w: self._parent.remove_character(-1)],
 
-            [3, 0, 3, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
+            [0, 1, 1, 2, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
+            [1, 1, 1, 2, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
+            [2, 1, 1, 2, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
+      
+            [0, 3, 1, 2, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
+            [1, 3, 1, 2, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
+            [2, 3, 1, 2, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
+      
+            [0, 5, 1, 2, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
+            [1, 5, 1, 2, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
+            [2, 5, 1, 2, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
+      
+            [0, 7, 2, 2, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
+            [2, 7, 1, 2, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+
+            [3, 1, 3, 2, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
  
-            [3, 1, 1, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
-            [4, 1, 1, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
-            [5, 1, 1, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
-            [3, 2, 1, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
-            [4, 2, 1, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
-            [5, 2, 1, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
+            [3, 3, 1, 2, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
+            [4, 3, 1, 2, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
+            [5, 3, 1, 2, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
+            [3, 5, 1, 2, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
+            [4, 5, 1, 2, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
+            [5, 5, 1, 2, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
 
-            [3, 3, 3, equ_sym, self.col_gray1, lambda w: self._parent.process()],
+            [3, 7, 3, 2, equ_sym, self.col_gray1, lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
@@ -147,72 +153,104 @@ class CalcLayout:
         self.input_font = pango.FontDescription(str='sans bold 12')
         self.button_font = pango.FontDescription(str='sans bold 16')
         self.col_white = self.create_color(1.00, 1.00, 1.00)
-        self.col_gray1 = self.create_color(0.69, 0.71, 0.72)
-        self.col_gray2 = self.create_color(0.51, 0.51, 0.53)
-        self.col_gray3 = self.create_color(0.30, 0.30, 0.31)
+        self.col_gray1 = self.create_color(0.76, 0.76, 0.76)
+        self.col_gray2 = self.create_color(0.50, 0.50, 0.50)
+        self.col_gray3 = self.create_color(0.25, 0.25, 0.25)
         self.col_black = self.create_color(0.00, 0.00, 0.00)
         self.col_red = self.create_color(1.00, 0.00, 0.00)
 
 # Big - Table, 16 rows, 10 columns, homogeneously divided
-        self.grid = gtk.Table(16, 11, True)
-        self.grid.set_border_width(6)
-        self.grid.set_row_spacings(6)
-        self.grid.set_col_spacings(6)
+        self.grid = gtk.Table(26, 11, True)
+        self.grid.set_border_width(0)
+        self.grid.set_row_spacings(0)
+        self.grid.set_col_spacings(4)
 
 # Left part: container and input
+        vc1 = gtk.VBox(False, 0)
         hc1 = gtk.HBox(False, 10)
+        eb = gtk.EventBox()
+        eb.add(hc1)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        eb.set_border_width(12)
+        eb2 = gtk.EventBox()
+        eb2.add(eb)
+        eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
         label1 = gtk.Label(_('Label:'))
-        hc1.add(label1)
+        label1.modify_fg(gtk.STATE_NORMAL, self.col_white)
+        label1.set_alignment(1, 0.5)
+        hc1.pack_start(label1, expand=False, fill=False, padding=10)
         self.label_entry = gtk.Entry()
-        hc1.add(self.label_entry)
-        self.grid.attach(hc1, 0, 6, 0, 1)
+        self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
+        hc1.pack_start(self.label_entry, expand=True, fill=True, padding=0)
+        vc1.pack_start(eb2, expand=False)
         
         self.text_entry = gtk.Entry()
-        self.text_entry.set_size_request(400, 100)
+        self.text_entry.set_size_request(-1, 75)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.input_font)
-        self.grid.attach(self.text_entry, 0, 6, 1, 5)
+        self.text_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
+        eb = gtk.EventBox()
+        eb.add(self.text_entry)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        eb.set_border_width(12)
+        eb2 = gtk.EventBox()
+        eb2.add(eb)
+        eb2.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        vc1.pack_start(eb2, expand=True, fill=True, padding=0)
+        self.grid.attach(vc1, 0, 7, 0, 6)
 
 # Left part: buttons
-        self.pad = gtk.Table(4, 6, True)
-        self.pad.set_row_spacings(6)
-        self.pad.set_col_spacings(6)
+        self.pad = gtk.Table(9, 6, True)
+        self.pad.set_row_spacings(12)
+        self.pad.set_col_spacings(12)
+        self.pad.set_border_width(12)
         self.create_button_data()
         self.buttons = {}
-        for x, y, w, cap, bgcol, cb in self.button_data:
-            button = self.create_button(_(cap), cb, self.col_white, bgcol, w)
+        for x, y, w, h, cap, bgcol, cb in self.button_data:
+            button = self.create_button(_(cap), cb, self.col_white, bgcol, w, h)
             self.buttons[cap] = button
-            self.pad.attach(button, x, x+w, y, y+1)
+            self.pad.attach(button, x, x + w, y, y + h)
 
-# Not for now...
-#        self.pad_ebox = gtk.EventBox()
-#        self.pad_ebox.add(self.pad)
-#        self.pad_ebox.modify_bg(gtk.STATE_NORMAL, self.col_black)
-
-        self.grid.attach(self.pad, 0, 6, 5, 16)
+        eb = gtk.EventBox()
+        eb.add(self.pad)
+        eb.modify_bg(gtk.STATE_NORMAL, self.col_black)
+        self.grid.attach(eb, 0, 7, 6, 26)
 
 # Right part: container and equation button
         hc2 = gtk.HBox()
-        self.minebut = TextToggleToolButton(
-            [_('All equations'), _('My equations')],
-            self._all_equations_toggle_cb,
-            _('Change view between own and all equations'),
-            index=True)
-        self.varbut = TextToggleToolButton(
-            [_('Show history'), _('Show variables')],
-            self._history_toggle_cb,
-            _('Change view between history and variables'),
-            index=True)
-        hc2.add(self.minebut)
-        hc2.add(self.varbut)
-        self.grid.attach(hc2, 6, 11, 0, 1)
+        combo = ComboBox()
+        combo.append_item(0, _('All equations'))
+        combo.append_item(1, _('My equations'))
+        combo.append_item(2, _('Show variables'))
+        combo.set_active(0)
+        combo.connect('changed', self._history_filter_cb)
+        hc2.pack_start(combo) 
+        hc2.set_border_width(6)
+        self.grid.attach(hc2, 7, 11, 0, 2)
         
 # Right part: last equation
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
-        self.last_eq.set_wrap_mode(gtk.WRAP_WORD)
+        self.last_eq.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         self.last_eq.connect('realize', self._textview_realize_cb)
-        self.grid.attach(self.last_eq, 6, 11, 1, 5)
+        self.last_eq.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(
+                                 sugar.profile.get_color().get_fill_color()))
+        self.last_eq.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(
+                                 sugar.profile.get_color().get_stroke_color()))
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
+        self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
+
+        bright = (gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).red_float +
+                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).green_float +
+                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).blue_float) / 3.0
+        if bright < 0.5:
+            self.last_eq.modify_text(gtk.STATE_NORMAL, self.col_white)
+        else:
+            self.last_eq.modify_text(gtk.STATE_NORMAL, self.col_black)
+
+        self.grid.attach(self.last_eq, 7, 11, 2, 7)
 
 # Right part: history
         scrolled_window = gtk.ScrolledWindow()
@@ -220,19 +258,19 @@ class CalcLayout:
 
         self.history_vbox = gtk.VBox()
         self.history_vbox.set_homogeneous(False)
-        self.history_vbox.set_border_width(6)
+        self.history_vbox.set_border_width(0)
         self.history_vbox.set_spacing(4)
 
         self.variable_vbox = gtk.VBox()
         self.variable_vbox.set_homogeneous(False)
-        self.variable_vbox.set_border_width(6)
+        self.variable_vbox.set_border_width(0)
         self.variable_vbox.set_spacing(4)
 
         vbox = gtk.VBox()
         vbox.pack_start(self.history_vbox)
         vbox.pack_start(self.variable_vbox)
         scrolled_window.add_with_viewport(vbox)
-        self.grid.attach(scrolled_window, 6, 11, 5, 16)
+        self.grid.attach(scrolled_window, 7, 11, 7, 26)
 
     def show_it(self):
         """Show the dialog."""
@@ -305,32 +343,33 @@ class CalcLayout:
         self.history_vbox.hide()
         self.variable_vbox.show()
 
-    def create_button(self, cap, cb, fgcol, bgcol, width):
+    def create_button(self, cap, cb, fgcol, bgcol, width, height):
         """Create a button that is set up properly."""
         button = gtk.Button(_(cap))
-        self.modify_button_appearance(button, fgcol, bgcol, width)
+        self.modify_button_appearance(button, fgcol, bgcol, width, height)
         button.connect("clicked", cb)
         button.connect("key_press_event", self._parent.ignore_key_cb)
         return button
 
-    def modify_button_appearance(self, button, fgcol, bgcol, width):
+    def modify_button_appearance(self, button, fgcol, bgcol, width, height):
         """Modify button style."""
         width = 50 * width
-        button.get_child().set_size_request(width, 50)
+        height = 50 * height
+        button.get_child().set_size_request(width, height)
         button.get_child().modify_font(self.button_font)
         button.get_child().modify_fg(gtk.STATE_NORMAL, fgcol)
         button.modify_bg(gtk.STATE_NORMAL, bgcol)
+        button.modify_bg(gtk.STATE_PRELIGHT, bgcol)
 
-    def _all_equations_toggle_cb(self, index):
-        if index == 0:
-            self.show_all_history()
-        else:
-            self.show_own_history()
-
-    def _history_toggle_cb(self, index):
-        if index == 0:
+    def _history_filter_cb(self, combo):
+        selection = combo.get_active()
+        if selection == 0:
             self.show_history()
-        else:
+            self.show_all_history()
+        elif selection == 1:
+            self.show_history()
+            self.show_own_history()
+        elif selection == 2:
             self.show_variables()
 
     def _textview_realize_cb(self, widget):
