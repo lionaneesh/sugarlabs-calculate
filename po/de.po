@@ -45,7 +45,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 00:33-0400\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-10-08 20:40+0200\n"
 "Last-Translator: Markus Schlager <m.slg@gmx.de>\n"
 "Language-Team: Deutsche OLPC-Lokalisierung\n"
@@ -175,16 +175,16 @@ msgstr "Interner Fehler"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() Zeichenkette ungültig (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Kann die Bezeichnung nicht zuweisen: Das verursacht eine Rekursion."
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Schreibe ins Tagebuch (%s)"
 
-#: calculate.py:830
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): ungültiger Typ"
 
@@ -633,57 +633,45 @@ msgstr ""
 "ist (und y Falsch) oder wenn y Wahr ist (und x Falsch). Andernfalls wird "
 "Falsch zurückgegeben."
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Löschen"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometrie"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Boolesche Algebra"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Verschiedenes"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Bezeichnung:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Alle Gleichungen"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Meine Gleichungen"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Ansicht zwischen eigenen und allen Gleichungen wechseln"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Verlauf anzeigen"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Variablen anzeigen"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Ansicht zwischen Verlauf und Variablen wechseln"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -855,6 +843,15 @@ msgstr "Anzahl der angezeigten Stellen"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Ganzzahlige Basis"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Ansicht zwischen eigenen und allen Gleichungen wechseln"
+
+#~ msgid "Show history"
+#~ msgstr "Verlauf anzeigen"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Ansicht zwischen Verlauf und Variablen wechseln"
 
 #~ msgid "Enter"
 #~ msgstr "Eingeben"
