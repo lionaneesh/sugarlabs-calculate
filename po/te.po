@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2011-11-27 01:11+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "లెక్కపెట్టు"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -137,16 +144,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr "సమీకరణ విశ్లేషణ() స్ట్రింగ్ సరైనది కాదు (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "పద్దులో నిక్షిప్తంచేస్తున్నా(%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "నొక్కబడిన మీట(): సరైనది కాదు"
 
@@ -573,57 +580,45 @@ msgstr ""
 "ఎక్స్ ఆర్ (x, y), లాజికల్ ఎక్స్ ఆర్. x సరైనది (మరియు y తప్పు) లేక y సరైనది "
 "(మరియు x తప్పు) అయితే నిజమని చూపు, కానిచో తప్పు అని చూపు"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr ""
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "కూర్చు"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "ఆల్జీబ్రా"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "త్రికోణమితి"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "బూలియాన్"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "లేబుల్:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "అన్ని సమీకరణాలు"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "నా సమీకరణాలు"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "గతచరిత్ర చూపు"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "వేరియబుల్స్ ని చూపుము"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -796,6 +791,9 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Show history"
+#~ msgstr "గతచరిత్ర చూపు"
 
 #~ msgid "Available functions:"
 #~ msgstr "లభ్యమయ్యే ధర్మములు:"

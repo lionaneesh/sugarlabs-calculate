@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-07-02 13:01+0200\n"
 "Last-Translator: jui <appukonrad@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Počítat"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -138,17 +145,17 @@ msgstr "Vnitřní chyba programu"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Řetězec (%s) Equation.parse() není platný"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Nemohu přiřadit do návěští: způsobilo by to rekurzi"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 #, python-format, fuzzy
 msgid "Writing to journal (%s)"
 msgstr "Zápis do žurnálu (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): neplatný typ"
 
@@ -546,57 +553,45 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Smazat"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Upravit"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometrie"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Booleova algebra"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "štítek:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Všechny výpočty"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Mých výpočtů"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Zobrazit historii"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Zobrazit historii"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -769,6 +764,9 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Show history"
+#~ msgstr "Zobrazit historii"
 
 #~ msgid "Enter"
 #~ msgstr "potvrdit"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-04-27 08:10+0200\n"
 "Last-Translator: Bulgantamir  <ar_uul_us@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Тооцоолох"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -133,16 +140,16 @@ msgstr "Дотоод алдаа"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Тэгшитгэл.задлан шинжлэл()-ийн (%s) мөр алдаатай"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Бүртгэлийн (%s) дэвтэрт бичиж байна"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "товч_дарагдсан(): буруу төрөл"
 
@@ -549,57 +556,45 @@ msgstr ""
 "бол эцсийн утга нь ҮНЭН байна. (x = True, y = False буюу y = True, x = "
 "False), Бусад тохиолдолд ХУДАЛ"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Арилгах"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Засварлах"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Алгебр"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Тригонометр"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Булийн"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Тэмдэгт"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Бүх тэгшитгэлүүд"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Миний тэгшитгэлүүд"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Түүх үзэх"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Хувьсагчдыг харуулах"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -773,6 +768,9 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Show history"
+#~ msgstr "Түүх үзэх"
 
 #~ msgid "Available functions:"
 #~ msgstr "Боломжит функцүүд:"

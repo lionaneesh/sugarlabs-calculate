@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-09-21 10:35+0200\n"
 "Last-Translator: hariru <hariruroa@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Tatauria"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -129,16 +136,16 @@ msgstr "Hapa ā-roto"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Ine.poroporo() aho muhu (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Kāore e taea te tautapa tapanga: ka whakaputa te tāruaruatanga"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Kei te tuhi ki te tuhitaka (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "pāwhiritia_pātene(): momo muhu"
 
@@ -580,57 +587,45 @@ msgstr ""
 "Hē hoki te y), kei Tika y (kei te Hē hoki te x) rānei, ki te kore ka "
 "whakahoki Hē"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Ūkui"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Whakatika"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Taurangi"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Pākoke"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Pūreana"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Ahanoa"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Tapanga:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Ngā whārite katoa"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Aku whārite"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Huri tirohanga i waenga i tāu ake me ngā whārite katoa"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Whakaatu hītori"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Whakaaturia ngā tāupe"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Huri tirohanga i waenga i te hītori me ngā tāupe"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -805,3 +800,12 @@ msgstr "Te tau o ngā mati kei te whakaaturia"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Pūtake whakahōputu tau tōpū"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Huri tirohanga i waenga i tāu ake me ngā whārite katoa"
+
+#~ msgid "Show history"
+#~ msgstr "Whakaatu hītori"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Huri tirohanga i waenga i te hītori me ngā tāupe"

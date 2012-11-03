@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xo-bundled\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-01-12 08:23+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: Bengali <core@bengalinux.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "গণনা"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -140,16 +147,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr ""
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "সাময়িকীতে লেখা হচ্ছে (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr ""
 
@@ -559,57 +566,45 @@ msgstr ""
 "xor(x, y), লজিক্যাল xor। যদি x True হয় (এবং y False) অথবা y True (এবং x "
 "False) তবে True রিটার্ন করে, অন্যথায় False রিটার্ন করে"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "মুছো"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "সম্পাদন"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "বীজগনিত"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "ত্রিকোনোমিতি"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "বুলিয়ান"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "লেবেল:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "সব সমীকরণ"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "আমার প্রশ্ন"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "ইতিহাস দেখাও"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "চলকগুলো দেখাও"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -784,6 +779,9 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Show history"
+#~ msgstr "ইতিহাস দেখাও"
 
 #~ msgid "Available functions:"
 #~ msgstr "বিদ্যমান ফাংশন:"

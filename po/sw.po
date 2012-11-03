@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2011-10-04 04:27+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "mahesabu"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -129,16 +136,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse () string batili (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Je, si hawawajui studio: utasababisha recursion"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Kuandika na jarida (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): aina iko batili"
 
@@ -569,57 +576,45 @@ msgstr ""
 "xor (x, y), mantiki xor. kurudi kweli kama x ama ni kweli (na y ni uongo) au "
 "y ni kweli (na x ni uongo), mwingine anarudi uongo"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "wazi"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Hariri"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometry"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Boolean"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Miscellaneous"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "studio"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "equations zote"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "equation yangu"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "badilisha maoni kati ya equations ya mwenyewe na ya wote"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Onyesha historia"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Onyesha vigezo"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "badilisha maoni kati ya historia na vigezo"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -805,6 +800,15 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "badilisha maoni kati ya equations ya mwenyewe na ya wote"
+
+#~ msgid "Show history"
+#~ msgstr "Onyesha historia"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "badilisha maoni kati ya historia na vigezo"
 
 #~ msgid "Enter"
 #~ msgstr "kuingia"

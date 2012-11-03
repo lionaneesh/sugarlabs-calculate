@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-02-27 06:34+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,8 +25,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
+msgstr ""
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
 msgstr ""
 
 #: astparser.py:40
@@ -130,16 +137,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr ""
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr ""
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr ""
 
@@ -523,58 +530,46 @@ msgid ""
 "y is True (and x is False), else returns False"
 msgstr ""
 
-#: layout.py:69
+#: layout.py:75
 #, fuzzy
 msgid "Clear"
 msgstr "تازىلاش"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 #, fuzzy
 msgid "Edit"
 msgstr "تەھرىرلەش"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr ""
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr ""
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr ""
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr ""
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr ""
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr ""
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr ""
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
-msgstr ""
-
-#: layout.py:204
-msgid "Change view between history and variables"
 msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')

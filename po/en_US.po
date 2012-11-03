@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
-"PO-Revision-Date: 2012-05-28 21:22+0200\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
+"PO-Revision-Date: 2012-10-07 09:28+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en_US\n"
@@ -25,9 +25,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Calculate"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
 
 #: astparser.py:40
 msgid ""
@@ -132,16 +141,16 @@ msgstr "Internal error"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() string invalid (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Can not assign label: will cause recursion"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Writing to journal (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): invalid type"
 
@@ -566,57 +575,45 @@ msgstr ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Clear"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Edit"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometry"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Boolean"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Miscellaneous"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Label:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "All equations"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "My equations"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Change view between own and all equations"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Show history"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Show variables"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Change view between history and variables"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -788,6 +785,15 @@ msgstr "Number of shown digits"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Integer formatting base"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Change view between own and all equations"
+
+#~ msgid "Show history"
+#~ msgstr "Show history"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Change view between history and variables"
 
 #~ msgid "Enter"
 #~ msgstr "Enter"

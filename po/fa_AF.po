@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2009-07-30 03:28-0400\n"
 "Last-Translator: Sohaib Obaidi <ebtihaj_obaidi@yahoo.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 1.2.1\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "محاسبه"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -139,16 +146,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr "معادله. تجزيه() رشته نادرست (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "نوشتن به یادداشت (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "دکمه_فشارداده شده(): نوعیت نامعتبر"
 
@@ -573,57 +580,45 @@ msgstr ""
 "xor(x, y)، منطقی xor. درست میگردد اگر x درست باشد (وy غلط) ویا هم y درست "
 "باشد(و x غلط)، علاو براین غلط میگردد"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr ""
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "ویرایش"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "الجبر"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "مثلثات"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "حساب بولی"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "مطلب:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "همه معادله ها"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "معادله های من"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "تاریخچه را نشان بده"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "متغیرات را نشان بده"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -797,6 +792,9 @@ msgstr ""
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr ""
+
+#~ msgid "Show history"
+#~ msgstr "تاریخچه را نشان بده"
 
 #~ msgid "Available functions:"
 #~ msgstr "عملیات در دسترس:"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-06-25 19:22+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Hitung"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -135,17 +142,17 @@ msgstr "Galat internal"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() string invalid (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Tak bisa menetapkan label: akan menyebabkan rekursi"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Menuliskan ke jurnal (%s)"
 
 # Looks like not a user visible strings that need translation, leaving it as it is
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): invalid type"
 
@@ -583,57 +590,45 @@ msgstr ""
 "xor(x, y), xor lojik. Mengembalikan True bila x True (dan y False) atau y "
 "True (dan x False), selain itu mengembalikan False"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Sunting"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Aljabar"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometri"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Boolean"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Rupa-rupa"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Label:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Semua persamaan"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Persamaanku"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Ubah tilikan antara persamaan milikku dan semua"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Tampilkan riwayat"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Tampilkan variabel"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Ubah tilikan antara riwayat dan variabel"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -805,6 +800,15 @@ msgstr "Cacah dijit yang ditampilkan"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Basis pemformatan bilangan bulat"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Ubah tilikan antara persamaan milikku dan semua"
+
+#~ msgid "Show history"
+#~ msgstr "Tampilkan riwayat"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Ubah tilikan antara riwayat dan variabel"
 
 #~ msgid "Available functions:"
 #~ msgstr "Fungsi-fungsi tersedia:"

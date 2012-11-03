@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-09-21 19:55+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,16 @@ msgstr ""
 "X-Generator: Pootle 2.0.5\n"
 
 #  "Calculadora"
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Jakhsuña"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #  "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
 #  "el rango de a hasta b"
@@ -154,18 +161,18 @@ msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() sata wakichäwi saräwi sayt'ayata (%s)"
 
 #  "No puedo asignar etiqueta: causará recursión"
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Sutiyaña chimpu janiwa uchayasiti: T'aqasïwimpiwa sayt'ani"
 
 #  "Escribiendo en el diario (%s)"
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Sapüru wakichäwinaka qillqthapisa (%s)"
 
 #  "button_pressed(): tipo invalido"
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): sata wakichata sayt'ayata"
 
@@ -728,69 +735,54 @@ msgstr ""
 "kutiyaniniwa k'ari"
 
 #  "Vaciar"
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Pichsuña"
 
 #  "Editar"
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Chiqachaña"
 
 #  "Álgebra"
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
 #  "Trigonometría"
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometría"
 
 #  "Booleano"
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Chiqapa/k'ari"
 
 #  "Misceláneos"
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Kunaymana"
 
 #  "Etiqueta:"
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Chimpunaka:"
 
 #  "Todas las ecuaciones"
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Qawayata ecuaciones"
 
 #  "Mis ecuaciones"
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Nayankiri ecuaciones"
 
-#  "Cambiar vista entre todas las ecuaciones y las propias"
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
-
-#  "Mostrar historial"
-#: layout.py:202
-msgid "Show history"
-msgstr "Lurata uñachayaña"
-
 #  "Mostrar variables"
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Variable Uñachayaña"
-
-#  "Cambiar vista entre historial y variables"
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Mayxata lurawi ukhamaraki variable uñjaña"
 
 #  "×"
 #. TRANS: multiplication symbol (default: '×')
@@ -1003,6 +995,18 @@ msgstr "Jakhunakana jakhupa uñachayata"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Jhakhunaka base"
+
+#  "Cambiar vista entre todas las ecuaciones y las propias"
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Mayxata Unjaña nayankiri ukhamaraki qawayata ecuaciones"
+
+#  "Mostrar historial"
+#~ msgid "Show history"
+#~ msgstr "Lurata uñachayaña"
+
+#  "Cambiar vista entre historial y variables"
+#~ msgid "Change view between history and variables"
+#~ msgstr "Mayxata lurawi ukhamaraki variable uñjaña"
 
 #  "Entrar"
 #~ msgid "Enter"

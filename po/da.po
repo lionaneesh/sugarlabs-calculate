@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 00:33-0400\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2012-10-08 15:54+0200\n"
 "Last-Translator: Aputsiaq Niels <aj@isit.gl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -141,16 +141,16 @@ msgstr "Intern fejl"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() streng ugyldig (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Kan ikke tildele etiketten: vil forårsage rekursion"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Skriver til journal (%s)"
 
-#: calculate.py:830
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): ugyldig type"
 
@@ -585,57 +585,45 @@ msgstr ""
 "xor(x, y), logisk xor. Returnerer True hvis enten x er sand (og y er falsk) "
 "eller y er sand (og x er falsk), hvis ikke returneres False"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Ryd"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Redigér"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Algebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometri"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Boolsk"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Mærkat:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Alle ligninger"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Mine ligninger"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Skift mellem visning af egne og alle ligninger"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Vis historik"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Vis variabler"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Skift mellem visning af historik og variabler"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -807,6 +795,15 @@ msgstr "Antal viste cifre"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Base for formattering af heltal"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Skift mellem visning af egne og alle ligninger"
+
+#~ msgid "Show history"
+#~ msgstr "Vis historik"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Skift mellem visning af historik og variabler"
 
 #~ msgid "Enter"
 #~ msgstr "Enter"

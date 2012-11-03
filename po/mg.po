@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2011-02-14 18:53+0200\n"
 "Last-Translator: Zafimamy Gabriella Ralaivao <gabriella@intnet.mu>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Pootle 2.0.1\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Kajio"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -142,16 +149,16 @@ msgstr ""
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Fimira.parisa() tohitohy tsy mety (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr ""
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Manoratra amin'ny firaketana (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "bokotra_tsindriana(): karazana tsy mety"
 
@@ -576,57 +583,45 @@ msgstr ""
 "xor(x, y), logical xor. Miverina ho Marina raha toa ka Marina x (ary Diso y) "
 "na Marina y (ary Diso x), raha tsy izany dia miverina ho Diso"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Fafao"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Amboary"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Aljebra"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Trigonometria"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Booleana"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "Tsy voasokajy"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Marika:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Ireo lefa"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Ireo lefako"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "Ovao ny seho manelanelana ny lefy rehetra sy ny ahy"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Asehoy ny diary"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Asehoy ireo ova"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "Ovao ny seho manelanelana ny diary sy ireo ova"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -799,6 +794,15 @@ msgstr "Isan'ny tarehimarika aseho"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Fototra mandrafitra isa natoraly"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "Ovao ny seho manelanelana ny lefy rehetra sy ny ahy"
+
+#~ msgid "Show history"
+#~ msgstr "Asehoy ny diary"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "Ovao ny seho manelanelana ny diary sy ireo ova"
 
 #~ msgid "Enter"
 #~ msgstr "Ampidiro"

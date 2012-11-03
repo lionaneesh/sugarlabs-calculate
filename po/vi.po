@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2011-12-31 17:35+0200\n"
 "Last-Translator: pandafriendly312 <phuongle19@vanlanguni.vn>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,9 +25,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "Tính"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -135,16 +142,16 @@ msgstr "Lỗi bên trong"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() chuỗi không hợp lệ (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "Không thể gán nhãn: sẽ gây ra đệ quy"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "Đang ghi vào nhật ký (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): loại không hợp lệ"
 
@@ -560,57 +567,45 @@ msgstr ""
 "xor(x, y), xor hợp lý. Trả lại Đúng nếu X là đúng (và y là Sai) hoặc y là "
 "Đúng (và x là Sai), không thì trả lại Sai"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "Xoá sạch"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "Sửa"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "Đại số"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "Lượng giác"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "Luận lý"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr ""
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "Nhãn:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "Mọi phương trình"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "Phương trình của mình"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr ""
-
-#: layout.py:202
-msgid "Show history"
-msgstr "Hiện lịch sử"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "Hiện các biến"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr ""
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -782,6 +777,9 @@ msgstr "Chữ số được hiển thị"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "Định dạng cơ bản kiểu Integer"
+
+#~ msgid "Show history"
+#~ msgstr "Hiện lịch sử"
 
 # Tên của phím hoặc hành vi ?
 #~ msgid "Enter"

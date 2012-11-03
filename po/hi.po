@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calculate-activity\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-27 00:33-0500\n"
+"POT-Creation-Date: 2012-10-08 00:33-0400\n"
 "PO-Revision-Date: 2011-11-30 16:32+0200\n"
 "Last-Translator: satyaakam goswami <satyaakam@gmail.com>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -31,9 +31,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Pootle 2.0.5\n"
 
-#: activity/activity.info:2
+#. TRANS: "name" option from activity.info file
 msgid "Calculate"
 msgstr "गणना"
+
+#. TRANS: "summary" option from activity.info file
+#. TRANS: "description" option from activity.info file
+msgid ""
+"This is the place to get the answer to a quick problem, but that is not the "
+"limit! You can also explore Algebra, Trigonometry, Boolean and more!"
+msgstr ""
 
 #: astparser.py:40
 msgid ""
@@ -146,16 +153,16 @@ msgstr "आंतरिक त्रुटि"
 msgid "Equation.parse() string invalid (%s)"
 msgstr "Equation.parse() स्ट्रिंग अवैध (%s)"
 
-#: calculate.py:474
+#: calculate.py:483
 msgid "Can not assign label: will cause recursion"
 msgstr "लेबल असाइन नहीं कर सकते हैं: recursion का कारण होगा"
 
-#: calculate.py:546
+#: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
 msgstr "दैनिकी मैं लिखा जा रहा है (%s)"
 
-#: calculate.py:829
+#: calculate.py:865
 msgid "button_pressed(): invalid type"
 msgstr "button_pressed(): अवैध किस्म"
 
@@ -582,57 +589,45 @@ msgstr ""
 "xor(x, y), लॉजिकल xor. यदि x सही (और y ग़लत ) अथवा y सही (और x ग़लत ) होने "
 "पर ट्रू वापस देता है अथवा फॉल्स लौटाता है"
 
-#: layout.py:69
+#: layout.py:75
 msgid "Clear"
 msgstr "साफ करें"
 
-#: layout.py:99 layout.py:139
+#: layout.py:105 layout.py:145
 msgid "Edit"
 msgstr "संपादन"
 
-#: layout.py:104 layout.py:140
+#: layout.py:110 layout.py:146
 msgid "Algebra"
 msgstr "बीजगणित"
 
-#: layout.py:109 layout.py:141
+#: layout.py:115 layout.py:147
 msgid "Trigonometry"
 msgstr "त्रिकोणमिति"
 
-#: layout.py:114 layout.py:142
+#: layout.py:120 layout.py:148
 msgid "Boolean"
 msgstr "बूलीयन"
 
-#: layout.py:119 layout.py:143
+#: layout.py:125 layout.py:149
 msgid "Miscellaneous"
 msgstr "विविध"
 
-#: layout.py:164
+#: layout.py:178
 msgid "Label:"
 msgstr "लेबल:"
 
-#: layout.py:197
+#: layout.py:223
 msgid "All equations"
 msgstr "सभी समीकरण"
 
-#: layout.py:197
+#: layout.py:224
 msgid "My equations"
 msgstr "मेरे समीकरण"
 
-#: layout.py:199
-msgid "Change view between own and all equations"
-msgstr "खुद के और सब समीकरणों के बीच परिवर्तन देखे"
-
-#: layout.py:202
-msgid "Show history"
-msgstr "इतिहास दिखाएँ"
-
-#: layout.py:202
+#: layout.py:225
 msgid "Show variables"
 msgstr "चर दिखाएँ"
-
-#: layout.py:204
-msgid "Change view between history and variables"
-msgstr "इतिहास और चर के बीच परिवर्तन देखे"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
@@ -804,6 +799,15 @@ msgstr "दिए गए अंकों की संख्या"
 #: toolbars.py:320
 msgid "Integer formatting base"
 msgstr "पूर्णांक स्वरूपण आधार"
+
+#~ msgid "Change view between own and all equations"
+#~ msgstr "खुद के और सब समीकरणों के बीच परिवर्तन देखे"
+
+#~ msgid "Show history"
+#~ msgstr "इतिहास दिखाएँ"
+
+#~ msgid "Change view between history and variables"
+#~ msgstr "इतिहास और चर के बीच परिवर्तन देखे"
 
 #~ msgid "Enter"
 #~ msgstr "एंटर"
