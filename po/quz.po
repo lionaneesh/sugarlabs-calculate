@@ -7,522 +7,763 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-10-08 00:33-0400\n"
-"PO-Revision-Date: 2011-11-26 08:02+0200\n"
+"PO-Revision-Date: 2012-11-15 06:54+0200\n"
 "Last-Translator: Chris <cjl@laptop.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: quz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
 "X-Generator: Pootle 2.0.5\n"
 
+#  [ES] "Calcular"
 #. TRANS: "name" option from activity.info file
 msgid "Calculate"
-msgstr ""
+msgstr "Yupaychay"
 
+#  [ES] ""
+#  [ES] "Este es el lugar para obtener respuestas para un problema rápido, pero ese "
+#  [ES] "no es el límite. También puedes explorar Álgebra, Trigonometría, Booleanos y "
+#  [ES] "más."
 #. TRANS: "summary" option from activity.info file
 #. TRANS: "description" option from activity.info file
 msgid ""
 "This is the place to get the answer to a quick problem, but that is not the "
 "limit! You can also explore Algebra, Trigonometry, Boolean and more!"
 msgstr ""
+"Yupanakunamanta sasachaykuna kaqmantam kaypiqa ima munasqakunata tarinki. "
+"Hinallataq Algebramanta, Trigonometriamanta, Booleanokunamantapas "
+"yachallawaqpuni."
 
+#  [ES] ""
+#  [ES] "plot(eqn, var=-a..b), grafica de la ecuación 'eqn' con la variable 'var' en "
+#  [ES] "el rango de a hasta b"
 #: astparser.py:40
 msgid ""
 "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the "
 "range from a to b"
 msgstr ""
+"plot(eqn, var=-a..b), ecuaciónpa siq'ichaynin 'eqn' kay variablewantaq 'var' "
+"kallantaq a nisqamanta b nisqakama"
 
+#  [ES] "Error de procesamiento en %d"
 #: astparser.py:59
 #, python-format
 msgid "Parse error at %d"
-msgstr ""
+msgstr "%d kaypi procesaspam pantarun"
 
+#  [ES] "Error en %d"
 #: astparser.py:71 astparser.py:83
 #, python-format
 msgid "Error at %d"
-msgstr ""
+msgstr "%d kaypi pantarun"
 
+#  [ES] "Este es solo un topico de prueba, use help(indice) para el indice"
 #: astparser.py:94
 msgid "This is just a test topic, use help(index) for the index"
 msgstr ""
+"Kay kasqata mallinallapaqmi, help(index) nisqatam indice nisqatahina "
+"hap'inapaqqa"
 
+#  [ES] ""
+#  [ES] "Use help(test) para ayuda acerca de 'test', o help(indice) para el indice"
 #: astparser.py:106
 msgid "Use help(test) for help about 'test', or help(index) for the index"
 msgstr ""
+"Kay Use help(test) nisqam mallinamantaqa riman, indice nisqamantataq "
+"help(index)"
 
+#  [ES] "índice"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:109
 msgid "index"
-msgstr ""
+msgstr "Lliw rikuchiq"
 
+#  [ES] "temas"
 #: astparser.py:109
 msgid "topics"
-msgstr ""
+msgstr "rimanakuna"
 
+#  [ES] "Temas"
 #: astparser.py:110
 msgid "Topics"
-msgstr ""
+msgstr "rimanakuna"
 
+#  [ES] "variables"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:118
 msgid "variables"
-msgstr ""
+msgstr "variablekuna"
 
+#  [ES] "Variables"
 #: astparser.py:119
 msgid "Variables"
-msgstr ""
+msgstr "variablekuna"
 
+#  [ES] "funciones"
 #. TRANS: This command is descriptive, so can be translated
 #: astparser.py:125
 msgid "functions"
-msgstr ""
+msgstr "funcionkuna"
 
+#  [ES] "Funciones"
 #: astparser.py:126
 msgid "Functions"
-msgstr ""
+msgstr "funcionkuna"
 
+#  [ES] "No hay ayuda disponible sobre '%s', use ayuda(índice) para el índice"
 #: astparser.py:135
 #, python-format
 msgid "No help about '%s' available, use help(index) for the index"
 msgstr ""
+"'%s' kaymantaqa manam ima yanapaypas kanchu, lliwta qhawarinapaqqa "
+"ayuda(índice) nisqata hap'iy"
 
 #  "ayuda"
 #: astparser.py:459
 msgid "help"
 msgstr "yanapay"
 
+#  [ES] "Recursión detectada"
 #: astparser.py:466
 msgid "Recursion detected"
-msgstr ""
+msgstr "Recursión nisqa tarikun"
 
+#  [ES] "La función '%s' no está definida"
 #: astparser.py:490
 #, python-format
 msgid "Function '%s' not defined"
-msgstr ""
+msgstr "Kay '%s' funcionqa manam churasqachu kachkan"
 
+#  [ES] "La variable '%s' no está definida"
 #: astparser.py:492
 #, python-format
 msgid "Variable '%s' not defined"
-msgstr ""
+msgstr "Kay '%s' variableqa manam churasqachu kachkan"
 
+#  [ES] "El atributo «%s» no existe"
 #: astparser.py:502
 #, python-format
 msgid "Attribute '%s' does not exist"
-msgstr ""
+msgstr "Kay '%s' atributoqa manam kanchu"
 
+#  [ES] "Error de procesamiento"
 #: astparser.py:596
 msgid "Parse error"
-msgstr ""
+msgstr "Llamk'asqanpi pantarun"
 
+#  [ES] "No se permite hacer declaraciones múltiples"
 #: astparser.py:601
 msgid "Multiple statements not supported"
-msgstr ""
+msgstr "Manam achkha ruwaykunataqa purichinchu"
 
+#  [ES] "Error interno"
 #: astparser.py:625
 msgid "Internal error"
-msgstr ""
+msgstr "Ukhunpim pantay rikurirun"
 
+#  [ES] "Equation.parse() cadena no válida (%s)"
 #: calculate.py:109
 #, python-format
 msgid "Equation.parse() string invalid (%s)"
-msgstr ""
+msgstr "Equation.parse() kay waskharqa manam allinchu (%s)\""
 
+#  [ES] "No se puede asignar la etiqueta: causará recursión"
 #: calculate.py:483
 msgid "Can not assign label: will cause recursion"
-msgstr ""
+msgstr "Manam kay sutichaqtaqa churakunmanchu: recursionta ruwanqa"
 
+#  [ES] "Escribiendo en el diario (%s)"
 #: calculate.py:571
 #, python-format
 msgid "Writing to journal (%s)"
-msgstr ""
+msgstr "Kay (%s) p'anqapi qillqachkan"
 
+#  [ES] "button_pressed(): tipo invalido"
 #: calculate.py:865
 msgid "button_pressed(): invalid type"
-msgstr ""
+msgstr "button_pressed(): kayqa mana allinchu"
 
 #  "sum"
 #: functions.py:35
 msgid "add"
 msgstr "yapay"
 
+#  [ES] "abs"
 #: functions.py:36
 msgid "abs"
-msgstr ""
+msgstr "abs"
 
+#  [ES] "acos"
 #: functions.py:37
 msgid "acos"
-msgstr ""
+msgstr "acos"
 
+#  [ES] "acosh"
 #: functions.py:38
 msgid "acosh"
-msgstr ""
+msgstr "acosh"
 
+#  [ES] "asin"
 #: functions.py:39
 msgid "asin"
-msgstr ""
+msgstr "asin"
 
+#  [ES] "asinh"
 #: functions.py:40
 msgid "asinh"
-msgstr ""
+msgstr "asinh"
 
+#  [ES] "atan"
 #: functions.py:41
 msgid "atan"
-msgstr ""
+msgstr "atan"
 
+#  [ES] "atanh"
 #: functions.py:42
 msgid "atanh"
-msgstr ""
+msgstr "atanh"
 
 #  "and"
 #: functions.py:43
 msgid "and"
 msgstr "hinallataq"
 
+#  [ES] "b10bin"
 #: functions.py:44
 msgid "b10bin"
-msgstr ""
+msgstr "b10bin"
 
+#  [ES] "cell"
 #: functions.py:45
 msgid "ceil"
-msgstr ""
+msgstr "ceil"
 
+#  [ES] "cos"
 #: functions.py:46
 msgid "cos"
-msgstr ""
+msgstr "cos"
 
+#  [ES] "cosh"
 #: functions.py:47
 msgid "cosh"
-msgstr ""
+msgstr "cosh"
 
+#  [ES] "div"
 #: functions.py:48
 msgid "div"
-msgstr ""
+msgstr "div"
 
+#  [ES] "mcd"
 #: functions.py:49
 msgid "gcd"
-msgstr ""
+msgstr "gcd"
 
+#  [ES] "exp"
 #: functions.py:50
 msgid "exp"
-msgstr ""
+msgstr "exp"
 
+#  [ES] "factorial"
 #: functions.py:51
 msgid "factorial"
-msgstr ""
+msgstr "factorial"
 
+#  [ES] "fac"
 #: functions.py:52
 msgid "fac"
-msgstr ""
+msgstr "fac"
 
+#  [ES] "factorizar"
 #: functions.py:53
 msgid "factorize"
-msgstr ""
+msgstr "factorize"
 
+#  [ES] "piso"
 #: functions.py:54
 msgid "floor"
-msgstr ""
+msgstr "pampa"
 
+#  [ES] "inv"
 #: functions.py:55
 msgid "inv"
-msgstr ""
+msgstr "inv"
 
+#  [ES] "is_int"
 #: functions.py:56
 msgid "is_int"
-msgstr ""
+msgstr "is_int"
 
+#  [ES] "ln"
 #: functions.py:57
 msgid "ln"
-msgstr ""
+msgstr "ln"
 
+#  [ES] "log10"
 #: functions.py:58
 msgid "log10"
-msgstr ""
+msgstr "log10"
 
+#  [ES] "mul"
 #: functions.py:59
 msgid "mul"
-msgstr ""
+msgstr "mul"
 
+#  [ES] "or"
 #: functions.py:60
 msgid "or"
-msgstr ""
+msgstr "or"
 
+#  [ES] "rand_float"
 #: functions.py:61
 msgid "rand_float"
-msgstr ""
+msgstr "rand_float"
 
+#  [ES] "rand_int"
 #: functions.py:62
 msgid "rand_int"
-msgstr ""
+msgstr "rand_int"
 
+#  [ES] "redondeo"
 #: functions.py:63
 msgid "round"
-msgstr ""
+msgstr "redondeaspa"
 
+#  [ES] "sin"
 #: functions.py:64
 msgid "sin"
-msgstr ""
+msgstr "sin"
 
+#  [ES] "sinh"
 #: functions.py:65
 msgid "sinh"
-msgstr ""
+msgstr "sinh"
 
+#  [ES] "sinc"
 #: functions.py:66
 msgid "sinc"
-msgstr ""
+msgstr "sinc"
 
+#  [ES] "sqrt"
 #: functions.py:67
 msgid "sqrt"
-msgstr ""
+msgstr "sqrt"
 
+#  [ES] "sub"
 #: functions.py:68
 msgid "sub"
-msgstr ""
+msgstr "sub"
 
+#  [ES] "cuadrado"
 #: functions.py:69
 msgid "square"
-msgstr ""
+msgstr "Tawak'uchu"
 
+#  [ES] "tan"
 #: functions.py:70
 msgid "tan"
-msgstr ""
+msgstr "tan"
 
+#  [ES] "tanh"
 #: functions.py:71
 msgid "tanh"
-msgstr ""
+msgstr "tanh"
 
+#  [ES] "xor"
 #: functions.py:72
 msgid "xor"
-msgstr ""
+msgstr "xor"
 
+#  [ES] "abs(x), devuelve el valor absoluto de x, que significa -x si x < 0"
 #: functions.py:112
 msgid "abs(x), return absolute value of x, which means -x for x < 0"
 msgstr ""
+"X nisqapa valor absoluto nisqantaqa abs(x) nisqam kutichin, kaytaq -x si x < "
+"0 nisqa"
 
+#  [ES] ""
+#  [ES] "acos(x), devuelve el arco coseno de x. Este es el ángulo para el cual el "
+#  [ES] "coseno es x. Definido para -1 <= x < 1"
 #: functions.py:117
 msgid ""
 "acos(x), return the arc cosine of x. This is the angle for which the cosine "
 "is x. Defined for -1 <= x < 1"
 msgstr ""
+"X nisqapa arco coseno nisqantaqa acos(x) nisqan kutichin. Kay k'uchu kaqqa X "
+"coseno nisqahina rikurin. Kaytaq -1 <= x < 1 nisqa"
 
+#  [ES] ""
+#  [ES] "acosh(x), devuelve el arco coseno hiperbólico de x. Este es el valor de y "
+#  [ES] "para el cual el coseno hiperbólico es x."
 #: functions.py:123
 msgid ""
 "acosh(x), return the arc hyperbolic cosine of x. This is the value y for "
 "which the hyperbolic cosine equals x."
 msgstr ""
+"x nisqapa arco coseno hiperbólico nisqantaqa acosh(x). Kaypa chaninqa Y "
+"nisqam, kaypaqtaq coseno hiperbólico nisqantaq x."
 
+#  [ES] ""
+#  [ES] "And(x, y), and logico, Devuelve Verdadero si x e y son verdaderos, de lo "
+#  [ES] "contrario retorna Falso"
 #: functions.py:129
 msgid ""
 "And(x, y), logical and. Returns True if x and y are True, else returns False"
 msgstr ""
+"And(x, y), andn logico nisqaqa, Chiqa, nisqatam kutichin sichus X Y chiqa "
+"kaptinku, mana chayna kaptinqa, Llulla, nisqa kutichinqa"
 
+#  [ES] "sum(x, y), devuelta x + y"
 #: functions.py:136
 msgid "add(x, y), return x + y"
-msgstr ""
+msgstr "sum(x, y), nisqaqa x + y yapakusqantam kutichin"
 
+#  [ES] ""
+#  [ES] "asin(x), Devuelve el arco seno de x. Este es el ángulo para el cual el seno "
+#  [ES] "es x. Definido para -1<=x<=1"
 #: functions.py:141
 msgid ""
 "asin(x), return the arc sine of x. This is the angle for which the sine is "
 "x. Defined for -1 <= x <= 1"
 msgstr ""
+"X nisqapa arco coseno nisqantaqa asin(x) nisqan kutichin. Kay k'uchu kaqqa X "
+"coseno nisqahina rikurin. Kaytaq -1 <= x < 1 nisqa"
 
+#  [ES] ""
+#  [ES] "asinh(x), devuelve el arco ceno hiperbólico de x. Este es el valor de y para "
+#  [ES] "el cual el seno hiperbólico es x."
 #: functions.py:147
 msgid ""
 "asinh(x), return the arc hyperbolic sine of x. This is the value y for which "
 "the hyperbolic sine equals x."
 msgstr ""
+"x nisqapa arco coseno hiperbólico nisqantaqa asinh(x). Kaypa chaninqa Y "
+"nisqam, kaypaqtaq coseno hiperbólico nisqantaq x."
 
+#  [ES] ""
+#  [ES] "atan(x), Devuelve el arco tangente de x. Este es el ángulo para el cual la "
+#  [ES] "tangente es x. Definido para todas las x"
 #: functions.py:153
 msgid ""
 "atan(x), return the arc tangent of x. This is the angle for which the "
 "tangent is x. Defined for all x"
 msgstr ""
+"X nisqapa arco tangente nisqantaqa, atan(x) nisqam kutichin. Kay k'uchu "
+"kaqqa X tangente nisqahina rikurin. Chaynam llapan x nisqakunapaqqa"
 
+#  [ES] ""
+#  [ES] "atanh(x), devuelve el arco tangente hiperbólico de x. Este es el valor de y "
+#  [ES] "para el cual el tangente hiperbólico es x."
 #: functions.py:159
 msgid ""
 "atanh(x), return the arc hyperbolic tangent of x. This is the value y for "
 "which the hyperbolic tangent equals x."
 msgstr ""
+"x nisqapa arco tangente hiperbólico nisqantaqa, atanh(x) nisqam kutichin. "
+"Kaypa chaninqa Y nisqam, kaypaqtaq tangente hiperbólico nisqantaq x nisqam."
 
+#  [ES] "El número no parece binario en base 10"
 #: functions.py:171
 msgid "Number does not look binary in base 10"
-msgstr ""
+msgstr "10 tiqsipaqpiqa manam yupanaqa rikurinchu"
 
+#  [ES] ""
+#  [ES] "b10bin(x), interpreta un número escrito en base 10 como binario, ej.: "
+#  [ES] "b10bin(10111) = 23,"
 #: functions.py:178
 msgid ""
 "b10bin(x), interpret a number written in base 10 as binary, e.g.: b10bin"
 "(10111) = 23,"
 msgstr ""
+"kay b10bin(x) nisqaqa, 10 nisqapi tiqsipakuq yupanata rikuchin, "
+"qhawarinapaqqa b10bin(10111) = 23,"
 
+#  [ES] "ceil(x), devuelve el menor entero mayor que x."
 #: functions.py:183
 msgid "ceil(x), return the smallest integer larger than x."
-msgstr ""
+msgstr "ceil(x) nisqaqa, menor entero nisqatam mayor que x nisqaman kutichin."
 
+#  [ES] ""
+#  [ES] "cos(x), devuelve el coseno de x. Esta es la coordenada x en el círculo "
+#  [ES] "unitario con ángulo x"
 #: functions.py:188
 msgid ""
 "cos(x), return the cosine of x. This is the x-coordinate on the unit circle "
 "at the angle x"
 msgstr ""
+"cos(x) nisqaqa, x nisqap cosenonta kutichin. Kayqa círculo unitario con "
+"ángulo x nisqapi coordenada x kaqmi"
 
+#  [ES] ""
+#  [ES] "cosh(x), devuelve el coseno hiperbólico de x. Dado por (exp(x) + exp(-x)) / "
+#  [ES] "2"
 #: functions.py:194
 msgid ""
 "cosh(x), return the hyperbolic cosine of x. Given by (exp(x) + exp(-x)) / 2"
 msgstr ""
+"cosh(x) nisqaqa, x nisqap coseno hiperbólico nisqanta kutichin. Kayqa "
+"(exp(x) + exp(-x)) / 2 nisqap qusqanmi"
 
+#  [ES] "No se puede dividir por cero"
 #: functions.py:198
 msgid "Can not divide by zero"
-msgstr ""
+msgstr "Manam ch'usaqwanta t'aqachikunmanchu"
 
+#  [ES] "Argumento no válido"
 #: functions.py:219
 msgid "Invalid argument"
-msgstr ""
+msgstr "Chaninqa mana allinchu"
 
+#  [ES] ""
+#  [ES] "gcd(a, b), determina el máximo común divisor entre a y b. Por ejemplo, el "
+#  [ES] "factor más grande que divide a los números 15 y 18 es 3."
 #: functions.py:222
 msgid ""
 "gcd(a, b), determine the greatest common denominator of a and b. For "
 "example, the biggest factor that is shared by the numbers 15 and 18 is 3."
 msgstr ""
+"gcd(a, b) nisqaqa, a, b nisqakunamantaqa máximo común divisor nisqatam "
+"churan. Qharinapaqqa, kay yupanakunaman 15, 18 hatun factor nisqa t'aqaqqa "
+"kaymi 3."
 
+#  [ES] "exp(x), devuelve el exponente natural de x. Dado por e^x"
 #: functions.py:227
 msgid "exp(x), return the natural exponent of x. Given by e^x"
 msgstr ""
+"exp(x) nisqaqa, x nisqap exponente natural nisqanta kutichin. Kaytaqa e^x "
+"nisqam qun"
 
+#  [ES] "Factorial solo esta definido para enteros"
 #: functions.py:231
 msgid "Factorial only defined for integers"
-msgstr ""
+msgstr "Factorial nisqaqa entero nisqakunallapaqmi churakun"
 
+#  [ES] ""
+#  [ES] "factorial(x), devuelve el factorial de x. Dado por x * (x - 1) * (x - 2) * "
+#  [ES] "..."
 #: functions.py:244
 msgid ""
 "factorial(n), return the factorial of n. Given by n * (n - 1) * (n - 2) * ..."
 msgstr ""
+"Factorial(x) nisqaqa, x nisqap factorial nisqanta kutichin. Kaytaqa qun x * "
+"(x - 1) * (x - 2) * ..."
 
+#  [ES] ""
+#  [ES] "fac(x), devuelve el factorial de x. Dado por x * (x - 1) * (x - 2) * ..."
 #: functions.py:250
 msgid "fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ..."
 msgstr ""
+"Fac(x) nisqaqa, x nisqap factorial nisqanta kutichin. Kaytaqa qun x * (x - "
+"1) * (x - 2) * ..."
 
+#  [ES] "floor(x), devuelve el mayor entero menor que x."
 #: functions.py:283
 msgid "floor(x), return the largest integer smaller than x."
-msgstr ""
+msgstr "floor(x) nisqaqa, mayor entero nisqatam menor que x nisqaman kutichin."
 
+#  [ES] "inv(x), devuelve el inverso de x, que es 1 / x"
 #: functions.py:287
 msgid "inv(x), return the inverse of x, which is 1 / x"
-msgstr ""
+msgstr "inv(x) nisqaqa, x nisqap inverso nisqanta kutichin, kaytaq 1 / x"
 
+#  [ES] "Logarithm(x) solo definido para x > 0"
 #: functions.py:309 functions.py:318
 msgid "Logarithm(x) only defined for x > 0"
-msgstr ""
+msgstr "Logarithm(x) nisqaqa x > 0 nisqallapaqmi churakun"
 
+#  [ES] ""
+#  [ES] "ln(x), devuelve el algoritmo natural de x. Este es el valor para el cual el "
+#  [ES] "exponente exp() es igual a x. Definido para x >= 0."
 #: functions.py:311
 msgid ""
 "ln(x), return the natural logarithm of x. This is the value for which the "
 "exponent exp() equals x. Defined for x >= 0."
 msgstr ""
+"ln(x) nisqaqa, x nisqap algoritmo natural nisqanta kutichin. Exponente exp() "
+"nisqa x nisqawan kikilla kananpaqmi. Kaypaqqa qun x >= 0."
 
+#  [ES] ""
+#  [ES] "log10(x), devuelve el logaritmo en base 10 de x. Este es el valor para el "
+#  [ES] "cual 10^y es igual a x. Definido para x >= 0."
 #: functions.py:320
 msgid ""
 "log10(x), return the base 10 logarithm of x. This is the value y for which "
 "10^y equals x. Defined for x >= 0."
 msgstr ""
+"log10(x) nisqaqa, x nisqap logaritmo en base 10 nisqanta kutichin. Kay "
+"chaniqa 10^y nisqaqa x kikilla kananpaqmi. Kaypaqqa qun x >= 0."
 
+#  [ES] "Solo se puede calcular x módulo <integer>"
 #: functions.py:327
 msgid "Can only calculate x modulo <integer>"
-msgstr ""
+msgstr "x módulo <integer> nisqallatam yupana llamk'aypiqa atikun"
 
+#  [ES] ""
+#  [ES] "mod(x, y), devuelve el módulo de x respecto a y. Esto es el resto de dividir "
+#  [ES] "x entre y."
 #: functions.py:329
 msgid ""
 "mod(x, y), return the modulus of x with respect to y. This is the remainder "
 "after dividing x by y."
 msgstr ""
+"mod(x, y) nisqaqa, módulo de x respecto a y nisqatam kutichin. Kaytaq x "
+"nisqamanta y t'aqasqanpa puchunmi."
 
+#  [ES] "mul(x, y), devuelve x * y"
 #: functions.py:337
 msgid "mul(x, y), return x * y"
-msgstr ""
+msgstr "mul(x, y) nisqaqa, x * y nisqatam kutichin"
 
+#  [ES] "negate(x), devuelve -x"
 #: functions.py:341
 msgid "negate(x), return -x"
-msgstr ""
+msgstr "negate(x) nisqaqa, -x nisqatam kutichin"
 
+#  [ES] ""
+#  [ES] "Or(x, y), 'o' logico, Devuelve Verdadero si x y/o y es verdadero, de lo "
+#  [ES] "contrario devuelve Falso"
 #: functions.py:346
 msgid ""
 "Or(x, y), logical or. Returns True if x or y is True, else returns False"
 msgstr ""
+"Or(x, y), O logico nisqaqa, Chiqa, nisqatam kutichin sichus x y/o chiqa "
+"kaptinku, mana chayna kaptinqa, Llulla, nisqa kutichinqa"
 
+#  [ES] "pow(x, y), devuelve x a la potencia y (x**y)"
 #: functions.py:361
 msgid "pow(x, y), return x to the power y (x**y)"
-msgstr ""
+msgstr "pow(x, y) nisqaqa, x a la potencia y nisqatam kutichay (x**y)"
 
+#  [ES] ""
+#  [ES] "rand_float(), retorna un numero de punto flotante aleatorio entre 0.0 y 1.0"
 #: functions.py:366
 msgid "rand_float(), return a random floating point number between 0.0 and 1.0"
 msgstr ""
+"rand_float() nisqaqa, 0.0 y 1.0 yupaykunamantam punto flotante aleatorio "
+"nisqap huk yupayninta kutichin"
 
+#  [ES] ""
+#  [ES] "rand_int([<maxval>]), retorna un valor entero aleatorio entre 0 y <maxval>. "
+#  [ES] "<maxval> is un argumento opcional y tiene valor 65535 por defecto."
 #: functions.py:371
 msgid ""
 "rand_int([<maxval>]), return a random integer between 0 and <maxval>. "
 "<maxval> is an optional argument and is set to 65535 by default."
 msgstr ""
+"rand_int([<maxval>]) nisqaqa, huk valor entero aleatorio entre 0 y <maxval> "
+"nisqatam kutichin. kay <maxval> nisqataq kikinmantam 65535 yupaywan "
+"chaninchakun."
 
+#  [ES] "round(x), retorna el entero mas cercano a x."
 #: functions.py:376
 msgid "round(x), return the integer nearest to x."
-msgstr ""
+msgstr "round(x) nisqaqa, x nisqaman asuyaq entero nisqata kutichin."
 
+#  [ES] "Operaciones sobre bits solo se aplican a enteros"
 #: functions.py:382 functions.py:390
 msgid "Bitwise operations only apply to integers"
-msgstr ""
+msgstr "Bits nisqapi yupaykunawan llamk'ayqa enteros nisqakunallamanmi churakun"
 
+#  [ES] ""
+#  [ES] "shift_left(x, y), desplaza a la izquierda x por y bits (multiplica por 2 por "
+#  [ES] "cada bit)"
 #: functions.py:384
 msgid "shift_left(x, y), shift x by y bits to the left (multiply by 2 per bit)"
 msgstr ""
+"shift_left(x, y) nisqaqa, lluq'imanmi x nisqataqa kuyuchin sapanka y bits "
+"nisqamantaqa (2 hinaman mirachiy sapanka bit kasqata)"
 
+#  [ES] ""
+#  [ES] "shift_right(x, y), desplaza a la derecha x por y bits (divide por 2 por cada "
+#  [ES] "bit)"
 #: functions.py:392
 msgid "shift_right(x, y), shift x by y bits to the right (divide by 2 per bit)"
 msgstr ""
+"shift_right(x, y) nisqaqa, pañamanmi x nisqataqa kuyuchin sapanka y bits "
+"nisqamantaqa (2 hinaman mirachiy sapanka bit kasqata)"
 
+#  [ES] ""
+#  [ES] "sin(x), devuelve el seno de x. Esta es la coordinada y en el circulo "
+#  [ES] "unitario en el angulo x"
 #: functions.py:397
 msgid ""
 "sin(x), return the sine of x. This is the y-coordinate on the unit circle at "
 "the angle x"
 msgstr ""
+"sin(x) nisqaqa, x nisqap cosenonta kutichin. Kayqa círculo unitario con "
+"ángulo x nisqapi coordenada y kaqmi"
 
+#  [ES] ""
+#  [ES] "sinh(x), devuelve el seno hiperbolico de x. Dado por (exp(x) - exp(-x)) / 2"
 #: functions.py:403
 msgid ""
 "sinh(x), return the hyperbolic sine of x. Given by (exp(x) - exp(-x)) / 2"
 msgstr ""
+"sinh(x) nisqaqa, x nisqap seno hiperbólico nisqanta kutichin. Kaytaqa qun "
+"(exp(x) - exp(-x)) / 2"
 
+#  [ES] "sinc(x), devuelve el seno cardinal de x. Dado por sin(x) / x."
 #: functions.py:410
 msgid "sinc(x), return the sinc of x. This is given by sin(x) / x."
 msgstr ""
+"sinc(x) nisqaqa, x nisqap seno cardinal nisqanta kutichin. Kaytaqa qun "
+"sin(x) / x."
 
+#  [ES] ""
+#  [ES] "sqrt(x), Devuelve la raiz cuadrada de x. Este es el valor para el cual el "
+#  [ES] "cuadrado equivale a x. Definido para x >= 0."
 #: functions.py:415
 msgid ""
 "sqrt(x), return the square root of x. This is the value for which the square "
 "equals x. Defined for x >= 0."
 msgstr ""
+"sqrt(x) nisqaqa, x nisqap raiz cuadrada nisqanta kutichin. Kaypa chaninqa "
+"cuadrado nisqaqa x nisqawan kikilla kananpaqmi. Kaypaqqa qun x >= 0."
 
+#  [ES] "cuadrado(x), devuelve x * x"
 #: functions.py:420
 msgid "square(x), return x * x"
-msgstr ""
+msgstr "cuadrado(x) nisqaqa, x * x nisqatam kutichin"
 
+#  [ES] "sub(x, y), devuelve x - y"
 #: functions.py:427
 msgid "sub(x, y), return x - y"
-msgstr ""
+msgstr "sub(x, y) nisqaqa, x - y nisqatam kutichin"
 
+#  [ES] ""
+#  [ES] "tan(x), Devuelve la tangente de x. Esta es la pendiente de la línea desde el "
+#  [ES] "origen del circulo unitario hasta el punto en el circulo definido por el "
+#  [ES] "angulo x. Dado por sin(x) / cos(x)"
 #: functions.py:432
 msgid ""
 "tan(x), return the tangent of x. This is the slope of the line from the "
 "origin of the unit circle to the point on the unit circle defined by the "
 "angle x. Given by sin(x) / cos(x)"
 msgstr ""
+"tan(x) nisqaqa, x nisqap tangente nisqanta kutichin. Kayqa circulo unitario "
+"nisqamanta circulo definido nisqakama ángulo x, siq'i purichisqanmi. Kaytaqa "
+"qun"
 
+#  [ES] ""
+#  [ES] "tanh(x), devuelve la tangente hiperbolica de x. Dado por sinh(x) / cosh(x)"
 #: functions.py:439
 msgid "tanh(x), return the hyperbolic tangent of x. Given by sinh(x) / cosh(x)"
 msgstr ""
+"tanh(x) nisqaqa, x nisqap tangente hiperbolica nisqanta kutichin. Kaytaqa "
+"qun sinh(x) / cosh(x"
 
+#  [ES] ""
+#  [ES] "xor(x, y), xor logico. Devuelve Verdadero si x es verdadero (y y es Falso) o "
+#  [ES] "si y es Verdadero (y X es Falso), de lo contrario devuelve Falso"
 #: functions.py:444
 msgid ""
 "xor(x, y), logical xor. Returns True if either x is True (and y is False) or "
 "y is True (and x is False), else returns False"
 msgstr ""
+"xor(x, y), xor logico nisqa. Chiqa, nisqatam kutichin sichus x chiqa "
+"kaptinqa (y nisqata Llulla kanman, mana chaqa y chiqa kaptinpas (x nisqataq "
+"llulla kanman), mana chayna kaptinqa, Llulla, nisqa kutichinqa"
 
 #  "Vaciar"
 #: layout.py:75
@@ -534,61 +775,69 @@ msgstr "Pichay"
 msgid "Edit"
 msgstr "Allinchay"
 
+#  [ES] "Álgebra"
 #: layout.py:110 layout.py:146
 msgid "Algebra"
-msgstr ""
+msgstr "Algebra nisqa"
 
+#  [ES] "Trigonometría"
 #: layout.py:115 layout.py:147
 msgid "Trigonometry"
-msgstr ""
+msgstr "Trigonometría nisqa"
 
+#  [ES] "Booleano"
 #: layout.py:120 layout.py:148
 msgid "Boolean"
-msgstr ""
+msgstr "Booleano nisqa"
 
+#  [ES] "Misceláneos"
 #: layout.py:125 layout.py:149
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Hukkuna"
 
+#  [ES] "Etiqueta:"
 #: layout.py:178
 msgid "Label:"
-msgstr ""
+msgstr "T'aqa:"
 
+#  [ES] "Todas las ecuaciones"
 #: layout.py:223
 msgid "All equations"
-msgstr ""
+msgstr "Llapan ecuacionekuna"
 
+#  [ES] "Mis ecuaciones"
 #: layout.py:224
 msgid "My equations"
-msgstr ""
+msgstr "Ñuqap Ecuacionesniykuna"
 
+#  [ES] "Mostrar variables"
 #: layout.py:225
 msgid "Show variables"
-msgstr ""
+msgstr "Variables nisqakunata rikuchiy"
 
 #. TRANS: multiplication symbol (default: '×')
 #: mathlib.py:82
 msgid "mul_sym"
-msgstr "×"
+msgstr "Mirachinapaq ×"
 
 #. TRANS: division symbol (default: '÷')
 #: mathlib.py:87
 msgid "div_sym"
-msgstr "÷"
+msgstr "Yapanapaq ÷"
 
 #. TRANS: equal symbol (default: '=')
 #: mathlib.py:92
 msgid "equ_sym"
-msgstr "="
+msgstr "Tarinapaq ="
 
 #  "No-definido"
 #: mathlib.py:216
 msgid "Undefined"
-msgstr "No-definido"
+msgstr "Mana-churasqa"
 
 #: mathlib.py:226
 msgid "Error: unsupported type"
-msgstr ""
+msgstr "Pantay: kaytaqa mana chaskikunchu"
 
 #  "Ayuda"
 #: toolbars.py:53
@@ -620,128 +869,158 @@ msgstr "<ctrl>x Kuchuy"
 msgid "Paste"
 msgstr "K'askachiy"
 
+#  [ES] "Cuadrado"
 #: toolbars.py:147
 msgid "Square"
-msgstr ""
+msgstr "Tawak'uchu"
 
+#  [ES] "Raíz cuadrada"
 #: toolbars.py:152
 msgid "Square root"
-msgstr ""
+msgstr "raíz cuadrada nisqa"
 
+#  [ES] "Inversa"
 #: toolbars.py:157
 msgid "Inverse"
-msgstr ""
+msgstr "Inversa nisqa"
 
+#  [ES] "e a la potencia x"
 #: toolbars.py:164
 msgid "e to the power x"
-msgstr ""
+msgstr "e nisqamanta x potenciamanhina"
 
+#  [ES] "x a la potencia y"
 #: toolbars.py:169
 msgid "x to the power y"
-msgstr ""
+msgstr "x nisqamanta y potenciamanhina"
 
+#  [ES] "Logaritmo natural"
 #: toolbars.py:174
 msgid "Natural logarithm"
-msgstr ""
+msgstr "Logaritmo natural nisqa"
 
+#  [ES] "Factorial"
 #: toolbars.py:180
 msgid "Factorial"
-msgstr ""
+msgstr "Factorial nisqa"
 
+#  [ES] "Seno"
 #: toolbars.py:190
 msgid "Sine"
-msgstr ""
+msgstr "Seno nisqa"
 
+#  [ES] "Coseno"
 #: toolbars.py:194
 msgid "Cosine"
-msgstr ""
+msgstr "Coseno nisqa"
 
+#  [ES] "Tangente"
 #: toolbars.py:198
 msgid "Tangent"
-msgstr ""
+msgstr "Tangente nista"
 
+#  [ES] "Arcoseno"
 #: toolbars.py:204
 msgid "Arc sine"
-msgstr ""
+msgstr "Arcoseno nisqa"
 
+#  [ES] "Arcocoseno"
 #: toolbars.py:208
 msgid "Arc cosine"
-msgstr ""
+msgstr "Arcoseno nisqa"
 
+#  [ES] "Arcotangente"
 #: toolbars.py:212
 msgid "Arc tangent"
-msgstr ""
+msgstr "Arcotangente nisqa"
 
+#  [ES] "Seno hiperbólico"
 #: toolbars.py:218
 msgid "Hyperbolic sine"
-msgstr ""
+msgstr "Seno hiperbólico nisqa"
 
+#  [ES] "Coseno hiperbólico"
 #: toolbars.py:222
 msgid "Hyperbolic cosine"
-msgstr ""
+msgstr "Coseno hiperbólico nisqa"
 
+#  [ES] "Tangente hiperbólica"
 #: toolbars.py:226
 msgid "Hyperbolic tangent"
-msgstr ""
+msgstr "Tangente hiperbólico nisqa"
 
+#  [ES] "Y lógico"
 #: toolbars.py:236
 msgid "Logical and"
-msgstr ""
+msgstr "Y lógico nisqa"
 
+#  [ES] "O lógico"
 #: toolbars.py:240
 msgid "Logical or"
-msgstr ""
+msgstr "O lógico nisqa"
 
 #  "Igual"
+#  [ES] "Igual"
 #: toolbars.py:250
-#, fuzzy
 msgid "Equals"
-msgstr "Kikin"
+msgstr "Igual nisqa"
 
+#  [ES] "No-igual"
 #: toolbars.py:253
 msgid "Not equals"
-msgstr ""
+msgstr "No-igual nisqa"
 
+#  [ES] "Pi"
 #: toolbars.py:262
 msgid "Pi"
-msgstr ""
+msgstr "Pi"
 
+#  [ES] "e"
 #: toolbars.py:266
 msgid "e"
-msgstr ""
+msgstr "e"
 
+#  [ES] "Y"
 #: toolbars.py:269
 msgid "γ"
-msgstr ""
+msgstr "γ"
 
+#  [ES] "φ"
 #: toolbars.py:272
 msgid "φ"
-msgstr ""
+msgstr "φ"
 
+#  [ES] "Gráfico"
 #: toolbars.py:279
 msgid "Plot"
-msgstr ""
+msgstr "Plot"
 
+#  [ES] "Grados"
 #: toolbars.py:286
 msgid "Degrees"
-msgstr ""
+msgstr "Grados nisqa"
 
+#  [ES] "Radianes"
 #: toolbars.py:287
 msgid "Radians"
-msgstr ""
+msgstr "Radianes nisqa"
 
+#  [ES] "Grados / Radianes"
 #: toolbars.py:291
 msgid "Degrees / Radians"
-msgstr ""
+msgstr "Grados nisqa / Radianes nisqa"
 
+#  [ES] "Exponente / Notación científica"
 #: toolbars.py:300
 msgid "Exponent / Scientific notation"
-msgstr ""
+msgstr "Exponente nisqa / Notación científica nisqa"
 
+#  [ES] "Número de dígitos visibles"
 #: toolbars.py:310
 msgid "Number of shown digits"
-msgstr ""
+msgstr "Rikuchikuq yupaykuna"
 
+#  [ES] "Base numérica"
 #: toolbars.py:320
 msgid "Integer formatting base"
-msgstr ""
+msgstr "Tiqsipakuq yupanankuna"
