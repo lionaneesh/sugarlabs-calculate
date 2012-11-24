@@ -224,6 +224,7 @@ class Equation:
         tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
         tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
             justification=gtk.JUSTIFY_RIGHT)
+        # TODO Fix for old Sugar 0.82 builds, red_float not available
         bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
                   gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
                   gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
@@ -533,6 +534,7 @@ class Calculate(ShareableActivity):
         w.connect('realize', _textview_realize_cb)
         buf = w.get_buffer()
 
+        # TODO Fix for old Sugar 0.82 builds, red_float not available
         bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
                   gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
                   gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0

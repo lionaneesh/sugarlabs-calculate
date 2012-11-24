@@ -185,7 +185,10 @@ class CalcLayout:
         vc1.pack_start(eb2, expand=False)
         
         self.text_entry = gtk.Entry()
-        self.text_entry.props.im_module = 'gtk-im-context-simple'
+        try:
+            self.text_entry.props.im_module = 'gtk-im-context-simple'
+        except AttributeError:
+            pass
         self.text_entry.set_size_request(-1, 75)
         self.text_entry.connect('key_press_event', self._parent.ignore_key_cb)
         self.text_entry.modify_font(self.input_font)
@@ -243,6 +246,7 @@ class CalcLayout:
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
 
+        # TODO Fix for old Sugar 0.82 builds, red_float not available
         bright = (gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).red_float +
                   gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).green_float +
                   gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).blue_float) / 3.0
