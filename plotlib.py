@@ -96,7 +96,7 @@ class _PlotBase:
 
         vals = self.evaluate(eqn, var, range, points=points)
         _logger.debug('vals are %r', vals)
-        svg = self.produce_plot(vals, xlabel=var, ylabel='f(x)', range=range)
+        svg = self.produce_plot(vals, xlabel=var, ylabel='f(x)')
         _logger.debug('SVG Data: %s', svg)
         self.set_svg(svg)
 
@@ -230,7 +230,7 @@ class CustomPlot(_PlotBase):
         interval = float(max_y - min_y)/(NOL - 1)
         self.plot_line((0.11, 0.08), (0.11, 0.89), "black")
         # if its a constant function we only need to plot one label
-        if min_y == max_y:        
+        if min_y == max_y:
             self.add_text((-0.50, 0.10), format_float(min_y), rotate=-90)        
         else:
             self.add_text((-0.90, 0.10), format_float(min_y), rotate=-90)        
