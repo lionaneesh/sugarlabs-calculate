@@ -199,38 +199,41 @@ class CustomPlot(_PlotBase):
 
     def draw_axes(self, labelx, labely, val):
         """Draw axes on the plot."""
-        F = 0.80
-        NOL = 5 # no of labels
-        interval = len(val)/(NOL - 1)
+        F = 0.77
+        NOL = 5 # no of labels, atleast is 2
+        interval = (len(val) - 2)/NOL
+        y_coords = sorted([i[1] for i in val])
+        x_coords = sorted([i[0] for i in val])
+        max_y = max(y_coords)
+        min_y = min(y_coords)
+
+        max_x = max(x_coords)
+        min_x = min(x_coords)
 
         # X axis
         self.plot_line((0.11, 0.89), (0.92, 0.89), "black")
-        self.add_text((0.11 + F * 0, 0.93), format_float(val[0][0]))
+        self.add_text((0.11 + min_x + F * 0, 0.93), format_float(min_x))
         plot_index = interval
 
-        while plot_index < len(val):
-            self.add_text((0.11 + F * (abs(val[plot_index][1] - val[0][1])) /
-                                      (abs(val[-1][1] - val[0][1])), 0.93),
-                          format_float(val[plot_index][0]))
+        while plot_index < len(val) - interval:
+            self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) / abs(max_x - min_x), 0.93), format_float(x_coords[plot_index]))
             plot_index += interval
 
-        self.add_text((0.11 + F * 1, 0.93), format_float(val[-1][0]))
+        self.add_text((0.11 + F * 1, 0.93), format_float(max_x))
         self.add_text((0.50, 0.98), labelx)
 
         # Y axis
         self.plot_line((0.11, 0.08), (0.11, 0.89), "black")
-        self.add_text((-0.90, 0.10), format_float(val[0][1]), rotate=-90)
+        self.add_text((-0.90, 0.10), format_float(min_y), rotate=-90)
         plot_index = interval
 
-        while plot_index < len(val):
-            self.add_text((-(0.89 - F * (abs(val[plot_index][1] - val[0][1])) /
-                                        (abs(val[-1][1] - val[0][1]))), 0.10),
-                           format_float(val[plot_index][0]), rotate=-90)
+        while plot_index < len(val) - interval:
+            self.add_text((-(0.91 - F * abs(y_coords[plot_index] - min_y) / abs(max_y - min_y)), 0.10), format_float(y_coords[plot_index]), rotate=-90)
             plot_index += interval
 
-        self.add_text((-(0.89 - F), 0.10), format_float(val[-1][1]),
-                      rotate=-90)
+        self.add_text((-(0.89 - F), 0.10), format_float(max_y), rotate=-90)
         self.add_text((-0.50, 0.045), labely, rotate=-90)
+
     def produce_plot(self, vals, *args, **kwargs):
         """Produce an svg plot."""
 
