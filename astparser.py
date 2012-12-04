@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 # astparser.py, equation parser based on python Abstract Syntax Trees (ast)
 # Reinier Heeres <reinier@heeres.eu>
+# Copyright (C) 2012 Aneesh Dogra <lionaneesh@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -71,6 +72,22 @@ class ParseError(ParserError):
         msg = _("Error at %d") % (self._range[0] + 1)
         if self._msg is not None and len(self._msg) > 0:
             msg += ": %s" % (self._msg)
+        return msg
+
+class WrongSyntaxError(ParserError):
+    """Class for reporting syntax errors."""
+
+    def __init__(self, module=None, helper=None, start=0, end=0):
+        ParserError.__init__(self,_("Syntax Error."), start, end)
+        if module != None and helper != None:
+            self.help_text = helper.get_help(module)
+        else:
+            self.help_text = None
+
+    def __str__(self):
+        msg = _("Syntax Error!")
+        if self.help_text is not None and len(self.help_text) > 0:
+            msg += "\n" + self.help_text
         return msg
 
 class RuntimeError(ParserError):
@@ -593,8 +610,15 @@ class AstParser:
         try:
             tree = compile(eqn, '<string>', 'exec', ast.PyCF_ONLY_AST)
         except SyntaxError, e:
-            msg = _('Parse error')
-            raise ParseError(msg, e.offset - 1)
+            # if we don't have an offset, its a SyntaxError
+            if e.offset == None:
+                if eqn.startswith('plot'):
+                    raise WrongSyntaxError('plot', self._helper, len(eqn),
+                                           len(eqn) + len("Syntax Error!"))
+                else:
+                    raise WrongSyntaxError()
+            else:
+                raise ParseError(msg, e.offset - 1)
 
         if isinstance(tree, ast.Module):
             if len(tree.body) != 1:
