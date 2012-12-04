@@ -158,7 +158,7 @@ class CustomPlot(_PlotBase):
             self.maxy = max(float(y), self.maxy)
 
         if self.minx == self.maxx:
-            xYspace = 0.5
+            x_space = 0.5
         else:
             x_space = 0.02 * (self.maxx - self.minx)
         self.minx -= x_space
@@ -214,16 +214,18 @@ class CustomPlot(_PlotBase):
         # X axis
         interval = len(val)/(NOL - 1)
         self.plot_line((0.11, 0.89), (0.92, 0.89), "black")
-        self.add_text((0.11 + min_x + F * 0, 0.93), format_float(min_x))
-        plot_index = interval
+        if max_x != min_x:
+            self.add_text((0.11 + min_x + F * 0, 0.93), format_float(min_x))
+            plot_index = interval
+            while plot_index <= len(val) - interval:
+                self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) / \
+                               abs(max_x - min_x), 0.93), \
+                              format_float(x_coords[plot_index]))
+                plot_index += interval
+            self.add_text((0.11 + F * 1, 0.93), format_float(max_x))
+        else:
+            self.add_text((0.5 , 0.93), format_float(min_x))
 
-        while plot_index <= len(val) - interval:
-            self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) / \
-                           abs(max_x - min_x), 0.93), \
-                          format_float(x_coords[plot_index]))
-            plot_index += interval
-
-        self.add_text((0.11 + F * 1, 0.93), format_float(max_x))
         self.add_text((0.50, 0.98), labelx)
 
         # Y axis
