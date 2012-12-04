@@ -24,6 +24,9 @@ _logger = logging.getLogger('PlotLib')
 
 USE_MPL = True
 
+def format_float(x):
+    return ('%.2f' % x).rstrip('0').rstrip('.')
+
 class _PlotBase:
     """Class to generate an svg plot for a function.
     Evaluation of values is done using the EqnParser class."""
@@ -59,6 +62,7 @@ class _PlotBase:
             points -= 1
 
         self.parser.set_var(var, x_old)
+        print res
         return res
 
     def export_plot(self, fn):
@@ -92,7 +96,7 @@ class _PlotBase:
 
         vals = self.evaluate(eqn, var, range, points=points)
         _logger.debug('vals are %r', vals)
-        svg = self.produce_plot(vals, xlabel=var, ylabel='f(x)')
+        svg = self.produce_plot(vals, xlabel=var, ylabel='f(x)', range=range)
         _logger.debug('SVG Data: %s', svg)
         self.set_svg(svg)
 
@@ -193,22 +197,47 @@ class CustomPlot(_PlotBase):
         logrange = log(range)
         haszero = (startx < 0 & endx < 0)
 
-    def draw_axes(self, labelx, labely):
+    def draw_axes(self, labelx, labely, val):
         """Draw axes on the plot."""
+        F = 0.80
+        NOL = 5 # no of labels
+        interval = len(val)/(NOL - 1)
 
-        self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
+        # X axis
+        self.plot_line((0.11, 0.89), (0.92, 0.89), "black")
+        self.add_text((0.11 + F * 0, 0.93), format_float(val[0][0]))
+        plot_index = interval
+
+        while plot_index < len(val):
+            self.add_text((0.11 + F * (abs(val[plot_index][1] - val[0][1])) /
+                                      (abs(val[-1][1] - val[0][1])), 0.93),
+                          format_float(val[plot_index][0]))
+            plot_index += interval
+
+        self.add_text((0.11 + F * 1, 0.93), format_float(val[-1][0]))
         self.add_text((0.50, 0.98), labelx)
 
-        self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
-        self.add_text((-0.50, 0.065), labely, rotate=-90)
+        # Y axis
+        self.plot_line((0.11, 0.08), (0.11, 0.89), "black")
+        self.add_text((-0.90, 0.10), format_float(val[0][1]), rotate=-90)
+        plot_index = interval
 
+        while plot_index < len(val):
+            self.add_text((-(0.89 - F * (abs(val[plot_index][1] - val[0][1])) /
+                                        (abs(val[-1][1] - val[0][1]))), 0.10),
+                           format_float(val[plot_index][0]), rotate=-90)
+            plot_index += interval
+
+        self.add_text((-(0.89 - F), 0.10), format_float(val[-1][1]),
+                      rotate=-90)
+        self.add_text((-0.50, 0.045), labely, rotate=-90)
     def produce_plot(self, vals, *args, **kwargs):
         """Produce an svg plot."""
 
         self.set_size(250, 250)
         self.create_image()
 
-        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''))
+        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''), vals)
 
         self.add_curve(vals)
 
