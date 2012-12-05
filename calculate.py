@@ -732,8 +732,7 @@ class Calculate(ShareableActivity):
         self.select_reason = self.SELECT_SELECT
 
     def text_copy(self):
-        if self.layout.graph_selected != False:
-            print "\n\nGraph Copy!\n\n"
+        if self.layout.graph_selected is not None:
             self.clipboard.set_image(self.layout.graph_selected.child.get_pixbuf())
             self.layout.toggle_select_graph(self.layout.graph_selected)
         else:

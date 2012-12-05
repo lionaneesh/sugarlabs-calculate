@@ -1,4 +1,5 @@
 # layout.py, see calculate.py for info
+# Copyright (C) 2012 Aneesh Dogra <lionaneesh@gmail.com>
 
 from gettext import gettext as _
 import pygtk
@@ -37,7 +38,7 @@ class CalcLayout:
         self._showing_history = True
         self._showing_all_history = True
         self._var_textviews = {}
-        self.graph_selected = False
+        self.graph_selected = None
 
         self.create_dialog()
 
