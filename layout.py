@@ -298,6 +298,10 @@ class CalcLayout:
         self.history_vbox.show()
 
     def toggle_select_graph(self, widget, host=None):
+        # if we have a graph already selected, we must deselect it first
+        if self.graph_selected and self.graph_selected != widget:
+            self.toggle_select_graph(self.graph_selected)
+
         if not self.graph_selected:
             widget.set_visible_window(True)
             widget.set_above_child(True)
