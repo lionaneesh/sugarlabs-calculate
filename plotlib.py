@@ -29,6 +29,7 @@ class _PlotBase:
     Evaluation of values is done using the EqnParser class."""
 
     def __init__(self, parser):
+        print "We are in init.\n\n\n"
         self.svg_data = ""
         self.parser = parser
 
@@ -81,6 +82,10 @@ class _PlotBase:
         '''
 
         _logger.debug('plot(): %r, %r', eqn, kwargs)
+
+        if len(kwargs) == 0:
+            _logger.error('No variables specified.')
+            return None
 
         points = kwargs.pop('points', 100)
         if len(kwargs) > 1:
