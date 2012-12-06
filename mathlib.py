@@ -157,6 +157,10 @@ class MathLib:
         if len(digits) > self.digit_limit:
             exp += len(digits) - self.digit_limit
             digits = digits[:self.digit_limit]
+        if len(digits) < self.digit_limit:
+            exp -= self.digit_limit - len(digits)
+            digits += (0,) * (self.digit_limit - len(digits))
+            print exp, digits
         if sign:
             res = "-"
         else:
