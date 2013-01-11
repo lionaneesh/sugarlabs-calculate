@@ -154,7 +154,7 @@ class CustomPlot(_PlotBase):
             self.maxy = max(float(y), self.maxy)
 
         if self.minx == self.maxx:
-            xYspace = 0.5
+            x_space = 0.5
         else:
             x_space = 0.02 * (self.maxx - self.minx)
         self.minx -= x_space
