@@ -1,4 +1,5 @@
 # plotlib.py, svg plot generator by Reinier Heeres <reinier@heeres.eu>
+# Copyright (C) 2012 Aneesh Dogra <lionaneesh@gmail.com>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -23,6 +24,9 @@ import logging
 _logger = logging.getLogger('PlotLib')
 
 USE_MPL = True
+
+def format_float(x):
+    return ('%.2f' % x).rstrip('0').rstrip('.')
 
 class _PlotBase:
     """Class to generate an svg plot for a function.
@@ -59,6 +63,7 @@ class _PlotBase:
             points -= 1
 
         self.parser.set_var(var, x_old)
+        print res
         return res
 
     def export_plot(self, fn):
@@ -173,7 +178,7 @@ class CustomPlot(_PlotBase):
 
     def vals_to_rcoords(self, pair):
         """Convert values to fractional coordinates"""
-        ret = (0.1 + (pair[0] - self.minx) / (self.maxx - self.minx) * 0.8, \
+        ret = (0.1 + (pair[0] - self.minx) / (self.maxx - self.minx) * 0.8,
                0.9 - (pair[1] - self.miny) / (self.maxy - self.miny) * 0.8)
         return ret
 
@@ -193,14 +198,54 @@ class CustomPlot(_PlotBase):
         logrange = log(range)
         haszero = (startx < 0 & endx < 0)
 
-    def draw_axes(self, labelx, labely):
+    def draw_axes(self, labelx, labely, val):
         """Draw axes on the plot."""
+        F = 0.8
+        NOL = 4 # maximum no of labels
 
-        self.plot_line((0.08, 0.92), (0.92, 0.92), "black")
+        y_coords = sorted([i[1] for i in val])
+        x_coords = sorted([i[0] for i in val])
+
+        max_y = max(y_coords)
+        min_y = min(y_coords)
+
+        max_x = max(x_coords)
+        min_x = min(x_coords)
+
+        # X axis
+        interval = len(val)/(NOL - 1)
+        self.plot_line((0.11, 0.89), (0.92, 0.89), "black")
+        if max_x != min_x:
+            self.add_text((0.11 + min_x + F * 0, 0.93), format_float(min_x))
+            plot_index = interval
+            while plot_index <= len(val) - interval:
+                self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) / \
+                               abs(max_x - min_x), 0.93),
+                              format_float(x_coords[plot_index]))
+                plot_index += interval
+            self.add_text((0.11 + F * 1, 0.93), format_float(max_x))
+        else:
+            self.add_text((0.5 , 0.93), format_float(min_x))
+
         self.add_text((0.50, 0.98), labelx)
 
-        self.plot_line((0.08, 0.08), (0.08, 0.92), "black")
-        self.add_text((-0.50, 0.065), labely, rotate=-90)
+        # Y axis
+        interval = float(max_y - min_y)/(NOL - 1)
+        self.plot_line((0.11, 0.08), (0.11, 0.89), "black")
+        # if its a constant function we only need to plot one label
+        if min_y == max_y:
+            self.add_text((-0.50, 0.10), format_float(min_y), rotate=-90)        
+        else:
+            self.add_text((-0.90, 0.10), format_float(min_y), rotate=-90)        
+            plot_value = min_y + interval
+            while plot_value <= max_y - interval:
+                self.add_text((-(0.91 - F * abs(plot_value - min_y) / \
+                               abs(max_y - min_y)), 0.10),
+                              format_float(plot_value), rotate=-90)
+                plot_value += interval
+            self.add_text((-(0.89 - F), 0.10), format_float(max_y), rotate=-90)
+
+        self.add_text((-0.50, 0.045), labely, rotate=-90)
 
     def produce_plot(self, vals, *args, **kwargs):
         """Produce an svg plot."""
@@ -208,7 +253,7 @@ class CustomPlot(_PlotBase):
         self.set_size(250, 250)
         self.create_image()
 
-        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''))
+        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''), vals)
 
         self.add_curve(vals)
 
