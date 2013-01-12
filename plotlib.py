@@ -63,7 +63,6 @@ class _PlotBase:
             points -= 1
 
         self.parser.set_var(var, x_old)
-        print res
         return res
 
     def export_plot(self, fn):
