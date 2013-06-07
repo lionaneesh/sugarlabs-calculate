@@ -44,8 +44,9 @@ range from a to b")
 class ParserError(Exception):
     """Parent class for exceptions raised by the parser."""
 
-    def __init__(self, msg, start, end=None):
+    def __init__(self, msg, start, eqn, end=None):
         self._msg = msg
+        self.eqn = eqn
         self.set_range(start, end)
 
     def get_range(self):
@@ -65,11 +66,13 @@ class ParserError(Exception):
 class ParseError(ParserError):
     """Class for error during parsing."""
 
-    def __init__(self, msg, start, end=None):
-        ParserError.__init__(self, msg, start, end)
+    def __init__(self, msg, start, eqn, end=None):
+        ParserError.__init__(self, msg, start, eqn, end)
 
     def __str__(self):
-        msg = _("Error at %d") % (self._range[0] + 1)
+        msg = _("Error at '%s', position: %d") % \
+              (self.eqn[self._range[0] - 1 : self._range[1] - 1],
+               self._range[0])
         if self._msg is not None and len(self._msg) > 0:
             msg += ": %s" % (self._msg)
         return msg
@@ -93,11 +96,13 @@ class WrongSyntaxError(ParserError):
 class RuntimeError(ParserError):
     """Class for error during executing."""
 
-    def __init__(self, msg, start, end=None):
+    def __init__(self, msg, start, eqn, end=None):
         ParserError.__init__(self, msg, start, end)
 
     def __str__(self):
-        msg = _("Error at %d") % (self._range[0] + 1)
+        msg = _("Error at '%s', position: %d") % \
+              (self.eqn[self._range[0] - 1 : self._range[1] - 1],
+               self._range[0])
         if self._msg is not None and len(self._msg) > 0:
             msg += ": %s" % (self._msg)
         return msg
@@ -220,7 +225,7 @@ class AstParser:
         ast.RShift: 'shift_right',
         ast.Sub: 'sub',
     }
-    
+
     CMPOP_MAP = {
         ast.Gt: lambda x, y: x > y,
         ast.GtE: lambda x, y: x >= y,
@@ -618,7 +623,8 @@ class AstParser:
                 else:
                     raise WrongSyntaxError()
             else:
-                raise ParseError(msg, e.offset - 1)
+                msg = _('Parse error')
+                raise ParseError(msg, e.offset - 1, eqn)
 
         if isinstance(tree, ast.Module):
             if len(tree.body) != 1:
@@ -721,4 +727,3 @@ if __name__ == '__main__':
     eqn = 'a * 5'
     ret = p.evaluate(eqn)
     print 'Eqn: %s, ret: %s' % (eqn, ret)
-
