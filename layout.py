@@ -1,4 +1,5 @@
 # layout.py, see calculate.py for info
+# Copyright (C) 2012 Aneesh Dogra <lionaneesh@gmail.com>
 
 from gettext import gettext as _
 import pygtk
@@ -37,6 +38,7 @@ class CalcLayout:
         self._showing_history = True
         self._showing_all_history = True
         self._var_textviews = {}
+        self.graph_selected = None
 
         self.create_dialog()
 
@@ -295,34 +297,79 @@ class CalcLayout:
         self.variable_vbox.hide()
         self.history_vbox.show()
 
+    def toggle_select_graph(self, widget, host=None):
+        # if we have a graph already selected, we must deselect it first
+        if self.graph_selected and self.graph_selected != widget:
+            self.toggle_select_graph(self.graph_selected)
+
+        if not self.graph_selected:
+            widget.set_visible_window(True)
+            widget.set_above_child(True)
+            self.graph_selected = widget
+            white = gtk.gdk.color_parse('white')
+            widget.modify_bg(gtk.STATE_NORMAL, white)
+        else:
+            widget.set_visible_window(False)
+            self.graph_selected = False
+
     def add_equation(self, textview, own, prepend=False):
         """Add a gtk.TextView of an equation to the history_vbox."""
 
+        GraphEventBox = None
+        if isinstance(textview, gtk.Image):
+            # Add the image inside the eventBox
+            GraphEventBox = gtk.EventBox()
+            GraphEventBox.add(textview)
+            GraphEventBox.set_visible_window(False)
+            GraphEventBox.connect('button_press_event', self.toggle_select_graph)
+            GraphEventBox.show()
+
         if prepend:
-            self.history_vbox.pack_start(textview, False, True)
-            self.history_vbox.reorder_child(textview, 0)
+            if GraphEventBox:
+                self.history_vbox.pack_start(GraphEventBox, False, True)
+                self.history_vbox.reorder_child(GraphEventBox, 0)
+            else:
+                self.history_vbox.pack_start(textview, False, True)
+                self.history_vbox.reorder_child(textview, 0)
         else:
-            self.history_vbox.pack_end(textview, False, True)
+            if GraphEventBox:
+                self.history_vbox.pack_end(GraphEventBox, False, True)
+            else:
+                self.history_vbox.pack_end(textview, False, True)
 
         if own:
-            self._own_equations.append(textview)
-            textview.show()
-        else:
-            self._other_equations.append(textview)
-            if self._showing_all_history:
+            if GraphEventBox:
+                self._own_equations.append(GraphEventBox)
+                GraphEventBox.child.show()
+            else:
+                self._own_equations.append(textview)
                 textview.show()
+        else:
+            if self._showing_all_history:
+                if GraphEventBox:
+                    self._other_equations.append(GraphEventBox)
+                    GraphEventBox.child.show()
+                else:
+                    self._other_equations.append(textview)
+                    textview.show()
 
     def show_all_history(self):
         """Show both owned and other equations."""
         self._showing_all_history = True
         for key in self._other_equations:
-            key.show()
+            if isinstance(key, gtk.EventBox):
+                key.child.show()
+            else:
+                key.show()
 
     def show_own_history(self):
         """Show only owned equations."""
         self._showing_all_history = False
         for key in self._other_equations:
-            key.hide()
+            if isinstance(key, gtk.EventBox):
+                key.child.hide()
+            else:
+                key.hide()
 
     def add_variable(self, varname, textview):
         """Add a gtk.TextView of a variable to the variable_vbox."""

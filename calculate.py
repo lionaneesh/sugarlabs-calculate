@@ -416,7 +416,6 @@ class Calculate(ShareableActivity):
             tree: the parsed tree, this will be used to set the label variable
             so that the equation can be used symbolicaly.
             """
-
         if eq.equation is not None and len(eq.equation) > 0:
             if prepend:
                 self.old_eqs.insert(0, eq)
@@ -733,12 +732,16 @@ class Calculate(ShareableActivity):
         self.select_reason = self.SELECT_SELECT
 
     def text_copy(self):
-        str = self.text_entry.get_text()
-        sel = self.text_entry.get_selection_bounds()
+        if self.layout.graph_selected is not None:
+            self.clipboard.set_image(self.layout.graph_selected.child.get_pixbuf())
+            self.layout.toggle_select_graph(self.layout.graph_selected)
+        else:
+            str = self.text_entry.get_text()
+            sel = self.text_entry.get_selection_bounds()
  #       _logger.info('text_copy, sel: %r, str: %s', sel, str)
-        if len(sel) == 2:
-            (start, end) = sel
-            self.clipboard.set_text(str[start:end])
+            if len(sel) == 2:
+                (start, end) = sel
+                self.clipboard.set_text(str[start:end])
 
     def get_clipboard_text(self):
         text = self.clipboard.wait_for_text()
