@@ -86,6 +86,10 @@ class _PlotBase:
 
         _logger.debug('plot(): %r, %r', eqn, kwargs)
 
+        if len(kwargs) == 0:
+            _logger.error('No variables specified.')
+            return None
+
         points = kwargs.pop('points', 100)
         if len(kwargs) > 1:
             _logger.error('Too many variables specified')
