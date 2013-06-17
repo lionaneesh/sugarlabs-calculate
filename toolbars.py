@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 # toolbars.py, see CalcActivity.py for info
 
 import pygtk
@@ -10,6 +10,7 @@ from sugar.graphics.palette import Palette
 from sugar.graphics.menuitem import MenuItem
 from sugar.graphics.toolbutton import ToolButton
 from sugar.graphics.toggletoolbutton import ToggleToolButton
+from sugar.graphics.style import GRID_CELL_SIZE
 
 import logging
 _logger = logging.getLogger('calc-activity')
@@ -257,6 +258,8 @@ class BooleanToolbar(gtk.Toolbar):
 
 class MiscToolbar(gtk.Toolbar):
     def __init__(self, calc, target_toolbar=None):
+        self._target_toolbar = target_toolbar
+
         gtk.Toolbar.__init__(self)
 
         self.insert(IconToolButton('constants-pi', _('Pi'),
@@ -272,32 +275,31 @@ class MiscToolbar(gtk.Toolbar):
         self.insert(IconToolButton('constants-goldenratio', _('φ'),
             lambda x: calc.button_pressed(calc.TYPE_TEXT, '1.618033988749895')), -1)
 
-        if target_toolbar is None:
-            target_toolbar = self
-            target_toolbar.insert(LineSeparator(), -1)
+        self._line_separator1 = LineSeparator()
+        self._line_separator2 = LineSeparator()
 
-        target_toolbar.insert(IconToolButton('plot', _('Plot'),
+        self._plot_button = IconToolButton('plot', _('Plot'),
             lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
-            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)')), -1)
-
-        target_toolbar.insert(LineSeparator(), -1)
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)'))
 
         el = [
             {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'deg'},
             {'icon': 'format-rad', 'desc': _('Radians'), 'html': 'rad'},
         ]
-        target_toolbar.insert(IconToggleToolButton(el, 
-                    lambda x: self.update_angle_type(x, calc),
-                    _('Degrees / Radians')), -1)
+        self._angle_button = IconToggleToolButton(
+            el, 
+            lambda x: self.update_angle_type(x, calc),
+            _('Degrees / Radians'))
         self.update_angle_type('deg', calc)
 
         el = [
             {'icon': 'format-sci', 'html': 'sci'},
             {'icon': 'format-exp', 'html': 'exp'},
         ]
-        target_toolbar.insert(IconToggleToolButton(el,
-                    lambda x: self.update_format_type(x, calc),
-                    _('Exponent / Scientific notation')), -1)
+        self._format_button = IconToggleToolButton(
+            el,
+            lambda x: self.update_format_type(x, calc),
+            _('Exponent / Scientific notation'))
 
         el = [
             {'icon': 'digits-9', 'html': '9'},
@@ -305,9 +307,10 @@ class MiscToolbar(gtk.Toolbar):
             {'icon': 'digits-15', 'html': '15'},
             {'icon': 'digits-6', 'html': '6'},
         ]
-        target_toolbar.insert(IconToggleToolButton(el,
-                    lambda x: self.update_digits(x, calc),
-                    _('Number of shown digits')), -1)
+        self._digits_button = IconToggleToolButton(
+                el,
+                lambda x: self.update_digits(x, calc),
+                _('Number of shown digits'))
 
         el = [
             {'icon': 'base-10', 'html': '10'},
@@ -315,11 +318,43 @@ class MiscToolbar(gtk.Toolbar):
             {'icon': 'base-16', 'html': '16'},
             {'icon': 'base-8', 'html': '8'}
         ]
-        target_toolbar.insert(IconToggleToolButton(el,
-                    lambda x: self.update_int_base(x, calc),
-                    _('Integer formatting base')), -1)
-                    
+         
+        self._base_button = IconToggleToolButton(
+            el,
+            lambda x: self.update_int_base(x, calc),
+            _('Integer formatting base'))
+
+        self.update_layout()
+
         self.show_all()
+
+    def update_layout(self):
+        if gtk.gdk.screen_width() < 14 * GRID_CELL_SIZE or \
+                self._target_toolbar is None:
+            target_toolbar = self
+            if self._target_toolbar is not None:
+                self._remove_buttons(self._target_toolbar)
+        else:
+            target_toolbar = self._target_toolbar
+            self._remove_buttons(self)
+
+        target_toolbar.insert(self._line_separator1, -1)
+
+        target_toolbar.insert(self._plot_button, -1)
+
+        target_toolbar.insert(self._line_separator2, -1)
+
+        target_toolbar.insert(self._angle_button, -1)
+        target_toolbar.insert(self._format_button, -1)
+        target_toolbar.insert(self._digits_button, -1)
+        target_toolbar.insert(self._base_button, -1)
+
+    def _remove_buttons(self, toolbar):
+        for item in [self._plot_button, self._line_separator1,
+                     self._line_separator2, self._angle_button,
+                     self._format_button, self._digits_button,
+                     self._base_button]:
+            toolbar.remove(item)
 
     def update_angle_type(self, text, calc):
         var = calc.parser.get_var('angle_scaling')

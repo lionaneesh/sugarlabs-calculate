@@ -91,17 +91,17 @@ class CalcLayout:
 
 # Toolbar
         try:
-            toolbar_box = ToolbarBox()
+            self._toolbar_box = ToolbarBox()
 
             activity_button = ActivityToolbarButton(self._parent)
-            toolbar_box.toolbar.insert(activity_button, 0)
+            self._toolbar_box.toolbar.insert(activity_button, 0)
             
             def append(icon_name, label, page, position):
                 toolbar_button = ToolbarButton()
                 toolbar_button.props.page = page
                 toolbar_button.props.icon_name = icon_name
                 toolbar_button.props.label = label
-                toolbar_box.toolbar.insert(toolbar_button, position)
+                self._toolbar_box.toolbar.insert(toolbar_button, position)
 
             append('toolbar-edit',
                    _('Edit'),
@@ -125,20 +125,21 @@ class CalcLayout:
 
             append('toolbar-constants',
                    _('Miscellaneous'),
-                   MiscToolbar(self._parent, target_toolbar=toolbar_box.toolbar),
+                   MiscToolbar(self._parent,
+                               target_toolbar=self._toolbar_box.toolbar),
                    5)
             
-            separator = gtk.SeparatorToolItem()
-            separator.props.draw = False
-            separator.set_expand(True)
-            separator.show()
-            toolbar_box.toolbar.insert(separator, -1)
+            self._separator = gtk.SeparatorToolItem()
+            self._separator.props.draw = False
+            self._separator.set_expand(True)
+            self._separator.show()
+            self._toolbar_box.toolbar.insert(self._separator, -1)
 
-            stop = StopButton(self._parent)
-            toolbar_box.toolbar.insert(stop, -1)
+            self._stop = StopButton(self._parent)
+            self._toolbar_box.toolbar.insert(self._stop, -1)
 
-            toolbar_box.show_all()
-            self._parent.set_toolbar_box(toolbar_box)
+            self._toolbar_box.show_all()
+            self._parent.set_toolbar_box(self._toolbar_box)
 
         except NameError:
             # Use old toolbar design
@@ -278,6 +279,17 @@ class CalcLayout:
         vbox.pack_start(self.variable_vbox)
         scrolled_window.add_with_viewport(vbox)
         self.grid.attach(scrolled_window, 7, 11, 7, 26)
+
+        gtk.gdk.screen_get_default().connect('size-changed',
+                                             self._configure_cb)
+
+    def _configure_cb(self, event):
+        # Maybe redo layout 
+        self._toolbar_box.toolbar.remove(self._stop)
+        self._toolbar_box.toolbar.remove(self._separator)
+        self._misc_toolbar.update_layout()
+        self._toolbar_box.toolbar.insert(self._separator, -1)
+        self._toolbar_box.toolbar.insert(self._stop, -1)
 
     def show_it(self):
         """Show the dialog."""
