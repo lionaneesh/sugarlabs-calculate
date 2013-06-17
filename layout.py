@@ -123,17 +123,20 @@ class CalcLayout:
                    BooleanToolbar(self._parent),
                    -1)
 
+            self._misc_toolbar = MiscToolbar(
+                self._parent,
+                target_toolbar=self._toolbar_box.toolbar)
+
             append('toolbar-constants',
                    _('Miscellaneous'),
-                   MiscToolbar(self._parent,
-                               target_toolbar=self._toolbar_box.toolbar),
+                   self._misc_toolbar,
                    5)
             
-            self._separator = gtk.SeparatorToolItem()
-            self._separator.props.draw = False
-            self._separator.set_expand(True)
-            self._separator.show()
-            self._toolbar_box.toolbar.insert(self._separator, -1)
+            self._stop_separator = gtk.SeparatorToolItem()
+            self._stop_separator.props.draw = False
+            self._stop_separator.set_expand(True)
+            self._stop_separator.show()
+            self._toolbar_box.toolbar.insert(self._stop_separator, -1)
 
             self._stop = StopButton(self._parent)
             self._toolbar_box.toolbar.insert(self._stop, -1)
@@ -286,9 +289,9 @@ class CalcLayout:
     def _configure_cb(self, event):
         # Maybe redo layout 
         self._toolbar_box.toolbar.remove(self._stop)
-        self._toolbar_box.toolbar.remove(self._separator)
+        self._toolbar_box.toolbar.remove(self._stop_separator)
         self._misc_toolbar.update_layout()
-        self._toolbar_box.toolbar.insert(self._separator, -1)
+        self._toolbar_box.toolbar.insert(self._stop_separator, -1)
         self._toolbar_box.toolbar.insert(self._stop, -1)
 
     def show_it(self):
