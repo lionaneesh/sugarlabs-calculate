@@ -313,7 +313,7 @@ exponent exp() equals x. Defined for x >= 0.')
 
 def log10(x):
     if float(x) > 0:
-        return math.log(float(x))
+        return math.log10(float(x))
     else:
         raise ValueError(_('Logarithm(x) only defined for x > 0'))
 log10.__doc__ = _(
