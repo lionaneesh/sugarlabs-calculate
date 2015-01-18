@@ -107,6 +107,17 @@ class RuntimeError(ParserError):
             msg += ": %s" % (self._msg)
         return msg
 
+class ArgumentError(ParserError):
+
+    """Class for error if incorrect arguments are entered."""
+
+    def __init__(self, msg, end=None):
+        ParserError.__init__(self, msg, 0, end)
+
+    def __str__(self):
+        return self._msg
+
+
 class Helper:
 
     def __init__(self, parent):
@@ -462,7 +473,7 @@ class AstParser:
                 return ret
             except Exception, e:
                 msg = str(e)
-                raise RuntimeError(msg, ofs)
+                raise ArgumentError(msg)
 
         elif isinstance(node, ast.Num):
             if type(node.n) == types.FloatType:
