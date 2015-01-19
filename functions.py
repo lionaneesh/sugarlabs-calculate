@@ -49,7 +49,6 @@ _FUNCTIONS = [
     _('gcd'),
     _('exp'),
     _('factorial'),
-    _('fac'),
     _('factorize'),
     _('floor'),
     _('inv'),
@@ -251,11 +250,6 @@ def factorial(n):
 factorial.__doc__ = _(
 'factorial(n), return the factorial of n. \
 Given by n * (n - 1) * (n - 2) * ...')
-
-def fac(x):
-    return factorial(x)
-fac.__doc__ = _(
-'fac(x), return the factorial of x. Given by x * (x - 1) * (x - 2) * ...')
 
 def factorize(x):
     if not is_int(x):
