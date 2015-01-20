@@ -165,15 +165,14 @@ which the hyperbolic tangent equals x.')
 
 def b10bin(x):
     ret = 0
+    value = 1
+
     while x > 0:
-        ret <<= 1
-
         y = x % 10
-        if y == 1:
-            ret += 1
-        elif y != 0:
-            raise ValueError(_('Number does not look binary in base 10'))
-
+        if y > 1:
+            raise ValueError(_('Number does not look binary.'))
+        ret += y * value
+        value = value * 2
         x /= 10
 
     return ret
