@@ -132,19 +132,32 @@ class Equation:
 
     def append_with_superscript_tags(self, buf, text, *tags):
         '''Add a text to a gtk.TextBuffer with superscript tags.'''
-
         fontsize = self.determine_font_size(*tags)
         _logger.debug('font-size: %d', fontsize)
-        tagsuper = buf.create_tag(rise=fontsize/2)
+        tagsuper = buf.create_tag(rise=fontsize / 2)
 
         ENDSET = list(AstParser.DIADIC_OPS)
         ENDSET.extend((',', '(', ')'))
-
+        ASET = list(AstParser.DIADIC_OPS)
         ofs = 0
+        level = 0
         while ofs <= len(text) and text.find('**', ofs) != -1:
             nextofs = text.find('**', ofs)
             buf.insert_with_tags(buf.get_end_iter(), text[ofs:nextofs], *tags)
             nextofs2 = findchar(text, ENDSET, nextofs + 2)
+            for i in range(nextofs2, len(text)):
+                if text[i] == '(' or text[i] == '+' or text[i] == '-' or text[i] == ')':
+                    if text[i] == '(':
+                        level = level + 1
+                    elif text[i] == ')':
+                        nextofs2 = i + 1
+                        level = level - 1
+                        if level == 0:
+                            break
+                    elif text[i] == '+' or text[i] == '-':
+                        if level == 0:
+                            nextofs2 = findchar(text, ASET, i + 1)
+                            break 
             _logger.debug('nextofs2: %d, char=%c', nextofs2, text[nextofs2])
             if nextofs2 == -1:
                 nextofs2 = len(text)
