@@ -53,6 +53,7 @@ _FUNCTIONS = [
     _('floor'),
     _('inv'),
     _('is_int'),
+    _('is_prime'),
     _('ln'),
     _('log10'),
     _('mul'),
@@ -304,6 +305,30 @@ def is_int(n):
     (sign, d, e) = n.normalize().as_tuple()
     return e >= 0
 is_int.__doc__ = ('is_int(n), determine whether n is an integer.')
+
+
+def _primality_test(n):
+    if n == 1:
+	return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    for i in range(5, int(n ** 0.5) + 1, 6):
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+    return True
+
+
+def is_prime(x):
+    if not is_int(x):
+        raise ValueError(_('Argument must be int'))
+    if x <= 0:
+        raise ValueError(_('Prime numbers are defined for natural numbers'))
+    return _primality_test(x)
+is_prime.__doc__ = ('is_prime(x), Check if a number is a prime. \
+                   For examples: is_prime(2).')
+
 
 def ln(x):
     if float(x) > 0:
