@@ -146,24 +146,37 @@ class Equation:
         ENDSET.extend((',', '(', ')'))
         ASET = list(AstParser.DIADIC_OPS)
         ofs = 0
+        bracket_level = 0
         level = 0
         while ofs <= len(text) and text.find('**', ofs) != -1:
             nextofs = text.find('**', ofs)
             buf.insert_with_tags(buf.get_end_iter(), text[ofs:nextofs], *tags)
             nextofs2 = findchar(text, ENDSET, nextofs + 2)
-            for i in range(nextofs2, len(text)):
+            for i in range(nextofs, len(text)):
                 if text[i] == '(' or text[i] == '+' or text[i] == '-' or text[i] == ')':
                     if text[i] == '(':
-                        level = level + 1
+                        bracket_level = bracket_level + 1
                     elif text[i] == ')':
                         nextofs2 = i + 1
-                        level = level - 1
-                        if level == 0:
+                        bracket_level = bracket_level - 1
+                        if bracket_level == 0:
                             break
-                    elif text[i] == '+' or text[i] == '-':
-                        if level == 0:
+                    elif text[i] == '+':
+                        if level == 0 and bracket_level == 0:
+                            nextofs2 = findchar(text, ASET, i)
+                            break
+                        if bracket_level == 0:
                             nextofs2 = findchar(text, ASET, i + 1)
                             break
+                    elif text[i] == '-':
+		        if bracket_level == 0:
+                            if i == nextofs + 2:
+                                nextofs2 = findchar(text, ASET, i + 1)
+                                break
+                            else:
+                                nextofs2 = findchar(text, ASET, i)
+                                break
+
             _logger.debug('nextofs2: %d, char=%c', nextofs2, text[nextofs2])
             if nextofs2 == -1:
                 nextofs2 = len(text)
