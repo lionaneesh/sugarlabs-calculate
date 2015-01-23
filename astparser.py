@@ -38,10 +38,12 @@ from mathlib import MathLib
 from plotlib import Plot
 
 PLOTHELP = _(
-"plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
+    "plot(eqn, var=-a..b), plot the equation 'eqn' with the variable 'var' in the \
 range from a to b")
 
+
 class ParserError(Exception):
+
     """Parent class for exceptions raised by the parser."""
 
     def __init__(self, msg, start, eqn, end=None):
@@ -63,7 +65,9 @@ class ParserError(Exception):
             msg += ": %s" % (self._msg)
         return msg
 
+
 class ParseError(ParserError):
+
     """Class for error during parsing."""
 
     def __init__(self, msg, start, eqn, end=None):
@@ -71,18 +75,20 @@ class ParseError(ParserError):
 
     def __str__(self):
         msg = _("Error at '%s', position: %d") % \
-              (self.eqn[self._range[0] - 1 : self._range[1] - 1],
-               self._range[0])
+            (self.eqn[self._range[0] - 1: self._range[1] - 1],
+             self._range[0])
         if self._msg is not None and len(self._msg) > 0:
             msg += ": %s" % (self._msg)
         return msg
 
+
 class WrongSyntaxError(ParserError):
+
     """Class for reporting syntax errors."""
 
     def __init__(self, module=None, helper=None, start=0, end=0):
-        ParserError.__init__(self,_("Syntax Error."), start, end)
-        if module != None and helper != None:
+        ParserError.__init__(self, _("Syntax Error."), start, end)
+        if module is None and helper is not None:
             self.help_text = helper.get_help(module)
         else:
             self.help_text = None
@@ -93,7 +99,9 @@ class WrongSyntaxError(ParserError):
             msg += "\n" + self.help_text
         return msg
 
+
 class RuntimeError(ParserError):
+
     """Class for error during executing."""
 
     def __init__(self, msg, start, eqn, end=None):
@@ -101,11 +109,12 @@ class RuntimeError(ParserError):
 
     def __str__(self):
         msg = _("Error at '%s', position: %d") % \
-              (self.eqn[self._range[0] - 1 : self._range[1] - 1],
-               self._range[0])
+            (self.eqn[self._range[0] - 1: self._range[1] - 1],
+             self._range[0])
         if self._msg is not None and len(self._msg) > 0:
             msg += ": %s" % (self._msg)
         return msg
+
 
 class ArgumentError(ParserError):
 
@@ -124,7 +133,7 @@ class Helper:
         self._parent = parent
         self._topics = {}
         self.add_help('test',
-            _('This is just a test topic, use help(index) for the index'))
+                      _('This is just a test topic, use help(index) for the index'))
 
     def add_help(self, topic, text):
         self._topics[unicode(topic)] = _(text)
@@ -167,7 +176,9 @@ class Helper:
 
         return _("No help about '%s' available, use help(index) for the index") % (topic)
 
+
 class EvalState:
+
     '''
     Evaluation state.
 
@@ -181,7 +192,9 @@ class EvalState:
         self.branch_vars = []
         self.used_var_ofs = {}
 
+
 class AstParser:
+
     '''
     Equation parser based on python's ast (abstract syntax tree) module.
     In 2.5 this is a private module, but in 2.6 it is public.
@@ -195,7 +208,7 @@ class AstParser:
     }
 
     DIADIC_OPS = (
-        '+', '-', '*', u'⨯', u'×', u'÷' , '/', '^', '**',
+        '+', '-', '*', u'⨯', u'×', u'÷', '/', '^', '**',
         '&', '|', '=', '!=', '<', '>', '<<', '>>', '%',
     )
 
@@ -288,15 +301,15 @@ class AstParser:
 
         # Redirect operations to registered functions
         for key, val in self.UNARYOP_MAP.iteritems():
-            if type(val) is types.StringType:
+            if isinstance(val, str):
                 self.UNARYOP_MAP[key] = self.get_var(val)
         for key, val in self.BINOP_MAP.iteritems():
-            if type(val) is types.StringType:
+            if isinstance(val, str):
                 self.BINOP_MAP[key] = self.get_var(val)
 
     def _load_plugin_items(self, items):
         for name, item in items:
-            if name.startswith('_') or type(item) is types.ModuleType:
+            if name.startswith('_') or isinstance(item, types.ModuleType):
                 continue
 
             self.set_var(name, item)
@@ -347,12 +360,13 @@ class AstParser:
     def _get_names(self, start='', include_vars=True):
         ret = []
         for key, val in self._namespace.iteritems():
-            if type(val) is types.ClassType:
+            if isinstance(val, types.ClassType):
                 for key2, val2 in inspect.getmembers(val):
                     if key2.startswith('_'):
                         continue
 
-                    b = type(val2) not in (types.FunctionType, types.MethodType)
+                    b = type(val2) not in (
+                        types.FunctionType, types.MethodType)
                     if not include_vars:
                         b = not b
                     if b and key2.startswith(start):
@@ -457,7 +471,7 @@ class AstParser:
             if func is None:
                 return None
 
-            args = [self._resolve_arg(func, i, node.args[i], state) \
+            args = [self._resolve_arg(func, i, node.args[i], state)
                     for i in range(len(node.args))]
 
             kwargs = {}
@@ -476,7 +490,7 @@ class AstParser:
                 raise ArgumentError(msg)
 
         elif isinstance(node, ast.Num):
-            if type(node.n) == types.FloatType:
+            if isinstance(node.n, float):
                 val = decimal.Decimal(str(node.n))
                 return val
             return node.n
@@ -556,7 +570,7 @@ class AstParser:
         if hasattr(node, '_fields') and node._fields is not None:
             for field in node._fields:
                 fieldval = getattr(node, field)
-                self.walk_replace_node(fieldval, func, level=level+1)
+                self.walk_replace_node(fieldval, func, level=level + 1)
                 ret = func(fieldval, level=level)
                 if ret is not None:
                     setattr(node, field, ret)
@@ -627,7 +641,7 @@ class AstParser:
             tree = compile(eqn, '<string>', 'exec', ast.PyCF_ONLY_AST)
         except SyntaxError, e:
             # if we don't have an offset, its a SyntaxError
-            if e.offset == None:
+            if e.offset is None:
                 if eqn.startswith('plot'):
                     raise WrongSyntaxError('plot', self._helper, len(eqn),
                                            len(eqn) + len("Syntax Error!"))
@@ -668,7 +682,7 @@ class AstParser:
 
         self._used_var_ofs = state.used_var_ofs
 
-        if type(ret) is types.FunctionType:
+        if isinstance(ret, types.FunctionType):
             return ret()
         else:
             return ret
@@ -725,7 +739,7 @@ if __name__ == '__main__':
         '2<=physics.c',
         'help(functions)',
         'factorize(105)',
-#        'plot(x**2,x=-2..2*(pi+1))',
+        #        'plot(x**2,x=-2..2*(pi+1))',
         '(2 != 3) == False',
         '2343.04*.85',
         '1.23e25*.85',

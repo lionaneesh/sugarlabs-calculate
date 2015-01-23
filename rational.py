@@ -25,6 +25,7 @@ _logger = logging.getLogger('Rational')
 
 from gettext import gettext as _
 
+
 class Rational:
 
     def __init__(self, n=None, d=None):
@@ -38,10 +39,10 @@ class Rational:
         if d is not None:
             self.n = long(n)
             self.d = long(d)
-        elif type(n) is types.TupleType or type(n) is types.ListType:
+        elif isinstance(n, types.TupleType) or isinstance(n, types.ListType):
             self.n = long(rval[0])
             self.d = long(rval[1])
-        elif type(n) == types.StringType:
+        elif isinstance(n, types.StringType):
             return
 
         self._simplify()
@@ -51,7 +52,7 @@ class Rational:
             return "%d" % (self.n)
         else:
             return "%d/%d" % (self.n, self.d)
-           
+
     def __float__(self):
         return float(self.n) / float(self.d)
 
@@ -76,7 +77,7 @@ class Rational:
     def __add__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d + self.d * rval.n, self.d * rval.d)
-        elif type(rval) is types.IntType or type(rval) is types.LongType:
+        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
             ret = Rational(self.n + self.d * rval, self.d)
         else:
             ret = float(self) + rval
@@ -88,7 +89,7 @@ class Rational:
     def __sub__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d - self.d * rval.n, self.d * rval.d)
-        elif type(rval) is types.IntType or type(rval) is types.LongType:
+        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
             ret = Rational(self.n - self.d * rval, self.d)
         else:
             ret = float(self) - rval
@@ -100,7 +101,7 @@ class Rational:
     def __mul__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.n, self.d * rval.d)
-        elif type(rval) is types.IntType or type(rval) is types.LongType:
+        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
             ret = Rational(self.n * rval, self.d)
         elif isinstance(rval, Decimal):
             ret = rval * Decimal(str(float(self)))
@@ -114,7 +115,7 @@ class Rational:
     def __div__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d, self.d * rval.n)
-        elif type(rval) is types.IntType or type(rval) is types.LongType:
+        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
             ret = Rational(self.n, self.d * rval)
         else:
             ret = float(self) / rval
@@ -131,7 +132,7 @@ class Rational:
         self.d = abs(self.d)
 
     def __pow__(self, rval):
-        if type(rval) is types.IntType or type(rval) is types.LongType:
+        if isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
             ret = Rational(self.n ** rval, self.d ** rval)
         else:
             ret = float(self.n) ** rval / float(self.d) ** rval

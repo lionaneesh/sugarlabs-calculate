@@ -23,6 +23,7 @@ _logger = logging.getLogger('SVGImage')
 import gtk
 import rsvg
 
+
 class SVGImage:
 
     def __init__(self, fn=None, data=None):
@@ -44,7 +45,7 @@ class SVGImage:
         self._image.set_from_pixbuf(self._pixbuf)
         self._image.set_alignment(0.5, 0)
         return self._image
-        
+
     def load(self, fn):
         f = open(fn, 'rb')
         self._svg_data = f.read()

@@ -21,8 +21,10 @@ import math as _math
 pi = _math.pi        # 3.1415926535
 e = _math.exp(1)     # 2.7182818284590451
 
+
 class math:
     golden_ratio = 1.61803398874989484820458683436563811
+
 
 class physics:
     c = 299792458               # Speed of light (in vacuum)
@@ -39,4 +41,3 @@ class physics:
     m_e = 9.109382616e-31       # Electron mass
     m_p = 1.6726217129e-27      # Proton mass
     m_n = 1.6749272928e-27      # Neutron mass
-

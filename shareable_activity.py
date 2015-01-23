@@ -12,6 +12,7 @@ _logger = logging.getLogger('ShareableActivity')
 
 IFACE = 'org.laptop.ShareableActivity'
 
+
 class ShareableObject(dbus.service.Object):
 
     def __init__(self, tube, path):
@@ -25,7 +26,9 @@ class ShareableObject(dbus.service.Object):
     def SendMessageTo(self, busname, msg, kwargs):
         pass
 
+
 class ShareableActivity(activity.Activity):
+
     '''
     A shareable activity.
 
@@ -55,11 +58,11 @@ class ShareableActivity(activity.Activity):
         self._owner_id = str(self._owner.props.nick)
 
         self._service_path = kwargs.get('service_path',
-            self._generate_service_path())
+                                        self._generate_service_path())
         self._dbus_object = None
 
-        _logger.debug('Setting service name %s, service path %s', \
-            IFACE, self._service_path)
+        _logger.debug('Setting service name %s, service path %s',
+                      IFACE, self._service_path)
 
         self._connect_to_ps()
 
@@ -134,7 +137,7 @@ class ShareableActivity(activity.Activity):
         self._request_sync = True
         self._setup_shared_activity()
 
-        self._tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes( \
+        self._tubes_chan[telepathy.CHANNEL_TYPE_TUBES].ListTubes(
             reply_handler=self._list_tubes_reply_cb,
             error_handler=self._list_tubes_error_cb)
 
@@ -149,8 +152,8 @@ class ShareableActivity(activity.Activity):
 
     def _new_tube_cb(self, id, initiator, type, service, params, state):
         _logger.debug('New tube: ID=%d initator=%d type=%d service=%s '
-                     'params=%r state=%d', id, initiator, type, service,
-                     params, state)
+                      'params=%r state=%d', id, initiator, type, service,
+                      params, state)
 
         if (type == telepathy.TUBE_TYPE_DBUS and service == IFACE):
             if state == telepathy.TUBE_STATE_LOCAL_PENDING:
@@ -158,15 +161,16 @@ class ShareableActivity(activity.Activity):
                     telepathy.CHANNEL_TYPE_TUBES].AcceptDBusTube(id)
 
             self._tube_conn = SugarTubeConnection(self._connection,
-                self._tubes_chan[telepathy.CHANNEL_TYPE_TUBES],
-                id, group_iface=self._text_chan[
-                    telepathy.CHANNEL_INTERFACE_GROUP])
+                                                  self._tubes_chan[
+                                                      telepathy.CHANNEL_TYPE_TUBES],
+                                                  id, group_iface=self._text_chan[
+                                                      telepathy.CHANNEL_INTERFACE_GROUP])
 
             self._tube_conn.add_signal_receiver(self._send_message_cb,
-                'SendMessage', sender_keyword='sender')
+                                                'SendMessage', sender_keyword='sender')
 
-            self._dbus_object = ShareableObject(self._tube_conn, \
-                    self._service_path)
+            self._dbus_object = ShareableObject(self._tube_conn,
+                                                self._service_path)
 
     def buddy_joined(self, activity, buddy):
         '''
@@ -204,8 +208,8 @@ class ShareableActivity(activity.Activity):
             _logger.debug('Sending message: %s(%r)', msg, kwargs)
             self._dbus_object.SendMessage(msg, kwargs)
         else:
-            _logger.debug('Not shared, not sending message %s(%r)', \
-                    msg, kwargs)
+            _logger.debug('Not shared, not sending message %s(%r)',
+                          msg, kwargs)
 
     def send_message_to(self, buddy, msg, **kwargs):
         '''
@@ -213,11 +217,11 @@ class ShareableActivity(activity.Activity):
         '''
         if self._dbus_object is not None:
             _logger.debug('Sending message to %s: %s(%r)', buddy, msg, kwargs)
-            #FIXME: convert to busname
+            # FIXME: convert to busname
             self._dbus_object.SendMessageTo(buddy, msg, kwargs)
         else:
-            _logger.debug('Not shared, not sending message %s(%r) to %s', \
-                msg, kwargs, buddy)
+            _logger.debug('Not shared, not sending message %s(%r) to %s',
+                          msg, kwargs, buddy)
 
     def _dispatch_message(self, msg, kwargs):
         passkwargs = {}
@@ -232,8 +236,9 @@ class ShareableActivity(activity.Activity):
 
     def _send_message_cb(self, msg, kwargs, sender=None):
         '''Callback to filter message signals.'''
-        _logger.debug('Sender: %s, owner: %s, owner_id: %s, busname: %s', sender, \
-                self.get_owner(), self.get_owner_id(), self.get_bus_name())
+        _logger.debug(
+            'Sender: %s, owner: %s, owner_id: %s, busname: %s', sender,
+            self.get_owner(), self.get_owner_id(), self.get_bus_name())
         if sender == self.get_bus_name():
             return
         kwargs['sender'] = sender
@@ -262,4 +267,3 @@ class ShareableActivity(activity.Activity):
             return False
 
         self._syncreq_buddy += 1
-

@@ -25,10 +25,13 @@ _logger = logging.getLogger('PlotLib')
 
 USE_MPL = True
 
+
 def format_float(x):
     return ('%.2f' % x).rstrip('0').rstrip('.')
 
+
 class _PlotBase:
+
     """Class to generate an svg plot for a function.
     Evaluation of values is done using the EqnParser class."""
 
@@ -105,10 +108,11 @@ class _PlotBase:
         self.set_svg(svg)
 
 #        self.export_plot("/tmp/calculate_graph.svg")
-        if type(svg) is types.UnicodeType:
+        if isinstance(svg, unicode):
             return svg.encode('utf-8')
         else:
             return svg
+
 
 class CustomPlot(_PlotBase):
 
@@ -124,7 +128,8 @@ class CustomPlot(_PlotBase):
     def create_image(self):
         self.svg_data = '<?xml version="1.0" standalone="no"?>\n'
         self.svg_data += '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n'
-        self.svg_data += '<svg width="%d" height="%d" version="1.1" xmlns="http://www.w3.org/2000/svg">\n' % (self.width, self.height)
+        self.svg_data += '<svg width="%d" height="%d" version="1.1" xmlns="http://www.w3.org/2000/svg">\n' % (
+            self.width, self.height)
 
     def finish_image(self):
         self.svg_data += '</svg>'
@@ -132,17 +137,19 @@ class CustomPlot(_PlotBase):
     def plot_line(self, c0, c1, col):
         c0 = self.rcoords_to_coords(c0)
         c1 = self.rcoords_to_coords(c1)
-        self.svg_data += '<line style="stroke:%s;stroke-width:1" x1="%f" y1="%f" x2="%f" y2="%f" />\n' % (col, c0[0], c0[1], c1[0], c1[1])
+        self.svg_data += '<line style="stroke:%s;stroke-width:1" x1="%f" y1="%f" x2="%f" y2="%f" />\n' % (
+            col, c0[0], c0[1], c1[0], c1[1])
 
     def plot_polyline(self, coords, col):
-        self.svg_data += '<polyline style="fill:none;stroke:%s;stroke-width:1" points="' % (col)
+        self.svg_data += '<polyline style="fill:none;stroke:%s;stroke-width:1" points="' % (
+            col)
         for c in coords:
             c = self.rcoords_to_coords(c)
             self.svg_data += '%f,%f ' % (c[0], c[1])
         self.svg_data += '" />\n'
 
     def add_text(self, c, text, rotate=0):
-        if type(text) is types.UnicodeType:
+        if isinstance(text, unicode):
             text = text.encode('utf-8')
         c = self.rcoords_to_coords(c)
 
@@ -204,7 +211,7 @@ class CustomPlot(_PlotBase):
     def draw_axes(self, labelx, labely, val):
         """Draw axes on the plot."""
         F = 0.8
-        NOL = 4 # maximum no of labels
+        NOL = 4  # maximum no of labels
 
         y_coords = sorted([i[1] for i in val])
         x_coords = sorted([i[0] for i in val])
@@ -216,33 +223,33 @@ class CustomPlot(_PlotBase):
         min_x = min(x_coords)
 
         # X axis
-        interval = len(val)/(NOL - 1)
+        interval = len(val) / (NOL - 1)
         self.plot_line((0.11, 0.89), (0.92, 0.89), "black")
         if max_x != min_x:
             self.add_text((0.11 + min_x + F * 0, 0.93), format_float(min_x))
             plot_index = interval
             while plot_index <= len(val) - interval:
-                self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) / \
+                self.add_text((0.11 + F * abs(x_coords[plot_index] - min_x) /
                                abs(max_x - min_x), 0.93),
                               format_float(x_coords[plot_index]))
                 plot_index += interval
             self.add_text((0.11 + F * 1, 0.93), format_float(max_x))
         else:
-            self.add_text((0.5 , 0.93), format_float(min_x))
+            self.add_text((0.5, 0.93), format_float(min_x))
 
         self.add_text((0.50, 0.98), labelx)
 
         # Y axis
-        interval = float(max_y - min_y)/(NOL - 1)
+        interval = float(max_y - min_y) / (NOL - 1)
         self.plot_line((0.11, 0.08), (0.11, 0.89), "black")
         # if its a constant function we only need to plot one label
         if min_y == max_y:
-            self.add_text((-0.50, 0.10), format_float(min_y), rotate=-90)        
+            self.add_text((-0.50, 0.10), format_float(min_y), rotate=-90)
         else:
-            self.add_text((-0.90, 0.10), format_float(min_y), rotate=-90)        
+            self.add_text((-0.90, 0.10), format_float(min_y), rotate=-90)
             plot_value = min_y + interval
             while plot_value <= max_y - interval:
-                self.add_text((-(0.91 - F * abs(plot_value - min_y) / \
+                self.add_text((-(0.91 - F * abs(plot_value - min_y) /
                                abs(max_y - min_y)), 0.10),
                               format_float(plot_value), rotate=-90)
                 plot_value += interval
@@ -256,13 +263,15 @@ class CustomPlot(_PlotBase):
         self.set_size(250, 250)
         self.create_image()
 
-        self.draw_axes(kwargs.get('xlabel', ''), kwargs.get('ylabel', ''), vals)
+        self.draw_axes(
+            kwargs.get('xlabel', ''), kwargs.get('ylabel', ''), vals)
 
         self.add_curve(vals)
 
         self.finish_image()
 
         return self.svg_data
+
 
 class MPLPlot(_PlotBase):
 

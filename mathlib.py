@@ -33,6 +33,8 @@ import locale
 
 # Python 2.5 does not have a binary formatter built-in
 # This requires a function b10bin() to interpret the result
+
+
 def format_bin(n):
     bits = ''
     while n > 0:
@@ -49,8 +51,9 @@ try:
 except:
     _BIN = format_bin
 
+
 class MathLib:
-    ANGLE_DEG = math.pi/180
+    ANGLE_DEG = math.pi / 180
     ANGLE_RAD = 1
     ANGLE_GRAD = 1
 
@@ -70,12 +73,12 @@ class MathLib:
 
         # The separator to mark thousands (default: ',')
         self.thousand_sep = loc['thousands_sep']
-        if self.thousand_sep == "" or self.thousand_sep == None:
+        if self.thousand_sep == "" or self.thousand_sep is None:
             self.thousand_sep = ","
 
         # The separator to mark fractions (default: '.')
         self.fraction_sep = loc['decimal_point']
-        if self.fraction_sep == "" or self.fraction_sep == None:
+        if self.fraction_sep == "" or self.fraction_sep is None:
             self.fraction_sep = "."
 
         # TRANS: multiplication symbol (default: '×')
@@ -117,10 +120,10 @@ class MathLib:
             return val
         elif type(val) in (types.IntType, types.LongType):
             return Decimal(val)
-        elif type(val) == types.StringType:
+        elif isinstance(val, str):
             d = Decimal(val)
             return d.normalize()
-        elif type(val) is types.FloatType or hasattr(val, '__float__'):
+        elif isinstance(val, float) or hasattr(val, '__float__'):
             s = '%.18e' % float(val)
             d = Decimal(s)
             return d.normalize()
@@ -144,6 +147,7 @@ class MathLib:
         8: oct,
         16: hex,
     }
+
     def format_int(self, n, base=None):
         if base is None:
             base = self.integer_base
@@ -169,7 +173,7 @@ class MathLib:
 
         if int_len == 0:
             if exp < -self.digit_limit:
-                disp_exp = exp + len(digits) 
+                disp_exp = exp + len(digits)
             else:
                 disp_exp = 0
         elif -self.digit_limit < int_len < self.digit_limit:
@@ -179,7 +183,8 @@ class MathLib:
 
         dot_pos = int_len - disp_exp
 
-#        _logger.debug('len(digits) %d, exp: %d, int_len: %d, disp_exp: %d, dot_pos: %d', len(digits), exp, int_len, disp_exp, dot_pos)
+# _logger.debug('len(digits) %d, exp: %d, int_len: %d, disp_exp: %d,
+# dot_pos: %d', len(digits), exp, int_len, disp_exp, dot_pos)
 
         if dot_pos < 0:
             res = '0' + self.fraction_sep
@@ -207,22 +212,22 @@ class MathLib:
         return res
 
     def format_number(self, n):
-        if type(n) is types.BooleanType:
+        if isinstance(n, bool):
             if n:
                 return 'True'
             else:
                 return 'False'
-        elif type(n) is types.StringType:
+        elif isinstance(n, str):
             return n
-        elif type(n) is types.UnicodeType:
+        elif isinstance(n, unicode):
             return n
-        elif type(n) is types.NoneType:
+        elif isinstance(n, str):
             return _('Undefined')
-        elif type(n) is types.IntType:
+        elif isinstance(n, int):
             n = self.d(n)
-        elif type(n) is types.FloatType:
+        elif isinstance(n, float):
             n = self.d(n)
-        elif type(n) is types.LongType:
+        elif isinstance(n, long):
             n = self.d(n)
         elif isinstance(n, Rational):
             n = self.d(Decimal(n.n) / Decimal(n.d))
@@ -241,7 +246,7 @@ class MathLib:
         return ret
 
     def is_int(self, n):
-        if type(n) is types.IntType or type(n) is types.LongType:
+        if isinstance(n, int) or isinstance(n, long):
             return True
 
         if not isinstance(n, Decimal):
@@ -259,7 +264,7 @@ if __name__ == "__main__":
     # Beyond float precision
     val = 0.999999999999999999
     print 'is_int(%.18e): %s' % (val, ml.is_int(val))
-    val = ml.d(0.99999999999999878)**2
+    val = ml.d(0.99999999999999878) ** 2
     print 'is_int(%s): %s' % (val, ml.is_int(val))
     vals = ('0.1230', '12.340', '0.0123', '1230', '123.0', '1.230e17')
     for valstr in vals:
@@ -267,4 +272,3 @@ if __name__ == "__main__":
         print 'Formatted value: %s (from %s)' % (ml.format_number(val), valstr)
     for base in (2, 8, 16):
         print 'Format 252 in base %d: %s' % (base, ml.format_int(252, base))
-

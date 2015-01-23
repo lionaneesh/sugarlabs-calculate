@@ -8,7 +8,7 @@
 # the Free Software Foundation; either version 2 of the License, or
 # (at your option) any later version.
 #
-# This program is distributed in the hope that it will be useful, 
+# This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
@@ -48,6 +48,7 @@ from svgimage import SVGImage
 from decimal import Decimal
 from rational import Rational
 
+
 def findchar(text, chars, ofs=0):
     '''
     Find a character in set <chars> starting from offset ofs.
@@ -65,15 +66,18 @@ def findchar(text, chars, ofs=0):
 
     return -1
 
+
 def _textview_realize_cb(widget):
     '''Change textview properties once window is created.'''
     win = widget.get_window(gtk.TEXT_WINDOW_TEXT)
     win.set_cursor(gtk.gdk.Cursor(gtk.gdk.HAND1))
     return False
 
+
 class Equation:
-    def __init__(self, label=None, eqn=None, res=None, col=None, owner=None, \
-            eqnstr=None, ml=None):
+
+    def __init__(self, label=None, eqn=None, res=None, col=None, owner=None,
+                 eqnstr=None, ml=None):
 
         if eqnstr is not None:
             self.parse(eqnstr)
@@ -95,10 +99,12 @@ class Equation:
         if isinstance(self.result, SVGImage):
             svg_data = "<svg>" + base64.b64encode(self.result.get_svg_data())
             return "%s;%s;%s;%s;%s\n" % \
-                (self.label, self.equation, svg_data, self.color.to_string(), self.owner)
+                (self.label, self.equation, svg_data,
+                 self.color.to_string(), self.owner)
         else:
             return "%s;%s;%s;%s;%s\n" % \
-                (self.label, self.equation, self.result, self.color.to_string(), self.owner)
+                (self.label, self.equation, self.result,
+                 self.color.to_string(), self.owner)
 
     def parse(self, str):
         """Parse equation object string representation."""
@@ -157,12 +163,13 @@ class Equation:
                     elif text[i] == '+' or text[i] == '-':
                         if level == 0:
                             nextofs2 = findchar(text, ASET, i + 1)
-                            break 
+                            break
             _logger.debug('nextofs2: %d, char=%c', nextofs2, text[nextofs2])
             if nextofs2 == -1:
                 nextofs2 = len(text)
-            buf.insert_with_tags(buf.get_end_iter(), text[nextofs+2:nextofs2],
-                    tagsuper, *tags)
+            buf.insert_with_tags(
+                buf.get_end_iter(), text[nextofs + 2:nextofs2],
+                tagsuper, *tags)
             ofs = nextofs2
 
         if ofs < len(text):
@@ -197,7 +204,7 @@ class Equation:
         if type(self.result) in (types.StringType, types.UnicodeType):
             resstr = str(self.result)
             buf.insert_with_tags(buf.get_end_iter(), resstr,
-                    tagsmallnarrow, tagjustright)
+                                 tagsmallnarrow, tagjustright)
         elif is_error:
             resstr = str(self.result)
             buf.insert_with_tags(buf.get_end_iter(), resstr, tagsmallnarrow)
@@ -208,7 +215,7 @@ class Equation:
         elif not isinstance(self.result, SVGImage):
             resstr = self.ml.format_number(self.result)
             self.append_with_superscript_tags(buf, resstr, tagbigger,
-                    tagjustright)
+                                              tagjustright)
 
         return buf
 
@@ -223,8 +230,10 @@ class Equation:
             return self.result.get_image()
 
         w = gtk.TextView()
-        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
-        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+        w.modify_base(
+            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(
+            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
         w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
         w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
@@ -236,7 +245,7 @@ class Equation:
         tagsmall = buf.create_tag(font=CalcLayout.FONT_SMALL)
         tagsmallnarrow = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW)
         tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
-            justification=gtk.JUSTIFY_RIGHT)
+                                justification=gtk.JUSTIFY_RIGHT)
         # TODO Fix for old Sugar 0.82 builds, red_float not available
         bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
                   gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
@@ -265,13 +274,13 @@ class Equation:
 
         return w
 
+
 class Calculate(ShareableActivity):
 
     TYPE_FUNCTION = 1
     TYPE_OP_PRE = 2
     TYPE_OP_POST = 3
     TYPE_TEXT = 4
-    
 
     SELECT_NONE = 0
     SELECT_SELECT = 1
@@ -330,12 +339,13 @@ class Calculate(ShareableActivity):
         ShareableActivity.__init__(self, handle)
 
         self.old_eqs = []
-        
+
         self.ml = MathLib()
         self.parser = AstParser(self.ml)
 
         # These will result in 'Ans <operator character>' being inserted
-        self._chars_ans_diadic = [op[0] for op in self.parser.get_diadic_operators()]
+        self._chars_ans_diadic = [op[0]
+                                  for op in self.parser.get_diadic_operators()]
         try:
             self._chars_ans_diadic.remove('-')
         except:
@@ -403,8 +413,8 @@ class Calculate(ShareableActivity):
 
         if not isinstance(eqn.result, ParserError):
             self.last_eq_sig = self.layout.last_eq.connect(
-                    'button-press-event',
-                    lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
+                'button-press-event',
+                lambda a1, a2, e: self.equation_pressed_cb(e), eqn)
 
         self.layout.last_eq.set_buffer(eqn.create_lasteq_textbuf())
 
@@ -441,12 +451,13 @@ class Calculate(ShareableActivity):
             # Prepending here should be the opposite: prepend -> eqn on top.
             # We always own this equation
             self.layout.add_equation(self.last_eqn_textview, True,
-                prepend=not prepend)
+                                     prepend=not prepend)
             self.last_eqn_textview = None
 
         own = (eq.owner == self.get_owner_id())
         w = eq.create_history_object()
-        w.connect('button-press-event', lambda w, e: self.equation_pressed_cb(eq))
+        w.connect('button-press-event', lambda w,
+                  e: self.equation_pressed_cb(eq))
         if drawlasteq:
             self.set_last_equation(eq)
 
@@ -484,7 +495,7 @@ class Calculate(ShareableActivity):
             res = e
             self.showing_error = True
 
-        if type(res) == types.StringType and res.find('</svg>') > -1:
+        if isinstance(res, str) and res.find('</svg>') > -1:
             res = SVGImage(data=res)
 
         _logger.debug('Result: %r', res)
@@ -493,8 +504,9 @@ class Calculate(ShareableActivity):
         if not isinstance(res, ParserError) and len(label) > 0:
             lastpos = self.parser.get_var_used_ofs(label)
             if lastpos is not None:
-                res = RuntimeError(_('Can not assign label: will cause recursion'),
-                        lastpos)
+                res = RuntimeError(
+                    _('Can not assign label: will cause recursion'),
+                    lastpos)
 
 # If parsing went ok, see if we have to replace the previous answer
 # to get a (more) exact result
@@ -504,11 +516,13 @@ class Calculate(ShareableActivity):
             pos = s.find(ansvar)
             if len(ansvar) > 6 and pos != -1:
                 s2 = s.replace(ansvar, 'LastEqn')
-                _logger.debug('process(): replacing previous answer %r: %r', ansvar, s2)
+                _logger.debug(
+                    'process(): replacing previous answer %r: %r', ansvar, s2)
                 tree = self.parser.parse(s2)
                 res = self.parser.evaluate(tree)
 
-        eqn = Equation(label, s, res, self.color, self.get_owner_id(), ml=self.ml)
+        eqn = Equation(
+            label, s, res, self.color, self.get_owner_id(), ml=self.ml)
 
         if isinstance(res, ParserError):
             self.set_error_equation(eqn)
@@ -536,8 +550,10 @@ class Calculate(ShareableActivity):
         if name in reserved:
             return None
         w = gtk.TextView()
-        w.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
-        w.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+        w.modify_base(
+            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
+        w.modify_bg(
+            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
         w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
         w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
@@ -556,16 +572,16 @@ class Calculate(ShareableActivity):
             col = gtk.gdk.color_parse('black')
 
         tag = buf.create_tag(font=CalcLayout.FONT_SMALL_NARROW,
-                foreground=col)
+                             foreground=col)
         text = '%s:' % (name)
         buf.insert_with_tags(buf.get_end_iter(), text, tag)
         tag = buf.create_tag(font=CalcLayout.FONT_SMALL,
-                foreground=col)
+                             foreground=col)
         text = '%s' % (str(value))
         buf.insert_with_tags(buf.get_end_iter(), text, tag)
 
         return w
-    
+
     def clear(self):
         self.text_entry.set_text(u'')
         self.text_entry.grab_focus()
@@ -575,9 +591,9 @@ class Calculate(ShareableActivity):
         self.clear()
         return True
 
-##########################################
+#
 # Journal functions
-##########################################
+#
 
     def write_file(self, file_path):
         """Write journal entries, Calculate Journal Version (cjv) 1.0"""
@@ -591,7 +607,8 @@ class Calculate(ShareableActivity):
         pos = self.text_entry.get_position()
         if len(sel) == 0:
             sel = (pos, pos)
-            f.write("%s;%d;%d;%d\n" % (self.text_entry.get_text(), pos, sel[0], sel[1]))
+            f.write("%s;%d;%d;%d\n" %
+                    (self.text_entry.get_text(), pos, sel[0], sel[1]))
 
 # In reverse order
         for eq in self.old_eqs:
@@ -633,12 +650,13 @@ class Calculate(ShareableActivity):
 
             return True
         else:
-            _logger.error('Unable to read journal entry, unknown version (%s)', version)
+            _logger.error(
+                'Unable to read journal entry, unknown version (%s)', version)
             return False
 
-##########################################
+#
 # User interaction functions
-##########################################
+#
 
     def remove_character(self, dir):
         pos = self.text_entry.get_position()
@@ -647,15 +665,15 @@ class Calculate(ShareableActivity):
         if len(sel) == 0:
             if pos + dir <= len(self.text_entry.get_text()) and pos + dir >= 0:
                 if dir < 0:
-                    self.text_entry.delete_text(pos+dir, pos)
+                    self.text_entry.delete_text(pos + dir, pos)
                     pos -= 1
                 else:
-                    self.text_entry.delete_text(pos, pos+dir)
+                    self.text_entry.delete_text(pos, pos + dir)
                     pos += 1
         else:
             self.text_entry.delete_text(sel[0], sel[1])
         self.text_entry.grab_focus()
-        self.text_entry.set_position(pos) 
+        self.text_entry.set_position(pos)
 
     def move_left(self):
         pos = self.text_entry.get_position()
@@ -663,7 +681,7 @@ class Calculate(ShareableActivity):
             pos -= 1
             self.text_entry.set_position(pos)
         self.text_entry.grab_focus()
-        self.text_entry.set_position(pos) 
+        self.text_entry.set_position(pos)
 
     def move_right(self):
         pos = self.text_entry.get_position()
@@ -671,7 +689,7 @@ class Calculate(ShareableActivity):
             pos += 1
             self.text_entry.set_position(pos)
         self.text_entry.grab_focus()
-        self.text_entry.set_position(pos) 
+        self.text_entry.set_position(pos)
 
     def label_entered(self):
         if len(self.label_entry.get_text()) > 0:
@@ -736,7 +754,8 @@ class Calculate(ShareableActivity):
             sel = (pos, pos)
         if dir < 0:
             newpos = max(0, sel[0] + dir)
-            self.text_entry.set_position(newpos)   # apparently no such thing as a cursor position during select
+            self.text_entry.set_position(
+                newpos)   # apparently no such thing as a cursor position during select
             self.text_entry.select_region(newpos, sel[1])
         elif dir > 0:
             newpos = min(sel[1] + dir, slen)
@@ -746,7 +765,8 @@ class Calculate(ShareableActivity):
 
     def text_copy(self):
         if self.layout.graph_selected is not None:
-            self.clipboard.set_image(self.layout.graph_selected.child.get_pixbuf())
+            self.clipboard.set_image(
+                self.layout.graph_selected.child.get_pixbuf())
             self.layout.toggle_select_graph(self.layout.graph_selected)
         else:
             str = self.text_entry.get_text()
@@ -780,40 +800,43 @@ class Calculate(ShareableActivity):
                 key = 'divide'
             else:
                 key = 'multiply'
-        _logger.debug('Key: %s (%r, %r)', key, event.keyval, event.hardware_keycode)
+        _logger.debug('Key: %s (%r, %r)', key,
+                      event.keyval, event.hardware_keycode)
 
         if event.state & gtk.gdk.CONTROL_MASK:
-            if self.CTRL_KEYMAP.has_key(key):
+            if key in self.CTRL_KEYMAP:
                 f = self.CTRL_KEYMAP[key]
                 return f(self)
-        elif (event.state & gtk.gdk.SHIFT_MASK) and self.SHIFT_KEYMAP.has_key(key):
+        elif (event.state & gtk.gdk.SHIFT_MASK) and key in self.SHIFT_KEYMAP:
             f = self.SHIFT_KEYMAP[key]
             return f(self)
         elif unicode(key) in self.IDENTIFIER_CHARS:
             self.button_pressed(self.TYPE_TEXT, key)
-        elif self.KEYMAP.has_key(key):
+        elif key in self.KEYMAP:
             f = self.KEYMAP[key]
-            if type(f) is types.StringType or \
-                type(f) is types.UnicodeType:
+            if isinstance(f, str) or \
+                    isinstance(f, unicode):
                 self.button_pressed(self.TYPE_TEXT, f)
             else:
                 return f(self)
 
         return True
-        
+
     def get_older(self):
         self.showing_version = max(0, self.showing_version - 1)
         if self.showing_version == len(self.old_eqs) - 1:
             self.buffer = self.text_entry.get_text()
         if len(self.old_eqs) > 0:
-            self.text_entry.set_text(self.old_eqs[self.showing_version].equation)
-	
+            self.text_entry.set_text(
+                self.old_eqs[self.showing_version].equation)
+
     def get_newer(self):
         self.showing_version = min(len(self.old_eqs), self.showing_version + 1)
         if self.showing_version == len(self.old_eqs):
             self.text_entry.set_text(self.buffer)
         else:
-            self.text_entry.set_text(self.old_eqs[self.showing_version].equation)
+            self.text_entry.set_text(
+                self.old_eqs[self.showing_version].equation)
 
     def add_text(self, input_str):
         self.button_pressed(self.TYPE_TEXT, input_str)
@@ -841,7 +864,8 @@ class Calculate(ShareableActivity):
                 self.text_entry.insert_text(input_str + '()', pos)
                 self.text_entry.set_position(pos + len(input_str) + 1)
             else:
-                self.text_entry.set_text(text[:start] + input_str + '(' + text[start:end] + ')' + text[end:])
+                self.text_entry.set_text(
+                    text[:start] + input_str + '(' + text[start:end] + ')' + text[end:])
                 self.text_entry.set_position(end + len(input_str) + 2)
 
         elif str_type == self.TYPE_OP_PRE:
@@ -874,7 +898,8 @@ class Calculate(ShareableActivity):
                 self.ans_inserted = True
             elif len(sel) is 2:
                 self.text_entry.set_text(text[:start] + input_str + text[end:])
-                self.text_entry.set_position(pos + start - end + len(input_str))
+                self.text_entry.set_position(
+                    pos + start - end + len(input_str))
             else:
                 self.text_entry.insert_text(input_str, pos)
                 self.text_entry.set_position(pos + len(input_str))
@@ -913,6 +938,7 @@ class Calculate(ShareableActivity):
             return self.ml.format_number(ans)
         else:
             return ''
+
 
 def main():
     win = gtk.Window(gtk.WINDOW_TOPLEVEL)

@@ -19,6 +19,7 @@ try:
 except ImportError:
     pass
 
+
 class CalcLayout:
 
     FONT_SMALL_POINTS = 10
@@ -43,7 +44,7 @@ class CalcLayout:
         self.create_dialog()
 
     def create_color(self, rf, gf, bf):
-        return gtk.gdk.Color(int(rf*0xFFFF), int(gf*0xFFFF), int(bf*0xFFFF))
+        return gtk.gdk.Color(int(rf * 0xFFFF), int(gf * 0xFFFF), int(bf * 0xFFFF))
 
     def create_button_data(self):
         """Create a list with button information. We need to do that here
@@ -54,36 +55,58 @@ class CalcLayout:
         equ_sym = self._parent.ml.equ_sym
 
         self.button_data = [
-# [x, y, width, label, bgcol, cb]
-            [0, 0, 2, 1, u'\u2190', self.col_gray3, lambda w: self._parent.move_left()],
-            [2, 0, 2, 1, u'\u2192', self.col_gray3, lambda w: self._parent.move_right()],
-            [4, 0, 2, 1, u'\u232B', self.col_gray3, lambda w: self._parent.remove_character(-1)],
+            # [x, y, width, label, bgcol, cb]
+            [0, 0, 2, 1, u'\u2190', self.col_gray3,
+                lambda w: self._parent.move_left()],
+            [2, 0, 2, 1, u'\u2192', self.col_gray3,
+                lambda w: self._parent.move_right()],
+            [4, 0, 2, 1, u'\u232B', self.col_gray3,
+                lambda w: self._parent.remove_character(-1)],
 
-            [0, 1, 1, 2, '7', self.col_gray2, lambda w: self._parent.add_text('7')],
-            [1, 1, 1, 2, '8', self.col_gray2, lambda w: self._parent.add_text('8')],
-            [2, 1, 1, 2, '9', self.col_gray2, lambda w: self._parent.add_text('9')],
-      
-            [0, 3, 1, 2, '4', self.col_gray2, lambda w: self._parent.add_text('4')],
-            [1, 3, 1, 2, '5', self.col_gray2, lambda w: self._parent.add_text('5')],
-            [2, 3, 1, 2, '6', self.col_gray2, lambda w: self._parent.add_text('6')],
-      
-            [0, 5, 1, 2, '1', self.col_gray2, lambda w: self._parent.add_text('1')],
-            [1, 5, 1, 2, '2', self.col_gray2, lambda w: self._parent.add_text('2')],
-            [2, 5, 1, 2, '3', self.col_gray2, lambda w: self._parent.add_text('3')],
-      
-            [0, 7, 2, 2, '0', self.col_gray2, lambda w: self._parent.add_text('0')],
-            [2, 7, 1, 2, '.', self.col_gray2, lambda w: self._parent.add_text('.')],
+            [0, 1, 1, 2, '7', self.col_gray2,
+                lambda w: self._parent.add_text('7')],
+            [1, 1, 1, 2, '8', self.col_gray2,
+                lambda w: self._parent.add_text('8')],
+            [2, 1, 1, 2, '9', self.col_gray2,
+                lambda w: self._parent.add_text('9')],
 
-            [3, 1, 3, 2, _('Clear'), self.col_gray1, lambda w: self._parent.clear()],
- 
-            [3, 3, 1, 2, '+', self.col_gray3, lambda w: self._parent.add_text('+')],
-            [4, 3, 1, 2, '-', self.col_gray3, lambda w: self._parent.add_text('-')],
-            [5, 3, 1, 2, '(', self.col_gray3, lambda w: self._parent.add_text('(')],
-            [3, 5, 1, 2, mul_sym, self.col_gray3, lambda w: self._parent.add_text(mul_sym)],
-            [4, 5, 1, 2, div_sym, self.col_gray3, lambda w: self._parent.add_text(div_sym)],
-            [5, 5, 1, 2, ')', self.col_gray3, lambda w: self._parent.add_text(')')],
+            [0, 3, 1, 2, '4', self.col_gray2,
+                lambda w: self._parent.add_text('4')],
+            [1, 3, 1, 2, '5', self.col_gray2,
+                lambda w: self._parent.add_text('5')],
+            [2, 3, 1, 2, '6', self.col_gray2,
+                lambda w: self._parent.add_text('6')],
 
-            [3, 7, 3, 2, equ_sym, self.col_gray1, lambda w: self._parent.process()],
+            [0, 5, 1, 2, '1', self.col_gray2,
+                lambda w: self._parent.add_text('1')],
+            [1, 5, 1, 2, '2', self.col_gray2,
+                lambda w: self._parent.add_text('2')],
+            [2, 5, 1, 2, '3', self.col_gray2,
+                lambda w: self._parent.add_text('3')],
+
+            [0, 7, 2, 2, '0', self.col_gray2,
+                lambda w: self._parent.add_text('0')],
+            [2, 7, 1, 2, '.', self.col_gray2,
+                lambda w: self._parent.add_text('.')],
+
+            [3, 1, 3, 2, _('Clear'), self.col_gray1,
+             lambda w: self._parent.clear()],
+
+            [3, 3, 1, 2, '+', self.col_gray3,
+                lambda w: self._parent.add_text('+')],
+            [4, 3, 1, 2, '-', self.col_gray3,
+                lambda w: self._parent.add_text('-')],
+            [5, 3, 1, 2, '(', self.col_gray3,
+             lambda w: self._parent.add_text('(')],
+            [3, 5, 1, 2, mul_sym, self.col_gray3,
+                lambda w: self._parent.add_text(mul_sym)],
+            [4, 5, 1, 2, div_sym, self.col_gray3,
+                lambda w: self._parent.add_text(div_sym)],
+            [5, 5, 1, 2, ')', self.col_gray3,
+                lambda w: self._parent.add_text(')')],
+
+            [3, 7, 3, 2, equ_sym, self.col_gray1,
+                lambda w: self._parent.process()],
         ]
 
     def create_dialog(self):
@@ -95,7 +118,7 @@ class CalcLayout:
 
             activity_button = ActivityToolbarButton(self._parent)
             self._toolbar_box.toolbar.insert(activity_button, 0)
-            
+
             def append(icon_name, label, page, position):
                 toolbar_button = ToolbarButton()
                 toolbar_button.props.page = page
@@ -107,12 +130,12 @@ class CalcLayout:
                    _('Edit'),
                    EditToolbar(self._parent),
                    -1)
-                                  
+
             append('toolbar-algebra',
                    _('Algebra'),
                    AlgebraToolbar(self._parent),
                    -1)
-            
+
             append('toolbar-trigonometry',
                    _('Trigonometry'),
                    TrigonometryToolbar(self._parent),
@@ -131,7 +154,7 @@ class CalcLayout:
                    _('Miscellaneous'),
                    self._misc_toolbar,
                    5)
-            
+
             self._stop_separator = gtk.SeparatorToolItem()
             self._stop_separator.props.draw = False
             self._stop_separator.set_expand(True)
@@ -150,7 +173,8 @@ class CalcLayout:
             self._parent.set_toolbox(toolbox)
             toolbox.add_toolbar(_('Edit'), EditToolbar(self._parent))
             toolbox.add_toolbar(_('Algebra'), AlgebraToolbar(self._parent))
-            toolbox.add_toolbar(_('Trigonometry'), TrigonometryToolbar(self._parent))
+            toolbox.add_toolbar(
+                _('Trigonometry'), TrigonometryToolbar(self._parent))
             toolbox.add_toolbar(_('Boolean'), BooleanToolbar(self._parent))
             toolbox.add_toolbar(_('Miscellaneous'), MiscToolbar(self._parent))
             toolbox.show_all()
@@ -189,7 +213,7 @@ class CalcLayout:
         self.label_entry.modify_bg(gtk.STATE_INSENSITIVE, self.col_black)
         hc1.pack_start(self.label_entry, expand=True, fill=True, padding=0)
         vc1.pack_start(eb2, expand=False)
-        
+
         self.text_entry = gtk.Entry()
         try:
             self.text_entry.props.im_module = 'gtk-im-context-simple'
@@ -217,7 +241,8 @@ class CalcLayout:
         self.create_button_data()
         self.buttons = {}
         for x, y, w, h, cap, bgcol, cb in self.button_data:
-            button = self.create_button(_(cap), cb, self.col_white, bgcol, w, h)
+            button = self.create_button(
+                _(cap), cb, self.col_white, bgcol, w, h)
             self.buttons[cap] = button
             self.pad.attach(button, x, x + w, y, y + h)
 
@@ -234,10 +259,10 @@ class CalcLayout:
         combo.append_item(2, _('Show variables'))
         combo.set_active(0)
         combo.connect('changed', self._history_filter_cb)
-        hc2.pack_start(combo) 
+        hc2.pack_start(combo)
         hc2.set_border_width(6)
         self.grid.attach(hc2, 7, 11, 0, 2)
-        
+
 # Right part: last equation
         self.last_eq = gtk.TextView()
         self.last_eq.set_editable(False)
@@ -246,7 +271,7 @@ class CalcLayout:
         self.last_eq.modify_base(gtk.STATE_NORMAL, gtk.gdk.color_parse(
                                  sugar.profile.get_color().get_fill_color()))
         self.last_eq.modify_bg(gtk.STATE_NORMAL, gtk.gdk.color_parse(
-                                 sugar.profile.get_color().get_stroke_color()))
+                               sugar.profile.get_color().get_stroke_color()))
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_TOP, 4)
@@ -287,7 +312,7 @@ class CalcLayout:
                                              self._configure_cb)
 
     def _configure_cb(self, event):
-        # Maybe redo layout 
+        # Maybe redo layout
         self._toolbar_box.toolbar.remove(self._stop)
         self._toolbar_box.toolbar.remove(self._stop_separator)
         self._misc_toolbar.update_layout()
@@ -336,7 +361,8 @@ class CalcLayout:
             GraphEventBox = gtk.EventBox()
             GraphEventBox.add(textview)
             GraphEventBox.set_visible_window(False)
-            GraphEventBox.connect('button_press_event', self.toggle_select_graph)
+            GraphEventBox.connect(
+                'button_press_event', self.toggle_select_graph)
             GraphEventBox.show()
 
         if prepend:
@@ -444,4 +470,3 @@ class CalcLayout:
         win = widget.get_window(gtk.TEXT_WINDOW_TEXT)
         win.set_cursor(gtk.gdk.Cursor(gtk.gdk.HAND1))
         return False
-
