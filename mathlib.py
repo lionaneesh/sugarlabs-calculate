@@ -155,21 +155,10 @@ class MathLib:
         return ret.rstrip('L')
 
     def format_decimal(self, n):
-        n_str=str(n)
-        a=re.split("\.",n_str)
+        n_str = str(n)
+        a = re.split('e|E', n_str)
         if len(a) == 1:
-            return  n_str
-        elif len(a) != 1:
-            flag = 0
-            b=list(a[1])
-            for i in range(len(b)):
-                if b[i] != '0':
-                    flag=1
-                    break
-            if flag == 0:	
-                return a[0]
-        if self.chop_zeros:
-            n = n.normalize()
+            return n_str
         (sign, digits, exp) = n.as_tuple()
         if len(digits) > self.digit_limit:
             exp += len(digits) - self.digit_limit
