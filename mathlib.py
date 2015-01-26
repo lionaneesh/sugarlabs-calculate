@@ -155,6 +155,9 @@ class MathLib:
         return ret.rstrip('L')
 
     def format_decimal(self, n):
+        a = int(n)
+        if a == n:
+            return str(n)
         if self.chop_zeros:
             n = n.normalize()
         (sign, digits, exp) = n.as_tuple()
