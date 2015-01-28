@@ -77,7 +77,8 @@ class Rational:
     def __add__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d + self.d * rval.n, self.d * rval.d)
-        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
+        elif isinstance(rval, types.IntType) or isinstance(rval,
+                                                           types.LongType):
             ret = Rational(self.n + self.d * rval, self.d)
         else:
             ret = float(self) + rval
@@ -89,7 +90,8 @@ class Rational:
     def __sub__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d - self.d * rval.n, self.d * rval.d)
-        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
+        elif isinstance(rval, types.IntType) or isinstance(rval,
+                                                           types.LongType):
             ret = Rational(self.n - self.d * rval, self.d)
         else:
             ret = float(self) - rval
@@ -101,7 +103,8 @@ class Rational:
     def __mul__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.n, self.d * rval.d)
-        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
+        elif isinstance(rval, types.IntType) or isinstance(rval,
+                                                           types.LongType):
             ret = Rational(self.n * rval, self.d)
         elif isinstance(rval, Decimal):
             ret = rval * Decimal(str(float(self)))
@@ -115,7 +118,8 @@ class Rational:
     def __div__(self, rval):
         if isinstance(rval, Rational):
             ret = Rational(self.n * rval.d, self.d * rval.n)
-        elif isinstance(rval, types.IntType) or isinstance(rval, types.LongType):
+        elif isinstance(rval, types.IntType) or isinstance(rval,
+                                                           types.LongType):
             ret = Rational(self.n, self.d * rval)
         else:
             ret = float(self) / rval

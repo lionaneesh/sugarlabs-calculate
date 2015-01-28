@@ -197,14 +197,16 @@ class AlgebraToolbar(gtk.Toolbar):
         self.insert(IconToolButton('algebra-ln', _('Natural logarithm'),
                                    lambda x: calc.button_pressed(
                                        calc.TYPE_FUNCTION, 'ln'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(ln)')), -1)
+                                   lambda x: calc.button_pressed(
+                                       calc.TYPE_TEXT, 'help(ln)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('algebra-fac', _('Factorial'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'factorial'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(factorial)')), -1)
+        self.insert(IconToolButton(
+            'algebra-fac', _('Factorial'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'factorial'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT,
+                                          'help(factorial)')), -1)
 
         self.show_all()
 
@@ -214,55 +216,54 @@ class TrigonometryToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('trigonometry-sin', _('Sine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'sin'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sin)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-sin', _('Sine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sin'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sin)')), -1)
 
-        self.insert(IconToolButton('trigonometry-cos', _('Cosine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'cos'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cos)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-cos', _('Cosine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'cos'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cos)')), -1)
 
-        self.insert(IconToolButton('trigonometry-tan', _('Tangent'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'tan'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tan)')), -1)
-
-        self.insert(LineSeparator(), -1)
-
-        self.insert(IconToolButton('trigonometry-asin', _('Arc sine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'asin'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(asin)')), -1)
-
-        self.insert(IconToolButton('trigonometry-acos', _('Arc cosine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'acos'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(acos)')), -1)
-
-        self.insert(IconToolButton('trigonometry-atan', _('Arc tangent'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'atan'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(atan)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-tan', _('Tangent'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'tan'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tan)')), -1)
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('trigonometry-sinh', _('Hyperbolic sine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'sinh'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sinh)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-asin', _('Arc sine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'asin'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(asin)')), -1)
 
-        self.insert(IconToolButton('trigonometry-cosh', _('Hyperbolic cosine'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_FUNCTION, 'cosh'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cosh)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-acos', _('Arc cosine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'acos'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(acos)')), -1)
 
-        self.insert(
-            IconToolButton('trigonometry-tanh', _('Hyperbolic tangent'),
-                           lambda x: calc.button_pressed(
-                               calc.TYPE_FUNCTION, 'tanh'),
-                           lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tanh)')), -1)
+        self.insert(IconToolButton(
+            'trigonometry-atan', _('Arc tangent'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'atan'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(atan)')), -1)
+
+        self.insert(LineSeparator(), -1)
+
+        self.insert(IconToolButton(
+            'trigonometry-sinh', _('Hyperbolic sine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'sinh'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(sinh)')), -1)
+
+        self.insert(IconToolButton(
+            'trigonometry-cosh', _('Hyperbolic cosine'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'cosh'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(cosh)')), -1)
+
+        self.insert(IconToolButton(
+            'trigonometry-tanh', _('Hyperbolic tangent'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'tanh'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(tanh)')), -1)
 
         self.show_all()
 
@@ -272,15 +273,15 @@ class BooleanToolbar(gtk.Toolbar):
     def __init__(self, calc):
         gtk.Toolbar.__init__(self)
 
-        self.insert(IconToolButton('boolean-and', _('Logical and'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_OP_POST, '&'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(And)')), -1)
+        self.insert(IconToolButton(
+            'boolean-and', _('Logical and'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '&'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(And)')), -1)
 
-        self.insert(IconToolButton('boolean-or', _('Logical or'),
-                                   lambda x: calc.button_pressed(
-                                       calc.TYPE_OP_POST, '|'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(Or)')), -1)
+        self.insert(IconToolButton(
+            'boolean-or', _('Logical or'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '|'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(Or)')), -1)
 
 #        self.insert(IconToolButton('boolean-xor', _('Logical xor'),
 #            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '^'),
@@ -288,11 +289,13 @@ class BooleanToolbar(gtk.Toolbar):
 
         self.insert(LineSeparator(), -1)
 
-        self.insert(IconToolButton('boolean-eq', _('Equals'),
-                                   lambda x: calc.button_pressed(calc.TYPE_OP_POST, '==')), -1)
+        self.insert(IconToolButton(
+            'boolean-eq', _('Equals'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '==')), -1)
 
-        self.insert(IconToolButton('boolean-neq', _('Not equals'),
-                                   lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
+        self.insert(IconToolButton(
+            'boolean-neq', _('Not equals'),
+            lambda x: calc.button_pressed(calc.TYPE_OP_POST, '!=')), -1)
 
         self.show_all()
 
@@ -309,22 +312,27 @@ class MiscToolbar(gtk.Toolbar):
                                        calc.TYPE_TEXT, 'pi'),
                                    alt_html='π'), -1)
 
-        self.insert(IconToolButton('constants-e', _('e'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
+        self.insert(IconToolButton(
+            'constants-e', _('e'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'e')), -1)
 
-        self.insert(IconToolButton('constants-eulersconstant', _('γ'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, '0.577215664901533')), -1)
+        self.insert(IconToolButton(
+            'constants-eulersconstant', _('γ'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT,
+                                          '0.577215664901533')), -1)
 
-        self.insert(IconToolButton('constants-goldenratio', _('φ'),
-                                   lambda x: calc.button_pressed(calc.TYPE_TEXT, '1.618033988749895')), -1)
+        self.insert(IconToolButton(
+            'constants-goldenratio', _('φ'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT,
+                                          '1.618033988749895')), -1)
 
         self._line_separator1 = LineSeparator()
         self._line_separator2 = LineSeparator()
 
-        self._plot_button = IconToolButton('plot', _('Plot'),
-                                           lambda x: calc.button_pressed(
-                                               calc.TYPE_FUNCTION, 'plot'),
-                                           lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)'))
+        self._plot_button = IconToolButton(
+            'plot', _('Plot'),
+            lambda x: calc.button_pressed(calc.TYPE_FUNCTION, 'plot'),
+            lambda x: calc.button_pressed(calc.TYPE_TEXT, 'help(plot)'))
 
         el = [
             {'icon': 'format-deg', 'desc': _('Degrees'), 'html': 'deg'},

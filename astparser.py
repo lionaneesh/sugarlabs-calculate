@@ -132,8 +132,9 @@ class Helper:
     def __init__(self, parent):
         self._parent = parent
         self._topics = {}
-        self.add_help('test',
-                      _('This is just a test topic, use help(index) for the index'))
+        self.add_help(
+            'test',
+            _('This is just a test topic, use help(index) for the index'))
 
     def add_help(self, topic, text):
         self._topics[unicode(topic)] = _(text)
@@ -144,8 +145,10 @@ class Helper:
             topic = topic.id
         elif isinstance(topic, ast.Str):
             topic = topic.s
-        elif type(topic) not in (types.StringType, types.UnicodeType) or len(topic) == 0:
-            return _("Use help(test) for help about 'test', or help(index) for the index")
+        elif type(topic) not in (types.StringType, types.UnicodeType) or \
+                len(topic) == 0:
+            return _("Use help(test) for help about 'test',"
+                     " or help(index) for the index")
 
         # TRANS: This command is descriptive, so can be translated
         if topic in ('index', _('index'), 'topics', _('topics')):
@@ -174,7 +177,8 @@ class Helper:
             if topic == key or _(topic) == key:
                 return val
 
-        return _("No help about '%s' available, use help(index) for the index") % (topic)
+        return _("No help about '%s' available, "
+                 "use help(index) for the index") % (topic)
 
 
 class EvalState:
@@ -597,7 +601,8 @@ class AstParser:
 
     def _parse_func(self, node, level):
         if isinstance(node, ast.BinOp):
-            if isinstance(node.left, ast.Num) and isinstance(node.right, ast.Num):
+            if isinstance(node.left, ast.Num) and isinstance(node.right,
+                                                             ast.Num):
                 func = self.BINOP_MAP[type(node.op)]
                 ans = func(node.left.n, node.right.n)
                 ret = ast.Num()

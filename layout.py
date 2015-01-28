@@ -44,7 +44,8 @@ class CalcLayout:
         self.create_dialog()
 
     def create_color(self, rf, gf, bf):
-        return gtk.gdk.Color(int(rf * 0xFFFF), int(gf * 0xFFFF), int(bf * 0xFFFF))
+        return gtk.gdk.Color(int(rf * 0xFFFF), int(gf * 0xFFFF),
+                             int(bf * 0xFFFF))
 
     def create_button_data(self):
         """Create a list with button information. We need to do that here
@@ -278,9 +279,11 @@ class CalcLayout:
         self.last_eq.set_border_window_size(gtk.TEXT_WINDOW_BOTTOM, 4)
 
         # TODO Fix for old Sugar 0.82 builds, red_float not available
-        bright = (gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).red_float +
-                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).green_float +
-                  gtk.gdk.color_parse(sugar.profile.get_color().get_fill_color()).blue_float) / 3.0
+        xo_color = sugar.profile.get_color()
+        bright = (
+            gtk.gdk.color_parse(xo_color.get_fill_color()).red_float +
+            gtk.gdk.color_parse(xo_color.get_fill_color()).green_float +
+            gtk.gdk.color_parse(xo_color.get_fill_color()).blue_float) / 3.0
         if bright < 0.5:
             self.last_eq.modify_text(gtk.STATE_NORMAL, self.col_white)
         else:

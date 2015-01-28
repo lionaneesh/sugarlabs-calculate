@@ -160,14 +160,15 @@ class ShareableActivity(activity.Activity):
                 self._tubes_chan[
                     telepathy.CHANNEL_TYPE_TUBES].AcceptDBusTube(id)
 
-            self._tube_conn = SugarTubeConnection(self._connection,
-                                                  self._tubes_chan[
-                                                      telepathy.CHANNEL_TYPE_TUBES],
-                                                  id, group_iface=self._text_chan[
-                                                      telepathy.CHANNEL_INTERFACE_GROUP])
+            self._tube_conn = SugarTubeConnection(
+                self._connection, self._tubes_chan[
+                    telepathy.CHANNEL_TYPE_TUBES],
+                id, group_iface=self._text_chan[
+                    telepathy.CHANNEL_INTERFACE_GROUP])
 
-            self._tube_conn.add_signal_receiver(self._send_message_cb,
-                                                'SendMessage', sender_keyword='sender')
+            self._tube_conn.add_signal_receiver(
+                self._send_message_cb,
+                'SendMessage', sender_keyword='sender')
 
             self._dbus_object = ShareableObject(self._tube_conn,
                                                 self._service_path)

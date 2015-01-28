@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
-# mathlib.py, generic math library wrapper by Reinier Heeres <reinier@heeres.eu>
+# mathlib.py, generic math library wrapper
+# by Reinier Heeres <reinier@heeres.eu>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by

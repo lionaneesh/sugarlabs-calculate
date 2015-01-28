@@ -153,7 +153,7 @@ class Equation:
             buf.insert_with_tags(buf.get_end_iter(), text[ofs:nextofs], *tags)
             nextofs2 = findchar(text, ENDSET, nextofs + 2)
             for i in range(nextofs, len(text)):
-                if text[i] == '(' or text[i] == '+' or text[i] == '-' or text[i] == ')':
+                if text[i] in ['(', '+', '-', ')']:
                     if text[i] == '(':
                         bracket_level = bracket_level + 1
                     elif text[i] == ')':
@@ -169,7 +169,7 @@ class Equation:
                             nextofs2 = findchar(text, ASET, i + 1)
                             break
                     elif text[i] == '-':
-		        if bracket_level == 0:
+                        if bracket_level == 0:
                             if i == nextofs + 2:
                                 nextofs2 = findchar(text, ASET, i + 1)
                                 break
@@ -246,7 +246,8 @@ class Equation:
         w.modify_base(
             gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
         w.modify_bg(
-            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+            gtk.STATE_NORMAL,
+            gtk.gdk.color_parse(self.color.get_stroke_color()))
         w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
         w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
@@ -260,9 +261,10 @@ class Equation:
         tagbig = buf.create_tag(font=CalcLayout.FONT_BIG,
                                 justification=gtk.JUSTIFY_RIGHT)
         # TODO Fix for old Sugar 0.82 builds, red_float not available
-        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
-                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
-                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        bright = (
+            gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+            gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+            gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
         if bright < 0.5:
             col = gtk.gdk.color_parse('white')
         else:
@@ -328,7 +330,8 @@ class Calculate(ShareableActivity):
         'Down': lambda o: o.get_newer(),
         'colon': lambda o: o.label_entered(),
         'Home': lambda o: o.text_entry.set_position(0),
-        'End': lambda o: o.text_entry.set_position(len(o.text_entry.get_text())),
+        'End': lambda o: o.text_entry.set_position(
+            len(o.text_entry.get_text())),
         'Tab': lambda o: o.tab_complete(),
     }
 
@@ -346,7 +349,8 @@ class Calculate(ShareableActivity):
         'End': lambda o: o.expand_selection(1000),
     }
 
-    IDENTIFIER_CHARS = u"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
+    IDENTIFIER_CHARS = \
+        u"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ "
 
     def __init__(self, handle):
         ShareableActivity.__init__(self, handle)
@@ -566,7 +570,8 @@ class Calculate(ShareableActivity):
         w.modify_base(
             gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_fill_color()))
         w.modify_bg(
-            gtk.STATE_NORMAL, gtk.gdk.color_parse(self.color.get_stroke_color()))
+            gtk.STATE_NORMAL,
+            gtk.gdk.color_parse(self.color.get_stroke_color()))
         w.set_wrap_mode(gtk.WRAP_WORD_CHAR)
         w.set_border_window_size(gtk.TEXT_WINDOW_LEFT, 4)
         w.set_border_window_size(gtk.TEXT_WINDOW_RIGHT, 4)
@@ -576,9 +581,10 @@ class Calculate(ShareableActivity):
         buf = w.get_buffer()
 
         # TODO Fix for old Sugar 0.82 builds, red_float not available
-        bright = (gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
-                  gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
-                  gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
+        bright = (
+            gtk.gdk.color_parse(self.color.get_fill_color()).red_float +
+            gtk.gdk.color_parse(self.color.get_fill_color()).green_float +
+            gtk.gdk.color_parse(self.color.get_fill_color()).blue_float) / 3.0
         if bright < 0.5:
             col = gtk.gdk.color_parse('white')
         else:
@@ -714,7 +720,7 @@ class Calculate(ShareableActivity):
 
     def tab_complete(self):
 
-# Get start of variable name
+        # Get start of variable name
         str = self.text_entry.get_text()
         if len(str) == 0:
             return
@@ -759,16 +765,16 @@ class Calculate(ShareableActivity):
 # Selection related functions
 
     def expand_selection(self, dir):
-#        _logger.info('Expanding selection in dir %d', dir)
+        # logger.info('Expanding selection in dir %d', dir)
         sel = self.text_entry.get_selection_bounds()
         slen = len(self.text_entry.get_text())
         pos = self.text_entry.get_position()
         if len(sel) == 0:
             sel = (pos, pos)
         if dir < 0:
+            # apparently no such thing as a cursor position during select
             newpos = max(0, sel[0] + dir)
-            self.text_entry.set_position(
-                newpos)   # apparently no such thing as a cursor position during select
+            self.text_entry.set_position(newpos)
             self.text_entry.select_region(newpos, sel[1])
         elif dir > 0:
             newpos = min(sel[1] + dir, slen)
@@ -784,7 +790,7 @@ class Calculate(ShareableActivity):
         else:
             str = self.text_entry.get_text()
             sel = self.text_entry.get_selection_bounds()
- #       _logger.info('text_copy, sel: %r, str: %s', sel, str)
+            # _logger.info('text_copy, sel: %r, str: %s', sel, str)
             if len(sel) == 2:
                 (start, end) = sel
                 self.clipboard.set_text(str[start:end])
@@ -878,7 +884,8 @@ class Calculate(ShareableActivity):
                 self.text_entry.set_position(pos + len(input_str) + 1)
             else:
                 self.text_entry.set_text(
-                    text[:start] + input_str + '(' + text[start:end] + ')' + text[end:])
+                    text[:start] + input_str + '(' + text[start:end] + ')' +
+                    text[end:])
                 self.text_entry.set_position(end + len(input_str) + 2)
 
         elif str_type == self.TYPE_OP_PRE:
