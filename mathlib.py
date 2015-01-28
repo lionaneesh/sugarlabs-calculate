@@ -20,11 +20,9 @@
 #    2007-07-03: rwh, first version
 
 import types
-import inspect
 import math
 from decimal import Decimal
 from rational import Rational
-import random
 
 import logging
 _logger = logging.getLogger('MathLib')

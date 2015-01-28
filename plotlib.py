@@ -205,11 +205,13 @@ class CustomPlot(_PlotBase):
 
         self.plot_polyline(c, "blue")
 
+    """
     def get_label_vals(self, startx, endx, n, opts=()):
-        """Return label values"""
+        # Return label values
         range = endx - startx
         logrange = log(range)
         haszero = (startx < 0 & endx < 0)
+    """
 
     def draw_axes(self, labelx, labely, val):
         """Draw axes on the plot."""

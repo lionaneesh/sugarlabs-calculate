@@ -8,9 +8,12 @@ import gtk
 import pango
 from sugar.activity import activity
 import sugar.profile
-from sugar.graphics.roundbox import CanvasRoundBox
 from sugar.graphics.combobox import ComboBox
-from toolbars import *
+from toolbars import EditToolbar
+from toolbars import AlgebraToolbar
+from toolbars import TrigonometryToolbar
+from toolbars import BooleanToolbar
+from toolbars import MiscToolbar
 
 try:
     from sugar.graphics.toolbarbox import ToolbarButton, ToolbarBox

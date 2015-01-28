@@ -23,8 +23,6 @@ from decimal import Decimal
 import logging
 _logger = logging.getLogger('Rational')
 
-from gettext import gettext as _
-
 
 class Rational:
 
@@ -40,8 +38,8 @@ class Rational:
             self.n = long(n)
             self.d = long(d)
         elif isinstance(n, types.TupleType) or isinstance(n, types.ListType):
-            self.n = long(rval[0])
-            self.d = long(rval[1])
+            self.n = long(n[0])
+            self.d = long(n[1])
         elif isinstance(n, types.StringType):
             return
 

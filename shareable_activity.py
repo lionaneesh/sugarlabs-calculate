@@ -1,6 +1,5 @@
 import dbus
-from dbus import Interface
-from dbus.service import method, signal
+import gobject
 import telepathy
 
 from sugar.activity import activity

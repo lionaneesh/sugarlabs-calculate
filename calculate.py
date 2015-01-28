@@ -21,22 +21,16 @@
 #    2007-07-03: rwh, first version
 
 import types
-import os
 from gettext import gettext as _
-import string
 import logging
 _logger = logging.getLogger('Calculate')
 
-import gobject
 import pygtk
 pygtk.require('2.0')
 import gtk
-import pango
 import base64
 
-from sugar.activity import activity
 import sugar.profile
-from sugar.graphics.icon import CanvasIcon
 from sugar.graphics.xocolor import XoColor
 
 from shareable_activity import ShareableActivity
