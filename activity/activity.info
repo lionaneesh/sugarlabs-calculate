@@ -8,3 +8,5 @@ activity_version = 42
 host_version = 1
 show_launcher = yes
 license = GPLv2+
+max_participants = 10
+repository = https://github.com/godiard/sugarlabs-calculate.git
